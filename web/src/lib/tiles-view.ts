@@ -19,6 +19,31 @@ interface TileMeta {
 }
 interface Region { id: string; title: string; ref: string; x: number; y: number; w: number; h: number }
 
+/** Options for the viewer. Stage-1 (`?tiles`) mounts standalone with defaults; the
+ *  Stage-2 hybrid controller opts out of the self-wired HUD and taps `onScale`. */
+export interface TilesOptions {
+  /** Wire the page's zoom-in/out/fit buttons to this viewer. Default true. The
+   *  hybrid controller passes false and drives the HUD itself, so the buttons do
+   *  not double-fire against a second (SVG) renderer after handoff. */
+  hud?: boolean;
+  /** Called (rAF-throttled) with the current world→screen scale whenever the view
+   *  renders — the hybrid controller watches this for its zoom-threshold handoff. */
+  onScale?(s: number): void;
+}
+
+/** The handle the hybrid controller drives the raster layer through. */
+export interface TilesController {
+  root: HTMLElement;
+  /** The live transform (screen = world*s + t), copied VERBATIM into the SVG at handoff. */
+  getTransform(): { s: number; tx: number; ty: number };
+  /** Toggle pointer input on the layer (raster hands control to the SVG at handoff). */
+  setActive(on: boolean): void;
+  zoomBy(factor: number): void;
+  fit(): void;
+  /** Detach every listener/observer this viewer wired (fixes the leaked HUD buttons). */
+  destroy(): void;
+}
+
 const STYLE = `
 .tiles-root { position:absolute; inset:0; overflow:hidden; background:#fff; cursor:grab; touch-action:none; }
 .tiles-root.dragging { cursor:grabbing; }
@@ -39,7 +64,12 @@ const STYLE = `
  * Mount the raster viewer into `canvas`. `tilesId` is the tile directory under
  * web/public/tiles/ (the master's is "master", not its chart id "_master").
  */
-export async function mountTiles(canvas: HTMLElement, tilesId: string): Promise<void> {
+export async function mountTiles(canvas: HTMLElement, tilesId: string, opts: TilesOptions = {}): Promise<TilesController> {
+  // Every listener/observer below is registered against this signal so destroy()
+  // detaches them in one shot — without it the HUD buttons stayed wired to a
+  // display:none'd layer and double-fired against the SVG after a hybrid handoff.
+  const ac = new AbortController();
+  const { signal } = ac;
   const meta = await getJSON<TileMeta>(`tiles/${tilesId}/meta.json`);
   const regions = await getJSON<Region[]>(`tiles/${tilesId}/regions.json`).catch(() => [] as Region[]);
   const B = meta.worldBounds;
@@ -169,6 +199,7 @@ export async function mountTiles(canvas: HTMLElement, tilesId: string): Promise<
       layer(active).el.style.display = ""; layer(active).el.style.zIndex = "1";
       fillLevel(active);
       hud(active);
+      opts.onScale?.(s);
     });
   }
 
@@ -178,16 +209,20 @@ export async function mountTiles(canvas: HTMLElement, tilesId: string): Promise<
     const zr = $("zoom-readout"); if (zr) zr.textContent = `${Math.round(s * 100)}%`;
     const lb = $("lod-badge"); if (lb) lb.textContent = `raster · L${active}`;
   }
-  $("zoom-in")?.addEventListener("click", () => zoomBy(1.35));
-  $("zoom-out")?.addEventListener("click", () => zoomBy(1 / 1.35));
-  $("zoom-fit")?.addEventListener("click", () => fit());
+  // The self-wired HUD is opt-out: the hybrid controller drives the buttons itself
+  // so they cannot double-fire against the SVG renderer after handoff.
+  if (opts.hud !== false) {
+    $("zoom-in")?.addEventListener("click", () => zoomBy(1.35), { signal });
+    $("zoom-out")?.addEventListener("click", () => zoomBy(1 / 1.35), { signal });
+    $("zoom-fit")?.addEventListener("click", () => fit(), { signal });
+  }
 
   // --- wheel zoom (to cursor) + drag pan ---
   root.addEventListener("wheel", (e) => {
     e.preventDefault();
     const r = root.getBoundingClientRect();
     zoomBy(Math.exp(-e.deltaY * 0.0016), e.clientX - r.left, e.clientY - r.top);
-  }, { passive: false });
+  }, { passive: false, signal });
 
   let dragging = false, lx = 0, ly = 0, moved = false;
   root.addEventListener("pointerdown", (e) => {
@@ -195,7 +230,7 @@ export async function mountTiles(canvas: HTMLElement, tilesId: string): Promise<
     root.classList.add("dragging");
     root.setPointerCapture(e.pointerId);
     tip.dataset.show = "false";
-  });
+  }, { signal });
   root.addEventListener("pointermove", (e) => {
     if (dragging) {
       tx += e.clientX - lx; ty += e.clientY - ly; lx = e.clientX; ly = e.clientY;
@@ -205,11 +240,11 @@ export async function mountTiles(canvas: HTMLElement, tilesId: string): Promise<
     } else {
       hover(e);
     }
-  });
+  }, { signal });
   const end = () => { dragging = false; root.classList.remove("dragging"); };
-  root.addEventListener("pointerup", end);
-  root.addEventListener("pointercancel", end);
-  root.addEventListener("pointerleave", () => { tip.dataset.show = "false"; });
+  root.addEventListener("pointerup", end, { signal });
+  root.addEventListener("pointercancel", end, { signal });
+  root.addEventListener("pointerleave", () => { tip.dataset.show = "false"; }, { signal });
 
   // --- region title on hover: the smallest region under the cursor wins ---
   const byArea = [...regions].sort((a, b) => a.w * a.h - b.w * b.h);
@@ -232,11 +267,21 @@ export async function mountTiles(canvas: HTMLElement, tilesId: string): Promise<
     });
   }
 
-  new ResizeObserver(() => { if (vw() > 1 && vh() > 1) { clamp(); render(); } }).observe(root);
+  const ro = new ResizeObserver(() => { if (vw() > 1 && vh() > 1) { clamp(); render(); } });
+  ro.observe(root);
 
   const title = document.getElementById("chart-title");
   if (title) title.textContent = "Metabolian — Biochemical Pathways";
 
   // First paint: frame the whole atlas.
   fit();
+
+  return {
+    root,
+    getTransform: () => ({ s, tx, ty }),
+    setActive: (on: boolean) => { root.style.pointerEvents = on ? "" : "none"; },
+    zoomBy: (factor: number) => zoomBy(factor),
+    fit: () => fit(),
+    destroy: () => { ac.abort(); ro.disconnect(); },
+  };
 }

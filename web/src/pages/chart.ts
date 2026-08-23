@@ -39,10 +39,13 @@ async function main() {
     for (const ev of ["wheel", "pointerdown"]) canvas.addEventListener(ev, dismiss, { once: true, passive: true });
   }
 
-  // Slippy Atlas overview: ?tiles swaps in the read-only raster viewer (baked by
-  // tools/build-tiles.mjs) for the master only. Dynamically imported so it stays
-  // out of the default chart bundle, and the no-flag path renders exactly as before.
-  if (new URLSearchParams(location.search).has("tiles") && wanted === "_master") {
+  // Slippy Atlas — master wall chart only. Every branch is dynamically imported so
+  // the raster/hybrid code stays out of the default chart bundle, and no non-master
+  // id ever touches it. ?tiles=off is honoured FIRST as the escape hatch.
+  const tilesParam = new URLSearchParams(location.search).get("tiles"); // null | "" | "off" | truthy
+
+  // Legacy explicit ?tiles (truthy, not "off"): the standalone Stage-1 raster-only viewer.
+  if (wanted === "_master" && tilesParam !== null && tilesParam !== "off") {
     try {
       const { mountTiles } = await import("../lib/tiles-view");
       await mountTiles(canvas, "master");
@@ -52,8 +55,48 @@ async function main() {
     }
   }
 
+  // Stage-2 DEFAULT for the master: hybrid raster overview → live SVG on zoom-in.
+  // ?tiles=off skips it entirely and falls through to the pre-Stage-2 pure-SVG path.
+  if (wanted === "_master" && tilesParam !== "off") {
+    try {
+      const { mountMasterHybrid } = await import("../lib/master-hybrid");
+      await mountMasterHybrid(canvas, {
+        tilesId: "master",
+        mountSvg: (host, onZoom) => mountMasterSvg(host, onZoom),
+      });
+      // The inspector-close button is wired by wireHud() on every other path; the
+      // hybrid path does not call wireHud (the controller owns the zoom HUD), so
+      // wire the one universal control here.
+      document.getElementById("inspector-close")!.addEventListener("click", closeInspector);
+      return;
+    } catch (e) {
+      console.warn("hybrid master unavailable; falling back to pure SVG", e);
+    }
+  }
+
   await load(wanted, canvas);
   wireHud();
+}
+
+/** Mount the live SVG master into `host` with the inspector wired, for the hybrid
+ *  controller. Unlike load() it installs NO deep-link auto-fit ResizeObserver: the
+ *  controller owns the transform (it copies the raster frame in verbatim at handoff,
+ *  and chart-view's own ResizeObserver reconciles thereafter). */
+async function mountMasterSvg(host: HTMLElement, onZoom: (k: number, lod: string) => void) {
+  const [ir] = await Promise.all([
+    getJSON<ChartIR>("chart/_master.json"),
+    document.fonts?.ready ?? Promise.resolve(),
+  ]);
+  document.getElementById("chart-title")!.textContent = ir.title;
+  nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
+  chartReactions = ir.reactions;
+  const v = mountChart(ir, host, BASE, {
+    onMetabolite: (n) => { openNode(n); v.trace(n.id); },
+    onEnzyme: (r) => openEnzyme(r),
+    onZoom: (k, lod) => onZoom(k, lod),
+  });
+  view = v;
+  return v;
 }
 
 async function load(id: string, canvas: HTMLElement) {

@@ -9,6 +9,14 @@
 #chart-canvas.dragging { cursor: grabbing; }
 #chart-canvas svg { width: 100%; height: 100%; display: block; }
 
+/* Stage-2 hybrid master: the raster overview and the live SVG stacked in
+   #chart-canvas. chart-view binds its drag cursor + gesture capture to the element
+   it is handed (svgHost), not #chart-canvas, so those must be duplicated here or
+   drag feedback and touch panning are lost on the SVG layer. */
+.hybrid-raster, .hybrid-svg { position: absolute; inset: 0; }
+.hybrid-svg { cursor: grab; touch-action: none; }
+.hybrid-svg.dragging { cursor: grabbing; }
+
 /* ---- ink classes (Michal's palette) ---- */
 .ink-structure { stroke: #111; fill: none; }
 .flux-line { stroke: #231F20; stroke-width: 1.6; fill: none; }

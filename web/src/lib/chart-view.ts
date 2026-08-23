@@ -147,7 +147,11 @@ export function wrapCellName(text: string, maxChars: number, maxLines = 2): stri
 // Tuned so a typical "Fit" view of a single pathway already shows enzyme names.
 /** A depiction narrower than this on screen is a smudge; don't materialise its paths. */
 const MIN_STRUCTURE_PX = 26;
-const LOD_NORMAL = 0.26;
+/** World→screen scale at which the sheet flips overview→normal and first paints
+ *  information the baked master tiles do NOT carry (enzyme names, EC numbers,
+ *  hydrated structures). Exported so the hybrid raster→SVG handoff and this
+ *  renderer share one threshold constant. */
+export const LOD_NORMAL = 0.26;
 const LOD_DETAIL = 0.7;
 const molCache = new Map<string, string>();
 
@@ -1336,7 +1340,22 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     apply();
   }
 
-  return { fit, zoomBy, trace, setView, get zoom() { return k; } };
+  /** The live world→screen transform (screen = world*k + t), so a caller can copy
+   *  this exact frame into another renderer. */
+  function getTransform() { return { k, tx, ty }; }
+
+  /** Set the transform PIXEL-VERBATIM and reconcile the drawing to it (LOD flip +
+   *  lazy structure/label hydration via apply()). Deliberately SKIPS clampView so
+   *  the copy is exact — used by the hybrid handoff to reproduce the raster frame
+   *  with no sub-pixel jump. userAdjusted is latched so the ResizeObserver
+   *  reconciles this frame rather than re-fitting over it. */
+  function setTransformRaw(nk: number, ntx: number, nty: number) {
+    k = nk; tx = ntx; ty = nty;
+    userAdjusted = true;
+    apply();
+  }
+
+  return { fit, zoomBy, trace, setView, getTransform, setTransformRaw, get zoom() { return k; } };
 }
 
 function marker(id: string, color: string) {
