@@ -21,6 +21,6 @@ pathway nadh-to-prostaglandin-a2 "NADH to prostaglandin A2" {
   branch from prostaglandin_b2 side left {
     prostaglandin_b2
     <-> .
-    prostaglandin_c2
+    prostaglandin_c2_mnxm1560467
   }
 }

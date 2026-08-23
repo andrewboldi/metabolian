@@ -15,7 +15,7 @@ pathway o3-d-galactosyl-1-4-to-o3-n-acetyl-d-glucosam "O3-(β-D-galactosyl-(1→
     <-> ec_2_4_1_135 [2.4.1.135] +udp_d_glucuronate -udp -hplus
     o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
     <-> . +h2o -pi
-    o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
+    o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto_chebi_132093
     <-> ec_2_4_1_223 [2.4.1.223] +udpglcnac -udp -hplus
     o3_n_acetyl_d_glucosaminyl_1_4_d_glucuronosyl_1
   }

@@ -12,9 +12,9 @@ pathway 4-nitrobenzoyl-coa-to-h2o "4-nitrobenzoyl-CoA to H2O" {
     demethylluteothin
     <-> ec_2_1_1_353 [2.1.1.353] +sam -sah
     deoxyaureothin
-    <-> ec_1_14_15_37 [1.14.15.37] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_37 [1.14.15.37] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     aureothin
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -aureothin -h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -aureothin -h2o_water
     atp
   }
 
@@ -38,24 +38,24 @@ pathway 4-nitrobenzoyl-coa-to-h2o "4-nitrobenzoyl-CoA to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +amp +r_r_chrysanthemoyl_coa +coa
+    <-> . +diphosphate +amp +r_r_chrysanthemoyl_coa +coa_mnxm727276
     r_r_chrysanthemate
   }
 
   branch from atp side left {
     atp
     <-> . +diphosphate +amp +3_24_dioxocholest_4_en_26_oyl_coa +3_24_dioxo_cholest_4_en_26_oate
-    coa
+    coa_mnxm727276
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_1_21 [3.2.1.21] +linamarin +2_hydroxy_2_methylpropanenitrile
     beta_d_glucose
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_4_17_21 [3.4.17.21] +n_acetyl_l_aspartyl_l_glutamate +l_glutamate
     ac_asp_glu_glu
   }
@@ -92,7 +92,7 @@ pathway 4-nitrobenzoyl-coa-to-h2o "4-nitrobenzoyl-CoA to H2O" {
 
   branch from h side left {
     h
-    <-> . +dtdp_4_oxo_2_6_dideoxy_d_allose +nadp +nadph
+    <-> . +dtdp_4_oxo_2_6_dideoxy_d_allose +nadp_mnxm5 +nadph_mnxm738702
     dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
   }
 
@@ -116,36 +116,36 @@ pathway 4-nitrobenzoyl-coa-to-h2o "4-nitrobenzoyl-CoA to H2O" {
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_6_1_52 [3.6.1.52] +5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph +h +h2o
+    <-> ec_3_6_1_52 [3.6.1.52] +5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph +h +h2o_water
     1_5_bis_diphospho_1d_myo_inositol_2_3_4_6_tetrak
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +beta_d_galacturonate +h2o
+    <-> . +beta_d_galacturonate +h2o_water
     1_phospho_alpha_d_galacturonate
   }
 
   branch from atp side left {
     atp
-    <-> . +3_oxo_24_ethyl_cholest_4_en_26_oate +coa +diphosphate +amp
+    <-> . +3_oxo_24_ethyl_cholest_4_en_26_oate +coa_mnxm727276 +diphosphate +amp
     3_oxo_24_ethyl_cholest_4_en_26_oyl_coa
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +amp +2_naphthoyl_coa +h +coa
+    <-> . +diphosphate +amp +2_naphthoyl_coa +h +coa_mnxm727276
     2_naphthoic_acid
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +2_oxoglutarate +2_3_dihydrothienamycin +o2 +succinate +thienamycin
-    co2
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +2_oxoglutarate +2_3_dihydrothienamycin +o2_mnxm735438 +succinate +thienamycin
+    co2_mnxm13
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_5_2_1 [3.5.2.1] +5_methylbarbituric_acid
     3_oxo_3_ureidoisobutyrate
   }

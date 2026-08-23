@@ -14,7 +14,7 @@ pathway ubiquinone-6-to-ammonium "ubiquinone-6 to ammonium" {
     serinol_phosphate
     <-> . +h2o -phosphate
     serinol
-    <-> . +nad +h2o -nh3 -nadh -hplus
+    <-> . +nad +h2o_chebi_15377 -nh3 -nadh -hplus
     dihydroxyacetone
   }
 

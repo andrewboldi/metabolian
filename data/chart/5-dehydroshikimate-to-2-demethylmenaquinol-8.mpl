@@ -51,7 +51,7 @@ pathway 5-dehydroshikimate-to-2-demethylmenaquinol-8 "5-Dehydroshikimate to 2-de
   branch from nadph side right {
     nadph
     <-> ec_1_3_1_77 [1.3.1.77] +h +nadp +epiafzelechin
-    pelargonidin
+    pelargonidin_mnxm1369124
   }
 
   branch from nadph side left {
@@ -68,7 +68,7 @@ pathway 5-dehydroshikimate-to-2-demethylmenaquinol-8 "5-Dehydroshikimate to 2-de
 
   branch from nadp side left {
     nadp
-    <-> . +deoxyviolaceinate +h2o +h +nadph +protodeoxyviolaceinate
+    <-> . +deoxyviolaceinate +h2o_water +h +nadph +protodeoxyviolaceinate
     o2
   }
 }

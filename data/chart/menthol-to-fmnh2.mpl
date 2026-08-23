@@ -81,12 +81,12 @@ pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
   branch from 2e_4_hydroxy_3_methylbut_2_enyl_diphosphate side left {
     2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
     <-> ec_1_17_7_4 [1.17.7.4] +ipp +di_sulfido_diiron +h2o +hplus
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33738
   }
 
   branch from 2e_4_hydroxy_3_methylbut_2_enyl_diphosphate side right {
     2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
-    <-> ec_1_17_7_4 [1.17.7.4] +di_sulfido_diiron +h2o +di_sulfido_diiron +hplus
+    <-> ec_1_17_7_4 [1.17.7.4] +di_sulfido_diiron +h2o +di_sulfido_diiron_chebi_33738 +hplus
     dmapp
   }
 }

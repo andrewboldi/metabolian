@@ -10,9 +10,9 @@ pathway butan-1-ol-to-h2o-64632 "butan-1-ol to H2O" {
     butan_1_ol
     <-> . +acetyl_coa -coa
     butyl_acetate
-    <-> ec_3_1_1_1 [3.1.1.1] +h2o -acetate -butan_1_ol
+    <-> ec_3_1_1_1 [3.1.1.1] +h2o -acetate -butan_1_ol_mnxm3230
     h
-    <-> ec_3_1_1_1 [3.1.1.1] +butan_1_ol +4_aminobenzoate -h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +butan_1_ol_mnxm3230 +4_aminobenzoate -h2o
     butamben
   }
 }

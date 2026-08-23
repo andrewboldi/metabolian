@@ -18,7 +18,7 @@ pathway o-s-2e-octenoylpanteth-to-di-sulfido-diiron-4152 "O-[S-(2E)-octenoylpant
     o_s_2e_decenoylpantetheine_4_phosphoryl_serine_1
     <-> . +nadh +hplus -nad
     o_s_decanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_1_14_19_78 [1.14.19.78] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_78 [1.14.19.78] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     o_s_dec_9_ynoylpantetheine_4_phosphoryl_serine_1
   }
 }

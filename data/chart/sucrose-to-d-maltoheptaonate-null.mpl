@@ -13,10 +13,10 @@ pathway sucrose-to-d-maltoheptaonate-null "sucrose to D-maltoheptaonate" {
     <-> ec_3_6_1_13 [3.6.1.13] +h2o -h -amp
     d_glucopyranose_1_phosphate
     <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g -phosphate
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143183
     <-> . +o2 -h2o2
     d_maltoheptaono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_maltoheptaonate
   }
 }

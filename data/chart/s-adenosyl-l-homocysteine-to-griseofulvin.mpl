@@ -12,34 +12,145 @@ pathway s-adenosyl-l-homocysteine-to-griseofulvin "S-adenosyl-L-homocysteine to 
     s_adenosyl_l_methionine
     <-> . +desmethyl_dehydro_dechlorogriseofulvin +nadp +h2o -griseophenone_c -o2 -nadph
     h
-    <-> . +griseophenone_c +fadh2 +chloride +o2 -fad -h2o -hplus
+    <-> . +griseophenone_c +fadh2 +chloride +o2_chebi_15379 -fad -h2o_chebi_15377 -hplus
     griseophenone_b
-    <-> . +fmnh2 +o2 +hplus -fmn -h2o
+    <-> . +fmnh2 +o2_chebi_15379 +hplus -fmn -h2o_chebi_15377
     desmethyl_dehydrogriseofulvin
     <-> . +sam -sah -hplus
     dehydrogriseofulvin
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     griseofulvin
   }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_c_isothiocyanate +h
+    welwitindolinone_c_isothiocyanate
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_b_isothiocyanate +h
+    welwitindolinone_b_isothiocyanate
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_alpha_linolenoyl_2_3e_hexadecenoyl_phosphatidy +phosphate +1_alpha_linolenoyl_2_3e_hexadecenoyl_phosphatidy +h2o
+    atp
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pg_18_2_9z_12z_16_0
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h +nadph +nadp +h2o
+    1_palmitoyl_2_vernoloyl_phosphatidylcholine
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +h +3s_6e_nerolidol +nadph +nadp +e_4_8_dimethyl_1_3_7_nonatriene +h2o
+    buten_2_one
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +5_methylthiopentanonitrile_oxide +h +nadp +h2o
+    e_5_methylsulfanyl_pentanal_oxime
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +6_methylthiohexanonitrile_oxide +h +nadp +h2o
+    e_6_methylsulfanyl_hexanal_oxime
+  }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_20 [2.1.1.20] +h +sarcosine +glycine
+    s_s_adenosyl_l_methionine
+  }
 
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_10 [2.1.1.10] +h +l_methionine +s_s_adenosyl_l_methionine
+    l_homocysteine
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_sn
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_12z_15z_octadecatrienoyl_2_9z_octadecenoyl
+  }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_b_isothiocyanate_mnxm1364031 +h
+    welwitindolinone_b_isothiocyanate_mnxm1364029
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +5_deoxy_5_dimethylarsinoyl_adenosine +h +l_methionine
+    dimethylarsinous_acid
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +7_methylthioheptanonitrile_oxide +h +nadph +h2o
+    e_7_methylsulfanyl_heptanal_oxime
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +8_methylthiooctanonitrile_oxide +h +nadph +h2o
+    e_8_methylsulfanyl_octanal_oxime
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +l_valine +l_serine +l_arginine
+    valyl_seryl_arginine
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_valine +l_tryptophan +l_phenylalanine
+    valyl_tryptophanyl_phenylalanine
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +h +4_aminobenzoate +nadph +nadp +h2o
+    4_hydroxyamino_benzoate
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +artemisinate +nadp +h2o +nadph
+    artemisinic_aldehyde
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +9_methylthiononanonitrile_oxide +h +nadp +h2o
+    e_9_methylsulfanyl_nonanal_oxime
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_2_3_1_119 [2.3.1.119] +9z_12z_15z_octadecatrienoyl_coa +malonyl_coa +h +co2 +nadp +coa +h2o
+    11z_14z_17z_icosatrienoyl_coa
+  }
 }

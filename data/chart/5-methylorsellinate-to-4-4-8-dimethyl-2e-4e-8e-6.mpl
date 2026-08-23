@@ -19,7 +19,7 @@ pathway 5-methylorsellinate-to-4-4-8-dimethyl-2e-4e-8e-6 "5-methylorsellinate to
     <-> . +sam -sah -hplus
     4e_8e_10_4_hydroxy_6_methoxy_7_methyl_3_oxo_1_3
     <-> . +atp +coa -amp -ppi
-    4e_8e_10_4_hydroxy_6_methoxy_7_methyl_3_oxo_1_3
+    4e_8e_10_4_hydroxy_6_methoxy_7_methyl_3_oxo_1_3_chebi_167446
     <-> . +o2 -h2o2
     4_4_8_dimethyl_2e_4e_8e_decatrienoyl_coa_5_o_met
   }

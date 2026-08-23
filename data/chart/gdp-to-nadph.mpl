@@ -96,7 +96,7 @@ pathway gdp-to-nadph "GDP to NADPH" {
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_241 [2.4.1.241] +h +1_8z_11z_14z_eicosatrienoyl_2_9z_12z_15z_octadec +1_8z_11z_14z_eicosatrienoyl_2_9z_12z_15z_octadec
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_8z_11z_14z_eicosatrienoyl_2_9z_12z_15z_octadec +1_8z_11z_14z_eicosatrienoyl_2_9z_12z_15z_octadec_mnxm32619
     udp_alpha_d_galactose
   }
 

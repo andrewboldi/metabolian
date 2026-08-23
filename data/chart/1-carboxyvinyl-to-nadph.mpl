@@ -40,8 +40,8 @@ pathway 1-carboxyvinyl-to-nadph "1-carboxyvinyl… to NADPH" {
 
   branch from h2o side left {
     h2o
-    <-> . +glycine +gly_ala
-    gly_gly_ala
+    <-> . +glycine +gly_ala_mnxm729750
+    gly_gly_ala_mnxm729752
   }
 
   branch from udp side right {

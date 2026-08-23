@@ -97,7 +97,7 @@ pathway s-adenosyl-l-homocysteine-to-h "S-adenosyl-L-homocysteine to H" {
   branch from dtdp_l_oleandrose side right {
     dtdp_l_oleandrose
     <-> . +avermectin_a1b_aglycone +dtdp +h
-    avermectin_a1b_monosaccharide
+    avermectin_a1b_monosaccharide_mnxm1370811
   }
 
   branch from dtdp side left {

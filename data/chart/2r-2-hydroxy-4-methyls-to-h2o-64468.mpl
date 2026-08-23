@@ -28,7 +28,7 @@ pathway 2r-2-hydroxy-4-methyls-to-h2o-64468 "(2R)-2-hydroxy-4-(methyls… to H2O
     s_laudanine
     <-> . +s_adenosyl_l_homocysteine +h -r_reticuline
     s_adenosyl_l_methionine
-    <-> ec_1_14_21_4 [1.14.21.4] +r_reticuline +h +o2 +nadph -nadp -h2o
+    <-> ec_1_14_21_4 [1.14.21.4] +r_reticuline +h +o2_mnxm735438 +nadph_mnxm738702 -nadp_mnxm5 -h2o_water
     salutaridine
   }
 

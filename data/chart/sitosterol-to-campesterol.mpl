@@ -10,8 +10,8 @@ pathway sitosterol-to-campesterol "sitosterol to campesterol" {
     sitosterol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     22s_hydroxysitosterol
-    <-> . +nadp +h2o -h -o2 -nadph
-    sitosterol
+    <-> . +nadp +h2o_water -h -o2_mnxm735438 -nadph
+    sitosterol_mnxm1371567
     <-> . +s_adenosyl_l_homocysteine +h -campesterol
     s_adenosyl_l_methionine
   }

@@ -10,7 +10,7 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
     1_palmitoyl_2_6z_9z_12z_octadecatrienoyl_sn_glyc
     <-> . +cholesterol -1_hexadecanoyl_sn_glycero_3_phosphocholine
     cholesteryl_linolenate
-    <-> . +h2o -6z_9z_12z_octadecatrienoate -cholesterol
+    <-> . +h2o -6z_9z_12z_octadecatrienoate -cholesterol_mnxm726122
     h
     <-> . +6z_9z_12z_octadecatrienoate +adp +phosphate -atp -h2o
     6z_9z_12z_octadecatrienoate
@@ -18,7 +18,7 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
 
   branch from cholesteryl_linolenate side left {
     cholesteryl_linolenate
-    <-> ec_2_3_1_26 [2.3.1.26] +6z_9z_12z_octadecatrienoyl_coa +cholesterol
+    <-> ec_2_3_1_26 [2.3.1.26] +6z_9z_12z_octadecatrienoyl_coa +cholesterol_mnxm726122
     coa
   }
 
@@ -58,14 +58,14 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
     diphosphate
   }
 
-  branch from cholesterol side right {
-    cholesterol
+  branch from cholesterol_mnxm726122 side right {
+    cholesterol_mnxm726122
     <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +cholest_4_en_3_one
     nad
   }
 
-  branch from cholesterol side left {
-    cholesterol
+  branch from cholesterol_mnxm726122 side left {
+    cholesterol_mnxm726122
     <-> . +h +o2 +nadph +nadp +h2o
     5_6beta_epoxy_5alpha_cholestan_3beta_ol
   }
@@ -96,13 +96,13 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
 
   branch from cholesterol side right {
     cholesterol
-    <-> . +nad +nadh +hplus
+    <-> . +nad_chebi_57540 +nadh_chebi_57945 +hplus
     cholest_5_en_3_one
   }
 
   branch from cholesterol side left {
     cholesterol
-    <-> . +oleoyl_coa +coa
+    <-> . +oleoyl_coa +coa_chebi_57287
     cholesteryl_oleate
   }
 
@@ -142,14 +142,14 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
     co2
   }
 
-  branch from cholesterol side right {
-    cholesterol
+  branch from cholesterol_mnxm726122 side right {
+    cholesterol_mnxm726122
     <-> . +udp +h +cholesteryl_alpha_d_glucoside
     udp_alpha_d_glucose
   }
 
-  branch from cholesterol side left {
-    cholesterol
+  branch from cholesterol_mnxm726122 side left {
+    cholesterol_mnxm726122
     <-> . +h +o2 +nadph +cholest_5_en_3beta_22r_diol +h2o
     nadp
   }

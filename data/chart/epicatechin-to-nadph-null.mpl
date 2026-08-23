@@ -11,7 +11,7 @@ pathway epicatechin-to-nadph-null "(+)-epicatechin to NADPH" {
     <-> . +nadp -h -nadph
     idb_1027
     <-> ec_1_3_1_77 [1.3.1.77] +nadh +h -nad
-    epicatechin
+    epicatechin_mnxm1371117
     <-> ec_1_3_1_77 [1.3.1.77] +nadp -h -nadph
     cyanidin
   }

@@ -12,7 +12,7 @@ pathway 3-1h-indol-3-yl-propanoa-to-ammonium-null "3-(1H-indol-3-yl)propanoa… 
     hydroxyl
     <-> . +adenine -h2o
     isoguanine
-    <-> . +h2o +hplus -nh3
+    <-> . +h2o_chebi_15377 +hplus -nh3
     xanthine
   }
 

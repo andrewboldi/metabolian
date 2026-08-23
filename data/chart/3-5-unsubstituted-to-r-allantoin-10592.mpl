@@ -72,8 +72,8 @@ pathway 3-5-unsubstituted-to-r-allantoin-10592 "3',5'-unsubstitutedâ€¦ to (R)-(â
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from fmnh2 side left {
@@ -138,13 +138,13 @@ pathway 3-5-unsubstituted-to-r-allantoin-10592 "3',5'-unsubstitutedâ€¦ to (R)-(â
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> ec_1_17_1_4 [1.17.1.4] +nadh +h +6_8_dihydroxypurine +h2o
-    nad
+    <-> ec_1_17_1_4 [1.17.1.4] +nadh_mnxm10 +h +6_8_dihydroxypurine +h2o_water
+    nad_mnxm8
   }
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> ec_1_17_3_2 [1.17.3.2] +h2o2 +o2 +h2o
+    <-> ec_1_17_3_2 [1.17.3.2] +h2o2_mnxm732620 +o2_mnxm735438 +h2o_water
     hypoxanthine
   }
 }

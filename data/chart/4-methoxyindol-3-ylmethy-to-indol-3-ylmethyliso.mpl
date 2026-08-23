@@ -61,7 +61,7 @@ pathway 4-methoxyindol-3-ylmethy-to-indol-3-ylmethyliso "(4-methoxyindol-3-ylmet
   branch from 4_methoxyindol_3_ylmethyl_isothiocyanate side right {
     4_methoxyindol_3_ylmethyl_isothiocyanate
     <-> . +sulfate
-    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone_mnxm1363461
   }
 
   branch from glutathione side left {

@@ -12,13 +12,13 @@ pathway h2o2-to-ascochlorin-null "H2O2 to ascochlorin" {
     o2
     <-> . +ilicicolinate_b +hydrogen_donor +atp -hydrogen_acceptor -amp -ppi
     ilicicolin_b
-    <-> . +fadh2 +chloride +o2 -fad -h2o -hplus
+    <-> . +fadh2 +chloride +o2_chebi_15379 -fad -h2o -hplus
     ilicicolin_a
-    <-> . +nadph +o2 +hplus -nadp -h2o
+    <-> . +nadph +o2_chebi_15379 +hplus -nadp -h2o
     ilicicolin_a_epoxide
     <-> .
     ilicicolin_c
-    <-> . +nadph +o2 +hplus -nadp -h2o
+    <-> . +nadph +o2_chebi_15379 +hplus -nadp -h2o
     ascochlorin
   }
 
@@ -36,7 +36,7 @@ pathway h2o2-to-ascochlorin-null "H2O2 to ascochlorin" {
 
   branch from h2o2 side left {
     h2o2
-    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +o2 +h2o
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +o2 +h2o_water
     11_hete
   }
 
@@ -48,13 +48,13 @@ pathway h2o2-to-ascochlorin-null "H2O2 to ascochlorin" {
 
   branch from o2 side left {
     o2
-    <-> . +8_iso_prostaglandin_f2alpha +h2o
+    <-> . +8_iso_prostaglandin_f2alpha +h2o_water
     5z_8z_11z_14z_eicosatetraenoate
   }
 
   branch from o2 side right {
     o2
-    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +h2o
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +h2o_water
     5_ipf2_vi
   }
 }

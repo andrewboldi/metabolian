@@ -17,7 +17,7 @@ pathway 3-5-dehydroshikimate-to-pulcherrimin-null "3,5-Dehydroshikimate to pulch
     <-> . +pmf +thiosulfate -hydrogen_sulfide -ubiquinone_8 -h -sulfite
     pmf
     <-> . +fe +h +glutathione +sulfite -s_sulfanylglutathione -h2o
-    fe
+    fe_mnxm1370984
     <-> . +pulcherriminic_acid
     pulcherrimin
   }

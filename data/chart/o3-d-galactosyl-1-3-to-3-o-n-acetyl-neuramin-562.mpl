@@ -24,7 +24,7 @@ pathway o3-d-galactosyl-1-3-to-3-o-n-acetyl-neuramin-562 "O3-(β-D-galactosyl-(1
 
   branch from udp_n_acetyl_d_galactosamine side right {
     udp_n_acetyl_d_galactosamine
-    <-> . +l_fuc_1_2_d_gal_1_3_d_galnac +udp +hplus
-    d_galnac_1_3_l_fuc_1_2_d_gal_1_3_d_galnac
+    <-> . +l_fuc_1_2_d_gal_1_3_d_galnac_chebi_233970 +udp +hplus
+    d_galnac_1_3_l_fuc_1_2_d_gal_1_3_d_galnac_chebi_233968
   }
 }

@@ -18,7 +18,7 @@ pathway fadh2-to-3r-11z-14z-3-hydroxyico-null "FADH2 to (3R,11Z,14Z)-3-hydroxyic
 
   branch from 2e_9z_12z_octadecatrienoyl_coa side left {
     2e_9z_12z_octadecatrienoyl_coa
-    <-> . +fad +hplus +fadh2
+    <-> . +fad_chebi_57692 +hplus +fadh2_chebi_58307
     linoleoyl_coa
   }
 

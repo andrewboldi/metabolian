@@ -14,7 +14,7 @@ pathway n-acetyltyramine-to-h2o-67200 "N-acetyltyramine to H2O" {
     n_methyltyraminium
     <-> . +sam -sah -hplus
     n_n_dimethyltyraminium
-    <-> . +o2 -h2o
+    <-> . +o2 -h2o_water
     n_n_dimethyldopaminequinone
   }
 }

@@ -11,9 +11,9 @@ pathway alpha-d-man-a-1-2-alph-to-c80-dolichol-phosphate "alpha-D-Man-a-(1->2)-a
     <-> ec_2_4_1_260 [2.4.1.260] +h +c80_dolichol_phosphate -a_dolichyl_beta_d_mannosyl_phosphate
     alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3
     <-> ec_2_4_1_259 [2.4.1.259] +h +c80_dolichol_phosphate -a_dolichyl_beta_d_mannosyl_phosphate
-    alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3
+    alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3_mnxm726737
     <-> ec_2_4_1_261 [2.4.1.261] +alpha_d_man_a_1_2_alpha_d_man_1_2_alpha_d_man_1 +a_dolichyl_beta_d_mannosyl_phosphate -h -c80_dolichol_phosphate
-    alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3
+    alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3_mnxm1370958
     <-> ec_2_4_1_267 [2.4.1.267] +a_dolichyl_beta_d_glucosyl_phosphate -h -c80_dolichol_phosphate
     alpha_d_glc_1_3_alpha_d_man_1_2_alpha_d_man_1_2
     <-> ec_2_4_1_265 [2.4.1.265] +a_dolichyl_beta_d_glucosyl_phosphate -h -c80_dolichol_phosphate

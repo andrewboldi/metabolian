@@ -10,7 +10,7 @@ pathway aldehydo-d-arabinose-to-2-d-mannosyl-3-phosph-73 "aldehydo-D-arabinoseâ€
     aldehydo_d_arabinose_5_phosphate
     <-> . -g3p
     glycolaldehyde
-    <-> ec_1_2_7_6 [1.2.7.6] +g3p +di_sulfido_diiron +h2o -di_sulfido_diiron -hplus
+    <-> ec_1_2_7_6 [1.2.7.6] +g3p +di_sulfido_diiron +h2o -di_sulfido_diiron_chebi_33738 -hplus
     pg3
     <-> ec_2_4_1_217 [2.4.1.217] +gdp_d_mannose -gdp -hplus
     2_d_mannosyl_3_phosphonatoglycerate

@@ -87,7 +87,7 @@ pathway prephytoene-diphosphate-to-diphosphate-null "prephytoene diphosphate to 
   branch from diphosphate side right {
     diphosphate
     <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +h +atp
-    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19_mnxm1132438
   }
 
   branch from h side left {

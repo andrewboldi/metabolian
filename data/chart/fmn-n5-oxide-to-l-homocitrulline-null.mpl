@@ -11,7 +11,7 @@ pathway fmn-n5-oxide-to-l-homocitrulline-null "FMN-N5-oxide to L-homocitrulline"
     <-> ec_1_14_14_22 [1.14.14.22] +2_hydroxybiphenyl_2_sulfinate -dibenzothiophene_5_5_dioxide -h
     fmn_n5_peroxide
     <-> . +thymine -z_2_methylureidoacrylate -hplus
-    fmn_n5_oxide
+    fmn_n5_oxide_chebi_144890
     <-> . +z_2_methylureidoacrylate +h2o -carbamate -hplus
     z_3_amino_2_methylacrylate
     <-> . +carbamate +atp -adp
@@ -22,25 +22,25 @@ pathway fmn-n5-oxide-to-l-homocitrulline-null "FMN-N5-oxide to L-homocitrulline"
 
   branch from h side left {
     h
-    <-> . +deoxymupirocin_c +h2o
+    <-> . +deoxymupirocin_c +h2o_water
     desepoxy_mupirocin_p
   }
 
   branch from h side right {
     h
-    <-> . +h2o +desepoxy_mupirocin_p
-    deoxymupirocin_c
+    <-> . +h2o_water +desepoxy_mupirocin_p
+    deoxymupirocin_c_mnxm1372378
   }
 
   branch from h side left {
     h
-    <-> . +taxifolin +h2o
+    <-> . +taxifolin +h2o_water
     idb_1027
   }
 
   branch from h side right {
     h
-    <-> ec_4_2_1_36 [4.2.1.36] +homocitric_acid +h2o
+    <-> ec_4_2_1_36 [4.2.1.36] +homocitric_acid +h2o_water
     cis_homoaconitate
   }
 }

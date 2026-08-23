@@ -26,7 +26,7 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate-13685 "5α-cholest-7-en-3β-ol 
 
   branch from ergosta_5_7_24_28_trien_3_ol side left {
     ergosta_5_7_24_28_trien_3_ol
-    <-> ec_1_14_21_6 [1.14.21.6] +episterol +nadp +nadph
+    <-> ec_1_14_21_6 [1.14.21.6] +episterol +nadp_mnxm5 +nadph_mnxm738702
     h
   }
 
@@ -62,8 +62,8 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate-13685 "5α-cholest-7-en-3β-ol 
 
   branch from coniferyl_acetate side left {
     coniferyl_acetate
-    <-> . +isoeugenol +acetate +nadp
-    nadph
+    <-> . +isoeugenol +acetate_mnxm26 +nadp_mnxm5
+    nadph_mnxm738702
   }
 
   branch from lathosterol side right {

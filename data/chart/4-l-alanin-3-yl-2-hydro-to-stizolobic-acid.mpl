@@ -11,7 +11,7 @@ pathway 4-l-alanin-3-yl-2-hydro-to-stizolobic-acid "4-(L-Alanin-3-yl)-2-hydro…
     <-> ec_1_13_11_29 [1.13.11.29] +nadp -stizolobic_acid
     nadph
     <-> ec_1_13_11_29 [1.13.11.29] +nadh +stizolobic_acid -nad
-    4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+    4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_mnxm1368750
     <-> ec_1_13_11_29 [1.13.11.29] +nadp -stizolobic_acid
     nadph
   }

@@ -14,7 +14,7 @@ pathway l-erythro-biopterin-to-succinate-null "L-erythro-biopterin to succinate"
     6s_5_methyl_5_6_7_8_tetrahydrofolate
     <-> ec_1_14_16_3 [1.14.16.3] +3_hydroxyanthranilate +tetrahydrobiopterin_4a_carbinolamine +h2o -anthranilate -o2
     sapropterin
-    <-> ec_1_14_16_4 [1.14.16.4] +l_tryptophan +o2 -4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
+    <-> ec_1_14_16_4 [1.14.16.4] +l_tryptophan +o2_chebi_15379 -4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
     5_hydroxy_l_tryptophan
     <-> ec_4_1_1_28 [4.1.1.28] +hplus -co2
     serotonin
@@ -22,7 +22,7 @@ pathway l-erythro-biopterin-to-succinate-null "L-erythro-biopterin to succinate"
     n_acetylserotonin
     <-> ec_2_1_1_4 [2.1.1.4] +sam -sah -hplus
     melatonin
-    <-> . +akg +o2 -succinate -co2
+    <-> . +akg +o2_chebi_15379 -succinate -co2
     2_hydroxymelatonin
   }
 
@@ -40,7 +40,7 @@ pathway l-erythro-biopterin-to-succinate-null "L-erythro-biopterin to succinate"
 
   branch from sapropterin side left {
     sapropterin
-    <-> ec_1_5_1_34 [1.5.1.34] +nadp +nadph +hplus
+    <-> ec_1_5_1_34 [1.5.1.34] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     bh2
   }
 
@@ -148,13 +148,13 @@ pathway l-erythro-biopterin-to-succinate-null "L-erythro-biopterin to succinate"
 
   branch from l_tryptophan side left {
     l_tryptophan
-    <-> ec_1_4_3_23 [1.4.3.23] +o2 +h2o2
+    <-> ec_1_4_3_23 [1.4.3.23] +o2_chebi_15379 +h2o2
     2_iminio_3_indol_3_yl_propanoate
   }
 
   branch from l_tryptophan side right {
     l_tryptophan
-    <-> ec_1_14_19_58 [1.14.19.58] +fadh2 +chloride +o2 +fad +h2o
+    <-> ec_1_14_19_58 [1.14.19.58] +fadh2 +chloride +o2_chebi_15379 +fad +h2o_chebi_15377
     5_chloro_l_tryptophan
   }
 

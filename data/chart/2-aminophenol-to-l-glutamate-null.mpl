@@ -88,7 +88,7 @@ pathway 2-aminophenol-to-l-glutamate-null "2-aminophenol to L-glutamate" {
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +pyruvate
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan_mnxm12912 +h2o +pyruvate
     z_omega_methylsulfanyl_heptyl_thiohydroximate
   }
 

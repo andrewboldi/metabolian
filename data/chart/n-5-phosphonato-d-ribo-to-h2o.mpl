@@ -32,12 +32,12 @@ pathway n-5-phosphonato-d-ribo-to-h2o "N-(5-phosphonato-β-D-ribo… to H2O" {
     mo_vi_molybdopterin_cytosine_dinucleotide
     <-> . +ppi +atp -adp -hplus
     triphosphate
-    <-> ec_2_5_1_154 [2.5.1.154] +adenosylcob_iii_alamin -h -atp
+    <-> ec_2_5_1_154 [2.5.1.154] +adenosylcob_iii_alamin -h -atp_mnxm3
     cbl
     <-> ec_1_16_1_6 [1.16.1.6] +cyanide +nadp -dicopac
     nadph
-    <-> ec_3_6_3_33 [3.6.3.33] +h +adp +dicopac +phosphate -dicopac -h2o
-    atp
+    <-> ec_3_6_3_33 [3.6.3.33] +h +adp_mnxm40333 +dicopac +phosphate -dicopac -h2o_water
+    atp_mnxm3
   }
 
   branch from l_tryptophan side left {
@@ -102,13 +102,13 @@ pathway n-5-phosphonato-d-ribo-to-h2o "N-(5-phosphonato-β-D-ribo… to H2O" {
 
   branch from mo_vi_o2_oh_molybdopterin_cofactor side left {
     mo_vi_o2_oh_molybdopterin_cofactor
-    <-> . +h +amp +molybdate
+    <-> . +h +amp_mnxm728294 +molybdate_mnxm726092
     adenylated_molybdopterin
   }
 
   branch from cbl side right {
     cbl
-    <-> ec_2_5_1_17 [2.5.1.17] +adenosylcob_iii_alamin +phosphate +h +atp +h2o
+    <-> ec_2_5_1_17 [2.5.1.17] +adenosylcob_iii_alamin +phosphate +h +atp_mnxm3 +h2o_water
     diphosphate
   }
 
@@ -130,15 +130,15 @@ pathway n-5-phosphonato-d-ribo-to-h2o "N-(5-phosphonato-β-D-ribo… to H2O" {
     all_trans_4_oxoretinoate
   }
 
-  branch from atp side right {
-    atp
-    <-> . +diphosphate +10_11_dihydro_ltb4_coa +amp +10_11_dihydro_leukotriene_b4
-    coa
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
+    <-> . +diphosphate +10_11_dihydro_ltb4_coa +amp_mnxm728294 +10_11_dihydro_leukotriene_b4
+    coa_mnxm727276
   }
 
-  branch from atp side left {
-    atp
-    <-> . +diphosphate +10_11_dihydro_ltb4_coa +h +amp +coa
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
+    <-> . +diphosphate +10_11_dihydro_ltb4_coa +h +amp_mnxm728294 +coa_mnxm727276
     6_7_dihydro_12_epi_ltb4
   }
 
@@ -154,14 +154,14 @@ pathway n-5-phosphonato-d-ribo-to-h2o "N-(5-phosphonato-β-D-ribo… to H2O" {
     all_cis_10_13_16_19_docosatetraenoyl_coa
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +maltodecaose +glucose
     maltononaose
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2_2_2_2_2_amino_3_4_hydroxyphenyl_1_oxopropyl_am +h +dynorphin_a_6_8
     dynorphin_a_1_8
   }

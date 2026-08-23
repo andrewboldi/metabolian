@@ -60,8 +60,8 @@ pathway isorhamnetin-to-s-adenosyl-l-homocysteine-null "isorhamnetin… to S-ade
 
   branch from trans_4_coumaroyl_coa side right {
     trans_4_coumaroyl_coa
-    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin +coa
-    pelargonidin_3_o_beta_d_glucoside_5_o_6_coumaroy
+    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin_mnxm1371951 +coa
+    pelargonidin_3_o_beta_d_glucoside_5_o_6_coumaroy_mnxm1372534
   }
 
   branch from udp side left {

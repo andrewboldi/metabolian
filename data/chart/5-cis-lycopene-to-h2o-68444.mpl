@@ -10,13 +10,13 @@ pathway 5-cis-lycopene-to-h2o-68444 "5-cis-lycopene to H2O" {
     5_cis_lycopene
     <-> . +o2 -pseudoionone
     5_cis_10_apo_lycopenal
-    <-> . +8_10_diapocarotene_8_10_dial +2e_geranial +pseudoionone -o2
+    <-> . +8_10_diapocarotene_8_10_dial +2e_geranial +pseudoionone -o2_mnxm735438
     all_trans_lycopene
-    <-> . +o2 -pseudoionone
+    <-> . +o2_mnxm735438 -pseudoionone
     4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
-    <-> ec_1_13_11_71 [1.13.11.71] +3_hydroxy_9_apo_delta_caroten_9_one +3r_hydroxy_ionone -o2
+    <-> ec_1_13_11_71 [1.13.11.71] +3_hydroxy_9_apo_delta_caroten_9_one +3r_hydroxy_ionone -o2_mnxm735438
     lutein
-    <-> . +h +o2 +nadph -loroxanthin -h2o
+    <-> . +h +o2_mnxm735438 +nadph -loroxanthin -h2o
     nadp
   }
 
@@ -32,14 +32,14 @@ pathway 5-cis-lycopene-to-h2o-68444 "5-cis-lycopene to H2O" {
     all_trans_beta_carotene
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +3_chloro_5_fluorocatechol +h
     2_chloro_4_fluoromuconate
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +4_chloro_2_fluoromuconate +h
     3_chloro_6_fluorocatechol
   }
@@ -52,19 +52,19 @@ pathway 5-cis-lycopene-to-h2o-68444 "5-cis-lycopene to H2O" {
 
   branch from lutein side right {
     lutein
-    <-> . +nadp +h2o +h +o2 +nadph
+    <-> . +nadp +h2o +h +o2_mnxm735438 +nadph
     alpha_cryptoxanthin
   }
 
   branch from nadp side left {
     nadp
-    <-> . +trans_11_hydroxyjasmonate +h2o +h +o2 +nadph
+    <-> . +trans_11_hydroxyjasmonate +h2o +h +o2_mnxm735438 +nadph
     jasmonate
   }
 
   branch from nadp side right {
     nadp
-    <-> . +16_hydroxyhexadecanoyl_coa +h +o2 +nadph +h2o
+    <-> . +16_hydroxyhexadecanoyl_coa +h +o2_mnxm735438 +nadph +h2o
     10_16_dihydroxypalmitoyl_coa
   }
 
@@ -92,14 +92,14 @@ pathway 5-cis-lycopene-to-h2o-68444 "5-cis-lycopene to H2O" {
     sulcatone
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +4_chloro_2_fluoromuconate +h
     5_chloro_3_fluorocatechol
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> ec_1_14_12_13 [1.14.12.13] +nadh +2_bromobenzoate +h +co2 +bromide +nad
     catechol
   }
@@ -130,13 +130,13 @@ pathway 5-cis-lycopene-to-h2o-68444 "5-cis-lycopene to H2O" {
 
   branch from nadph side left {
     nadph
-    <-> . +acetyl_coa +malonyl_coa +h +o2 +co2 +nadp +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2 +h2o
+    <-> . +acetyl_coa +malonyl_coa +h +o2_mnxm735438 +co2 +nadp +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2 +h2o
     coa
   }
 
   branch from nadph side right {
     nadph
-    <-> . +acetyl_coa +malonyl_coa +h +o2 +co2 +nadp +coa +h2o
+    <-> . +acetyl_coa +malonyl_coa +h +o2_mnxm735438 +co2 +nadp +coa +h2o
     1_8_dihydroxy_3_methylnaphthalene
   }
 

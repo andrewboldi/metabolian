@@ -48,7 +48,7 @@ pathway ent-kaur-16-ene-to-hydrogen-donor "ent-kaur-16-ene to hydrogen donor" {
 
   branch from 2_trans_6_trans_10_trans_geranylgeranyl_diphosph side right {
     2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    <-> ec_4_2_1_174 [4.2.1.174] +h2o
+    <-> ec_4_2_1_174 [4.2.1.174] +h2o_chebi_15377
     peregrinol_diphosphate
   }
 
@@ -61,7 +61,7 @@ pathway ent-kaur-16-ene-to-hydrogen-donor "ent-kaur-16-ene to hydrogen donor" {
   branch from diphosphate side right {
     diphosphate
     <-> ec_4_2_3_51 [4.2.3.51] +neryl_diphosphate
-    phellandrene
+    phellandrene_chebi_129
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {

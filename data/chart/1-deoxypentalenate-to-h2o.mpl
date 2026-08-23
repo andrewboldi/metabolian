@@ -16,34 +16,34 @@ pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
     pentalenolactone_d
     <-> ec_1_14_11_36 [1.14.11.36] +akg +o2 -succinate -co2 -h2o
     pentalenolactone_f
-    <-> ec_1_14_19_8 [1.14.19.8] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_8 [1.14.19.8] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     pentalenolactone
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -pentalenolactone -h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -pentalenolactone -h2o_water
     atp
   }
 
   branch from pentalenolactone_f side left {
     pentalenolactone_f
-    <-> . +h +o2 +nadph +pentalenolactone +h2o
-    nadp
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +pentalenolactone +h2o_water
+    nadp_mnxm5
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +acetochlor +di_sulfido_diiron +o2 +hplus +ethyl_formate +h2o
     n_2_ethyl_6_methylphenyl_2_chloroacetamide
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +5_cholestan_3_ol +di_sulfido_diiron +o2 +hplus +h2o
     25r_26_hydroxycholestanol
   }
 
   branch from atp side right {
     atp
-    <-> . +nadh +3_dehydro_atp +h
-    nad
+    <-> . +nadh_mnxm10 +3_dehydro_atp +h
+    nad_mnxm8
   }
 
   branch from atp side left {
@@ -52,51 +52,51 @@ pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
     n_methylanthranilate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_1_4_43 [3.1.4.43] +1d_myo_inositol_1_phosphate +h
     1d_myo_inositol_1_2_cyclic_phosphate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_4_1_2_34 [4.1.2.34] +2_formylbenzoate +h +pyruvate
     trans_2_carboxybenzylidenepyruvic_acid
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_61 [1.14.19.61] +dihydrorhizobitoxine +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_19_61 [1.14.19.61] +dihydrorhizobitoxine +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     rhizobitoxine
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +julichrome_q6 +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +julichrome_q6 +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     julichrome_q6_6
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +stearoyl_coa +di_sulfido_diiron +o2 +hplus +h2o
     oleoyl_coa
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
     all_trans_3_hydroxyretinol
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_5_2 [1.2.5.2] +propynoate +pyrroloquinoline_quinol +pyrroloquinoline_quinone +h2o
+    <-> ec_1_2_5_2 [1.2.5.2] +propynoate +pyrroloquinoline_quinol +pyrroloquinoline_quinone +h2o_water
     prop_2_ynal
   }
 
   branch from h side left {
     h
-    <-> . +l_threo_3_methylmalic_acid +h2o
+    <-> . +l_threo_3_methylmalic_acid +h2o_water
     mesaconate
   }
 
@@ -114,13 +114,13 @@ pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +1_ribosylimidazole_4_acetate +h2o
+    <-> . +h +1_ribosylimidazole_4_acetate +h2o_water
     1_5_phosphoribosyl_imidazole_4_acetate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph +phosphoenolpyruvate +h2o
+    <-> . +h +4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph +phosphoenolpyruvate +h2o_water
     iminoerythrose_4_phosphate
   }
 
@@ -136,14 +136,14 @@ pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
     glutathione
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +3_beta_d_galactosyl_sn_glycerol +glycerol
     aldehydo_d_galactose
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2_methylfumaryl_coa +mesaconate +h
     coa
   }

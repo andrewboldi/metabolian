@@ -19,6 +19,6 @@ pathway androsterone-to-5-androstane-3-17-dione-42156 "androsterone to 5α-andro
   branch from 17_hydroxy_5_androstan_3_one side left {
     17_hydroxy_5_androstan_3_one
     <-> . +nad +nadh +hplus
-    5_androstane_3_17_diol
+    5_androstane_3_17_diol_chebi_18329
   }
 }

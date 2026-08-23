@@ -11,10 +11,10 @@ pathway 3alpha-7alpha-12alpha-tri-to-nadph-null "3alpha,7alpha,12alpha-tri… to
     <-> ec_6_2_1_7 [6.2.1.7] +diphosphate +amp -coa -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
     atp
     <-> ec_1_14_13_15 [1.14.13.15] +nadp +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +h2o -o2 -nadph
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282
     <-> ec_1_1_1_1 [1.1.1.1] +nadh +h -nad
     25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t
-    <-> . +nadp -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol -nadph
+    <-> . +nadp -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282 -nadph
     h
   }
 
@@ -42,8 +42,8 @@ pathway 3alpha-7alpha-12alpha-tri-to-nadph-null "3alpha,7alpha,12alpha-tri… to
     6_o_acetyl_beta_d_glc_1_4_beta_d_glc_1_3_alpha_d
   }
 
-  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol side left {
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282 side left {
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282
     <-> . +h2o
     5beta_cholestane_3alpha_7alpha_12alpha_27_27_pen
   }
@@ -153,7 +153,7 @@ pathway 3alpha-7alpha-12alpha-tri-to-nadph-null "3alpha,7alpha,12alpha-tri… to
   branch from nadp side left {
     nadp
     <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nadph
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_mnxm1368853
   }
 
   branch from h2o side right {

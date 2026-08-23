@@ -49,7 +49,7 @@ pathway d-glucosamine-to-d-fructofuranose "α-D-glucosamine… to β-D-fructofur
   branch from d_fructofuranose_6_phosphate side right {
     d_fructofuranose_6_phosphate
     <-> ec_5_3_1_9 [5.3.1.9]
-    d_fructofuranose_6_phosphate
+    d_fructofuranose_6_phosphate_chebi_234464
   }
 
   branch from nh3 side left {

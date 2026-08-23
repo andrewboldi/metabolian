@@ -26,14 +26,14 @@ pathway n-n-dimethylformamide-to-ammonium-19517 "N,N-dimethylformamide to ammoni
 
   branch from cobalt side right {
     cobalt
-    <-> ec_1_16_99_1 [1.16.99.1] +cobalt +hydrogen_donor +atp +h2o +adp +pi +hplus
+    <-> ec_1_16_99_1 [1.16.99.1] +cobalt_chebi_48828 +hydrogen_donor +atp +h2o +adp +pi +hplus
     hydrogen_acceptor
   }
 
   branch from cobalt side left {
     cobalt
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp_mnxm40333 +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from nh3 side right {

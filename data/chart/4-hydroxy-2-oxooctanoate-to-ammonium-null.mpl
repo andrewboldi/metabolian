@@ -15,22 +15,22 @@ pathway 4-hydroxy-2-oxooctanoate-to-ammonium-null "4-Hydroxy-2-oxooctanoate to a
     <-> ec_1_1_1_27 [1.1.1.27] +nadh +h -nad
     2_hydroxyhexanoate
     <-> . +o2 -h2o2
-    2_oxohexanoate
+    2_oxohexanoate_chebi_35177
     <-> . +n_n_dimethyl_l_argininium -5_3_3_dimethylguanidino_2_oxopentanoate
     l_2_aminohexanoic_acid
     <-> . +o2 +h2o -h2o2 -nh3
-    2_oxohexanoate
+    2_oxohexanoate_chebi_35177
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o_water
     fagopyritol_b3
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +fagopyritol_a2 +phosphate +fagopyritol_a2 +h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +fagopyritol_a2 +phosphate +fagopyritol_a2 +h2o_water
     atp
   }
 
@@ -60,13 +60,13 @@ pathway 4-hydroxy-2-oxooctanoate-to-ammonium-null "4-Hydroxy-2-oxooctanoate to a
 
   branch from h side left {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o_water
     fagopyritol_a3
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o_water
     agarotetraose
   }
 
@@ -78,7 +78,7 @@ pathway 4-hydroxy-2-oxooctanoate-to-ammonium-null "4-Hydroxy-2-oxooctanoate to a
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +ubiquinol_9 +nh4 +ubiquinone_9 +h2o
+    <-> . +ubiquinol_9 +nh4 +ubiquinone_9 +h2o_water
     d_alanine
   }
 

@@ -10,11 +10,11 @@ pathway docosanedioate-to-docosanedioate-null "docosanedioate to docosanedioate"
     docosanedioate
     <-> . +nadp +h2o -behenate -o2 -nadph
     h
-    <-> . +behenate +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +behenate +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     22_hydroxydocosanoate
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     22_oxodocosanoate
-    <-> . +nad +h2o -nadh -hplus
+    <-> . +nad +h2o_chebi_15377 -nadh -hplus
     docosanedioate
   }
 }

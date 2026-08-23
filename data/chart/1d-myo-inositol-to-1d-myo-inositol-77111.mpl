@@ -10,7 +10,7 @@ pathway 1d-myo-inositol-to-1d-myo-inositol-77111 "1D-myo-inositol… to 1D-myo-i
     1d_myo_inositol_1_2_3_5_6_pentakisphosphate
     <-> ec_3_1_3_62 [3.1.3.62] +h2o -pi
     1d_myo_inositol_1_2_3_6_tetrakisphosphate
-    <-> . +h2o -phosphate
+    <-> . +h2o_water -phosphate
     1d_myo_inositol_1_2_6_trisphosphate
     <-> ec_3_1_3_62 [3.1.3.62] +h2o -pi
     1d_myo_inositol_1_2_bisphosphate

@@ -14,22 +14,83 @@ pathway diphosphate-to-o-pantetheine-4-phospho-null "diphosphate to O-(pantethei
     4_hydroxyamino_benzoate
     <-> . +h2o +hplus -nh3
     3_4_dihydroxybenzoate
-    <-> . +atp +hplus -ppi
+    <-> . +atp_chebi_30616 +hplus -ppi
     3_4_dihydroxybenzoyl_amp
-    <-> . +holo-acp -amp -hplus
+    <-> . +holo-acp -amp_chebi_456215 -hplus
     o_s_3_4_dihydroxybenzoyl_pantetheine_4_phosphory
     <-> . +n8_n_8_citryl_bis_spermidine_3 -holo-acp -hplus
     n1_3_4_dihydroxybenzoyl_n8_n_8_citryl_bis_spermi
   }
 
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +l_norvalyl_adenylate +l_2_aminopentanoate
+    h
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +lysergic_acid_adenylate +h
+    6_methyl_9_10_didehydroergoline_8_carboxylic_aci
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +tetradecanoyl_coa +s_carnitine
+    o_tetradecanoyl_r_carnitine
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +2e_tetradecenoyl_coa +s_carnitine
+    5z_tetradecenoylcarnitine
+  }
 
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_4_2_10 [2.4.2.10] +5_phospho_alpha_d_ribose_1_diphosphate +5_fu
+    5_fluorouridine_5_monophosphate
+  }
 
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_2_3_189 [4.2.3.189] +13r_9_13_epoxylabd_14_ene
+    peregrinol_diphosphate
+  }
 
+  branch from amp side left {
+    amp
+    <-> . +adpmannose +h2o_water +h
+    d_mannose_1_phosphate
+  }
 
+  branch from amp side right {
+    amp
+    <-> . +adp_beta_d_ribose +h2o_water +h
+    alpha_d_ribose_5_phosphate
+  }
 
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_130 [2.7.1.130] +lipid_a_disaccharide_h_pylori +h +adp
+    lipid_iva_h_pylori
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_130 [2.7.1.130] +lipid_a_disaccharide_vibrio_cholerae_serogroup_o +h +adp
+    lipid_iva_vibrio_cholerae_serogroup_o1_el_tor
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +3s_hydroxytetradecanoyl_coa +s_carnitine
+    3_hydroxytetradecanoylcarnitine
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +2e_hexadecenoyl_coa +s_carnitine
+    2e_hexadecenoylcarnitine
+  }
 }

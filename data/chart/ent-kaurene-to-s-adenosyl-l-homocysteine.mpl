@@ -8,7 +8,7 @@ pathway ent-kaurene-to-s-adenosyl-l-homocysteine "ent-kaurene to S-adenosyl-L-ho
 
   spine at 0,0 {
     ent_kaurene
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     ent_kaur_16_en_19_oate
     <-> ec_1_14_14_107 [1.14.14.107] +fmnh2 +o2 -fmn -h2o -hplus
     gibberellin_a12

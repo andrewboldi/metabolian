@@ -8,7 +8,7 @@ pathway 11-deoxycorticosterone-to-11-21-dioxoprogesteron "11-deoxycorticosterone
 
   spine at 0,0 {
     11_deoxycorticosterone
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     corticosterone
     <-> . +nadp -nadph -hplus
     11_dehydrocorticosterone

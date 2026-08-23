@@ -48,7 +48,7 @@ pathway iridodial-lactol-to-fmn "(+)-iridodial lactol to FMN" {
 
   branch from 7_deoxyloganetin side left {
     7_deoxyloganetin
-    <-> . +h +o2 +nadph +nadp +h2o
+    <-> . +h +o2_mnxm735438 +nadph +nadp +h2o_water
     loganetin
   }
 
@@ -90,7 +90,7 @@ pathway iridodial-lactol-to-fmn "(+)-iridodial lactol to FMN" {
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +nadp +coa +amp +yersiniabactin +h2o +s_adenosyl_l_methionine +h +l_cysteine +nadph +2_hydroxybenzoyl_5_amp
+    <-> . +nadp +coa +amp +yersiniabactin +h2o_water +s_adenosyl_l_methionine +h +l_cysteine +nadph +2_hydroxybenzoyl_5_amp
     malonyl_coa
   }
 

@@ -12,7 +12,7 @@ pathway hexanoyl-coa-to-olivetol-null "hexanoyl-CoA to olivetol" {
     3_5_dioxodecanoyl_coa
     <-> . +malonyl_coa +h -co2 -coa
     3_5_7_trioxododecanoyl_coa
-    <-> . -co2 -coa
+    <-> . -co2_chebi_16526 -coa_chebi_57287
     olivetol
   }
 }

@@ -14,17 +14,17 @@ pathway ent-kaurene-to-h2o-13045 "ent-kaurene to H2O" {
     ent_kaur_16_en_19_al
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     ent_kaur_16_en_19_oate
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     gibberellin_a12_aldehyde
     <-> . +hydrogen_acceptor +h2o -hydrogen_donor -hplus
     gibberellin_a12
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -co2 -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -co2 -h2o
     gibberellin_a9
     <-> ec_2_1_1_275 [2.1.1.275] +sam -sah
     gibberellin_a9_methyl_ester
-    <-> ec_2_1_1_275 [2.1.1.275] +s_adenosyl_l_homocysteine +h -gibberellin_a9
+    <-> ec_2_1_1_275 [2.1.1.275] +s_adenosyl_l_homocysteine +h -gibberellin_a9_mnxm1364193
     s_adenosyl_l_methionine
-    <-> . +gibberellin_a9 +o2 +nadph -16alpha_17_epoxy_gibberellin_a9 -h2o
+    <-> . +gibberellin_a9_mnxm1364193 +o2_mnxm735438 +nadph -16alpha_17_epoxy_gibberellin_a9 -h2o_water
     nadp
   }
 }

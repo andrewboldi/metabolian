@@ -66,14 +66,14 @@ pathway r-alanopine-to-n6-r-s8-succinyldihydr "(R)-β-alanopine to N6-[(R)-S8-su
 
   branch from kiv side left {
     kiv
-    <-> ec_2_6_1_66 [2.6.1.66] +l_valine +pyruvate
-    alanine
+    <-> ec_2_6_1_66 [2.6.1.66] +l_valine +pyruvate_mnxm23
+    alanine_mnxm733981
   }
 
   branch from kiv side right {
     kiv
-    <-> . +nadh +2_methylpropanoate +co2 +h +h2o
-    nad
+    <-> . +nadh_mnxm10 +2_methylpropanoate +co2_mnxm13 +h +h2o_water
+    nad_mnxm8
   }
 
   branch from n6_r_dihydrolipoyl_l_lysine side left {

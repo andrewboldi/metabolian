@@ -12,8 +12,8 @@ pathway 22-6-cholesteryl-ester-to-1-hexadecanoyl-sn-glyc "22:6 Cholesteryl ester
     h
     <-> ec_3_1_1_4 [3.1.1.4] +4z_7z_10z_13z_16z_19z_docosahexaenoate +1_hexadecanoyl_sn_glycero_3_phosphate -h2o
     1_palmitoyl_2_4z_7z_10z_13z_16z_19z_docosahexaen
-    <-> . +h2o -pi
-    1_palmitoyl_2_4z_7z_10z_13z_16z_19z_docosahexaen
+    <-> . +h2o_chebi_15377 -pi
+    1_palmitoyl_2_4z_7z_10z_13z_16z_19z_docosahexaen_chebi_82949
     <-> . +cdp_choline -cytidine_5_monophosphate -hplus
     1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
     <-> . +n_acetylsphingosine -1_hexadecanoyl_sn_glycero_3_phosphocholine
@@ -22,7 +22,7 @@ pathway 22-6-cholesteryl-ester-to-1-hexadecanoyl-sn-glyc "22:6 Cholesteryl ester
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly +cholesterol
+    <-> . +1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly +cholesterol_chebi_16113
     cholesteryl_linolenate
   }
 

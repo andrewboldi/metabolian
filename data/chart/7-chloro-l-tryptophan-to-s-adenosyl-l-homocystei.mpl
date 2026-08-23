@@ -14,7 +14,7 @@ pathway 7-chloro-l-tryptophan-to-s-adenosyl-l-homocystei "7-chloro-L-tryptophan 
     dichlorochromopyrrolate
     <-> ec_1_13_12_17 [1.13.12.17] +nadh +o2 +hplus -co2 -nad -h2o
     dichloroarcyriaflavin_a
-    <-> ec_4_3_3_5 [4.3.3.5] +glucose -h2o
+    <-> ec_4_3_3_5 [4.3.3.5] +glucose -h2o_water
     4_demethylrebeccamycin
     <-> ec_2_1_1_164 [2.1.1.164] +sam -sah -hplus
     rebeccamycin

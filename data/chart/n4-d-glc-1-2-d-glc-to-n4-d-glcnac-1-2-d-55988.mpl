@@ -15,7 +15,7 @@ pathway n4-d-glc-1-2-d-glc-to-n4-d-glcnac-1-2-d-55988 "N4-(α-D-Glc-(1→2)-α-D
     <-> ec_3_2_1_130 [3.2.1.130] +h2o -n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man
     d_glucosyl_1_3_d_mannopyranose
     <-> . +n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man +h2o -d_mannose
-    n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man
+    n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man_chebi_139497
     <-> . +h2o -d_mannose
     n4_d_man_1_3_d_man_1_2_d_man_1_3_d_man_1_6_d_man
     <-> . +h2o -d_mannose
@@ -23,108 +23,27 @@ pathway n4-d-glc-1-2-d-glc-to-n4-d-glcnac-1-2-d-55988 "N4-(α-D-Glc-(1→2)-α-D
     <-> ec_2_4_1_101 [2.4.1.101] +udpglcnac -udp -hplus
     n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d
     <-> ec_3_2_1_114 [3.2.1.114] +h2o -n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
-    d_mannose
+    d_mannose_chebi_28729
     <-> ec_2_4_1_143 [2.4.1.143] +n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d +udpglcnac -udp -hplus
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
     <-> ec_2_4_1_68 [2.4.1.68] +gdp_l_fucose -gdp -hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6_chebi_137207
     <-> . +udpglcnac -udp -hplus
     n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
   }
 
-  branch from d_glucose side left {
-    d_glucose
-    <-> . +d_glucosyl_1_1_n_hexadecanoylsphinganine +h2o
-    n_hexadecanoylsphinganine
-  }
 
-  branch from n_glc_1_3_man_1_2_man_1_2_man_1_3_man_1_2_man_1 side right {
-    n_glc_1_3_man_1_2_man_1_2_man_1_3_man_1_2_man_1
-    <-> . +udp_d_glucose +udp +hplus
-    n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_2_d_man
-  }
 
-  branch from d_mannose side left {
-    d_mannose
-    <-> ec_3_2_1_210 [3.2.1.210] +n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d +h2o
-    n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_3_d_man
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d side right {
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d
-    <-> . +udp_d_galactose +udp +hplus
-    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d side left {
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
-    <-> . +udpglcnac +udp +hplus
-    n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_man_1_6
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d side right {
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
-    <-> . +udpglcnac +udp +hplus
-    n4_d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side left {
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
-    <-> . +udp_d_galactose +udp +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d_glcnac_1_2
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side right {
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    n4_6_o_sulfo_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side left {
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
-    <-> . +udpglcnac +udp +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_d_glcnac
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side right {
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
-    <-> . +h2o +n4_l_fuc_1_6_d_glcnac_l_asn
-    d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6_d
-  }
 
-  branch from udpglcnac side left {
-    udpglcnac
-    <-> . +n_acetyl_d_glucosaminide +udp +hplus
-    n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_glucosami
-  }
 
-  branch from udpglcnac side right {
-    udpglcnac
-    <-> . +o_d_mannosyl_l_threonine +udp +hplus
-    n_acetyl_d_glucosaminyl_1_2_d_mannosyl_l_threoni
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d side left {
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
-    <-> . +udp_d_galactose +udp +hplus
-    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d
-  }
 
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d side right {
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
-    <-> . +gdp_l_fucose +gdp +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
-  }
 
-  branch from gdp_l_fucose side left {
-    gdp_l_fucose
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +gdp +hplus
-    l_fuc_1_2_d_gal_1_3_d_galnac_1_4_neu5ac_2_8_neu
-  }
-
-  branch from gdp_l_fucose side right {
-    gdp_l_fucose
-    <-> . +d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer +gdp +hplus
-    d_gal_1_3_l_fuc_1_4_d_glcnac_1_3_d_gal_1_4_d_gl
-  }
 }

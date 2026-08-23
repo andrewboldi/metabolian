@@ -13,6 +13,6 @@ pathway o-s-6-methoxycarbonylhe-to-di-sulfido-diiron "O-[S-(6-methoxycarbonylheâ
     <-> . +iron +methanol +h2o -fe2 -hplus
     formate
     <-> ec_1_17_1_11 [1.17.1.11] +di_sulfido_diiron +nad -co2 -nadh -hplus
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33738
   }
 }

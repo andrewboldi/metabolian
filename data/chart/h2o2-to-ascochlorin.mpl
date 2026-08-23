@@ -12,13 +12,13 @@ pathway h2o2-to-ascochlorin "H2O2 to ascochlorin" {
     o2
     <-> . +ilicicolinate_b +hydrogen_donor +atp -hydrogen_acceptor -amp -ppi
     ilicicolin_b
-    <-> . +fadh2 +chloride +o2 -fad -h2o -hplus
+    <-> . +fadh2 +chloride +o2_chebi_15379 -fad -h2o -hplus
     ilicicolin_a
-    <-> . +nadph +o2 +hplus -nadp -h2o
+    <-> . +nadph +o2_chebi_15379 +hplus -nadp -h2o
     ilicicolin_a_epoxide
     <-> .
     ilicicolin_c
-    <-> . +nadph +o2 +hplus -nadp -h2o
+    <-> . +nadph +o2_chebi_15379 +hplus -nadp -h2o
     ascochlorin
   }
 }

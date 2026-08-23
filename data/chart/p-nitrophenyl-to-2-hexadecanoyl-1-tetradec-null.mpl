@@ -30,14 +30,14 @@ pathway p-nitrophenyl-to-2-hexadecanoyl-1-tetradec-null "p-Nitrophenyl… to 2-h
 
   branch from tetradecanoate side left {
     tetradecanoate
-    <-> ec_2_3_1_41 [2.3.1.41] +acetyl_coa +malonyl_coa +h +nadph +nadp +coa +h2o
+    <-> ec_2_3_1_41 [2.3.1.41] +acetyl_coa +malonyl_coa +h +nadph +nadp +coa_mnxm727276 +h2o
     co2
   }
 
   branch from tetradecanoate side right {
     tetradecanoate
     <-> ec_6_2_1_3 [6.2.1.3] +tetradecanoyl_coa +diphosphate +amp +atp
-    coa
+    coa_mnxm727276
   }
 
   branch from 1_tetradecanoyl_sn_glycero_3_phospho_1_sn_glycer side left {
@@ -90,13 +90,13 @@ pathway p-nitrophenyl-to-2-hexadecanoyl-1-tetradec-null "p-Nitrophenyl… to 2-h
 
   branch from tetradecanoate side left {
     tetradecanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +malonyl_coa +h +dodecanoate +nadph +co2 +coa +h2o
+    <-> ec_2_3_1_85 [2.3.1.85] +malonyl_coa +h +dodecanoate +nadph +co2 +coa_mnxm727276 +h2o
     nadp
   }
 
   branch from tetradecanoate side right {
     tetradecanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +hexadecanoate +co2 +nadp +coa +h2o +h +nadph
+    <-> ec_2_3_1_85 [2.3.1.85] +hexadecanoate +co2 +nadp +coa_mnxm727276 +h2o +h +nadph
     malonyl_coa
   }
 

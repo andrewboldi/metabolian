@@ -12,7 +12,7 @@ pathway diphosphate-to-3-3as-4s-5r-7as-5-hydr-null "diphosphate to 3-[(3aS,4S,5R
     3aalpha_h_4alpha_carboxy_5_hydroxy_7abeta_methyl
     <-> . +acetyl_coa +h -h2o
     3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h -3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h -3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy_mnxm9981
     nad
   }
 

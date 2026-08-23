@@ -13,6 +13,6 @@ pathway 10z-heptadecenoyl-coa-to-h2o-null "10Z-heptadecenoyl-CoA to H2O" {
     <-> . +h2o -10z_heptadecenoic_acid
     cholesterol
     <-> . +10z_heptadecenoic_acid -h2o
-    cholest_5_en_3b_yl_9z_heptadecenoate
+    cholest_5_en_3b_yl_9z_heptadecenoate_mnxm744568
   }
 }

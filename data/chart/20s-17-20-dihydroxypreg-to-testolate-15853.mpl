@@ -26,7 +26,7 @@ pathway 20s-17-20-dihydroxypreg-to-testolate-15853 "(20S)-17,20-dihydroxypreg…
 
   branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
-    <-> ec_1_14_15_19 [1.14.15.19] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_15_19 [1.14.15.19] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     1_hydroxyandrost_4_ene_3_17_dione
   }
 

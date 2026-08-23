@@ -12,7 +12,7 @@ pathway geranylgeranyl-chlorophyl-to-chlorophyll-a "geranylgeranyl-chlorophyl…
     chlorophyll_a
     <-> ec_4_99_1_10 [4.99.1.10] +h -mg
     pheophytin_a
-    <-> ec_4_99_1_10 [4.99.1.10] +mg -chlorophyll_a
+    <-> ec_4_99_1_10 [4.99.1.10] +mg -chlorophyll_a_mnxm736584
     h
   }
 }

@@ -16,7 +16,7 @@ pathway dec-pp-beta-d-glcnac-1-to-nad-null "Dec-PP-[beta-D-GlcNAc-(1-… to NAD"
     araf_3_galf_30_rha_glcnac_p_p_c50
     <-> ec_1_1_1_333 [1.1.1.333] +trans_octacis_decaprenylphospho_d_arabinofuranos +nad -nadh -hplus
     trans_octacis_decaprenylphospho_d_erythro_pentof
-    <-> . +nadh +h -nad
+    <-> . +nadh_mnxm10 +h -nad_mnxm8
     trans_octacis_decaprenylphospho_d_ribofuranose
   }
 
@@ -44,15 +44,15 @@ pathway dec-pp-beta-d-glcnac-1-to-nad-null "Dec-PP-[beta-D-GlcNAc-(1-… to NAD"
     pmf
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +alpha_pinene +h +o2 +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +alpha_pinene +h +o2 +h2o
     alpha_pinene_oxide
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_122 [1.1.1.122] +nadh +l_galactono_1_4_lactone +h
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_1_1_122 [1.1.1.122] +nadh_mnxm10 +l_galactono_1_4_lactone +h
     alpha_l_galactose
   }
 
@@ -89,30 +89,30 @@ pathway dec-pp-beta-d-glcnac-1-to-nad-null "Dec-PP-[beta-D-GlcNAc-(1-… to NAD"
   branch from phosphate side right {
     phosphate
     <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +d_glucopyranose_1_phosphate
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143181
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_2_1_85 [1.2.1.85] +h +2e_4z_2_hydroxymuconate +nad +h2o
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> ec_1_2_1_85 [1.2.1.85] +h +2e_4z_2_hydroxymuconate +nad_mnxm8 +h2o
     2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
   }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_2_1_32 [1.2.1.32] +h +2e_4z_2_hydroxymuconate +nad +h2o
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_2_1_32 [1.2.1.32] +h +2e_4z_2_hydroxymuconate +nad_mnxm8 +h2o
     2_hydroxymuconic_semialdehyde
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_3 [1.14.13.3] +nadh +h +4_hydroxyphenylacetate +o2 +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_14_13_3 [1.14.13.3] +nadh_mnxm10 +h +4_hydroxyphenylacetate +o2 +h2o
     3_4_dihydroxyphenylacetate
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +13_oxo_9z_11e_octadecadienoate
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +13_oxo_9z_11e_octadecadienoate
     13s_hydroxy_9z_11e_octadecadienoate
   }
 }

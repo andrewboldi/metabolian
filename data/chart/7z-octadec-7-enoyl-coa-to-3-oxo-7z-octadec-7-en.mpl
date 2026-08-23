@@ -14,7 +14,7 @@ pathway 7z-octadec-7-enoyl-coa-to-3-oxo-7z-octadec-7-en "(7Z)-octadec-7-enoyl-Co
     7z_octadecenoyl_coa
     <-> . +fad +hplus -fadh2
     2e_7z_octadecadi_2_7_enoyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     3s_hydroxy_7z_octadec_7_enoyl_coa
     <-> . +nad -nadh -hplus
     3_oxo_7z_octadec_7_enoyl_coa

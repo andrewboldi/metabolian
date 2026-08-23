@@ -37,7 +37,7 @@ pathway 2-phospho-nucleotide-to-adp-d-ribose-23324 "2'-phospho-nucleotide… to 
   branch from adp_d_ribose side right {
     adp_d_ribose
     <-> . +h2o +nicotinamide +hplus
-    nad
+    nad_chebi_77017
   }
 
   branch from nicotinamide side left {

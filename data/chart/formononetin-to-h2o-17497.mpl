@@ -21,7 +21,7 @@ pathway formononetin-to-h2o-17497 "formononetin to H2O" {
   branch from ononin side left {
     ononin
     <-> ec_3_2_1_62 [3.2.1.62] +glucose +h +h2o
-    formononetin
+    formononetin_mnxm1232
   }
 
   branch from ononin side right {
@@ -98,7 +98,7 @@ pathway formononetin-to-h2o-17497 "formononetin to H2O" {
 
   branch from ononin side right {
     ononin
-    <-> ec_3_2_1_21 [3.2.1.21] +formononetin +h +h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +formononetin_mnxm1232 +h +h2o
     beta_d_glucose
   }
 

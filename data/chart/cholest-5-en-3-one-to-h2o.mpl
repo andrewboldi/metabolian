@@ -10,9 +10,9 @@ pathway cholest-5-en-3-one-to-h2o "cholest-5-en-3-one to H2O" {
     cholest_5_en_3_one
     <-> ec_5_3_3_1 [5.3.3.1]
     cholest_4_en_3_one
-    <-> ec_1_14_15_28 [1.14.15.28] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_28 [1.14.15.28] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_4_dafachronate
-    <-> . +nadh +h -nad -h2o
+    <-> . +nadh +h -nad -h2o_water
     25r_3_ketocholest_4_en_26_al
   }
 }

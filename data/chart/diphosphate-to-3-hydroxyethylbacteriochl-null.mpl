@@ -69,7 +69,7 @@ pathway diphosphate-to-3-hydroxyethylbacteriochl-null "diphosphate to 3-Hydroxye
   branch from nad side left {
     nad
     <-> . +nadh +h +2_4_5_trihydroxytoluene
-    2_hydroxy_5_methylquinone
+    2_hydroxy_5_methylquinone_mnxm1370745
   }
 
   branch from nad side right {
@@ -99,6 +99,6 @@ pathway diphosphate-to-3-hydroxyethylbacteriochl-null "diphosphate to 3-Hydroxye
   branch from h2o side right {
     h2o
     <-> . +aklanonic_acid +o2
-    12_deoxyaklanonic_acid
+    12_deoxyaklanonic_acid_mnxm1372265
   }
 }

@@ -37,7 +37,7 @@ pathway biphenyl-2-3-diol-to-nadp-null "biphenyl-2,3-diol to NADP" {
   branch from nadp side right {
     nadp
     <-> . +h +nadph +epiafzelechin
-    pelargonidin
+    pelargonidin_mnxm1369124
   }
 
   branch from o2 side left {

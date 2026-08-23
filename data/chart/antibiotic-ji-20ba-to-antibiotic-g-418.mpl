@@ -103,6 +103,6 @@ pathway antibiotic-ji-20ba-to-antibiotic-g-418 "Antibiotic JI-20Ba to Antibiotic
   branch from fad side left {
     fad
     <-> . +fadh2 +h +l_aspartate
-    iminoaspartate
+    iminoaspartate_mnxm1370457
   }
 }

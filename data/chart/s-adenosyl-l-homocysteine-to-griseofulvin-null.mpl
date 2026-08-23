@@ -12,34 +12,145 @@ pathway s-adenosyl-l-homocysteine-to-griseofulvin-null "S-adenosyl-L-homocystein
     s_adenosyl_l_methionine
     <-> . +desmethyl_dehydro_dechlorogriseofulvin +nadp +h2o -griseophenone_c -o2 -nadph
     h
-    <-> . +griseophenone_c +fadh2 +chloride +o2 -fad -h2o -hplus
+    <-> . +griseophenone_c +fadh2 +chloride +o2_chebi_15379 -fad -h2o_chebi_15377 -hplus
     griseophenone_b
-    <-> . +fmnh2 +o2 +hplus -fmn -h2o
+    <-> . +fmnh2 +o2_chebi_15379 +hplus -fmn -h2o_chebi_15377
     desmethyl_dehydrogriseofulvin
     <-> . +sam -sah -hplus
     dehydrogriseofulvin
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     griseofulvin
   }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +mitomycin_a +h
+    7_demethylmitomycin_a
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +lincomycin +h
+    n_demethyllincomycin
+  }
 
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    henicosanoic_acid
+  }
 
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    13z_docosenoate
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +aurachin_b +h +nadph +nadp +h2o
+    aurachin_b_epoxide
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +nadh +aurachin_b +h +aurachin_b_epoxide +h2o
+    nad
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_348 [1.1.1.348] +h +3r_2_hydroxyisoflavanone +nadp
+    4r_4_2_dihydroxyisoflavan
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_417 [1.1.1.417] +co2 +h +4alpha_methyl_3_oxosteroid +nadp
+    3beta_hydroxy_4alpha_methylsteroid_4beta_carboxy
+  }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_289 [2.1.1.289] +cobalt_precorrin_8 +h +s_adenosyl_l_methionine
+    co_precorrin_7
+  }
 
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_316 [2.1.1.316] +mitomycin_b +h +s_adenosyl_l_methionine
+    7_demethylmitomycin_b
+  }
 
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    cetoleic_acid
+  }
 
+  branch from h side right {
+    h
+    <-> . +tricosanoyl_coa +h2o +tricosanoate
+    coa
+  }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_328 [2.1.1.328] +s_adenosyl_l_homocysteine +indolmycin
+    n_demethylindolmycin
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_365 [2.1.1.365] +s_adenosyl_l_homocysteine +1_3_3_tri_o_methyl_4alpha_mannobiose +h
+    d_man3me_1_4_d_man3me
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_270 [1.1.1.270] +h +3_oxosteroid +nadph
+    3beta_hydroxysteroid
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_170 [1.1.1.170] +co2 +h +3_oxosteroid +nadph
+    3beta_hydroxysteroid_4alpha_carboxylate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_proline +l_lysine
+    histidyl_prolyl_lysine
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_histidine +l_tryptophan
+    histidyl_tryptophanyl_histidine
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_246 [1.14.13.246] +h +3beta_hydroxy_4_4_dimethylsteroid +3beta_hydroxy_4alpha_methylsteroid_4beta_carboxy +nad +h2o
+    nadh
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +h +alpha_hydroxyheme +verdoheme +h2o
+    co
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +delta_anaerubin +nadp +h
+    anaerobilin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +anaerobilin +nadp
+    beta_anaerubin
+  }
 }

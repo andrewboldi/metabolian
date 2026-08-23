@@ -14,13 +14,13 @@ pathway eicosanoyl-coa-to-arachidyl-oleate "eicosanoyl-CoA to arachidyl oleate" 
     eicosanal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph -nadp
     icosan_1_ol
-    <-> . +oleoyl_coa -coa
+    <-> . +oleoyl_coa -coa_chebi_57287
     arachidyl_oleate
   }
 
   branch from icosan_1_ol side left {
     icosan_1_ol
-    <-> . +nadph +hplus +nadp +coa
+    <-> . +nadph_chebi_57783 +hplus +nadp_chebi_58349 +coa_chebi_57287
     icosanoyl_coa
   }
 }

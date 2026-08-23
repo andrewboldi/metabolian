@@ -18,13 +18,13 @@ pathway 14-methyl-steroid-to-fmn "14α-methyl steroid to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +fmnh2 +medermycin +o2 +h +h2o
+    <-> . +fmnh2_mnxm1107623 +medermycin +o2_mnxm735438 +h +h2o_water
     mederrhodin_a
   }
 
   branch from fmn side right {
     fmn
-    <-> . +fmnh2 +dihydrokalafungin_dihydroquinone_form +o2 +h +h2o
+    <-> . +fmnh2_mnxm1107623 +dihydrokalafungin_dihydroquinone_form +o2_mnxm735438 +h +h2o_water
     dhk_oh
   }
 }

@@ -18,7 +18,7 @@ pathway 3-hydroxybutanoyl-coa-to-diphosphate "3-hydroxybutanoyl-CoA to diphospha
 
   branch from acetoacetate side left {
     acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +4_hydroxybutanoate
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa_mnxm1103802 +4_hydroxybutanoate
     4_hydroxybutanoyl_coa
   }
 
@@ -48,7 +48,7 @@ pathway 3-hydroxybutanoyl-coa-to-diphosphate "3-hydroxybutanoyl-CoA to diphospha
 
   branch from acetoacetate side right {
     acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +2_hydroxybutanoate +h
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa_mnxm1103802 +2_hydroxybutanoate +h
     2_hydroxybutyryl_coa
   }
 

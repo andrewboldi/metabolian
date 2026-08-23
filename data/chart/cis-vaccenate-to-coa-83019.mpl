@@ -12,9 +12,9 @@ pathway cis-vaccenate-to-coa-83019 "cis-vaccenate to CoA" {
     11z_octadecenoyl_coa
     <-> . +malonyl-coa +hplus -co2 -coa
     13z_3_oxoicosenoyl_coa
-    <-> . +co2 +h +coa -vaccenyl_coenzyme_a
+    <-> . +co2_mnxm13 +h +coa_mnxm727276 -vaccenyl_coenzyme_a
     malonyl_coa
-    <-> . +r_carnitine +vaccenyl_coenzyme_a -h -coa
+    <-> . +r_carnitine +vaccenyl_coenzyme_a -h -coa_mnxm727276
     car_18_1_11e
   }
 

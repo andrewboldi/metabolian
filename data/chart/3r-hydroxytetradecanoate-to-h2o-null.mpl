@@ -37,7 +37,7 @@ pathway 3r-hydroxytetradecanoate-to-h2o-null "(3R)-hydroxytetradecanoate to H2O"
   branch from h2o side right {
     h2o
     <-> . +sinalbin +glucose +h
-    e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth
+    e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth_mnxm1372352
   }
 
   branch from atp side left {
@@ -73,7 +73,7 @@ pathway 3r-hydroxytetradecanoate-to-h2o-null "(3R)-hydroxytetradecanoate to H2O"
   branch from h2o side right {
     h2o
     <-> . +h +isovitexin_8_c_glucoside
-    3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm
+    3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm_mnxm1372350
   }
 
   branch from adp side left {
@@ -91,7 +91,7 @@ pathway 3r-hydroxytetradecanoate-to-h2o-null "(3R)-hydroxytetradecanoate to H2O"
   branch from phosphate side left {
     phosphate
     <-> ec_3_1_3_64 [3.1.3.64] +2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1 +h2o
-    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1
+    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1_mnxm1559712
   }
 
   branch from phosphate side right {

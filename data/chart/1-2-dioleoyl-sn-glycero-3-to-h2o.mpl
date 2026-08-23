@@ -9,14 +9,14 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-h2o "1,2-dioleoyl-sn-glycero-3… to H2O" {
   spine at 0,0 {
     1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol
     <-> . +h2o -pi
-    1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol
+    1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol_chebi_75163
     <-> . +h2o -oleate -hplus
     1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
     <-> . +palmitoyl_coa -coa
     1_9z_octadec_9_enoyl_2_hexadecanoyl_sn_glycero_3
-    <-> ec_3_1_3_27 [3.1.3.27] +h +phosphate -h2o
+    <-> ec_3_1_3_27 [3.1.3.27] +h +phosphate -h2o_water
     1_oleoyl_2_hexadecanoyl_sn_glycero_3_phospho_1_s
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_hexadecanoyl_sn_glycero_3_phospho_1_s -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_hexadecanoyl_sn_glycero_3_phospho_1_s -h2o_water
     atp
   }
 

@@ -18,7 +18,7 @@ pathway cortisol-to-nad "cortisol to NAD" {
 
   branch from cortisol side left {
     cortisol
-    <-> ec_1_1_1_442 [1.1.1.442] +nad +nadh +hplus
+    <-> ec_1_1_1_442 [1.1.1.442] +nad_chebi_57540 +nadh_chebi_57945 +hplus
     20_dihydrocortisol
   }
 }

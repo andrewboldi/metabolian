@@ -12,7 +12,7 @@ pathway pctr1-to-glutathione-disulfide-null "PCTR1 to glutathione disulfide" {
     16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae
     <-> ec_1_13_11_33 [1.13.11.33] +h2o -4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah
     h
-    <-> . +4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah +gsh -gssg -h2o
+    <-> . +4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah +gsh -gssg -h2o_chebi_15377
     17s_hdha
   }
 

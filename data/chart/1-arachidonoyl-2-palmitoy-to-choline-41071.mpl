@@ -22,8 +22,8 @@ pathway 1-arachidonoyl-2-palmitoy-to-choline-41071 "1-arachidonoyl-2-palmitoy…
 
   branch from 1_arachidonoyl_sn_glycero_3_phosphocholine side left {
     1_arachidonoyl_sn_glycero_3_phosphocholine
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp_mnxm40333 +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from palmitate side right {

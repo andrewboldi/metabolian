@@ -97,7 +97,7 @@ pathway alpha-d-ribofuranose-to-phosphate-null "alpha-D-ribofuranose… to phosp
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    aerobactin
+    aerobactin_mnxm1101940
   }
 
   branch from adp side right {

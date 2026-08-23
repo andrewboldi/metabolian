@@ -18,7 +18,7 @@ pathway kinetensin-to-l-leucine "kinetensin to L-leucine" {
 
   branch from kinetensin side left {
     kinetensin
-    <-> . +h2o +h +kinetensin_1_3 +d_arginyl_l_histidyl_d_prolyl_d_tyrosyl_l_phenyl
+    <-> . +h2o_water +h +kinetensin_1_3 +d_arginyl_l_histidyl_d_prolyl_d_tyrosyl_l_phenyl
     l_leucine
   }
 }

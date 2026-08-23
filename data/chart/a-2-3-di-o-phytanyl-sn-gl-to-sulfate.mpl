@@ -14,7 +14,7 @@ pathway a-2-3-di-o-phytanyl-sn-gl-to-sulfate "a 2,3-di-O-phytanyl-sn-gl… to su
     methanethiol
     <-> ec_1_8_3_4 [1.8.3.4] +o2 +h2o -formaldehyde -h2o2 -hplus
     h2s
-    <-> ec_1_8_7_1 [1.8.7.1] +di_sulfido_diiron +h2o -di_sulfido_diiron -hplus
+    <-> ec_1_8_7_1 [1.8.7.1] +di_sulfido_diiron +h2o -di_sulfido_diiron_chebi_33738 -hplus
     sulfite
     <-> ec_1_8_5_6 [1.8.5.6] +1_4_benzoquinones +h2o -sulfate
     hydroquinones

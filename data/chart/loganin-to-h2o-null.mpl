@@ -105,7 +105,7 @@ pathway loganin-to-h2o-null "loganin to H2O" {
   branch from h2o side left {
     h2o
     <-> . +r_3_hydroxypalmitic_acid +p_gingivalis_kdo2_lipid_a_penta_acylated_4_depho
-    p_gingivalis_kdo2_lipid_a_3_deacylated_4_dephosp
+    p_gingivalis_kdo2_lipid_a_3_deacylated_4_dephosp_mnxm1132814
   }
 
   branch from h2o side right {

@@ -8,9 +8,9 @@ pathway spheroidene-to-spheroiden-2-one "spheroidene to spheroiden-2-one" {
 
   spine at 0,0 {
     spheroidene
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_hydroxyspheroidene
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_2_dihydroxyspheroidene
     <-> . -h2o
     spheroiden_2_one

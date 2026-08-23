@@ -16,34 +16,155 @@ pathway ent-kaur-16-en-19-al-to-h2o-null "ent-kaur-16-en-19-al to H2O" {
     gibberellin_a12_aldehyde
     <-> . +h +o2 +nadph -nadp -h2o
     gibberellin_a14_aldehyde
-    <-> . +akg +o2 -succinate -co2 -hplus
+    <-> . +akg +o2_chebi_15379 -succinate -co2 -hplus
     gibberellin_a14
-    <-> . +2_oxoglutarate +h +o2 -succinate -1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet
-    co2
-    <-> . +2_oxoglutarate +1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet +o2 -co2 -gibberellin_a36 -h2o
-    succinate
+    <-> . +2_oxoglutarate +h +o2 -succinate_mnxm25 -1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet
+    co2_mnxm13
+    <-> . +2_oxoglutarate +1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet +o2 -co2_mnxm13 -gibberellin_a36 -h2o
+    succinate_mnxm25
   }
 
+  branch from nadp side left {
+    nadp
+    <-> . +2_hexaprenyl_6_hydroxyphenol +h2o +h +o2 +nadph
+    2_hexaprenylphenol
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +2_hexaprenyl_6_hydroxyphenol_chebi_1107 +h2o +h +o2 +nadph
+    2_hexaprenylphenol_chebi_1110
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose +keto_d_fructose
+    leucrose
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_10 [3.3.2.10] +1_3_diphenyl_1_2_propanediol
+    2_benzyl_3_phenyloxirane
+  }
 
+  branch from co2_mnxm13 side left {
+    co2_mnxm13
+    <-> ec_4_1_1_114 [4.1.1.114] +13z_heptacos_13_ene
+    3_dodecyl_4_tridecyloxetan_2_one
+  }
 
+  branch from co2_mnxm13 side right {
+    co2_mnxm13
+    <-> . +ibotenate
+    muscimol
+  }
 
+  branch from succinate_mnxm25 side left {
+    succinate_mnxm25
+    <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa +citramalate
+    3s_citramalyl_coa
+  }
 
+  branch from succinate_mnxm25 side right {
+    succinate_mnxm25
+    <-> . +apigeninidin +co2_mnxm13 +h2o +2_oxoglutarate +h +o2
+    apiforol
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_3_3_4 [1.3.3.4] +protoporphyrin +h2o2
+    protoporphyrinogen_ix
+  }
 
+  branch from o2 side right {
+    o2
+    <-> ec_1_3_3_7 [1.3.3.7] +uracil +h2o2
+    5_6_dihydrouracil
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +2_octaprenyl_6_hydroxyphenol +nadp +h2o +h +o2
+    2_octaprenylphenol
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_7_1_6 [1.7.1.6] +para_dimethylamino_azobenzene +h +nadp +aniline
+    n_n_dimethyl_1_4_phenylenediamine
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +methyl_1r_12s_20r_12_ethyl_14_oxa_8_17_diazahexa +h2o +o2 +nadph
+    tabersonine
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +h2o +h +tabersonine +o2 +nadph
+    lochnericine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_1_5 [3.6.1.5] +2_methylthio_amp +h +phosphate
+    2_methylthio_atp
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_1_5 [3.6.1.5] +8_bromo_amp +h +phosphate
+    8_bromoadenosine_5_triphosphate
+  }
 
+  branch from h side left {
+    h
+    <-> . +2_o_caffeoylglycerol +coa +glycerol
+    caffeoyl_coa
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_3_1_51 [2.3.1.51] +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +9z_octadecenoyl_coa +1_hexadecanoyl_2_z_octadec_9_enoyl_sn_glycero_3
+    coa
+  }
 
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> . +co2_mnxm13 +succinate_mnxm25 +h2o +o2 +apiforol
+    apigeninidin_mnxm1368493
+  }
 
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +2r_6z_2_hydroxy_6_hydroxymethylidene_2_5_dimeth +o2 +co2_mnxm13 +succinate_mnxm25 +h2o
+    stipitaldehyde
+  }
 
+  branch from co2_mnxm13 side left {
+    co2_mnxm13
+    <-> . +4s_8r_2_20_dihydroxy_7_9_13_trioxapentacyclo_10
+    6_demethylsterigmatocystin
+  }
 
+  branch from co2_mnxm13 side right {
+    co2_mnxm13
+    <-> ec_2_3_1_206 [2.3.1.206] +butanoyl_coa +malonyl_coa +h +coa
+    divarinol
+  }
 
+  branch from succinate_mnxm25 side left {
+    succinate_mnxm25
+    <-> . +2r_6z_2_hydroxy_6_hydroxymethylidene_2_5_dimeth_mnxm1368553 +2_oxoglutarate +o2 +co2_mnxm13 +h +h2o
+    4_7_dihydroxy_2_methyl_5_oxocyclohepta_1_3_6_tri
+  }
+
+  branch from succinate_mnxm25 side right {
+    succinate_mnxm25
+    <-> . +gibberellin_a13 +2_oxoglutarate +o2 +co2_mnxm13 +h
+    gibberellin_a43
+  }
 }

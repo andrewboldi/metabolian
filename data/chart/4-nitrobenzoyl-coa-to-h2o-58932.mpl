@@ -12,9 +12,9 @@ pathway 4-nitrobenzoyl-coa-to-h2o-58932 "4-nitrobenzoyl-CoA to H2O" {
     demethylluteothin
     <-> ec_2_1_1_353 [2.1.1.353] +sam -sah
     deoxyaureothin
-    <-> ec_1_14_15_37 [1.14.15.37] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_37 [1.14.15.37] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     aureothin
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -aureothin -h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -aureothin -h2o_water
     atp
   }
 
@@ -48,14 +48,14 @@ pathway 4-nitrobenzoyl-coa-to-h2o-58932 "4-nitrobenzoyl-CoA to H2O" {
     3_4_amino_3_hydroxybutyl_hydroxy_carbamoyl_propa
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +s_dnpa
     s_hemiketal
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_1_1_95 [3.1.1.95] +epsilon_rhodomycin_t +15_demethoxy_epsilon_rhodomycin
     methanol
   }
@@ -116,13 +116,13 @@ pathway 4-nitrobenzoyl-coa-to-h2o-58932 "4-nitrobenzoyl-CoA to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_b1_endo_8_9_oxide +nadp +h2o +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_b1_endo_8_9_oxide +nadp_mnxm5 +h2o_water +o2_mnxm735438 +nadph_mnxm738702
     lsm_36909
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but +nadp +h2o +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but +nadp_mnxm5 +h2o_water +o2_mnxm735438 +nadph_mnxm738702
     4_n_nitrosomethylamino_1_3_pyridyl_butan_1_one
   }
 
@@ -140,13 +140,13 @@ pathway 4-nitrobenzoyl-coa-to-h2o-58932 "4-nitrobenzoyl-CoA to H2O" {
 
   branch from phosphate side left {
     phosphate
-    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h2o
+    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h2o_water
     1d_myo_inositol_1_3_4_5_6_pentakisphosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_1_52 [3.6.1.52] +5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph +h +h2o
+    <-> ec_3_6_1_52 [3.6.1.52] +5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph +h +h2o_water
     1_5_bis_diphospho_1d_myo_inositol_2_3_4_6_tetrak
   }
 
@@ -158,18 +158,18 @@ pathway 4-nitrobenzoyl-coa-to-h2o-58932 "4-nitrobenzoyl-CoA to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +7_hydroxylauroyl_coa +amp +coa
+    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +7_hydroxylauroyl_coa +amp +coa_mnxm727276
     7_hydroxylaurate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_3_2_8 [3.3.2.8] +1r_2r_4s_limonene_1_2_diol
     4s_limonene_1_2_epoxide
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +aflatoxin_b1_diol
     aflatoxin_b1_exo_8_9_epoxide
   }

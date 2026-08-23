@@ -51,7 +51,7 @@ pathway alpha-d-galactose-to-h2o-null "alpha-D-galactose… to H2O" {
   branch from beta_d_galactosyl_11_sphing_4_enine side right {
     beta_d_galactosyl_11_sphing_4_enine
     <-> . +alpha_d_galactose +h2o
-    sphing_4_enine
+    sphing_4_enine_mnxm1364421
   }
 
   branch from h2o side left {

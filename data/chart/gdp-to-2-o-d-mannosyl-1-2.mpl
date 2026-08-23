@@ -12,7 +12,7 @@ pathway gdp-to-2-o-d-mannosyl-1-2 "GDP to 2-O-(β-D-mannosyl-(1→2)-β…" {
     gdp_alpha_d_mannose
     <-> ec_2_4_1_361 [2.4.1.361] +gdp +2_o_beta_d_mannosyl_bis_myo_inositol_1_3_phospha -gdp_alpha_d_mannose
     bis_myo_inositol_1_3_phosphate
-    <-> ec_2_4_1_361 [2.4.1.361] +gdp_d_mannose -gdp -hplus
+    <-> ec_2_4_1_361 [2.4.1.361] +gdp_d_mannose -gdp_chebi_58189 -hplus
     2_o_d_mannosyl_1_2_d_mannosyl_bis_myo_inositol_1
   }
 }

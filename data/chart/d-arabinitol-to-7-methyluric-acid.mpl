@@ -14,7 +14,7 @@ pathway d-arabinitol-to-7-methyluric-acid "D-arabinitol to 7-Methyluric acid" {
     beta_d_ribofuranose
     <-> ec_3_2_2_25 [3.2.2.25] +h +7_methylxanthine -h2o
     7_methylxanthosine
-    <-> ec_3_2_2_25 [3.2.2.25] +h2o -d_ribofuranose -hplus
+    <-> ec_3_2_2_25 [3.2.2.25] +h2o_chebi_15377 -d_ribofuranose -hplus
     7_methylxanthine
     <-> ec_1_17_3_2 [1.17.3.2] +o2 +h2o -7_methyluric_acid
     h2o2

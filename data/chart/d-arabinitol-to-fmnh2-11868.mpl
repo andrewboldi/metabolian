@@ -148,7 +148,7 @@ pathway d-arabinitol-to-fmnh2-11868 "D-arabinitol to FMNH2" {
 
   branch from sulfite side left {
     sulfite
-    <-> . +tetra_3_sulfido_tetrairon +taurine +h2o +tetra_3_sulfido_tetrairon +hplus
+    <-> . +tetra_3_sulfido_tetrairon +taurine +h2o +tetra_3_sulfido_tetrairon_chebi_33723 +hplus
     ammonioacetaldehyde
   }
 

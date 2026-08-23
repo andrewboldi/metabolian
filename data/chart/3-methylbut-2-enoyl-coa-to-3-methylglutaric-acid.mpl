@@ -157,7 +157,7 @@ pathway 3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid "3-methylbut-2-enoyl-Co
   branch from coa side right {
     coa
     <-> . +acetyl_coa +alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a
-    alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a
+    alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a_mnxm1132658
   }
 
   branch from coa side left {

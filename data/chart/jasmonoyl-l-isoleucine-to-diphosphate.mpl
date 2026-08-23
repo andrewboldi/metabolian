@@ -24,7 +24,7 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate "(-)-Jasmonoyl-L-isoleucine to dip
 
   branch from h side right {
     h
-    <-> ec_3_7_1_8 [3.7.1.8] +2e_4z_2_hydroxymuconate +catechol +h2o
+    <-> ec_3_7_1_8 [3.7.1.8] +2e_4z_2_hydroxymuconate +catechol +h2o_water
     2_hydroxy_6_2_hydroxyphenoxy_6_oxo_cis_cis_hexa
   }
 
@@ -36,8 +36,8 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate "(-)-Jasmonoyl-L-isoleucine to dip
 
   branch from n_7_isojasmonyl_l_isoleucinate side right {
     n_7_isojasmonyl_l_isoleucinate
-    <-> . +diphosphate +h +amp +l_isoleucine +jasmonate
-    atp
+    <-> . +diphosphate +h +amp_mnxm728294 +l_isoleucine +jasmonate
+    atp_mnxm3
   }
 
   branch from 7_isojasmonate side left {
@@ -48,7 +48,7 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate "(-)-Jasmonoyl-L-isoleucine to dip
 
   branch from jasmonoyl_l_isoleucine side right {
     jasmonoyl_l_isoleucine
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +amp +atp +jasmonate
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +amp_mnxm728294 +atp_mnxm3 +jasmonate
     l_isoleucine
   }
 

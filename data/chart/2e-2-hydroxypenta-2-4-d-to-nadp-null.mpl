@@ -103,13 +103,13 @@ pathway 2e-2-hydroxypenta-2-4-d-to-nadp-null "(2E)-2-hydroxypenta-2,4-d… to NA
   branch from h2o side left {
     h2o
     <-> ec_1_17_3_2 [1.17.3.2] +1_methyl_7h_xanthine +o2 +h2o2
-    1_methyluric_acid
+    1_methyluric_acid_mnxm1372254
   }
 
   branch from nadph side right {
     nadph
     <-> ec_1_3_1_105 [1.3.1.105] +nadp +h +2e_2_butylidene_4_hydroxy_5_methyl_3_2h_furanon
-    2_butyl_4_hydroxy_5_methyl_3_2h_furanone
+    2_butyl_4_hydroxy_5_methyl_3_2h_furanone_mnxm1368133
   }
 
   branch from nadph side left {
@@ -121,7 +121,7 @@ pathway 2e-2-hydroxypenta-2-4-d-to-nadp-null "(2E)-2-hydroxypenta-2,4-d… to NA
   branch from nadp side right {
     nadp
     <-> . +h +nadph +2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
-    4_hydroxy_5_methyl_2_propyl_3_2h_furanone
+    4_hydroxy_5_methyl_2_propyl_3_2h_furanone_mnxm1368207
   }
 
   branch from nadp side left {

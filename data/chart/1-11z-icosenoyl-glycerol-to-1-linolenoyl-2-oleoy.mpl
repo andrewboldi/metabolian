@@ -30,7 +30,7 @@ pathway 1-11z-icosenoyl-glycerol-to-1-linolenoyl-2-oleoy "1-(11Z-icosenoyl)glyce
 
   branch from 1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol side left {
     1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o_water
     atp
   }
 

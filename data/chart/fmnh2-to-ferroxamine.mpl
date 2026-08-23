@@ -16,7 +16,7 @@ pathway fmnh2-to-ferroxamine "FMNH2 to Ferroxamine" {
     4a_5_dihydroriboflavin
     <-> . +fadh2 +h +ferroxamine -desferrioxamine_b -fe
     fad
-    <-> . +desferrioxamine_b +fe -ferroxamine
+    <-> . +desferrioxamine_b +fe_mnxm1370984 -ferroxamine
     h
   }
 }

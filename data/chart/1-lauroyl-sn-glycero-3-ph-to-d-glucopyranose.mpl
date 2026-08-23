@@ -83,7 +83,7 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose "1-lauroyl-sn-glycero-3-phâ
   branch from udp_d_glucose side left {
     udp_d_glucose
     <-> ec_2_4_1_296 [2.4.1.296] +anthocyanidin_3_o_2_o_4_coumaroyl_l_rhamnosyl_1 +udp +hplus
-    anthocyanidin_3_o_2_o_4_coumaroyl_l_rhamnosyl_1
+    anthocyanidin_3_o_2_o_4_coumaroyl_l_rhamnosyl_1_chebi_77901
   }
 
   branch from malate side right {

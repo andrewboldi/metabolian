@@ -97,7 +97,7 @@ pathway sucrose-to-h2o "sucrose to H2O" {
   branch from glucose side right {
     glucose
     <-> ec_3_2_1_20 [3.2.1.20] +h2o +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143182
   }
 
   branch from h side left {

@@ -16,10 +16,10 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
     2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate
     <-> ec_3_7_1_9 [3.7.1.9] +h2o -formate -hplus
     2_oxopent_4_enoate
-    <-> . +h +acetate -h2o
+    <-> . +h +acetate -h2o_water
     2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate
     <-> ec_1_13_11_2 [1.13.11.2] +h -4_methylcatechol
-    o2
+    o2_mnxm735438
   }
 
   branch from catechol side left {
@@ -30,7 +30,7 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
 
   branch from 2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate side right {
     2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate
-    <-> ec_3_7_1_9 [3.7.1.9] +h +formate +h2o
+    <-> ec_3_7_1_9 [3.7.1.9] +h +formate_mnxm39 +h2o_water
     2z_2_hydroxypenta_2_4_dienoate
   }
 
@@ -42,73 +42,73 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
 
   branch from 2_oxopent_4_enoate side right {
     2_oxopent_4_enoate
-    <-> . +h2o
+    <-> . +h2o_water
     s_4_hydroxy_2_oxopentanoate
   }
 
   branch from formate side left {
     formate
-    <-> . +obtusifoliol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +obtusifoliol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     4_methyl_5_ergosta_8_14_24_28_trien_3_ol
   }
 
   branch from formate side right {
     formate
-    <-> . +24_25_dihydrolanosterol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +24_25_dihydrolanosterol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     4_4_dimethyl_8_14_cholestadien_3_ol
   }
 
   branch from 2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate side left {
     2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate
-    <-> . +o2 +h
+    <-> . +o2_mnxm735438 +h
     3_methylcatechol
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +3_dephospho_coa +phosphate
     coa
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_1_1_1 [3.1.1.1] +n_n_diethylglycine +2_6_dimethylaniline
     lidocaine
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +h +ebastine +nadph +hydroxyebastine +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +h +ebastine +nadph +hydroxyebastine +h2o_water
     nadp
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o_water
     18r_hydroxy_5z_8z_11z_14z_eicosatetraenoate
   }
 
   branch from 4_methylcatechol side right {
     4_methylcatechol
-    <-> ec_1_14_12_14 [1.14.12.14] +nadh +toluene_4_sulfonate +o2 +nad
+    <-> ec_1_14_12_14 [1.14.12.14] +nadh_mnxm10 +toluene_4_sulfonate +o2_mnxm735438 +nad_mnxm8
     sulfite
   }
 
   branch from 4_methylcatechol side left {
     4_methylcatechol
-    <-> ec_1_13_11_1 [1.13.11.1] +o2
+    <-> ec_1_13_11_1 [1.13.11.1] +o2_mnxm735438
     3_methyl_cis_cis_muconic_acid
   }
 
   branch from 2_oxopent_4_enoate side right {
     2_oxopent_4_enoate
-    <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2 +h2o
+    <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2_mnxm735438 +h2o_water
     l_allylglycine
   }
 
   branch from formate side left {
     formate
-    <-> . +intermediate_i +nadph +h2o +nadp
+    <-> . +intermediate_i +nadph_chebi_57783 +h2o +nadp_chebi_58349
     16r_deshydroxymethyl_stemmadenine
   }
 
@@ -120,61 +120,61 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
 
   branch from h side left {
     h
-    <-> ec_3_1_1_5 [3.1.1.5] +1_tetradecanoyl_sn_glycerol_3_phosphate +h2o +sn_glycerol_3_phosphate
+    <-> ec_3_1_1_5 [3.1.1.5] +1_tetradecanoyl_sn_glycerol_3_phosphate +h2o_water +sn_glycerol_3_phosphate
     tetradecanoate
   }
 
   branch from h side right {
     h
-    <-> . +9z_octadecenoate +sn_glycerol_3_phosphate +h2o
+    <-> . +9z_octadecenoate +sn_glycerol_3_phosphate +h2o_water
     1_11e_octadecenoyl_sn_glycero_3_phosphate
   }
 
   branch from acetate side left {
     acetate
-    <-> . +l_asparagine +h +h2o
+    <-> . +l_asparagine +h +h2o_water
     n_acetyl_l_asparagine
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_6_1_20 [3.6.1.20] +acetyl_amp +h2o +h
+    <-> ec_3_6_1_20 [3.6.1.20] +acetyl_amp +h2o_water +h
     amp
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +hexadecanoate +glycerophosphatidylethanolamine +h
     1_palmitoyl_2_hydroxy_sn_glycero_3_pe
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +glycerophosphatidylethanolamine +9z_octadecenoate +h
     2_acyl_sn_glycero_3_phosphoethanolamine_n_c18_1
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_17 [1.14.13.17] +h +cholesterol +nadph +nadp +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_14_13_17 [1.14.13.17] +h +cholesterol +nadph +nadp +h2o_water
     7alpha_hydroxycholesterol
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one +nad +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +nadh_mnxm10 +h +7alpha_hydroxycholest_4_en_3_one +nad_mnxm8 +h2o_water
     7alpha_12alpha_dihydroxycholest_4_en_3_one
   }
 
   branch from 4_methylcatechol side left {
     4_methylcatechol
-    <-> ec_1_14_13_1 [1.14.13.1] +nadh +h +4_methylsalicylic_acid +o2 +nad +h2o
+    <-> ec_1_14_13_1 [1.14.13.1] +nadh_mnxm10 +h +4_methylsalicylic_acid +o2_mnxm735438 +nad_mnxm8 +h2o_water
     co2
   }
 
   branch from 4_methylcatechol side right {
     4_methylcatechol
-    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +o2 +4_methylphenol +h2o
-    nad
+    <-> ec_1_14_13_236 [1.14.13.236] +nadh_mnxm10 +h +o2_mnxm735438 +4_methylphenol +h2o_water
+    nad_mnxm8
   }
 }

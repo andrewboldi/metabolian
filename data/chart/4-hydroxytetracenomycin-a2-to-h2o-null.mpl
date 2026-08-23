@@ -10,7 +10,7 @@ pathway 4-hydroxytetracenomycin-a2-to-h2o-null "4-hydroxytetracenomycin A2 to H2
     4_hydroxytetracenomycin_a2
     <-> . +nadp +h2o -tetracenomycin_a2 -o2 -nadph
     h
-    <-> ec_1_14_13_200 [1.14.13.200] +tetracenomycin_a2 +nadph +o2 +hplus -nadp -h2o
+    <-> ec_1_14_13_200 [1.14.13.200] +tetracenomycin_a2 +nadph_chebi_57783 +o2_chebi_15379 +hplus -nadp_chebi_58349 -h2o_chebi_15377
     tetracenomycin_c
     <-> . +nadp -h -nadph
     4_dehydro_tetracenomycin_c
@@ -33,7 +33,7 @@ pathway 4-hydroxytetracenomycin-a2-to-h2o-null "4-hydroxytetracenomycin A2 to H2
   branch from tetracenomycin_a2 side left {
     tetracenomycin_a2
     <-> . +nadp +h2o +h +o2 +nadph
-    tetracenomycin_c
+    tetracenomycin_c_mnxm1367248
   }
 
   branch from o2 side right {

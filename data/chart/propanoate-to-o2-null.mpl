@@ -121,7 +121,7 @@ pathway propanoate-to-o2-null "propanoate to O2" {
   branch from pyruvate side right {
     pyruvate
     <-> ec_4_1_3_3 [4.1.3.3] +n_acetylneuraminate
-    n_acetyl_d_mannosamine
+    n_acetyl_d_mannosamine_chebi_63154
   }
 
   branch from o2 side left {

@@ -37,7 +37,7 @@ pathway butan-2-one-to-h2o-null "butan-2-one to H2O" {
   branch from glucose side right {
     glucose
     <-> . +ginsenoside_c_mx1 +h2o
-    ginsenoside_mx
+    ginsenoside_mx_mnxm1368235
   }
 
   branch from h2o side left {

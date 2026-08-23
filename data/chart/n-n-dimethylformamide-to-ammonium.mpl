@@ -26,7 +26,7 @@ pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
 
   branch from cobalt side right {
     cobalt
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 

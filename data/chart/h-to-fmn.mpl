@@ -10,9 +10,9 @@ pathway h-to-fmn "H to FMN" {
     h
     <-> ec_3_1_4_12 [3.1.4.12] +phosphocholine +1_octadecanoylglycerol -h2o
     1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +h2o -choline_alfoscerate -hplus
+    <-> . +h2o_chebi_15377 -choline_alfoscerate -hplus
     octadecanoate
-    <-> ec_1_14_14_80 [1.14.14.80] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_80 [1.14.14.80] +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     18_hydroxyoctadecanoate
   }
 

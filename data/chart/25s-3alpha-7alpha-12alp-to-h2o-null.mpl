@@ -14,7 +14,7 @@ pathway 25s-3alpha-7alpha-12alp-to-h2o-null "(25S)-3alpha,7alpha,12alp… to H2O
     fad
     <-> ec_6_2_1_7 [6.2.1.7] +diphosphate +amp +3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan -atp -coa -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
     h
-    <-> . +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadph -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol -h2o
+    <-> . +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadph -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282 -h2o
     nadp
   }
 

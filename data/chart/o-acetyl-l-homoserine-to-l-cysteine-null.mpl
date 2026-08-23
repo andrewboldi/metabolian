@@ -158,13 +158,13 @@ pathway o-acetyl-l-homoserine-to-l-cysteine-null "O-acetyl-L-homoserine to L-cys
 
   branch from glutathione side right {
     glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10456 +h2o
     1_methylsulfanyl_8_aci_nitrooctane
   }
 
   branch from glutathione side left {
     glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10456 +h2o
     8_methylthiooctanonitrile_oxide
   }
 

@@ -10,7 +10,7 @@ pathway 3-s-hydroxy-hexacosenoyl-to-3-s-hydroxy-cis-15-t "3(S)-Hydroxy-Hexacosen
     3_s_hydroxy_hexacosenoyl_coenzyme_a
     <-> . -h2o
     2e_17z_hexacosadi_2_17_enoyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     r_z_3_hydroxyhexacos_17_enoyl_coa
     <-> . +nad -nadh -hplus
     3_oxo_17z_hexacosenoyl_coa

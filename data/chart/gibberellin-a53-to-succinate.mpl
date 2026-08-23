@@ -24,7 +24,7 @@ pathway gibberellin-a53-to-succinate "gibberellin A53 to succinate" {
 
   branch from gibberellin_a53 side right {
     gibberellin_a53
-    <-> . +2_oxoglutarate +o2 +succinate +gibberellin_a97
-    co2
+    <-> . +2_oxoglutarate +o2_mnxm735438 +succinate_mnxm25 +gibberellin_a97
+    co2_mnxm13
   }
 }

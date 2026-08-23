@@ -26,7 +26,7 @@ pathway ump-to-cdp "UMP to CDP" {
 
   branch from all_trans_undecaprenyl_phosphate side left {
     all_trans_undecaprenyl_phosphate
-    <-> ec_2_4_1_54 [2.4.1.54] +gdp +d_mannosyl_di_trans_octa_cis_undecaprenyl_phosph
+    <-> ec_2_4_1_54 [2.4.1.54] +gdp_mnxm1103285 +d_mannosyl_di_trans_octa_cis_undecaprenyl_phosph
     gdp_alpha_d_mannose
   }
 
@@ -62,7 +62,7 @@ pathway ump-to-cdp "UMP to CDP" {
 
   branch from d_mannopyranosyl_1_3_d_galactopyranosyl_diphosp side left {
     d_mannopyranosyl_1_3_d_galactopyranosyl_diphosp
-    <-> ec_2_4_1_379 [2.4.1.379] +gdp +h +gdp_alpha_d_mannose
+    <-> ec_2_4_1_379 [2.4.1.379] +gdp_mnxm1103285 +h +gdp_alpha_d_mannose
     alpha_d_gal_pp_und
   }
 

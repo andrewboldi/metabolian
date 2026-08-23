@@ -24,7 +24,7 @@ pathway 1-1-dichloroethene-to-succinate-68000 "1,1-dichloroethene to succinate" 
 
   branch from 2_chlorooxirane side left {
     2_chlorooxirane
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +chloroethene +o2 +h2o
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +chloroethene_mnxm732238 +o2_mnxm735438 +h2o_water
     nad
   }
 

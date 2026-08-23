@@ -17,17 +17,17 @@ pathway n-acetyldemethylphosphino-to-h2o-81891 "N-Acetyldemethylphosphino… to 
     <-> ec_2_5_1_17 [2.5.1.17] +fadh2 +atp -triphosphate -fad -hplus
     cobamamide
     <-> ec_3_1_3_33 [3.1.3.33] +adenosine +h +triphosphate -h2o
-    atp
+    atp_mnxm3
   }
 
-  branch from atp side left {
-    atp
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
     <-> . +h +adp +phosphate +h2o
     l_l_homocystine
   }
 
-  branch from atp side right {
-    atp
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
     <-> . +co2 +pyruvate +h2o +h +oxaloacetate +phosphate
     adp
   }
@@ -68,14 +68,14 @@ pathway n-acetyldemethylphosphino-to-h2o-81891 "N-Acetyldemethylphosphino… to 
     udp_alpha_d_galactose
   }
 
-  branch from atp side left {
-    atp
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
     <-> ec_2_7_1_105 [2.7.1.105] +h +adp +beta_d_fructose_2_6_bisphosphate
     keto_d_fructose_6_phosphate
   }
 
-  branch from atp side right {
-    atp
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
     <-> . +h +adp +phosphate +h2o
     l_arabinopyranose
   }

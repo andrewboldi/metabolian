@@ -36,7 +36,7 @@ pathway o-n-acetyl-d-galactosa-to-l-fucp-1-2-d-galp "O-(N-acetyl-Î±-D-galactosaâ
 
   branch from gdp_l_fucose side right {
     gdp_l_fucose
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace_chebi_145346 +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc_chebi_145347
   }
 }

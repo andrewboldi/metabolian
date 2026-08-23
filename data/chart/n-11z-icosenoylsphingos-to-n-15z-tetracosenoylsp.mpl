@@ -40,13 +40,13 @@ pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphin
 
   branch from 11z_eicosenoyl_coa side right {
     11z_eicosenoyl_coa
-    <-> . +nadh +acetyl_coa +9z_octadecenoyl_coa +h +h2o2 +o2 +nad +h2o
-    coa
+    <-> . +nadh +acetyl_coa +9z_octadecenoyl_coa +h +h2o2 +o2 +nad +h2o_water
+    coa_mnxm727276
   }
 
   branch from 11z_eicosenoyl_coa side left {
     11z_eicosenoyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 +erucoyl_coa +coa +nad +h2o
+    <-> . +nadh +acetyl_coa +h +h2o2 +erucoyl_coa +coa_mnxm727276 +nad +h2o_water
     o2
   }
 
@@ -70,7 +70,7 @@ pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphin
 
   branch from 13z_3_oxodocosenoyl_coa side left {
     13z_3_oxodocosenoyl_coa
-    <-> . +11z_eicosenoyl_coa +coa
+    <-> . +11z_eicosenoyl_coa +coa_mnxm727276
     acetyl_coa
   }
 
@@ -106,25 +106,25 @@ pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphin
 
   branch from 15z_tetracosenoyl_coa side left {
     15z_tetracosenoyl_coa
-    <-> ec_2_3_1_199 [2.3.1.199] +malonyl_coa +h +coa +3_oxo_17z_hexacosenoyl_coa
-    co2
+    <-> ec_2_3_1_199 [2.3.1.199] +malonyl_coa +h +coa_mnxm727276 +3_oxo_17z_hexacosenoyl_coa
+    co2_mnxm13
   }
 
   branch from 15z_tetracosenoyl_coa side right {
     15z_tetracosenoyl_coa
-    <-> . +h2o +h +coa
+    <-> . +h2o_water +h +coa_mnxm727276
     15z_tetracosenoate
   }
 
   branch from 11z_eicosenoyl_coa side left {
     11z_eicosenoyl_coa
-    <-> . +diphosphate +amp +atp +coa
+    <-> . +diphosphate +amp_mnxm728294 +atp_mnxm3 +coa_mnxm727276
     11z_eicosenoate
   }
 
   branch from 11z_eicosenoyl_coa side right {
     11z_eicosenoyl_coa
-    <-> . +r_carnitine +coa
+    <-> . +r_carnitine +coa_mnxm727276
     eicosenoylcarnitine_9
   }
 
@@ -160,25 +160,25 @@ pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphin
 
   branch from erucoyl_coa side right {
     erucoyl_coa
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from erucoyl_coa side left {
     erucoyl_coa
-    <-> . +diphosphate +amp +atp +coa
+    <-> . +diphosphate +amp_mnxm728294 +atp_mnxm3 +coa_mnxm727276
     13z_docosenoate
   }
 
   branch from 15z_tetracosenoyl_coa side right {
     15z_tetracosenoyl_coa
-    <-> ec_6_2_1_3 [6.2.1.3] +amp +15z_tetracosenoate +atp +coa
+    <-> ec_6_2_1_3 [6.2.1.3] +amp_mnxm728294 +15z_tetracosenoate +atp_mnxm3 +coa_mnxm727276
     diphosphate
   }
 
   branch from 15z_tetracosenoyl_coa side left {
     15z_tetracosenoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
+    <-> . +sn_glycerol_3_phosphate +coa_mnxm727276
     1_acylglycerol_3p_15_tetra
   }
 }

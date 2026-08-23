@@ -14,9 +14,9 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat-null "FADH2 to O-β-D-glucosyl-trans-ze
     n6_2_isopentenyl_adenosine
     <-> . +atp -adp -hplus
     n6_dimethylallyl_adenosine_5_phosphate
-    <-> . +nadph +o2 +hplus -nadp -h2o
+    <-> . +nadph +o2 +hplus -nadp -h2o_chebi_15377
     9_ribosyl_trans_zeatin_5_phosphate
-    <-> ec_3_2_2_n1 [3.2.2.n1] +h2o -d_ribofuranose_5_phosphate
+    <-> ec_3_2_2_n1 [3.2.2.n1] +h2o_chebi_15377 -d_ribofuranose_5_phosphate
     trans_zeatin
     <-> ec_2_4_1_203 [2.4.1.203] +udp_d_glucose -udp -hplus
     o_d_glucosyl_trans_zeatin
@@ -24,7 +24,7 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat-null "FADH2 to O-β-D-glucosyl-trans-ze
 
   branch from fad side left {
     fad
-    <-> . +aminopyrrolnitrin +h2o +fadh2 +h +o2 +chloride
+    <-> . +aminopyrrolnitrin +h2o +fadh2 +h +o2_mnxm735438 +chloride
     monodechloroaminopyrrolnitrin
   }
 
@@ -97,7 +97,7 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat-null "FADH2 to O-β-D-glucosyl-trans-ze
   branch from fad side left {
     fad
     <-> . +fadh2 +h +5_methylhex_4_enoyl_coa
-    2e_5_methylhexa_2_4_dienoyl_coa
+    2e_5_methylhexa_2_4_dienoyl_coa_mnxm1371911
   }
 
   branch from h2o side right {
@@ -126,7 +126,7 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat-null "FADH2 to O-β-D-glucosyl-trans-ze
 
   branch from udp_d_glucose side right {
     udp_d_glucose
-    <-> . +l_threonine +udp +hplus
+    <-> . +l_threonine_chebi_30013 +udp +hplus
     d_glucosyl_l_threonyl
   }
 

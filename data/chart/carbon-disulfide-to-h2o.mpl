@@ -14,7 +14,7 @@ pathway carbon-disulfide-to-h2o "carbon disulfide to H2O" {
     sulfur_atom
     <-> ec_2_8_1_6 [2.8.1.6] +4r_5s_dethiobiotin +s_adenosyl_l_methionine -h -biotin -l_methionine
     5_deoxyadenosine
-    <-> ec_3_5_1_12 [3.5.1.12] +6_aminoquinoline +h +biotin -h2o
+    <-> ec_3_5_1_12 [3.5.1.12] +6_aminoquinoline +h +biotin -h2o_water
     biotinyl_6_aminoquinoline
   }
 }

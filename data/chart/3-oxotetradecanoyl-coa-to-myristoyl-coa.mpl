@@ -12,14 +12,14 @@ pathway 3-oxotetradecanoyl-coa-to-myristoyl-coa "3-oxotetradecanoyl-CoA to myris
     r_3_hydroxytetradecanoyl_coa
     <-> . -h2o
     trans_tetradec_2_enoyl_coa
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     myristoyl_coa
   }
 
   branch from r_3_hydroxytetradecanoyl_coa side left {
     r_3_hydroxytetradecanoyl_coa
     <-> . +nad +nadh +hplus
-    3_oxotetradecanoyl_coa
+    3_oxotetradecanoyl_coa_chebi_62543
   }
 
   branch from myristoyl_coa side right {

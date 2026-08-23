@@ -10,9 +10,9 @@ pathway 1-hexadecanoyl-sn-glycero-to-1-hexadecanoyl-sn-g "1-hexadecanoyl-sn-glyc
     1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
     <-> . +linoleoyl_coa -coa
     1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine -1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine -1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_73002
     1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +n_acetylsphingosine -1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_73002 +n_acetylsphingosine -1_hexadecanoyl_sn_glycero_3_phosphocholine
     1_o_linoleoyl_n_acetylsphingosine
   }
 }

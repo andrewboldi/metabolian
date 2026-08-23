@@ -33,7 +33,7 @@ pathway combretol-to-3-o-methylmyricetin "combretol to 3-O-methylmyricetin" {
   branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
     <-> . +ovothiol +h +s_adenosyl_l_methionine
-    mercaptohistidine
+    mercaptohistidine_mnxm1363709
   }
 
   branch from s_adenosyl_l_homocysteine side right {
@@ -62,7 +62,7 @@ pathway combretol-to-3-o-methylmyricetin "combretol to 3-O-methylmyricetin" {
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +5_hydroxyanthrotainin
-    5_hydroxy_desmethylanthrotainin
+    <-> . +s_adenosyl_l_homocysteine +5_hydroxyanthrotainin_chebi_218553
+    5_hydroxy_desmethylanthrotainin_mnxm1368221
   }
 }

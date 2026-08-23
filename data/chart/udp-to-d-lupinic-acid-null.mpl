@@ -66,8 +66,8 @@ pathway udp-to-d-lupinic-acid-null "UDP to D-lupinic acid" {
 
   branch from acetate side left {
     acetate
-    <-> . +acetylpyruvate +h +h2o
-    2_4_6_trioxoheptanoate
+    <-> . +acetylpyruvate_mnxm1369322 +h +h2o
+    2_4_6_trioxoheptanoate_mnxm1372606
   }
 
   branch from udp side right {
@@ -96,8 +96,8 @@ pathway udp-to-d-lupinic-acid-null "UDP to D-lupinic acid" {
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +gomphrenin_i +h
-    betanidin
+    <-> . +udp +gomphrenin_i_mnxm1372475 +h
+    betanidin_mnxm1371738
   }
 
   branch from udp_alpha_d_glucose side left {

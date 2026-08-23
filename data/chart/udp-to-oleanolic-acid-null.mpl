@@ -8,9 +8,9 @@ pathway udp-to-oleanolic-acid-null "UDP to oleanolic acid…" {
 
   spine at 0,0 {
     udp
-    <-> . +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h -oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    <-> . +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h -oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm1372529
     udp_alpha_d_glucose
-    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h -chikusetsusaponin_iva
+    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm1372529 +h -chikusetsusaponin_iva
     udp_alpha_d_galactose
     <-> . +udp +chikusetsusaponin_iva +h -oleanolic_acid_3_o_beta_d_glucosiduronic_acid
     udp_alpha_d_glucose

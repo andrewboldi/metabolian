@@ -18,7 +18,7 @@ pathway r-h-to-hydrogen-acceptor-17149 "R-H to hydrogen acceptor" {
     s_adenosyl_4_methylthio_2_oxobutanoate
     <-> ec_6_3_3_3 [6.3.3.3] +7r_8s_7_8_diammoniononanoate +co2 +atp -adp -pi -hplus
     4r_5s_dethiobiotin
-    <-> ec_2_8_1_6 [2.8.1.6] +thiol_group +di_sulfido_diiron +sam -biotinate -5_deoxyadenosine -methionine -di_sulfido_diiron
+    <-> ec_2_8_1_6 [2.8.1.6] +thiol_group +di_sulfido_diiron +sam -biotinate -5_deoxyadenosine -methionine -di_sulfido_diiron_chebi_33737
     h_group
     <-> . +3_disulfanyl_l_alanine -thiol_group
     l_cysteine
@@ -114,14 +114,14 @@ pathway r-h-to-hydrogen-acceptor-17149 "R-H to hydrogen acceptor" {
     bacteriochlorophyllide_f
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_12_1_4 [1.12.1.4] +nad +di_sulfido_diiron +nadh +hplus
     h2
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +carotene +di_sulfido_diiron +o2 +hplus +h2o
     cryptoxanthin
   }

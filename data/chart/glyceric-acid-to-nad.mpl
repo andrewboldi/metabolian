@@ -116,7 +116,7 @@ pathway glyceric-acid-to-nad "Glyceric acid… to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> . +d_alanine +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    <-> . +d_alanine +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig_mnxm1559539
     und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 

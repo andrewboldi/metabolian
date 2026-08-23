@@ -16,7 +16,7 @@ pathway 3-hydroxy-3-phenylpropion-to-acetate-null "3-hydroxy-3-phenylpropion… 
     h
     <-> . +n_acetyl_d_phenylalaninate
     n_acetyl_l_phenylalaninate
-    <-> . +h2o -acetate
+    <-> . +h2o_chebi_15377 -acetate
     l_phenylalanine
   }
 

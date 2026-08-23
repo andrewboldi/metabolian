@@ -8,36 +8,167 @@ pathway narbomycin-to-narbonolide-40531 "narbomycin to narbonolide" {
 
   spine at 0,0 {
     narbomycin
-    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     neopikromycin
-    <-> . +nadp +h2o -o2 -nadph -narbomycin
+    <-> . +nadp +h2o_water -o2_mnxm735438 -nadph -narbomycin_mnxm739111
     h
-    <-> ec_2_4_1_277 [2.4.1.277] +dtdp +narbomycin -narbonolide
+    <-> ec_2_4_1_277 [2.4.1.277] +dtdp +narbomycin_mnxm739111 -narbonolide
     dtdp_alpha_d_desosamine
   }
 
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
+    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    19_hydroxy_11_deoxycorticosterone
+  }
 
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
+    <-> . +19_hydroxy_11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    19_oxo_deoxycorticosterone
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +21_hydroxy_5beta_pregnane_3_11_20_trione +nad
+    3alpha_21_dihydroxy_5beta_pregnane_11_20_dione
+  }
 
+  branch from h side right {
+    h
+    <-> ec_1_1_1_53 [1.1.1.53] +nadh +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nad
+    3alpha_20alpha_21_trihydroxy_5beta_pregnane_11_o
+  }
 
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_14_12_18 [1.14.12.18] +nadh +h +4_chlorobiphenyl +nad
+    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
+  }
 
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_13_11_3 [1.13.11.3] +h +3_4_dihydroxybenzenesulfonate
+    3_sulfomuconate
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_2_1_28 [1.2.1.28] +h +4_methylbenzoate +nadp +h2o_water
+    4_methylbenzaldehyde
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +h +4_methylbenzoate +o2_mnxm735438 +nadp
+    1r_6s_1_6_dihydroxy_4_methylcyclohexa_2_4_diene
+  }
 
+  branch from narbomycin_mnxm739111 side left {
+    narbomycin_mnxm739111
+    <-> . +nadp +h2o_water +h +o2_mnxm735438 +nadph
+    pikromycin
+  }
 
+  branch from dtdp_alpha_d_desosamine side right {
+    dtdp_alpha_d_desosamine
+    <-> . +dtdp +h +mycinamicin_viii
+    protomycinolide_iv
+  }
 
+  branch from dtdp_alpha_d_desosamine side left {
+    dtdp_alpha_d_desosamine
+    <-> . +20_deoxo_20_dihydro_12_13_deepoxyrosamicin +dtdp +h
+    tylactone
+  }
 
+  branch from narbonolide side right {
+    narbonolide
+    <-> ec_2_3_1_240 [2.3.1.240] +malonyl-coa +nadph_chebi_57783 +hplus +co2 +nadp_chebi_58349 +coa +h2o
+    s_methylmalonyl_coa
+  }
 
+  branch from narbonolide side left {
+    narbonolide
+    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa_mnxm727276 +h2o_water
+    co2_mnxm13
+  }
 
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_heptaprenylbenzoate +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
+    3_4_dihydroxy_5_all_trans_heptaprenylbenzoate
+  }
 
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_decaprenylbenzoate +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
+    3_decaprenyl_4_5_dihydroxybenzoate
+  }
 
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
+    <-> ec_1_14_15_44 [1.14.15.44] +2_22_dideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
+    2_deoxyecdysone
+  }
 
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
+    <-> . +2_22_25_trideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
+    2_22_dideoxyecdysone
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +h +2_3_dihydroxy_ddt +nadph
+    1s_2s_ddt_2_3_dihydrodiol
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_12_10 [1.14.12.10] +h +benzoate +o2_mnxm735438 +nadph
+    1r_6s_1_6_dihydroxycyclohexa_2_4_diene_1_carbox
+  }
 
+  branch from h2o_water side right {
+    h2o_water
+    <-> ec_4_2_1_148 [4.2.1.148] +2_methylfumaryl_coa +h
+    l_erythro_3_methylmalyl_coa
+  }
 
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +6_3_triphosphoryl_1_methylglyceryl_7_methyl_7_8 +s_adenosyl_l_homocysteine +h +2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_o
+    s_adenosyl_l_methionine
+  }
 
+  branch from h side right {
+    h
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh +11_deoxycortisol +nad
+    17alpha_21_dihydroxypregnenolone
+  }
 
+  branch from h side left {
+    h
+    <-> ec_2_1_1_201 [2.1.1.201] +s_adenosyl_l_homocysteine +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +s_adenosyl_l_methionine
+    2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon
+  }
 
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_14_99_31 [1.14.99.31] +nadh +tetradecanoyl_coa +h +nad +h2o_water
+    trans_tetradec_11_enoyl_coa
+  }
 
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_14_99_32 [1.14.99.32] +nadh +tetradecanoyl_coa +h +nad +h2o_water
+    cis_tetradec_11_enoyl_coa
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_2_1_28 [1.2.1.28] +h +o_toluate +nadp +h2o_water
+    2_methylbenzaldehyde
+  }
 }

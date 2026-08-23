@@ -8,7 +8,7 @@ pathway 2-hydroxy-5-methyl-1-naph-to-diphosphate "2-hydroxy-5-methyl-1-naph… t
 
   spine at 0,0 {
     2_hydroxy_5_methyl_1_naphthoate
-    <-> ec_1_14_15_31 [1.14.15.31] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_31 [1.14.15.31] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_7_dihydroxy_5_methyl_1_naphthoate
     <-> ec_2_1_1_303 [2.1.1.303] +sam -sah -hplus
     2_hydroxy_7_methoxy_5_methyl_1_naphthoate

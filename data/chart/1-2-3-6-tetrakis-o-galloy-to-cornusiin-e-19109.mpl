@@ -30,7 +30,7 @@ pathway 1-2-3-6-tetrakis-o-galloy-to-cornusiin-e-19109 "1,2,3,6-tetrakis-O-gallo
 
   branch from tellimagrandin_ii side left {
     tellimagrandin_ii
-    <-> . +cornusiin_e +h2o +o2
+    <-> . +cornusiin_e_mnxm16844 +h2o_water +o2_mnxm735438
     h
   }
 

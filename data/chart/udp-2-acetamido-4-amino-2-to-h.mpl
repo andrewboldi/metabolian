@@ -51,7 +51,7 @@ pathway udp-2-acetamido-4-amino-2-to-h "UDP-2-acetamido-4-amino-2… to H" {
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
     <-> . +udp +lipid_a_core_oligosaccharide_e_coli_k_12_core_ty +h
-    lipid_a_core_oligosaccharide_e_coli_k_12_core_ty
+    lipid_a_core_oligosaccharide_e_coli_k_12_core_ty_mnxm1372373
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {

@@ -10,20 +10,20 @@ pathway z-n-sulfonatooxy-prop-to-glucoiberin-69272 "(Z)-N-(sulfonatooxy)prop-…
     z_n_sulfonatooxy_prop_2_enimidothioate
     <-> . -sulfate
     allyl_isothiocyanate
-    <-> ec_3_2_1_147 [3.2.1.147] +beta_d_glucose +h +sulfate -h2o
+    <-> ec_3_2_1_147 [3.2.1.147] +beta_d_glucose +h +sulfate_mnxm58 -h2o
     sinigrin
     <-> . +methanesulfonate +h -glucoiberin
     o2
   }
 
-  branch from sulfate side left {
-    sulfate
+  branch from sulfate_mnxm58 side left {
+    sulfate_mnxm58
     <-> . +indol_3_ylacetothiohydroxamate_o_sulfonate
     indolylmethylisothiocyanate
   }
 
-  branch from sulfate side right {
-    sulfate
+  branch from sulfate_mnxm58 side right {
+    sulfate_mnxm58
     <-> . +4_methoxyindol_3_ylmethyl_isothiocyanate
     4_methoxy_3_indolylmethyl_glucosinolate_aglycone
   }

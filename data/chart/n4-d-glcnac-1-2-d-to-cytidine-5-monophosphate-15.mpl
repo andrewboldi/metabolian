@@ -15,15 +15,15 @@ pathway n4-d-glcnac-1-2-d-to-cytidine-5-monophosphate-15 "N4-{β-D-GlcNAc-(1→2
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
     <-> . +udp_d_galactose -udp -hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_chebi_234196
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_chebi_234248
   }
 
   branch from n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 side left {
     n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4
     <-> . +udp_d_galactose +udp +hplus
-    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4
+    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_chebi_234185
   }
 
   branch from udpglcnac side right {
@@ -40,13 +40,13 @@ pathway n4-d-glcnac-1-2-d-to-cytidine-5-monophosphate-15 "N4-{β-D-GlcNAc-(1→2
 
   branch from udp_d_galactose side right {
     udp_d_galactose
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +udp +hplus
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_82939 +udp +hplus
     d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga
   }
 
   branch from udp_d_galactose side left {
     udp_d_galactose
     <-> . +gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1 +udp +hplus
-    d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga
+    d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga_chebi_141778
   }
 }

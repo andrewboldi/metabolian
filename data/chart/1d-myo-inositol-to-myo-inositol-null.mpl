@@ -10,24 +10,85 @@ pathway 1d-myo-inositol-to-myo-inositol-null "1D-myo-inositol… to myo-inositol
     1d_myo_inositol_3_4_bisphosphate
     <-> . +atp -h -adp
     1d_myo_inositol_3_4_6_trisphosphate
-    <-> . +atp -adp -hplus
+    <-> . +atp_chebi_30616 -adp_chebi_456216 -hplus
     myo_inositol_1_3_4_6_tetrakisphosphate
-    <-> ec_2_7_1_140 [2.7.1.140] +atp -adp -hplus
+    <-> ec_2_7_1_140 [2.7.1.140] +atp_chebi_30616 -adp_chebi_456216 -hplus
     myo_inositol_1_3_4_5_6_pentakisphosphate
     <-> . +1d_myo_inositol_1_3_4_trisphosphate -myo_inositol_1_3_4_6_tetrakisphosphate
     1d_myo_inositol_3_4_5_6_tetrakisphosphate
-    <-> ec_2_7_1_134 [2.7.1.134] +atp -adp -hplus
+    <-> ec_2_7_1_134 [2.7.1.134] +atp_chebi_30616 -adp_chebi_456216 -hplus
     myo_inositol_1_3_4_5_6_pentakisphosphate
   }
 
+  branch from h side left {
+    h
+    <-> . +coa +thiazinotrienomycin_e +de_cyclohexane_1_carbonyl_thiazinotrienomycin_e
+    cyclohexane_1_carbonyl_coa
+  }
 
+  branch from h side right {
+    h
+    <-> . +2s_2_methylbutanoyl_coa +d_alanyl_3_o_methylprotoansatrienin +trienomycin_b
+    coa
+  }
 
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    d_selenomethionine
+  }
 
+  branch from adp side right {
+    adp
+    <-> ec_6_2_1_13 [6.2.1.13] +2_methylpropanoyl_coa +phosphate +atp +coa
+    2_methylpropanoate
+  }
 
+  branch from atp side left {
+    atp
+    <-> ec_2_7_11_1 [2.7.11.1] +h +kemptide +adp
+    phosphokemptide
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_179 [2.7.1.179] +h +aldehydo_d_kanosamine +adp
+    3_amino_3_deoxy_6_o_phosphono_d_glucopyranose
+  }
 
+  branch from h side left {
+    h
+    <-> . +adenosine_3_5_bisphosphate +deoxycylindrospermopsin +desulfo_7_deoxycylindrospermopsin
+    3_phosphoadenylyl_sulfate
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_1_4_11 [3.1.4.11] +1d_myo_inositol_1_4_5_trisphosphate +1_stearoyl_2_arachidonoyl_sn_glycerol +h2o
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
+  }
 
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_59 [2.7.1.59] +n_acetyl_beta_d_glucosamine_6_phosphate +h +atp
+    n_acetyl_beta_d_glucosamine
+  }
 
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_mannopyranose +atp +h
+    alpha_d_mannose_6_phosphate
+  }
 
+  branch from 1d_myo_inositol_1_3_4_trisphosphate side left {
+    1d_myo_inositol_1_3_4_trisphosphate
+    <-> . +h2o_chebi_15377 +pi
+    1d_myo_inositol_1_3_biphosphate
+  }
+
+  branch from 1d_myo_inositol_1_3_4_trisphosphate side right {
+    1d_myo_inositol_1_3_4_trisphosphate
+    <-> . +h2o_chebi_15377 +pi
+    1d_myo_inositol_3_4_biphosphate
+  }
 }

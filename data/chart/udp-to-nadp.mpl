@@ -49,7 +49,7 @@ pathway udp-to-nadp "UDP to NADP" {
   branch from nadp side right {
     nadp
     <-> ec_1_3_1_36 [1.3.1.36] +nadph +geissoschizine
-    4_21_dehydrogeissoschizine
+    4_21_dehydrogeissoschizine_mnxm1368749
   }
 
   branch from udp side left {
@@ -97,7 +97,7 @@ pathway udp-to-nadp "UDP to NADP" {
   branch from o2 side right {
     o2
     <-> ec_1_14_13_73 [1.14.13.73] +nadp +h2o +h +tabersonine +nadph
-    16_hydroxytabersonine
+    16_hydroxytabersonine_mnxm1371329
   }
 
   branch from h2o side left {
@@ -109,7 +109,7 @@ pathway udp-to-nadp "UDP to NADP" {
   branch from h2o side right {
     h2o
     <-> ec_4_2_1_154 [4.2.1.154] +tetracenomycin_f2
-    tetracenomycin_f1
+    tetracenomycin_f1_mnxm1371568
   }
 
   branch from nadph side left {

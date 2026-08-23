@@ -21,7 +21,7 @@ pathway h2o2-to-h2o "H2O2 to H2O" {
   branch from 20_coa_20_oxo_leukotriene_b4 side left {
     20_coa_20_oxo_leukotriene_b4
     <-> . +h +o2 +h2o2
-    18e_20_oxo_20_coa_ltb4
+    18e_20_oxo_20_coa_ltb4_mnxm734421
   }
 
   branch from o2 side right {

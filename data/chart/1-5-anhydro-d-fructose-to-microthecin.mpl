@@ -11,7 +11,7 @@ pathway 1-5-anhydro-d-fructose-to-microthecin "1,5-anhydro-D-fructose to microth
     <-> ec_1_1_1_292 [1.1.1.292] +nadh +h -nad
     1_5_anhydro_d_mannitol
     <-> ec_1_1_1_292 [1.1.1.292] +nadp -nadph -hplus
-    1_5_anhydro_d_fructose
+    1_5_anhydro_d_fructose_chebi_16715
     <-> ec_4_2_1_110 [4.2.1.110] -h2o
     microthecin
   }
@@ -28,14 +28,14 @@ pathway 1-5-anhydro-d-fructose-to-microthecin "1,5-anhydro-D-fructose to microth
     galactitol
   }
 
-  branch from 1_5_anhydro_d_fructose side left {
-    1_5_anhydro_d_fructose
+  branch from 1_5_anhydro_d_fructose_chebi_16715 side left {
+    1_5_anhydro_d_fructose_chebi_16715
     <-> ec_4_2_1_111 [4.2.1.111] +h2o
     ascopyrone_m
   }
 
-  branch from 1_5_anhydro_d_fructose side right {
-    1_5_anhydro_d_fructose
+  branch from 1_5_anhydro_d_fructose_chebi_16715 side right {
+    1_5_anhydro_d_fructose_chebi_16715
     <-> ec_1_1_1_263 [1.1.1.263] +nadp +nadph +hplus
     1_5_anhydro_d_glucitol
   }
@@ -49,7 +49,7 @@ pathway 1-5-anhydro-d-fructose-to-microthecin "1,5-anhydro-D-fructose to microth
   branch from 1_5_anhydro_d_fructose side right {
     1_5_anhydro_d_fructose
     <-> ec_4_2_1_110 [4.2.1.110] +1_5_anhydro_4_deoxy_d_glycero_hex_3_en_2_ulose
-    h2o
+    h2o_water
   }
 
   branch from nadh side left {
@@ -60,7 +60,7 @@ pathway 1-5-anhydro-d-fructose-to-microthecin "1,5-anhydro-D-fructose to microth
 
   branch from nadh side right {
     nadh
-    <-> . +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +h +nad +h2o
+    <-> . +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +h +nad +h2o_water
     25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
   }
 
@@ -72,13 +72,13 @@ pathway 1-5-anhydro-d-fructose-to-microthecin "1,5-anhydro-D-fructose to microth
 
   branch from h side right {
     h
-    <-> . +7z_10z_13z_16z_docosatetraenoyl_coa +h2o +coa
+    <-> . +7z_10z_13z_16z_docosatetraenoyl_coa +h2o_water +coa
     7z_10z_13z_16z_docosatetraenoate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 +h2o
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 +h2o_water
     3alpha_7alpha_dihydroxy_5beta_cholestanate
   }
 

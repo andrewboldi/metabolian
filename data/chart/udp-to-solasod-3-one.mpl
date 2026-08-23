@@ -79,7 +79,7 @@ pathway udp-to-solasod-3-one "UDP to solasod-3-one" {
   branch from nadp side left {
     nadp
     <-> . +h +nadph +deoxymupirocin_f
-    deoxymupirocin_c
+    deoxymupirocin_c_mnxm1372378
   }
 
   branch from nadp side right {
@@ -91,7 +91,7 @@ pathway udp-to-solasod-3-one "UDP to solasod-3-one" {
   branch from nadph side left {
     nadph
     <-> . +h +nadp +mupirocin_f1
-    mupirocin_c1
+    mupirocin_c1_mnxm1372376
   }
 
   branch from nadph side right {

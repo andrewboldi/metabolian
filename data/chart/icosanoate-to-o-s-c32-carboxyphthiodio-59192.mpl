@@ -19,7 +19,7 @@ pathway icosanoate-to-o-s-c32-carboxyphthiodio-59192 "icosanoate to O-(S-C32-car
   branch from malonyl-coa side left {
     malonyl-coa
     <-> . +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +coa
-    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o_chebi_72650
   }
 
   branch from malonyl-coa side right {

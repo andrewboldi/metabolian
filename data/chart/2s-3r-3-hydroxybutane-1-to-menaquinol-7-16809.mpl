@@ -12,7 +12,7 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7-16809 "(2S,3R)-3-hydroxybutane-1
     succinate
     <-> . +menaquinone_7 -fumarate
     menaquinol_7
-    <-> . +pyruvate -s_lactate
+    <-> . +pyruvate_mnxm23 -s_lactate
     menaquinone_7
     <-> . +nadh +hplus -nad
     menaquinol_7

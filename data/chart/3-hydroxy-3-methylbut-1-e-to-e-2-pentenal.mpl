@@ -12,7 +12,7 @@ pathway 3-hydroxy-3-methylbut-1-e-to-e-2-pentenal "3-hydroxy-3-methylbut-1-e… 
     h
     <-> ec_1_1_1_71 [1.1.1.71] +nadh +e_2_pentenal -nad
     e_2_penten_1_ol
-    <-> . +nadp -nadph -hplus
+    <-> . +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     e_2_pentenal
   }
 }

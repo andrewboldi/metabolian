@@ -49,18 +49,18 @@ pathway 2-hydroxyisobutanoyl-coa-to-3-cyanopyridine "2-hydroxyisobutanoyl-CoA to
   branch from 3_cyanopyridine side right {
     3_cyanopyridine
     <-> . +e_pyridine_3_aldoxime
-    h2o
+    h2o_water
   }
 
   branch from 3_cyanopyridine side left {
     3_cyanopyridine
-    <-> ec_4_2_1_84 [4.2.1.84] +h2o
-    nicotinamide
+    <-> ec_4_2_1_84 [4.2.1.84] +h2o_water
+    nicotinamide_mnxm216
   }
 
   branch from 2_hydroxyisobutanoyl_coa side right {
     2_hydroxyisobutanoyl_coa
-    <-> . +diphosphate +amp +2_hydroxyisobutyrate +coa
+    <-> . +diphosphate +amp +2_hydroxyisobutyrate +coa_mnxm727276
     atp
   }
 

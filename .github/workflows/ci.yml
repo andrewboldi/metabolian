@@ -27,6 +27,8 @@ jobs:
         run: npm run data:build
       - name: Chart QA gates (routing, dangling arrows, cell overlap)
         run: node tools/qa-metrics.mjs --gate
+      - name: Balance gate (every concrete reaction balances in mass + charge as stored)
+        run: node tools/qa-balance.mjs --gate
 
   render:
     name: Rendered-output QA (overprints, strikethroughs, empty cells)

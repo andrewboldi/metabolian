@@ -18,13 +18,13 @@ pathway tetracycline-to-hydroquinones "tetracycline to hydroquinones" {
 
   branch from chlortetracycline side left {
     chlortetracycline
-    <-> . +5a_11a_dehydrochlortetracycline +nadph
-    nadp
+    <-> . +5a_11a_dehydrochlortetracycline +nadph_mnxm738702
+    nadp_mnxm5
   }
 
   branch from chlortetracycline side right {
     chlortetracycline
-    <-> ec_1_14_13_231 [1.14.13.231] +11a_hydroxychlortetracycline +nadp +h2o +o2 +nadph
+    <-> ec_1_14_13_231 [1.14.13.231] +11a_hydroxychlortetracycline +nadp_mnxm5 +h2o_water +o2_mnxm735438 +nadph_mnxm738702
     h
   }
 

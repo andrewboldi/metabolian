@@ -10,15 +10,15 @@ pathway r-germacrene-a-to-fmn-null "(+)-(R)-germacrene A to FMN" {
     r_germacrene_a
     <-> ec_1_14_13_123 [1.14.13.123] +h +o2 +nadph -nadp -h2o
     germacra_1_10_4_11_13_trien_12_ol
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     germacra_1_10_4_11_13_trien_12_al
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     germacra_1_10_4_11_13_trien_12_oate
-    <-> ec_1_14_14_150 [1.14.14.150] +fmnh2 +o2 -fmn -h2o
+    <-> ec_1_14_14_150 [1.14.14.150] +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377
     costunolide
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     parthenolide
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     3_hydroxyparthenolide
   }
 

@@ -24,13 +24,13 @@ pathway 3-phenylpropionitrile-to-3-2-3-dihydroxyphenyl-p "3-phenylpropionitrile 
 
   branch from 3_phenylpropionitrile side right {
     3_phenylpropionitrile
-    <-> . +h2o
+    <-> . +h2o_water
     3_phenylpropionaldoxim
   }
 
   branch from 3_phenylpropionitrile side left {
     3_phenylpropionitrile
-    <-> ec_4_2_1_65 [4.2.1.65] +h2o
+    <-> ec_4_2_1_65 [4.2.1.65] +h2o_water
     3_phenylpropanamide
   }
 }

@@ -48,7 +48,7 @@ pathway 5-end-n7-methyl-to-e-2-methylgeranyl "5'-end (N7-methyl… to (E)-2-meth
 
   branch from h side right {
     h
-    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat +h2o +diphosphate
+    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat +h2o_water +diphosphate
     precursor_z_hydrate
   }
 

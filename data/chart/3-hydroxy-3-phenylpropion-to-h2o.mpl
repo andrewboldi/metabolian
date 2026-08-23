@@ -78,8 +78,8 @@ pathway 3-hydroxy-3-phenylpropion-to-h2o "3-hydroxy-3-phenylpropion… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +d_alanine +1_6_anhydrous_n_acetylmuramyl_tripeptide
-    1_6_anhydrous_n_acetylmuramyl_tetrapeptide
+    <-> . +d_alanine +1_6_anhydrous_n_acetylmuramyl_tripeptide_mnxm734073
+    1_6_anhydrous_n_acetylmuramyl_tetrapeptide_mnxm737949
   }
 
   branch from h side right {

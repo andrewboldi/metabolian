@@ -8,7 +8,7 @@ pathway di-sulfido-diiron-to-r-2-2-3-trimethyl-5-ox-1352 "di-μ-sulfido-diiron t
 
   spine at 0,0 {
     di_sulfido_diiron
-    <-> ec_1_14_15_1 [1.14.15.1] +r_camphor +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_1 [1.14.15.1] +r_camphor +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     exo_5_hydroxycamphor
     <-> ec_1_1_1_327 [1.1.1.327] +nad -nadh -hplus
     1r_bornane_2_5_dione

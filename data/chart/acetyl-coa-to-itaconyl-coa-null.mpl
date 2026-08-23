@@ -10,15 +10,15 @@ pathway acetyl-coa-to-itaconyl-coa-null "acetyl-CoA to itaconyl-CoA" {
     acetyl_coa
     <-> . +pyruvate +h2o -h -coa
     citramalate
-    <-> ec_2_8_3_11 [2.8.3.11] +acetyl_coa -acetate
+    <-> ec_2_8_3_11 [2.8.3.11] +acetyl_coa_chebi_57288 -acetate
     3s_citramalyl_coa
-    <-> ec_4_2_1_56 [4.2.1.56] -h2o
+    <-> ec_4_2_1_56 [4.2.1.56] -h2o_chebi_15377
     itaconyl_coa
   }
 
   branch from itaconyl_coa side left {
     itaconyl_coa
-    <-> ec_6_2_1_4 [6.2.1.4] +gtp +coa +gdp +pi
+    <-> ec_6_2_1_4 [6.2.1.4] +gtp +coa_chebi_57287 +gdp +pi
     itaconate
   }
 }

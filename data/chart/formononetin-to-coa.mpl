@@ -12,42 +12,173 @@ pathway formononetin-to-coa "formononetin to CoA" {
     calycosin
     <-> ec_1_14_19_63 [1.14.19.63] +fmnh2 +o2 -fmn -h2o -hplus
     pseudobaptigenin
-    <-> ec_1_14_13_53 [1.14.13.53] +h +o2 +nadph -2_7_dihydroxy_4_5_methylenedioxyisoflavone -h2o
+    <-> ec_1_14_13_53 [1.14.13.53] +h +o2_mnxm735438 +nadph -2_7_dihydroxy_4_5_methylenedioxyisoflavone -h2o_water
     nadp
     <-> ec_1_3_1_45 [1.3.1.45] +h +2_7_dihydroxy_4_5_methylenedioxyisoflavone +nadph -nadp
     sophorol
-    <-> ec_1_1_1_246 [1.1.1.246] +h +nadph -nadp -h2o
+    <-> ec_1_1_1_246 [1.1.1.246] +h +nadph -nadp -h2o_water
     maackiain
     <-> .
-    maackiain
-    <-> . +glucose -h2o
+    maackiain_chebi_99
+    <-> . +glucose -h2o_water
     trifolirhizin
     <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +h -coa
     maackiain_3_o_glucosyl_6_o_malonate
   }
 
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_16 [1.14.14.16] +progesterone +fmnh2 +o2 +h2o +hplus
+    11_deoxycorticosterone
+  }
 
+  branch from fmn side right {
+    fmn
+    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
+    1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho
+  }
 
+  branch from pseudobaptigenin side left {
+    pseudobaptigenin
+    <-> . +h +o2_mnxm735438 +nadph +nadp +h2o_water
+    calycosin_mnxm1815
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +13z_3_oxodocosenoyl_coa +h +nadph
+    3_s_hydroxy_13cis_docosenoyl_coa
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +15z_3_oxotetracosenoyl_coa +h +nadph
+    3_s_hydroxy_cis_15_tetracosaenoyl_coa
+  }
 
+  branch from 2_7_dihydroxy_4_5_methylenedioxyisoflavone side right {
+    2_7_dihydroxy_4_5_methylenedioxyisoflavone
+    <-> ec_1_3_1_45 [1.3.1.45] +h +nadph +nadp
+    sophorol_chebi_80395
+  }
 
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +prostaglandin_pge2_1_glyceryl_ester +h +glycerol
+    prostaglandin_e2
+  }
 
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +prostaglandin_pge2_3_glyceryl_ester +h +prostaglandin_e2
+    glycerol
+  }
 
+  branch from maackiain side left {
+    maackiain
+    <-> . +h +o2_mnxm735438 +nadph +nadp +h2o_water
+    6a_hydroxymaackiain
+  }
 
+  branch from maackiain_chebi_99 side right {
+    maackiain_chebi_99
+    <-> ec_4_2_1_139 [4.2.1.139] +h2o
+    3r_4r_2_hydroxy_4_5_methylenedioxyisoflavan_4_7
+  }
 
+  branch from maackiain_chebi_99 side left {
+    maackiain_chebi_99
+    <-> ec_2_4_1_170 [2.4.1.170] +udp +h +trifolirhizin
+    udp_alpha_d_glucose
+  }
 
+  branch from trifolirhizin side right {
+    trifolirhizin
+    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +atp +h2o_water +maackiain_3_o_glucosyl_6_o_malonate +coa +amp
+    diphosphate
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +15z_tetracosenoyl_coa +r_carnitine
+    nervonyl_carnitine
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +r_carnitine +pentadecanoyl_coa
+    pendtadenoyl_carnitine
+  }
 
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +o2 +fmn +h2o +hplus
+    1_o_9s_10r_epoxystearoyl_sn_glycero_3_phosphocho
+  }
 
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +o2 +fmn +h2o +hplus
+    1_o_8_hydroxyoleoyl_sn_glycero_3_phosphocholine
+  }
 
+  branch from fmn side left {
+    fmn
+    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
+    1_o_11_hydroxyoleoyl_sn_glycero_3_phosphocholine
+  }
 
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_177 [1.14.14.177] +triacontanoate +fmnh2 +o2 +h2o +hplus
+    hydroxytriacontanoate
+  }
 
+  branch from h side left {
+    h
+    <-> . +udp +3_5_3_5_tetraiodothyroacetate_beta_d_glucuronosi +3_3_5_5_tetraiodothyroacetic_acid
+    udp_alpha_d_glucuronate
+  }
 
+  branch from h side right {
+    h
+    <-> . +udp +3_3_5_triiodothyroacetate_beta_d_glucuronoside +udp_alpha_d_glucuronate
+    3_3_5_triiodothyroacetate
+  }
 
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +h +13_hydroxy_gamma_tocotrienol +nadph +nadp +h2o_water
+    13_carboxy_tocotrienol
+  }
 
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +10_11_dihydro_ltb4_coa +h2o2
+    5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +3_oxooleoyl_coa +h +nadp
+    3_s_hydroxy_cis_9_octadecenoyl_coa
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +2e_9z_octadecadienoyl_coa +h +nadp
+    9z_octadecenoyl_coa
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +6_trans_leukotriene_b4 +nadph
+    5_oxo_6_trans_leukotriene_b4
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +6_trans_12_epi_leukotriene_b4 +h +nadph
+    5_oxo_6e_12_epi_leukotriene_b4
+  }
 }

@@ -14,7 +14,7 @@ pathway s-methyl-5-thio-d-ribulos-to-dimethyl-disulfide "S-methyl-5-thio-D-ribul
     2_methylthioethanol
     <-> . +hydrogen_donor -methanethiol -hydrogen_acceptor -h2o
     ethene
-    <-> ec_1_8_1_21 [1.8.1.21] +methanethiol +nad -nadh -hplus
+    <-> ec_1_8_1_21 [1.8.1.21] +methanethiol +nad_chebi_57540 -nadh_chebi_57945 -hplus
     dimethyl_disulfide
   }
 }

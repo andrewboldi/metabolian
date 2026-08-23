@@ -98,13 +98,13 @@ pathway 6-demethylsterigmatocystin-to-acetylene-11504 "6-demethylsterigmatocysti
 
   branch from 1_propanol side left {
     1_propanol
-    <-> ec_3_8_1_5 [3.8.1.5] +1_bromopropane +h2o +bromide
+    <-> ec_3_8_1_5 [3.8.1.5] +1_bromopropane +h2o_water +bromide
     h
   }
 
   branch from 1_propanol side right {
     1_propanol
-    <-> ec_3_8_1_5 [3.8.1.5] +compound_0050183 +h2o +h
+    <-> ec_3_8_1_5 [3.8.1.5] +compound_0050183 +h2o_water +h
     chloride
   }
 

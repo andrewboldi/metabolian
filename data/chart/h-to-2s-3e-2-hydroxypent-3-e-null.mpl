@@ -12,7 +12,7 @@ pathway h-to-2s-3e-2-hydroxypent-3-e-null "H to (2S,3E)-2-hydroxypent-3-e…" {
     nadp
     <-> ec_4_1_2_46 [4.1.2.46] +2r_2_hydroxy_2_methylbutanenitrile -hydrogen_cyanide
     butan_2_one
-    <-> . +nadp -nadph -hplus
+    <-> . +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     buten_2_one
     <-> ec_1_1_1_1 [1.1.1.1] +nadh +h -nad
     crotyl_alcohol

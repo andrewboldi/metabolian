@@ -18,7 +18,7 @@ pathway 2e-4z-7e-2-hydroxy-6-ox-to-h2o "(2E,4Z,7E)-2-hydroxy-6-ox… to H2O" {
     n_acetyl_l_cysteinate
     <-> ec_1_10_3_15 [1.10.3.15] +3_amino_4_hydroxybenzoate +o2 +hplus -co2 -h2o
     grixazone_b
-    <-> . +nadh +h -nad -h2o
+    <-> . +nadh_mnxm10 +h -nad_mnxm8 -h2o_water
     grixazone_a
   }
 
@@ -46,33 +46,33 @@ pathway 2e-4z-7e-2-hydroxy-6-ox-to-h2o "(2E,4Z,7E)-2-hydroxy-6-ox… to H2O" {
     5_3_3_dimethylguanidino_2_oxopentanoate
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +18_20_dioxo_20_coa_leukotriene_b4
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +18_20_dioxo_20_coa_leukotriene_b4
     20_coa_20_oxo_18r_hydroxyleucotriene_b4
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_6_1_2 [1.6.1.2] +nadh +nadp +nadph
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_6_1_2 [1.6.1.2] +nadh_mnxm10 +nadp +nadph
     pmf
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +13_14_epoxy_retinol
     13_14_dihydroxy_retinol
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +nitrite +h +hypochlorous_acid
     nitryl_chloride
   }
 
   branch from 2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate side left {
     2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate
-    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
+    <-> ec_1_13_11_16 [1.13.11.16] +h +o2_mnxm735438
     2e_3_2_3_dihydroxyphenyl_prop_2_enoate
   }
 
@@ -112,15 +112,15 @@ pathway 2e-4z-7e-2-hydroxy-6-ox-to-h2o "(2E,4Z,7E)-2-hydroxy-6-ox… to H2O" {
     3_acetamido_4_hydroxybenzoate
   }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_6_1_1 [1.6.1.1] +pmf +nadp +pmf +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_6_1_1 [1.6.1.1] +pmf +nadp +pmf +nad_mnxm8
     nadph
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_14_18_2 [1.14.18.2] +n_glycoloylneuraminate +h +o2 +nad +h2o
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> ec_1_14_18_2 [1.14.18.2] +n_glycoloylneuraminate +h +o2_mnxm735438 +nad_mnxm8 +h2o_water
     n_acetyl_beta_neuraminate
   }
 
@@ -136,26 +136,26 @@ pathway 2e-4z-7e-2-hydroxy-6-ox-to-h2o "(2E,4Z,7E)-2-hydroxy-6-ox… to H2O" {
     9_cis_retinoate
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +nadh +h
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +nadh_mnxm10 +h
     isocitrate
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_203 [1.1.1.203] +nadh +galactarate +h +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_1_1_203 [1.1.1.203] +nadh_mnxm10 +galactarate +h +h2o_water
     beta_d_galacturonate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +d_glucuronate +cehc
     gama_cehc_glucuronide
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +w_carboxy_leukotriene_b4
     20_trihydroxy_leukotriene_b4
   }

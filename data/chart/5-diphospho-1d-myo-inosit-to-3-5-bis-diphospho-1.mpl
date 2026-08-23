@@ -18,13 +18,13 @@ pathway 5-diphospho-1d-myo-inosit-to-3-5-bis-diphospho-1 "5-diphospho-1D-myo-ino
 
   branch from adp side left {
     adp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +phosphate +atp +h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +phosphate +atp +h2o_water
     carnosine
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     chenodeoxycholic_acid_24_o_d_glucuronide
   }
 
@@ -54,25 +54,25 @@ pathway 5-diphospho-1d-myo-inosit-to-3-5-bis-diphospho-1 "5-diphospho-1D-myo-ino
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     chenodeoxycholate_3_o_d_glucuronide
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     12s_hht
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     cholestane_3_7_12_24_25_pentol
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     8_dehydrocholesterol
   }
 }

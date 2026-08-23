@@ -44,8 +44,8 @@ pathway tetradecanedioate-to-3-oxooctanedioyl-coa-40291 "tetradecanedioate to 3-
 
   branch from tetradecanedioyl_coa side left {
     tetradecanedioyl_coa
-    <-> . +dodecanedioyl_coa +nadh +acetyl_coa +h +h2o2 +o2 +nad +h2o
-    coa
+    <-> . +dodecanedioyl_coa +nadh_mnxm10 +acetyl_coa_mnxm1104266 +h +h2o2_mnxm732620 +o2_mnxm735438 +nad_mnxm8 +h2o_water
+    coa_mnxm727276
   }
 
   branch from ppi side right {
@@ -68,37 +68,37 @@ pathway tetradecanedioate-to-3-oxooctanedioyl-coa-40291 "tetradecanedioate to 3-
 
   branch from dodecanedioyl_coa side left {
     dodecanedioyl_coa
-    <-> . +coa +o2 +nad +h2o +acetyl_coa +h +decanedioyl_coa +h2o2
-    nadh
+    <-> . +coa_mnxm727276 +o2_mnxm735438 +nad_mnxm8 +h2o_water +acetyl_coa_mnxm1104266 +h +decanedioyl_coa +h2o2_mnxm732620
+    nadh_mnxm10
   }
 
   branch from decanedioyl_coa side right {
     decanedioyl_coa
-    <-> . +nadh +octanedioyl_coa +acetyl_coa +h +h2o2 +coa +nad +h2o
-    o2
+    <-> . +nadh_mnxm10 +octanedioyl_coa +acetyl_coa_mnxm1104266 +h +h2o2_mnxm732620 +coa_mnxm727276 +nad_mnxm8 +h2o_water
+    o2_mnxm735438
   }
 
   branch from decanedioyl_coa side left {
     decanedioyl_coa
-    <-> . +s_carnitine +h +coa
+    <-> . +s_carnitine +h +coa_mnxm727276
     o_sebacoylcarnitine
   }
 
   branch from octanedioyl_coa side right {
     octanedioyl_coa
-    <-> . +o2 +h2o +s_3_hydroxyoctanedioyl_coa
-    h2o2
+    <-> . +o2_mnxm735438 +h2o_water +s_3_hydroxyoctanedioyl_coa
+    h2o2_mnxm732620
   }
 
   branch from octanedioyl_coa side left {
     octanedioyl_coa
-    <-> . +h +glycine +coa
+    <-> . +h +glycine +coa_mnxm727276
     suberylglycine
   }
 
   branch from s_3_hydroxyoctanedioyl_coa side right {
     s_3_hydroxyoctanedioyl_coa
-    <-> . +h +h2o +coa
+    <-> . +h +h2o_water +coa_mnxm727276
     3_hydroxysuberic_acid
   }
 
@@ -116,25 +116,25 @@ pathway tetradecanedioate-to-3-oxooctanedioyl-coa-40291 "tetradecanedioate to 3-
 
   branch from dodecanedioyl_coa side left {
     dodecanedioyl_coa
-    <-> . +r_carnitine +h +coa
+    <-> . +r_carnitine +h +coa_mnxm727276
     4s_4_11_carboxyundecanoyl_oxy_4_trimethylammoni
   }
 
   branch from dodecanedioyl_coa side right {
     dodecanedioyl_coa
-    <-> . +s_carnitine +h +coa
+    <-> . +s_carnitine +h +coa_mnxm727276
     o_dodecanedioylcarnitine
   }
 
   branch from decanedioyl_coa side left {
     decanedioyl_coa
-    <-> . +h +o_sebacoylcarnitine +coa
+    <-> . +h +o_sebacoylcarnitine +coa_mnxm727276
     r_carnitine
   }
 
   branch from octanedioyl_coa side right {
     octanedioyl_coa
-    <-> . +s_carnitine +coa
+    <-> . +s_carnitine +coa_mnxm727276
     o_suberoylcarnitine
   }
 }

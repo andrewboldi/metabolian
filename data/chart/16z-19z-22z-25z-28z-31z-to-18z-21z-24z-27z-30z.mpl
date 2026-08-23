@@ -27,6 +27,6 @@ pathway 16z-19z-22z-25z-28z-31z-to-18z-21z-24z-27z-30z "(16Z,19Z,22Z,25Z,28Z,31Z
   branch from malonyl-coa side right {
     malonyl-coa
     <-> . +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +coa
-    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o_chebi_72650
   }
 }

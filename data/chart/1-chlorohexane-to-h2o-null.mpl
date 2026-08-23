@@ -22,28 +22,159 @@ pathway 1-chlorohexane-to-h2o-null "1-Chlorohexane to H2O" {
     capecitabine
   }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +gly_glu +phosphate +gly_glu +h2o
+    atp
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    anserine
+  }
 
+  branch from chloride side left {
+    chloride
+    <-> . +h +glyoxylate +h2o
+    dichloroacetate
+  }
 
+  branch from chloride side right {
+    chloride
+    <-> . +3_6_dihydroxypyridine_2_5_dione +h +h2o
+    6_chloro_2_5_dioxo_2_5_dihydropyridin_3_olate
+  }
 
+  branch from hexanal side left {
+    hexanal
+    <-> . +nad_chebi_57540 +nadh_chebi_57945 +hplus
+    hexan_1_ol_chebi_87393
+  }
 
+  branch from hexanal side right {
+    hexanal
+    <-> ec_1_3_1_74 [1.3.1.74] +nadh +h +nad
+    e_hex_2_enal
+  }
 
+  branch from allyl_alcohol side left {
+    allyl_alcohol
+    <-> . +h +formate +h2o
+    vinyl_acetate
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    borneol
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    s_terpineol
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    l_alanyl_l_glutamate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    glycylglycine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    leu_leu
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    viomycin
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_31 [3.6.3.31] +adp +phosphate +atp +h2o
+    n_1_n_12_diacetylspermine
+  }
 
+  branch from chloride side right {
+    chloride
+    <-> . +5_chloro_3_methyl_cis_dienelactone +h
+    3_methyl_cis_dienelactone
+  }
 
+  branch from chloride side left {
+    chloride
+    <-> . +h +sulochrin +h2o2 +h2o
+    dihydrogeodin
+  }
 
+  branch from hexanal side right {
+    hexanal
+    <-> . +hexanoyl_coa +h +nadph +coa
+    nadp
+  }
 
+  branch from hexanal side left {
+    hexanal
+    <-> ec_1_6_99_1 [1.6.99.1] +h +nadph +nadp
+    2_hexenal
+  }
 
+  branch from acrolein side right {
+    acrolein
+    <-> . +phosphoramide_mustard
+    aldophosphamide
+  }
 
+  branch from acrolein side left {
+    acrolein
+    <-> . +isophosphamide_mustard
+    aldoifosfamide
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +s_citronellal +nad
+    isomenthol
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +s_citronellal +nad
+    neoisomenthol
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    1s_2s_4r_endo_fenchol
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
+    3r_6e_nerolidol
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol +h
+    1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri
+  }
 }

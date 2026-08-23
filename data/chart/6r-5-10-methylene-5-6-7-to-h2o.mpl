@@ -19,6 +19,6 @@ pathway 6r-5-10-methylene-5-6-7-to-h2o "(6R)-5,10-methylene-5,6,7… to H2O" {
   branch from menadiol side left {
     menadiol
     <-> . +nadh +hplus +nad
-    menadione
+    menadione_chebi_28869
   }
 }

@@ -103,7 +103,7 @@ pathway gama-glutamylglutathione-to-h2o-null "Gama-glutamylglutathione to H2O" {
   branch from phosphate side left {
     phosphate
     <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_benzimidazolyl_cobeta_adenosylcoba +h2o
-    coalpha_alpha_benzimidazolyl_cobeta_adenosylcoba
+    coalpha_alpha_benzimidazolyl_cobeta_adenosylcoba_mnxm818827
   }
 
   branch from phosphate side right {

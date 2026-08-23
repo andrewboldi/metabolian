@@ -9,9 +9,9 @@ pathway d-alanine-to-nh4-null "D-alanine to NH4" {
   spine at 0,0 {
     d_alanine
     <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig -h2o
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig_mnxm12373
     <-> ec_3_4_16_4 [3.4.16.4] +d_alanine -h2o
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig_mnxm12374
     <-> . +diphosphate +h +amp -atp -nh4
     n_acetylmuramoyl_l_alanyl_d_isoglutaminyl_n_beta
   }

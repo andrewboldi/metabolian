@@ -12,7 +12,7 @@ pathway 22e-3-oxochola-4-22-die-to-22-hydroxy-3-oxochol "(22E)-3-oxochola-4,22-d
     3_oxo_chol_4_ene_22s_hydroxy_24_oyl_coa
     <-> . +nad -nadh -hplus
     3_22_dioxochol_4_en_24_oyl_coa
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h -22_hydroxy_3_oxochol_4_en_24_oyl_coa
-    nad
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh_mnxm10 +h -22_hydroxy_3_oxochol_4_en_24_oyl_coa
+    nad_mnxm8
   }
 }

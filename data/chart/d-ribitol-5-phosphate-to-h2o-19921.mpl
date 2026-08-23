@@ -14,10 +14,10 @@ pathway d-ribitol-5-phosphate-to-h2o-19921 "D-ribitol 5-phosphate to H2O" {
     d_ribulose_1_5_bisphosphate
     <-> ec_3_1_3_109 [3.1.3.109] +h2o -pi
     d_ribulose_1_phosphate
-    <-> ec_2_7_1_51 [2.7.1.51] +h +adp -atp
+    <-> ec_2_7_1_51 [2.7.1.51] +h +adp_mnxm40333 -atp_mnxm3
     alpha_d_ribulose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -alpha_d_ribulose -h2o
-    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp_mnxm40333 +phosphate -alpha_d_ribulose -h2o_water
+    atp_mnxm3
   }
 
   branch from alpha_d_ribulose side left {
@@ -32,26 +32,26 @@ pathway d-ribitol-5-phosphate-to-h2o-19921 "D-ribitol 5-phosphate to H2O" {
     aldehydo_d_ribose
   }
 
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
+    <-> . +h +adp_mnxm40333 +phosphate +h2o_water
     prostaglandin_e2
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp_mnxm40333 +phosphate +h2o_water
     l_proline
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +3_hydroxyicosanoyl_coa
     trans_2_icosenoyl_coa
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +2r_2_amino_3_4_3_iodo_4_sulfooxy_phenoxy_phenyl +h +3_monoiodo_l_thyronine
     sulfate
   }
@@ -68,21 +68,21 @@ pathway d-ribitol-5-phosphate-to-h2o-19921 "D-ribitol 5-phosphate to H2O" {
     cdp_1_2_didodecanoylglycerol
   }
 
-  branch from adp side left {
-    adp
-    <-> . +fructosylglycine +atp +h
+  branch from adp_mnxm40333 side left {
+    adp_mnxm40333
+    <-> . +fructosylglycine +atp_mnxm3 +h
     fructoseglycine_ketone_3_phosphate
   }
 
-  branch from adp side right {
-    adp
-    <-> . +d_glucitol_3_phosphate +h +atp
+  branch from adp_mnxm40333 side right {
+    adp_mnxm40333
+    <-> . +d_glucitol_3_phosphate +h +atp_mnxm3
     d_sorbitol
   }
 
   branch from alpha_d_ribulose side left {
     alpha_d_ribulose
-    <-> ec_2_7_1_16 [2.7.1.16] +atp +h +adp
+    <-> ec_2_7_1_16 [2.7.1.16] +atp_mnxm3 +h +adp_mnxm40333
     d_ribulose_5_phosphate
   }
 
@@ -92,38 +92,38 @@ pathway d-ribitol-5-phosphate-to-h2o-19921 "D-ribitol 5-phosphate to H2O" {
     ribitol
   }
 
-  branch from atp side left {
-    atp
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
     <-> . +diphosphate +amp +2r_pristanoyl_coa +coa
     2_6_10_14_tetramethylpentadecanoate
   }
 
-  branch from atp side right {
-    atp
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
     <-> . +6_7_dihydro_5_oxo_12_epi_ltb4 +coa +5_oxo_12_s_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h +amp
     diphosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +2_5z_8z_11z_14z_eicosatetraenoyl_glycerol +h2o
+    <-> . +2_5z_8z_11z_14z_eicosatetraenoyl_glycerol +h2o_water
     2_arachidonoyl_sn_glycero_3_phosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp_mnxm40333 +atp_mnxm3 +h2o_water
     d_ribose
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_fructose
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +beta_casomorphin_1_6 +l_isoleucine
     casomorphin
   }

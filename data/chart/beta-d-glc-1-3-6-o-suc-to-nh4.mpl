@@ -15,6 +15,6 @@ pathway beta-d-glc-1-3-6-o-suc-to-nh4 "beta-D-Glc-(1->3)-6-O-suc… to NH4" {
     <-> ec_2_4_1_129 [2.4.1.129] +a_nascent_peptidoglycan_dimer_e_faecium_tetrapep +di_trans_octa_cis_undecaprenyl_diphosphate +h
     und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
     <-> . +h2o -nh4
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig_mnxm12375
   }
 }

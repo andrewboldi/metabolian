@@ -20,13 +20,13 @@ pathway trioctanoin-to-diphosphate "trioctanoin to diphosphate" {
 
   branch from octanoate side left {
     octanoate
-    <-> . +h +o2 +nadph +nadp +h2o
+    <-> . +h +o2 +nadph +nadp +h2o_water
     7_hydroxy_octanoate
   }
 
   branch from octanoate side right {
     octanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +decanoate +co2 +nadp +coa +h2o +h +nadph
+    <-> ec_2_3_1_85 [2.3.1.85] +decanoate +co2 +nadp +coa_mnxm727276 +h2o_water +h +nadph
     malonyl_coa
   }
 
@@ -56,19 +56,19 @@ pathway trioctanoin-to-diphosphate "trioctanoin to diphosphate" {
 
   branch from octanoate side left {
     octanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +acetyl_coa +malonyl_coa +h +nadph +nadp +coa +h2o
+    <-> ec_2_3_1_85 [2.3.1.85] +acetyl_coa +malonyl_coa +h +nadph +nadp +coa_mnxm727276 +h2o_water
     co2
   }
 
   branch from octanoate side right {
     octanoate
-    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +h2o
+    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +h2o_water
     n_octanoylsphing_4_enine
   }
 
   branch from octanoyl_coa side left {
     octanoyl_coa
-    <-> . +o2 +h2o2
+    <-> . +o2_chebi_15379 +h2o2
     trans_oct_2_enoyl_coa
   }
 

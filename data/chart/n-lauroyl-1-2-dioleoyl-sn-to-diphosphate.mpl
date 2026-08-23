@@ -49,7 +49,7 @@ pathway n-lauroyl-1-2-dioleoyl-sn-to-diphosphate "N-lauroyl-1,2-dioleoyl-sn… t
   branch from ppi side right {
     ppi
     <-> . +2_cis_6_cis_farnesyl_diphosphate
-    e_bisabolene
+    e_bisabolene_chebi_49242
   }
 
   branch from dodecanoate side left {

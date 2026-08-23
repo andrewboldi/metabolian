@@ -12,7 +12,7 @@ pathway h-to-diphosphate-null "H to diphosphate" {
     adp
     <-> ec_2_6_1_108 [2.6.1.108] +4_phosphooxymethyl_2_furancarboxaldehyde +alanine -pyruvate
     5_ammoniomethyl_3_furyl_methyl_phosphate
-    <-> ec_2_7_4_31 [2.7.4.31] +atp -adp
+    <-> ec_2_7_4_31 [2.7.4.31] +atp_chebi_30616 -adp_chebi_456216
     5_ammoniomethyl_3_furyl_methyl_diphosphate
     <-> ec_2_5_1_131 [2.5.1.131] +glutamyltyramine -ppi
     4_4_2_l_glutamylamino_ethyl_phenoxymethyl_furan

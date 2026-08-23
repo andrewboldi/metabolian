@@ -10,7 +10,7 @@ pathway nadh-to-3r-hydroxy-undecanoyl-c "NADH to (3R)-hydroxy-undecanoyl-C…" {
     nadh
     <-> . +acetyl_coa +nonanoyl_coa +fadh2 +h -fad -coa -nad -h2o
     undecanoyl_coa
-    <-> . +fad +hplus -fadh2
+    <-> . +fad_chebi_57692 +hplus -fadh2_chebi_58307
     trans_2_undecenoyl_coa
     <-> ec_4_2_1_119 [4.2.1.119] +h2o
     3r_hydroxy_undecanoyl_coa

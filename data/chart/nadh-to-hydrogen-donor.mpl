@@ -10,7 +10,7 @@ pathway nadh-to-hydrogen-donor "NADH to hydrogen donor" {
     nadh
     <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h -nad
     dihydrocarveol
-    <-> ec_1_1_1_296 [1.1.1.296] +nad -nadh -hplus
+    <-> ec_1_1_1_296 [1.1.1.296] +nad_chebi_57540 -nadh_chebi_57945 -hplus
     dihydrocarvone
     <-> ec_1_3_99_25 [1.3.99.25] +hydrogen_acceptor -hydrogen_donor
     carvone

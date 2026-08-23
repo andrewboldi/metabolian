@@ -149,7 +149,7 @@ pathway nadh-to-d-allulose-6-phosphate-null "NADH to D-Allulose 6-phosphate" {
   branch from nadph side right {
     nadph
     <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    thujan_3_ol
+    thujan_3_ol_mnxm97633
   }
 
   branch from nadph side left {

@@ -18,7 +18,7 @@ pathway ferrienterobactin-to-n-2-3-dihydroxybenzoyl "ferrienterobactin to N-(2,3
 
   branch from fe_iii_n_2_3_dihydroxybenzoyl_l_serine_3 side left {
     fe_iii_n_2_3_dihydroxybenzoyl_l_serine_3
-    <-> . +h +h2o +iron_iii_2_3_dihydroxybenzoylserine_2_complex
+    <-> . +h +h2o_water +iron_iii_2_3_dihydroxybenzoylserine_2_complex
     n_2_3_dihydroxybenzoyl_l_serine
   }
 
@@ -36,7 +36,7 @@ pathway ferrienterobactin-to-n-2-3-dihydroxybenzoyl "ferrienterobactin to N-(2,3
 
   branch from fe_iii_n_2_3_dihydroxybenzoyl_l_serine side right {
     fe_iii_n_2_3_dihydroxybenzoyl_l_serine
-    <-> . +iron_iii_2_3_dihydroxybenzoylserine_2_complex +h2o +n_2_3_dihydroxybenzoyl_l_serine
+    <-> . +iron_iii_2_3_dihydroxybenzoylserine_2_complex +h2o_water +n_2_3_dihydroxybenzoyl_l_serine
     h
   }
 

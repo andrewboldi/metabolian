@@ -12,7 +12,7 @@ pathway nitarsone-iii-to-h2o "nitarsone (III) to H2O" {
     4_nitrocyclohexa_2_5_dien_1_one
     <-> . +arsenite +gsh +hplus -h2o
     arsenic_triglutathione
-    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate -arsenic_triglutathione -h2o
+    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate -arsenic_triglutathione -h2o_water
     atp
   }
 
@@ -28,27 +28,27 @@ pathway nitarsone-iii-to-h2o "nitarsone (III) to H2O" {
     alpha_d_glucuronic_acid
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_4_2_1_119 [4.2.1.119] +2_trans_6_trans_tridecadienoyl_coa
     3r_hydroxy_6_trans_tridecenoyl_coa
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_4_2_1_119 [4.2.1.119] +2_trans_5_cis_7_trans_tetradecatrienoyl_coa
     3r_hydroxy_5_cis_7_trans_tetradecadienoyl_coa
   }
 
   branch from nitarsone_iii side left {
     nitarsone_iii
-    <-> . +h +nadph +p_aminophenylarsonous_acid +h2o
+    <-> . +h +nadph +p_aminophenylarsonous_acid +h2o_water
     nadp
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_26 [3.1.1.26] +9z_octadecenoate +mgmg_0_0_16_0 +h2o
+    <-> ec_3_1_1_26 [3.1.1.26] +9z_octadecenoate +mgmg_0_0_16_0 +h2o_water
     1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
   }
 
@@ -72,13 +72,13 @@ pathway nitarsone-iii-to-h2o "nitarsone (III) to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h +h2o
+    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h +h2o_water
     1d_myo_inositol_2_4_bisphosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +ethanol +h +h2o
+    <-> ec_3_1_3_1 [3.1.3.1] +ethanol +h +h2o_water
     ethyl_dihydrogen_phosphate
   }
 
@@ -94,14 +94,14 @@ pathway nitarsone-iii-to-h2o "nitarsone (III) to H2O" {
     gamma_l_glutamyl_l_valine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_4_2_1_119 [4.2.1.119] +2e_5e_dodeca_2_5_dienoyl_coa
     3r_hydroxy_5_trans_dodecenoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_170 [3.2.1.170] +r_glycerate +alpha_d_mannopyranose
     2r_2_o_alpha_d_mannosyl_glycerate
   }

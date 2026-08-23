@@ -10,9 +10,9 @@ pathway d-glucopyranose-to-sulfate-null "D-glucopyranose to sulfate" {
     glucose
     <-> ec_3_2_1_147 [3.2.1.147] +2_butenyl_thiohydroximate_o_sulfate -h2o
     gluconapin
-    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
+    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o_chebi_15377
     z_progoitrin
-    <-> . +h2o -glucose -hplus
+    <-> . +h2o_chebi_15377 -glucose -hplus
     z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani
     <-> . -sulfate
     3r_3_hydroxy_3_thiiran_2_yl_propanenitrile
@@ -44,8 +44,8 @@ pathway d-glucopyranose-to-sulfate-null "D-glucopyranose to sulfate" {
 
   branch from glucose side left {
     glucose
-    <-> . +lampranthin_i +1_o_4_coumaroyl_d_glucose
-    betanin
+    <-> . +lampranthin_i_mnxm1368285 +1_o_4_coumaroyl_d_glucose
+    betanin_mnxm1371652
   }
 
   branch from glucose side right {
@@ -56,8 +56,8 @@ pathway d-glucopyranose-to-sulfate-null "D-glucopyranose to sulfate" {
 
   branch from glucose side left {
     glucose
-    <-> . +ternatin_c3 +1_o_4_coumaroyl_d_glucose
-    ternatin_c5
+    <-> . +ternatin_c3_mnxm1372098 +1_o_4_coumaroyl_d_glucose
+    ternatin_c5_mnxm1371483
   }
 
   branch from h2o side right {

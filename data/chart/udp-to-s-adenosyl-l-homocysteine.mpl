@@ -38,7 +38,7 @@ pathway udp-to-s-adenosyl-l-homocysteine "UDP to S-adenosyl-L-homocysteine" {
 
   branch from h side right {
     h
-    <-> ec_2_8_2_36 [2.8.2.36] +adenosine_3_5_bisphosphate +a47934 +3_phosphoadenylyl_sulfate
+    <-> ec_2_8_2_36 [2.8.2.36] +adenosine_3_5_bisphosphate +a47934_mnxm1371662 +3_phosphoadenylyl_sulfate
     desulfo_a47934
   }
 }

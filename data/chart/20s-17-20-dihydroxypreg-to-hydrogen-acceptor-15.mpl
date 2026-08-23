@@ -24,7 +24,7 @@ pathway 20s-17-20-dihydroxypreg-to-hydrogen-acceptor-15 "(20S)-17,20-dihydroxypr
 
   branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     11_hydroxyandrost_4_ene_3_17_dione
   }
 
@@ -55,7 +55,7 @@ pathway 20s-17-20-dihydroxypreg-to-hydrogen-acceptor-15 "(20S)-17,20-dihydroxypr
   branch from androst_4_ene_3_17_dione side left {
     androst_4_ene_3_17_dione
     <-> ec_1_14_14_197 [1.14.14.197] +fmnh2 +o2 +fmn +h2o +hplus
-    11_hydroxyandrost_4_ene_3_17_dione
+    11_hydroxyandrost_4_ene_3_17_dione_chebi_235536
   }
 
   branch from acetate side right {

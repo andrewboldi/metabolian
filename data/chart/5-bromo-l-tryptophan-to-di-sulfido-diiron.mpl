@@ -12,7 +12,7 @@ pathway 5-bromo-l-tryptophan-to-di-sulfido-diiron "5-bromo-L-tryptophan to di-μ
     5_7_dibromo_l_tryptophan
     <-> . +o2 -glycolate -h2o -hplus
     5_7_dibromo_indole_3_carbonitrile
-    <-> . +2_3_5_tribromoindole +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +2_3_5_tribromoindole +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     aetokthonotoxin
   }
 }

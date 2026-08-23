@@ -13,7 +13,7 @@ pathway o-d-mannosyl-l-threon-to-n-acetyl-d-galactosamin "O-(α-D-mannosyl)-L-th
     <-> ec_2_4_1_313 [2.4.1.313] +udp_n_acetyl_d_galactosamine -udp -hplus
     n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa
     <-> ec_2_7_1_183 [2.7.1.183] +atp -adp -hplus
-    n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa
+    n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa_chebi_136710
   }
 
   branch from o_d_mannosyl_l_threonine side left {

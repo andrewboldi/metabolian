@@ -9,28 +9,28 @@ pathway l-arabinopyranose-to-l-xylulose "α-L-arabinopyranose to L-xylulose" {
   spine at 0,0 {
     l_arabinopyranose
     <-> ec_5_1_3_3 [5.1.3.3]
-    l_arabinopyranose
+    l_arabinopyranose_chebi_40886
     <-> ec_5_3_1_4 [5.3.1.4]
     l_ribulose
     <-> ec_5_1_3_31 [5.1.3.31]
     l_xylulose
   }
 
-  branch from l_arabinopyranose side left {
-    l_arabinopyranose
+  branch from l_arabinopyranose_chebi_40886 side left {
+    l_arabinopyranose_chebi_40886
     <-> ec_3_2_1_21 [3.2.1.21] +h +4_nitrophenol +h2o
     p_nitrophenyl_beta_l_arabinopyranoside
   }
 
-  branch from l_arabinopyranose side right {
-    l_arabinopyranose
+  branch from l_arabinopyranose_chebi_40886 side right {
+    l_arabinopyranose_chebi_40886
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
     atp
   }
 
   branch from l_ribulose side left {
     l_ribulose
-    <-> . +h2o +pi
+    <-> . +h2o_chebi_15377 +pi
     l_ribulose_5_phosphate
   }
 
@@ -40,9 +40,9 @@ pathway l-arabinopyranose-to-l-xylulose "α-L-arabinopyranose to L-xylulose" {
     l_arabinono_1_4_lactone
   }
 
-  branch from l_arabinopyranose side left {
-    l_arabinopyranose
-    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
+  branch from l_arabinopyranose_chebi_40886 side left {
+    l_arabinopyranose_chebi_40886
+    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone_mnxm1674 +h
     nad
   }
 }

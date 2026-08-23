@@ -90,7 +90,7 @@ pathway d-threo-3-methylmalic-acid-to-o2-null "D-threo-3-methylmalic acid to O2"
 
   branch from pyruvate side left {
     pyruvate
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +nh4
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan_mnxm12914 +h2o +nh4
     9_methylthio_nonyl_thiohydroximic_acid
   }
 

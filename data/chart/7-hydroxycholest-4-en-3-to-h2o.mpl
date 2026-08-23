@@ -10,9 +10,9 @@ pathway 7-hydroxycholest-4-en-3-to-h2o "7α-hydroxycholest-4-en-3-… to H2O" {
     c7a_hydroxy_4_cholesten_3_one
     <-> . +nadph +hplus -nadp
     c7a_hydroxy_5b_cholestan_3_one
-    <-> ec_1_1_1_213 [1.1.1.213] +h +nadph -5beta_cholestane_3alpha_7alpha_diol
-    nadp
-    <-> . +h +5beta_cholestane_3alpha_7alpha_diol +o2 +nadph -nadp -h2o
+    <-> ec_1_1_1_213 [1.1.1.213] +h +nadph_mnxm738702 -5beta_cholestane_3alpha_7alpha_diol
+    nadp_mnxm5
+    <-> . +h +5beta_cholestane_3alpha_7alpha_diol +o2 +nadph_mnxm738702 -nadp_mnxm5 -h2o
     5beta_cholestane_3alpha_7alpha_27_triol
   }
 }

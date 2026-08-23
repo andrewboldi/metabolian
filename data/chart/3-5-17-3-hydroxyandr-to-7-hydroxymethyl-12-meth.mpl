@@ -19,7 +19,7 @@ pathway 3-5-17-3-hydroxyandr-to-7-hydroxymethyl-12-meth "(3β,5α,17β)-3-hydrox
   branch from 5_dihydrotestosterone_sulfate side left {
     5_dihydrotestosterone_sulfate
     <-> . +nadp +nadph +hplus
-    3_5_17_3_hydroxyandrostan_17_yl_sulfate
+    3_5_17_3_hydroxyandrostan_17_yl_sulfate_chebi_133105
   }
 
   branch from 5_dihydrotestosterone_sulfate side right {
@@ -42,8 +42,8 @@ pathway 3-5-17-3-hydroxyandr-to-7-hydroxymethyl-12-meth "(3β,5α,17β)-3-hydrox
 
   branch from 17beta_hydroxy_5alpha_androstan_3_one side left {
     17beta_hydroxy_5alpha_androstan_3_one
-    <-> ec_1_1_1_184 [1.1.1.184] +androstane_3_17_diol +nadp +h
-    nadph
+    <-> ec_1_1_1_184 [1.1.1.184] +androstane_3_17_diol +nadp_mnxm5 +h
+    nadph_mnxm738702
   }
 
   branch from adenosine_3_5_bisphosphate side right {
@@ -96,7 +96,7 @@ pathway 3-5-17-3-hydroxyandr-to-7-hydroxymethyl-12-meth "(3β,5α,17β)-3-hydrox
 
   branch from 7_hydroxymethyl_12_methylbenz_a_anthracene side right {
     7_hydroxymethyl_12_methylbenz_a_anthracene
-    <-> ec_1_14_14_1 [1.14.14.1] +nadp +h2o +h +nadph +7_12_dimethyltetraphene
+    <-> ec_1_14_14_1 [1.14.14.1] +nadp_mnxm5 +h2o +h +nadph_mnxm738702 +7_12_dimethyltetraphene
     o2
   }
 }

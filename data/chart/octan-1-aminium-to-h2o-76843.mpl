@@ -12,7 +12,7 @@ pathway octan-1-aminium-to-h2o-76843 "octan-1-aminium to H2O" {
     octanal
     <-> . +iron +h2o -fe2 -hplus
     octanoate
-    <-> ec_3_1_1_28 [3.1.1.28] +r_carnitine +h -h2o
+    <-> ec_3_1_1_28 [3.1.1.28] +r_carnitine +h -h2o_water
     o_octanoyl_r_carnitine
   }
 

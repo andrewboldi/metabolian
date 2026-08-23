@@ -12,7 +12,7 @@ pathway hydroxyheme-i-to-hydrogen-donor "Hydroxyheme I to hydrogen donor" {
     ferroheme_a
     <-> . +nadh -nad -h2o
     ferroheme_o
-    <-> ec_1_17_99_9 [1.17.99.9] +hydrogen_acceptor +h2o -hydrogen_donor
-    ferroheme_a
+    <-> ec_1_17_99_9 [1.17.99.9] +hydrogen_acceptor +h2o_chebi_15377 -hydrogen_donor
+    ferroheme_a_chebi_61715
   }
 }

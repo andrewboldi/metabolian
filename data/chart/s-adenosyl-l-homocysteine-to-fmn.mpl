@@ -18,21 +18,21 @@ pathway s-adenosyl-l-homocysteine-to-fmn "S-adenosyl-L-homocysteine to FMN" {
     nad
     <-> . +nadh +h +3r_4r_3_4_bis_4_hydroxy_3_methoxybenzyl_tetrahy -nad
     secoisolariciresinol
-    <-> ec_1_1_1_331 [1.1.1.331] +nad -nadh -hplus
-    matairesinol
-    <-> ec_1_14_19_72 [1.14.19.72] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_1_1_331 [1.1.1.331] +nad_chebi_57540 -nadh_chebi_57945 -hplus
+    matairesinol_chebi_6698
+    <-> ec_1_14_19_72 [1.14.19.72] +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     pluviatolide
     <-> ec_2_1_1_323 [2.1.1.323] +sam -sah -hplus
     bursehernin
-    <-> ec_1_14_14_131 [1.14.14.131] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_131 [1.14.14.131] +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     5_desmethylyatein
     <-> ec_2_1_1_330 [2.1.1.330] +sam -sah -hplus
     dihydroanhydropodorhizol
-    <-> ec_1_14_20_8 [1.14.20.8] +akg +o2 -succinate -co2 -h2o
+    <-> ec_1_14_20_8 [1.14.20.8] +akg +o2_chebi_15379 -succinate -co2 -h2o_chebi_15377
     deoxypodophyllotoxin
-    <-> . +fmnh2 +o2 -formaldehyde -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -formaldehyde -fmn -h2o_chebi_15377 -hplus
     4_demethyldeoxypodophyllotoxin
-    <-> ec_1_14_14_132 [1.14.14.132] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_132 [1.14.14.132] +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     4_demethylepipodophyllotoxin
   }
 
@@ -141,7 +141,7 @@ pathway s-adenosyl-l-homocysteine-to-fmn "S-adenosyl-L-homocysteine to FMN" {
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
     <-> ec_2_1_1_276 [2.1.1.276] +s_adenosyl_l_homocysteine +h +gibberellin_a4
-    methyl_gibberellin_a4
+    methyl_gibberellin_a4_mnxm1364436
   }
 
   branch from nadp side left {

@@ -54,8 +54,8 @@ pathway n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam "N-Demethyl-desepoxymay
 
   branch from co2 side left {
     co2
-    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +h2o +methanol
-    16_epivellosimine
+    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde_mnxm1371564 +h2o +methanol
+    16_epivellosimine_mnxm732388
   }
 
   branch from succinate side right {

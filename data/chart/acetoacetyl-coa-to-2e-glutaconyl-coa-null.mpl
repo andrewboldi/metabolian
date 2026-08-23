@@ -57,7 +57,7 @@ pathway acetoacetyl-coa-to-2e-glutaconyl-coa-null "acetoacetyl-CoA to (2E)-gluta
   branch from phosphate side left {
     phosphate
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
-    l_fructopyranose
+    l_fructopyranose_chebi_37729
   }
 
   branch from phosphate side right {
@@ -135,7 +135,7 @@ pathway acetoacetyl-coa-to-2e-glutaconyl-coa-null "acetoacetyl-CoA to (2E)-gluta
   branch from atp side right {
     atp
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    l_mannose
+    l_mannose_chebi_37680
   }
 
   branch from adp side left {

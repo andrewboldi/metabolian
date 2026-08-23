@@ -12,7 +12,7 @@ pathway dolabradiene-to-3beta-15-16-trihydroxydol "dolabradiene to 3beta,15,16-t
     15_16_epoxydolabrene
     <-> ec_1_14_14_159 [1.14.14.159] +fmnh2 +o2 -fmn -h2o -hplus
     3_hydroxy_15_16_epoxydolabrene
-    <-> . +h2o
+    <-> . +h2o_water
     3beta_15_16_trihydroxydolabrene
   }
 }

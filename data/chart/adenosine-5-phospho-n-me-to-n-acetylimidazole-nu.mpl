@@ -97,7 +97,7 @@ pathway adenosine-5-phospho-n-me-to-n-acetylimidazole-nu "Adenosine-5'-phospho-N
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
     <-> . +premithramycin_a3 +h +s_adenosyl_l_methionine
-    premithramycin_a3
+    premithramycin_a3_mnxm1372055
   }
 
   branch from s_s_adenosyl_l_methionine side left {

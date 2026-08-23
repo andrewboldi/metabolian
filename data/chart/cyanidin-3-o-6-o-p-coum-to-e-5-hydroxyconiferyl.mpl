@@ -9,7 +9,7 @@ pathway cyanidin-3-o-6-o-p-coum-to-e-5-hydroxyconiferyl "cyanidin 3-O-[6-O-(p-co
   spine at 0,0 {
     cyanidin_3_o_6_o_p_coumaroyl_2_o_d_xylosyl_d_glu
     <-> . +malonyl-coa -coa
-    cyanidin_3_o_6_o_p_coumaroyl_2_o_d_xylosyl_d_glu
+    cyanidin_3_o_6_o_p_coumaroyl_2_o_d_xylosyl_d_glu_chebi_192537
     <-> . +1_o_trans_sinapoyl_beta_d_glucose -cyanidin_3_o_6_o_p_coumaroyl_2_o_2_o_sinapoyl_d
     glucose
     <-> . +1_o_trans_sinapoyl_beta_d_glucose +cyanidin_3_o_6_o_p_coumaroyl_2_o_2_o_sinapoyl_d -h -e_sinapate
@@ -22,28 +22,159 @@ pathway cyanidin-3-o-6-o-p-coum-to-e-5-hydroxyconiferyl "cyanidin 3-O-[6-O-(p-co
     nadp
   }
 
+  branch from glucose side left {
+    glucose
+    <-> . +2r_3s_tartrate +h +1_o_4_coumaroyl_d_glucose
+    2r_3s_trans_coutaric_acid
+  }
 
+  branch from glucose side right {
+    glucose
+    <-> . +1_o_trans_sinapoyl_beta_d_glucose +d_glucarate
+    2_o_e_sinapoyl_d_glucarate
+  }
 
+  branch from cyanidin_3_o_6_o_p_coumaroyl_2_o_2_o_sinapoyl_d side left {
+    cyanidin_3_o_6_o_p_coumaroyl_2_o_2_o_sinapoyl_d
+    <-> . +malonyl-coa +coa
+    cyanidin_3_o_6_o_p_coumaroyl_2_o_2_o_sinapoyl_d_chebi_192542
+  }
 
+  branch from cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o side right {
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
+    <-> . +malonyl-coa +coa
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o_chebi_192529
+  }
 
+  branch from h side left {
+    h
+    <-> . +ctp +glycerol_2_phosphate +cdp_2_glycerol
+    diphosphate
+  }
 
+  branch from h side right {
+    h
+    <-> . +dehydroprephenate +3_cyclohexa_1_3_dien_1_yl_2_oxopropanoate +h2o
+    co2
+  }
 
+  branch from e_sinapate side left {
+    e_sinapate
+    <-> ec_3_1_1_73 [3.1.1.73] +methyl_sinapate +h2o +h
+    methanol
+  }
 
+  branch from e_sinapate side right {
+    e_sinapate
+    <-> . +1_o_trans_sinapoyl_beta_d_glucose +pelargonidin_3_glucoside +h
+    pelargonin
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +5_dehydro_l_gluconate +h
+    l_gluconic_acid
+  }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +all_trans_zeaxanthin +h +o2 +h2o
+    nostoxanthin
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +neral +acetaldehyde
+    sulcatone
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +vincaleukoblastine
+    3_4_anhydrovinblastine
+  }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_292 [2.1.1.292] +s_adenosyl_l_homocysteine +10_carboxy_13_deoxydaunorubicin +h
+    10_carboxy_13_deoxycarminomycin
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_292 [2.1.1.292] +s_adenosyl_l_homocysteine +h +13s_13_dihydrodaunorubicin
+    13r_13_dihydrocarminomycin
+  }
 
+  branch from 5_hydroxyconiferaldehyde side left {
+    5_hydroxyconiferaldehyde
+    <-> ec_1_2_1_44 [1.2.1.44] +5_hydroxyferuloyl_coa +nadph +h +nadp
+    coa_mnxm727276
+  }
 
+  branch from 5_hydroxyconiferaldehyde side right {
+    5_hydroxyconiferaldehyde
+    <-> ec_1_2_1_44 [1.2.1.44] +nadph +h +nadp +coa_mnxm727276
+    5_hydroxyferuloyl_coa_chebi_31136
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_36 [1.1.1.36] +3_oxopentanoyl_coa +h +nadph
+    r_3_hydroxypentanoyl_coa
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_393 [1.1.1.393] +glycyrrhetinate +h +nadph
+    3_oxoglycyrrhetinate
+  }
 
+  branch from e_5_hydroxyconiferyl_alcohol side left {
+    e_5_hydroxyconiferyl_alcohol
+    <-> . +h +nadph +e_coniferol +nadp +h2o
+    o2
+  }
 
+  branch from cyanidin_3_o_6_o_p_coumaroyl_2_o_d_xylosyl_d_glu side right {
+    cyanidin_3_o_6_o_p_coumaroyl_2_o_d_xylosyl_d_glu
+    <-> . +udp +h +cyanidin_3_o_6_o_4_coumaroyl_beta_d_sambubioside
+    udp_alpha_d_glucose
+  }
 
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +2_methylhexadecanoyl_coa +hplus +co2_chebi_16526 +coa
+    6_hexadecan_2_yl_4_hydroxy_pyran_2_one
+  }
 
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +3_methylundecanoyl_coa +hplus +co2_chebi_16526 +coa
+    4_hydroxy_6_2_methyldecyl_pyran_2_one
+  }
 
+  branch from 1_o_trans_sinapoyl_beta_d_glucose side left {
+    1_o_trans_sinapoyl_beta_d_glucose
+    <-> ec_2_3_1_92 [2.3.1.92] +s_malate +h +glucose
+    2_o_sinapoyl_malate
+  }
 
+  branch from 1_o_trans_sinapoyl_beta_d_glucose side right {
+    1_o_trans_sinapoyl_beta_d_glucose
+    <-> ec_2_3_1_103 [2.3.1.103] +1_2_di_o_sinapoyl_beta_d_glucose
+    beta_d_glucose
+  }
 
+  branch from glucose side left {
+    glucose
+    <-> . +avenacin_a_1 +n_methylanthraniloyl_beta_d_glucopyranose
+    des_acyl_avenacin_a
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +des_methyl_avenacin_a_1 +des_acyl_avenacin_a
+    beta_glucopyranosyl_anthranilate
+  }
 }

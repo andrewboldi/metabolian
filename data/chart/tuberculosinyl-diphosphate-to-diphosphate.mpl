@@ -16,7 +16,7 @@ pathway tuberculosinyl-diphosphate-to-diphosphate "tuberculosinyl diphosphate to
     tetrahydrogeranylgeranyl_diphosphate
     <-> . +h +nadph -phytyl_diphosphate
     nadp
-    <-> ec_2_5_1_148 [2.5.1.148] +phytyl_diphosphate +nadph +hplus -ppi -nadp
+    <-> ec_2_5_1_148 [2.5.1.148] +phytyl_diphosphate +nadph_chebi_57783 +hplus -ppi -nadp_chebi_58349
     14e_18e_lycopadiene
   }
 

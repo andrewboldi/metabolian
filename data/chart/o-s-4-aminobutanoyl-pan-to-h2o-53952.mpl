@@ -18,8 +18,8 @@ pathway o-s-4-aminobutanoyl-pan-to-h2o-53952 "O-[S-4-(aminobutanoyl)pan… to H2
     butirosin_b
     <-> . -h
     butirosin_a
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -butirosin_a -h2o
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp_mnxm40333 +phosphate -butirosin_a -h2o_water
+    atp_mnxm3
   }
 
   branch from o_s_4_aminobutanoyl_pantetheine_4_phosphoryl_ser side left {

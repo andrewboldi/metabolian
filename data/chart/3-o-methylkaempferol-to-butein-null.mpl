@@ -107,7 +107,7 @@ pathway 3-o-methylkaempferol-to-butein-null "3-O-methylkaempferol to butein" {
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
     <-> ec_2_1_1_276 [2.1.1.276] +s_adenosyl_l_homocysteine +h +gibberellin_a4
-    methyl_gibberellin_a4
+    methyl_gibberellin_a4_mnxm1364436
   }
 
   branch from co2 side right {

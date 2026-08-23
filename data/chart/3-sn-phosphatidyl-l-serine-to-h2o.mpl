@@ -12,7 +12,7 @@ pathway 3-sn-phosphatidyl-l-serine-to-h2o "3-sn-phosphatidyl-L-serine to H2O" {
     1_o_acyl_n_acetylsphingosine
     <-> ec_3_1_1_111 [3.1.1.111] +1_acyl_sn_glycero_3_phosphoserine +h2o -fatty-acid -hplus
     sn_glycero_3_phosphoserine
-    <-> . +h +adp +phosphate -sn_glycero_3_phosphoserine -h2o
+    <-> . +h +adp +phosphate -sn_glycero_3_phosphoserine -h2o_water
     atp
   }
 

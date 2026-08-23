@@ -48,7 +48,7 @@ pathway d-alanine-to-undecaprenyl-diphospho-n-null "D-alanine to Undecaprenyl-di
 
   branch from d_alanine side right {
     d_alanine
-    <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +h2o
+    <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig_mnxm1559539 +h2o
     und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 

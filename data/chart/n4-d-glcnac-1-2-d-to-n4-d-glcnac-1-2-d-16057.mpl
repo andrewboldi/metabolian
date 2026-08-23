@@ -11,9 +11,9 @@ pathway n4-d-glcnac-1-2-d-to-n4-d-glcnac-1-2-d-16057 "N4-{β-D-GlcNAc-(1→2)-α
     <-> ec_2_4_1_145 [2.4.1.145] +udpglcnac -udp -hplus
     n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
     <-> ec_2_4_1_155 [2.4.1.155] +udpglcnac -udp -hplus
-    n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
+    n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac_chebi_139510
     <-> ec_2_4_1_201 [2.4.1.201] +udpglcnac -udp -hplus
-    n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
+    n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac_chebi_139513
   }
 
   branch from udpglcnac side left {

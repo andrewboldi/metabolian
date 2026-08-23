@@ -16,7 +16,7 @@ pathway 1-acyl-2-oleoyl-sn-glycer-to-h2o "1-acyl-2-oleoyl-sn-glycer… to H2O" {
     1_oleoyl_sn_glycero_3_phosphoserine
     <-> . +linoleoyl_coa -coa
     1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri -h2o_water
     atp
   }
 

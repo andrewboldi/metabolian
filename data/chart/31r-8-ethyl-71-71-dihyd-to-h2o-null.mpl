@@ -44,7 +44,7 @@ pathway 31r-8-ethyl-71-71-dihyd-to-h2o-null "(31R)-8-ethyl-71,71-dihyd… to H2O
 
   branch from h side left {
     h
-    <-> ec_2_5_1_91 [2.5.1.91] +diphosphate +all_trans_decaprenyl_diphosphate +ipp
+    <-> ec_2_5_1_91 [2.5.1.91] +diphosphate +all_trans_decaprenyl_diphosphate_mnxm1371338 +ipp
     2e_6e_farnesyl_diphosphate
   }
 
@@ -69,6 +69,6 @@ pathway 31r-8-ethyl-71-71-dihyd-to-h2o-null "(31R)-8-ethyl-71,71-dihyd… to H2O
   branch from h2o side left {
     h2o
     <-> ec_4_2_1_85 [4.2.1.85] +dimethylmaleate
-    2r_3s_2_3_dimethylmalate
+    2r_3s_2_3_dimethylmalate_mnxm1364559
   }
 }

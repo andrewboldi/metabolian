@@ -10,27 +10,27 @@ pathway 11beta-hydroxy-5alpha-and-to-11-keto-5-androstan "11beta-hydroxy-5alpha-
     11beta_hydroxy_5alpha_androstanedione
     <-> ec_1_1_1_146 [1.1.1.146] +nadp -5alpha_androstane_3_11_17_trione -nadph
     h
-    <-> . +5alpha_androstane_3_11_17_trione +nadph +hplus -nadp
+    <-> . +5alpha_androstane_3_11_17_trione +nadph_chebi_57783 +hplus -nadp_chebi_58349
     11_oxo_5_dihydrotestosterone
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     11_keto_5_androstane_3_17_diol
   }
 
   branch from 5alpha_androstane_3_11_17_trione side left {
     5alpha_androstane_3_11_17_trione
-    <-> . +nadph +hplus +nadp
+    <-> . +nadph_chebi_57783 +hplus +nadp_chebi_58349
     11_ketoandrosterone
   }
 
   branch from 5alpha_androstane_3_11_17_trione side right {
     5alpha_androstane_3_11_17_trione
-    <-> . +nadph +hplus +nadp
+    <-> . +nadph_chebi_57783 +hplus +nadp_chebi_58349
     11_ketoepiandrosterone
   }
 
   branch from 11_oxo_5_dihydrotestosterone side left {
     11_oxo_5_dihydrotestosterone
-    <-> . +nadph +hplus +nadp
-    11_keto_5_androstane_3_17_diol
+    <-> . +nadph_chebi_57783 +hplus +nadp_chebi_58349
+    11_keto_5_androstane_3_17_diol_chebi_234453
   }
 }

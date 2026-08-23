@@ -17,7 +17,7 @@ pathway cellobiose-to-mycothione "cellobiose to mycothione" {
     <-> ec_2_4_1_250 [2.4.1.250] +udpglcnac -udp -hplus
     1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran
     <-> . +h2o -pi
-    1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran
+    1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran_chebi_52442
     <-> ec_3_5_1_103 [3.5.1.103] +h2o -acetate
     1d_myo_inositol_2_ammonio_2_deoxy_d_glucopyranos
     <-> ec_6_3_1_13 [6.3.1.13] +cysteine +atp -amp -ppi -hplus
@@ -28,117 +28,21 @@ pathway cellobiose-to-mycothione "cellobiose to mycothione" {
     mycothione
   }
 
-  branch from g6p side left {
-    g6p
-    <-> ec_1_1_1_361 [1.1.1.361] +nad +nadh +hplus
-    3_dehydro_d_glucose_6_phosphate
-  }
 
-  branch from g6p side right {
-    g6p
-    <-> ec_1_1_1_363 [1.1.1.363] +nad +nadh +hplus
-    6pgl
-  }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_48 [3.2.1.48] +maltose +h2o
-    d_glucose
-  }
 
-  branch from glucose side right {
-    glucose
-    <-> . +h2o +d_glucose
-    nigerose
-  }
 
-  branch from 1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran side left {
-    1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran
-    <-> . +n_acetyl_d_hexosamine +1d_myo_inositol_1_phosphate
-    phosphate
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> . +linoleate +atp +coa +amp
-    linoleoyl_coa
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_125 [2.5.1.125] +2_o_3_dimethylflaviolin_7_olate +gpp +hplus
-    7_o_geranyl_2_o_3_dimethylflaviolin
-  }
 
-  branch from cellobiose side right {
-    cellobiose
-    <-> ec_5_1_3_11 [5.1.3.11]
-    d_glucosyl_1_4_d_mannopyranose
-  }
 
-  branch from cellobiose side left {
-    cellobiose
-    <-> ec_1_1_3_5 [1.1.3.5] +o2 +h2o2
-    cellobiono_1_5_lactone
-  }
 
-  branch from g6p side right {
-    g6p
-    <-> . +tdp_d_glucose +trehalose_6_phosphate +hplus
-    tdp
-  }
 
-  branch from g6p side left {
-    g6p
-    <-> .
-    d_mannopyranose_6_phosphate
-  }
 
-  branch from glucose side right {
-    glucose
-    <-> . +h2o +d_glucose
-    d_glcp_1_2_d_glcp
-  }
 
-  branch from glucose side left {
-    glucose
-    <-> . +z_alkenyl_glucosinolate +h2o +hplus
-    z_n_sulfonatooxy_alkenimidothioate
-  }
 
-  branch from udpglcnac side right {
-    udpglcnac
-    <-> ec_2_4_1_229 [2.4.1.229] +trans_4_hydroxy_l_proline +udp +hplus
-    o4_n_acetyl_d_galactosaminyl_trans_4_hydroxy_l_p
-  }
 
-  branch from udpglcnac side left {
-    udpglcnac
-    <-> ec_3_2_1_183 [3.2.1.183] +h2o +udp +hplus
-    aldehydo_n_acetyl_d_mannosamine
-  }
 
-  branch from cysteine side right {
-    cysteine
-    <-> ec_6_2_1_69 [6.2.1.69] +holo-acp +atp +amp +ppi
-    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
-  }
 
-  branch from cysteine side left {
-    cysteine
-    <-> . +ala_cys +h2o
-    alanine
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_131 [4.2.3.131] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    miltiradiene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_132 [4.2.3.132] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    neoabietadiene
-  }
 }

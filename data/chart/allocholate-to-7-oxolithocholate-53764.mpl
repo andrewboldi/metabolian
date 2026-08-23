@@ -70,7 +70,7 @@ pathway allocholate-to-7-oxolithocholate-53764 "allocholate to 7-oxolithocholate
 
   branch from ursodeoxycholate side left {
     ursodeoxycholate
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 

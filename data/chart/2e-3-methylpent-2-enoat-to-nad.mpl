@@ -10,7 +10,7 @@ pathway 2e-3-methylpent-2-enoat-to-nad "(2E)-3-methylpent-2-enoat… to NAD" {
     2e_3_methylpent_2_enoate_5_phosphate
     <-> ec_4_1_1_126 [4.1.1.126] +hplus -co2
     isopentenyl_phosphate
-    <-> . +co2 +h2o -r_5_phosphomevalonate
+    <-> . +co2_mnxm13 +h2o -r_5_phosphomevalonate
     h
     <-> ec_2_7_1_36 [2.7.1.36] +cdp +r_5_phosphomevalonate -r_mevalonate
     ctp

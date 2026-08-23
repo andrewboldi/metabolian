@@ -77,12 +77,12 @@ pathway 4-o-digalloyl-1-2-3-6-tet-to-1-o-galloyl-beta-d "4-O-digalloyl-1,2,3,6-t
   branch from beta_d_glucose side left {
     beta_d_glucose
     <-> ec_5_3_1_5 [5.3.1.5]
-    d_fructofuranose
+    d_fructofuranose_chebi_37721
   }
 
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_1_1_99_28 [1.1.99.28] +d_fructofuranose +d_sorbitol
+    <-> ec_1_1_99_28 [1.1.99.28] +d_fructofuranose_chebi_37721 +d_sorbitol
     d_glucono_1_5_lactone
   }
 }

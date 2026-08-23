@@ -11,13 +11,13 @@ pathway 1r-1-4-5-10-tetrahydrop-to-10as-10-10a-dihydrop "(1R)-1,4,5,10-tetrahydr
     <-> .
     1r_10as_1_4_10_10a_tetrahydrophenazine_1_carbox
     <-> .
-    1r_1_4_5_10_tetrahydrophenazine_1_carboxylate
+    1r_1_4_5_10_tetrahydrophenazine_1_carboxylate_chebi_132005
     <-> ec_1_10_3_16 [1.10.3.16] +o2 -h2o2
     10as_10_10a_dihydrophenazine_1_carboxylate
   }
 
-  branch from 1r_1_4_5_10_tetrahydrophenazine_1_carboxylate side left {
-    1r_1_4_5_10_tetrahydrophenazine_1_carboxylate
+  branch from 1r_1_4_5_10_tetrahydrophenazine_1_carboxylate_chebi_132005 side left {
+    1r_1_4_5_10_tetrahydrophenazine_1_carboxylate_chebi_132005
     <-> . +o2 +hplus +h2o2 +co2
     5_10_dihydrophenazine
   }

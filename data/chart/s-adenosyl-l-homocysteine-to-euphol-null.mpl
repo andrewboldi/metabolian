@@ -69,7 +69,7 @@ pathway s-adenosyl-l-homocysteine-to-euphol-null "S-adenosyl-L-homocysteine to E
   branch from h2o side left {
     h2o
     <-> ec_3_5_4_16 [3.5.4.16] +h +2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_o
-    7_8_dihydroneopterin_3_triphosphate
+    7_8_dihydroneopterin_3_triphosphate_mnxm1369356
   }
 
   branch from s_adenosyl_l_homocysteine side right {
@@ -129,7 +129,7 @@ pathway s-adenosyl-l-homocysteine-to-euphol-null "S-adenosyl-L-homocysteine to E
   branch from o2 side left {
     o2
     <-> . +h +1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
-    6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro
+    6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro_mnxm1369029
   }
 
   branch from s_2_3_epoxysqualene side right {
@@ -152,7 +152,7 @@ pathway s-adenosyl-l-homocysteine-to-euphol-null "S-adenosyl-L-homocysteine to E
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_1 [1.3.1.1] +nadh +thymine +h
+    <-> ec_1_3_1_1 [1.3.1.1] +nadh +thymine_mnxm1369303 +h
     5_6_dihydrothymine
   }
 

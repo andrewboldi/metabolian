@@ -148,7 +148,7 @@ pathway alpha-d-glucose-to-keto-d-fructose "alpha-D-glucose… to keto-D-fructos
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +pelargonin +h
+    <-> . +udp +pelargonin_mnxm1371951 +h
     pelargonidin_3_glucoside
   }
 

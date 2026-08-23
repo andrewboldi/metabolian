@@ -9,10 +9,10 @@ pathway n-acetylneuraminosyl-2-to-n-acetylneuraminate "α-N-acetylneuraminosyl-(
   spine at 0,0 {
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
     <-> ec_2_4_3_2 [2.4.3.2] +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_78445
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
     <-> . +h2o -n_acetylneuraminate
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_78445
   }
 }

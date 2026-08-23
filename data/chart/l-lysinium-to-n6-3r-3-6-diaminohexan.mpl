@@ -10,7 +10,7 @@ pathway l-lysinium-to-n6-3r-3-6-diaminohexan "L-lysinium to N6-((3R)-3,6-diamino
     l_lysinium
     <-> .
     3r_3_6_diammoniohexanoate
-    <-> . +l_lysinium +atp -amp -ppi -hplus
+    <-> . +l_lysinium_chebi_29969 +atp -amp -ppi -hplus
     n6_3r_3_6_diaminohexanoyl_l_lysine_2
     <-> . +nadph +o2 +hplus -nadp -h2o
     n6_3r_3_6_diaminohexanoyl_5_hydroxy_l_lysine_2

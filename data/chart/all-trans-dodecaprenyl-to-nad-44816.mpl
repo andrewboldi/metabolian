@@ -32,7 +32,7 @@ pathway all-trans-dodecaprenyl-to-nad-44816 "all-trans-dodecaprenyl… to NAD" {
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_148 [2.5.1.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadph +hplus +nadp
+    <-> ec_2_5_1_148 [2.5.1.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadph_chebi_57783 +hplus +nadp_chebi_58349
     lycopaoctaene
   }
 
@@ -86,7 +86,7 @@ pathway all-trans-dodecaprenyl-to-nad-44816 "all-trans-dodecaprenyl… to NAD" {
 
   branch from 1_4_dihydroxy_2_naphthoate side right {
     1_4_dihydroxy_2_naphthoate
-    <-> ec_2_5_1_74 [2.5.1.74] +diphosphate +co2 +h +2_demethylmenaquinol_8
+    <-> ec_2_5_1_74 [2.5.1.74] +diphosphate +co2_mnxm13 +h +2_demethylmenaquinol_8
     octaprenyl_diphosphate
   }
 

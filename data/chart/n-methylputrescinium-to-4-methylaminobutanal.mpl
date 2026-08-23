@@ -14,9 +14,9 @@ pathway n-methylputrescinium-to-4-methylaminobutanal "N-methylputrescinium to 4-
     1_methylpyrrolinium
     <-> . +3_oxoglutarate +hplus -co2
     4_1_methylpyrrolidin_2_yl_3_oxobutanoate
-    <-> . +co2 +h -1_methylpyrrolinium
+    <-> . +co2_mnxm13 +h -1_methylpyrrolinium_mnxm1615
     3_oxoglutaric_acid
-    <-> . +1_methylpyrrolinium +h2o
+    <-> . +1_methylpyrrolinium_mnxm1615 +h2o_water
     4_methylaminobutanal
   }
 }

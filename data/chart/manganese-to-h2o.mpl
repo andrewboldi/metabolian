@@ -9,60 +9,60 @@ pathway manganese-to-h2o "manganese to H2O" {
   spine at 0,0 {
     manganese
     <-> ec_1_11_1_13 [1.11.1.13] +h2o2 +hplus -h2o
-    manganese
+    manganese_chebi_29041
     <-> . +o2 +h2o -hplus
     manganese_dioxide
-    <-> . +h -h2o2 -o2 -h2o
+    <-> . +h -h2o2_mnxm732620 -o2_mnxm735438 -h2o_water
     mn
-    <-> ec_3_6_3_35 [3.6.3.35] +h +adp +phosphate -mn -h2o
+    <-> ec_3_6_3_35 [3.6.3.35] +h +adp +phosphate -mn -h2o_water
     atp
   }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> . +5_6_epoxy_alpha_tocopheryl_quinone +h2o
+  branch from h2o2_mnxm732620 side left {
+    h2o2_mnxm732620
+    <-> . +5_6_epoxy_alpha_tocopheryl_quinone +h2o_water
     7_8_epoxy_8alpha_hydroperoxytocopherone
   }
 
-  branch from h2o2 side right {
-    h2o2
-    <-> . +2_3_epoxy_alpha_tocopheryl_quinone +h2o
+  branch from h2o2_mnxm732620 side right {
+    h2o2_mnxm732620
+    <-> . +2_3_epoxy_alpha_tocopheryl_quinone +h2o_water
     4alpha_5_epoxy_8alpha_hydroperoxytocopherone
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +8_9_epoxy_5z_11z_14z_eicosatrienoate +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +8_9_epoxy_5z_11z_14z_eicosatrienoate +h2o_water
     fad
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +fad +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +fad +h2o_water
     14_15_epoxy_5z_8z_11z_eicosatrienoate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +d_arginyl_l_arginyl_d_glutaminyl_l_phenylalanine +2_2_2_2_2_amino_3_4_hydroxyphenyl_1_oxopropyl_am +h +dynorphin_b_10_13
     dynorphin_b
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +s_n_methylsalsolinol +acetaldehyde
     3_methoxytyramine
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     phytanoyl_coa
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o_water
     l_serine
   }
 
@@ -78,75 +78,75 @@ pathway manganese-to-h2o "manganese to H2O" {
     3_3_diiodo_l_thyronine
   }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> . +5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co +o2
+  branch from h2o2_mnxm732620 side left {
+    h2o2_mnxm732620
+    <-> . +5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co +o2_mnxm735438
     5_oxo_12_r_hydroxy_eicosa_2e_8e_10e_14z_tetraeno
   }
 
-  branch from h2o2 side right {
-    h2o2
-    <-> . +5_oxo_12_s_hydroxy_eicosa_8e_10e_14z_trienoyl_co +o2
+  branch from h2o2_mnxm732620 side right {
+    h2o2_mnxm732620
+    <-> . +5_oxo_12_s_hydroxy_eicosa_8e_10e_14z_trienoyl_co +o2_mnxm735438
     5_oxo_12_s_hydroxy_eicosa_2e_8e_10e_14z_tetraeno
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +4_ammoniobutyl_3_oxopropyl_azanium +h2o +nh4 +h2o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +4_ammoniobutyl_3_oxopropyl_azanium +h2o_water +nh4 +h2o2_mnxm732620
     spermidine_dialdehyde
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +20_oh_10_11_dihydro_leukotriene_b4 +nadp +h2o +nadph
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +20_oh_10_11_dihydro_leukotriene_b4 +nadp +h2o_water +nadph
     6_7_dihydro_12_epi_ltb4
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate
     15_epi_lipoxin_a4
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h
     15_epi_lipoxin_b4
   }
 
   branch from adp side left {
     adp
-    <-> ec_3_6_3_31 [3.6.3.31] +h +phosphate +atp +h2o
+    <-> ec_3_6_3_31 [3.6.3.31] +h +phosphate +atp +h2o_water
     spermidine
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     6z_9z_12z_15z_octadecatetraenoyl_coa
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp +atp +h2o_water
     sulfoacetate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +atp +h2o
+    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +atp +h2o_water
     sulfate
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_36 [3.6.3.36] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_36 [3.6.3.36] +h +adp +phosphate +h2o_water
     taurine
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     taurocholate
   }
 }

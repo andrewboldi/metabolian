@@ -9,7 +9,7 @@ pathway d-glcp-1-4-d-glcp-to-h2o-null "α-D-Glcp-(1→4)-α-D-Glcp-(… to H2O" 
   spine at 0,0 {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
     <-> ec_3_2_1_20 [3.2.1.20] +glucose -h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143183
     <-> ec_3_2_1_74 [3.2.1.74] +h2o -beta_d_cellohexaose
     glucose
     <-> ec_3_6_3_42 [3.6.3.42] +h +adp +beta_d_cellohexaose +phosphate -beta_d_cellohexaose -h2o

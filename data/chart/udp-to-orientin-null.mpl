@@ -25,7 +25,7 @@ pathway udp-to-orientin-null "UDP to orientin" {
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
     <-> . +udp +h +2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
-    2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
+    2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca_mnxm818732
   }
 
   branch from udp side left {
@@ -49,7 +49,7 @@ pathway udp-to-orientin-null "UDP to orientin" {
   branch from orientin side right {
     orientin
     <-> . +h +h2o
-    1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy
+    1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy_mnxm1364792
   }
 
   branch from udp side left {

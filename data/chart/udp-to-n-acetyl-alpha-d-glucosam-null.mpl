@@ -11,7 +11,7 @@ pathway udp-to-n-acetyl-alpha-d-glucosam-null "UDP to N-acetyl-alpha-D-glucosamâ
     <-> ec_2_4_1_153 [2.4.1.153] +a_dolichyl_n_acetyl_alpha_d_glucosaminyl_phospha -c80_dolichol_phosphate
     udp_n_acetyl_alpha_d_glucosamine
     <-> ec_2_4_1_258 [2.4.1.258] +h +alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3 +c80_dolichol_phosphate -a_dolichyl_beta_d_mannosyl_phosphate
-    alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3
+    alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3_mnxm726732
     <-> ec_2_4_1_131 [2.4.1.131] +gdp +h -alpha_d_man_1_3_alpha_d_man_1_6_alpha_d_man_1_4
     gdp_alpha_d_mannose
     <-> ec_2_4_1_257 [2.4.1.257] +gdp +alpha_d_man_1_3_alpha_d_man_1_6_alpha_d_man_1_4 +h -gdp_alpha_d_mannose
@@ -45,6 +45,6 @@ pathway udp-to-n-acetyl-alpha-d-glucosam-null "UDP to N-acetyl-alpha-D-glucosamâ
   branch from h side right {
     h
     <-> . +19_epi_cathenamine
-    4_21_dehydrogeissoschizine
+    4_21_dehydrogeissoschizine_mnxm1368749
   }
 }

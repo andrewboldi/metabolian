@@ -47,7 +47,7 @@ pathway e-coli-mlps-to-h-null "E. coli MLPS to H" {
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
     <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_8z_11z_14z_eicosatrienoyl_2_9z_12z_15z_octadec
-    1_8z_11z_14z_eicosatrienoyl_2_9z_12z_15z_octadec
+    1_8z_11z_14z_eicosatrienoyl_2_9z_12z_15z_octadec_mnxm32619
   }
 
   branch from udp_alpha_d_glucuronate side right {

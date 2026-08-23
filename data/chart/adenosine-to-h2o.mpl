@@ -101,7 +101,7 @@ pathway adenosine-to-h2o "adenosine to H2O" {
   branch from fad side right {
     fad
     <-> . +fadh2 +h +sphinganine
-    sphing_4_enine
+    sphing_4_enine_mnxm1364421
   }
 
   branch from h2o side left {

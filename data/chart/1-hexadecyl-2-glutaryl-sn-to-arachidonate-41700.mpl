@@ -37,7 +37,7 @@ pathway 1-hexadecyl-2-glutaryl-sn-to-arachidonate-41700 "1-hexadecyl-2-glutaryl-
   branch from arachidonoyl_coa side right {
     arachidonoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +coa
-    1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s
+    1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s_chebi_73009
   }
 
   branch from arachidonate side left {

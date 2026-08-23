@@ -12,12 +12,12 @@ pathway 3-oxochenodeoxycholoyl-coa-to-7-hydroxy-3-oxocho "3-oxochenodeoxycholoyl
     7_hydroxy_3_oxochol_4_en_24_oyl_coa
     <-> . -h2o
     3_oxochol_4_6_dien_24_oyl_coa
-    <-> . +h2o
-    7_hydroxy_3_oxochol_4_en_24_oyl_coa
+    <-> . +h2o_water
+    7_hydroxy_3_oxochol_4_en_24_oyl_coa_chebi_140638
   }
 
-  branch from 7_hydroxy_3_oxochol_4_en_24_oyl_coa side left {
-    7_hydroxy_3_oxochol_4_en_24_oyl_coa
+  branch from 7_hydroxy_3_oxochol_4_en_24_oyl_coa_chebi_140638 side left {
+    7_hydroxy_3_oxochol_4_en_24_oyl_coa_chebi_140638
     <-> ec_2_8_3_25 [2.8.3.25] +choloyl_coa +7beta_hydroxy_3_oxochol_4_enate
     cholate
   }

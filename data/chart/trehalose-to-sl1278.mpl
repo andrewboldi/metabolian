@@ -25,7 +25,7 @@ pathway trehalose-to-sl1278 "α,α-trehalose to SL1278" {
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
     <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +3_phosphonato_5_adenylyl_sulfate +hplus
-    so3_3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl
+    so3_3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_chebi_142160
   }
 
   branch from 3_phosphonato_5_adenylyl_sulfate side left {
@@ -36,8 +36,8 @@ pathway trehalose-to-sl1278 "α,α-trehalose to SL1278" {
 
   branch from 3_phosphonato_5_adenylyl_sulfate side right {
     3_phosphonato_5_adenylyl_sulfate
-    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +adenosine_3_5_bismonophosphate +hplus
-    3_o_3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galact
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l_chebi_137950 +adenosine_3_5_bismonophosphate +hplus
+    3_o_3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galact_chebi_232295
   }
 
   branch from adenosine_3_5_bismonophosphate side left {

@@ -12,9 +12,9 @@ pathway alpha-d-ribose-1-phosphate-to-5-fluorouridine "alpha-D-ribose 1-phosphat
     5_fluorouridine
     <-> . +atp -adp -hplus
     5_fluorouridine_5_monophosphate
-    <-> ec_2_7_4_14 [2.7.4.14] +h +atp -5_fluorouridine_diphosphate
-    adp
-    <-> ec_2_7_4_6 [2.7.4.6] +h +atp +5_fluorouridine_diphosphate -adp
+    <-> ec_2_7_4_14 [2.7.4.14] +h +atp_mnxm3 -5_fluorouridine_diphosphate
+    adp_mnxm40333
+    <-> ec_2_7_4_6 [2.7.4.6] +h +atp_mnxm3 +5_fluorouridine_diphosphate -adp_mnxm40333
     5_fluorouridine_triphosphate
   }
 

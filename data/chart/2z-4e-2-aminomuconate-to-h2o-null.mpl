@@ -25,7 +25,7 @@ pathway 2z-4e-2-aminomuconate-to-h2o-null "(2Z,4E)-2-aminomuconate to H2O" {
   branch from nadp side right {
     nadp
     <-> ec_1_3_1_36 [1.3.1.36] +nadph +geissoschizine
-    4_21_dehydrogeissoschizine
+    4_21_dehydrogeissoschizine_mnxm1368749
   }
 
   branch from nh4 side left {
@@ -78,7 +78,7 @@ pathway 2z-4e-2-aminomuconate-to-h2o-null "(2Z,4E)-2-aminomuconate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +aurodrosopterin +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
+    <-> . +aurodrosopterin +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido_mnxm1371398
     7_8_dihydrolumazine
   }
 
@@ -102,7 +102,7 @@ pathway 2z-4e-2-aminomuconate-to-h2o-null "(2Z,4E)-2-aminomuconate to H2O" {
 
   branch from h side left {
     h
-    <-> . +2z_4e_2_hydroxy_6_oxo_4_bromophenoxy_hexa_2_4_d +4_bromo_2_3_dihydroxydiphenyl_ether
+    <-> . +2z_4e_2_hydroxy_6_oxo_4_bromophenoxy_hexa_2_4_d_mnxm1368555 +4_bromo_2_3_dihydroxydiphenyl_ether
     o2
   }
 
@@ -120,8 +120,8 @@ pathway 2z-4e-2-aminomuconate-to-h2o-null "(2Z,4E)-2-aminomuconate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +aurodrosopterin +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
-    7_8_dihydrolumazine
+    <-> . +aurodrosopterin_mnxm1363690 +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
+    7_8_dihydrolumazine_mnxm1363715
   }
 
   branch from h2o side left {
@@ -133,7 +133,7 @@ pathway 2z-4e-2-aminomuconate-to-h2o-null "(2Z,4E)-2-aminomuconate to H2O" {
   branch from nadp side right {
     nadp
     <-> ec_1_14_13_73 [1.14.13.73] +h2o +h +tabersonine +o2 +nadph
-    16_hydroxytabersonine
+    16_hydroxytabersonine_mnxm1371329
   }
 
   branch from nadp side left {

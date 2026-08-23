@@ -24,8 +24,8 @@ pathway 5-campestan-3-one-to-campesterol "5α-campestan-3-one to campesterol" {
 
   branch from campest_4_en_3_one side right {
     campest_4_en_3_one
-    <-> ec_1_1_1_51 [1.1.1.51] +h +nadph +campesterol
-    nadp
+    <-> ec_1_1_1_51 [1.1.1.51] +h +nadph_mnxm738702 +campesterol
+    nadp_mnxm5
   }
 
   branch from nad side left {
@@ -42,19 +42,19 @@ pathway 5-campestan-3-one-to-campesterol "5α-campestan-3-one to campesterol" {
 
   branch from campesterol side left {
     campesterol
-    <-> . +h +nadph +nadp
+    <-> . +h +nadph_mnxm738702 +nadp_mnxm5
     crinosterol
   }
 
   branch from campesterol side right {
     campesterol
-    <-> . +h +24_methylcholesta_5_24_dien_3_ol +nadp
-    nadph
+    <-> . +h +24_methylcholesta_5_24_dien_3_ol +nadp_mnxm5
+    nadph_mnxm738702
   }
 
   branch from campest_4_en_3_one side left {
     campest_4_en_3_one
-    <-> . +22s_22_hydroxycampest_4_en_3_one +nadp +h2o +h +nadph
+    <-> . +22s_22_hydroxycampest_4_en_3_one +nadp_mnxm5 +h2o +h +nadph_mnxm738702
     o2
   }
 
@@ -96,13 +96,13 @@ pathway 5-campestan-3-one-to-campesterol "5α-campestan-3-one to campesterol" {
 
   branch from campesterol side right {
     campesterol
-    <-> ec_1_3_1_72 [1.3.1.72] +h +nadph +nadp
+    <-> ec_1_3_1_72 [1.3.1.72] +h +nadph_mnxm738702 +nadp_mnxm5
     24_methylenecholesterol
   }
 
   branch from campesterol side left {
     campesterol
-    <-> . +nadp +h2o +h +o2 +nadph
+    <-> . +nadp_mnxm5 +h2o +h +o2 +nadph_mnxm738702
     22s_22_hydroxycampesterol
   }
 }

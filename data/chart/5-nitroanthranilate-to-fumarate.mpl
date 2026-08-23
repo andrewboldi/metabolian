@@ -23,7 +23,7 @@ pathway 5-nitroanthranilate-to-fumarate "5-nitroanthranilate to fumarate" {
   branch from 5_nitrosalicylate side left {
     5_nitrosalicylate
     <-> . +4_nitro_6_oxohepta_2_4_dienedioate +h
-    o2
+    o2_mnxm735438
   }
 
   branch from nh3 side right {
@@ -40,7 +40,7 @@ pathway 5-nitroanthranilate-to-fumarate "5-nitroanthranilate to fumarate" {
 
   branch from 2_oxo_3_5_oxofuran_2_ylidene_propanoate side right {
     2_oxo_3_5_oxofuran_2_ylidene_propanoate
-    <-> . +nitrite
+    <-> . +nitrite_mnxm107
     4_nitro_6_oxohepta_2_4_dienedioate
   }
 

@@ -27,7 +27,7 @@ pathway n-hexanoyl-sphing-4-enine-to-sphingosine "N-(hexanoyl)sphing-4-enine to 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
     <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_chebi_78455
   }
 
   branch from cytidine_5_monophosphate side left {
@@ -57,6 +57,6 @@ pathway n-hexanoyl-sphing-4-enine-to-sphingosine "N-(hexanoyl)sphing-4-enine to 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
     <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_chebi_90512
   }
 }

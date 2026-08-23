@@ -26,7 +26,7 @@ pathway d-psicose-to-hydrogen-donor-42360 "D-psicose to hydrogen donor" {
 
   branch from keto_l_sorbose side right {
     keto_l_sorbose
-    <-> ec_1_1_1_67 [1.1.1.67] +nadh +h +nad
+    <-> ec_1_1_1_67 [1.1.1.67] +nadh_mnxm10 +h +nad_mnxm8
     d_sorbitol
   }
 }

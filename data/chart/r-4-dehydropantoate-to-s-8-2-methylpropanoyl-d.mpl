@@ -13,6 +13,6 @@ pathway r-4-dehydropantoate-to-s-8-2-methylpropanoyl-d "(R)-4-dehydropantoate to
     <-> ec_1_1_1_84 [1.1.1.84] +nad -co2 -nadh
     kiv
     <-> ec_1_2_4_4 [1.2.4.4] +r_lipoamide +h -s_8_2_methylpropanoyl_dihydrolipoamide
-    co2
+    co2_mnxm13
   }
 }

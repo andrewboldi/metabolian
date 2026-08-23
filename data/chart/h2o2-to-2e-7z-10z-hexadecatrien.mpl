@@ -12,7 +12,7 @@ pathway h2o2-to-2e-7z-10z-hexadecatrien "H2O2 to (2E,7Z,10Z)-hexadecatrien…" {
     o2
     <-> . +acetyl_coa +4z_7z_10z_hexadecatrienoyl_coenzyme_a -3_oxo_6z_9z_12z_octadecatrienoyl_coa
     coa
-    <-> . +3_oxo_6z_9z_12z_octadecatrienoyl_coa +coa -acetyl_coa
+    <-> . +3_oxo_6z_9z_12z_octadecatrienoyl_coa +coa_chebi_57287 -acetyl_coa_chebi_57288
     4z_7z_10z_hexadecatrienoyl_coa
     <-> . +fad +hplus -fadh2
     2e_4z_7z_10z_hexadecatetraenoyl_coa

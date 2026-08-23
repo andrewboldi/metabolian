@@ -18,8 +18,8 @@ pathway deoxycylindrospermopsin-to-s-succinyl-l-cysteine "deoxycylindrospermopsi
 
   branch from cylindrospermopsin side left {
     cylindrospermopsin
-    <-> ec_1_14_11_70 [1.14.11.70] +2_oxoglutarate +deoxycylindrospermopsin +o2 +succinate
-    co2
+    <-> ec_1_14_11_70 [1.14.11.70] +2_oxoglutarate +deoxycylindrospermopsin_chebi_88050 +o2_mnxm735438 +succinate_mnxm25
+    co2_mnxm13
   }
 
   branch from succinate side right {
@@ -30,7 +30,7 @@ pathway deoxycylindrospermopsin-to-s-succinyl-l-cysteine "deoxycylindrospermopsi
 
   branch from succinate side left {
     succinate
-    <-> . +l_lysinium +chloride +akg +o2 +hplus +co2 +h2o
+    <-> . +l_lysinium_chebi_32551 +chloride +akg +o2 +hplus +co2 +h2o
     4_chloro_l_lysinium
   }
 
@@ -42,8 +42,8 @@ pathway deoxycylindrospermopsin-to-s-succinyl-l-cysteine "deoxycylindrospermopsi
 
   branch from deoxycylindrospermopsin side left {
     deoxycylindrospermopsin
-    <-> ec_1_14_11_70 [1.14.11.70] +2_oxoglutarate +o2 +co2 +cylindrospermopsin
-    succinate
+    <-> ec_1_14_11_70 [1.14.11.70] +2_oxoglutarate +o2_mnxm735438 +co2_mnxm13 +cylindrospermopsin_mnxm736971
+    succinate_mnxm25
   }
 
   branch from akg side right {

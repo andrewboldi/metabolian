@@ -16,7 +16,7 @@ pathway 13z-3-oxoicosenoyl-coa-to-h2o "(13Z)-3-oxoicosenoyl-CoA to H2O" {
     13z_icosenoyl_coa
     <-> . +diphosphate +h +amp -atp -coa
     z_icos_13_enoic_acid
-    <-> . +h +adp +phosphate -z_icos_13_enoic_acid -h2o
+    <-> . +h +adp +phosphate -z_icos_13_enoic_acid -h2o_water
     atp
   }
 }

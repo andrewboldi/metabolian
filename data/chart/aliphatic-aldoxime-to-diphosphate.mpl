@@ -85,7 +85,7 @@ pathway aliphatic-aldoxime-to-diphosphate "aliphatic aldoxime to diphosphate" {
   branch from 4_d_ribofuranosyl_aminobenzene_5_phosphate side left {
     4_d_ribofuranosyl_aminobenzene_5_phosphate
     <-> ec_2_5_1_105 [2.5.1.105] +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +diphosphate
-    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
+    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi_mnxm1100579
   }
 
   branch from 4_d_ribofuranosyl_aminobenzene_5_phosphate side right {
@@ -156,7 +156,7 @@ pathway aliphatic-aldoxime-to-diphosphate "aliphatic aldoxime to diphosphate" {
 
   branch from 4_aminobenzoate side left {
     4_aminobenzoate
-    <-> . +l_tyrosine +ascorbate +l_lysinium +o2 +l_allysine +l_dehydroascorbate +h2o +hplus
+    <-> . +l_tyrosine +ascorbate +l_lysinium_chebi_29969 +o2 +l_allysine +l_dehydroascorbate +h2o +hplus
     glycine
   }
 }

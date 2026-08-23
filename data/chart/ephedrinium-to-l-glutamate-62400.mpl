@@ -36,13 +36,13 @@ pathway ephedrinium-to-l-glutamate-62400 "(−)-ephedrinium to L-glutamate" {
 
   branch from cathinone side right {
     cathinone
-    <-> . +nadh +h +nad
+    <-> . +nadh_mnxm10 +h +nad_mnxm8
     norephedrine
   }
 
   branch from cathinone side left {
     cathinone
-    <-> . +nadh +h +nad
+    <-> . +nadh_mnxm10 +h +nad_mnxm8
     cathine
   }
 
@@ -138,7 +138,7 @@ pathway ephedrinium-to-l-glutamate-62400 "(−)-ephedrinium to L-glutamate" {
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +h2o
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10376 +h2o
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10377
   }
 }

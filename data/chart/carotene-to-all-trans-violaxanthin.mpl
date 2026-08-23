@@ -8,11 +8,11 @@ pathway carotene-to-all-trans-violaxanthin "β-carotene to all-trans-violaxanthi
 
   spine at 0,0 {
     carotene
-    <-> ec_1_14_15_24 [1.14.15.24] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_24 [1.14.15.24] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     zeaxanthin
     <-> ec_1_14_99_n4 [1.14.99.n4] +o2 -3r_hydroxy_ionone
     4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
     <-> ec_1_13_11_71 [1.13.11.71] +5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one -all_trans_violaxanthin
-    o2
+    o2_mnxm735438
   }
 }

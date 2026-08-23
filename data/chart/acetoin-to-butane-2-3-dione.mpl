@@ -10,9 +10,9 @@ pathway acetoin-to-butane-2-3-dione "acetoin to butane-2,3-dione" {
     acetoin
     <-> ec_1_1_1_4 [1.1.1.4] +nadh +h -meso_butane_2_3_diol
     nad
-    <-> . +meso_butane_2_3_diol +nad -nadh -hplus
+    <-> . +meso_butane_2_3_diol +nad_chebi_57540 -nadh_chebi_57945 -hplus
     s_acetoin
-    <-> ec_1_1_1_304 [1.1.1.304] +nad -nadh -hplus
+    <-> ec_1_1_1_304 [1.1.1.304] +nad_chebi_57540 -nadh_chebi_57945 -hplus
     butane_2_3_dione
   }
 }

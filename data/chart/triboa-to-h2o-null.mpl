@@ -13,7 +13,7 @@ pathway triboa-to-h2o-null "TRIBOA to H2O" {
     <-> ec_3_2_1_182 [3.2.1.182] +beta_d_glucose -h2o
     diboa_d_glucoside
     <-> ec_2_4_1_202 [2.4.1.202] +udp -udp_alpha_d_glucose
-    diboa
+    diboa_mnxm1108041
     <-> ec_3_2_1_182 [3.2.1.182] +glucose +h -h2o
     diboa_d_glucoside
   }

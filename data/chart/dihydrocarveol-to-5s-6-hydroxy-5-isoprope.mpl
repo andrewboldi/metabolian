@@ -24,7 +24,7 @@ pathway dihydrocarveol-to-5s-6-hydroxy-5-isoprope "(+)-dihydrocarveol to (5S)-6-
 
   branch from 3s_6r_6_isopropenyl_3_methyloxepan_2_one side right {
     3s_6r_6_isopropenyl_3_methyloxepan_2_one
-    <-> ec_1_14_13_105 [1.14.13.105] +nadph +o2 +hplus +nadp +h2o
+    <-> ec_1_14_13_105 [1.14.13.105] +nadph_chebi_57783 +o2_chebi_15379 +hplus +nadp_chebi_58349 +h2o_chebi_15377
     isodihydrocarvone
   }
 

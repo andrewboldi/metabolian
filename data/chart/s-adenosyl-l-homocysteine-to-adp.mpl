@@ -13,14 +13,14 @@ pathway s-adenosyl-l-homocysteine-to-adp "S-adenosyl-L-homocysteine to ADP" {
     <-> ec_2_1_1_335 [2.1.1.335] +4_amino_4_de_dimethylamino_anhydrotetracycline +sam -sah -hplus
     desmethylanhydrotetracycline
     <-> ec_2_1_1_335 [2.1.1.335] +sam -sah -hplus
-    anhydrotetracycline
+    anhydrotetracycline_chebi_58032
     <-> ec_1_14_13_38 [1.14.13.38] +nadph +o2 +hplus -nadp -h2o
     12_dehydrotetracycline
     <-> ec_1_14_13_234 [1.14.13.234] +nadph +o2 +hplus -nadp -h2o
     5a_11a_dehydrooxytetracycline
     <-> ec_1_3_98_4 [1.3.98.4] +1_5_dihydrocoenzyme_f420 -oxytetracycline
     coenzyme_gamma_f420_2
-    <-> ec_1_8_98_3 [1.8.98.3] +hydrogen_sulfide +h2o -h -sulfite
+    <-> ec_1_8_98_3 [1.8.98.3] +hydrogen_sulfide +h2o_water -h -sulfite
     1_5_dihydrocoenzyme_f420
     <-> ec_1_1_98_2 [1.1.98.2] +6_phospho_d_glucono_1_5_lactone -coenzyme_gamma_f420_2
     d_glucose_6_phosphate
@@ -49,12 +49,12 @@ pathway s-adenosyl-l-homocysteine-to-adp "S-adenosyl-L-homocysteine to ADP" {
   branch from h side right {
     h
     <-> . +2_3_4_dihydroxyphenyl_2_5_7_trihydroxy_2_3_dihyd
-    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
+    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p_mnxm1364778
   }
 
   branch from sulfite side left {
     sulfite
-    <-> . +ferricytochrome_c +h2o +h +sulfate
+    <-> . +ferricytochrome_c +h2o_water +h +sulfate
     ferrocytochrome_c
   }
 
@@ -73,7 +73,7 @@ pathway s-adenosyl-l-homocysteine-to-adp "S-adenosyl-L-homocysteine to ADP" {
   branch from adp side right {
     adp
     <-> ec_6_3_2_10 [6.3.2.10] +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g +atp +d_alanyl_r_lactic_acid +h +phosphate
-    udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
+    udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g_mnxm1559548
   }
 
   branch from adp side left {
@@ -90,18 +90,18 @@ pathway s-adenosyl-l-homocysteine-to-adp "S-adenosyl-L-homocysteine to ADP" {
 
   branch from h side left {
     h
-    <-> . +6_c_glucosyl_chrysin +h2o
+    <-> . +6_c_glucosyl_chrysin +h2o_water
     1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +6_c_glucosyl_chrysin
-    1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
+    1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p_mnxm1364790
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_5_4_1 [3.5.4.1] +flucytosine +h +nh4
     5_fluorouracil
   }
@@ -114,7 +114,7 @@ pathway s-adenosyl-l-homocysteine-to-adp "S-adenosyl-L-homocysteine to ADP" {
 
   branch from d_glucose_6_phosphate side left {
     d_glucose_6_phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +phosphate +h2o
+    <-> ec_3_1_3_1 [3.1.3.1] +phosphate +h2o_water
     aldehydo_d_glucose
   }
 
@@ -132,7 +132,7 @@ pathway s-adenosyl-l-homocysteine-to-adp "S-adenosyl-L-homocysteine to ADP" {
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     3_d_6_sulfoquinovosyl_sn_glycerol
   }
 

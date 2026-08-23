@@ -17,7 +17,7 @@ pathway cellobiose-to-mycothione-21944 "cellobiose to mycothione" {
     <-> ec_2_4_1_250 [2.4.1.250] +udpglcnac -udp -hplus
     1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran
     <-> . +h2o -pi
-    1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran
+    1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran_chebi_52442
     <-> ec_3_5_1_103 [3.5.1.103] +h2o -acetate
     1d_myo_inositol_2_ammonio_2_deoxy_d_glucopyranos
     <-> ec_6_3_1_13 [6.3.1.13] +cysteine +atp -amp -ppi -hplus
@@ -52,8 +52,8 @@ pathway cellobiose-to-mycothione-21944 "cellobiose to mycothione" {
     sitosterol
   }
 
-  branch from 1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran side left {
-    1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran
+  branch from 1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran_chebi_52442 side left {
+    1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran_chebi_52442
     <-> . +n_acetyl_d_hexosamine +1d_myo_inositol_1_phosphate
     phosphate
   }
@@ -139,6 +139,6 @@ pathway cellobiose-to-mycothione-21944 "cellobiose to mycothione" {
   branch from ppi side left {
     ppi
     <-> ec_4_2_3_122 [4.2.3.122] +gpp
-    pinene
+    pinene_chebi_50026
   }
 }

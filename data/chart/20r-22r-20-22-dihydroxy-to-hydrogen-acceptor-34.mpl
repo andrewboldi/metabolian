@@ -8,7 +8,7 @@ pathway 20r-22r-20-22-dihydroxy-to-hydrogen-acceptor-34 "(20R,22R)-20,22-dihydro
 
   spine at 0,0 {
     20r_22r_20_22_dihydroxycholesterol
-    <-> . +di_sulfido_diiron +o2 +hplus -pregnenolone -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -pregnenolone -di_sulfido_diiron_chebi_33737 -h2o
     4_methylpentanal
     <-> . +pregnenolone +nad -nadh -hplus
     pregn_5_ene_3_20_dione

@@ -15,7 +15,7 @@ pathway n4-d-glc-1-2-d-glc-to-n4-d-glcnac-1-2-d "N4-(α-D-Glc-(1→2)-α-D-Glc�
     <-> ec_3_2_1_130 [3.2.1.130] +h2o -n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man
     d_glucosyl_1_3_d_mannopyranose
     <-> . +n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man +h2o -d_mannose
-    n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man
+    n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man_chebi_139497
     <-> . +h2o -d_mannose
     n4_d_man_1_3_d_man_1_2_d_man_1_3_d_man_1_6_d_man
     <-> . +h2o -d_mannose
@@ -23,11 +23,11 @@ pathway n4-d-glc-1-2-d-glc-to-n4-d-glcnac-1-2-d "N4-(α-D-Glc-(1→2)-α-D-Glc�
     <-> ec_2_4_1_101 [2.4.1.101] +udpglcnac -udp -hplus
     n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d
     <-> ec_3_2_1_114 [3.2.1.114] +h2o -n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
-    d_mannose
+    d_mannose_chebi_28729
     <-> ec_2_4_1_143 [2.4.1.143] +n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d +udpglcnac -udp -hplus
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
     <-> ec_2_4_1_68 [2.4.1.68] +gdp_l_fucose -gdp -hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6_chebi_137207
     <-> . +udpglcnac -udp -hplus
     n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
   }

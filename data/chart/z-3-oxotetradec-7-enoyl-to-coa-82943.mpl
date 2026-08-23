@@ -18,7 +18,7 @@ pathway z-3-oxotetradec-7-enoyl-to-coa-82943 "(Z)-3-oxotetradec-7-enoyl… to Co
     z_3_oxododec_5_enoyl_coa
     <-> . +coa -acetyl_coa
     cis_dec_3_enoyl_coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa -coa
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa_mnxm1104266 -coa_mnxm727276
     z_3_oxododec_5_enoyl_coa
   }
 }

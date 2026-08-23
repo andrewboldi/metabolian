@@ -29,7 +29,7 @@ pathway lipid-a-4-e-coli-to-fatty-acyl-monophosphate "lipid A(4−) (E. coli) to
   branch from 1_2_diacyl_3_d_galactosyl_sn_glycerol side right {
     1_2_diacyl_3_d_galactosyl_sn_glycerol
     <-> . +udp_d_galactose +udp +hplus
-    3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl
+    3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl_chebi_87082
   }
 
   branch from fatty-acid side left {

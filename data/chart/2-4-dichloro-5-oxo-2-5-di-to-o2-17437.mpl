@@ -56,7 +56,7 @@ pathway 2-4-dichloro-5-oxo-2-5-di-to-o2-17437 "2,4-dichloro-5-oxo-2,5-di… to O
 
   branch from 2_4_dichloro_5_oxo_2_5_dihydro_2_furylacetate side left {
     2_4_dichloro_5_oxo_2_5_dihydro_2_furylacetate
-    <-> . +chloride +hplus
+    <-> . +chloride_chebi_17996 +hplus
     trans_2_chloro_4_carboxylatomethylenebut_2_en_1
   }
 

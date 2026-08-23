@@ -10,26 +10,26 @@ pathway n-acetyl-d-6-sulfogalac-to-h2o "N-acetyl-β-D-6-sulfogalac… to H2O" {
     n_acetyl_d_6_sulfogalactosaminyl_1_4_l_iduronyl
     <-> . +h2o -n_acetyl_d_6_sulfogalactosamine
     l_iduronyl_1_3_n_acetyl_d_6_sulfogalactosamine
-    <-> ec_3_2_1_180 [3.2.1.180] +n_acetyl_d_6_sulfogalactosamine +4_deoxy_l_threo_hex_4_enopyranuronate -h2o
+    <-> ec_3_2_1_180 [3.2.1.180] +n_acetyl_d_6_sulfogalactosamine +4_deoxy_l_threo_hex_4_enopyranuronate -h2o_water
     beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac6
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac6 -h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac6 -h2o_water
     atp
   }
 
   branch from n_acetyl_d_6_sulfogalactosamine side left {
     n_acetyl_d_6_sulfogalactosamine
-    <-> . +h2o +4_deoxy_l_threo_hex_4_enopyranuronate
+    <-> . +h2o_water +4_deoxy_l_threo_hex_4_enopyranuronate
     4_deoxy_beta_d_gluc_4_enuronosyl_1_4_n_acetyl_d
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +malonyl_coa +h +coa +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2
     co2
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +malonyl_coa +h +co2 +coa
     6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy
   }
@@ -54,18 +54,18 @@ pathway n-acetyl-d-6-sulfogalac-to-h2o "N-acetyl-β-D-6-sulfogalac… to H2O" {
 
   branch from 4_deoxy_l_threo_hex_4_enopyranuronate side left {
     4_deoxy_l_threo_hex_4_enopyranuronate
-    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_galactosamine +h2o
+    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_galactosamine +h2o_water
     beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +malonyl_coa +h +co2 +coa
     octaketide_sek4
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +5_hydroxyindol_3_yl_acetaldehyde +l_cysteine +h
     5_hydroxyindole_thiazolidine_carboxylate
   }
@@ -96,13 +96,13 @@ pathway n-acetyl-d-6-sulfogalac-to-h2o "N-acetyl-β-D-6-sulfogalac… to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> . +1_archaetidyl_d_myo_inositol +h2o
+    <-> . +1_archaetidyl_d_myo_inositol +h2o_water
     1_archaetidyl_1d_myo_inositol_3_phosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +guanosine +h2o
+    <-> . +guanosine +h2o_water
     guanosine_2_monophosphate
   }
 
@@ -114,7 +114,7 @@ pathway n-acetyl-d-6-sulfogalac-to-h2o "N-acetyl-β-D-6-sulfogalac… to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_6_4_1_7 [6.4.1.7] +s_oxalatosuccinate +h +adp +phosphate +co2 +h2o
+    <-> ec_6_4_1_7 [6.4.1.7] +s_oxalatosuccinate +h +adp +phosphate +co2 +h2o_water
     2_oxoglutarate
   }
 }

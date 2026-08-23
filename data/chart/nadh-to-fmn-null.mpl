@@ -12,7 +12,7 @@ pathway nadh-to-fmn-null "NADH to FMN" {
     formate
     <-> ec_1_14_13_70 [1.14.13.70] +nadp +4_4_dimethyl_5alpha_cholesta_8_14_24_trien_3beta +h2o -o2 -nadph
     4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die
-    <-> . +fmnh2 +o2 -formate -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -formate_chebi_15740 -fmn -h2o_chebi_15377 -hplus
     ffmas
   }
 }

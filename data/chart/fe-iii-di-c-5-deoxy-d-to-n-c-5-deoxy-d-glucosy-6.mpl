@@ -13,13 +13,13 @@ pathway fe-iii-di-c-5-deoxy-d-to-n-c-5-deoxy-d-glucosy-6 "Fe(III)-di(C-5-deoxy-Î
     <-> ec_3_1_1_109 [3.1.1.109] +h2o +hplus -n_2_3_dihydroxybenzoyl_l_serinate
     fe_iii_n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzo
     <-> ec_3_1_1_109 [3.1.1.109] +h2o +hplus -n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzoyl_l_se
-    fe_iii_n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzo
+    fe_iii_n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzo_chebi_143777
   }
 
   branch from fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox side left {
     fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox
     <-> ec_3_1_1_109 [3.1.1.109] +h2o +hplus +n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzoyl_l_se
-    fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox
+    fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox_chebi_143775
   }
 
   branch from n_2_3_dihydroxybenzoyl_l_serinate side right {

@@ -10,9 +10,9 @@ pathway d-gentiobiosyl-crocetin-to-beta-d-glucosyl-croc "β-D-gentiobiosyl croce
     d_gentiobiosyl_crocetin
     <-> ec_2_4_1_271 [2.4.1.271] +udp_d_glucose -udp
     d_gentiobiosyl_d_glucosyl_crocetin
-    <-> ec_2_4_1_271 [2.4.1.271] +udp -crocin_3
+    <-> ec_2_4_1_271 [2.4.1.271] +udp_mnxm1102128 -crocin_3
     udp_alpha_d_glucose
-    <-> ec_2_4_1_330 [2.4.1.330] +udp +crocin_3 +h -udp_alpha_d_glucose
+    <-> ec_2_4_1_330 [2.4.1.330] +udp_mnxm1102128 +crocin_3 +h -udp_alpha_d_glucose
     beta_d_glucosyl_crocetin
   }
 }

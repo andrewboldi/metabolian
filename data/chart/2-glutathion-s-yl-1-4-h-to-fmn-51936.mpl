@@ -24,7 +24,7 @@ pathway 2-glutathion-s-yl-1-4-h-to-fmn-51936 "2-(glutathion-S-yl)-1,4-h… to FM
 
   branch from geranylhydroquinone side right {
     geranylhydroquinone
-    <-> ec_1_14_13_116 [1.14.13.116] +h +o2 +nadph +3_hydroxy_geranylhydroquinone +h2o
+    <-> ec_1_14_13_116 [1.14.13.116] +h +o2_mnxm735438 +nadph +3_hydroxy_geranylhydroquinone +h2o_water
     nadp
   }
 

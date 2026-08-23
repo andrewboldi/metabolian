@@ -12,9 +12,9 @@ pathway geranyl-diphosphate-to-nadph "geranyl diphosphate to NADPH" {
     s_terpineol
     <-> ec_4_2_3_108 [4.2.3.108]
     1_8_cineole
-    <-> ec_1_14_14_133 [1.14.14.133] +fmnh2 +h +o2 -fmn -h2o
+    <-> ec_1_14_14_133 [1.14.14.133] +fmnh2 +h +o2 -fmn -h2o_water
     2_exo_hydroxy_1_8_cineole
-    <-> ec_1_14_13_157 [1.14.13.157] +nadp +h2o -1_8_cineole -o2 -nadph
+    <-> ec_1_14_13_157 [1.14.13.157] +nadp +h2o_water -1_8_cineole -o2 -nadph
     h
   }
 }

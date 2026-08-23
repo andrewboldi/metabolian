@@ -28,13 +28,13 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst "(1R,5aS,6R)-1,4,5,5a,6,
 
   branch from 1r_10as_1_4_10_10a_tetrahydrophenazine_1_6_dica side left {
     1r_10as_1_4_10_10a_tetrahydrophenazine_1_6_dica
-    <-> . +1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar +o2 +h2o2
+    <-> . +1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar +o2_mnxm735438 +h2o2_mnxm732620
     h
   }
 
   branch from 5_10_dihydrophenazine_1_6_dicarboxylate side right {
     5_10_dihydrophenazine_1_6_dicarboxylate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
     atp
   }
 
@@ -58,13 +58,13 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst "(1R,5aS,6R)-1,4,5,5a,6,
 
   branch from 1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d side right {
     1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d
-    <-> . +h +h2o
+    <-> . +h +h2o_water
     1r_6s_6_amino_5_oxocyclohex_2_ene_1_carboxylic
   }
 
   branch from 1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d side left {
     1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d
-    <-> . +h +h2o
+    <-> . +h +h2o_water
     1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy
   }
 

@@ -39,7 +39,7 @@ pathway lipid-a-to-h-51748 "lipid A to H" {
   branch from n_acetyl_d_mannosaminyl_1_4_n_acetyl_d_glucosami side left {
     n_acetyl_d_mannosaminyl_1_4_n_acetyl_d_glucosami
     <-> . +udp_n_acetyl_alpha_d_mannosamine +beta_d_mannac_1_3_beta_d_mannac_1_4_beta_d_manna +h
-    udp
+    udp_mnxm1102128
   }
 
   branch from cytidine_5_monophosphate side right {
@@ -63,7 +63,7 @@ pathway lipid-a-to-h-51748 "lipid A to H" {
   branch from gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und side left {
     gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und
     <-> . +udp_n_acetyl_alpha_d_galactosamine +galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +h
-    ump
+    ump_mnxm1104823
   }
 
   branch from gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und side right {

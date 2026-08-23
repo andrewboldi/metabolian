@@ -12,7 +12,7 @@ pathway h-to-hydrogen-acceptor "H to hydrogen acceptor" {
     arsanilate
     <-> . +h -o2
     p_aminophenylarsonous_acid
-    <-> . +hydrogen_donor +o2 -arsenite -hydrogen_acceptor
+    <-> . +hydrogen_donor +o2_chebi_15379 -arsenite -hydrogen_acceptor
     4_ammoniocyclohexa_2_5_dien_1_one
   }
 }

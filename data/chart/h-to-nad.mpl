@@ -89,7 +89,7 @@ pathway h-to-nad "H to NAD" {
   branch from 20_cooh_leukotriene_e4 side left {
     20_cooh_leukotriene_e4
     <-> . +diphosphate +amp +h +atp +coa
-    coa_20_cooh_lte4
+    coa_20_cooh_lte4_mnxm736785
   }
 
   branch from h side right {

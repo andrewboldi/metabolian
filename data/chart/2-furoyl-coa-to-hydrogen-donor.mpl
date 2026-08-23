@@ -12,35 +12,161 @@ pathway 2-furoyl-coa-to-hydrogen-donor "2-furoyl-CoA to hydrogen donor" {
     atp
     <-> . +h +2_furoate +h2o2 -o2 -h2o
     furfural
-    <-> . +nad +h2o -nadh -hplus
-    2_furoate
-    <-> ec_6_2_1_31 [6.2.1.31] +atp +coa -amp -ppi
-    2_furoyl_coa
-    <-> ec_1_3_99_8 [1.3.99.8] +hydrogen_acceptor +h2o -hydrogen_donor -hplus
+    <-> . +nad +h2o_chebi_15377 -nadh -hplus
+    2_furoate_chebi_16739
+    <-> ec_6_2_1_31 [6.2.1.31] +atp_chebi_30616 +coa_chebi_57287 -amp -ppi
+    2_furoyl_coa_chebi_57333
+    <-> ec_1_3_99_8 [1.3.99.8] +hydrogen_acceptor +h2o_chebi_15377 -hydrogen_donor -hplus
     5_hydroxy_2_furoyl_coa
   }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    lithocholate_sulfate
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    leukotriene_c4
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +5z_tetradecenoyl_coa +r_carnitine
+    tetradecenoylcarnitine_9
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +7z_hexadecenoyl_coa +r_carnitine
+    2e_hexadecenoylcarnitine
+  }
 
+  branch from furfural side left {
+    furfural
+    <-> . +h +nadph +nadp
+    furfuryl_alcohol
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +n_hydroxyhistamine +nadp +h2o +nadph
+    histamine
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +dihydrotoxoflavin +1_6e_5_hydroxy_1_methyl_1_6_dihydro_1_2_4_triazi
+    co2
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +heptadecanoate +h +cholesterol
+    cholest_5_en_3b_yl_heptadecanoate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +nonadecanoate +h +cholesterol
+    cholesteryl_nonadecanoate
+  }
 
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    w_carboxy_leukotriene_b4
+  }
 
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    leucyl_leucine
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +na +adp +na +atp +h2o
+    r_lipoate
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    losartan
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    lovastatin
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +r_carnitine +13z_octadecenoyl_coa
+    octadecenoyl_carnitine
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +r_carnitine +trans_9_octadecenoyl_coa
+    9e_octadec_9_enoylcarnitine
+  }
 
+  branch from h side right {
+    h
+    <-> . +7z_hexadecenoyl_coa +fad +fadh2
+    2e_7z_hexadecadienoyl_coa
+  }
 
+  branch from h side left {
+    h
+    <-> . +2e_13z_icosadienoyl_coa +fadh2 +13z_icosenoyl_coa
+    fad
+  }
 
+  branch from h2o2 side right {
+    h2o2
+    <-> . +2_hydroxy_2_1h_indol_3_yl_acetonitrile +o2
+    indole_3_carbonyl_nitrile
+  }
 
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_3_3_8 [1.3.3.8] +coptisine +h +o2
+    s_stylopine
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +2z_4e_2_hydroxyhexa_2_4_dienedioate +h +chloride +h2o
+    3_chlorocatechol
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_3_3_8 [1.3.3.8] +h +sinactine +h2o2
+    epiberberine
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +11z_eicosenoate +h +cholesterol
+    cholesteryl_11z_icosenoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +13z_docosenoate +h +cholesterol
+    cholest_5_en_3b_yl_13z_docosenoate
+  }
 }

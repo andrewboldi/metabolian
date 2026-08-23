@@ -72,8 +72,8 @@ pathway p-nitrophenyl-n-acetyl-be-to-h2o "p-Nitrophenyl-N-acetyl-be… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro +2_4_chlorophenyl_3_3_dichloropropenoate
-    2_hydroxy_3_chloropenta_2_4_dienoate
+    <-> . +6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro_mnxm1369029 +2_4_chlorophenyl_3_3_dichloropropenoate
+    2_hydroxy_3_chloropenta_2_4_dienoate_mnxm1370859
   }
 
   branch from h side left {

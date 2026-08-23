@@ -10,7 +10,7 @@ pathway luteolin-to-s-adenosyl-l-homocysteine "luteolin to S-adenosyl-L-homocyst
     luteolin
     <-> ec_3_2_1_62 [3.2.1.62] +glucose -h2o
     luteolin_4_o_d_glucoside
-    <-> . +h2o -d_glucose
+    <-> . +h2o_chebi_15377 -d_glucose
     luteolin_7_olate
     <-> . +sam -sah -hplus
     luteolin_5_olate_7_methyl_ether

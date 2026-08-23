@@ -14,13 +14,13 @@ pathway dihydrodemethylsterigmato-to-8-o-methyldihydrost "dihydrodemethylsterigm
     8_o_methyldihydrosterigmatocystin
     <-> ec_1_14_14_117 [1.14.14.117] +fmnh2 +o2 -methanol -fmn -co2 -h2o -hplus
     aflatoxin_b2
-    <-> . +co2 +nadp +methanol +h2o -o2 -nadph -8_o_methyldihydrosterigmatocystin
+    <-> . +co2_mnxm13 +nadp +methanol_mnxm729799 +h2o_water -o2_mnxm735438 -nadph -8_o_methyldihydrosterigmatocystin
     h
   }
 
   branch from h side left {
     h
-    <-> . +co2 +1_2_dihydropyrimidine
+    <-> . +co2_mnxm13 +1_2_dihydropyrimidine
     3_6_dihydronicotinate
   }
 
@@ -30,14 +30,14 @@ pathway dihydrodemethylsterigmato-to-8-o-methyldihydrost "dihydrodemethylsterigm
     3_6_dihydronicotine
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +2_dihydroxymethyl_furan +h +h2o2
     2_furoate
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +h +2z_4z_2_amino_5_formylhexa_2_4_dienedioate
     4_amino_3_hydroxybenzoate
   }
@@ -50,25 +50,25 @@ pathway dihydrodemethylsterigmato-to-8-o-methyldihydrost "dihydrodemethylsterigm
 
   branch from nadph side right {
     nadph
-    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +nadp +h2o
+    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2_mnxm735438 +nadp +h2o_water
     2_hydroxy_3_7_4_trimethylquercetin
   }
 
-  branch from co2 side left {
-    co2
-    <-> . +h2 +h2o
+  branch from co2_mnxm13 side left {
+    co2_mnxm13
+    <-> . +h2 +h2o_water
     co
   }
 
-  branch from co2 side right {
-    co2
-    <-> . +nonadec_1_ene +h2o +h +h2o2
+  branch from co2_mnxm13 side right {
+    co2_mnxm13
+    <-> . +nonadec_1_ene +h2o_water +h +h2o2
     eicosanoate
   }
 
   branch from nadp side left {
     nadp
-    <-> . +casticin +h +o2 +nadph +h2o
+    <-> . +casticin +h +o2_mnxm735438 +nadph +h2o_water
     2_hydroxy_3_6_7_4_tetramethylquercetagetin
   }
 
@@ -78,51 +78,51 @@ pathway dihydrodemethylsterigmato-to-8-o-methyldihydrost "dihydrodemethylsterigm
     porifersta_5_7_dienol
   }
 
-  branch from methanol side left {
-    methanol
-    <-> ec_3_1_1_95 [3.1.1.95] +aclacinomycin_a +h2o
+  branch from methanol_mnxm729799 side left {
+    methanol_mnxm729799
+    <-> ec_3_1_1_95 [3.1.1.95] +aclacinomycin_a +h2o_water
     15_demethoxy_aclacinomycin_a
   }
 
-  branch from methanol side right {
-    methanol
-    <-> ec_3_1_1_95 [3.1.1.95] +15_demethoxy_epsilon_rhodomycinone +h +h2o
+  branch from methanol_mnxm729799 side right {
+    methanol_mnxm729799
+    <-> ec_3_1_1_95 [3.1.1.95] +15_demethoxy_epsilon_rhodomycinone +h +h2o_water
     epsilon_rhodomycinone
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_159 [3.2.1.159] +agarotriose +3_6_anhydro_l_galactopyranose
     neoagarotetraose
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_1_159 [3.2.1.159] +agaropentaose +3_6_anhydro_l_galactopyranose
     neoagarohexaose
   }
 
   branch from h side left {
     h
-    <-> . +2z_4z_2_amino_5_formylhexa_2_4_dienedioate +h2o
+    <-> . +2z_4z_2_amino_5_formylhexa_2_4_dienedioate +h2o_water
     isocinchomeronic_acid
   }
 
   branch from h side right {
     h
-    <-> . +2_oxoglutarate +antibiotic_ji_20b +h2o2 +o2 +l_glutamate
+    <-> . +2_oxoglutarate +antibiotic_ji_20b +h2o2 +o2_mnxm735438 +l_glutamate
     geneticin_cation
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +2_aminophenoxazin_3_one +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +2_aminophenoxazin_3_one +h2o_water
     6_iminocyclohexa_2_4_dienone
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +co2 +prodeoxyviolacein +h2o +h
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +co2_mnxm13 +prodeoxyviolacein +h2o_water +h
     protodeoxyviolaceinate
   }
 

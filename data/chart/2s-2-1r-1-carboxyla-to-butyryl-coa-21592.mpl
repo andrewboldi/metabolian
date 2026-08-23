@@ -69,7 +69,7 @@ pathway 2s-2-1r-1-carboxyla-to-butyryl-coa-21592 "(2S)-2-{[(1R)-1-carboxyla… t
   branch from butyryl_coa side left {
     butyryl_coa
     <-> ec_1_3_1_109 [1.3.1.109] +di_sulfido_diiron +nad +crotonoyl_coa +nadh
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33737
   }
 
   branch from butyryl_coa side right {

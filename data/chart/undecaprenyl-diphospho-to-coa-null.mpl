@@ -8,9 +8,9 @@ pathway undecaprenyl-diphospho-to-coa-null "Undecaprenyl-diphospho… to CoA" {
 
   spine at 0,0 {
     undecaprenyl_diphospho_n_acetylglucosamine_n_ace
-    <-> ec_2_4_1_325 [2.4.1.325] +dtdp +h -undecaprenyl_diphospho_n_acetylglucosamine_n_ace
+    <-> ec_2_4_1_325 [2.4.1.325] +dtdp +h -undecaprenyl_diphospho_n_acetylglucosamine_n_ace_mnxm1371446
     dtdp_4_acetamido_4_6_dideoxy_d_galactose
-    <-> ec_2_4_1_180 [2.4.1.180] +udp +undecaprenyl_diphospho_n_acetylglucosamine_n_ace +h -undecaprenyl_diphospho_n_acetyl_glucosamine
+    <-> ec_2_4_1_180 [2.4.1.180] +udp +undecaprenyl_diphospho_n_acetylglucosamine_n_ace_mnxm1371446 +h -undecaprenyl_diphospho_n_acetyl_glucosamine
     udp_n_acetyl_alpha_d_mannosaminouronate
     <-> . +dtdp_beta_l_rhamnose +undecaprenyl_diphospho_n_acetyl_glucosamine -dtdp -h
     rhamanosyl_n_acetylglucosamyl_undecaprenyl_dipho

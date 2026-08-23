@@ -42,7 +42,7 @@ pathway z-1-glutathion-s-yl-n-to-l-serine "(Z)-1-(glutathion-S-yl)-N… to L-ser
 
   branch from 4_methylthiobutylthiohydroximate side left {
     4_methylthiobutylthiohydroximate
-    <-> ec_2_4_1_195 [2.4.1.195] +3_methylthiopropyl_desulfoglucosinolate +h +udp_alpha_d_glucose
+    <-> ec_2_4_1_195 [2.4.1.195] +3_methylthiopropyl_desulfoglucosinolate_chebi_80985 +h +udp_alpha_d_glucose
     udp
   }
 

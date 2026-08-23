@@ -19,7 +19,7 @@ pathway questin-hydroquinone-to-bisdechlorogeodin "questin hydroquinone to (−)
   branch from sulochrin side left {
     sulochrin
     <-> ec_1_21_3_4 [1.21.3.4] +o2 +hplus +h2o
-    bisdechlorogeodin
+    bisdechlorogeodin_chebi_15390
   }
 
   branch from sulochrin side right {

@@ -18,7 +18,7 @@ pathway s-cis-n-methylcanadine-to-narcotoline-hemiaceta "(S)-cis-N-methylcanadin
     13s_14r_1_8_dihydroxy_13_o_acetyl_n_methylcanad
     <-> . -hplus
     3_o_acetyl_4_o_demethylpapaveroxine
-    <-> ec_3_1_1_105 [3.1.1.105] +h2o -acetate -4_o_desmethylpapaveroxine
+    <-> ec_3_1_1_105 [3.1.1.105] +h2o_water -acetate -4_o_desmethylpapaveroxine
     h
     <-> . +4_o_desmethylpapaveroxine
     narcotoline_hemiacetal

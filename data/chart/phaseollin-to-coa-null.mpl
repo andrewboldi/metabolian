@@ -159,7 +159,7 @@ pathway phaseollin-to-coa-null "(-)-Phaseollin to CoA" {
   branch from diphosphate side right {
     diphosphate
     <-> ec_4_2_3_51 [4.2.3.51] +neryl_diphosphate
-    phellandrene
+    phellandrene_chebi_129
   }
 
   branch from dimethylallyl_diphosphate side left {

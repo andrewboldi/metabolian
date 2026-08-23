@@ -106,13 +106,13 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> ec_2_1_1_224 [2.1.1.224] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
+    <-> ec_2_1_1_224 [2.1.1.224] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron_chebi_33737 +sah
     8_methyladenosine_5_monophosphate_1
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
+    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron_chebi_33737 +sah
     2_methyladenosine_5_monophosphate_1
   }
 
@@ -148,7 +148,7 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
 
   branch from acetylacetone side right {
     acetylacetone
-    <-> ec_1_1_1_149 [1.1.1.149] +h +nadph +nadp
+    <-> ec_1_1_1_149 [1.1.1.149] +h +nadph_mnxm738702 +nadp_mnxm5
     compound_0000420
   }
 
@@ -178,8 +178,8 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
 
   branch from d_fructofuranose_1_phosphate side left {
     d_fructofuranose_1_phosphate
-    <-> ec_2_7_1_3 [2.7.1.3] +h +adp +d_fructofuranose
-    atp
+    <-> ec_2_7_1_3 [2.7.1.3] +h +adp_mnxm40333 +d_fructofuranose
+    atp_mnxm3
   }
 
   branch from d_glyceraldehyde side right {

@@ -67,7 +67,7 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
   branch from r_r_2_3_dimethyl_6_phytylhydroquinone side right {
     r_r_2_3_dimethyl_6_phytylhydroquinone
     <-> ec_5_5_1_24 [5.5.1.24]
-    tocopherol
+    tocopherol_chebi_18185
   }
 
   branch from sah side left {
@@ -108,13 +108,13 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58635 +h2o
     copalol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58635 +h2o
     manool
   }
 

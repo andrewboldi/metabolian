@@ -10,7 +10,7 @@ pathway 3r-7z-10z-13z-16z-3-hyd-to-nadph "(3R,7Z,10Z,13Z,16Z)-3-hyd… to NADPH"
     3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa
     <-> . -h2o
     2e_7z_10z_13z_16z_docosapentaenoyl_coa
-    <-> . +h2o
+    <-> . +h2o_water
     7z_10z_13z_16z_s_3_hydroxydocosatetraenoyl_coa
     <-> . +nadp -7z_10z_13z_16z_3_oxodocosatetraenoyl_coa -nadph
     h

@@ -16,14 +16,14 @@ pathway o-methyl-l-tyrosine-to-h2o-74487 "O-methyl-L-tyrosine to H2O" {
     4_methoxycyclopenine
     <-> ec_4_1_99_27 [4.1.99.27] -methyl_isocyanate -hplus
     4_methoxyviridicatin
-    <-> . +h +o2 +nadph -nadp -h2o
+    <-> . +h +o2_mnxm735438 +nadph -nadp -h2o_water
     yaequinolone_a2
   }
 
   branch from s_4_methoxycyclopeptine side left {
     s_4_methoxycyclopeptine
-    <-> ec_1_14_11_81 [1.14.11.81] +2_oxoglutarate +o2 +4_methoxycyclopenine +succinate +h2o
-    co2
+    <-> ec_1_14_11_81 [1.14.11.81] +2_oxoglutarate +o2_mnxm735438 +4_methoxycyclopenine +succinate_mnxm25 +h2o_water
+    co2_mnxm13
   }
 
   branch from sah side right {
@@ -64,18 +64,18 @@ pathway o-methyl-l-tyrosine-to-h2o-74487 "O-methyl-L-tyrosine to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +22_oxo_docosanoyl_coa +h2o
+    <-> . +h +nadph +22_oxo_docosanoyl_coa +h2o_water
     22_carboxy_docosanoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +nh4
     und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
     z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
   }
@@ -130,19 +130,19 @@ pathway o-methyl-l-tyrosine-to-h2o-74487 "O-methyl-L-tyrosine to H2O" {
 
   branch from h side left {
     h
-    <-> . +s_scoulerine +o2 +h2o2
+    <-> . +s_scoulerine +o2_mnxm735438 +h2o2
     dehydroscoulerine
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +5_hydroxymethylfurfural +h2o2
     2_5_furandimethanol
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +nadh +4r_perillyl_aldehyde +h +nad +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +nadh +4r_perillyl_aldehyde +h +nad_mnxm8 +h2o_water
     4r_4_1_methylethenyl_1_cyclohexenecarboxylic_ac
   }
 
@@ -170,9 +170,9 @@ pathway o-methyl-l-tyrosine-to-h2o-74487 "O-methyl-L-tyrosine to H2O" {
     3_oxoglycyrrhetinate
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+  branch from h2o_water side right {
+    h2o_water
+    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10455 +l_glutamate
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10456
   }
 }

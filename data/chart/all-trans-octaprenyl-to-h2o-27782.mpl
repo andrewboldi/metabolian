@@ -10,15 +10,15 @@ pathway all-trans-octaprenyl-to-h2o-27782 "all-trans-octaprenyl… to H2O" {
     all_trans_octaprenyl_diphosphate
     <-> ec_2_5_1_39 [2.5.1.39] +4_hydroxybenzoate -ppi
     4_hydroxy_3_octaprenylbenzoate
-    <-> ec_1_14_15_45 [1.14.15.45] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_45 [1.14.15.45] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     3_4_dihydroxy_5_all_trans_octaprenylbenzoate
     <-> ec_2_1_1_114 [2.1.1.114] +sam -sah -hplus
     3_methoxy_4_hydroxy_5_all_trans_octaprenylbenzoa
     <-> ec_4_1_1_130 [4.1.1.130] +hplus -co2
     2_methoxy_6_all_trans_octaprenyl_phenol
-    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     6_methoxy_2_octaprenylhydroquinone
-    <-> . +nadh +h +adp +phosphate -atp -nad -h2o
+    <-> . +nadh +h +adp +phosphate -atp -nad -h2o_water
     2_methoxy_6_all_trans_octaprenyl_phenol
   }
 }

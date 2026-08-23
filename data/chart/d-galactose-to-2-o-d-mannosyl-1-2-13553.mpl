@@ -60,7 +60,7 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2-13553 "α-D-galactose to 2-O-[α-D-man
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622
     stemar_13_ene
   }
 
@@ -73,7 +73,7 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2-13553 "α-D-galactose to 2-O-[α-D-man
   branch from d_galactose side left {
     d_galactose
     <-> ec_5_1_3_3 [5.1.3.3]
-    d_galactose
+    d_galactose_chebi_27667
   }
 
   branch from udp_d_glucose side right {
@@ -97,7 +97,7 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2-13553 "α-D-galactose to 2-O-[α-D-man
   branch from g1p side left {
     g1p
     <-> ec_2_7_7_69 [2.7.7.69] +pi +gdp +hplus
-    gdp_d_glucose
+    gdp_d_glucose_chebi_62230
   }
 
   branch from udp_d_galactose side right {
@@ -114,13 +114,13 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2-13553 "α-D-galactose to 2-O-[α-D-man
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622
     stemod_13_17_ene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622
     9_pimara_7_15_diene
   }
 

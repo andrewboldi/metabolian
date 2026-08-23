@@ -28,13 +28,13 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from l_fucopyranose side left {
     l_fucopyranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o_water
     atp
   }
 
   branch from l_fucopyranose side right {
     l_fucopyranose
-    <-> . +myxol +h2o
+    <-> . +myxol +h2o_water
     myxol_2_fucoside
   }
 
@@ -52,7 +52,7 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from l_fucono_1_5_lactone side left {
     l_fucono_1_5_lactone
-    <-> . +h2o +d_fuconate
+    <-> . +h2o_water +d_fuconate
     h
   }
 
@@ -70,7 +70,7 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from lactate side right {
     lactate
-    <-> . +atp +hplus +ppi
+    <-> . +atp_chebi_30616 +hplus +ppi
     s_lactoyl_amp
   }
 
@@ -82,7 +82,7 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from malate side right {
     malate
-    <-> ec_6_2_1_9 [6.2.1.9] +atp +coa +adp +pi
+    <-> ec_6_2_1_9 [6.2.1.9] +atp_chebi_30616 +coa +adp_chebi_456216 +pi
     3s_3_carboxy_3_hydroxypropanoyl_coa
   }
 
@@ -94,19 +94,19 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> ec_4_1_1_49 [4.1.1.49] +atp +adp +co2
+    <-> ec_4_1_1_49 [4.1.1.49] +atp_chebi_30616 +adp_chebi_456216 +co2
     phosphonatoenolpyruvate
   }
 
   branch from l_fucopyranose side left {
     l_fucopyranose
-    <-> ec_3_2_1_51 [3.2.1.51] +d_galactopyranose +h2o
+    <-> ec_3_2_1_51 [3.2.1.51] +d_galactopyranose +h2o_water
     l_fucp_1_6_d_galp
   }
 
   branch from l_fucopyranose side right {
     l_fucopyranose
-    <-> ec_3_2_1_51 [3.2.1.51] +n_acetyl_d_hexosamine +h2o
+    <-> ec_3_2_1_51 [3.2.1.51] +n_acetyl_d_hexosamine +h2o_water
     l_fucp_1_3_d_glcpnac
   }
 

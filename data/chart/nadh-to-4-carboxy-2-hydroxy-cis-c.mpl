@@ -11,7 +11,7 @@ pathway nadh-to-4-carboxy-2-hydroxy-cis-c "NADH to 4-carboxy-2-hydroxy-cis,c…"
     <-> ec_1_1_1_312 [1.1.1.312] +2_oxo_2h_pyran_4_6_dicarboxylate +h -nad
     4_carboxy_2_hydroxymuconate_semialdehyde_hemiace
     <-> ec_1_1_1_312 [1.1.1.312] +nadp -nadph -hplus
-    2_oxo_2h_pyran_4_6_dicarboxylate
+    2_oxo_2h_pyran_4_6_dicarboxylate_chebi_58304
     <-> ec_3_1_1_57 [3.1.1.57] +h2o -hplus
     1e_4_oxobut_1_ene_1_2_4_tricarboxylate
     <-> ec_5_3_2_8 [5.3.2.8]
@@ -62,7 +62,7 @@ pathway nadh-to-4-carboxy-2-hydroxy-cis-c "NADH to 4-carboxy-2-hydroxy-cis,c…"
 
   branch from 2_oxo_2h_pyran_4_6_dicarboxylate side right {
     2_oxo_2h_pyran_4_6_dicarboxylate
-    <-> ec_3_1_1_57 [3.1.1.57] +h2o +h
+    <-> ec_3_1_1_57 [3.1.1.57] +h2o_water +h
     4_carboxy_2_hydroxyhexa_2_4_dienedioate
   }
 

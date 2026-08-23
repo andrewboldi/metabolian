@@ -10,7 +10,7 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol "1-naphthaleneacetamide t
     1_naphthaleneacetamide
     <-> . +h2o -nh3
     1_naphthaleneacetate
-    <-> ec_3_1_1_1 [3.1.1.1] +h2o -1_naphthol
+    <-> ec_3_1_1_1 [3.1.1.1] +h2o_water -1_naphthol
     acetate
     <-> . +1_naphthol +o2
     naphthalene_1_4_diol
@@ -24,7 +24,7 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol "1-naphthaleneacetamide t
 
   branch from acetate side right {
     acetate
-    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +h2o
+    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +h2o_water
     n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
   }
 
@@ -36,7 +36,7 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol "1-naphthaleneacetamide t
 
   branch from 1_naphthol side right {
     1_naphthol
-    <-> ec_3_1_1_1 [3.1.1.1] +1_naphthylbutanoic_acid +h2o +butanoate
+    <-> ec_3_1_1_1 [3.1.1.1] +1_naphthylbutanoic_acid +h2o_water +butanoate
     h
   }
 
@@ -48,55 +48,55 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol "1-naphthaleneacetamide t
 
   branch from naphthalene_1_4_diol side right {
     naphthalene_1_4_diol
-    <-> ec_1_2_5_3 [1.2.5.3] +1_4_naphthoquinone +co +h2o
+    <-> ec_1_2_5_3 [1.2.5.3] +1_4_naphthoquinone +co +h2o_water
     co2
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +o2 +nadph +n_3_carboxypropanoyl_n_hydroxyputrescine +3_4_amino_3_hydroxybutyl_hydroxy_carbamoyl_propa
     nadp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +melatonin +h2o2
     n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
   }
 
   branch from acetate side left {
     acetate
-    <-> . +s_4_hydroxy_nonenal_3_yl_l_cysteine +h2o
+    <-> . +s_4_hydroxy_nonenal_3_yl_l_cysteine +h2o_water
     4_hydroxy_2_nonenal_n_acetyl_l_cysteine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +3_aminobutan_2_ol +h2o
+    <-> . +3_aminobutan_2_ol +h2o_water
     n_3_hydroxybutan_2_yl_acetamide
   }
 
   branch from 1_naphthol side left {
     1_naphthol
-    <-> ec_1_11_2_1 [1.11.2.1] +h2o2 +h2o
+    <-> ec_1_11_2_1 [1.11.2.1] +h2o2 +h2o_water
     naphthalene
   }
 
   branch from 1_naphthol side right {
     1_naphthol
-    <-> ec_3_1_3_1 [3.1.3.1] +1_naphthyl_dihydrogen_phosphate +h2o +h
+    <-> ec_3_1_3_1 [3.1.3.1] +1_naphthyl_dihydrogen_phosphate +h2o_water +h
     phosphate
   }
 
   branch from o2 side left {
     o2
-    <-> . +7_7_dimethyl_2_methylenebicyclo_2_2_1_heptane +co2 +h2o
+    <-> . +7_7_dimethyl_2_methylenebicyclo_2_2_1_heptane +co2 +h2o_water
     alpha_fenchocamphorone
   }
 
   branch from o2 side right {
     o2
-    <-> . +beta_fenchene +co2 +h2o
+    <-> . +beta_fenchene +co2 +h2o_water
     beta_fenchocamphorone
   }
 }

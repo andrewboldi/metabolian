@@ -14,19 +14,19 @@ pathway glycosmisate-to-h2o-49840 "glycosmisate to H2O" {
     co2
     <-> . +poacic_acid +o2 -h -vanillin
     5_formylferulate
-    <-> ec_1_2_3_9 [1.2.3.9] +nadh +o2 +vanillin -vanillate -h2o
+    <-> ec_1_2_3_9 [1.2.3.9] +nadh +o2 +vanillin -vanillate -h2o_water
     nad
     <-> ec_2_1_1_382 [2.1.1.382] +cbl +h +vanillate -methylcobalamin
     3_4_dihydroxybenzoate
-    <-> . +co2 +nadp +h2o -o2 -nadph
+    <-> . +co2 +nadp +h2o_water -o2 -nadph
     4_hydroxyisophthalic_acid
-    <-> . +nadh +o2 -co2 -nad -h2o
+    <-> . +nadh +o2 -co2 -nad -h2o_water
     3_4_dihydroxybenzoate
   }
 
   branch from co2 side left {
     co2
-    <-> . +7r_7_4_carboxybutanamido_cephalosporanate +h2o +h2o2
+    <-> . +7r_7_4_carboxybutanamido_cephalosporanate +h2o_water +h2o2
     7r_7_5_carboxy_5_oxopentanamido_deacetylcephalo
   }
 
@@ -84,21 +84,21 @@ pathway glycosmisate-to-h2o-49840 "glycosmisate to H2O" {
     pelargonin
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_15 [3.2.1.15] +beta_d_galacturonate
     d_galacturonosyl_1_4_d_galacturonate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_2_4_1_8 [2.4.1.8] +gamma_carotene
     1_hydroxy_carotene
   }
 
   branch from 3_4_dihydroxybenzoate side left {
     3_4_dihydroxybenzoate
-    <-> ec_1_3_1_53 [1.3.1.53] +hydrogencarbonate +nadh +h +nad +h2o
+    <-> ec_1_3_1_53 [1.3.1.53] +hydrogencarbonate +nadh +h +nad +h2o_water
     3s_4r_3_4_dihydroxycyclohexa_1_5_diene_1_4_dica
   }
 
@@ -122,7 +122,7 @@ pathway glycosmisate-to-h2o-49840 "glycosmisate to H2O" {
 
   branch from 4_hydroxyisophthalic_acid side left {
     4_hydroxyisophthalic_acid
-    <-> . +nadh +nad +h2o
+    <-> . +nadh +nad +h2o_water
     3_formyl_4_hydroxybenzoate
   }
 
@@ -140,31 +140,31 @@ pathway glycosmisate-to-h2o-49840 "glycosmisate to H2O" {
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +tamoxifen +o2 +nadp +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +h +tamoxifen +o2 +nadp +h2o_water
     afimoxifene
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadp +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadp +h2o_water
     4_hydroxy_n_desmethyltamoxifen
   }
 
   branch from glycosmisate side right {
     glycosmisate
-    <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +nad +h2o
+    <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +nad +h2o_water
     dehydrodiconiferyl_aldehyde
   }
 
   branch from h side left {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +beta_2_3_4_5_6_pentachlorocyclohexanol +chloride +h2o
+    <-> ec_3_8_1_5 [3.8.1.5] +beta_2_3_4_5_6_pentachlorocyclohexanol +chloride +h2o_water
     beta_hexachlorocyclohexane
   }
 
   branch from h side right {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +chloride +beta_2_3_5_6_tetrachloro_1_4_cyclohexanediol +h2o
+    <-> ec_3_8_1_5 [3.8.1.5] +chloride +beta_2_3_5_6_tetrachloro_1_4_cyclohexanediol +h2o_water
     beta_2_3_4_5_6_pentachlorocyclohexanol
   }
 

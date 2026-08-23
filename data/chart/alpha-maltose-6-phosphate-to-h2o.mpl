@@ -11,8 +11,8 @@ pathway alpha-maltose-6-phosphate-to-h2o "alpha-maltose 6'-phosphate to H2O" {
     <-> . +pyruvate -phosphoenolpyruvate
     d_glucosyl_1_4_d_mannose
     <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g -glucose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g -h2o
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143183
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143183 -h2o
     atp
   }
 

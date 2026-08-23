@@ -25,7 +25,7 @@ pathway 25s-3alpha-7alpha-12alp-to-nad-null "(25S)-3alpha,7alpha,12alp… to NAD
   branch from 3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2 side right {
     3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2
     <-> . +h2o +h
-    24_r_25_r_varanoyl_coa
+    24_r_25_r_varanoyl_coa_mnxm1560367
   }
 
   branch from h2o2 side left {

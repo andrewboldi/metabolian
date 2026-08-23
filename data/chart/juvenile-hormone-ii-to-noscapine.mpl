@@ -22,26 +22,147 @@ pathway juvenile-hormone-ii-to-noscapine "juvenile hormone II to (−)-noscapine
     noscapine
   }
 
+  branch from methanol side left {
+    methanol
+    <-> ec_3_1_1_122 [3.1.1.122] +carbendazim +h2o +co2
+    2_aminobenzimidazole
+  }
 
+  branch from methanol side right {
+    methanol
+    <-> . +carbendazim +h2o +hplus
+    n_1h_1_3_benzodiazol_2_yl_carbamate
+  }
 
+  branch from methyl_anthranilate side left {
+    methyl_anthranilate
+    <-> ec_2_1_1_277 [2.1.1.277] +sam +sah
+    anthranilate_chebi_16567
+  }
 
+  branch from s_s_adenosyl_l_methionine side right {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +h +imipramine
+    desipramine
+  }
 
+  branch from s_s_adenosyl_l_methionine side left {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +h +n_methylpyrazole
+    1h_pyrazole
+  }
 
+  branch from anthranilate side right {
+    anthranilate
+    <-> . +o_aminobenzaldehyde +o2 +nadph +h2o_water
+    nadp
+  }
 
+  branch from anthranilate side left {
+    anthranilate
+    <-> . +fumiquinazoline_f +diphosphate +h +amp +h2o_water +atp +l_tryptophan
+    l_alanine
+  }
 
+  branch from 3_o_acetylpapaveroxine side right {
+    3_o_acetylpapaveroxine
+    <-> ec_3_1_1_105 [3.1.1.105] +h2o_water +acetate_mnxm26 +papaveroxine
+    h
+  }
 
+  branch from 3_o_acetylpapaveroxine side left {
+    3_o_acetylpapaveroxine
+    <-> ec_2_1_1_352 [2.1.1.352] +s_adenosyl_l_homocysteine +h +3_o_acetyl_4_o_demethylpapaveroxine
+    s_adenosyl_l_methionine
+  }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_262 [2.1.1.262] +squalene +sam +hplus
+    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+  }
 
+  branch from sah side left {
+    sah
+    <-> . +squalene +sam +hplus
+    3_methyl_1_2_didehydro_2_3_dihydrosqualene
+  }
 
+  branch from noscapine_hemiacetal side right {
+    noscapine_hemiacetal
+    <-> .
+    papaveroxine
+  }
 
+  branch from methanol side left {
+    methanol
+    <-> . +methylarsonous_acid +hydrogen_donor +o2_chebi_15379 +hydrogen_acceptor +hplus
+    arsenite
+  }
 
+  branch from methanol side right {
+    methanol
+    <-> . +methyl_nicotinate +h2o +hplus
+    nicotinate
+  }
 
+  branch from anthraniloyl_coa side left {
+    anthraniloyl_coa
+    <-> ec_2_3_1_262 [2.3.1.262] +malonyl-coa +hplus +co2 +coa
+    2_aminobenzoylacetyl_coa
+  }
 
+  branch from anthraniloyl_coa side right {
+    anthraniloyl_coa
+    <-> . +l_cysteine +coa
+    s_anthraniloyl_l_cysteine
+  }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +h +s_n_methylsalsolinol +s_adenosyl_l_methionine
+    s_salsolinol
+  }
 
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +o_methylhippuric_acid +s_adenosyl_l_methionine
+    n_benzoylglycine
+  }
 
+  branch from s_s_adenosyl_l_methionine side left {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +magnesium_protoporphyrin_monomethyl_ester
+    magnesium_protoporphyrin
+  }
 
+  branch from s_s_adenosyl_l_methionine side right {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_40 [2.1.1.40] +s_adenosyl_l_homocysteine +h +1d_1_o_methyl_myo_inositol
+    inositol
+  }
 
+  branch from anthranilate side left {
+    anthranilate
+    <-> . +ardeemin_fq +diphosphate +h +amp +h2o_water +l_alanine +l_tryptophan
+    atp
+  }
 
+  branch from anthranilate side right {
+    anthranilate
+    <-> . +asperlicin_c +diphosphate +h +amp +h2o_water +atp
+    l_tryptophan
+  }
 
+  branch from sah side left {
+    sah
+    <-> . +3_methyl_1_2_didehydro_2_3_dihydrosqualene +3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t +hplus
+    sam
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+  }
 }

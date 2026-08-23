@@ -96,8 +96,8 @@ pathway 2e-3-2-4-dihydroxy-5-m-to-e-ferulate-null "(2E)-3-(2,4-dihydroxy-5-m… 
 
   branch from co2 side right {
     co2
-    <-> . +2_polyprenyl_6_methoxyphenol
-    3_polyprenyl_4_hydroxy_5_methoxybenzoate
+    <-> . +2_polyprenyl_6_methoxyphenol_mnxm736938
+    3_polyprenyl_4_hydroxy_5_methoxybenzoate_mnxm737011
   }
 
   branch from succinate side left {

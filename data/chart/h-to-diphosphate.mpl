@@ -62,7 +62,7 @@ pathway h-to-diphosphate "H to diphosphate" {
 
   branch from geranylgeranyl_diphosphate side right {
     geranylgeranyl_diphosphate
-    <-> . +atp +adp
+    <-> . +atp_chebi_30616 +adp
     geranylgeranyl_triphosphate
   }
 

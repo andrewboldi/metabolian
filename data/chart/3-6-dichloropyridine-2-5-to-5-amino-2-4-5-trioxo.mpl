@@ -14,14 +14,14 @@ pathway 3-6-dichloropyridine-2-5-to-5-amino-2-4-5-trioxo "3,6-dichloropyridine-2
     6_chloropyridine_2_3_5_triol
     <-> ec_1_14_14_172 [1.14.14.172] +fadh2 +o2 -fad -chloride -h2o -hplus
     3_6_dihydroxypyridine_2_5_dione
-    <-> . +h2o
+    <-> . +h2o_water
     5_amino_2_4_5_trioxopentanoate
   }
 
   branch from 6_chloro_2_5_dioxo_2_5_dihydropyridin_3_olate side left {
     6_chloro_2_5_dioxo_2_5_dihydropyridin_3_olate
-    <-> . +3_6_dichloropyridine_2_5_dione +h2o +h
-    chloride
+    <-> . +3_6_dichloropyridine_2_5_dione +h2o_water +h
+    chloride_mnxm735978
   }
 
   branch from nad side right {
@@ -32,43 +32,43 @@ pathway 3-6-dichloropyridine-2-5-to-5-amino-2-4-5-trioxo "3,6-dichloropyridine-2
 
   branch from nad side left {
     nad
-    <-> . +nadh +4r_perillyl_aldehyde +h +o2 +h2o
+    <-> . +nadh +4r_perillyl_aldehyde +h +o2_mnxm735438 +h2o_water
     4r_4_1_methylethenyl_1_cyclohexenecarboxylic_ac
   }
 
   branch from 3_6_dihydroxypyridine_2_5_dione side right {
     3_6_dihydroxypyridine_2_5_dione
-    <-> . +fadh2 +3_5_6_trichloro_2_pyridinol +o2 +h2o +h +chloride
-    fad
+    <-> . +fadh2_mnxm1105762 +3_5_6_trichloro_2_pyridinol +o2_mnxm735438 +h2o_water +h +chloride_mnxm735978
+    fad_mnxm1364149
   }
 
   branch from 3_6_dihydroxypyridine_2_5_dione side left {
     3_6_dihydroxypyridine_2_5_dione
-    <-> ec_1_14_14_172 [1.14.14.172] +6_chloropyridine_2_3_5_triol +o2 +fad +chloride +h2o
-    fadh2
+    <-> ec_1_14_14_172 [1.14.14.172] +6_chloropyridine_2_3_5_triol_mnxm1130092 +o2_mnxm735438 +fad_mnxm1364149 +chloride_mnxm735978 +h2o_water
+    fadh2_mnxm1105762
   }
 
   branch from nadh side right {
     nadh
-    <-> . +4r_limonene +h +o2 +nad +h2o
+    <-> . +4r_limonene +h +o2_mnxm735438 +nad +h2o_water
     r_perillyl_alcohol
   }
 
   branch from nadh side left {
     nadh
-    <-> . +diphenylamine +h +o2 +aniline +nad
+    <-> . +diphenylamine +h +o2_mnxm735438 +aniline +nad
     catechol
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_hydroxybutanoyl_l_homoserine +h2o
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_hydroxybutanoyl_l_homoserine +h2o_water
     hai_1
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxododecanoyl_l_homoserine_lactone +h2o
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxododecanoyl_l_homoserine_lactone +h2o_water
     n_3_oxododecanoyl_l_homoserine
   }
 
@@ -84,14 +84,14 @@ pathway 3-6-dichloropyridine-2-5-to-5-amino-2-4-5-trioxo "3,6-dichloropyridine-2
     2r_3_sulfopropanediol
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +2s_4s_2_methyl_2_3_3_4_tetrahydroxytetrahydrofu
     2s_4s_2_methyl_2_4_dihydroxydihydrofuran_3_one
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +tetrahydroxoborate +2s_4s_2_methyl_2_3_3_4_tetrahydroxytetrahydrofu
     autoinducer_2
   }

@@ -22,11 +22,11 @@ pathway 4-chlorobenzoate-to-s-adenosyl-l-homocysteine-23 "4-chlorobenzoate to S-
     3_all_trans_nonaprenyl_benzene_1_2_diol
     <-> ec_2_1_1_222 [2.1.1.222] +sam -sah -hplus
     2_methoxy_6_all_trans_nonaprenyl_phenol
-    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_methoxy_6_all_trans_nonaprenylhydroquinone
     <-> ec_2_1_1_201 [2.1.1.201] +sam -sah -hplus
     2_methoxy_3_methyl_6_all_trans_nonaprenylhydroqu
-    <-> . +nadh +h +o2 -3_demethylubiquinol_9 -h2o
+    <-> . +nadh +h +o2_mnxm735438 -3_demethylubiquinol_9 -h2o_water
     nad
     <-> ec_2_1_1_64 [2.1.1.64] +3_demethylubiquinol_9 +sam -sah -hplus
     ubiquinol_9

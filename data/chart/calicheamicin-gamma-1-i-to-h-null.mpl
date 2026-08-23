@@ -61,7 +61,7 @@ pathway calicheamicin-gamma-1-i-to-h-null "Calicheamicin gamma(1)I to H" {
   branch from dtdp side right {
     dtdp
     <-> . +dtdp_l_oleandrose +avermectin_a1b_aglycone +h
-    avermectin_a1b_monosaccharide
+    avermectin_a1b_monosaccharide_mnxm1370811
   }
 
   branch from h side left {

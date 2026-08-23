@@ -42,7 +42,7 @@ pathway 5-deoxyadenosine-to-hop-22-29-ene-null "5'-deoxyadenosine to hop-22(29)-
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> . +31r_8_12_diethyl_71_hydroxybacteriochlorophylli +s_adenosyl_l_methionine +h2o +h +l_methionine
+    <-> . +31r_8_12_diethyl_71_hydroxybacteriochlorophylli +s_adenosyl_l_methionine +h2o_water +h +l_methionine
     31r_8_12_diethyl_71_71_dihydroxybacteriochlorop
   }
 
@@ -54,7 +54,7 @@ pathway 5-deoxyadenosine-to-hop-22-29-ene-null "5'-deoxyadenosine to hop-22(29)-
 
   branch from l_methionine side left {
     l_methionine
-    <-> . +l_arginine +h2o
+    <-> . +l_arginine +h2o_water
     arginyl_arginyl_metheonine
   }
 

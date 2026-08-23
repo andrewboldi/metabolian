@@ -49,7 +49,7 @@ pathway 2e-2-hydroxypenta-2-4-d-to-nadp "(2E)-2-hydroxypenta-2,4-d… to NADP" {
   branch from nadp side right {
     nadp
     <-> . +25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 +h +nadph +h2o
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174
   }
 
   branch from h side left {

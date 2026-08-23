@@ -17,6 +17,6 @@ pathway z-2-aminoethene-1-so-th-to-o-pantetheine-4-phos "(Z)-2-aminoethene-1-SO-
     <-> . +holo-acp +atp -amp -ppi
     o_s_sulfamoylacetylpantetheine_4_phosphoryl_l_se
     <-> . +4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy -holo-acp -hplus
-    4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy
+    4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy_chebi_232312
   }
 }

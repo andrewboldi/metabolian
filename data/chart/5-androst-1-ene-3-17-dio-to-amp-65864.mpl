@@ -10,7 +10,7 @@ pathway 5-androst-1-ene-3-17-dio-to-amp-65864 "5α-androst-1-ene-3,17-dio… to 
     5_androst_1_ene_3_17_dione
     <-> ec_1_17_99_11 [1.17.99.11] +hydrogen_acceptor +h2o -hydrogen_donor
     5_androstan_1_3_17_trione
-    <-> . +h2o -h
+    <-> . +h2o_water -h
     1_17_dioxo_2_3_seco_androstan_3_oate
     <-> . +atp +coa -diphosphate -amp
     1_17_dioxo_2_3_seco_androstan_3_oyl_coa

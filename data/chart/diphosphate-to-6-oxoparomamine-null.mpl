@@ -156,20 +156,20 @@ pathway diphosphate-to-6-oxoparomamine-null "diphosphate to 6'-oxoparomamine" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_114 [2.1.1.114] +s_adenosyl_l_homocysteine +h +3_polyprenyl_4_hydroxy_5_methoxybenzoate
+    <-> ec_2_1_1_114 [2.1.1.114] +s_adenosyl_l_homocysteine +h +3_polyprenyl_4_hydroxy_5_methoxybenzoate_mnxm737011
     3_polyprenyl_4_5_dihydroxybenzoate
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +succinate +o2
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +succinate +o2_mnxm735438
     gibberellin_a20
   }
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +h +succinate +gibberellin_a20
-    o2
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29_mnxm1363861 +co2 +h +succinate +gibberellin_a20
+    o2_mnxm735438
   }
 
   branch from l_glutamate side right {

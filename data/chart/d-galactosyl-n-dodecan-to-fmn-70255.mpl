@@ -30,13 +30,13 @@ pathway d-galactosyl-n-dodecan-to-fmn-70255 "β-D-galactosyl-N-(dodecan… to FM
 
   branch from n_dodecanoylsphingosine side left {
     n_dodecanoylsphingosine
-    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +dodecanoate
-    h2o
+    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +dodecanoate_mnxm402
+    h2o_water
   }
 
   branch from 11_hydroxylaurate side right {
     11_hydroxylaurate
-    <-> . +h +dodecanoate +o2 +nadph +h2o
+    <-> . +h +dodecanoate_mnxm402 +o2_mnxm735438 +nadph +h2o_water
     nadp
   }
 
@@ -78,13 +78,13 @@ pathway d-galactosyl-n-dodecan-to-fmn-70255 "β-D-galactosyl-N-(dodecan… to FM
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_108 [1.14.14.108] +fmnh2 +idramantone +o2 +1_hydroxy_4_oxahomoadamantan_5_one +h2o
+    <-> ec_1_14_14_108 [1.14.14.108] +fmnh2_mnxm1107623 +idramantone +o2_mnxm735438 +1_hydroxy_4_oxahomoadamantan_5_one +h2o_water
     h
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2 +3_n_morpholino_propanesulfonate +o2 +h +sulfite +h2o
+    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2_mnxm1107623 +3_n_morpholino_propanesulfonate +o2_mnxm735438 +h +sulfite +h2o_water
     3_n_morpholino_propanal
   }
 }

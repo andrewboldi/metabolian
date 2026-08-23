@@ -19,7 +19,7 @@ pathway udp-to-solasod-3-one-null "UDP to solasod-3-one" {
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
     <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm1372530
   }
 
   branch from udp_alpha_d_glucose side right {
@@ -37,7 +37,7 @@ pathway udp-to-solasod-3-one-null "UDP to solasod-3-one" {
   branch from h side right {
     h
     <-> . +h2o +pravastatin_acid
-    pravastatin_lactone
+    pravastatin_lactone_mnxm1101972
   }
 
   branch from nadph side left {
@@ -66,7 +66,7 @@ pathway udp-to-solasod-3-one-null "UDP to solasod-3-one" {
 
   branch from udp side left {
     udp
-    <-> . +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h +chikusetsusaponin_iva
+    <-> . +oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm1372530 +h +chikusetsusaponin_iva
     udp_alpha_d_galactose
   }
 

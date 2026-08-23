@@ -10,9 +10,9 @@ pathway 20-dihydrocorticosterone-to-5-dihydroaldosterone "20β-dihydrocorticoste
     20_dihydrocorticosterone
     <-> . +nad -nadh -hplus
     corticosterone
-    <-> ec_1_14_15_5 [1.14.15.5] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_5 [1.14.15.5] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     18_hydroxycorticosterone
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     aldosterone
     <-> . +nadph +hplus -nadp
     5_dihydroaldosterone

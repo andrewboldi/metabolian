@@ -10,9 +10,9 @@ pathway 1-deoxy-11-oxopentalenate-to-neopentalenoketolac "1-deoxy-11-oxopentalen
     1_deoxy_11_oxopentalenate
     <-> ec_1_14_13_171 [1.14.13.171] +nadph +o2 +hplus -nadp -h2o
     neopentalenolactone_d
-    <-> . +2_oxoglutarate +o2 -co2 -succinate -h2o
+    <-> . +2_oxoglutarate +o2_mnxm735438 -co2 -succinate -h2o_water
     neopentalenolactone_e
-    <-> . +2_oxoglutarate +o2 -co2 -succinate
+    <-> . +2_oxoglutarate +o2_mnxm735438 -co2 -succinate
     neopentalenolactone_f
     <-> .
     neopentalenoketolactone

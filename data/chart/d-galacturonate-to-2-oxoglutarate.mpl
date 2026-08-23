@@ -23,12 +23,12 @@ pathway d-galacturonate-to-2-oxoglutarate "β-D-galacturonate to 2-oxoglutarate"
   branch from d_galactaro_1_5_lactone side left {
     d_galactaro_1_5_lactone
     <-> . +galactarate +h
-    h2o
+    h2o_water
   }
 
   branch from d_galactaro_1_4_lactone side right {
     d_galactaro_1_4_lactone
-    <-> . +h +h2o
+    <-> . +h +h2o_water
     galactarate
   }
 

@@ -10,7 +10,7 @@ pathway 4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro "4-nitroso-2,6-dinitrot
     4_nitroso_2_6_dinitrotoluene
     <-> . +h +nadph -nadp
     4_hydroxylamino_2_6_dinitrotoluene
-    <-> . +nadph +hplus -nadp -h2o
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349 -h2o
     4_amino_2_6_dinitrotoluene
     <-> . +udp_d_glucose -udp -hplus
     4_amino_2_6_dinitrotoluene_d_glucoside

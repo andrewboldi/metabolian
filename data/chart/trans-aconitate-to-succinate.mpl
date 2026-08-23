@@ -40,7 +40,7 @@ pathway trans-aconitate-to-succinate "trans-aconitate to succinate" {
 
   branch from com_s_s_cob side right {
     com_s_s_cob
-    <-> ec_1_8_98_5 [1.8.98.5] +coenzyme_b +coenzyme_m +di_sulfido_diiron +hplus +di_sulfido_diiron
+    <-> ec_1_8_98_5 [1.8.98.5] +coenzyme_b +coenzyme_m +di_sulfido_diiron +hplus +di_sulfido_diiron_chebi_33737
     h2
   }
 

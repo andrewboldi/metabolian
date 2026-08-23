@@ -43,7 +43,7 @@ pathway 1-octadecanoyl-2-octanoyl-to-diphosphate-54468 "1-octadecanoyl-2-octanoy
   branch from stearoyl_coa side right {
     stearoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero +coa
-    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
+    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp_chebi_72839
   }
 
   branch from ppi side left {
@@ -55,7 +55,7 @@ pathway 1-octadecanoyl-2-octanoyl-to-diphosphate-54468 "1-octadecanoyl-2-octanoy
   branch from ppi side right {
     ppi
     <-> . +2_cis_6_cis_farnesyl_diphosphate
-    e_bisabolene
+    e_bisabolene_chebi_49242
   }
 
   branch from palmitoyl_coa side left {

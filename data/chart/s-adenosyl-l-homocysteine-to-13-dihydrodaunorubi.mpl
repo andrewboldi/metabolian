@@ -40,25 +40,25 @@ pathway s-adenosyl-l-homocysteine-to-13-dihydrodaunorubi "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> ec_2_1_1_65 [2.1.1.65] +2_o_methyllicodione +h +s_adenosyl_l_methionine
-    licodione
+    <-> ec_2_1_1_65 [2.1.1.65] +2_o_methyllicodione_mnxm1371638 +h +s_adenosyl_l_methionine
+    licodione_mnxm732887
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +ethane +o2 +nad +h2o
+    <-> ec_1_14_13_25 [1.14.13.25] +nadh +ethane +o2_mnxm735438 +nad +h2o_water
     ethanol
   }
 
   branch from h side right {
     h
-    <-> . +3_oxopropanoate +bromide +h2o
+    <-> . +3_oxopropanoate +bromide +h2o_water
     trans_3_bromoacrylic_acid
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_5_1_38 [2.5.1.38] +h +isonocardicin_a +nocardicin_f
+    <-> ec_2_5_1_38 [2.5.1.38] +h +isonocardicin_a_mnxm732872 +nocardicin_f
     s_methyl_5_thioadenosine
   }
 

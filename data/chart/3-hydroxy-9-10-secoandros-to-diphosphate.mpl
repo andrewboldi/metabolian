@@ -32,14 +32,14 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
 
   branch from 9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate side left {
     9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate
-    <-> ec_3_7_1_17 [3.7.1.17] +2_hydroxyhexa_2_4_dienoate +h +h2o
+    <-> ec_3_7_1_17 [3.7.1.17] +2_hydroxyhexa_2_4_dienoate +h +h2o_water
     3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta
   }
 
   branch from 9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate side right {
     9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate
-    <-> ec_3_7_1_17 [3.7.1.17] +cis_2_oxohex_4_enoic_acid +h2o
-    3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta
+    <-> ec_3_7_1_17 [3.7.1.17] +cis_2_oxohex_4_enoic_acid +h2o_water
+    3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta_mnxm1371572
   }
 
   branch from 2z_4z_2_hydroxyhexa_2_4_dienoate side left {

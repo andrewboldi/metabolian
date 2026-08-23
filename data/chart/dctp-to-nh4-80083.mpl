@@ -14,7 +14,7 @@ pathway dctp-to-nh4-80083 "dCTP to NH4" {
     idp
     <-> ec_2_7_1_74 [2.7.1.74] +h +dcmp +dadp -2_deoxycytidine
     datp
-    <-> . +h +h2o -nh4
+    <-> . +h +h2o_water -nh4
     ditp
   }
 }

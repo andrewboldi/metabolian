@@ -20,159 +20,28 @@ pathway isorhamnetin-to-octadecanal-null "isorhamnetin… to octadecanal" {
     h
   }
 
-  branch from trans_4_coumaroyl_coa side left {
-    trans_4_coumaroyl_coa
-    <-> . +hexanoyl_coa +malonyl_coa +h +h2o +co2 +coa
-    1_4_hydroxyphenyl_1_decene_3_5_dione
-  }
 
-  branch from trans_4_coumaroyl_coa side right {
-    trans_4_coumaroyl_coa
-    <-> . +hexanoyl_coa +malonyl_coa +h +h2o +co2 +coa
-    1_4_hydroxyphenyl_1_decene_3_5_dione
-  }
 
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_4_1_1_19 [4.1.1.19] +co2 +h
-    s_adenosyl_3_methylsulfanyl_propylamine
-  }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_360 [2.4.1.360] +udp +6c_glucosyl_2_hydroxynaringenin +h
-    2_4_4_6_tetrahydroxydibenzoylmethane
-  }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +c_glucosyl_2_hydroxyflavanone +h
-    dibenzoylmethane
-  }
 
-  branch from carbon_monoxide side right {
-    carbon_monoxide
-    <-> . +tetradecanal +h
-    tridecane
-  }
 
-  branch from carbon_monoxide side left {
-    carbon_monoxide
-    <-> . +docosanal +h
-    henicosane
-  }
 
-  branch from h side right {
-    h
-    <-> ec_3_1_1_5 [3.1.1.5] +9z_12z_octadecadienoate +sn_glycerol_3_phosphocholine +h2o
-    2_linoleoyl_sn_glycero_3_phosphocholine
-  }
 
-  branch from h side left {
-    h
-    <-> ec_1_6_5_2 [1.6.5.2] +nadph +2_decaprenyl_6_methoxy_1_4_benzoquinone +2_decaprenyl_6_methoxyhydroquinone
-    nadp
-  }
 
-  branch from octadecanal side right {
-    octadecanal
-    <-> ec_1_2_1_42 [1.2.1.42] +nadh +octadecanoyl_coa +h +coa
-    nad
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +sucrose +2s_2_methylbutanoyl_coa
-    beta_d_fructofuranosyl_4_o_2_methylbutanoyl_alph
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +decanoyl_coa +sucrose
-    beta_d_fructofuranosyl_4_o_decanoyl_alpha_d_gluc
-  }
 
-  branch from trans_4_coumaroyl_coa side left {
-    trans_4_coumaroyl_coa
-    <-> ec_2_3_1_218 [2.3.1.218] +malonyl_coa +h +co2 +coa
-    p_coumaroyl_diketide_coa
-  }
 
-  branch from trans_4_coumaroyl_coa side right {
-    trans_4_coumaroyl_coa
-    <-> ec_2_3_1_219 [2.3.1.219] +p_coumaroyl_diketide_coa +h2o +co2 +h +coa
-    1e_4z_6e_5_hydroxy_1_7_bis_4_hydroxyphenyl_hept
-  }
 
-  branch from s_adenosyl_l_homocysteine side left {
-    s_adenosyl_l_homocysteine
-    <-> . +pdgt_0 +h +bdgt_0
-    s_adenosyl_l_methionine
-  }
 
-  branch from s_adenosyl_l_homocysteine side right {
-    s_adenosyl_l_homocysteine
-    <-> . +bdgt_1 +h +s_adenosyl_l_methionine
-    caldarchaeol_1
-  }
 
-  branch from h side left {
-    h
-    <-> ec_1_6_5_2 [1.6.5.2] +demethylmenaquinone_7 +nadph +nadp
-    2_demethylmenaquinol_7
-  }
 
-  branch from h side right {
-    h
-    <-> ec_1_6_5_2 [1.6.5.2] +plastoquinone_9 +nadph +nadp
-    plastoquinol_9
-  }
 
-  branch from udp side left {
-    udp
-    <-> . +udp_n_acetyl_alpha_d_galactosamine +beta_d_man_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +h
-    alpha_d_galnac_1_3_beta_d_man_1_4_beta_d_glc_1_3
-  }
 
-  branch from udp side right {
-    udp
-    <-> . +alpha_neu5ac_2_3_alpha_d_gal_1_2_beta_d_glc_1_3 +h +alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_glcnac_p
-    udp_alpha_d_galactose
-  }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_293 [2.4.1.293] +udp +n_acetylgalactosaminyl_2_glucosyl_n_acetylgalac +h
-    n_acetylgalactosaminyl_5_n_n_diacetylbacillosam
-  }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_293 [2.4.1.293] +udp +h +n_acetylgalactosaminyl_5_n_n_diacetylbacillosam
-    n_acetylgalactosaminyl_2_glucosaminyl_n_acetylg
-  }
 
-  branch from o2 side left {
-    o2
-    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o
-    15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +strictosamide
-    strictosamide_ketolactam
-  }
 
-  branch from carbon_monoxide side left {
-    carbon_monoxide
-    <-> . +h +eicosanal
-    nonadecane
-  }
-
-  branch from carbon_monoxide side right {
-    carbon_monoxide
-    <-> . +h +o2 +alpha_hydroxyheme +h2o
-    verdoheme
-  }
 }

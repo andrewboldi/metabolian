@@ -16,7 +16,7 @@ pathway cyclobis-1-6-nigerosyl-to-h2o-52744 "cyclobis-(1→6)-α-nigerosyl to H2
     d_glucose
     <-> ec_5_3_1_5 [5.3.1.5]
     d_fructofuranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -d_fructofuranose -h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -d_fructofuranose -h2o_water
     atp
   }
 }

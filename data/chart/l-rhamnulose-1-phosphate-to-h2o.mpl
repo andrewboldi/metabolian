@@ -45,13 +45,13 @@ pathway l-rhamnulose-1-phosphate-to-h2o "L-rhamnulose 1-phosphate to H2O" {
   branch from l_rhamnulose_1_phosphate side left {
     l_rhamnulose_1_phosphate
     <-> . +h +adp +atp
-    l_rhamnulose
+    l_rhamnulose_mnxm731756
   }
 
   branch from h side right {
     h
     <-> . +mycinamicin_iv +o2 +nadph +nadp +h2o
-    mycinamicin_i
+    mycinamicin_i_mnxm738935
   }
 
   branch from h side left {

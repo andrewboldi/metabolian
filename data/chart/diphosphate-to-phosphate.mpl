@@ -108,7 +108,7 @@ pathway diphosphate-to-phosphate "diphosphate to phosphate" {
 
   branch from adenine side left {
     adenine
-    <-> ec_1_17_3_2 [1.17.3.2] +o2 +h2o +h2o2
+    <-> ec_1_17_3_2 [1.17.3.2] +o2_mnxm735438 +h2o +h2o2
     8_oxoadenine
   }
 

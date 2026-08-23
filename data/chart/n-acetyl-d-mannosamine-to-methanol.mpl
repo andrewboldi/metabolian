@@ -18,7 +18,7 @@ pathway n-acetyl-d-mannosamine-to-methanol "N-acetyl-D-mannosamine to methanol" 
     2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter
     <-> ec_2_1_1_314 [2.1.1.314] +sam -sah -hplus
     diphthine_methyl_ester
-    <-> ec_3_1_1_97 [3.1.1.97] +h2o -methanol -hplus
+    <-> ec_3_1_1_97 [3.1.1.97] +h2o_chebi_15377 -methanol -hplus
     diphthine_betaine
   }
 }

@@ -30,8 +30,8 @@ pathway dtdp-4-amino-4-6-dideoxy-to-5-deoxy-d-ribose "dTDP-4-amino-4,6-dideoxy-â
 
   branch from 5_deoxy_d_ribofuranose side left {
     5_deoxy_d_ribofuranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp_mnxm40333 +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from dtdp_4_amino_4_6_dideoxy_d_glucose side right {

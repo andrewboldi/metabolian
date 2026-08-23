@@ -14,7 +14,7 @@ pathway 2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst "2-[hydroperoxy-(4-gluc
     isoliquiritigenin
     <-> .
     liquiritigenin
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     licodione
     <-> ec_2_1_1_65 [2.1.1.65] +sam -sah -hplus
     2_o_methyllicodione
@@ -28,7 +28,7 @@ pathway 2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst "2-[hydroperoxy-(4-gluc
 
   branch from h2o2 side right {
     h2o2
-    <-> . +16_hydroxyhexadecanoate +o2
+    <-> . +16_hydroxyhexadecanoate +o2_mnxm735438
     16_oxohexadecanoate
   }
 
@@ -64,7 +64,7 @@ pathway 2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst "2-[hydroperoxy-(4-gluc
 
   branch from h2o2 side right {
     h2o2
-    <-> . +docosan_1_ol +o2
+    <-> . +docosan_1_ol +o2_mnxm735438
     docosanal
   }
 
@@ -100,7 +100,7 @@ pathway 2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst "2-[hydroperoxy-(4-gluc
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5 +h
-    delphinidin_3_o_6_o_malonyl_beta_d_glucoside
+    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5_mnxm1371483 +h
+    delphinidin_3_o_6_o_malonyl_beta_d_glucoside_mnxm1371396
   }
 }

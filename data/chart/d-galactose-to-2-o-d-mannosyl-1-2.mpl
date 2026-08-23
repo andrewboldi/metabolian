@@ -73,7 +73,7 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
   branch from d_galactose side left {
     d_galactose
     <-> ec_5_1_3_3 [5.1.3.3]
-    d_galactose
+    d_galactose_chebi_27667
   }
 
   branch from udp_d_glucose side right {
@@ -97,7 +97,7 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
   branch from g1p side left {
     g1p
     <-> ec_2_7_7_69 [2.7.7.69] +pi +gdp +hplus
-    gdp_d_glucose
+    gdp_d_glucose_chebi_62230
   }
 
   branch from udp_d_galactose side right {
@@ -115,7 +115,7 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
   branch from ppi side right {
     ppi
     <-> . +gpp
-    pinene
+    pinene_chebi_50025
   }
 
   branch from ppi side left {

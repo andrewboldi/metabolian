@@ -10,9 +10,9 @@ pathway 6-sulfo-d-quinovose-to-h2o "6-sulfo-D-quinovose to H2O" {
     6_sulfo_d_quinovose
     <-> . +glycerol -h2o
     3_d_6_sulfoquinovosyl_sn_glycerol
-    <-> . +h2o -glycerol
-    6_sulfo_d_quinovose
-    <-> . +h +adp +phosphate -6_sulfo_d_quinovose -h2o
+    <-> . +h2o_chebi_15377 -glycerol_chebi_17754
+    6_sulfo_d_quinovose_chebi_142956
+    <-> . +h +adp +phosphate -6_sulfo_d_quinovose_chebi_142956 -h2o
     atp
   }
 

@@ -80,7 +80,7 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
 
   branch from chlorophyll_a side right {
     chlorophyll_a
-    <-> ec_1_17_7_2 [1.17.7.2] +di_sulfido_diiron +h2o +di_sulfido_diiron +hplus
+    <-> ec_1_17_7_2 [1.17.7.2] +di_sulfido_diiron +h2o +di_sulfido_diiron_chebi_33738 +hplus
     71_hydroxychlorophyll_a
   }
 
@@ -104,19 +104,19 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
 
   branch from chlorophyllide_a side right {
     chlorophyllide_a
-    <-> ec_1_3_7_13 [1.3.7.13] +di_sulfido_diiron +di_sulfido_diiron +hplus
+    <-> ec_1_3_7_13 [1.3.7.13] +di_sulfido_diiron +di_sulfido_diiron_chebi_33738 +hplus
     divinyl_chlorophyllide_a
   }
 
   branch from protochlorophyllide side left {
     protochlorophyllide
     <-> ec_1_3_7_13 [1.3.7.13] +di_sulfido_diiron +2_4_divinyl_protochlorophyllide_a +hplus
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33738
   }
 
   branch from protochlorophyllide side right {
     protochlorophyllide
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +di_sulfido_diiron_chebi_33738 +o2 +hplus +di_sulfido_diiron +h2o
     protochlorophyllide_b
   }
 

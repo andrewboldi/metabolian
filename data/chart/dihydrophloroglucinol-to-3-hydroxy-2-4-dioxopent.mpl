@@ -64,7 +64,7 @@ pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol 
 
   branch from s_4_5_dihydroxypentane_2_3_dione side left {
     s_4_5_dihydroxypentane_2_3_dione
-    <-> . +h2o
+    <-> . +h2o_water
     2r_4s_2_methyltetrahydrofuran_2_3_3_4_tetrol
   }
 
@@ -77,7 +77,7 @@ pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol 
   branch from 3_hydroxy_2_4_dioxopentyl_phosphate side left {
     3_hydroxy_2_4_dioxopentyl_phosphate
     <-> . +3_4_4_trihydroxy_5_phosphooxypentan_2_one
-    h2o
+    h2o_water
   }
 
   branch from sam side right {
@@ -124,7 +124,7 @@ pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol 
 
   branch from s_4_5_dihydroxypentane_2_3_dione side left {
     s_4_5_dihydroxypentane_2_3_dione
-    <-> . +h2o
+    <-> . +h2o_water
     4_hydroxy_5_methyl_3_furanone
   }
 }

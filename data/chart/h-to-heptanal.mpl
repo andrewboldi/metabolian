@@ -60,8 +60,8 @@ pathway h-to-heptanal "H to heptanal" {
 
   branch from formate side right {
     formate
-    <-> ec_1_2_1_4 [1.2.1.4] +formaldehyde +nadp +h2o +h
-    nadph
+    <-> ec_1_2_1_4 [1.2.1.4] +formaldehyde +nadp_mnxm5 +h2o +h
+    nadph_mnxm738702
   }
 
   branch from h2o side left {

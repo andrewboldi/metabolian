@@ -17,17 +17,17 @@ pathway n-acetyldemethylphosphino-to-h2o "N-Acetyldemethylphosphino… to H2O" {
     <-> ec_2_5_1_17 [2.5.1.17] +fadh2 +atp -triphosphate -fad -hplus
     cobamamide
     <-> ec_3_1_3_33 [3.1.3.33] +adenosine +h +triphosphate -h2o
-    atp
+    atp_mnxm3
   }
 
-  branch from atp side left {
-    atp
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
     <-> ec_2_7_1_76 [2.7.1.76] +2r_3s_4s_5r_2_6_amino_2_fluoro_9_purinyl_5_hydr +h +adp
     fludarabine_phosphate
   }
 
-  branch from atp side right {
-    atp
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
     <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +4_methoxycinnamoyl_coa +amp +h +4_methoxycinnamic_acid
     coa
   }
@@ -68,14 +68,14 @@ pathway n-acetyldemethylphosphino-to-h2o "N-Acetyldemethylphosphino… to H2O" {
     emodin_dianthrone
   }
 
-  branch from atp side left {
-    atp
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
     <-> ec_2_7_1_20 [2.7.1.20] +2_methyladenosine_5_monophosphate +adp +h
     2_methyladenosine
   }
 
-  branch from atp side right {
-    atp
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
     <-> ec_6_2_1_33 [6.2.1.33] +diphosphate +h +4_bromobenzoyl_coa +amp +coa
     4_bromobenzoic_acid
   }

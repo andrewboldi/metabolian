@@ -12,13 +12,13 @@ pathway diphosphate-to-9z-11e-octadecadienoyl "diphosphate to (9Z,11E)-octadecad
     trans_vaccenic_acid
     <-> . +coa -h2o
     11e_octadecenoyl_coa
-    <-> . +fe2 +o2 +hplus -iron -h2o
+    <-> . +fe2 +o2 +hplus -iron -h2o_chebi_15377
     9z_11e_octadecadienoyl_coa
   }
 
   branch from 11e_octadecenoyl_coa side left {
     11e_octadecenoyl_coa
-    <-> . +fe2 +o2 +hplus +iron +h2o
+    <-> . +fe2 +o2 +hplus +iron +h2o_chebi_15377
     6z_11e_octadecadienoyl_coa
   }
 }

@@ -20,20 +20,111 @@ pathway r-demethyl-4-deoxygadus-to-nad "(R)-demethyl-4-deoxygadus… to NAD" {
     5_epi_valiolol_7_phosphate
   }
 
+  branch from h side left {
+    h
+    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate +co2
+    2_hydroxy_6_methoxy_hexa_2_4_dienoate
+  }
 
+  branch from h side right {
+    h
+    <-> . +5_6_dihydroxy_3_methyl_2_oxo_1_2_dihydroquinolin +o2
+    3_methyl_5_hydroxy_6_3_carboxy_3_oxopropenyl_1h
+  }
 
+  branch from 2_epi_5_epi_valiolone side left {
+    2_epi_5_epi_valiolone
+    <-> ec_5_1_3_33 [5.1.3.33]
+    5_epi_valiolone
+  }
 
+  branch from 2_epi_5_epi_valiolone side right {
+    2_epi_5_epi_valiolone
+    <-> ec_1_3_1_126 [1.3.1.126] +nad_chebi_57540 +nadh_chebi_57945 +hplus
+    demethylgadusol
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> ec_6_3_5_13 [6.3.5.13] +undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl +h +nh4
+    beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_o_p_g
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> . +aldehydo_2_deoxy_d_ribose +h2o
+    2_deoxy_d_ribose_5_phosphate
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_32 [1.2.1.32] +nadh +2z_4e_2_aminomuconate +h +h2o
+    2z_4e_2_amino_6_oxohexa_2_4_dienoate
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_85 [1.2.1.85] +nadh +2_oxohex_3_enedioic_acid +h2o
+    2_hydroxymuconic_semialdehyde
+  }
 
+  branch from h side left {
+    h
+    <-> . +o2 +3_methyl_5_hydroxy_6_3_carboxy_3_oxopropenyl_1h
+    5_6_dihydroxy_3_methyl_2_oxo_1_2_dihydroquinolin_mnxm1369197
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +4_coumaroyl_coa +co2 +coa
+    4_coumaroyltriacetic_acid_lactone
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> . +2_deoxy_d_ribose_5_phosphate +h2o
+    2_deoxy_d_ribofuranose
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_5_1_78 [2.5.1.78] +1_deoxy_l_glycero_tetrulose_4_phosphate +5_amino_6_d_ribitylamino_uracil +h +h2o
+    6_7_dimethyl_8_1_d_ribityl_lumazine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_1_11_1_7 [1.11.1.7] +betanidin_quinone +h +h2o2
+    betanidin
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_1_11_1_16 [1.11.1.16] +reduced_reactive_black_5 +h2o2
+    remazole_black_gr
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_312 [1.1.1.312] +5_oxopent_3_ene_1_2_5_tricarboxylic_acid +h +nad +h2o
+    5_carboxymethyl_2_hydroxymuconic_semialdehyde
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_11 [1.1.1.11] +d_arabinitol +nad +h
+    d_xylulofuranose
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nitrite +hydroxybenzoquinone +h2o +nadh +o2
+    4_nitrocatechol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_4_1_20 [1.4.1.20] +nadh +3_methyl_2_oxopentanoate +h +nh4 +h2o
+    l_isoleucine
+  }
 }

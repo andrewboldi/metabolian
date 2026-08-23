@@ -12,7 +12,7 @@ pathway caffeine-to-h2o "caffeine to H2O" {
     theobromine
     <-> ec_1_14_13_179 [1.14.13.179] +nadph +o2 +hplus -formaldehyde -nadp -h2o
     7_methylxanthine
-    <-> ec_3_2_2_25 [3.2.2.25] +h +aldehydo_d_ribose -h2o
+    <-> ec_3_2_2_25 [3.2.2.25] +h +aldehydo_d_ribose -h2o_water
     7_methylxanthosine
   }
 }

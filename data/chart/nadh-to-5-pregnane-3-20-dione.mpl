@@ -12,7 +12,7 @@ pathway nadh-to-5-pregnane-3-20-dione "NADH to 5β-pregnane-3,20-dione" {
     pregnanediol
     <-> ec_1_1_1_209 [1.1.1.209] +nadp -5_pregnan_20_ol_3_one -nadph
     h
-    <-> . +5_pregnan_20_ol_3_one +nadp -nadph -hplus
+    <-> . +5_pregnan_20_ol_3_one +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     5_pregnane_3_20_dione
   }
 }

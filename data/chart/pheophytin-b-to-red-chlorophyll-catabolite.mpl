@@ -13,7 +13,7 @@ pathway pheophytin-b-to-red-chlorophyll-catabolite "pheophytin b to Red chloroph
     <-> ec_3_1_1_14 [3.1.1.14] +pheophorbide_a +h +phytol -h2o
     pheophytin_a
     <-> ec_3_1_1_14 [3.1.1.14] +h2o -h -phytol
-    pheophorbide_a
+    pheophorbide_a_mnxm1364549
     <-> ec_1_14_12_20 [1.14.12.20] +h +o2 +nadph -red_chlorophyll_catabolite
     nadp
   }

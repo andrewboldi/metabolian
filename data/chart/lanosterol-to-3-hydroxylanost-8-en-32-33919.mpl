@@ -12,7 +12,7 @@ pathway lanosterol-to-3-hydroxylanost-8-en-32-33919 "lanosterol to 3β-hydroxyla
     24_25_dihydrolanosterol
     <-> . +fmnh2 +o2 -formate -fmn -h2o -hplus
     4_4_dimethyl_8_14_cholestadien_3_ol
-    <-> ec_1_14_13_70 [1.14.13.70] +formate +nadp +h2o -nadph -3_hydroxylanost_8_en_32_al
-    o2
+    <-> ec_1_14_13_70 [1.14.13.70] +formate_mnxm39 +nadp_mnxm5 +h2o_water -nadph_mnxm738702 -3_hydroxylanost_8_en_32_al
+    o2_mnxm735438
   }
 }

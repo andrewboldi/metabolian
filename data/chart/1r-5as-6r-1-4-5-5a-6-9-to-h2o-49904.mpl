@@ -16,25 +16,25 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o-49904 "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O
     5_10_dihydrophenazine_1_carboxylate
     <-> ec_2_5_1_121 [2.5.1.121] +dmapp -ppi
     5_10_dihydro_9_dimethylallylphenazine_1_carboxyl
-    <-> . +h +o2 -h2o
+    <-> . +h +o2_mnxm735438 -h2o
     endophenazine_a
   }
 
   branch from 1r_10as_1_4_10_10a_tetrahydrophenazine_1_carbox side left {
     1r_10as_1_4_10_10a_tetrahydrophenazine_1_carbox
-    <-> . +1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar +o2 +h2o2
-    co2
+    <-> . +1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar +o2_mnxm735438 +h2o2_mnxm732620
+    co2_mnxm13
   }
 
   branch from 10as_10_10a_dihydrophenazine_1_carboxylate side right {
     10as_10_10a_dihydrophenazine_1_carboxylate
-    <-> . +1r_1_4_5_10_tetrahydrophenazine_1_carboxylate +o2
-    h2o2
+    <-> . +1r_1_4_5_10_tetrahydrophenazine_1_carboxylate +o2_mnxm735438
+    h2o2_mnxm732620
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_13 [3.1.7.13] +neryl_diphosphate +h2o
+    <-> ec_3_1_7_13 [3.1.7.13] +neryl_diphosphate +h2o_chebi_15377
     nerol
   }
 
@@ -70,7 +70,7 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o-49904 "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O
 
   branch from dmapp side left {
     dmapp
-    <-> ec_3_6_1_76 [3.6.1.76] +h2o +pi +hplus
+    <-> ec_3_6_1_76 [3.6.1.76] +h2o_chebi_15377 +pi +hplus
     prenyl_phosphate
   }
 
@@ -95,7 +95,7 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o-49904 "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O
   branch from h side left {
     h
     <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +daidzein_7_o_beta_d_glucoside +malonyldaidzin
-    coa
+    coa_mnxm727276
   }
 
   branch from h side right {
@@ -104,14 +104,14 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o-49904 "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O
     2_7_dihydroxy_4_methoxyisoflavanone
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_11_23 [1.14.11.23] +galangin +co2 +succinate +h2o +pinobanksin
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_14_11_23 [1.14.11.23] +galangin +co2_mnxm13 +succinate +h2o +pinobanksin
     2_oxoglutarate
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> ec_1_13_11_1 [1.13.11.1] +3_fluorocatechol
     2_fluoro_cis_cis_muconate
   }

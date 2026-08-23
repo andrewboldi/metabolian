@@ -18,7 +18,7 @@ pathway neocasomorphin-to-fmn-63600 "neocasomorphin to FMN" {
 
   branch from 1e_2s_2_methylbutanal_oxime side left {
     1e_2s_2_methylbutanal_oxime
-    <-> ec_1_14_13_117 [1.14.13.117] +co2 +nadp +h2o +l_isoleucine +o2 +nadph
+    <-> ec_1_14_13_117 [1.14.13.117] +co2_mnxm13 +nadp +h2o_water +l_isoleucine +o2_mnxm735438 +nadph
     h
   }
 
@@ -36,7 +36,7 @@ pathway neocasomorphin-to-fmn-63600 "neocasomorphin to FMN" {
 
   branch from 2_hydroxy_2_methylbutanenitrile side right {
     2_hydroxy_2_methylbutanenitrile
-    <-> . +nadph +o2 +hplus +nadp +h2o
+    <-> . +nadph_chebi_57783 +o2 +hplus +nadp_chebi_58349 +h2o
     2_methylbutanenitrile
   }
 

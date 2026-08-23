@@ -63,7 +63,7 @@ pathway cobalt-factor-iii-to-sirohydrochlorin "Cobalt-factor III to sirohydrochl
   branch from h side right {
     h
     <-> . +adenosine_3_5_bisphosphate +keratan_sulfate_ii_core_2_linked +3_phosphoadenylyl_sulfate
-    keratan_sulfate_ii_biosynthesis_precursor_10
+    keratan_sulfate_ii_biosynthesis_precursor_10_mnxm1560638
   }
 
   branch from h side left {

@@ -10,15 +10,15 @@ pathway fmnh2-to-o2 "FMNH2 to O2" {
     fmnh2
     <-> . +5_deoxy_dihydrokalafungin +o2 -dihydrokalafungin_dihydroquinone_form -h2o
     fmn
-    <-> . +fmnh2 +h +dihydrokalafungin_dihydroquinone_form +o2 -fmn -h2o
+    <-> . +fmnh2 +h +dihydrokalafungin_dihydroquinone_form +o2 -fmn_mnxm1364147 -h2o
     dhk_oh
-    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +fmn +acetaldehyde +h2o -nitroethane -h -o2
+    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +fmn_mnxm1364147 +acetaldehyde +h2o -nitroethane -h -o2
     fmnh2
   }
 
   branch from fmn side left {
     fmn
     <-> ec_1_5_1_39 [1.5.1.39] +nad +nadh +hplus
-    fmnh2
+    fmnh2_chebi_57618
   }
 }

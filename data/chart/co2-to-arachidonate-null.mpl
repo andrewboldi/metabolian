@@ -14,7 +14,7 @@ pathway co2-to-arachidonate-null "CO2 to arachidonate" {
     1_stearoyl_sn_glycero_3_phosphate
     <-> . +arachidonoyl_coa -coa
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate
-    <-> . +h2o -arachidonate -hplus
+    <-> . +h2o_chebi_15377 -arachidonate -hplus
     1_stearoyl_sn_glycero_3_phosphate
   }
 
@@ -57,7 +57,7 @@ pathway co2-to-arachidonate-null "CO2 to arachidonate" {
   branch from 1_stearoyl_sn_glycero_3_phosphate side left {
     1_stearoyl_sn_glycero_3_phosphate
     <-> . +octadecanoyl_coa +h +3_phosphonooxy_1_2_propanediyl_dioctadecanoate
-    coa
+    coa_mnxm727276
   }
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side right {
@@ -80,19 +80,19 @@ pathway co2-to-arachidonate-null "CO2 to arachidonate" {
 
   branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate side left {
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate
-    <-> . +atp +adp +hplus
+    <-> . +atp_chebi_30616 +adp_chebi_456216 +hplus
     1_stearoyl_2_arachidonoyl_sn_glycerol
   }
 
   branch from arachidonate side right {
     arachidonate
-    <-> . +o2
+    <-> . +o2_chebi_15379
     9_hpete
   }
 
   branch from arachidonate side left {
     arachidonate
-    <-> . +o2
+    <-> . +o2_chebi_15379
     11_hpete
   }
 
@@ -140,7 +140,7 @@ pathway co2-to-arachidonate-null "CO2 to arachidonate" {
 
   branch from octadecanoate side left {
     octadecanoate
-    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +h +nadph +co2 +nadp +coa +h2o
+    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +h +nadph +co2 +nadp +coa_mnxm727276 +h2o
     acetyl_coa
   }
 
@@ -170,7 +170,7 @@ pathway co2-to-arachidonate-null "CO2 to arachidonate" {
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side right {
     1_stearoyl_sn_glycero_3_phosphate
-    <-> ec_2_3_1_51 [2.3.1.51] +octadecanoyl_coa +coa
+    <-> ec_2_3_1_51 [2.3.1.51] +octadecanoyl_coa +coa_mnxm727276
     1_2_dioctadecanoyl_sn_glycerol_3_phosphate
   }
 }

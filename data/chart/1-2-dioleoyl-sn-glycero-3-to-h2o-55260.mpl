@@ -12,7 +12,7 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-h2o-55260 "1,2-dioleoyl-sn-glycero-3… to 
     n_1_2_trioleoyl_sn_glycero_3_phosphoethanolamine
     <-> . +h2o -1_2_dioleoyl_sn_glycero_3_phosphate -hplus
     oleoyl_ethanolamide
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +1_2_dioleoyl_sn_glycero_3_phosphate +phosphate -1_2_dioleoyl_sn_glycero_3_phosphate -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +1_2_dioleoyl_sn_glycero_3_phosphate +phosphate -1_2_dioleoyl_sn_glycero_3_phosphate -h2o_water
     atp
   }
 }

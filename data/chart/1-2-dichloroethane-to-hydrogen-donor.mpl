@@ -22,13 +22,13 @@ pathway 1-2-dichloroethane-to-hydrogen-donor "1,2-dichloroethane to hydrogen don
 
   branch from chloroacetate side left {
     chloroacetate
-    <-> . +n_2_6_diethylphenyl_2_chloroacetamide +h2o +2_6_diethylaniline
+    <-> . +n_2_6_diethylphenyl_2_chloroacetamide +h2o_water +2_6_diethylaniline
     h
   }
 
   branch from chloroacetate side right {
     chloroacetate
-    <-> . +h +succinate +h2o
+    <-> . +h +succinate +h2o_water
     2_chloro_3_oxoadipic_acid
   }
 
@@ -64,7 +64,7 @@ pathway 1-2-dichloroethane-to-hydrogen-donor "1,2-dichloroethane to hydrogen don
 
   branch from chloroacetate side right {
     chloroacetate
-    <-> . +h +chloride +h2o
+    <-> . +h +chloride_mnxm735978 +h2o_water
     chloroacetyl_chloride
   }
 

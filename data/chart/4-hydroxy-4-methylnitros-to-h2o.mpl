@@ -84,7 +84,7 @@ pathway 4-hydroxy-4-methylnitros-to-h2o "4-Hydroxy-4-(methylnitros… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_1_1_1_205 [1.1.1.205] +imp +nicotinamide_hypoxanthine_dinucleotide +h +nicotinamide_hypoxanthine_dinucleotide
+    <-> ec_1_1_1_205 [1.1.1.205] +imp +nicotinamide_hypoxanthine_dinucleotide +h +nicotinamide_hypoxanthine_dinucleotide_mnxm507495
     xmp
   }
 

@@ -104,7 +104,7 @@ pathway benzamide-to-coa "benzamide to CoA" {
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +alanyl_poly_glycerolphosphate +h +adp +phosphate
+    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +alanyl_poly_glycerolphosphate_mnxm739542 +h +adp +phosphate
     d_alanyl_alanyl_poly_glycerolphosphate
   }
 
@@ -129,7 +129,7 @@ pathway benzamide-to-coa "benzamide to CoA" {
   branch from benzoate side left {
     benzoate
     <-> ec_3_7_1_8 [3.7.1.8] +2e_2_hydroxypenta_2_4_dienoate +h +h2o
-    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
+    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate_mnxm727620
   }
 
   branch from nh4 side right {

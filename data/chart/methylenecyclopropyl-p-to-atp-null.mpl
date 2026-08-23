@@ -141,7 +141,7 @@ pathway methylenecyclopropyl-p-to-atp-null "β-(methylenecyclopropyl)p… to ATP
   branch from adp side left {
     adp
     <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1_mnxm16147
   }
 
   branch from phosphate side right {

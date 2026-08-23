@@ -37,7 +37,7 @@ pathway n-acetyl-d-glucosaminyl-to-d-gal-1-3-d-glcnac "N-acetyl-β-D-glucosaminy
   branch from udpglcnac side right {
     udpglcnac
     <-> . +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac +udp +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac_chebi_233673
   }
 
   branch from udpglcnac side left {

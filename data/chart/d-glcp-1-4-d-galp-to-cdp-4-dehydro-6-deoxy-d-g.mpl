@@ -18,7 +18,7 @@ pathway d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g "β-D-Glcp-(1→4)-D-Galp
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> ec_3_2_1_159 [3.2.1.159] +3_6_anhydro_l_galactopyranose +h2o
+    <-> ec_3_2_1_159 [3.2.1.159] +3_6_anhydro_l_galactopyranose +h2o_water
     neoagarobiose
   }
 
@@ -36,7 +36,7 @@ pathway d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g "β-D-Glcp-(1→4)-D-Galp
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_3_2_1_23 [3.2.1.23] +glucose +h2o
+    <-> ec_3_2_1_23 [3.2.1.23] +glucose +h2o_water
     allolactose
   }
 }

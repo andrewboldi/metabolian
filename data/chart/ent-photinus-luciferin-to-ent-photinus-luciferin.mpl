@@ -10,9 +10,9 @@ pathway ent-photinus-luciferin-to-ent-photinus-luciferin "ent-Photinus luciferin
     ent_photinus_luciferin
     <-> ec_6_2_1_52 [6.2.1.52] +atp +coa -amp -ppi
     l_firefly_luciferyl_coa
-    <-> . +h +amp -l_firefly_luciferyl_adenylate
-    coa
-    <-> . +diphosphate +l_firefly_luciferyl_adenylate -atp -ent_photinus_luciferin
+    <-> . +h +amp_mnxm728294 -l_firefly_luciferyl_adenylate
+    coa_mnxm727276
+    <-> . +diphosphate +l_firefly_luciferyl_adenylate -atp_mnxm3 -ent_photinus_luciferin
     h
   }
 

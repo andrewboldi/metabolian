@@ -90,8 +90,8 @@ pathway r-2-hydroxy-3-methylbut-to-s-8-3-methylbutanoyl "(R)-2-hydroxy-3-methylb
 
   branch from 4_methyl_2_oxopentanoate side left {
     4_methyl_2_oxopentanoate
-    <-> . +nadh +3_methylbutanoate +co2 +h +h2o
-    nad
+    <-> . +nadh_mnxm10 +3_methylbutanoate +co2 +h +h2o
+    nad_mnxm8
   }
 
   branch from r_lipoamide side right {

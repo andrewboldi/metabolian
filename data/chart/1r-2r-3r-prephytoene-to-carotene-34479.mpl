@@ -15,6 +15,6 @@ pathway 1r-2r-3r-prephytoene-to-carotene-34479 "(1R,2R,3R)-prephytoene… to ε-
     <-> ec_5_5_1_18 [5.5.1.18]
     carotene
     <-> ec_5_5_1_18 [5.5.1.18]
-    carotene
+    carotene_chebi_32549
   }
 }

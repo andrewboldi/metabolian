@@ -14,7 +14,7 @@ pathway 2e-9z-hexadecadienoyl-c-to-coa "(2E,9Z)-hexadecadienoyl-C… to CoA" {
     z_3_oxohexadec_9_enoyl_coa
     <-> . +coa -acetyl_coa
     z_tetradec_7_enoyl_coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa -coa
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa_mnxm1104266 -coa_mnxm727276
     z_3_oxohexadec_9_enoyl_coa
   }
 }

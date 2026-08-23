@@ -28,7 +28,7 @@ pathway tetracenomycin-b2-to-s-adenosyl-l-homocysteine-7 "tetracenomycin B2 to S
 
   branch from tetracenomycin_b2 side right {
     tetracenomycin_b2
-    <-> ec_1_14_13_200 [1.14.13.200] +h +o2 +nadph +nadp +h2o
-    8_demethyltetracenomycin_c
+    <-> ec_1_14_13_200 [1.14.13.200] +h +o2_mnxm735438 +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
+    8_demethyltetracenomycin_c_mnxm1372393
   }
 }

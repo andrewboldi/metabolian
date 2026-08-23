@@ -13,8 +13,8 @@ pathway lutein-to-o2-68428 "lutein to O2" {
     <-> . +3r_3_hydroxy_10_apo_carotenal +o2 -3r_hydroxy_ionone
     4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
     <-> ec_1_13_11_71 [1.13.11.71] +5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one -5_6_epoxy_3_hydroxy_12_apo_beta_caroten_12_al
-    o2
-    <-> ec_1_13_11_71 [1.13.11.71] +5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one +5_6_epoxy_3_hydroxy_12_apo_beta_caroten_12_al -o2
+    o2_mnxm735438
+    <-> ec_1_13_11_71 [1.13.11.71] +5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one +5_6_epoxy_3_hydroxy_12_apo_beta_caroten_12_al -o2_mnxm735438
     9_cis_violaxanthin
   }
 }

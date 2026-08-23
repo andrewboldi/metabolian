@@ -32,13 +32,13 @@ pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a "β-D-GalNAc-(1→3)-α-D-Gal
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_3_2_1_22 [3.2.1.22] +3_beta_d_galactosyl_sn_glycerol +h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +3_beta_d_galactosyl_sn_glycerol +h2o_water
     glycerol
   }
 
@@ -50,13 +50,13 @@ pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a "β-D-GalNAc-(1→3)-α-D-Gal
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_3_2_1_23 [3.2.1.23] +glucose +h2o
+    <-> ec_3_2_1_23 [3.2.1.23] +glucose +h2o_water
     beta_lactose
   }
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o_water
     2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
   }
 
@@ -68,7 +68,7 @@ pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a "β-D-GalNAc-(1→3)-α-D-Gal
 
   branch from udpglcnac side left {
     udpglcnac
-    <-> ec_2_4_1_146 [2.4.1.146] +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6 +udp +hplus
+    <-> ec_2_4_1_146 [2.4.1.146] +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6_chebi_139607 +udp +hplus
     o3_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_3
   }
 }

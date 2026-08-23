@@ -10,7 +10,7 @@ pathway nadh-to-6z-9z-12z-15z-18z-21z-3 "NADH to (6Z,9Z,12Z,15Z,18Z,21Z)-3…" {
     nadh
     <-> ec_1_1_1_211 [1.1.1.211] +h +3_oxo_6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_c -nad
     3r_6z_9z_12z_15z_18z_21z_3_hydroxytetracosahexa
-    <-> . +nad -nadh -hplus
+    <-> . +nad_chebi_57540 -nadh_chebi_57945 -hplus
     6z_9z_12z_15z_18z_21z_3_oxotetracosahexaenoyl_c
     <-> . +coa -acetyl_coa
     4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa

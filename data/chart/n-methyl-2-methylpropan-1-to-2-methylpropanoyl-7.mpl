@@ -20,8 +20,8 @@ pathway n-methyl-2-methylpropan-1-to-2-methylpropanoyl-7 "N-methyl-2-methylpropa
 
   branch from isobutyraldehyde side left {
     isobutyraldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +2_methylpropanoate +h +h2o
-    nad
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh_mnxm10 +2_methylpropanoate +h +h2o_water
+    nad_mnxm8
   }
 
   branch from isobutyraldehyde side right {
@@ -32,13 +32,13 @@ pathway n-methyl-2-methylpropan-1-to-2-methylpropanoyl-7 "N-methyl-2-methylpropa
 
   branch from isobutyraldehyde side left {
     isobutyraldehyde
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh_mnxm10 +h +nad_mnxm8
     butan_2_ol
   }
 
   branch from isobutyraldehyde side right {
     isobutyraldehyde
     <-> ec_1_2_1_5 [1.2.1.5] +h +butanoate +nadph +nadp
-    h2o
+    h2o_water
   }
 }

@@ -10,7 +10,7 @@ pathway s-citronellol-to-coa "(S)-(−)-citronellol to CoA" {
     s_citronellol
     <-> . +nad -nadh -hplus
     s_citronellal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h -nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh_mnxm10 +h -nad_mnxm8
     menthol
     <-> ec_2_3_1_69 [2.3.1.69] +acetyl_coa -coa
     menthyl_acetate

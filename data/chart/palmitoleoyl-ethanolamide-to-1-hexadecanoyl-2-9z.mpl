@@ -109,6 +109,6 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
   branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
     1_palmitoyl_sn_glycerol_3_phosphate
     <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_73002
   }
 }

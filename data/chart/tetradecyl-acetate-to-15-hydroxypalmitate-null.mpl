@@ -30,25 +30,25 @@ pathway tetradecyl-acetate-to-15-hydroxypalmitate-null "Tetradecyl acetate to 15
 
   branch from tetradecan_1_ol side left {
     tetradecan_1_ol
-    <-> . +palmitoyl_coa +coa
+    <-> . +palmitoyl_coa +coa_chebi_57287
     myristyl_palmitate
   }
 
   branch from tetradecan_1_ol side right {
     tetradecan_1_ol
-    <-> . +myristoyl_coa +coa
+    <-> . +myristoyl_coa +coa_chebi_57287
     tetradecyl_tetradecanoate
   }
 
   branch from coa side left {
     coa
-    <-> . +13z_icosenoyl_coa +h2o
+    <-> . +13z_icosenoyl_coa +h2o_water
     z_icos_13_enoic_acid
   }
 
   branch from coa side right {
     coa
-    <-> . +8z_11z_icosadienoyl_coa +h2o
+    <-> . +8z_11z_icosadienoyl_coa +h2o_water
     8_11_eicosadienoic_acid
   }
 
@@ -72,7 +72,7 @@ pathway tetradecyl-acetate-to-15-hydroxypalmitate-null "Tetradecyl acetate to 15
 
   branch from tetradecan_1_ol side right {
     tetradecan_1_ol
-    <-> . +nadh +hplus +nad +coa
+    <-> . +nadh +hplus +nad +coa_chebi_57287
     myristoyl_coa
   }
 }

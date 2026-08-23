@@ -24,7 +24,7 @@ pathway udp-2-acetamido-4-azanium-to-udp-2-acetamido-2-6 "UDP-2-acetamido-4-azan
 
   branch from udp_2_acetamido_2_6_dideoxy_l_lyxo_hex_4_ulose side right {
     udp_2_acetamido_2_6_dideoxy_l_lyxo_hex_4_ulose
-    <-> . +udp_2_acetamido_2_6_dideoxy_beta_l_mannose +nadp +nadph
+    <-> . +udp_2_acetamido_2_6_dideoxy_beta_l_mannose +nadp_mnxm5 +nadph_mnxm738702
     h
   }
 }

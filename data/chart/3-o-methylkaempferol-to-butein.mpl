@@ -53,7 +53,7 @@ pathway 3-o-methylkaempferol-to-butein "3-O-methylkaempferol to butein" {
   branch from h2o side right {
     h2o
     <-> ec_4_2_1_17 [4.2.1.17] +h +3_hydroxy_5_methylhex_4_enoyl_coa
-    2e_5_methylhexa_2_4_dienoyl_coa
+    2e_5_methylhexa_2_4_dienoyl_coa_mnxm1371911
   }
 
   branch from butein side left {
@@ -107,7 +107,7 @@ pathway 3-o-methylkaempferol-to-butein "3-O-methylkaempferol to butein" {
   branch from h2o side left {
     h2o
     <-> . +geranate +h +coa
-    trans_geranyl_coa
+    trans_geranyl_coa_mnxm1371419
   }
 
   branch from 2_oxoglutarate side right {
@@ -125,7 +125,7 @@ pathway 3-o-methylkaempferol-to-butein "3-O-methylkaempferol to butein" {
   branch from o2 side right {
     o2
     <-> ec_1_13_11_39 [1.13.11.39] +3_chlorocatechol
-    3_chloro_2_hydroxymuconic_semialdehyde
+    3_chloro_2_hydroxymuconic_semialdehyde_chebi_80409
   }
 
   branch from o2 side left {

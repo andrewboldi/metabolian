@@ -84,7 +84,7 @@ pathway 4-formylbenzoate-to-nad "4-formylbenzoate to NAD" {
 
   branch from h side right {
     h
-    <-> . +cinchonine +nadp +nadph
+    <-> . +cinchonine_mnxm1371772 +nadp +nadph
     cinchoninone
   }
 

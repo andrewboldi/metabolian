@@ -18,7 +18,7 @@ pathway mangiferin-to-fmn "mangiferin to FMN" {
     3_oxopuerarin
     <-> . -1_5_anhydro_d_erythro_hex_1_en_3_ulose
     daidzein
-    <-> ec_1_14_14_90 [1.14.14.90] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_90 [1.14.14.90] +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     2_hydroxydaidzein
   }
 
@@ -31,7 +31,7 @@ pathway mangiferin-to-fmn "mangiferin to FMN" {
   branch from norathyriol side right {
     norathyriol
     <-> . +nadp +h2o +h +nadph +gentisein
-    o2
+    o2_mnxm735438
   }
 
   branch from 3_dehydro_d_glucose side left {
@@ -60,19 +60,19 @@ pathway mangiferin-to-fmn "mangiferin to FMN" {
 
   branch from 2_hydroxydaidzein side left {
     2_hydroxydaidzein
-    <-> ec_1_3_1_51 [1.3.1.51] +nadp +nadph +hplus
+    <-> ec_1_3_1_51 [1.3.1.51] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     2_hydroxy_2_3_dihydrodaidzein
   }
 
   branch from h side right {
     h
-    <-> . +hexadecanoate +h2o2 +1_pentadecene +h2o
+    <-> . +hexadecanoate +h2o2_mnxm732620 +1_pentadecene +h2o
     co2
   }
 
   branch from h side left {
     h
-    <-> . +9z_octadecenoate +h2o2 +co2 +h2o
+    <-> . +9z_octadecenoate +h2o2_mnxm732620 +co2 +h2o
     1e_8z_heptadecadiene
   }
 

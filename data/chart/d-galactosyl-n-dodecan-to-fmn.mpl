@@ -24,13 +24,13 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
 
   branch from n_dodecanoylsphingosine side right {
     n_dodecanoylsphingosine
-    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +dodecanoate
-    h2o
+    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +dodecanoate_mnxm402
+    h2o_water
   }
 
   branch from 11_hydroxylaurate side left {
     11_hydroxylaurate
-    <-> . +h +dodecanoate +o2 +nadph +h2o
+    <-> . +h +dodecanoate_mnxm402 +o2_mnxm735438 +nadph +h2o_water
     nadp
   }
 
@@ -42,7 +42,7 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
 
   branch from cholesterol side left {
     cholesterol
-    <-> ec_1_14_19_21 [1.14.19.21] +nadph +o2 +hplus +nadp +h2o
+    <-> ec_1_14_19_21 [1.14.19.21] +nadph_chebi_57783 +o2 +hplus +nadp_chebi_58349 +h2o
     dehydrocholesterol_7
   }
 }

@@ -15,6 +15,6 @@ pathway 17-hydroxypregnenolone-to-7-hydroxydehydroepiand "17α-hydroxypregnenolo
     <-> . +nadp -nadph -hplus
     7_ketodehydroepiandrosterone
     <-> . +nadph +hplus -nadp
-    7_hydroxydehydroepiandrosterone
+    7_hydroxydehydroepiandrosterone_chebi_183368
   }
 }

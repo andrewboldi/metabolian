@@ -11,7 +11,7 @@ pathway xanthosine-to-h2o-15025 "xanthosine to H2O" {
     <-> ec_2_1_1_158 [2.1.1.158] +sam -sah
     7_methylxanthosine
     <-> ec_2_1_1_158 [2.1.1.158] +s_adenosyl_l_homocysteine -s_s_adenosyl_l_methionine
-    xanthosine
+    xanthosine_mnxm1103769
     <-> ec_3_2_2_1 [3.2.2.1] +h2o -aldehydo_d_ribose
     xanthine
     <-> . +aldehydo_d_ribose +cis_zeatin -h2o

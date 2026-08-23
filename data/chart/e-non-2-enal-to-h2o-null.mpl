@@ -24,7 +24,7 @@ pathway e-non-2-enal-to-h2o-null "(E)-non-2-enal to H2O" {
 
   branch from e_non_2_enal side right {
     e_non_2_enal
-    <-> . +nad +h2o +nadh +hplus
+    <-> . +nad +h2o_chebi_15377 +nadh +hplus
     e_non_2_enoate
   }
 }

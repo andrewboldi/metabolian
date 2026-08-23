@@ -41,7 +41,7 @@ pathway dioscin-to-3s-4s-5s-3-4-5-trihydro-38939 "dioscin to (3S,4S,5S)-3,4,5-tr
   branch from l_rhamnopyranose side right {
     l_rhamnopyranose
     <-> .
-    l_rhamnulose
+    l_rhamnulose_mnxm731756
   }
 
   branch from 3_hydroxypyruvate side left {

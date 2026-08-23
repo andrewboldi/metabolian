@@ -18,13 +18,13 @@ pathway nadh-to-4-methylpent-2-enoyl-coa-null "NADH to 4-methylpent-2-enoyl-CoA"
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     all_trans_retinal
   }
 
   branch from h side right {
     h
-    <-> . +adp +rosuvastatin +phosphate +rosuvastatin +h2o
+    <-> . +adp +rosuvastatin +phosphate +rosuvastatin +h2o_water
     atp
   }
 
@@ -36,14 +36,14 @@ pathway nadh-to-4-methylpent-2-enoyl-coa-null "NADH to 4-methylpent-2-enoyl-CoA"
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_9 [1.14.13.9] +nadh +h +l_kynurenine +o2 +h2o
+    <-> ec_1_14_13_9 [1.14.13.9] +nadh +h +l_kynurenine +o2 +h2o_water
     3_hydroxy_l_kynurenine
   }
 
   branch from r_2_hydroxy_4_methylpentanoyl_coa side left {
     r_2_hydroxy_4_methylpentanoyl_coa
     <-> ec_4_2_1_157 [4.2.1.157] +isocaprenoyl_coa +h
-    h2o
+    h2o_water
   }
 
   branch from nadh side right {
@@ -60,13 +60,13 @@ pathway nadh-to-4-methylpent-2-enoyl-coa-null "NADH to 4-methylpent-2-enoyl-CoA"
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     rosuvastatin_5s_lactone
   }
 
   branch from h side left {
     h
-    <-> . +rosuvastatin_5s_lactone +h2o
+    <-> . +rosuvastatin_5s_lactone +h2o_water
     rosuvastatin
   }
 

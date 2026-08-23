@@ -12,7 +12,7 @@ pathway fadh2-to-1-oleoyl-2-pentadecanoyl-null "FADH2 to 1-oleoyl-2-pentadecanoy
     tridecanoyl_coa
     <-> . +nadh +acetyl_coa +fadh2 +h -pentadecanoyl_coa -coa -nad -h2o
     fad
-    <-> . +pentadecanoyl_coa +1_oleoyl_sn_glycero_3_phosphate -coa
+    <-> . +pentadecanoyl_coa +1_oleoyl_sn_glycero_3_phosphate -coa_chebi_57287
     1_oleoyl_2_pentadecanoyl_sn_glycero_3_phosphate
   }
 

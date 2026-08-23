@@ -169,6 +169,6 @@ pathway 2-oxoglutarate-to-nadph-null "2-oxoglutarate to NADPH" {
   branch from nad side right {
     nad
     <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
-    d_arabinopyranose
+    d_arabinopyranose_chebi_46996
   }
 }

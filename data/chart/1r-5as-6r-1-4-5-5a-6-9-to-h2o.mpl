@@ -16,20 +16,20 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O" {
     5_10_dihydrophenazine_1_carboxylate
     <-> ec_2_5_1_121 [2.5.1.121] +dmapp -ppi
     5_10_dihydro_9_dimethylallylphenazine_1_carboxyl
-    <-> . +h +o2 -h2o
+    <-> . +h +o2_mnxm735438 -h2o
     endophenazine_a
   }
 
   branch from 1r_10as_1_4_10_10a_tetrahydrophenazine_1_carbox side left {
     1r_10as_1_4_10_10a_tetrahydrophenazine_1_carbox
-    <-> . +1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar +o2 +h2o2
-    co2
+    <-> . +1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar +o2_mnxm735438 +h2o2_mnxm732620
+    co2_mnxm13
   }
 
   branch from 10as_10_10a_dihydrophenazine_1_carboxylate side right {
     10as_10_10a_dihydrophenazine_1_carboxylate
-    <-> . +1r_1_4_5_10_tetrahydrophenazine_1_carboxylate +o2
-    h2o2
+    <-> . +1r_1_4_5_10_tetrahydrophenazine_1_carboxylate +o2_mnxm735438
+    h2o2_mnxm732620
   }
 
   branch from ppi side left {
@@ -58,7 +58,7 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O" {
 
   branch from dmapp side left {
     dmapp
-    <-> ec_3_6_1_76 [3.6.1.76] +h2o +pi +hplus
+    <-> ec_3_6_1_76 [3.6.1.76] +h2o_chebi_15377 +pi +hplus
     prenyl_phosphate
   }
 
@@ -70,7 +70,7 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> . +fpp +h2o
+    <-> . +fpp +h2o_chebi_15377
     cadinol
   }
 
@@ -92,15 +92,15 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O" {
     aldophosphamide
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_17_3_2 [1.17.3.2] +purine_6_thiol +h2o +h2o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_17_3_2 [1.17.3.2] +purine_6_thiol +h2o +h2o2_mnxm732620
     6_thiourate
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_2_3_1 [1.2.3.1] +h +n_methyl_6_pyridone_3_carboxamide +h2o2 +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_2_3_1 [1.2.3.1] +h +n_methyl_6_pyridone_3_carboxamide +h2o2_mnxm732620 +h2o
     1_methylnicotinamide
   }
 

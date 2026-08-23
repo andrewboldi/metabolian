@@ -9,7 +9,7 @@ pathway l-fucose-to-diphosphate-25580 "α-L-fucose to diphosphate" {
   spine at 0,0 {
     l_fucose
     <-> ec_5_1_3_29 [5.1.3.29]
-    l_fucose
+    l_fucose_chebi_42589
     <-> ec_2_7_1_52 [2.7.1.52] +atp -adp -hplus
     l_fucose_1_phosphate
     <-> ec_2_7_7_30 [2.7.7.30] +gtp +hplus -ppi
@@ -36,7 +36,7 @@ pathway l-fucose-to-diphosphate-25580 "α-L-fucose to diphosphate" {
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622 +h2o
     syn_copalol
   }
 
@@ -54,7 +54,7 @@ pathway l-fucose-to-diphosphate-25580 "α-L-fucose to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622 +h2o
     13s_vitexifolin_a
   }
 

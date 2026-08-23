@@ -10,7 +10,7 @@ pathway chenodeoxycholoyl-coa-to-3-7-dihydroxy-24-oxo-5 "chenodeoxycholoyl-CoA t
     chenodeoxycholoyl_coa
     <-> . +propanoyl_coa -co2 -coa -h2o
     24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     24r_25r_3_7_24_trihydroxy_5_cholestan_26_oyl_co
     <-> . +nad -nadh -hplus
     dhca_24oxo_coa
@@ -60,7 +60,7 @@ pathway chenodeoxycholoyl-coa-to-3-7-dihydroxy-24-oxo-5 "chenodeoxycholoyl-CoA t
 
   branch from h2o side right {
     h2o
-    <-> . +fe +h +adp +phosphate +fe +atp
+    <-> . +fe_mnxm1370984 +h +adp +phosphate +fe_mnxm1370984 +atp
     citrate
   }
 }

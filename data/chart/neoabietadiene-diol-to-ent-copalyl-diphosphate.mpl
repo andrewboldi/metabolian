@@ -73,7 +73,7 @@ pathway neoabietadiene-diol-to-ent-copalyl-diphosphate "neoabietadiene-diol to e
   branch from ent_copalyl_diphosphate side right {
     ent_copalyl_diphosphate
     <-> ec_4_2_3_185 [4.2.3.185] +diphosphate
-    ent_atiserene
+    ent_atiserene_mnxm1372167
   }
 
   branch from nadp side left {
@@ -139,7 +139,7 @@ pathway neoabietadiene-diol-to-ent-copalyl-diphosphate "neoabietadiene-diol to e
   branch from diphosphate side left {
     diphosphate
     <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +h +atp
-    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19_mnxm1132438
   }
 
   branch from diphosphate side right {

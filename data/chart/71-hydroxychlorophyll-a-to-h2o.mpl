@@ -15,6 +15,6 @@ pathway 71-hydroxychlorophyll-a-to-h2o "71-hydroxychlorophyll a to H2O" {
     <-> ec_3_1_1_14 [3.1.1.14] +h2o -phytol
     chlorophyllide_b
     <-> ec_3_1_1_14 [3.1.1.14] +h +phytol -h2o
-    chlorophyll_b
+    chlorophyll_b_mnxm736588
   }
 }

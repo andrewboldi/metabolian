@@ -21,7 +21,7 @@ pathway 7-12-26-trihydroxy-5-c-to-nad-null "7α,12α,26-trihydroxy-5β-c… to N
   branch from 25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t side left {
     25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t
     <-> . +h +o2 +nadph +nadp +h2o
-    5beta_cholestane_3alpha_7alpha_12alpha_27_27_pen
+    5beta_cholestane_3alpha_7alpha_12alpha_27_27_pen_mnxm1560357
   }
 
   branch from nadp side right {
@@ -33,7 +33,7 @@ pathway 7-12-26-trihydroxy-5-c-to-nad-null "7α,12α,26-trihydroxy-5β-c… to N
   branch from nadp side left {
     nadp
     <-> ec_1_4_1_21 [1.4.1.21] +l_aspartate +h +nadph
-    iminoaspartate
+    iminoaspartate_mnxm1370457
   }
 
   branch from h2o side right {
@@ -86,7 +86,7 @@ pathway 7-12-26-trihydroxy-5-c-to-nad-null "7α,12α,26-trihydroxy-5β-c… to N
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_2 [1.3.1.2] +thymine +h +nadph
+    <-> ec_1_3_1_2 [1.3.1.2] +thymine_mnxm1369303 +h +nadph
     5_6_dihydrothymine
   }
 

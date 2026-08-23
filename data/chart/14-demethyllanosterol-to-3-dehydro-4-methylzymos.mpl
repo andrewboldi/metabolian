@@ -20,25 +20,25 @@ pathway 14-demethyllanosterol-to-3-dehydro-4-methylzymos "14-demethyllanosterol 
 
   branch from 4_hydroxymethyl_4_methylzymosterol side left {
     4_hydroxymethyl_4_methylzymosterol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +o2 +nadph +h2o
-    nadp
+    <-> ec_1_14_13_72 [1.14.13.72] +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
+    nadp_mnxm5
   }
 
   branch from 4_hydroxymethyl_4_methylzymosterol side right {
     4_hydroxymethyl_4_methylzymosterol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +nadp +4_methylzymosterol_4_carbaldehyde
-    h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +h +o2_mnxm735438 +nadph_mnxm738702 +nadp_mnxm5 +4_methylzymosterol_4_carbaldehyde
+    h2o_water
   }
 
   branch from 4_methylzymosterol_4_carbaldehyde side left {
     4_methylzymosterol_4_carbaldehyde
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +4_hydroxymethyl_4_methylzymosterol +h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2_mnxm735438 +4_hydroxymethyl_4_methylzymosterol +h2o_water
     nad
   }
 
   branch from 4_hydroxymethyl_4_methylzymosterol side right {
     4_hydroxymethyl_4_methylzymosterol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +o2 +nad +h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +o2_mnxm735438 +nad +h2o_water
     nadh
   }
 }

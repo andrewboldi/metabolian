@@ -36,8 +36,8 @@ pathway l-serine-to-d-gal-1-4-d-glcnac-63644 "L-serine to β-D-Gal-(1→4)-β-D-
 
   branch from gdp_l_fucose side right {
     gdp_l_fucose
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace_chebi_145346 +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc_chebi_145347
   }
 
   branch from udpglcnac side left {

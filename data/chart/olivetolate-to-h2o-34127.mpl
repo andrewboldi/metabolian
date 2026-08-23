@@ -12,7 +12,7 @@ pathway olivetolate-to-h2o-34127 "olivetolate to H2O" {
     cannabigerolate
     <-> ec_1_21_3_7 [1.21.3.7] +o2 -h2o2
     9_tetrahydrocannabinolate
-    <-> . +h +o2 -h2o
+    <-> . +h +o2_mnxm735438 -h2o
     cannabinolic_acid
   }
 

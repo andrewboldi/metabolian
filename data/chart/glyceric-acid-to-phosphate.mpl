@@ -36,7 +36,7 @@ pathway glyceric-acid-to-phosphate "Glyceric acid… to phosphate" {
 
   branch from d_glucopyranose_1_phosphate side right {
     d_glucopyranose_1_phosphate
-    <-> . +alpha_d_glucose_1_6_bisphosphate +h
+    <-> . +alpha_d_glucose_1_6_bisphosphate_mnxm1560541 +h
     glucose
   }
 

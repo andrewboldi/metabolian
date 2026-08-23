@@ -63,7 +63,7 @@ pathway nadh-to-6-methylsulfanyl-hexyl-g-null "NADH to 6-(methylsulfanyl)hexyl-g
   branch from 3_phosphoadenylyl_sulfate side right {
     3_phosphoadenylyl_sulfate
     <-> ec_2_8_2_38 [2.8.2.38] +adenosine_3_5_bisphosphate +h +4_methylthiobutyl_desulfoglucosinolate
-    glucoerucin
+    glucoerucin_chebi_5404
   }
 
   branch from adenosine_3_5_bisphosphate side left {
@@ -165,7 +165,7 @@ pathway nadh-to-6-methylsulfanyl-hexyl-g-null "NADH to 6-(methylsulfanyl)hexyl-g
   branch from h2o side left {
     h2o
     <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +methanol
-    methyl_d_glucopyranoside
+    methyl_d_glucopyranoside_chebi_320055
   }
 
   branch from sulfate side right {

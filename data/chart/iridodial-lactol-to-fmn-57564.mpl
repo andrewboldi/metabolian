@@ -48,7 +48,7 @@ pathway iridodial-lactol-to-fmn-57564 "(+)-iridodial lactol to FMN" {
 
   branch from 7_deoxyloganetin side left {
     7_deoxyloganetin
-    <-> . +h +o2 +nadph +nadp +h2o
+    <-> . +h +o2_mnxm735438 +nadph +nadp +h2o_water
     loganetin
   }
 

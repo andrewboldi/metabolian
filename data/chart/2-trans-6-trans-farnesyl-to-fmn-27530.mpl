@@ -12,7 +12,7 @@ pathway 2-trans-6-trans-farnesyl-to-fmn-27530 "2-trans,6-trans-farnesyl… to FM
     3s_6e_nerolidol
     <-> ec_1_14_14_59 [1.14.14.59] +fmnh2 +o2 -buten_2_one -fmn -h2o -hplus
     e_4_8_dimethyl_1_3_7_nonatriene
-    <-> . +4_8_12_trimethyltrideca_1_3_7_11_tetraene +nadp +buten_2_one +h2o -o2 -nadph -geranyllinalool
+    <-> . +4_8_12_trimethyltrideca_1_3_7_11_tetraene +nadp +buten_2_one +h2o_water -o2_mnxm735438 -nadph -geranyllinalool
     h
     <-> ec_1_14_14_58 [1.14.14.58] +geranyllinalool +fmnh2 +o2 -buten_2_one -fmn -h2o -hplus
     4_8_12_trimethyltrideca_1_3_7_11_tetraene

@@ -14,9 +14,9 @@ pathway udp-to-fmn "UDP to FMN" {
     androstane_3_17_diol
     <-> ec_1_1_1_188 [1.1.1.188] +nadp -h -nadph
     5_dihydrotestosterone
-    <-> ec_1_3_1_3 [1.3.1.3] +nadp -nadph -hplus
+    <-> ec_1_3_1_3 [1.3.1.3] +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     testosterone
-    <-> ec_1_1_1_51 [1.1.1.51] +nadp -nadph -hplus
+    <-> ec_1_1_1_51 [1.1.1.51] +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     androst_4_ene_3_17_dione
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     6_hydroxyandrost_4_ene_3_17_dione
@@ -24,13 +24,13 @@ pathway udp-to-fmn "UDP to FMN" {
 
   branch from 5_dihydrotestosterone side left {
     5_dihydrotestosterone
-    <-> . +nadph +hplus +nadp
+    <-> . +nadph_chebi_57783 +hplus +nadp_chebi_58349
     5_androstane_3_17_diol
   }
 
   branch from 5_dihydrotestosterone side right {
     5_dihydrotestosterone
-    <-> . +nadph +hplus +nadp
-    5_androstane_3_17_diol
+    <-> . +nadph_chebi_57783 +hplus +nadp_chebi_58349
+    5_androstane_3_17_diol_chebi_36714
   }
 }

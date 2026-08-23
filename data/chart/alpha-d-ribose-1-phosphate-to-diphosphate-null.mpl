@@ -13,6 +13,6 @@ pathway alpha-d-ribose-1-phosphate-to-diphosphate-null "alpha-D-ribose 1-phospha
     <-> ec_2_7_6_1 [2.7.6.1] +utp -ump -h
     5_phospho_alpha_d_ribose_1_diphosphate
     <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi -diphosphate
-    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
+    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi_mnxm1101201
   }
 }

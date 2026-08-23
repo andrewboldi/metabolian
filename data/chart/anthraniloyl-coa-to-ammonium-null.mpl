@@ -10,13 +10,13 @@ pathway anthraniloyl-coa-to-ammonium-null "anthraniloyl-CoA to ammonium" {
     anthraniloyl_coa
     <-> ec_2_3_1_230 [2.3.1.230] +3_oxodecanoic_acid -co2 -coa -h2o
     2_heptyl_4_quinolone
-    <-> ec_1_14_13_182 [1.14.13.182] +nadh +o2 +hplus -nad -h2o
+    <-> ec_1_14_13_182 [1.14.13.182] +nadh +o2 +hplus -nad -h2o_chebi_15377
     2_heptyl_3_hydroxy_4_quinolone
     <-> . +o2 -carbon_monoxide -hplus
     n_octanoylanthranilate
-    <-> . +h2o -octanoate -hplus
+    <-> . +h2o_chebi_15377 -octanoate -hplus
     anthranilate
-    <-> ec_1_14_12_1 [1.14.12.1] +nadph +o2 +hplus -nh3 -co2 -nadp
+    <-> ec_1_14_12_1 [1.14.12.1] +nadph +o2 +hplus -nh3 -co2_chebi_16526 -nadp
     catechol
   }
 
@@ -28,7 +28,7 @@ pathway anthraniloyl-coa-to-ammonium-null "anthraniloyl-CoA to ammonium" {
 
   branch from co2 side right {
     co2
-    <-> . +chromopyrrolate +nadh +h +o2 +nad +h2o
+    <-> . +chromopyrrolate +nadh_mnxm10 +h +o2_mnxm735438 +nad_mnxm8 +h2o
     k_252c
   }
 
@@ -58,8 +58,8 @@ pathway anthraniloyl-coa-to-ammonium-null "anthraniloyl-CoA to ammonium" {
 
   branch from 2_heptyl_3_hydroxy_4_quinolone side left {
     2_heptyl_3_hydroxy_4_quinolone
-    <-> ec_1_14_13_182 [1.14.13.182] +nadh +2_heptyl_4_quinolone +h +o2 +h2o
-    nad
+    <-> ec_1_14_13_182 [1.14.13.182] +nadh_mnxm10 +2_heptyl_4_quinolone_mnxm1112494 +h +o2_mnxm735438 +h2o
+    nad_mnxm8
   }
 
   branch from anthraniloyl_coa side right {

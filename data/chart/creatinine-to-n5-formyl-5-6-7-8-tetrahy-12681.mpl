@@ -80,7 +80,7 @@ pathway creatinine-to-n5-formyl-5-6-7-8-tetrahy-12681 "creatinine to N5-formyl-5
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +3_6_dichloro_2_methoxybenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +3_6_dichloro_2_methoxybenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     3_6_dichlorosalicylate
   }
 

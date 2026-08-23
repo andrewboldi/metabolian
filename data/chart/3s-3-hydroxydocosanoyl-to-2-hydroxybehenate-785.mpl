@@ -20,31 +20,31 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate-785 "(3S)-3-hydroxydocosanoy
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +8_desmethylnovobiocic_acid +h +o2 +chloride +h2o
+    <-> . +fadh2 +8_desmethylnovobiocic_acid +h +o2_mnxm735438 +chloride +h2o_water
     chlorobiocic_acid
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +h +2_4_hydroxyphenyl_ethanol +o2 +h2o
+    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +h +2_4_hydroxyphenyl_ethanol +o2_mnxm735438 +h2o_water
     hydroxytyrosol
   }
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 +coa +o2 +nad +h2o
+    <-> . +nadh +acetyl_coa +h +h2o2 +coa_mnxm727276 +o2_mnxm735438 +nad +h2o_water
     tetracosanoyl_coa
   }
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +r_carnitine +coa
+    <-> . +r_carnitine +coa_mnxm727276
     o_behenoylcarnitine
   }
 
   branch from fadh2 side left {
     fadh2
-    <-> ec_1_14_14_9 [1.14.14.9] +h +o2 +l_tyrosine +fad +h2o
+    <-> ec_1_14_14_9 [1.14.14.9] +h +o2_mnxm735438 +l_tyrosine +fad +h2o_water
     l_dopa
   }
 
@@ -56,19 +56,19 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate-785 "(3S)-3-hydroxydocosanoy
 
   branch from h side left {
     h
-    <-> . +neocarrabiose +sulfate +h2o
+    <-> . +neocarrabiose +sulfate +h2o_water
     neocarrabiose_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o
+    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o_water
     chitobiose_6_phosphate
   }
 
   branch from fad side left {
     fad
-    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +h +glycine_betaine +h2o
+    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +h +glycine_betaine +h2o_water
     betaine_aldehyde
   }
 
@@ -80,13 +80,13 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate-785 "(3S)-3-hydroxydocosanoy
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o_water
     atp
   }
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +lysopa_22_0_0_0 +coa +h
+    <-> . +lysopa_22_0_0_0 +coa_mnxm727276 +h
     sn_glycerol_3_phosphate
   }
 }

@@ -50,7 +50,7 @@ pathway d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha "β-D-galactosyl-(1→3)
 
   branch from cmp_n_acetyl_neuraminate side right {
     cmp_n_acetyl_neuraminate
-    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d +cytidine_5_monophosphate +hplus
+    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d_chebi_90357 +cytidine_5_monophosphate +hplus
     n_neu5ac_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d
   }
 

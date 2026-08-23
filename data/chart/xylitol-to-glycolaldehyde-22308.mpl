@@ -28,7 +28,7 @@ pathway xylitol-to-glycolaldehyde-22308 "xylitol to glycolaldehyde" {
 
   branch from d_xylopyranose side right {
     d_xylopyranose
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 
@@ -46,7 +46,7 @@ pathway xylitol-to-glycolaldehyde-22308 "xylitol to glycolaldehyde" {
 
   branch from xylitol side left {
     xylitol
-    <-> ec_2_7_1_122 [2.7.1.122] +atp +adp +hplus
+    <-> ec_2_7_1_122 [2.7.1.122] +atp_chebi_30616 +adp_chebi_456216 +hplus
     xylitol_5_phosphate
   }
 
@@ -58,7 +58,7 @@ pathway xylitol-to-glycolaldehyde-22308 "xylitol to glycolaldehyde" {
 
   branch from d_xylopyranose side left {
     d_xylopyranose
-    <-> . +20s_ginsenoside_rg1 +h2o
+    <-> . +20s_ginsenoside_rg1 +h2o_water
     ginsenoside_r1
   }
 }

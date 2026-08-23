@@ -12,9 +12,9 @@ pathway cannabidiol-to-9-tetrahydrocannabinol-null "cannabidiol to Δ9-tetrahydr
     h
     <-> ec_1_21_3_8 [1.21.3.8] +cannabidiolate +h2o2 -cannabinerolate
     o2
-    <-> ec_1_21_3_7 [1.21.3.7] +cannabinerolate +o2 -h2o2
+    <-> ec_1_21_3_7 [1.21.3.7] +cannabinerolate +o2_chebi_15379 -h2o2_chebi_16240
     9_tetrahydrocannabinolate
-    <-> . +hplus -co2
+    <-> . +hplus -co2_chebi_16526
     9_tetrahydrocannabinol
   }
 }

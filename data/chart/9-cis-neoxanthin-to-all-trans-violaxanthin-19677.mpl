@@ -10,10 +10,10 @@ pathway 9-cis-neoxanthin-to-all-trans-violaxanthin-19677 "9'-cis-neoxanthin to a
     9_cis_neoxanthin
     <-> ec_1_13_11_51 [1.13.11.51] +o2 -2_cis_4_trans_xanthoxin
     3s_5r_6r_3_5_dihydroxy_6_7_didehydro_5_6_dihydr
-    <-> . +2_trans_4_trans_xanthoxin -o2
+    <-> . +2_trans_4_trans_xanthoxin -o2_mnxm735438
     all_trans_neoxanthin
     <-> .
-    9_cis_neoxanthin
+    9_cis_neoxanthin_mnxm1371445
     <-> ec_5_3_99_9 [5.3.99.9]
     9_cis_violaxanthin
     <-> .
@@ -26,63 +26,63 @@ pathway 9-cis-neoxanthin-to-all-trans-violaxanthin-19677 "9'-cis-neoxanthin to a
     diadinoxanthin
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h2o
     15_r_hydroxy_5z_8z_11z_13e_eicosatetraenoate
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +2_5z_8z_11z_14z_eicosatetraenoyl_glycerol
     12_hydroperoxyeicosatetraenoate_glyceryl_ester
   }
 
-  branch from 9_cis_neoxanthin side right {
-    9_cis_neoxanthin
-    <-> ec_1_13_11_71 [1.13.11.71] +5_6_epoxy_3_hydroxy_12_apo_beta_caroten_12_al +o2
+  branch from 9_cis_neoxanthin_mnxm1371445 side right {
+    9_cis_neoxanthin_mnxm1371445
+    <-> ec_1_13_11_71 [1.13.11.71] +5_6_epoxy_3_hydroxy_12_apo_beta_caroten_12_al +o2_mnxm735438
     grasshopper_ketone
   }
 
   branch from all_trans_violaxanthin side left {
     all_trans_violaxanthin
-    <-> ec_1_14_13_90 [1.14.13.90] +nadh +h +all_trans_antheraxanthin +o2 +h2o
+    <-> ec_1_14_13_90 [1.14.13.90] +nadh +h +all_trans_antheraxanthin +o2_mnxm735438 +h2o
     nad
   }
 
   branch from all_trans_violaxanthin side right {
     all_trans_violaxanthin
-    <-> ec_1_14_13_90 [1.14.13.90] +h +all_trans_antheraxanthin +o2 +nadph +h2o
+    <-> ec_1_14_13_90 [1.14.13.90] +h +all_trans_antheraxanthin +o2_mnxm735438 +nadph +h2o
     nadp
   }
 
   branch from 2_trans_4_trans_xanthoxin side left {
     2_trans_4_trans_xanthoxin
-    <-> . +nad +nadh +hplus
+    <-> . +nad_chebi_57540 +nadh_chebi_57945 +hplus
     2_trans_abscisic_aldehyde
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> ec_1_14_14_1 [1.14.14.1] +h +estrone +nadph +nadp +h2o
     16alpha_hydroxyestrone
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +h +13_hydroxy_gama_tocopherol +nadph +nadp +h2o
     13_carboxy_gamma_tocopherol
   }
 
   branch from all_trans_violaxanthin side right {
     all_trans_violaxanthin
-    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +o2 +nadph +nadp
+    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +o2_mnxm735438 +nadph +nadp
     h2o
   }
 
   branch from all_trans_violaxanthin side left {
     all_trans_violaxanthin
-    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +o2 +nad +h2o
+    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +o2_mnxm735438 +nad +h2o
     nadh
   }
 }

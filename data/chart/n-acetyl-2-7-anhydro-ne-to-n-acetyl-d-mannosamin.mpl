@@ -11,7 +11,7 @@ pathway n-acetyl-2-7-anhydro-ne-to-n-acetyl-d-mannosamin "N-acetyl-2,7-anhydro-Î
     <-> . +h2o
     n_acetyl_neuraminate
     <-> ec_5_1_3_24 [5.1.3.24]
-    n_acetyl_neuraminate
+    n_acetyl_neuraminate_chebi_58705
     <-> .
     aceneuramate
     <-> ec_4_1_3_3 [4.1.3.3] -pyruvate

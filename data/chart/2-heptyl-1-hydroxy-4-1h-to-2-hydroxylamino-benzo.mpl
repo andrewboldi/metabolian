@@ -72,7 +72,7 @@ pathway 2-heptyl-1-hydroxy-4-1h-to-2-hydroxylamino-benzo "2-heptyl-1-hydroxy-4(1
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10477 +l_glutamate
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10478
   }
 }

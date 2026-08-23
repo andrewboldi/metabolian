@@ -22,22 +22,123 @@ pathway veratrate-to-coa "veratrate to CoA" {
     cyanidin_3_o_3_6_o_dimalonylglucoside
   }
 
+  branch from 1_o_vanilloyl_d_glucose side left {
+    1_o_vanilloyl_d_glucose
+    <-> . +pelargonidin_3_glucoside +h +vanillate_mnxm982
+    pelargonin
+  }
 
+  branch from 1_o_vanilloyl_d_glucose side right {
+    1_o_vanilloyl_d_glucose
+    <-> ec_2_4_1_299 [2.4.1.299] +mirtillin +h +vanillate_mnxm982
+    delphin
+  }
 
+  branch from cyanidin_3_o_beta_d_glucoside side left {
+    cyanidin_3_o_beta_d_glucoside
+    <-> ec_2_4_1_298 [2.4.1.298] +udp_mnxm1102128 +cyanidin_3_5_di_o_beta_d_glucoside
+    udp_alpha_d_glucose
+  }
 
+  branch from cyanidin_3_o_beta_d_glucoside side right {
+    cyanidin_3_o_beta_d_glucoside
+    <-> ec_2_4_1_297 [2.4.1.297] +cyanidin_3_o_sophoroside +udp_alpha_d_glucose +h
+    udp_mnxm1102128
+  }
 
+  branch from 1_o_4_hydroxybenzoyl_d_glucopyranose side left {
+    1_o_4_hydroxybenzoyl_d_glucopyranose
+    <-> ec_2_4_1_300 [2.4.1.300] +aldehydo_d_glucose +4_hydroxybenzoate +h
+    h2o_water
+  }
 
+  branch from 1_o_4_hydroxybenzoyl_d_glucopyranose side right {
+    1_o_4_hydroxybenzoyl_d_glucopyranose
+    <-> . +delphinidin_3_o_rutinoside_7_o_6_o_4_o_glucosyl +glucose
+    delphinidin_3_o_rutinoside_7_o_6_o_4_o_6_o_p_hyd
+  }
 
+  branch from cyanidin_3_o_6_o_malonyl_d_glucoside side left {
+    cyanidin_3_o_6_o_malonyl_d_glucoside
+    <-> ec_2_4_1_254 [2.4.1.254] +udp_mnxm1102128 +cyanidin_3_o_6_o_malonyl_2_o_glucuronyl_glucosid
+    udp_alpha_d_glucuronate
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +succinyl_coa +n_hydroxyputrescine
+    n_3_carboxypropanoyl_n_hydroxyputrescine
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +n5_hydroxy_l_ornithine
+    n5_acetyl_n5_hydroxy_l_ornithine
+  }
 
+  branch from veratrate side right {
+    veratrate
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o_water
+    3_4_dimethoxybenzaldehyde
+  }
 
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +solasodine +udp +hplus
+    solasodine_3_d_glucoside
+  }
 
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +campesterol +udp +hplus
+    campesterol_3_d_glucoside
+  }
 
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> . +4_hydroxybenzoate_1_phenylethylidene +h2o_water +h
+    acetophenone_hydrazone
+  }
 
+  branch from 4_hydroxybenzoate side right {
+    4_hydroxybenzoate
+    <-> . +s_adenosyl_l_homocysteine +methylparaben
+    s_adenosyl_l_methionine
+  }
 
+  branch from malonyl_coa side left {
+    malonyl_coa
+    <-> . +2_naphthyl_d_glucoside +coa
+    2_naphthol_6_o_malonylglucoside
+  }
 
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> . +1_naphthyl_d_glucoside +coa
+    1_naphthol_6_o_malonylglucoside
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_1_1_4 [3.1.1.4] +9z_octadecenoate +1_oleoyl_sn_glycero_3_phosphoethanolamine +h2o_water
+    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +lanosterol +h2o_water
+    lanosteryl_oleate
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +benzoyl_coa +4_hydroxybutylglucosinolate
+    4_benzoyloxybutylglucosinolate
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +benzoyl_coa +xi_progoitrin
+    2_benzoyloxy_3_butenylglucosinolate
+  }
 }

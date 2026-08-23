@@ -10,13 +10,13 @@ pathway co2-to-cyanamide "CO2 to cyanamide" {
     co2
     <-> ec_1_13_12_1 [1.13.12.1] +delta_guanidovaleramide +h2o -o2
     l_homoarginine
-    <-> . +akg +o2 -succinate -co2
+    <-> . +akg +o2_chebi_15379 -succinate -co2_chebi_16526
     6_hydroxy_l_homoarginine
     <-> . -l_allysine
     guanidinium
-    <-> . +h2o -nh3
+    <-> . +h2o_chebi_15377 -nh3
     urea
-    <-> ec_4_2_1_69 [4.2.1.69] -h2o
+    <-> ec_4_2_1_69 [4.2.1.69] -h2o_chebi_15377
     cyanamide
   }
 }

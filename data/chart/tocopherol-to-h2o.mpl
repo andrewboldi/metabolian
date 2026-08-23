@@ -12,7 +12,7 @@ pathway tocopherol-to-h2o "γ-tocopherol to H2O" {
     r_r_r_tocopherol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     13_hydroxy_tocopherol
-    <-> . +h +o2 +nadph -nadp -h2o
+    <-> . +h +o2_mnxm735438 +nadph -nadp -h2o_water
     13_carboxy_alpha_tocopherol
   }
 

@@ -56,7 +56,7 @@ pathway 1-all-cis-docosa-7-10-13-to-3r-15z-18z-21z-24z-3 "1-(all-cis-docosa-7,10
 
   branch from 2e_9z_12z_15z_18z_tetracosapentaenoyl_coa side left {
     2e_9z_12z_15z_18z_tetracosapentaenoyl_coa
-    <-> . +h2o
+    <-> . +h2o_water
     3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
   }
 

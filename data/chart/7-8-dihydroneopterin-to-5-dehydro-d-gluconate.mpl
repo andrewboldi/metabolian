@@ -12,22 +12,22 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
     7_8_dihydromonapterin
     <-> ec_1_5_1_50 [1.5.1.50] +nadph +hplus -nadp
     tetrahydromonapterin
-    <-> ec_1_5_1_50 [1.5.1.50] +nadp -h -nadph
-    7_8_dihydromonapterin
+    <-> ec_1_5_1_50 [1.5.1.50] +nadp_mnxm5 -h -nadph_mnxm738702
+    7_8_dihydromonapterin_mnxm1372631
     <-> ec_4_1_2_25 [4.1.2.25] -glycolaldehyde
     6_hydroxymethyl_7_8_dihydropterin
     <-> . +l_threo_tetruronate +glycolaldehyde
     5_dehydro_d_gluconate
   }
 
-  branch from 7_8_dihydromonapterin side left {
-    7_8_dihydromonapterin
+  branch from 7_8_dihydromonapterin_mnxm1372631 side left {
+    7_8_dihydromonapterin_mnxm1372631
     <-> . +dihydromonapterin_triphosphate +h2o +h
     phosphate
   }
 
-  branch from 7_8_dihydromonapterin side right {
-    7_8_dihydromonapterin
+  branch from 7_8_dihydromonapterin_mnxm1372631 side right {
+    7_8_dihydromonapterin_mnxm1372631
     <-> ec_5_1_99_8 [5.1.99.8]
     dihydroneopterin
   }
@@ -44,15 +44,15 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
     1_nitronaphthalene_7_8_oxide
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_179 [1.14.13.179] +1_methyl_7h_xanthine +formaldehyde +nadp +h2o +h +o2
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_14_13_179 [1.14.13.179] +1_methyl_7h_xanthine +formaldehyde +nadp_mnxm5 +h2o +h +o2
     theophylline
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_219 [1.1.1.219] +garbanzol +h +nadp
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_1_1_219 [1.1.1.219] +garbanzol +h +nadp_mnxm5
     5_deoxyleucopelargonidin
   }
 
@@ -70,7 +70,7 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
 
   branch from glycolaldehyde side left {
     glycolaldehyde
-    <-> ec_1_1_1_156 [1.1.1.156] +h +nadph +nadp
+    <-> ec_1_1_1_156 [1.1.1.156] +h +nadph_mnxm738702 +nadp_mnxm5
     glyoxal
   }
 
@@ -80,15 +80,15 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
     formate
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_219 [1.1.1.219] +h +trans_fustin +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_1_1_219 [1.1.1.219] +h +trans_fustin +nadph_mnxm738702
     fisetinidol_4beta_ol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_183 [1.1.1.183] +neral +h +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_1_1_183 [1.1.1.183] +neral +h +nadph_mnxm738702
     nerol
   }
 
@@ -104,21 +104,21 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
     1_nitro_5_glutathionyl_6_hydroxy_5_6_dihydronaph
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_8 [1.14.13.8] +h +tamoxifen +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_14_13_8 [1.14.13.8] +h +tamoxifen +o2 +nadp_mnxm5 +h2o
     tamoxifen_n_oxide
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +tamoxifen +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_14_14_1 [1.14.14.1] +h +tamoxifen +o2 +nadp_mnxm5 +h2o
     afimoxifene
   }
 
   branch from 6_hydroxymethyl_7_8_dihydropterin side left {
     6_hydroxymethyl_7_8_dihydropterin
-    <-> . +nadp +h +nadph
+    <-> . +nadp_mnxm5 +h +nadph_mnxm738702
     6_hydroxymethyl_5_6_7_8_tetrahydropterin
   }
 

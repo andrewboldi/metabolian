@@ -37,7 +37,7 @@ pathway 1-2-3-trichloropropane-to-1-3-dichloropropan-2-o "1,2,3-Trichloropropane
   branch from chloride side right {
     chloride
     <-> . +h +5_chloro_3_oxoadipate
-    maleylacetate
+    maleylacetate_mnxm1363850
   }
 
   branch from h2o side left {

@@ -32,7 +32,7 @@ pathway 2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate "2-acyl-6-[α-D-mannosy
 
   branch from 2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate side right {
     2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 }

@@ -20,13 +20,13 @@ pathway 4-5-didehydrojasmonate-to-diphosphate-58072 "4,5-didehydrojasmonate to d
 
   branch from jasmonic_acid_anion side left {
     jasmonic_acid_anion
-    <-> ec_6_3_2_52 [6.3.2.52] +l_alanine +atp +h +amp +7_epi_jasmonoyl_l_alanine
+    <-> ec_6_3_2_52 [6.3.2.52] +l_alanine +atp_mnxm3 +h +amp_mnxm728294 +7_epi_jasmonoyl_l_alanine
     diphosphate
   }
 
   branch from jasmonic_acid_anion side right {
     jasmonic_acid_anion
-    <-> ec_3_1_1_1 [3.1.1.1] +h +methanol +h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +h +methanol +h2o_water
     methyl_jasmonate
   }
 

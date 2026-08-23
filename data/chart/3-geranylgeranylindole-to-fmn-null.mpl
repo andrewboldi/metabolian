@@ -18,111 +18,20 @@ pathway 3-geranylgeranylindole-to-fmn-null "3-Geranylgeranylindole to FMN" {
     plaunotol
   }
 
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_2_5_1_133 [2.5.1.133] +diphosphate +geranylgeranyl_bacteriochlorophyllide_a +bacteriochlorophyllide_a
-    h
-  }
 
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_2_5_1_62 [2.5.1.62] +geranylgeranyl_chlorophyll_a +diphosphate +h
-    chlorophyllide_a
-  }
 
-  branch from ctp side left {
-    ctp
-    <-> ec_2_7_7_38 [2.7.7.38] +h +3_deoxy_alpha_d_manno_oct_2_ulosonate +diphosphate
-    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
-  }
 
-  branch from ctp side right {
-    ctp
-    <-> ec_2_7_7_43 [2.7.7.43] +n_glycoloylneuraminate +diphosphate
-    cmp_n_glycoloyl_beta_neuraminate
-  }
 
-  branch from 2e_6e_10e_geranylgeranyl_phosphate side left {
-    2e_6e_10e_geranylgeranyl_phosphate
-    <-> . +h2o +pi +hplus
-    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-  }
 
-  branch from e_e_e_geranylgeraniol side right {
-    e_e_e_geranylgeraniol
-    <-> . +nadph +o2 +hplus +nadp +h2o
-    hydroxygeranylgeraniol
-  }
 
-  branch from e_e_e_geranylgeraniol side left {
-    e_e_e_geranylgeraniol
-    <-> . +nadph +o2 +hplus +nadp +h2o
-    2e_6e_10e_geranylgeranate
-  }
 
-  branch from plaunotol side right {
-    plaunotol
-    <-> ec_1_14_13_110 [1.14.13.110] +2e_6e_10e_geranylgeraniol +h +o2 +nadph +h2o
-    nadp
-  }
 
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +z_e_germacrene_b
-    2e_6e_farnesyl_diphosphate
-  }
 
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +2e_6e_farnesyl_diphosphate
-    3_7_11_eudesmadiene
-  }
 
-  branch from d_glyceraldehyde_3_phosphate side left {
-    d_glyceraldehyde_3_phosphate
-    <-> ec_1_2_1_13 [1.2.1.13] +glyceric_acid_1_3_biphosphate +nadph +h +nadp
-    phosphate
-  }
 
-  branch from d_glyceraldehyde_3_phosphate side right {
-    d_glyceraldehyde_3_phosphate
-    <-> . +h +adp +nadp +phosphate +atp +nadph +h2o
-    co2
-  }
 
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> . +diphosphate +undecaprenyl_diphosphate +h
-    ipp
-  }
 
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> . +geranylgeranyl_chlorophyll_a +diphosphate
-    chlorophyllide_a
-  }
 
-  branch from cdp side left {
-    cdp
-    <-> ec_2_7_1_108 [2.7.1.108] +h +c80_dolichol_phosphate +ctp
-    c80_dolichol
-  }
 
-  branch from cdp side right {
-    cdp
-    <-> ec_2_7_1_11 [2.7.1.11] +beta_d_fructose_1_6_bisphosphate +h +ctp
-    beta_d_fructose_6_phosphate
-  }
 
-  branch from ctp side left {
-    ctp
-    <-> ec_2_7_7_43 [2.7.7.43] +2_keto_3_deoxy_d_glycero_d_galactononic_acid +diphosphate
-    cmp_beta_3_deoxy_d_glycero_beta_d_galacto_non_2
-  }
-
-  branch from ctp side right {
-    ctp
-    <-> ec_2_7_7_41 [2.7.7.41] +1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate +diphosphate
-    cdp_1_2_ditetradec_7_enoylglycerol
-  }
 }

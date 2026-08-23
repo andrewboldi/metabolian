@@ -12,7 +12,7 @@ pathway 1-7-dimethyluric-acid-to-s-adenosyl-l-homocystei "1,7-dimethyluric acid 
     o2
     <-> ec_2_1_1_160 [2.1.1.160] +1_7_dimethylxanthine +sam -sah -hplus
     caffeine
-    <-> ec_1_14_13_178 [1.14.13.178] +nadh +o2 +hplus -formaldehyde -nad -h2o
+    <-> ec_1_14_13_178 [1.14.13.178] +nadh +o2_chebi_15379 +hplus -formaldehyde -nad -h2o_chebi_15377
     theobromine
     <-> ec_2_1_1_160 [2.1.1.160] +sam -sah -hplus
     caffeine

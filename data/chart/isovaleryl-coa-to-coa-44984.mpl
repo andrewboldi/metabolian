@@ -10,9 +10,9 @@ pathway isovaleryl-coa-to-coa-44984 "isovaleryl-CoA to CoA" {
     isovaleryl_coa
     <-> . +carnitine -coa
     isovaleryl_l_carnitine
-    <-> . +coa -3_methylbutanoyl_coa
+    <-> . +coa_mnxm727276 -3_methylbutanoyl_coa
     s_carnitine
-    <-> . +malonyl_coa +3_methylbutanoyl_coa +h -6_4_methyl_2_oxopentyl_4_hydroxy_2_pyrone -coa
+    <-> . +malonyl_coa +3_methylbutanoyl_coa +h -6_4_methyl_2_oxopentyl_4_hydroxy_2_pyrone -coa_mnxm727276
     co2
   }
 

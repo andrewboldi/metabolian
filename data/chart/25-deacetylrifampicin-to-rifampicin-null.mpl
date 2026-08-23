@@ -145,7 +145,7 @@ pathway 25-deacetylrifampicin-to-rifampicin-null "25-Deacetylrifampicin to rifam
   branch from nad side right {
     nad
     <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    thujan_3_ol
+    thujan_3_ol_mnxm97633
   }
 
   branch from nadp side left {

@@ -10,7 +10,7 @@ pathway d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d-48412 "α-D-GalNAc-(1→3)-β-
     d_galnac_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d
     <-> . +h2o -n_acetyl_d_galactosamine
     n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d
-    <-> . +h2o -n_acetyl_d_galactosamine
+    <-> . +h2o -n_acetyl_d_galactosamine_chebi_28497
     d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1
     <-> . +h2o -d_galactopyranose
     d_galactosyl_1_4_d_glucosyl_1_1_ceramide

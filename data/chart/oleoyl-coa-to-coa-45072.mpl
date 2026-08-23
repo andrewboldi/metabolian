@@ -18,13 +18,13 @@ pathway oleoyl-coa-to-coa-45072 "oleoyl-CoA to CoA" {
 
   branch from oleoyl_coa side left {
     oleoyl_coa
-    <-> . +1_monolauroylglycerol +coa
+    <-> . +1_monolauroylglycerol +coa_chebi_57287
     1_lauroyl_3_oleoylglycerol
   }
 
   branch from oleoyl_coa side right {
     oleoyl_coa
-    <-> . +1_monodecanoylglycerol +coa
+    <-> . +1_monodecanoylglycerol +coa_chebi_57287
     1_decanoyl_3_oleoylglycerol
   }
 }

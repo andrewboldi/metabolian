@@ -12,42 +12,42 @@ pathway 6-methylpretetramide-to-h2o "6-methylpretetramide to H2O" {
     4_hydroxy_6_methylpretetramide
     <-> ec_1_14_13_233 [1.14.13.233] +nadph +o2 -nadp -h2o
     4_de_dimethylamino_4_oxoanhydrotetracycline
-    <-> . +h +nadph -nadp -h2o
-    4_hydroxy_6_methylpretetramide
+    <-> . +h +nadph_mnxm738702 -nadp_mnxm5 -h2o_water
+    4_hydroxy_6_methylpretetramide_mnxm5001
   }
 
   branch from 4_de_dimethylamino_4_oxoanhydrotetracycline side left {
     4_de_dimethylamino_4_oxoanhydrotetracycline
-    <-> ec_1_14_13_232 [1.14.13.232] +h +6_methylpretetramide +nadph +nadp +h2o
-    o2
+    <-> ec_1_14_13_232 [1.14.13.232] +h +6_methylpretetramide +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
+    o2_mnxm735438
   }
 
   branch from 4_de_dimethylamino_4_oxoanhydrotetracycline side right {
     4_de_dimethylamino_4_oxoanhydrotetracycline
-    <-> . +fadh2 +h +o2 +chloride +4_dedimethylamine_4_oxo_anhydro_7_cl_tetracyclin +h2o
+    <-> . +fadh2 +h +o2_mnxm735438 +chloride +4_dedimethylamine_4_oxo_anhydro_7_cl_tetracyclin +h2o_water
     fad
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +n_demethylnarwedine
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +h +nadph_mnxm738702 +n_demethylnarwedine
     norgalanthamine
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +cinchonidine +h +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +cinchonidine +h +nadph_mnxm738702
     cinchoninone
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +carbamazepine_10_11_epoxide
     dihydroxycarbazepine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +glutathione +glutathionylaminopropylcadaverine
     homotrypanothione
   }
@@ -70,38 +70,38 @@ pathway 6-methylpretetramide-to-h2o "6-methylpretetramide to H2O" {
     s_adenosyl_l_homocysteine
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +cinchonidine +nadp +h
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +cinchonidine +nadp_mnxm5 +h
     cinchonidinone
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +n_hydroxyl_tryptamine +nadp +h2o +o2
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +n_hydroxyl_tryptamine +nadp_mnxm5 +h2o_water +o2_mnxm735438
     tryptamine
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +z_phenylacetaldehyde_oxime +h +o2 +l_cysteine +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +z_phenylacetaldehyde_oxime +h +o2_mnxm735438 +l_cysteine +nadph_mnxm738702 +h2o_water
     s_phenylacetothiohydroximoyl_l_cysteine
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +3_phenylpropionaldoxim +co2 +h2o +h +o2 +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +3_phenylpropionaldoxim +co2 +h2o_water +h +o2_mnxm735438 +nadph_mnxm738702
     l_homophenylalanine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +demecolcine +formate
     n_formyldemecolcine
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_1_1_36 [3.1.1.36] +limonin
     limonoate_a_ring_lactone
   }

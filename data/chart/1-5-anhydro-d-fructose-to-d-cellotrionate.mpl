@@ -16,7 +16,7 @@ pathway 1-5-anhydro-d-fructose-to-d-cellotrionate "1,5-anhydro-D-fructose to D-c
     cellotriose
     <-> . +o2 -h2o2
     d_cellotriono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_cellotrionate
   }
 
@@ -83,7 +83,7 @@ pathway 1-5-anhydro-d-fructose-to-d-cellotrionate "1,5-anhydro-D-fructose to D-c
   branch from glucose side left {
     glucose
     <-> . +4_coumaroylamaranthin +1_o_4_coumaroyl_d_glucose
-    amaranthin
+    amaranthin_mnxm1371746
   }
 
   branch from h2o side right {

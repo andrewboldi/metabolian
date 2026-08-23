@@ -16,7 +16,7 @@ pathway 3-hydroxy-3-phenylpropion-to-acetate "3-hydroxy-3-phenylpropion… to ac
     h
     <-> . +n_acetyl_d_phenylalaninate
     n_acetyl_l_phenylalaninate
-    <-> . +h2o -acetate
+    <-> . +h2o_chebi_15377 -acetate
     l_phenylalanine
   }
 
@@ -95,7 +95,7 @@ pathway 3-hydroxy-3-phenylpropion-to-acetate "3-hydroxy-3-phenylpropion… to ac
   branch from h2o side left {
     h2o
     <-> . +d_alanine +n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
-    n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
+    n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl_mnxm739017
   }
 
   branch from h2o side right {

@@ -12,7 +12,7 @@ pathway adp-d-glucoside-to-d-glucose-53880 "ADP α-D-glucoside to β-D-glucose" 
     trehalose_6_phosphate
     <-> ec_3_1_3_12 [3.1.3.12] +h2o -pi
     trehalose
-    <-> ec_3_2_1_28 [3.2.1.28] +h2o -d_glucose
+    <-> ec_3_2_1_28 [3.2.1.28] +h2o -d_glucose_chebi_15903
     d_glucose
   }
 }

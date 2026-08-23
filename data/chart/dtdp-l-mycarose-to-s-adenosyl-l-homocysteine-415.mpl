@@ -20,13 +20,13 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-415 "dTDP-β-L-mycarose to 
 
   branch from erythromycin_c side left {
     erythromycin_c
-    <-> . +dtdp +h +megalomicin_a
+    <-> . +dtdp_mnxm152 +h +megalomicin_a
     dtdp_l_megosamine
   }
 
   branch from erythromycin_c side right {
     erythromycin_c
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
     atp
   }
 

@@ -14,9 +14,9 @@ pathway 5-pregan-20-ol-3-one-to-h2o-42008 "5α-pregan-20β-ol-3-one to H2O" {
     5alpha_pregnan_20alpha_ol_3_one
     <-> . +nadph +hplus -nadp
     5alpha_pregnane_3alpha_20alpha_diol
-    <-> ec_1_1_1_149 [1.1.1.149] +nadp -3alpha_hydroxy_5alpha_pregnan_20_one -nadph
+    <-> ec_1_1_1_149 [1.1.1.149] +nadp_mnxm5 -3alpha_hydroxy_5alpha_pregnan_20_one -nadph_mnxm738702
     h
-    <-> . +nadh +3alpha_hydroxy_5alpha_pregnan_20_one +o2 -nad -h2o
+    <-> . +nadh_mnxm10 +3alpha_hydroxy_5alpha_pregnan_20_one +o2 -nad_mnxm8 -h2o
     5_alpha_thdoc
     <-> . +h +adp +phosphate -5_alpha_thdoc -h2o
     atp
@@ -30,25 +30,25 @@ pathway 5-pregan-20-ol-3-one-to-h2o-42008 "5α-pregan-20β-ol-3-one to H2O" {
 
   branch from h side right {
     h
-    <-> ec_1_1_1_306 [1.1.1.306] +nadh +s_formylmycothiol +mycothiol +nad
+    <-> ec_1_1_1_306 [1.1.1.306] +nadh_mnxm10 +s_formylmycothiol +mycothiol +nad_mnxm8
     formaldehyde
   }
 
   branch from 3alpha_hydroxy_5alpha_pregnan_20_one side left {
     3alpha_hydroxy_5alpha_pregnan_20_one
-    <-> ec_1_1_1_209 [1.1.1.209] +h +nadph +nadp
+    <-> ec_1_1_1_209 [1.1.1.209] +h +nadph_mnxm738702 +nadp_mnxm5
     5alpha_pregnane_3_20_dione
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +8_8a_deoxyoleandolide +h +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +8_8a_deoxyoleandolide +h +o2 +nadp_mnxm5 +h2o
     oleandolide
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_3_1_45 [1.3.1.45] +h +2_hydroxybiochanin_a +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_3_1_45 [1.3.1.45] +h +2_hydroxybiochanin_a +nadp_mnxm5
     ferreirin
   }
 
@@ -58,15 +58,15 @@ pathway 5-pregan-20-ol-3-one-to-h2o-42008 "5α-pregan-20β-ol-3-one to H2O" {
     5_dihydrodeoxycorticosterone
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_90 [1.1.1.90] +nadh +h +2_methylbenzaldehyde
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_1_1_90 [1.1.1.90] +nadh_mnxm10 +h +2_methylbenzaldehyde
     2_methylbenzyl_alcohol
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +h +coa
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +acetyl_coa +h +coa
     oxirane
   }
 
@@ -94,15 +94,15 @@ pathway 5-pregan-20-ol-3-one-to-h2o-42008 "5α-pregan-20β-ol-3-one to H2O" {
     l_4_hydroxymethyl_glycine
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_22 [1.14.13.22] +2_hydroxycyclohexan_1_one +h +o2 +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_13_22 [1.14.13.22] +2_hydroxycyclohexan_1_one +h +o2 +nadph_mnxm738702 +h2o
     2_hydroxyhexano_6_lactone
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_362 [1.1.1.362] +auramycinone +h +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_1_1_362 [1.1.1.362] +auramycinone +h +nadph_mnxm738702
     auraviketone
   }
 
@@ -114,55 +114,55 @@ pathway 5-pregan-20-ol-3-one-to-h2o-42008 "5α-pregan-20β-ol-3-one to H2O" {
 
   branch from h side right {
     h
-    <-> . +nadh +2_3_dihydroxy_ddt +nad
+    <-> . +nadh_mnxm10 +2_3_dihydroxy_ddt +nad_mnxm8
     1s_2s_ddt_2_3_dihydrodiol
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +h +4_ethylphenol +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +h +4_ethylphenol +o2 +nadp_mnxm5 +h2o
     4_1_hydroxyethyl_phenol
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +naphthalene +h +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_14_14_1 [1.14.14.1] +naphthalene +h +o2 +nadp_mnxm5 +h2o
     1s_2r_naphthalene_1_2_oxide
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_3_1_119 [1.3.1.119] +h +3_6_dichlorocatechol +nad
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> ec_1_3_1_119 [1.3.1.119] +h +3_6_dichlorocatechol +nad_mnxm8
     3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol
   }
 
-  branch from nadh side right {
-    nadh
-    <-> . +h +o_toluate +o2 +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> . +h +o_toluate +o2 +nad_mnxm8
     1_6_dihydroxy_2_methylcyclohexa_2_4_dienecarboxy
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol +nad
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh_mnxm10 +h +3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol +nad_mnxm8
     1_4_dichlorobenzene
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +h +ethylbenzene +nad
+    <-> . +nadh_mnxm10 +h +ethylbenzene +nad_mnxm8
     cis_1_2_dihydro_3_ethylcatechol
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +streptomycin_6_phosphate
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +streptomycin_6_phosphate
     dihydrostreptomycin_6_phosphate
   }
 
-  branch from nad side right {
-    nad
-    <-> . +1_hydroxy_2_naphthoate +nadh +h +h2o
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +1_hydroxy_2_naphthoate +nadh_mnxm10 +h +h2o
     1_hydroxy_2_naphthaldehyde
   }
 

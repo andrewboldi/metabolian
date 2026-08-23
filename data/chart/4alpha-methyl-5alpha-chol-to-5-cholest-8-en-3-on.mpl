@@ -18,13 +18,13 @@ pathway 4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on "4alpha-methyl-5alpha-c
 
   branch from 4_methyl_5_cholest_8_en_3_ol side left {
     4_methyl_5_cholest_8_en_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +h +o2_mnxm735438 +nadph +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o_water
     nadp
   }
 
   branch from 4_methyl_5_cholest_8_en_3_ol side right {
     4_methyl_5_cholest_8_en_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o
-    nad
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh_mnxm10 +h +o2_mnxm735438 +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o_water
+    nad_mnxm8
   }
 }

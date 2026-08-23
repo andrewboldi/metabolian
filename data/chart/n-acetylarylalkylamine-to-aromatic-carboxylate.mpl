@@ -10,7 +10,7 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
     n_acetylarylalkylamine
     <-> ec_3_5_1_76 [3.5.1.76] +h2o -acetate
     aralkylammonium
-    <-> ec_1_4_9_2 [1.4.9.2] +copper +h2o -copper -nh3 -hplus
+    <-> ec_1_4_9_2 [1.4.9.2] +copper +h2o -copper_chebi_49552 -nh3 -hplus
     arenecarbaldehyde
     <-> ec_1_2_1_29 [1.2.1.29] +nad +h2o -nadh -hplus
     aromatic_carboxylate
@@ -40,14 +40,14 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
     hydrogen_cyanide
   }
 
-  branch from copper side left {
-    copper
+  branch from copper_chebi_49552 side left {
+    copper_chebi_49552
     <-> ec_1_1_9_1 [1.1.9.1] +copper +primary_alcohol +hplus
     aldehyde
   }
 
-  branch from copper side right {
-    copper
+  branch from copper_chebi_49552 side right {
+    copper_chebi_49552
     <-> . +copper +tyraminium +h2o +nh3 +hplus
     4_hydroxyphenyl_acetaldehyde
   }
@@ -78,7 +78,7 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
 
   branch from copper side left {
     copper
-    <-> . +ascorbate +copper +hplus
+    <-> . +ascorbate +copper_chebi_49552 +hplus
     mdha
   }
 

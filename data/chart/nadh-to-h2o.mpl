@@ -42,7 +42,7 @@ pathway nadh-to-h2o "NADH to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_11_1_1 [1.11.1.1] +nadh +h +h2o2
+    <-> ec_1_11_1_1 [1.11.1.1] +nadh_chebi_77176 +h +h2o2
     alpha_nad
   }
 
@@ -61,7 +61,7 @@ pathway nadh-to-h2o "NADH to H2O" {
   branch from atp side right {
     atp
     <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin +mg +h2o +h +adp +phosphate
-    mg_protoporphyrin_ix
+    mg_protoporphyrin_ix_mnxm732749
   }
 
   branch from nadh side left {

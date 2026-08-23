@@ -14,7 +14,7 @@ pathway scutellarein-to-succinate-73079 "scutellarein to succinate" {
     ladanein
     <-> . +sam -sah -hplus
     salvigenin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     8_hydroxysalvigenin
     <-> . +akg +o2 -formaldehyde -succinate -co2
     pilosin

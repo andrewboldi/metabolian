@@ -21,12 +21,12 @@ pathway pimeloyl-coa-to-4r-5s-dethiobiotin "pimeloyl-CoA to (4R,5S)-dethiobiotin
   branch from 7r_8s_8_ammonio_7_carboxylatoamino_nonanoate side left {
     7r_8s_8_ammonio_7_carboxylatoamino_nonanoate
     <-> . +n6_2s_3r_2_amino_8_carboxyoctan_3_yl_l_lysine_1 +co2 +nadp +h2o +nadph +hplus
-    l_allysine
+    l_allysine_chebi_131803
   }
 
   branch from 7r_8s_8_ammonio_7_carboxylatoamino_nonanoate side right {
     7r_8s_8_ammonio_7_carboxylatoamino_nonanoate
-    <-> . +co2 +nad +h2o +l_allysine +nadh +hplus
+    <-> . +co2 +nad +h2o +l_allysine_chebi_131803 +nadh +hplus
     n6_2s_3r_2_amino_8_carboxyoctan_3_yl_l_lysine_1
   }
 

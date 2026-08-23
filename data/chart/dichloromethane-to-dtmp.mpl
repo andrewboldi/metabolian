@@ -50,7 +50,7 @@ pathway dichloromethane-to-dtmp "dichloromethane to dTMP" {
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_15_38 [1.14.15.38] +3_3_4_substituted_phenyl_1_1_dimethylurea +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_15_38 [1.14.15.38] +3_3_4_substituted_phenyl_1_1_dimethylurea +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     a_1_methyl_3_phenylurea
   }
 

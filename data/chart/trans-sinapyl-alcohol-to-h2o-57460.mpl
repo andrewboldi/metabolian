@@ -10,34 +10,165 @@ pathway trans-sinapyl-alcohol-to-h2o-57460 "trans-sinapyl alcohol to H2O" {
     trans_sinapyl_alcohol
     <-> . +udp_d_glucose -udp -hplus
     syringin
-    <-> ec_2_4_1_111 [2.4.1.111] +udp +h -sinapyl_alcohol
+    <-> ec_2_4_1_111 [2.4.1.111] +udp_mnxm1102128 +h -sinapyl_alcohol
     udp_alpha_d_glucose
     <-> . +h +adp +phosphate -udp_alpha_d_glucose -h2o
     atp
   }
 
+  branch from syringin side left {
+    syringin
+    <-> ec_3_2_1_126 [3.2.1.126] +trans_sinapyl_alcohol +h2o
+    beta_d_glucose
+  }
 
+  branch from syringin side right {
+    syringin
+    <-> ec_3_2_1_126 [3.2.1.126] +trans_sinapyl_alcohol +h2o
+    alpha_d_glucose
+  }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_78 [2.4.1.78] +udp_mnxm1102128 +h +polyprenylphosphate_glucose
+    polyprenol_phosphate
+  }
 
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +ansamitocinoside_p_3 +udp_mnxm1102128 +h
+    n_demethylansamitocin_p_3
+  }
 
+  branch from sinapyl_alcohol side left {
+    sinapyl_alcohol
+    <-> ec_1_1_1_195 [1.1.1.195] +nadp +h +nadph
+    e_sinapaldehyde
+  }
 
+  branch from sinapyl_alcohol side right {
+    sinapyl_alcohol
+    <-> ec_3_2_1_21 [3.2.1.21] +syringin +h2o
+    glucose
+  }
 
+  branch from atp side left {
+    atp
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_valine +h +amp +jasmonic_acid_anion
+    l_valine
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_6_3_2_52 [6.3.2.52] +l_leucine +jasmonic_acid_anion +a_jasmonoyl_l_leucine +h +amp
+    diphosphate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +pyrene_4_5_oxide
+    trans_4_5_dihydroxy_4_5_dihydropyrene
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_1_14_13_38 [1.14.13.38] +5a_11a_dehydrochlortetracycline +nadp +h +o2 +nadph
+    anhydrochlortetracycline
+  }
 
+  branch from trans_sinapyl_alcohol side left {
+    trans_sinapyl_alcohol
+    <-> ec_1_1_1_195 [1.1.1.195] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
+    e_sinapaldehyde_chebi_27949
+  }
 
+  branch from trans_sinapyl_alcohol side right {
+    trans_sinapyl_alcohol
+    <-> . +acetyl_coa +coa
+    trans_sinapyl_actetate
+  }
 
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +neamine +udp +hplus
+    3_deamino_3_hydroxykanamycin_b
+  }
 
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +paromamine +udp +hplus
+    3_deamino_3_hydroxykanamycin_c
+  }
 
+  branch from udp_mnxm1102128 side left {
+    udp_mnxm1102128
+    <-> ec_2_4_1_17 [2.4.1.17] +4_methylnitrosamino_1_3_pyridyl_1_butanol_glucur +4_methylnitrosamino_1_3_pyridyl_1_butanol
+    udp_alpha_d_glucuronate
+  }
 
+  branch from udp_mnxm1102128 side right {
+    udp_mnxm1102128
+    <-> ec_2_4_1_17 [2.4.1.17] +nnal_n_glucuronide +udp_alpha_d_glucuronate
+    4_methylnitrosamino_1_3_pyridyl_1_butanol
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_1_1_213 [1.1.1.213] +5_dihydrodeoxycorticosterone +nadph +5_alpha_thdoc
+    nadp
+  }
 
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +n1_n5_dihydroxyferuloyl_n10_sinapoyl_spermidine +n1_n5_n10_tri_e_5_hydroxyferuloyl_spermidine
+    s_adenosyl_l_methionine
+  }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_245 [2.4.1.245] +udp_mnxm1102128 +h +glucose
+    alpha_alpha_trehalose
+  }
 
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_158 [2.4.1.158] +udp_mnxm1102128 +13_sophorosyloxydocosanoic_acid
+    13_beta_d_glucosyloxy_docosanoate
+  }
 
+  branch from sinapyl_alcohol side left {
+    sinapyl_alcohol
+    <-> . +acetyl_coa_mnxm1104266 +trans_sinapyl_actetate
+    coa_mnxm727276
+  }
 
+  branch from adp side right {
+    adp
+    <-> . +cyclo_l_phenylalanyl_l_seryl +h +phosphate +atp +l_phenylalanine
+    l_serine
+  }
 
+  branch from adp side left {
+    adp
+    <-> . +2_methyl_3_n_amyl_pyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +atp +h +phosphate
+    prodigiosin
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +h2o
+    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi_mnxm1101203
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1 +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1_mnxm16147
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +n_benzoyl_l_glutamate +h +amp +l_glutamate
+    benzoate
+  }
 }

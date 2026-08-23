@@ -14,11 +14,11 @@ pathway trans-isoeugenol-to-arsenite "trans-isoeugenol to arsenite" {
     s_s_adenosyl_l_methionine
     <-> ec_2_1_1_137 [2.1.1.137] +arsenite +h -methylarsonate
     s_adenosyl_l_homocysteine
-    <-> ec_2_1_1_137 [2.1.1.137] +h +methylarsonate -arsenite
+    <-> ec_2_1_1_137 [2.1.1.137] +h +methylarsonate -arsenite_chebi_29242
     s_adenosyl_l_methionine
-    <-> ec_1_20_99_1 [1.20.99.1] +arsenite +hydrogen_acceptor +h2o -hydrogen_donor -hplus
+    <-> ec_1_20_99_1 [1.20.99.1] +arsenite_chebi_29242 +hydrogen_acceptor +h2o -hydrogen_donor -hplus
     arsenate
-    <-> ec_1_20_4_1 [1.20.4.1] +l_cysteine +gsh +hplus -arsenite -h2o
+    <-> ec_1_20_4_1 [1.20.4.1] +l_cysteine +gsh +hplus -arsenite_chebi_29242 -h2o
     s_s_glutathionyl_l_cysteine_1
   }
 

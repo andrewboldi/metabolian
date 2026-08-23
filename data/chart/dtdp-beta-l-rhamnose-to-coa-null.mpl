@@ -24,7 +24,7 @@ pathway dtdp-beta-l-rhamnose-to-coa-null "dTDP-beta-L-rhamnose to CoA" {
 
   branch from dtdp side right {
     dtdp
-    <-> . +avermectin_a1b_monosaccharide +avermectin_a1b +h
+    <-> . +avermectin_a1b_monosaccharide_mnxm1370811 +avermectin_a1b +h
     dtdp_l_oleandrose
   }
 
@@ -97,6 +97,6 @@ pathway dtdp-beta-l-rhamnose-to-coa-null "dTDP-beta-L-rhamnose to CoA" {
   branch from coa side right {
     coa
     <-> ec_2_3_1_235 [2.3.1.235] +malonyl_coa +h +co2 +h2o
-    tetracenomycin_f2
+    tetracenomycin_f2_mnxm1372100
   }
 }

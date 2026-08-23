@@ -10,13 +10,13 @@ pathway 1d-myo-inositol-to-s-adenosyl-l-homocysteine-nul "1D-myo-inositol… to 
     1d_myo_inositol_1_2_3_4_5_pentakisphosphate
     <-> . +h2o -phosphate
     1d_myo_inositol_1_2_3_6_tetrakisphosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +h2o -pi
+    <-> ec_3_1_3_62 [3.1.3.62] +h2o_chebi_15377 -pi
     1d_myo_inositol_1_2_3_trisphosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +h2o -pi
+    <-> ec_3_1_3_62 [3.1.3.62] +h2o_chebi_15377 -pi
     1d_myo_inositol_2_3_bisphosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +h2o -pi
+    <-> ec_3_1_3_62 [3.1.3.62] +h2o_chebi_15377 -pi
     1d_myo_inositol_2_phosphate
-    <-> ec_3_1_3_25 [3.1.3.25] +h2o -pi
+    <-> ec_3_1_3_25 [3.1.3.25] +h2o_chebi_15377 -pi
     myo_inositol
     <-> ec_2_1_1_39 [2.1.1.39] +sam -sah -hplus
     1d_3_o_methyl_myo_inositol

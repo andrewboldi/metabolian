@@ -24,14 +24,14 @@ pathway 4-coumaroyl-coa-to-adenin-9-yl-riburonosate-1058 "4-coumaroyl-CoA to ade
 
   branch from isoliquiritigenin side left {
     isoliquiritigenin
-    <-> . +h2o2 +h2o
+    <-> . +h2o2_mnxm732620 +h2o_water
     2_hydroperoxy_4_hydroxyphenyl_methyl_6_hydroxy_1
   }
 
   branch from isoliquiritigenin side right {
     isoliquiritigenin
-    <-> . +h +o2 +nadph +butein +h2o
-    nadp
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +butein +h2o_water
+    nadp_mnxm5
   }
 
   branch from sah side left {
@@ -114,8 +114,8 @@ pathway 4-coumaroyl-coa-to-adenin-9-yl-riburonosate-1058 "4-coumaroyl-CoA to ade
 
   branch from isoliquiritigenin side right {
     isoliquiritigenin
-    <-> ec_2_3_1_170 [2.3.1.170] +malonyl_coa +trans_4_coumaroyl_coa +h +nadph +nadp +coa +h2o
-    co2
+    <-> ec_2_3_1_170 [2.3.1.170] +malonyl_coa +trans_4_coumaroyl_coa +h +nadph_mnxm738702 +nadp_mnxm5 +coa_mnxm727276 +h2o_water
+    co2_mnxm13
   }
 
   branch from sam side left {
@@ -156,13 +156,13 @@ pathway 4-coumaroyl-coa-to-adenin-9-yl-riburonosate-1058 "4-coumaroyl-CoA to ade
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o_water
     glucose
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o_water
     l_glutamine
   }
 

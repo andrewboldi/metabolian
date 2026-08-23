@@ -22,7 +22,7 @@ pathway 3as-4s-5r-7as-5-hydroxy-to-4-methyl-5-oxo-octan "(3aS,4S,5R,7aS)-5-hydro
 
   branch from 3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahyd side left {
     3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahyd
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
-    coa
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa_mnxm1104266 +3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
+    coa_mnxm727276
   }
 }

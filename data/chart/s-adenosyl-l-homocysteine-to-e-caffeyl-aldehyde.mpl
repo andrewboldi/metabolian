@@ -145,7 +145,7 @@ pathway s-adenosyl-l-homocysteine-to-e-caffeyl-aldehyde "S-adenosyl-L-homocystei
   branch from e_caffeyl_aldehyde side right {
     e_caffeyl_aldehyde
     <-> . +h +o2
-    2e_4z_5e_2_hydroxy_7_oxo_2_oxoethylidene_hepta
+    2e_4z_5e_2_hydroxy_7_oxo_2_oxoethylidene_hepta_mnxm1368547
   }
 
   branch from e_caffeyl_aldehyde side left {

@@ -11,11 +11,11 @@ pathway 4-hydroxymandelate-to-arsenate "4-hydroxymandelate to arsenate" {
     <-> . +hplus -co2
     p_hydroxybenzyl_alcohol
     <-> . +copper -4_hydroxybenzaldehyde -hplus
-    copper
+    copper_chebi_49552
     <-> . +nadp +hplus -nadph
     copper
     <-> ec_1_20_9_1 [1.20.9.1] +arsenite +h2o -arsenate -hplus
-    copper
+    copper_chebi_49552
     <-> ec_2_8_4_2 [2.8.4.2] +mycothiol +arsenate -h2o
     arseno_mycothiol
     <-> ec_1_20_4_3 [1.20.4.3] +l_cysteine +hplus -arsenite
@@ -26,8 +26,8 @@ pathway 4-hydroxymandelate-to-arsenate "4-hydroxymandelate to arsenate" {
 
   branch from p_hydroxybenzyl_alcohol side left {
     p_hydroxybenzyl_alcohol
-    <-> . +h +cu +4_methylphenol +h2o
-    cu
+    <-> . +h +cu +4_methylphenol +h2o_water
+    cu_mnxm731166
   }
 
   branch from arsenite side right {
@@ -44,7 +44,7 @@ pathway 4-hydroxymandelate-to-arsenate "4-hydroxymandelate to arsenate" {
 
   branch from arsenite side right {
     arsenite
-    <-> . +arsenic_trioxide +h2o
+    <-> . +arsenic_trioxide +h2o_water
     h
   }
 

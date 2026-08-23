@@ -19,7 +19,7 @@ pathway 1-1-2-trioleoyl-2-palmi-to-oleate-67756 "1,1',2-trioleoyl-2'-palmi… to
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
     <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_73002
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {

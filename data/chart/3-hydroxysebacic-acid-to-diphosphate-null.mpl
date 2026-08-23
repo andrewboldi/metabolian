@@ -12,9 +12,9 @@ pathway 3-hydroxysebacic-acid-to-diphosphate-null "3-hydroxysebacic acid to diph
     3_hydroxy_sebacoyl_coenzyme_a
     <-> . +h2o2 -o2 -h2o
     decanedioyl_coa
-    <-> . +h2o -coa -hplus
+    <-> . +h2o_chebi_15377 -coa_chebi_57287 -hplus
     sebacate
-    <-> . +atp +coa -amp -ppi
+    <-> . +atp +coa_chebi_57287 -amp -ppi
     decanedioyl_coa
   }
 }

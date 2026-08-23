@@ -14,20 +14,20 @@ pathway s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al "S-adenosyl-L-homocystei
     3_4_dihydroanhydrorhodovibrin
     <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h -s_adenosyl_l_methionine
     rhodopin
-    <-> ec_4_2_1_131 [4.2.1.131] -h2o
+    <-> ec_4_2_1_131 [4.2.1.131] -h2o_chebi_15377
     lycopene
     <-> ec_5_5_1_19 [5.5.1.19]
     carotene
     <-> ec_5_5_1_19 [5.5.1.19]
-    carotene
+    carotene_chebi_17579
     <-> ec_1_13_11_71 [1.13.11.71] +o2 -10_apo_carotenal
     ionone
     <-> ec_1_13_11_71 [1.13.11.71] +8_10_diapocarotene_8_10_dial -8_apo_caroten_8_al
-    o2
+    o2_mnxm735438
     <-> ec_1_13_11_75 [1.13.11.75] +8_apo_caroten_8_al +o2 -all_trans_retinal
     2_6_dimethylocta_2_4_6_trienedial
     <-> ec_1_13_11_75 [1.13.11.75] +retinal -8_apo_caroten_8_al
-    o2
+    o2_mnxm735438
   }
 
   branch from s_adenosyl_l_methionine side left {
@@ -54,8 +54,8 @@ pathway s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al "S-adenosyl-L-homocystei
     methylparaben
   }
 
-  branch from carotene side left {
-    carotene
+  branch from carotene_chebi_17579 side left {
+    carotene_chebi_17579
     <-> ec_5_2_1_14 [5.2.1.14]
     9_cis_carotene
   }
@@ -66,14 +66,14 @@ pathway s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al "S-adenosyl-L-homocystei
     4_methylocta_2_4_6_trienedial
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> ec_1_14_14_1 [1.14.14.1] +formate +nadp +estrone +h2o +nadph
     3_17_dioxoandrost_4_en_19_al
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> ec_1_14_15_4 [1.14.15.4] +h +17alpha_hydroxyprogesterone +nadph +21_deoxycortisol +h2o
     nadp
   }
@@ -138,27 +138,27 @@ pathway s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al "S-adenosyl-L-homocystei
     acetaldehyde_oxime
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> ec_1_13_11_8 [1.13.11.8] +4_carboxy_2_hydroxyhexa_2_4_dienedioate +h
     3_4_5_trihydroxybenzoate
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> ec_1_14_13_41 [1.14.13.41] +h +n_hydroxy_l_tyrosine +nadph +nadp +h2o
     n_n_dihydroxy_l_tyrosine
   }
 
   branch from retinal side left {
     retinal
-    <-> ec_1_2_1_36 [1.2.1.36] +nad +h2o +nadh +hplus
+    <-> ec_1_2_1_36 [1.2.1.36] +nad +h2o_chebi_15377 +nadh +hplus
     retinoate
   }
 
   branch from retinal side right {
     retinal
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh_mnxm10 +h +nad_mnxm8
     retinol
   }
 }

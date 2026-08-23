@@ -14,7 +14,7 @@ pathway 2-oxoglutaramate-to-nicotine-blue "2-oxoglutaramate to nicotine blue" {
     blue_pigment
     <-> ec_1_1_1_328 [1.1.1.328] +nadh +h -3_3_bipyridine_2_2_5_5_6_6_hexol
     nad
-    <-> ec_1_1_1_328 [1.1.1.328] +3_3_bipyridine_2_2_5_5_6_6_hexol +nad -nadh -hplus
+    <-> ec_1_1_1_328 [1.1.1.328] +3_3_bipyridine_2_2_5_5_6_6_hexol +nad_chebi_57540 -nadh_chebi_57945 -hplus
     nicotine_blue
   }
 }

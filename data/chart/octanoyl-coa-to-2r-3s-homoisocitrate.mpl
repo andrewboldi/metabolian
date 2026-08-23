@@ -153,7 +153,7 @@ pathway octanoyl-coa-to-2r-3s-homoisocitrate "octanoyl-CoA to (2R,3S)-homoisocit
   branch from nad side left {
     nad
     <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    thujan_3_ol
+    thujan_3_ol_mnxm97633
   }
 
   branch from nad side right {

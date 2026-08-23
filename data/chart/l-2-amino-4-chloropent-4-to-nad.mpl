@@ -10,7 +10,7 @@ pathway l-2-amino-4-chloropent-4-to-nad "L-2-amino-4-chloropent-4-… to NAD" {
     l_2_amino_4_chloropent_4_enoic_acid
     <-> ec_4_5_1_4 [4.5.1.4] +h2o -chloride -nh3 -hplus
     2_oxopent_4_enoate
-    <-> ec_3_7_1_9 [3.7.1.9] +h +formate -h2o
+    <-> ec_3_7_1_9 [3.7.1.9] +h +formate -h2o_water
     2_hydroxymuconic_semialdehyde
     <-> ec_1_13_11_2 [1.13.11.2] +h -o2
     catechol

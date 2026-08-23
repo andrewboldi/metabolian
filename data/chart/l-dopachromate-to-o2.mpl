@@ -12,43 +12,43 @@ pathway l-dopachromate-to-o2 "L-dopachromate to O2" {
     5_6_dihydroxyindole_2_carboxylate
     <-> . +o2 -h2o
     indole_5_6_quinone_2_carboxylate
-    <-> . +h2o2 -o2
-    5_6_dihydroxyindole_2_carboxylate
+    <-> . +h2o2 -o2_mnxm735438
+    5_6_dihydroxyindole_2_carboxylate_mnxm726107
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +4_oxoisotretinoin +h2o +13_cis_retinoate
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +4_oxoisotretinoin +h2o_water +13_cis_retinoate
     h
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +alpha_pinene +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +alpha_pinene +h +nadph +nadp +h2o_water
     alpha_pinene_oxide
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +spermidine_dialdehyde +nh4 +o2 +h2o
+    <-> . +spermidine_dialdehyde +nh4 +o2_mnxm735438 +h2o_water
     n_3_aminopropyl_4_aminobutanal
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +spermine_monoaldehyde_3 +o2 +h2o +spermine_dialdehyde
+    <-> . +spermine_monoaldehyde_3 +o2_mnxm735438 +h2o_water +spermine_dialdehyde
     nh4
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +4_hydroxydebrisoquin +nadp +h2o +h +nadph
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +4_hydroxydebrisoquin +nadp +h2o_water +h +nadph
     debrisoquin
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o_water
     12s_hydroxy_5z_8z_10e_14z_eicosatetraenoate
   }
 }

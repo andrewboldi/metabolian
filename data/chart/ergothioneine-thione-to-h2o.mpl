@@ -73,7 +73,7 @@ pathway ergothioneine-thione-to-h2o "ergothioneine (thione… to H2O" {
   branch from h2o side right {
     h2o
     <-> . +aklanonic_acid +o2
-    12_deoxyaklanonic_acid
+    12_deoxyaklanonic_acid_mnxm1372265
   }
 
   branch from ergothioneine_thione_form side left {

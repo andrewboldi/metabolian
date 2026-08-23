@@ -19,12 +19,12 @@ pathway 4-hydroxy-l-tryptophan-to-s-adenosyl-l-homocyste "4-hydroxy-L-tryptophan
   branch from h side left {
     h
     <-> . +diphosphate +vaccenyl_coenzyme_a +amp +coa +vaccenic_acid
-    atp
+    atp_mnxm3
   }
 
   branch from h side right {
     h
-    <-> . +8z_11z_14z_17z_eicosatetraenoyl_coa +diphosphate +amp +atp +all_cis_8_11_14_17_icosatetraenoic_acid
+    <-> . +8z_11z_14z_17z_eicosatetraenoyl_coa +diphosphate +amp +atp_mnxm3 +all_cis_8_11_14_17_icosatetraenoic_acid
     coa
   }
 }

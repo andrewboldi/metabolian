@@ -91,7 +91,7 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-7-l-d-538 "UDP-3-O-[(3R)-hydroxya
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
     <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_chebi_234186
   }
 
   branch from cytidine_5_monophosphate side left {
@@ -108,7 +108,7 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-7-l-d-538 "UDP-3-O-[(3R)-hydroxya
 
   branch from adp_l_glycero_d_manno_heptose side left {
     adp_l_glycero_d_manno_heptose
-    <-> ec_2_4_1_56 [2.4.1.56] +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +adp +core_oligosaccharide_lipid_a
+    <-> ec_2_4_1_56 [2.4.1.56] +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +adp_mnxm40333 +core_oligosaccharide_lipid_a
     h
   }
 }

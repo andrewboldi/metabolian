@@ -12,7 +12,7 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-h2o-38927 "1-oleoyl-sn-glycero-3-pho… to 
     1_oleoyl_sn_glycero_3_phosphate
     <-> . +linoleoyl_coa -coa
     1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate -h2o_water
     atp
   }
 

@@ -18,7 +18,7 @@ pathway udp-d-glucose-to-3-o-l-rha-1-3-d-g "UDP-α-D-glucose to 3-O-{α-L-Rha-(1
     3_o_l_rha_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r
     <-> . +udp_d_xylose -udp -hplus
     3_o_l_rha_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x
-    <-> . +udp +h -3_o_l_rha_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r
+    <-> . +udp_mnxm1102128 +h -3_o_l_rha_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r
     udp_alpha_d_xylose
   }
 }

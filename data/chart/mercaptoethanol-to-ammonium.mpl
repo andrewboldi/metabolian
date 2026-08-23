@@ -57,6 +57,6 @@ pathway mercaptoethanol-to-ammonium "mercaptoethanol to ammonium" {
   branch from h2o side left {
     h2o
     <-> . +3_5_dioxo_6_4_5_7_trihydroxy_3_3_oxobutanoyl_nap
-    3_5_7_9_11_13_15_17_19_nonaoxoicosanoate
+    3_5_7_9_11_13_15_17_19_nonaoxoicosanoate_mnxm1372637
   }
 }

@@ -18,7 +18,7 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o-null "2,3-dihydroxy-N-benzoylse… to H
 
   branch from n_2_3_dihydroxybenzoyl_l_serine_trimer side left {
     n_2_3_dihydroxybenzoyl_l_serine_trimer
-    <-> ec_3_1_1_107 [3.1.1.107] +h2o
+    <-> ec_3_1_1_107 [3.1.1.107] +h2o_chebi_15377
     enterobactin
   }
 
@@ -90,7 +90,7 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o-null "2,3-dihydroxy-N-benzoylse… to H
 
   branch from fe side left {
     fe
-    <-> . +fmnh2 +h +fe_enterobactin +enterobactin
+    <-> . +fmnh2 +h +fe_enterobactin +enterobactin_mnxm883
     fmn
   }
 

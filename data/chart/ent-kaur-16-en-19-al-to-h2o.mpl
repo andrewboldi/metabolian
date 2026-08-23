@@ -16,12 +16,12 @@ pathway ent-kaur-16-en-19-al-to-h2o "ent-kaur-16-en-19-al to H2O" {
     gibberellin_a12_aldehyde
     <-> . +h +o2 +nadph -nadp -h2o
     gibberellin_a14_aldehyde
-    <-> . +akg +o2 -succinate -co2 -hplus
+    <-> . +akg +o2_chebi_15379 -succinate -co2 -hplus
     gibberellin_a14
-    <-> . +2_oxoglutarate +h +o2 -succinate -1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet
-    co2
-    <-> . +2_oxoglutarate +1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet +o2 -co2 -gibberellin_a36 -h2o
-    succinate
+    <-> . +2_oxoglutarate +h +o2 -succinate_mnxm25 -1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet
+    co2_mnxm13
+    <-> . +2_oxoglutarate +1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet +o2 -co2_mnxm13 -gibberellin_a36 -h2o
+    succinate_mnxm25
   }
 
   branch from nadp side left {
@@ -48,26 +48,26 @@ pathway ent-kaur-16-en-19-al-to-h2o "ent-kaur-16-en-19-al to H2O" {
     donepezil_metabolite_m13
   }
 
-  branch from co2 side left {
-    co2
+  branch from co2_mnxm13 side left {
+    co2_mnxm13
     <-> . +3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid
     cis_2_oxohept_3_enedioic_acid
   }
 
-  branch from co2 side right {
-    co2
+  branch from co2_mnxm13 side right {
+    co2_mnxm13
     <-> . +3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid
     2_hydroxyhepta_2_4_dienedioic_acid
   }
 
-  branch from succinate side left {
-    succinate
+  branch from succinate_mnxm25 side left {
+    succinate_mnxm25
     <-> ec_1_4_3_16 [1.4.3.16] +l_aspartate +fumarate
     iminoaspartate
   }
 
-  branch from succinate side right {
-    succinate
+  branch from succinate_mnxm25 side right {
+    succinate_mnxm25
     <-> . +menaquinol_8 +fumarate
     mk_8
   }
@@ -132,26 +132,26 @@ pathway ent-kaur-16-en-19-al-to-h2o "ent-kaur-16-en-19-al to H2O" {
     coa
   }
 
-  branch from co2 side left {
-    co2
+  branch from co2_mnxm13 side left {
+    co2_mnxm13
     <-> . +13z_3_oxoicosenoyl_coa +coa +11e_octadecenoyl_coa +h
     malonyl_coa
   }
 
-  branch from co2 side right {
-    co2
+  branch from co2_mnxm13 side right {
+    co2_mnxm13
     <-> . +malonyl_coa +7z_octadec_7_enoyl_coa +h +coa
     3_oxo_9_cis_eicosenoyl_coenzyme_a
   }
 
-  branch from succinate side left {
-    succinate
+  branch from succinate_mnxm25 side left {
+    succinate_mnxm25
     <-> ec_1_3_5_1 [1.3.5.1] +plastoquinone_9 +fumarate
     plastoquinol_9
   }
 
-  branch from succinate side right {
-    succinate
+  branch from succinate_mnxm25 side right {
+    succinate_mnxm25
     <-> . +n_2_succinyl_l_ornithine +h2o
     l_ornithine
   }

@@ -11,8 +11,8 @@ pathway maltopentaose-to-d-glucose-null "maltopentaose to α-D-glucose" {
     <-> . +glucose -h2o
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
     <-> . +beta_d_fructose -h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> . +h2o -d_glucose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143183
+    <-> . +h2o_chebi_15377 -d_glucose
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 }

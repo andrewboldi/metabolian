@@ -14,7 +14,7 @@ pathway palustric-acid-to-fmn "Palustric acid to FMN" {
     abietol
     <-> ec_1_14_14_145 [1.14.14.145] +h +o2 +nadph -nadp -h2o
     abietal
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     abietate
   }
 

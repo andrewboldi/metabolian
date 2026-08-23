@@ -20,30 +20,151 @@ pathway dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid "dioleoyl phosphatidic 
     2_deoxycytosine_5_monophosphate
     <-> ec_2_1_1_54 [2.1.1.54] +methylene_thf -dhf
     2_deoxy_5_methyl_5_cytidylate
-    <-> ec_2_7_4_19 [2.7.4.19] +atp -adp
+    <-> ec_2_7_4_19 [2.7.4.19] +atp_chebi_30616 -adp_chebi_456216
     5_methyldeoxycytidine_5_diphosphate
   }
 
+  branch from h side left {
+    h
+    <-> . +e_caffeate +pyruvate +h2o
+    ground_state_fungal_oxyluciferin
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_7_8_26 [2.7.8.26] +adenosylcob_iii_inamide_gdp +benzimidazole_ribotide_phosphate +coalpha_alpha_benzimidazolyl_cobeta_adenosylcoba
+    gmp
+  }
 
+  branch from dctp side left {
+    dctp
+    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dcdp
+    cytidine
+  }
 
+  branch from l_glutamine side right {
+    l_glutamine
+    <-> . +6_oxoparomamine +neamine
+    2_oxoglutaramate
+  }
 
+  branch from l_glutamine side left {
+    l_glutamine
+    <-> . +gly_gln +h +adp +phosphate +atp
+    glycine
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    alpha_lactose
+  }
 
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    tetracosanoyl_coa
+  }
 
+  branch from dutp side right {
+    dutp
+    <-> ec_2_7_1_48 [2.7.1.48] +h +dudp +cytidine
+    cmp
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +4_hydroxymethyl_3_5_methylhexanoyl_5h_furan_2_on
+    3_hydroxy_2_oxopropyl_7_methyl_3_oxooctanoate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +l_alanyl_gamma_d_glutamyl_l_lysyl_d_alanine
+    l_alanyl_gamma_d_glutamyl_l_lysyl_d_alanyl_d_ala
+  }
 
+  branch from h side left {
+    h
+    <-> ec_2_3_3_20 [2.3.3.20] +4z_7z_10z_13z_hexadecatetraenoyl_coa +h2o +6z_9z_12z_15z_3_oxo_2_2z_5z_8z_11z_tetradeca_2
+    coa
+  }
 
+  branch from h side right {
+    h
+    <-> . +resolvin_e1 +h2o
+    5_6_epoxy_18r_hepe
+  }
 
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+  }
 
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143181
+  }
 
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> ec_6_3_5_9 [6.3.5.9] +hydrogenobyrinate_a_c_diamide +h +adp +phosphate +l_glutamine +atp +h2o
+    hydrogenobyrinate
+  }
 
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> ec_6_3_5_9 [6.3.5.9] +hydrogenobyrinate_diamide +h +adp +phosphate +l_glutamine +atp +h2o
+    hydrogenobyrinate_mnxm1371093
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_benzimidazolyl_cobeta_adenosylcoba +h2o
+    coalpha_alpha_benzimidazolyl_cobeta_adenosylcoba_mnxm818827
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_73 [3.1.3.73] +5_methoxybenzimidazolylcobamide +h2o
+    5_methoxybenzimidazolyl_cobamide
+  }
 
+  branch from l_glutamine side left {
+    l_glutamine
+    <-> ec_6_3_2_49 [6.3.2.49] +l_alanine +atp +h +adp +phosphate
+    ala_gln
+  }
 
+  branch from l_glutamine side right {
+    l_glutamine
+    <-> . +glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l_lys_d +h +atp +h2o +adp +l_glutamate +phosphate
+    undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl
+  }
 
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_151 [2.7.1.151] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h +adp
+    1d_myo_inositol_1_3_4_5_tetrakisphosphate
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    octadecanoyl_coa
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +13s_hydroperoxy_9z_11e_15z_octadecatrienoate
+    omega5z_etherolenate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_145 [3.2.1.145] +d_galactopyranose
+    d_galp_1_3_d_galp
+  }
 }

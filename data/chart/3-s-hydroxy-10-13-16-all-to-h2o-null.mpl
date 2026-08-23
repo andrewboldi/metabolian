@@ -11,7 +11,7 @@ pathway 3-s-hydroxy-10-13-16-all-to-h2o-null "3(S)-hydroxy-10,13,16-all… to H2
     <-> . +nadp -h -nadph
     10z_13z_16z_3_oxodocosatrienoyl_coa
     <-> . +h +nadph -nadp
-    3_s_hydroxy_10_13_16_all_cis_docosatrienoyl_coa
+    3_s_hydroxy_10_13_16_all_cis_docosatrienoyl_coa_mnxm1560349
     <-> . -h2o
     trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
   }

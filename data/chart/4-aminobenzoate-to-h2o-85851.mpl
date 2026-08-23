@@ -10,9 +10,9 @@ pathway 4-aminobenzoate-to-h2o-85851 "4-aminobenzoate to H2O" {
     4_aminobenzoate
     <-> . +udp_d_glucose -udp
     1_o_4_aminobenzoyl_d_glucopyranose
-    <-> . +udp -4_aminobenzoate
+    <-> . +udp_mnxm1102128 -4_aminobenzoate_mnxm421
     udp_alpha_d_glucose
-    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +4_aminobenzoate -h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +4_aminobenzoate_mnxm421 -h2o
     benzocaine
   }
 }

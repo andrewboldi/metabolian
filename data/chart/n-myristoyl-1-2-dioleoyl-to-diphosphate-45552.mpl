@@ -19,7 +19,7 @@ pathway n-myristoyl-1-2-dioleoyl-to-diphosphate-45552 "N-myristoyl-1,2-dioleoyl-
   branch from 1_2_dioleoyl_sn_glycero_3_phosphate side left {
     1_2_dioleoyl_sn_glycero_3_phosphate
     <-> ec_3_1_1_4 [3.1.1.4] +9z_octadecenoate +h +1_9z_octadecenoyl_sn_glycero_3_phosphate
-    h2o
+    h2o_water
   }
 
   branch from tetradecanoate side right {

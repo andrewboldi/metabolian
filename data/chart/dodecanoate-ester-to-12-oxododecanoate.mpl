@@ -67,7 +67,7 @@ pathway dodecanoate-ester-to-12-oxododecanoate "dodecanoate ester to 12-oxododec
   branch from fmn side left {
     fmn
     <-> . +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
-    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
+    8_hydroxygermacra_1_10_4_11_13_trien_12_oate_chebi_142490
   }
 
   branch from fmn side right {

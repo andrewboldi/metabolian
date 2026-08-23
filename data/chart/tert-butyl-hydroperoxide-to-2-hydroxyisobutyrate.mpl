@@ -20,31 +20,31 @@ pathway tert-butyl-hydroperoxide-to-2-hydroxyisobutyrate "tert-butyl hydroperoxi
 
   branch from 2_methylpropane_1_2_diol side left {
     2_methylpropane_1_2_diol
-    <-> ec_3_3_2_10 [3.3.2.10] +h2o
+    <-> ec_3_3_2_10 [3.3.2.10] +h2o_water
     2_2_dimethyloxirane
   }
 
   branch from 2_hydroxyisobutyrate side right {
     2_hydroxyisobutyrate
-    <-> ec_3_5_5_1 [3.5.5.1] +2_hydroxy_2_methylpropanenitrile +h2o
+    <-> ec_3_5_5_1 [3.5.5.1] +2_hydroxy_2_methylpropanenitrile +h2o_water
     nh4
   }
 
   branch from 2_hydroxyisobutyrate side left {
     2_hydroxyisobutyrate
-    <-> ec_3_5_1_4 [3.5.1.4] +h2o +nh4
+    <-> ec_3_5_1_4 [3.5.1.4] +h2o_water +nh4
     2_hydroxyisobutyramide
   }
 
   branch from tert_butyl_hydroperoxide side right {
     tert_butyl_hydroperoxide
-    <-> ec_1_11_1_21 [1.11.1.21] +nadh +h +nad +h2o
-    tert_butanol
+    <-> ec_1_11_1_21 [1.11.1.21] +nadh_mnxm10 +h +nad_mnxm8 +h2o_water
+    tert_butanol_mnxm22008
   }
 
   branch from tert_butyl_hydroperoxide side left {
     tert_butyl_hydroperoxide
-    <-> ec_1_11_1_21 [1.11.1.21] +h +nadph +tert_butanol +h2o
-    nadp
+    <-> ec_1_11_1_21 [1.11.1.21] +h +nadph_mnxm738702 +tert_butanol_mnxm22008 +h2o_water
+    nadp_mnxm5
   }
 }

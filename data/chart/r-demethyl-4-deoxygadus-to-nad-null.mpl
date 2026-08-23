@@ -20,20 +20,111 @@ pathway r-demethyl-4-deoxygadus-to-nad-null "(R)-demethyl-4-deoxygadus… to NAD
     5_epi_valiolol_7_phosphate
   }
 
+  branch from h side left {
+    h
+    <-> . +nadh +5_dehydro_4_deoxy_d_glucuronate +nad
+    2_dehydro_3_deoxy_d_gluconate
+  }
 
+  branch from h side right {
+    h
+    <-> . +nadh +cdp_d_xylulose +nad
+    cdp_d_arabinitol
+  }
 
+  branch from 2_epi_5_epi_valiolone side left {
+    2_epi_5_epi_valiolone
+    <-> ec_5_1_3_33 [5.1.3.33]
+    5_epi_valiolone
+  }
 
+  branch from 2_epi_5_epi_valiolone side right {
+    2_epi_5_epi_valiolone
+    <-> ec_1_3_1_126 [1.3.1.126] +nad_chebi_57540 +nadh_chebi_57945 +hplus
+    demethylgadusol
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> . +6_dehydro_scb2 +h2o
+    3s_4r_4_octanoyl_5_oxooxolan_3_yl_methyl_phosph
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_73 [3.1.3.73] +4_methylphenyl_cobeta_adenosylcobamide_5_phospha +h2o
+    4_methylphenyl_cobeta_adenosylcobamide
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +cdp_4_dehydro_3_6_dideoxy_d_glucose
+    cdp_3_6_dideoxy_d_glucose
+  }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +norsolorinic_acid +h
+    1_s_averantin
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_1_1_3 [3.1.1.3] +hexadecanoate +1_2_dipalmitoylglycerol +h2o
+    tripalmitin
+  }
 
+  branch from h side right {
+    h
+    <-> . +nadh +8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa +nad
+    3r_8z_11z_14z_3_hydroxyicosatrienoyl_coa
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> . +3s_4r_4_6_methylheptanoyl_5_oxooxolan_3_yl_meth +h2o
+    3r_4r_4_hydroxymethyl_3_6_methylheptanoyl_oxola
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> ec_7_6_2_16 [7.6.2.16] +h +adp_mnxm40333 +atp_mnxm3 +h2o
+    putrescine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +beta_d_glucose
+    linustatin
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +lotaustralin
+    neolinustatin
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_100 [1.1.1.100] +h +7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa +nad
+    3r_7z_10z_13z_16z_19z_3_hydroxydocosapentaenoyl
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> . +h +artemisinic_aldehyde +nad
+    11r_dihydroartemisinic_aldehyde
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +beta_d_ribofuranose
+    l_arabinitol
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +4_hydroxymethyl_3_5_methylhexanoyl_5h_furan_2_on
+    6_dehydro_virginiae_butanolide_a
+  }
 }

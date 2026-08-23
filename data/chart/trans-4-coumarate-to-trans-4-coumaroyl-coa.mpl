@@ -12,7 +12,7 @@ pathway trans-4-coumarate-to-trans-4-coumaroyl-coa "trans-4-coumarate to trans-4
     r_3_4_hydroxyphenyl_lactate
     <-> ec_2_8_3_17 [2.8.3.17] +trans_4_coumaroyl_coa -trans_4_coumarate
     r_3_4_hydroxyphenyl_lactoyl_coa
-    <-> ec_4_2_1_175 [4.2.1.175] -h2o
+    <-> ec_4_2_1_175 [4.2.1.175] -h2o_chebi_15377
     trans_4_coumaroyl_coa
   }
 }

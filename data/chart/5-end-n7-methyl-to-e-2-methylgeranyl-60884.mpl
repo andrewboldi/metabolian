@@ -54,13 +54,13 @@ pathway 5-end-n7-methyl-to-e-2-methylgeranyl-60884 "5'-end (N7-methyl… to (E)-
 
   branch from h side left {
     h
-    <-> ec_3_2_2_3 [3.2.2.3] +beta_d_ribosylnicotinate +h2o +nicotinate
+    <-> ec_3_2_2_3 [3.2.2.3] +beta_d_ribosylnicotinate +h2o_water +nicotinate
     d_ribose
   }
 
   branch from h side right {
     h
-    <-> . +mycinamicin_viii +o2 +nadph +mycinamicin_vii +h2o
+    <-> . +mycinamicin_viii +o2 +nadph +mycinamicin_vii +h2o_water
     nadp
   }
 
@@ -84,7 +84,7 @@ pathway 5-end-n7-methyl-to-e-2-methylgeranyl-60884 "5'-end (N7-methyl… to (E)-
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +nadp +coa +amp +yersiniabactin +h2o +s_adenosyl_l_methionine +h +l_cysteine +nadph +2_hydroxybenzoyl_5_amp
+    <-> . +nadp +coa +amp +yersiniabactin +h2o_water +s_adenosyl_l_methionine +h +l_cysteine +nadph +2_hydroxybenzoyl_5_amp
     malonyl_coa
   }
 

@@ -12,7 +12,7 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron-18309 "N-acyl-D-Î±-amino acidâ€
     d_amino_acid
     <-> ec_1_4_3_3 [1.4.3.3] +o2 +h2o -h2o2 -nh3
     2_oxo_monocarboxylic_acid_anion
-    <-> ec_1_2_7_11 [1.2.7.11] +di_sulfido_diiron +coa -di_sulfido_diiron -co2 -hplus
+    <-> ec_1_2_7_11 [1.2.7.11] +di_sulfido_diiron +coa -di_sulfido_diiron_chebi_33738 -co2 -hplus
     acyl_coa
   }
 
@@ -52,14 +52,14 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron-18309 "N-acyl-D-Î±-amino acidâ€
     cardiolipin
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_15_32 [1.14.15.32] +pentalenene +o2 +hplus +di_sulfido_diiron +h2o
     pentalen_13_al
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> . +pentalenene +o2 +hplus +di_sulfido_diiron +h2o
     pentalen_13_ol
   }
@@ -67,7 +67,7 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron-18309 "N-acyl-D-Î±-amino acidâ€
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
     <-> . +tetra_3_sulfido_tetrairon +aldehyde +h2o +hplus
-    tetra_3_sulfido_tetrairon
+    tetra_3_sulfido_tetrairon_chebi_33723
   }
 
   branch from carboxylic_acid_anion side right {
@@ -90,13 +90,13 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron-18309 "N-acyl-D-Î±-amino acidâ€
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_17_7_2 [1.17.7.2] +chlorophyllide_a +h2o +di_sulfido_diiron +hplus
+    <-> ec_1_17_7_2 [1.17.7.2] +chlorophyllide_a +h2o +di_sulfido_diiron_chebi_33738 +hplus
     71_hydroxychlorophyllide_a
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_39 [1.14.15.39] +epi_isozizaene +di_sulfido_diiron +o2 +hplus +h2o
+    <-> ec_1_14_15_39 [1.14.15.39] +epi_isozizaene +di_sulfido_diiron_chebi_33738 +o2 +hplus +h2o
     albaflavenone
   }
 
@@ -112,14 +112,14 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron-18309 "N-acyl-D-Î±-amino acidâ€
     o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_15_9 [1.14.15.9] +spirilloxanthin +o2 +hplus +di_sulfido_diiron +h2o
     2_oxospirilloxanthin
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_15_10 [1.14.15.10] +r_camphor +o2 +hplus +di_sulfido_diiron +h2o
     6_endo_hydroxycamphor
   }

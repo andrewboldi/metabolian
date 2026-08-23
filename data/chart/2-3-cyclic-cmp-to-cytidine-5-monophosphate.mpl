@@ -30,8 +30,8 @@ pathway 2-3-cyclic-cmp-to-cytidine-5-monophosphate "2',3'-cyclic CMP to cytidine
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
-    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l_chebi_137949 +cmp_n_acetyl_neuraminate +hplus
+    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_chebi_231973
   }
 
   branch from cytidine_5_monophosphate side right {

@@ -40,7 +40,7 @@ pathway d-arabinitol-to-2-5-dioxopentanoate-59776 "D-arabinitol to 2,5-dioxopent
 
   branch from d_arabinopyranose side right {
     d_arabinopyranose
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 }

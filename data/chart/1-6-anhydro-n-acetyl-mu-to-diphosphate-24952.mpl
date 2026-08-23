@@ -42,7 +42,7 @@ pathway 1-6-anhydro-n-acetyl-mu-to-diphosphate-24952 "1,6-anhydro-N-acetyl-β-mu
 
   branch from n_acetylneuraminate side right {
     n_acetylneuraminate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +h2o
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_chebi_87791 +h2o
     gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_8_neu5ac
   }
 
@@ -66,7 +66,7 @@ pathway 1-6-anhydro-n-acetyl-mu-to-diphosphate-24952 "1,6-anhydro-N-acetyl-β-mu
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58635 +h2o
     copalol
   }
 
@@ -108,13 +108,13 @@ pathway 1-6-anhydro-n-acetyl-mu-to-diphosphate-24952 "1,6-anhydro-N-acetyl-β-mu
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58635 +h2o
     manool
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58635 +h2o
     13_epi_manool
   }
 }

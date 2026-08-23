@@ -42,7 +42,7 @@ pathway z-1-glutathion-s-yl-n-to-l-serine-null "(Z)-1-(glutathion-S-yl)-N… to 
 
   branch from 4_methylthiobutylthiohydroximate side left {
     4_methylthiobutylthiohydroximate
-    <-> ec_2_4_1_195 [2.4.1.195] +3_methylthiopropyl_desulfoglucosinolate +h +udp_alpha_d_glucose
+    <-> ec_2_4_1_195 [2.4.1.195] +3_methylthiopropyl_desulfoglucosinolate_chebi_80985 +h +udp_alpha_d_glucose
     udp
   }
 
@@ -55,7 +55,7 @@ pathway z-1-glutathion-s-yl-n-to-l-serine-null "(Z)-1-(glutathion-S-yl)-N… to 
   branch from glycine side left {
     glycine
     <-> . +glycyl_dl_phenylalanine +h2o
-    gly_gly_phe
+    gly_gly_phe_mnxm729754
   }
 
   branch from atp side right {
@@ -156,8 +156,8 @@ pathway z-1-glutathion-s-yl-n-to-l-serine-null "(Z)-1-(glutathion-S-yl)-N… to 
 
   branch from glycine side right {
     glycine
-    <-> . +gly_ala +h2o
-    gly_gly_ala
+    <-> . +gly_ala_mnxm729750 +h2o
+    gly_gly_ala_mnxm729752
   }
 
   branch from atp side left {

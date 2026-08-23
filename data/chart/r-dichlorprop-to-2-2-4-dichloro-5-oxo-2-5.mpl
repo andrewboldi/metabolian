@@ -46,7 +46,7 @@ pathway r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5 "(R)-dichlorprop to 2-(2,4-dic
 
   branch from chloride side left {
     chloride
-    <-> ec_3_8_1_5 [3.8.1.5] +h +beta_2_3_4_5_6_pentachlorocyclohexanol +h2o
+    <-> ec_3_8_1_5 [3.8.1.5] +h +beta_2_3_4_5_6_pentachlorocyclohexanol +h2o_water
     beta_hexachlorocyclohexane
   }
 
@@ -58,7 +58,7 @@ pathway r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5 "(R)-dichlorprop to 2-(2,4-dic
 
   branch from h side left {
     h
-    <-> . +n_carbamoyl_l_glutamate +h2o
+    <-> . +n_carbamoyl_l_glutamate +h2o_water
     hydantoin_5_propionate
   }
 }

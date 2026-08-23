@@ -58,8 +58,8 @@ pathway plastoquinone-9-to-neurosporaxanthin "plastoquinone-9 to neurosporaxanth
 
   branch from torulene side right {
     torulene
-    <-> . +4_ketotorulene +h2o
-    o2
+    <-> . +4_ketotorulene +h2o_water
+    o2_mnxm735438
   }
 
   branch from 3_methylbut_2_enal side left {
@@ -77,18 +77,18 @@ pathway plastoquinone-9-to-neurosporaxanthin "plastoquinone-9 to neurosporaxanth
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
     <-> . +thyronamine +iodide +hplus +hydrogen_donor
-    3_iodothyronamine
+    3_iodothyronamine_chebi_231647
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +3_iodothyronamine +iodide +hplus +hydrogen_donor
+    <-> . +3_iodothyronamine_chebi_231647 +iodide +hplus +hydrogen_donor
     3_5_diiodothyronamine
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +3_iodothyronamine +hydrogen_acceptor +hplus +3_3_diiodothyronamine
+    <-> . +3_iodothyronamine_chebi_231647 +hydrogen_acceptor +hplus +3_3_diiodothyronamine
     iodide
   }
 

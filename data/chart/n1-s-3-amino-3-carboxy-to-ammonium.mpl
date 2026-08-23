@@ -20,7 +20,7 @@ pathway n1-s-3-amino-3-carboxy-to-ammonium "N1-[(S)-3-amino-3-carboxy… to ammo
 
   branch from n1_aminopropylagmatine side left {
     n1_aminopropylagmatine
-    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_6_3_31 [3.6.3.31] +h +adp_mnxm40333 +phosphate +h2o_water
+    atp_mnxm3
   }
 }

@@ -12,7 +12,7 @@ pathway pentalenolactone-d-to-h2o "pentalenolactone D to H2O" {
     pentalenolactone_e
     <-> . +akg +o2 -succinate -co2
     pentalenolactone_f
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -pentalenolactone_f -h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -pentalenolactone_f -h2o_water
     atp
   }
 }

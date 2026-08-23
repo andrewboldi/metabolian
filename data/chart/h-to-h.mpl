@@ -97,7 +97,7 @@ pathway h-to-h "H to H" {
   branch from dtdp_l_oleandrose side right {
     dtdp_l_oleandrose
     <-> . +avermectin_a2b_aglycone +dtdp +h
-    avermectin_a2b_monosaccharide
+    avermectin_a2b_monosaccharide_mnxm1370813
   }
 
   branch from dtdp side left {

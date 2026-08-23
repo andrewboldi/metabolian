@@ -14,13 +14,13 @@ pathway nadh-to-15-dehydro-prostaglandin-null "NADH to 15-dehydro-prostaglandinâ
     h
     <-> . +prostaglandin_d1
     13_14_dihydro_15_oxoprostaglandin_e1
-    <-> . +nadp -nadph -hplus
+    <-> . +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     15_dehydro_prostaglandin_e1
   }
 
   branch from 15_dehydro_prostaglandin_e1 side left {
     15_dehydro_prostaglandin_e1
-    <-> . +nad +nadh +hplus
+    <-> . +nad_chebi_57540 +nadh_chebi_57945 +hplus
     prostaglandin_e1
   }
 }

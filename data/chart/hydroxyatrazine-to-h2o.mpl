@@ -42,14 +42,14 @@ pathway hydroxyatrazine-to-h2o "hydroxyatrazine to H2O" {
 
   branch from h side left {
     h
-    <-> ec_2_3_1_24 [2.3.1.24] +octadecanoyl_coa +sphing_4_enine +n_stearoyl_d_sphingosine
+    <-> ec_2_3_1_24 [2.3.1.24] +octadecanoyl_coa +sphing_4_enine_mnxm1364421 +n_stearoyl_d_sphingosine
     coa
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_24 [2.3.1.24] +hexadecanoyl_coa +sphing_4_enine +coa
-    n_palmitoyl_d_sphingosine
+    <-> ec_2_3_1_24 [2.3.1.24] +hexadecanoyl_coa +sphing_4_enine_mnxm1364421 +coa
+    n_palmitoyl_d_sphingosine_mnxm1371310
   }
 
   branch from h2o side left {

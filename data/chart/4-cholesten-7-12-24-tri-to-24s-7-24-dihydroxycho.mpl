@@ -12,7 +12,7 @@ pathway 4-cholesten-7-12-24-tri-to-24s-7-24-dihydroxycho "4-Cholesten-7?,12?,24-
     7alpha_24_dihydroxycholest_4_en_3_one
     <-> . +nadh +h -nad
     24s_7_24_dihydroxycholesterol
-    <-> . +nad -nadh -hplus
+    <-> . +nad_chebi_57540 -nadh_chebi_57945 -hplus
     24s_7_24_dihydroxycholest_4_en_3_one
   }
 }

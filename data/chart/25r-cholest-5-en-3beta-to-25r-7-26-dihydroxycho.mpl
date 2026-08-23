@@ -10,7 +10,7 @@ pathway 25r-cholest-5-en-3beta-to-25r-7-26-dihydroxycho "(25R)-cholest-5-en-3bet
     25r_cholest_5_en_3beta_7alpha_26_triol
     <-> . +nadp +h2o -h -o2 -nadph
     25r_cholest_5_ene_3_26_diol
-    <-> ec_1_14_14_29 [1.14.14.29] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_29 [1.14.14.29] +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     25r_7_26_dihydroxycholesterol
     <-> . +nad -nadh -hplus
     25r_7_26_dihydroxycholest_4_en_3_one

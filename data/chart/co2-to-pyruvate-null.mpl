@@ -115,7 +115,7 @@ pathway co2-to-pyruvate-null "CO2 to pyruvate" {
   branch from l_aspartate side left {
     l_aspartate
     <-> . +ubiquinone_8 +ubiquinol_8
-    iminoaspartate
+    iminoaspartate_mnxm1370457
   }
 
   branch from l_methionine side right {

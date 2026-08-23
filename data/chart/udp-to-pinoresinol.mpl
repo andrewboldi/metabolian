@@ -21,7 +21,7 @@ pathway udp-to-pinoresinol "UDP to (−)-pinoresinol" {
   branch from pinoresinol side left {
     pinoresinol
     <-> .
-    pinoresinol
+    pinoresinol_chebi_40
   }
 
   branch from pinoresinol side right {

@@ -16,22 +16,123 @@ pathway kaempferol-3-o-4-o-4-co-to-h-null "kaempferol 3-O-(4″-O-4-co… to H" 
     udp
   }
 
+  branch from trans_4_coumaroyl_coa side left {
+    trans_4_coumaroyl_coa
+    <-> ec_2_3_1_215 [2.3.1.215] +anthocyanidin_3_o_d_glucoside +coa_chebi_57287 +hplus
+    anthocyanidin_3_o_6_o_4_hydroxycinnamoyl_d_gluco
+  }
 
+  branch from trans_4_coumaroyl_coa side right {
+    trans_4_coumaroyl_coa
+    <-> . +h2o
+    3_hydroxy_3_4_hydroxyphenyl_propionyl_coa
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_14_13_88 [1.14.13.88] +tricetin +nadp +h2o_water +nadph +apigenin
+    o2
+  }
 
+  branch from h side right {
+    h
+    <-> . +beta_d_fructose_6_phosphate
+    d_allulose_6_phosphate
+  }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_170 [2.4.1.170] +udp +glycitin +h
+    glycitein
+  }
 
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_118 [2.4.1.118] +udp +trans_zeatin_7_beta_d_glucoside +h
+    trans_zeatin
+  }
 
+  branch from udp side left {
+    udp
+    <-> . +h +cis_zeatin_7_n_glucoside +udp_alpha_d_glucose
+    cis_zeatin
+  }
 
+  branch from udp side right {
+    udp
+    <-> . +h +dihydrozeatin_o_glucoside +udp_alpha_d_glucose
+    dihydrozeatin
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +hexadecanedioyl_coa +r_carnitine +h
+    o_15_carboxypentadecanoyl_carnitine
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +r_carnitine +3_hydroxyoctadecadienoyl_coenzyme_a
+    3_hydroxyoctadecadienoylcarnitine
+  }
 
+  branch from trans_4_coumaroyl_coa side left {
+    trans_4_coumaroyl_coa
+    <-> ec_1_3_1_117 [1.3.1.117] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
+    dihydro_4_coumaroyl_coa
+  }
 
+  branch from trans_4_coumaroyl_coa side right {
+    trans_4_coumaroyl_coa
+    <-> . +myricetin_3_o_d_glucosyl_1_2_l_rhamnoside +coa_chebi_57287 +hplus
+    myricetin_3_o_6_o_trans_4_coumaroyl_d_glucosyl_1
+  }
 
+  branch from h side left {
+    h
+    <-> . +succinate_semialdehyde +isochorismate +2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
+    pyruvate
+  }
 
+  branch from h side right {
+    h
+    <-> . +3_dehydro_l_gulonate_6_phosphate +h2o_water
+    l_ascorbate_6_phosphate
+  }
 
+  branch from udp side left {
+    udp
+    <-> . +h +udp_alpha_d_glucose +dihydrozeatin
+    dihydrozeatin_o_glucoside_mnxm740846
+  }
 
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_195 [2.4.1.195] +h +p_hydroxybenzyldesulphoglucosinolate +udp_alpha_d_glucose
+    p_hydroxyphenylacetothiohydroximate
+  }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_210 [2.4.1.210] +udp +h +limonin_17_beta_d_glucoside
+    limonoate_a_ring_lactone
+  }
 
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_195 [2.4.1.195] +udp +aliphatic_desulfoglucosinolate
+    an_e_omega_methylsulfanyl_alkyl_thiohydroximate
+  }
 
+  branch from luteolin side left {
+    luteolin
+    <-> . +h +o2 +nadph +nadp +h2o_water
+    tricetin
+  }
+
+  branch from luteolin side right {
+    luteolin
+    <-> ec_3_2_1_62 [3.2.1.62] +glucose +h2o_water
+    luteolin_7_o_beta_d_glucoside
+  }
 }

@@ -16,153 +16,153 @@ pathway 14-demethyllanosterol-to-nad-60072 "14-demethyllanosterol to NAD" {
     3_hydroxy_4_methyl_5_cholesta_8_24_diene_4_carbo
     <-> ec_1_1_1_417 [1.1.1.417] +nadp -co2 -nadph
     3_dehydro_4_methylzymosterol
-    <-> . +nadp +o2 -h -zymosterone -nadph
-    co2
-    <-> . +nadh +h +zymosterone -o2 -nad
+    <-> . +nadp_mnxm5 +o2_mnxm735438 -h -zymosterone -nadph_mnxm738702
+    co2_mnxm13
+    <-> . +nadh_mnxm10 +h +zymosterone -o2_mnxm735438 -nad_mnxm8
     3_dehydro_4_methylzymosterol
   }
 
-  branch from co2 side left {
-    co2
-    <-> . +2_oxo_4_phenylbutyric_acid +nadh +h +nad
+  branch from co2_mnxm13 side left {
+    co2_mnxm13
+    <-> . +2_oxo_4_phenylbutyric_acid +nadh_mnxm10 +h +nad_mnxm8
     3_benzylmalic_acid
   }
 
-  branch from co2 side right {
-    co2
-    <-> . +2_oxoglutarate +oa_6129_a +o2 +oa_6129_b2
+  branch from co2_mnxm13 side right {
+    co2_mnxm13
+    <-> . +2_oxoglutarate +oa_6129_a +o2_mnxm735438 +oa_6129_b2
     succinate
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri +nadp +h2o +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri +nadp_mnxm5 +h2o_water +o2_mnxm735438 +nadph_mnxm738702
     4_methylnitrosamino_1_3_pyridyl_1_butanol
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +7_hydroxymethyl_12_methylbenz_a_anthracene +nadp +h2o +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +7_hydroxymethyl_12_methylbenz_a_anthracene +nadp_mnxm5 +h2o_water +o2_mnxm735438 +nadph_mnxm738702
     7_12_dimethyltetraphene
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +nadp +h2o +h +o2 +7_12_dimethyltetraphene
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_14_14_1 [1.14.14.1] +nadp_mnxm5 +h2o_water +h +o2_mnxm735438 +7_12_dimethyltetraphene
     7_12_dimethylbenz_a_anthracene_5_6_oxide
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +h +9_10_dihydroxyoctadecanoate +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +h +9_10_dihydroxyoctadecanoate +o2_mnxm735438 +nadp_mnxm5 +h2o_water
     9_10_18_trihydroxyoctadecanoic_acid
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +h +nadph +z_2_methylpropanal_oxime +nadp +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +h +nadph_mnxm738702 +z_2_methylpropanal_oxime +nadp_mnxm5 +h2o_water
     2_hydroxy_2_methylpropanenitrile
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +3_deoxo_4b_deoxypaxilline +formate +nadp +h2o +nadph
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +3_deoxo_4b_deoxypaxilline +formate +nadp_mnxm5 +h2o_water +nadph_mnxm738702
     paspaline_b
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +beta_d_galacturonate +h
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +beta_d_galacturonate +h
     l_galactonate
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_203 [1.1.1.203] +nadh +d_glucaro_1_5_lactone +h
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_1_1_203 [1.1.1.203] +nadh_mnxm10 +d_glucaro_1_5_lactone +h
     d_glucuronate
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_323 [1.1.1.323] +thujan_3_ol +h +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_1_1_323 [1.1.1.323] +thujan_3_ol +h +nadph_mnxm738702
     thujone
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +3_deoxo_4b_deoxypaxilline +h +o2 +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +3_deoxo_4b_deoxypaxilline +h +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
     beta_pc_m6
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +r_mandelonitrile +nadp +h2o +h +nadph
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +r_mandelonitrile +nadp_mnxm5 +h2o_water +h +nadph_mnxm738702
     z_phenylacetaldehyde_oxime
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +h +l_cysteine +nadph +nadp +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +h +l_cysteine +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     s_phenylacetothiohydroximoyl_l_cysteine
   }
 
-  branch from co2 side left {
-    co2
-    <-> . +2_oxoglutarate +2_3_dihydrothienamycin +o2 +succinate +h2o
+  branch from co2_mnxm13 side left {
+    co2_mnxm13
+    <-> . +2_oxoglutarate +2_3_dihydrothienamycin +o2_mnxm735438 +succinate +h2o_water
     thienamycin
   }
 
-  branch from co2 side right {
-    co2
+  branch from co2_mnxm13 side right {
+    co2_mnxm13
     <-> . +tabtoxin_biosynthesis_intermediate_4
     tabtoxin_biosynthesis_intermediate_3
   }
 
   branch from h side left {
     h
-    <-> . +h2o +9_10_18_trihydroxyoctadecanoic_acid
+    <-> . +h2o_water +9_10_18_trihydroxyoctadecanoic_acid
     18_hydroxy_9_10_epoxy_octadecanoate
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_101 [3.5.1.101] +s_piperidine_2_carboxamide +h2o +nh4
+    <-> ec_3_5_1_101 [3.5.1.101] +s_piperidine_2_carboxamide +h2o_water +nh4
     l_pipecolate
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_213 [1.1.1.213] +h +3_oxosteroid +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_1_1_213 [1.1.1.213] +h +3_oxosteroid +nadp_mnxm5
     3alpha_hydroxysteroid
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_14_45 [1.14.14.45] +h +e_4_hydroxyphenylacetaldehyde_oxime +o2 +l_cysteine +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_14_14_45 [1.14.14.45] +h +e_4_hydroxyphenylacetaldehyde_oxime +o2_mnxm735438 +l_cysteine +nadp_mnxm5 +h2o_water
     s_hydroxyphenylacetothiohydroximoyl_l_cysteine
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_1_1_363 [1.1.1.363] +6_phospho_d_glucono_1_5_lactone +h +nad
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> ec_1_1_1_363 [1.1.1.363] +6_phospho_d_glucono_1_5_lactone +h +nad_mnxm8
     beta_d_glucose_6_phosphate
   }
 
-  branch from nadh side right {
-    nadh
-    <-> . +2_6_dichlorobenzoquinone +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> . +2_6_dichlorobenzoquinone +nad_mnxm8
     2_6_dichloro_4_hydroxyphenolate
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +5_chloro_2_hydroxy_p_benzoquinone +h
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +5_chloro_2_hydroxy_p_benzoquinone +h
     5_chloro_1_2_4_trihydroxybenzene
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +3_oxoribostamycin +h
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +3_oxoribostamycin +h
     ribostamycin
   }
 }

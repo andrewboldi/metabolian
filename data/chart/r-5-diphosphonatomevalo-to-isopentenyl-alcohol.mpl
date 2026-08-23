@@ -12,7 +12,7 @@ pathway r-5-diphosphonatomevalo-to-isopentenyl-alcohol "(R)-5-diphosphonatomeval
     mevalonate_5p
     <-> ec_4_1_1_99 [4.1.1.99] +atp -adp -co2 -pi
     isopentenyl_phosphate
-    <-> ec_2_7_1_32 [2.7.1.32] +h +adp -isopentenyl_alcohol
-    atp
+    <-> ec_2_7_1_32 [2.7.1.32] +h +adp_mnxm40333 -isopentenyl_alcohol
+    atp_mnxm3
   }
 }

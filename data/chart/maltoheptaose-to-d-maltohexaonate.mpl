@@ -12,7 +12,7 @@ pathway maltoheptaose-to-d-maltohexaonate "maltoheptaose to D-maltohexaonate" {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
     <-> . +o2 -h2o2
     d_maltohexaono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_maltohexaonate
   }
 

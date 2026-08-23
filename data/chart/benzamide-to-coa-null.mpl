@@ -129,7 +129,7 @@ pathway benzamide-to-coa-null "benzamide to CoA" {
   branch from benzoate side left {
     benzoate
     <-> ec_3_7_1_8 [3.7.1.8] +2e_2_hydroxypenta_2_4_dienoate +h +h2o
-    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
+    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate_mnxm727620
   }
 
   branch from nh4 side right {

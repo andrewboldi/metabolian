@@ -62,7 +62,7 @@ pathway d-mannonate-to-h2o-null "D-mannonate to H2O" {
 
   branch from h side right {
     h
-    <-> . +myxochelin_a +nadp +nadph
+    <-> . +myxochelin_a +nadp_mnxm5 +nadph_mnxm738702
     myxochelin_aldehyde_intermediate
   }
 
@@ -110,7 +110,7 @@ pathway d-mannonate-to-h2o-null "D-mannonate to H2O" {
 
   branch from h side right {
     h
-    <-> . +6_oxoprostaglandin_e1 +nadph +nadp
+    <-> . +6_oxoprostaglandin_e1 +nadph_mnxm738702 +nadp_mnxm5
     6_oxoprostaglandin_f1alpha
   }
 

@@ -10,7 +10,7 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
     trans_sinapyl_alcohol
     <-> . +udp_d_glucose -udp -hplus
     syringin
-    <-> ec_2_4_1_111 [2.4.1.111] +udp +h -sinapyl_alcohol
+    <-> ec_2_4_1_111 [2.4.1.111] +udp_mnxm1102128 +h -sinapyl_alcohol
     udp_alpha_d_glucose
     <-> . +h +adp +phosphate -udp_alpha_d_glucose -h2o
     atp
@@ -30,13 +30,13 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_78 [2.4.1.78] +udp +h +polyprenylphosphate_glucose
+    <-> ec_2_4_1_78 [2.4.1.78] +udp_mnxm1102128 +h +polyprenylphosphate_glucose
     polyprenol_phosphate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +ansamitocinoside_p_3 +udp +h
+    <-> . +ansamitocinoside_p_3 +udp_mnxm1102128 +h
     n_demethylansamitocin_p_3
   }
 
@@ -78,8 +78,8 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
 
   branch from trans_sinapyl_alcohol side left {
     trans_sinapyl_alcohol
-    <-> ec_1_1_1_195 [1.1.1.195] +nadp +nadph +hplus
-    e_sinapaldehyde
+    <-> ec_1_1_1_195 [1.1.1.195] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
+    e_sinapaldehyde_chebi_27949
   }
 
   branch from trans_sinapyl_alcohol side right {
@@ -100,14 +100,14 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
     r_prunasin
   }
 
-  branch from udp side left {
-    udp
+  branch from udp_mnxm1102128 side left {
+    udp_mnxm1102128
     <-> ec_2_4_1_17 [2.4.1.17] +4_methylnitrosamino_1_3_pyridyl_1_butanol_glucur +4_methylnitrosamino_1_3_pyridyl_1_butanol
     udp_alpha_d_glucuronate
   }
 
-  branch from udp side right {
-    udp
+  branch from udp_mnxm1102128 side right {
+    udp_mnxm1102128
     <-> ec_2_4_1_17 [2.4.1.17] +nnal_n_glucuronide +udp_alpha_d_glucuronate
     4_methylnitrosamino_1_3_pyridyl_1_butanol
   }
@@ -126,20 +126,20 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_245 [2.4.1.245] +udp +h +glucose
+    <-> ec_2_4_1_245 [2.4.1.245] +udp_mnxm1102128 +h +glucose
     alpha_alpha_trehalose
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_158 [2.4.1.158] +udp +13_sophorosyloxydocosanoic_acid
+    <-> ec_2_4_1_158 [2.4.1.158] +udp_mnxm1102128 +13_sophorosyloxydocosanoic_acid
     13_beta_d_glucosyloxy_docosanoate
   }
 
   branch from sinapyl_alcohol side left {
     sinapyl_alcohol
-    <-> . +acetyl_coa +trans_sinapyl_actetate
-    coa
+    <-> . +acetyl_coa_mnxm1104266 +trans_sinapyl_actetate
+    coa_mnxm727276
   }
 
   branch from adp side right {
@@ -157,7 +157,7 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
   branch from phosphate side right {
     phosphate
     <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1 +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1_mnxm16147
   }
 
   branch from phosphate side left {
@@ -168,7 +168,7 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +7_hydroxylauroyl_coa +amp +coa
+    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +7_hydroxylauroyl_coa +amp +coa_mnxm727276
     7_hydroxylaurate
   }
 }

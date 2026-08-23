@@ -10,59 +10,59 @@ pathway manganese-to-h2o-52240 "manganese to H2O" {
     manganese
     <-> ec_1_16_3_3 [1.16.3.3] +o2 +h2o -hplus
     manganese_dioxide
-    <-> . +menaquinol_7 +h -mn -h2o
+    <-> . +menaquinol_7 +h -mn -h2o_water
     menaquinone_7
-    <-> . +pmf +nitrite +h2o -menaquinol_7 -nitrate
+    <-> . +pmf +nitrite +h2o_water -menaquinol_7 -nitrate
     pmf
-    <-> . +menaquinol_7 +co2 +acetate -pyruvate -h2o
+    <-> . +menaquinol_7 +co2 +acetate -pyruvate -h2o_water
     menaquinone_7
   }
 
   branch from mn side left {
     mn
-    <-> ec_7_2_2_22 [7.2.2.22] +h +adp +phosphate +h2o
+    <-> ec_7_2_2_22 [7.2.2.22] +h +adp +phosphate +h2o_water
     atp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +1_aci_nitro_2_1h_indol_3_yl_ethane +l_cysteine
     s_indolylmethylthiohydroximoyl_l_cysteine
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_6_methylthiohexanoic_acid +coa
     2_4_methylthio_butylmalic_acid
   }
 
   branch from pmf side right {
     pmf
-    <-> ec_7_1_1_4 [7.1.1.4] +caldariellaquinone +h2o +o2
+    <-> ec_7_1_1_4 [7.1.1.4] +caldariellaquinone +h2o_water +o2_mnxm735438
     caldariellaquinol
   }
 
   branch from pmf side left {
     pmf
-    <-> . +h +adp +phosphate +atp +h2o
+    <-> . +h +adp +phosphate +atp +h2o_water
     k
   }
 
   branch from nitrate side right {
     nitrate
-    <-> . +nitrite +menaquinone_2 +h2o
+    <-> . +nitrite +menaquinone_2 +h2o_water
     menaquinol
   }
 
   branch from nitrate side left {
     nitrate
-    <-> . +pmf +nitrite +ferricytochrome_c +h2o +pmf +h
+    <-> . +pmf +nitrite +ferricytochrome_c +h2o_water +pmf +h
     ferrocytochrome_c
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +s_2_methyl_3_oxopropanoate +h +h2o
+    <-> . +s_2_methyl_3_oxopropanoate +h +h2o_water
     trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
   }
 
@@ -75,7 +75,7 @@ pathway manganese-to-h2o-52240 "manganese to H2O" {
   branch from manganese side right {
     manganese
     <-> . +o2 +hplus +h2o
-    manganese
+    manganese_chebi_29041
   }
 
   branch from h side left {
@@ -90,14 +90,14 @@ pathway manganese-to-h2o-52240 "manganese to H2O" {
     3_4_methylthio_butylmalic_acid
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_7_methylthioheptanoic_acid +coa
     2_5_methylthio_pentylmalic_acid
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_8_methylthiooctanoic_acid +coa
     2_6_methylthio_hexylmalic_acid
   }
@@ -116,25 +116,25 @@ pathway manganese-to-h2o-52240 "manganese to H2O" {
 
   branch from nitrite side left {
     nitrite
-    <-> . +h +pyruvate +o2
+    <-> . +h +pyruvate +o2_mnxm735438
     pyruvic_oxime
   }
 
   branch from nitrite side right {
     nitrite
-    <-> ec_1_7_3_1 [1.7.3.1] +butanal +h +h2o2 +o2 +h2o
+    <-> ec_1_7_3_1 [1.7.3.1] +butanal +h +h2o2 +o2_mnxm735438 +h2o_water
     1_nitrobutane
   }
 
   branch from nitrate side left {
     nitrate
-    <-> ec_1_7_99_4 [1.7.99.4] +nitrite +ubiquinone_2 +h2o
+    <-> ec_1_7_99_4 [1.7.99.4] +nitrite +ubiquinone_2 +h2o_water
     ubiquinol_2
   }
 
   branch from nitrate side right {
     nitrate
-    <-> ec_1_7_99_4 [1.7.99.4] +pmf +nitrite +ubiquinone_8 +h2o +pmf
+    <-> ec_1_7_99_4 [1.7.99.4] +pmf +nitrite +ubiquinone_8 +h2o_water +pmf
     ubiquinol_8
   }
 
@@ -152,7 +152,7 @@ pathway manganese-to-h2o-52240 "manganese to H2O" {
 
   branch from acetate side left {
     acetate
-    <-> . +l_phosphinothricin +h2o
+    <-> . +l_phosphinothricin +h2o_water
     n_acetyl_l_phosphinothricin
   }
 
@@ -170,7 +170,7 @@ pathway manganese-to-h2o-52240 "manganese to H2O" {
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +sulfonopine +nadp +h2o +h +nadph
+    <-> . +sulfonopine +nadp +h2o_water +h +nadph
     s_methyl_l_methionine
   }
 }

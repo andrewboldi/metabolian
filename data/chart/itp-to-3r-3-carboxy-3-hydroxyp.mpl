@@ -10,7 +10,7 @@ pathway itp-to-3r-3-carboxy-3-hydroxyp "ITP to (3R)-3-carboxy-3-hydroxyp…" {
     itp
     <-> ec_2_7_7_1 [2.7.7.1] +h +beta_nicotinamide_d_ribonucleotide -nicotinamide_hypoxanthine_dinucleotide
     diphosphate
-    <-> ec_1_1_1_37 [1.1.1.37] +s_malate +nicotinamide_hypoxanthine_dinucleotide -oxaloacetate -nicotinamide_hypoxanthine_dinucleotide
+    <-> ec_1_1_1_37 [1.1.1.37] +s_malate +nicotinamide_hypoxanthine_dinucleotide -oxaloacetate -nicotinamide_hypoxanthine_dinucleotide_mnxm507495
     h
     <-> ec_1_1_1_28 [1.1.1.28] +nadh +oxaloacetate -nad
     r_malate

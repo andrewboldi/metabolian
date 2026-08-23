@@ -12,7 +12,7 @@ pathway l-ala-d-glu-meso-dap-d-to-h2o-29855 "L-Ala-γ-D-Glu-meso-Dap-D-… to H2
     l_alanyl_d_glutamyl_meso_diaminopimelate
     <-> . +h2o -meso_2_6_diaminopimelic_acid_dizwitterion
     l_alanyl_d_glutamate
-    <-> ec_3_4_14_13 [3.4.14.13] +l_lysine -h2o
+    <-> ec_3_4_14_13 [3.4.14.13] +l_lysine -h2o_water
     l_alanyl_gamma_d_glutamyl_l_lysine
   }
 
@@ -42,18 +42,18 @@ pathway l-ala-d-glu-meso-dap-d-to-h2o-29855 "L-Ala-γ-D-Glu-meso-Dap-D-… to H2
 
   branch from l_alanyl_d_glutamate side left {
     l_alanyl_d_glutamate
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp_mnxm40333 +phosphate +h2o_water
+    atp_mnxm3
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +13s_hydroperoxy_9z_11e_octadecadienoate +4_hydroperoxy_2_nonenal
     nonanoate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
     3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
   }
@@ -72,7 +72,7 @@ pathway l-ala-d-glu-meso-dap-d-to-h2o-29855 "L-Ala-γ-D-Glu-meso-Dap-D-… to H2
 
   branch from l_alanyl_d_glutamate side right {
     l_alanyl_d_glutamate
-    <-> . +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h2o +meso_2_6_diaminopimelate
+    <-> . +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h2o_water +meso_2_6_diaminopimelate
     h
   }
 
@@ -84,18 +84,18 @@ pathway l-ala-d-glu-meso-dap-d-to-h2o-29855 "L-Ala-γ-D-Glu-meso-Dap-D-… to H2
 
   branch from l_lysine side right {
     l_lysine
-    <-> . +l_tyrosine +h +h2o
+    <-> . +l_tyrosine +h +h2o_water
     lys_tyr
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +leukotriene_a5
     5_12_dihydroxy_6e_ltb5
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +5_s_6_s_epoxy_15_r_hepe +h
     15_epi_lipoxin_b5
   }

@@ -10,15 +10,15 @@ pathway isopimaradiene-diol-to-nadph-null "isopimaradiene-diol to NADPH" {
     isopimaradiene_diol
     <-> . -h2o
     isopimara_7_15_dienal
-    <-> . +nadp +h2o -nadph -hplus
+    <-> . +nadp +h2o_chebi_15377 -nadph -hplus
     isopimarate
-    <-> . +nadp +h2o -o2 -nadph
+    <-> . +nadp_mnxm5 +h2o -o2 -nadph_mnxm738702
     isopimara_7_15_dienal
   }
 
   branch from isopimara_7_15_dienal side left {
     isopimara_7_15_dienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph_mnxm738702 +nadp_mnxm5
     levopimaradienol
   }
 
@@ -52,21 +52,21 @@ pathway isopimaradiene-diol-to-nadph-null "isopimaradiene-diol to NADPH" {
     1r_4r_5_oxo_1_2_campholide
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +nadp +1_deoxypentalenate +h2o +o2
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +nadp_mnxm5 +1_deoxypentalenate +h2o +o2
     pentalen_13_al
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +s_macrocarpen_15_ol +nadp +h2o +s_macrocarpene +o2
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +s_macrocarpen_15_ol +nadp_mnxm5 +h2o +s_macrocarpene +o2
     h
   }
 
   branch from isopimara_7_15_dienal side left {
     isopimara_7_15_dienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph_mnxm738702 +nadp_mnxm5
     palustradienol
   }
 
@@ -88,15 +88,15 @@ pathway isopimaradiene-diol-to-nadph-null "isopimaradiene-diol to NADPH" {
     tyrosyl_arginyl_glutamate
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1 +h2o +h +o2 +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1 +h2o +h +o2 +nadph_mnxm738702
     s_macrocarpen_15_ol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +11alpha_30_dihydroxy_beta_amyrin +h2o +h +o2 +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +11alpha_30_dihydroxy_beta_amyrin +h2o +h +o2 +nadph_mnxm738702
     30_hydroxy_beta_amyrin
   }
 
@@ -112,15 +112,15 @@ pathway isopimaradiene-diol-to-nadph-null "isopimaradiene-diol to NADPH" {
     26_hydroxycholesterol
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_188 [1.14.13.188] +h +6_deoxyerythronolide_b +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_14_13_188 [1.14.13.188] +h +6_deoxyerythronolide_b +o2 +nadp_mnxm5 +h2o
     erythronolide_b
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +nadp +n_hydroxy_l_tetrahomomethioninate +h2o +o2
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +nadp_mnxm5 +n_hydroxy_l_tetrahomomethioninate +h2o +o2
     l_tetrahomomethionine
   }
 }

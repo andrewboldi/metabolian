@@ -18,7 +18,7 @@ pathway o16-antigen-x4-to-d-galf-1-5-d-galact-null "(O16 antigen)x4… to β-D-G
     udp_alpha_d_glucose
     <-> . +udp +galactofuranosyl_glucosyl_o_acetyl_rhamanosyl_n +h -glucosyl_o_acetyl_rhamanosyl_n_acetylglucosamyl
     udp_d_galactofuranose
-    <-> ec_2_4_1_398 [2.4.1.398] +d_galactofuranosides -udp -hplus
+    <-> ec_2_4_1_398 [2.4.1.398] +d_galactofuranosides -udp_chebi_58223 -hplus
     d_galf_1_5_d_galactofuranosides
   }
 }

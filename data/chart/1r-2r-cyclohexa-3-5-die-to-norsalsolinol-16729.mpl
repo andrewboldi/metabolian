@@ -32,13 +32,13 @@ pathway 1r-2r-cyclohexa-3-5-die-to-norsalsolinol-16729 "(1R,2R)-cyclohexa-3,5-di
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +chlorotoluron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +chlorotoluron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     3_3_chloro_4_methylphenyl_1_methylurea
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +metoxuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +metoxuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     3_3_chloro_4_methoxylphenyl_1_methylurea
   }
 
@@ -68,13 +68,13 @@ pathway 1r-2r-cyclohexa-3-5-die-to-norsalsolinol-16729 "(1R,2R)-cyclohexa-3,5-di
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +monuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +monuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     3_4_chlorophenyl_1_methylurea
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +diuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +diuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     diuron_desmethyl
   }
 

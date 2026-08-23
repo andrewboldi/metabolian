@@ -11,7 +11,7 @@ pathway hapalindole-u-to-diphosphate "hapalindole U to diphosphate" {
     <-> ec_2_5_1_159 [2.5.1.159] +dmapp +hplus -ppi
     ambiguine_h
     <-> . +diphosphate -dimethylallyl_diphosphate
-    hapalindole_u
+    hapalindole_u_mnxm1100515
     <-> . +2_oxoglutarate +h +o2 +chloride -co2 -succinate -h2o
     hapalindole_g
     <-> . +dimethylallyl_diphosphate -diphosphate

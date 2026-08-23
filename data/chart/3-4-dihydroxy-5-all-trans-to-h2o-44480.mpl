@@ -12,11 +12,11 @@ pathway 3-4-dihydroxy-5-all-trans-to-h2o-44480 "3,4-dihydroxy-5-all-trans… to 
     3_methoxy_4_hydroxy_5_all_trans_heptaprenylbenzo
     <-> ec_4_1_1_130 [4.1.1.130] +hplus -co2
     2_methoxy_6_all_trans_heptaprenyl_phenol
-    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_methoxy_6_all_trans_heptaprenylhydroquinone
     <-> ec_2_1_1_201 [2.1.1.201] +sam -sah -hplus
     6_methoxy_3_methyl_2_all_trans_heptaprenylhydroq
-    <-> . +h +o2 +nadph -3_demethylubiquinol_7 -h2o
+    <-> . +h +o2_mnxm735438 +nadph -3_demethylubiquinol_7 -h2o_water
     nadp
   }
 }

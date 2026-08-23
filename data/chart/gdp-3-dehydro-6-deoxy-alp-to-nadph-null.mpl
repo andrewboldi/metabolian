@@ -19,7 +19,7 @@ pathway gdp-3-dehydro-6-deoxy-alp-to-nadph-null "GDP-3-dehydro-6-deoxy-alp… to
   branch from gdp_4_dehydro_alpha_d_rhamnose side left {
     gdp_4_dehydro_alpha_d_rhamnose
     <-> ec_1_1_1_271 [1.1.1.271] +h +nadph +nadp
-    gdp_l_fucose
+    gdp_l_fucose_mnxm1106004
   }
 
   branch from gdp_l_fucose side right {

@@ -67,12 +67,12 @@ pathway udp-4-amino-4-deoxy-l-a-to-ctp-24706 "UDP-4-amino-4-deoxy-β-L-a… to C
   branch from l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos side left {
     l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos
     <-> . +dtdp_beta_l_rhamnose +alpha_d_galactosyl_diphosphoundecaprenol +h
-    dtdp
+    dtdp_mnxm152
   }
 
   branch from l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos side right {
     l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos
-    <-> . +udp +alpha_d_glu_1_4_alpha_l_rha_1_3_alpha_d_gal_pp_u +h
+    <-> . +udp_mnxm1102128 +alpha_d_glu_1_4_alpha_l_rha_1_3_alpha_d_gal_pp_u +h
     udp_alpha_d_glucose
   }
 
@@ -102,7 +102,7 @@ pathway udp-4-amino-4-deoxy-l-a-to-ctp-24706 "UDP-4-amino-4-deoxy-β-L-a… to C
 
   branch from ditrans_polycis_undecaprenyl_phosphate side left {
     ditrans_polycis_undecaprenyl_phosphate
-    <-> . +udp +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
+    <-> . +udp_mnxm1102128 +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
     udp_4_amino_4_deoxy_beta_l_arabinose
   }
 

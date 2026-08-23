@@ -10,11 +10,11 @@ pathway docosanoyl-coa-to-n-docosanoylglycinate-81731 "docosanoyl-CoA to N-docos
     docosanoyl_coa
     <-> . +nadph +hplus -nadp -coa
     docosan_1_ol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp -h -nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +nadp_mnxm5 -h -nadph_mnxm738702
     docosanal
-    <-> ec_1_2_1_5 [1.2.1.5] +nadp +h2o -behenate -nadph
+    <-> ec_1_2_1_5 [1.2.1.5] +nadp_mnxm5 +h2o -behenate -nadph_mnxm738702
     h
-    <-> . +behenate +glycine -h2o
+    <-> . +behenate +glycine -h2o_chebi_15377
     n_docosanoylglycinate
   }
 }

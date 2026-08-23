@@ -12,7 +12,7 @@ pathway f420-0-to-oxidized-factor-390-g-30555 "F420-0 to oxidized factor 390-G" 
     coenzyme_f420_1
     <-> ec_6_3_2_34 [6.3.2.34] +gtp +glutamate -gdp -pi -hplus
     coenzyme_f420_2
-    <-> . +gtp -oxidized_factor_390_g
+    <-> . +gtp_mnxm1103553 -oxidized_factor_390_g
     diphosphate
   }
 }

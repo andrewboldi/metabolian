@@ -8,9 +8,9 @@ pathway cholest-4-en-3-one-to-nad-51564 "cholest-4-en-3-one to NAD" {
 
   spine at 0,0 {
     cholest_4_en_3_one
-    <-> ec_1_14_15_29 [1.14.15.29] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_29 [1.14.15.29] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25s_4_dafachronate
-    <-> . +nadh +h -nad -h2o
+    <-> . +nadh +h -nad -h2o_water
     25s_3_ketocholest_4_en_26_al
     <-> . +nadh +h -nad
     26_hydroxycholest_4_en_3_one

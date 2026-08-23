@@ -14,7 +14,7 @@ pathway z-indol-3-yl-n-sulfo-to-h2o-76227 "(Z)-(indol-3-yl)-N-(sulfo… to H2O" 
     indole_3_acetate
     <-> ec_1_14_13_235 [1.14.13.235] +nadh +o2 +hplus -nad -h2o
     2_hydroxy_indol_3_yl_acetate
-    <-> . +nadh +h +o2 -nad -h2o
+    <-> . +nadh_mnxm10 +h +o2_mnxm735438 -nad_mnxm8 -h2o_water
     1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2
   }
 
@@ -26,62 +26,62 @@ pathway z-indol-3-yl-n-sulfo-to-h2o-76227 "(Z)-(indol-3-yl)-N-(sulfo… to H2O" 
 
   branch from sulfur_atom side right {
     sulfur_atom
-    <-> ec_3_2_1_147 [3.2.1.147] +beta_d_glucose +indol_3_yl_acetonitrile +h +sulfate +h2o
+    <-> ec_3_2_1_147 [3.2.1.147] +beta_d_glucose +indol_3_yl_acetonitrile +h +sulfate_mnxm58 +h2o_water
     z_glucobrassicin
   }
 
   branch from sulfur_atom side left {
     sulfur_atom
-    <-> ec_3_2_1_147 [3.2.1.147] +indol_3_yl_acetonitrile +h +sulfate +z_glucobrassicin +h2o
+    <-> ec_3_2_1_147 [3.2.1.147] +indol_3_yl_acetonitrile +h +sulfate_mnxm58 +z_glucobrassicin +h2o_water
     alpha_d_glucose
   }
 
   branch from 1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2 side right {
     1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2
-    <-> . +h +o2
+    <-> . +h +o2_mnxm735438
     indol_3_yl_acetate
   }
 
   branch from 1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2 side left {
     1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2
-    <-> . +nadh +h +o2 +nad +h2o
+    <-> . +nadh_mnxm10 +h +o2_mnxm735438 +nad_mnxm8 +h2o_water
     2_oxindole_3_acetate
   }
 
-  branch from nad side right {
-    nad
-    <-> . +collinusin +nadh +h
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +collinusin +nadh_mnxm10 +h
     justicidin_b
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h +3_24_dioxocholest_4_en_26_oyl_coa
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh_mnxm10 +h +3_24_dioxocholest_4_en_26_oyl_coa
     24_hydroxy_3_oxocholest_4_en_26_oyl_coa
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_hexyl_thiohydroximate
     ser_gly
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10428 +ser_gly
     z_omega_methylsulfanyl_heptyl_thiohydroximate
   }
 
   branch from z_indol_3_yl_n_sulfonatooxy_methanimidothioate side right {
     z_indol_3_yl_n_sulfonatooxy_methanimidothioate
-    <-> ec_3_2_1_147 [3.2.1.147] +h +z_glucobrassicin +h2o
+    <-> ec_3_2_1_147 [3.2.1.147] +h +z_glucobrassicin +h2o_water
     glucose
   }
 
   branch from z_indol_3_yl_n_sulfonatooxy_methanimidothioate side left {
     z_indol_3_yl_n_sulfonatooxy_methanimidothioate
     <-> . +indolylmethylisothiocyanate
-    sulfate
+    sulfate_mnxm58
   }
 
   branch from sulfur_atom side right {
@@ -96,15 +96,15 @@ pathway z-indol-3-yl-n-sulfo-to-h2o-76227 "(Z)-(indol-3-yl)-N-(sulfo… to H2O" 
     sulfanylarsonate
   }
 
-  branch from nadh side right {
-    nadh
-    <-> . +3_oxo_24_ethyl_26_al_cholest_4_ene +nad +h2o +h
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> . +3_oxo_24_ethyl_26_al_cholest_4_ene +nad_mnxm8 +h2o_water +h
     3_oxo_24_ethyl_cholest_4_en_26_oate
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_1_1_327 [1.1.1.327] +1s_bornane_2_5_dione +h +nad
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> ec_1_1_1_327 [1.1.1.327] +1s_bornane_2_5_dione +h +nad_mnxm8
     1s_4s_5r_5_hydroxycamphor
   }
 
@@ -116,43 +116,43 @@ pathway z-indol-3-yl-n-sulfo-to-h2o-76227 "(Z)-(indol-3-yl)-N-(sulfo… to H2O" 
 
   branch from h side left {
     h
-    <-> . +dehydroprephenate +3_cyclohexa_1_3_dien_1_yl_2_oxopropanoate +h2o
+    <-> . +dehydroprephenate +3_cyclohexa_1_3_dien_1_yl_2_oxopropanoate +h2o_water
     co2
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +h +3_2_formyl_6_hydroxy_4_methylphenyl_8_hydroxy_1
     dehydrorabelomycin
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +s_1_pyrroline_5_carboxylate +co2 +succinate +guanidine +ethene +h2o +h +l_arginine
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +s_1_pyrroline_5_carboxylate +co2 +succinate +guanidine +ethene +h2o_water +h +l_arginine
     2_oxoglutarate
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +thujan_3_one
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +thujan_3_one
     thujan_3_ol
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +2s_3r_2_amino_3_methyl_4_ketopentanoate
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +2s_3r_2_amino_3_methyl_4_ketopentanoate
     4s_4_hydroxy_l_isoleucine
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10455 +ser_gly
     z_omega_methylsulfanyl_octyl_thiohydroximate
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10477 +ser_gly
     9_methylthio_nonyl_thiohydroximic_acid
   }
 }

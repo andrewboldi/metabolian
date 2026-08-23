@@ -15,7 +15,7 @@ pathway 2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym "(2E)-2-hydroxypenta-2,4
     <-> ec_1_13_11_14 [1.13.11.14] +h -o2
     2_3_dihydroxybenzoate
     <-> ec_1_13_11_14 [1.13.11.14] +h +o2
-    3_carboxy_2_hydroxymuconate_semialdehyde
+    3_carboxy_2_hydroxymuconate_semialdehyde_mnxm734552
   }
 
   branch from h2o side left {

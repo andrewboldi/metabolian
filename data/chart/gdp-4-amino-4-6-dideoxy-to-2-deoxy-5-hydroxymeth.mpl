@@ -12,31 +12,31 @@ pathway gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth "GDP-4-amino-4,6-dideox
     gdp_n_formyl_d_perosamine
     <-> ec_2_1_1_341 [2.1.1.341] +vanillate +thf -3_4_dihydroxybenzoate
     6s_5_methyltetrahydrofolate
-    <-> ec_1_5_7_1 [1.5.7.1] +di_sulfido_diiron -di_sulfido_diiron -hplus
+    <-> ec_1_5_7_1 [1.5.7.1] +di_sulfido_diiron -di_sulfido_diiron_chebi_33738 -hplus
     methylene_thf
     <-> ec_2_1_2_8 [2.1.2.8] +2_deoxycytosine_5_monophosphate +h2o -thf
     5_hydroxymethyldeoxycytidylate
     <-> . +atp -adp
     2_deoxy_5_hydroxymethyl_cytidine_5_diphosphate
-    <-> ec_2_7_4_6 [2.7.4.6] +h +atp -2_deoxy_5_hydroxymethyl_ctp
-    adp
+    <-> ec_2_7_4_6 [2.7.4.6] +h +atp_mnxm3 -2_deoxy_5_hydroxymethyl_ctp
+    adp_mnxm40333
   }
 
-  branch from adp side left {
-    adp
-    <-> . +3s_3_isopropenyl_6_oxoheptanoyl_coa +phosphate +h +atp +coa
+  branch from adp_mnxm40333 side left {
+    adp_mnxm40333
+    <-> . +3s_3_isopropenyl_6_oxoheptanoyl_coa +phosphate +h +atp_mnxm3 +coa
     3s_3_isopropenyl_6_oxoheptanoate
   }
 
-  branch from adp side right {
-    adp
-    <-> . +p_1_p_3_bis_5_adenosyl_triphosphate +h +atp
+  branch from adp_mnxm40333 side right {
+    adp_mnxm40333
+    <-> . +p_1_p_3_bis_5_adenosyl_triphosphate +h +atp_mnxm3
     diphosphate
   }
 
   branch from gdp_4_amino_4_6_dideoxy_d_mannose side left {
     gdp_4_amino_4_6_dideoxy_d_mannose
-    <-> ec_2_3_1_227 [2.3.1.227] +acetyl_coa +coa +hplus
+    <-> ec_2_3_1_227 [2.3.1.227] +acetyl_coa +coa_chebi_57287 +hplus
     gdp_n_acetyl_d_perosamine
   }
 
@@ -52,27 +52,27 @@ pathway gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth "GDP-4-amino-4,6-dideox
     coa
   }
 
-  branch from atp side right {
-    atp
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
     <-> . +diphosphate +indole_3_acetyl_l_valine +amp +indol_3_yl_acetate
     l_valine
   }
 
-  branch from atp side left {
-    atp
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
     <-> . +diphosphate +indole_3_acetyl_l_phenylalanine +amp +l_phenylalanine
     indol_3_yl_acetate
   }
 
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
+  branch from adp_mnxm40333 side right {
+    adp_mnxm40333
+    <-> . +h +phosphate +atp_mnxm3 +h2o_water
     alpha_alpha_trehalose_6_alpha_mycolate
   }
 
-  branch from adp side left {
-    adp
-    <-> ec_2_7_1_101 [2.7.1.101] +d_tagatofuranose_6_phosphate +h +atp
+  branch from adp_mnxm40333 side left {
+    adp_mnxm40333
+    <-> ec_2_7_1_101 [2.7.1.101] +d_tagatofuranose_6_phosphate +h +atp_mnxm3
     d_tagatofuranose
   }
 }

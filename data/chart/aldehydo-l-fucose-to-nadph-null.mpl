@@ -78,8 +78,8 @@ pathway aldehydo-l-fucose-to-nadph-null "aldehydo-L-fucose to NADPH" {
 
   branch from h side left {
     h
-    <-> . +deferrichrome +fe
-    ferrichrome
+    <-> . +deferrichrome +fe_mnxm1370984
+    ferrichrome_mnxm733434
   }
 
   branch from gdp_beta_l_fucose side right {

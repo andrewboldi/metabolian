@@ -14,7 +14,7 @@ pathway nadh-to-3-4-dihydroxymandelaldehy "NADH to 3,4-dihydroxymandelaldehy…"
     mhpg
     <-> ec_2_1_1_6 [2.1.1.6] +s_adenosyl_l_homocysteine +h -dhpg
     s_adenosyl_l_methionine
-    <-> . +dhpg +nad -nadh -hplus
+    <-> . +dhpg +nad_chebi_57540 -nadh_chebi_57945 -hplus
     dopegal
   }
 }

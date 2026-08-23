@@ -76,8 +76,8 @@ pathway 3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano "3-hydroxyicosanoyl-CoA
 
   branch from trans_2_docosenoyl_coa side left {
     trans_2_docosenoyl_coa
-    <-> ec_4_2_1_134 [4.2.1.134] +3_hydroxydocosanoyl_coa
-    h2o
+    <-> ec_4_2_1_134 [4.2.1.134] +3_hydroxydocosanoyl_coa_mnxm1363770
+    h2o_water
   }
 
   branch from docosanoyl_coa side right {
@@ -100,7 +100,7 @@ pathway 3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano "3-hydroxyicosanoyl-CoA
 
   branch from trans_2_tetracosenoyl_coa side left {
     trans_2_tetracosenoyl_coa
-    <-> . +3_hydroxytetracosanoyl_coa +h2o
+    <-> . +3_hydroxytetracosanoyl_coa +h2o_water
     h
   }
 
@@ -118,13 +118,13 @@ pathway 3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano "3-hydroxyicosanoyl-CoA
 
   branch from n_tetracosanoylsphinganine side right {
     n_tetracosanoylsphinganine
-    <-> . +h +o2 +nadph +n_tetracosanoyl_4r_hydroxysphinganine +h2o
-    nadp
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +n_tetracosanoyl_4r_hydroxysphinganine +h2o_water
+    nadp_mnxm5
   }
 
   branch from n_tetracosanoylsphinganine side left {
     n_tetracosanoylsphinganine
-    <-> . +h +o2 +nadph +nadp +h2o
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     cer_d18_0_h24_0
   }
 
@@ -160,14 +160,14 @@ pathway 3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano "3-hydroxyicosanoyl-CoA
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> ec_2_3_1_198 [2.3.1.198] +2_docosanoyl_sn_glycero_3_phosphate +coa
+    <-> ec_2_3_1_198 [2.3.1.198] +2_docosanoyl_sn_glycero_3_phosphate +coa_mnxm727276
     sn_glycerol_3_phosphate
   }
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +nadh +eicosanoyl_coa +acetyl_coa +h +h2o2 +o2 +nad +h2o
-    coa
+    <-> . +nadh_mnxm10 +eicosanoyl_coa +acetyl_coa +h +h2o2 +o2_mnxm735438 +nad_mnxm8 +h2o_water
+    coa_mnxm727276
   }
 
   branch from tetracosanoyl_coa side left {

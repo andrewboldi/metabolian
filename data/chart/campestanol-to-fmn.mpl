@@ -18,13 +18,13 @@ pathway campestanol-to-fmn "campestanol to FMN" {
 
   branch from 6_deoxycathasterone side left {
     6_deoxycathasterone
-    <-> . +nadp +h2o +h +o2 +nadph
-    campestanol
+    <-> . +nadp +h2o_water +h +o2_mnxm735438 +nadph
+    campestanol_mnxm1371753
   }
 
   branch from 6_deoxoteasterone side right {
     6_deoxoteasterone
-    <-> . +o2 +h2o
+    <-> . +o2_mnxm735438 +h2o_water
     teasterone
   }
 }

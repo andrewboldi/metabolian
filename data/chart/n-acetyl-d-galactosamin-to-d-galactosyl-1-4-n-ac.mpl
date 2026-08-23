@@ -13,6 +13,6 @@ pathway n-acetyl-d-galactosamin-to-d-galactosyl-1-4-n-ac "N-acetyl-β-D-galactos
     <-> . +udp_n_acetyl_d_galactosamine -udp -hplus
     n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_n
     <-> . +udp_d_galactose -udp -hplus
-    d_galactosyl_1_4_n_acetyl_d_galactosaminyl_1_3
+    d_galactosyl_1_4_n_acetyl_d_galactosaminyl_1_3_chebi_140620
   }
 }

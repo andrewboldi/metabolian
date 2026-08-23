@@ -11,7 +11,7 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o "3(S)-hydroxy-tetracosa-12… to H2O" {
     <-> . +nadp -h -nadph
     9z_12z_15z_18z_3_oxotetracosatetraenoyl_coa
     <-> . +h +nadph -nadp
-    3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
+    3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae_mnxm1560352
     <-> . -h2o
     trans_cis_cis_cis_cis_2_12_15_18_21_tetracosapen
     <-> . +h +nadph -nadp

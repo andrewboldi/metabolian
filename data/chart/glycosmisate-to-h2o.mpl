@@ -14,13 +14,13 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
     co2
     <-> . +poacic_acid +o2 -h -vanillin
     5_formylferulate
-    <-> ec_1_2_3_9 [1.2.3.9] +nadh +o2 +vanillin -vanillate -h2o
+    <-> ec_1_2_3_9 [1.2.3.9] +nadh +o2 +vanillin -vanillate -h2o_water
     nad
     <-> ec_2_1_1_382 [2.1.1.382] +cbl +h +vanillate -methylcobalamin
     3_4_dihydroxybenzoate
-    <-> . +co2 +nadp +h2o -o2 -nadph
+    <-> . +co2 +nadp +h2o_water -o2 -nadph
     4_hydroxyisophthalic_acid
-    <-> . +nadh +o2 -co2 -nad -h2o
+    <-> . +nadh +o2 -co2 -nad -h2o_water
     3_4_dihydroxybenzoate
   }
 
@@ -32,13 +32,13 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from co2 side right {
     co2
-    <-> ec_1_14_11_23 [1.14.11.23] +galangin +succinate +h2o +pinobanksin +o2
+    <-> ec_1_14_11_23 [1.14.11.23] +galangin +succinate +h2o_water +pinobanksin +o2
     2_oxoglutarate
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_2_20 [3.1.2.20] +7_isojasmonate +coa +h2o
+    <-> ec_3_1_2_20 [3.1.2.20] +7_isojasmonate +coa +h2o_water
     7_isojasmonic_acid_coa
   }
 
@@ -62,7 +62,7 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +carboxyphosphamide +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +carboxyphosphamide +h2o_water
     aldophosphamide
   }
 
@@ -84,21 +84,21 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
     pelargonin
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +hydrogencarbonate +benzoate
     terephthalate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_1_31 [3.2.1.31] +d_glucuronate +luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
-    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
+    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc_mnxm3650
   }
 
   branch from 3_4_dihydroxybenzoate side left {
     3_4_dihydroxybenzoate
-    <-> ec_1_3_1_53 [1.3.1.53] +hydrogencarbonate +nadh +h +nad +h2o
+    <-> ec_1_3_1_53 [1.3.1.53] +hydrogencarbonate +nadh +h +nad +h2o_water
     3s_4r_3_4_dihydroxycyclohexa_1_5_diene_1_4_dica
   }
 
@@ -122,7 +122,7 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from 4_hydroxyisophthalic_acid side left {
     4_hydroxyisophthalic_acid
-    <-> . +nadh +nad +h2o
+    <-> . +nadh +nad +h2o_water
     3_formyl_4_hydroxybenzoate
   }
 
@@ -146,13 +146,13 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +all_trans_retinoate +h +o2 +nadp +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +all_trans_retinoate +h +o2 +nadp +h2o_water
     5_6_epoxyretinoate
   }
 
   branch from glycosmisate side right {
     glycosmisate
-    <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +nad +h2o
+    <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +nad +h2o_water
     dehydrodiconiferyl_aldehyde
   }
 
@@ -164,7 +164,7 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from h side right {
     h
-    <-> . +juvenile_hormone_iii_carboxylate +h2o
+    <-> . +juvenile_hormone_iii_carboxylate +h2o_water
     10s_juvenile_hormone_iii_acid_diol
   }
 

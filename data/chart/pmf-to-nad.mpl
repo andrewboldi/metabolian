@@ -22,7 +22,7 @@ pathway pmf-to-nad "PMF to NAD" {
 
   branch from ubiquinol_10 side left {
     ubiquinol_10
-    <-> . +nadh +hplus +nad
+    <-> . +nadh_chebi_57945 +hplus +nad_chebi_57540
     coenzyme_q10
   }
 }

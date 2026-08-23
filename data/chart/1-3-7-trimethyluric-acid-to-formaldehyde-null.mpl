@@ -14,7 +14,7 @@ pathway 1-3-7-trimethyluric-acid-to-formaldehyde-null "1,3,7-Trimethyluric acid 
     s_s_adenosyl_l_methionine
     <-> ec_2_1_1_159 [2.1.1.159] +s_adenosyl_l_homocysteine +h +theobromine -s_s_adenosyl_l_methionine
     7_methylxanthine
-    <-> ec_1_14_13_128 [1.14.13.128] +nadh +o2 +hplus -formaldehyde -nad -h2o
+    <-> ec_1_14_13_128 [1.14.13.128] +nadh +o2_chebi_15379 +hplus -formaldehyde -nad -h2o_chebi_15377
     xanthine
   }
 }

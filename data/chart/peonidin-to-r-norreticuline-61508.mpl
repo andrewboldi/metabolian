@@ -130,7 +130,7 @@ pathway peonidin-to-r-norreticuline-61508 "peonidin to (R)-norreticuline" {
 
   branch from cyanidin_3_o_beta_d_glucoside side left {
     cyanidin_3_o_beta_d_glucoside
-    <-> . +udp +cyanidin_3_o_rutinoside
+    <-> . +udp_mnxm1102128 +cyanidin_3_o_rutinoside
     udp_beta_l_rhamnose
   }
 

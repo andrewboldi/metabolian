@@ -16,14 +16,14 @@ pathway prenyl-diphosphate-to-h2o-14009 "prenyl diphosphate to H2O" {
     r_r_chrysanthemal
     <-> . +nad +h2o -nadh -hplus
     r_r_chrysanthemate
-    <-> . +h +z_s_pyrethrolone -h2o
+    <-> . +h +z_s_pyrethrolone -h2o_water
     pyrethrin_i
   }
 
   branch from z_s_pyrethrolone side left {
     z_s_pyrethrolone
     <-> . +r_r_chrysanthemoyl_coa +coa
-    pyrethrin_i
+    pyrethrin_i_chebi_27815
   }
 
   branch from z_s_pyrethrolone side right {

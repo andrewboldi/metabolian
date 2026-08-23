@@ -10,9 +10,9 @@ pathway all-trans-hexaprenyl-to-ammonium-58388 "all-trans-hexaprenyl… to ammon
     all_trans_hexaprenyl_diphosphate
     <-> . +4_aminobenzoate -ppi
     4_amino_3_all_trans_hexaprenylbenzoate
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -nh3 -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -nh3 -h2o
     3_hexaprenyl_4_5_dihydroxybenzoate
   }
 }

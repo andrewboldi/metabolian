@@ -9,11 +9,11 @@ pathway 1-2-di-9z-12z-15z-octade-to-h2o-70751 "1,2-di-(9Z,12Z,15Z-octade… to H
   spine at 0,0 {
     1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
     <-> . +sam -sah -hplus
-    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
+    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3_chebi_189859
     <-> . +sam -sah -hplus
-    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
+    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3_chebi_189860
     <-> . +sam -sah -hplus
-    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
+    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3_chebi_86161
     <-> . +1_myristoyl_sn_glycero_3_phosphocholine -1_linolenoyl_sn_glycero_3_phosphocholine
     1_tetradecanoyl_2_9z_12z_15z_octadecatrienoyl_sn
     <-> ec_3_6_3_1 [3.6.3.1] +h +1_linolenoyl_sn_glycero_3_phosphocholine +adp +phosphate -atp -h2o
@@ -82,7 +82,7 @@ pathway 1-2-di-9z-12z-15z-octade-to-h2o-70751 "1,2-di-(9Z,12Z,15Z-octade… to H
 
   branch from 1_myristoyl_sn_glycero_3_phosphocholine side left {
     1_myristoyl_sn_glycero_3_phosphocholine
-    <-> . +1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc +h2o +hplus
+    <-> . +1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc +h2o_chebi_15377 +hplus
     linoleate
   }
 

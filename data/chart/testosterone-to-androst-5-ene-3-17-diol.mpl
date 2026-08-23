@@ -12,7 +12,7 @@ pathway testosterone-to-androst-5-ene-3-17-diol "testosterone to androst-5-ene-3
     nadp
     <-> . +androst_5_ene_3_17_diol +nad -nadh -hplus
     dehydroepiandrosterone
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     androst_5_ene_3_17_diol
   }
 }

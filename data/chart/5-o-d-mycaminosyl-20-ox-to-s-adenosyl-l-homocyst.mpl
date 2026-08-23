@@ -8,7 +8,7 @@ pathway 5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst "5-O-β-D-mycaminosyl-2
 
   spine at 0,0 {
     5_o_d_mycaminosyl_20_oxotylonolide
-    <-> ec_1_14_15_34 [1.14.15.34] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_34 [1.14.15.34] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     5_o_mycaminosyltylonolide
     <-> ec_2_4_1_317 [2.4.1.317] +dtdp_6_deoxy_d_allose -dtdp -hplus
     demethyllactenocin
@@ -18,24 +18,24 @@ pathway 5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst "5-O-β-D-mycaminosyl-2
 
   branch from 5_o_mycaminosyltylonolide side left {
     5_o_mycaminosyltylonolide
-    <-> . +h +5_o_beta_d_mycaminosyltylactone +o2 +nadph +h2o
+    <-> . +h +5_o_beta_d_mycaminosyltylactone +o2_mnxm735438 +nadph +h2o_water
     nadp
   }
 
   branch from 5_o_mycaminosyltylonolide side right {
     5_o_mycaminosyltylonolide
-    <-> ec_1_14_13_186 [1.14.13.186] +20_oxo_5_o_beta_d_mycaminosyltylonolide +h +o2 +nadph +nadp
-    h2o
+    <-> ec_1_14_13_186 [1.14.13.186] +20_oxo_5_o_beta_d_mycaminosyltylonolide +h +o2_mnxm735438 +nadph +nadp
+    h2o_water
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_19_42 [1.14.19.42] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
     1_acyl_2_7z_hexadec_7_enoyl_glycerolipid
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_19_43 [1.14.19.43] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
     1_acyl_2_3e_hexadec_3_enoyl_glycerolipid
   }
@@ -60,24 +60,24 @@ pathway 5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst "5-O-β-D-mycaminosyl-2
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     1_acyl_2_palmitoleoylglycerolipid
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_36 [1.14.19.36] +1_linoleoyl_2_acylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_19_36 [1.14.19.36] +1_linoleoyl_2_acylglycerolipid +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     1_linolenoyl_2_acylglycerolipid
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_3_1_108 [1.3.1.108] +dihydrocaffeoyl_coa +di_sulfido_diiron +nad +nadh
     trans_caffeoyl_coa
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +epothilone_c +di_sulfido_diiron +o2 +hplus +h2o
     epothilone_a
   }

@@ -48,7 +48,7 @@ pathway udp-to-phosphate "UDP to phosphate" {
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam +h
+    <-> . +udp +pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam_mnxm1368957 +h
     pelargonidin_3_o_beta_d_sambubioside
   }
 

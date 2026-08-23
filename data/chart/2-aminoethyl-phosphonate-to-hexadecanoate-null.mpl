@@ -12,15 +12,15 @@ pathway 2-aminoethyl-phosphonate-to-hexadecanoate-null "(2-aminoethyl)phosphonat
     h
     <-> . +ethanolamine +1_2_dihexadecanoyl_sn_glycerol_3_phosphate -h2o
     1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
-    <-> . +h2o -phosphoethanolamine -hplus
+    <-> . +h2o_chebi_15377 -phosphoethanolamine -hplus
     1_2_dipalmitoyl_sn_glycerol
     <-> . +atp -adp -hplus
     1_2_dihexadecanoyl_sn_glycerol_3_phosphate
-    <-> . +h2o -palmitate -hplus
+    <-> . +h2o_chebi_15377 -palmitate -hplus
     1_palmitoyl_sn_glycerol_3_phosphate
     <-> . +oleoyl_coa -coa
     1_palmitoyl_2_oleoyl_sn_glycero_3_phosphate
-    <-> . +h2o -palmitate -hplus
+    <-> . +h2o_chebi_15377 -palmitate -hplus
     2_oleoyl_sn_glycero_3_phosphate
   }
 

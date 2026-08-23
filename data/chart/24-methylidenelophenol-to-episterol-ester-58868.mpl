@@ -20,7 +20,7 @@ pathway 24-methylidenelophenol-to-episterol-ester-58868 "24-methylidenelophenol 
 
   branch from nadh side left {
     nadh
-    <-> . +3_nitrophenol +h +nad +h2o
+    <-> . +3_nitrophenol +h +nad +h2o_water
     3_hydroxyaminophenol
   }
 
@@ -44,13 +44,13 @@ pathway 24-methylidenelophenol-to-episterol-ester-58868 "24-methylidenelophenol 
 
   branch from nadp side left {
     nadp
-    <-> . +h +4_amino_2_nitrotoluene +nadph +h2o
+    <-> . +h +4_amino_2_nitrotoluene +nadph +h2o_water
     2_4_diaminotoluene
   }
 
   branch from nadp side right {
     nadp
-    <-> . +5_5_dehydrodivanillate +h +o2 +nadph +5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox +h2o
+    <-> . +5_5_dehydrodivanillate +h +o2_mnxm735438 +nadph +5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox +h2o_water
     formaldehyde
   }
 
@@ -86,7 +86,7 @@ pathway 24-methylidenelophenol-to-episterol-ester-58868 "24-methylidenelophenol 
 
   branch from co2 side right {
     co2
-    <-> . +glutathione_disulfide +beta_rhodomycin +h2o +o2 +15_demethoxy_epsilon_rhodomycin
+    <-> . +glutathione_disulfide +beta_rhodomycin +h2o_water +o2_mnxm735438 +15_demethoxy_epsilon_rhodomycin
     glutathione
   }
 
@@ -98,7 +98,7 @@ pathway 24-methylidenelophenol-to-episterol-ester-58868 "24-methylidenelophenol 
 
   branch from h side right {
     h
-    <-> . +4_aminocatechol +h2o +nh4
+    <-> . +4_aminocatechol +h2o_water +nh4
     benzene_1_2_4_triol
   }
 
@@ -110,19 +110,19 @@ pathway 24-methylidenelophenol-to-episterol-ester-58868 "24-methylidenelophenol 
 
   branch from nadph side right {
     nadph
-    <-> ec_1_8_1_9 [1.8.1.9] +methylselenol +nadp +h2o +h
+    <-> ec_1_8_1_9 [1.8.1.9] +methylselenol +nadp +h2o_water +h
     methylseleninic_acid
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h2o +h +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h2o_water +h +o2_mnxm735438 +nadph
     lsm_36909
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h +o2 +nadph +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h +o2_mnxm735438 +nadph +h2o_water
     aflatoxin_m1_8_9_epoxide
   }
 

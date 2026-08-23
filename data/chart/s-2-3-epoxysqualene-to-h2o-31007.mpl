@@ -12,7 +12,7 @@ pathway s-2-3-epoxysqualene-to-h2o-31007 "(S)-2,3-epoxysqualene to H2O" {
     amyrin
     <-> ec_1_14_14_134 [1.14.14.134] +fmnh2 +o2 -fmn -h2o -hplus
     24_hydroxy_amyrin
-    <-> . +h +o2 +nadph -soyasapogenol_b -h2o
+    <-> . +h +o2_mnxm735438 +nadph -soyasapogenol_b -h2o_water
     nadp
   }
 

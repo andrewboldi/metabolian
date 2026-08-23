@@ -24,13 +24,13 @@ pathway gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4 "GDP-2-acetamido-2,6-di
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_2_1_38 [1.2.1.38] +acetyl_coa +atp +nadph +l_glutamate +h2o +h +adp +nadp +coa +ornithine +phosphate
+    <-> ec_1_2_1_38 [1.2.1.38] +acetyl_coa +atp +nadph +l_glutamate +h2o_water +h +adp +nadp +coa +ornithine +phosphate
     acetate
   }
 
   branch from h side left {
     h
-    <-> . +sn_glycerol_3_phosphocholine +h2o +choline
+    <-> . +sn_glycerol_3_phosphocholine +h2o_water +choline
     glycerol_2_phosphate
   }
 
@@ -48,19 +48,19 @@ pathway gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4 "GDP-2-acetamido-2,6-di
 
   branch from coa side right {
     coa
-    <-> . +5z_tetradecenoyl_coa +h2o
+    <-> . +5z_tetradecenoyl_coa +h2o_water
     cis_tetradec_5_enoic_acid
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +l_histidine +l_glutamine +h2o
+    <-> . +l_histidine +l_glutamine +h2o_water
     histidyl_glutamyl_glutamine
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +l_histidine +h2o
+    <-> . +l_histidine +h2o_water
     histidyl_glutamate
   }
 
@@ -72,7 +72,7 @@ pathway gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4 "GDP-2-acetamido-2,6-di
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_hapalindole_c +h +o2 +chloride +co2 +succinate +h2o
+    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_hapalindole_c +h +o2 +chloride +co2 +succinate +h2o_water
     12_epi_hapalindole_e
   }
 
@@ -90,25 +90,25 @@ pathway gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4 "GDP-2-acetamido-2,6-di
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     hexadecanedioate
   }
 
   branch from h side right {
     h
-    <-> . +adp +z_z_z_7_10_13_hexadecatrienoic_acid +phosphate +z_z_z_7_10_13_hexadecatrienoic_acid +h2o
+    <-> . +adp +z_z_z_7_10_13_hexadecatrienoic_acid +phosphate +z_z_z_7_10_13_hexadecatrienoic_acid +h2o_water
     atp
   }
 
   branch from coa side left {
     coa
-    <-> . +7z_hexadecenoyl_coa +h2o
+    <-> . +7z_hexadecenoyl_coa +h2o_water
     7_palmitoleic_acid
   }
 
   branch from coa side right {
     coa
-    <-> . +10z_heptadecenoyl_coa +h2o
+    <-> . +10z_heptadecenoyl_coa +h2o_water
     10z_heptadecenoic_acid
   }
 }

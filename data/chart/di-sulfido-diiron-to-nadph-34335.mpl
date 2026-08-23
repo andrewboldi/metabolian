@@ -8,13 +8,13 @@ pathway di-sulfido-diiron-to-nadph-34335 "di-μ-sulfido-diiron to NADPH" {
 
   spine at 0,0 {
     di_sulfido_diiron
-    <-> . +cholesterol +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +cholesterol +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     22r_22_hydroxycholesterol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     20r_22r_20_22_dihydroxycholesterol
-    <-> ec_1_14_15_6 [1.14.15.6] +nadp +h2o -h -o2 -nadph
+    <-> ec_1_14_15_6 [1.14.15.6] +nadp +h2o_water -h -o2_mnxm735438 -nadph
     20_hydroxycholesterol
-    <-> ec_1_14_15_6 [1.14.15.6] +nadp +h2o -cholesterol -o2 -nadph
+    <-> ec_1_14_15_6 [1.14.15.6] +nadp +h2o_water -cholesterol_mnxm726122 -o2_mnxm735438 -nadph
     h
   }
 }

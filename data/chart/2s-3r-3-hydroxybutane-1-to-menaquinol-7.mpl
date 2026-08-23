@@ -12,7 +12,7 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
     succinate
     <-> . +menaquinone_7 -fumarate
     menaquinol_7
-    <-> . +pyruvate -s_lactate
+    <-> . +pyruvate_mnxm23 -s_lactate
     menaquinone_7
     <-> . +nadh +hplus -nad
     menaquinol_7
@@ -50,13 +50,13 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
 
   branch from menaquinone_7 side right {
     menaquinone_7
-    <-> . +menaquinol_7 +o2 +h2o
+    <-> . +menaquinol_7 +o2_mnxm735438 +h2o
     pmf
   }
 
   branch from s_lactate side left {
     s_lactate
-    <-> . +ubiquinol_2 +pyruvate
+    <-> . +ubiquinol_2 +pyruvate_mnxm23
     ubiquinone_2
   }
 
@@ -68,7 +68,7 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
 
   branch from 2s_3r_3_hydroxybutane_1_2_3_tricarboxylate side left {
     2s_3r_3_hydroxybutane_1_2_3_tricarboxylate
-    <-> ec_4_2_1_99 [4.2.1.99] +h2o
+    <-> ec_4_2_1_99 [4.2.1.99] +h2o_chebi_15377
     z_but_2_ene_1_2_3_tricarboxylate
   }
 
@@ -86,7 +86,7 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
 
   branch from menaquinone_7 side right {
     menaquinone_7
-    <-> . +pmf +menaquinol_7 +o2 +pmf
+    <-> . +pmf +menaquinol_7 +o2_mnxm735438 +pmf
     h2o
   }
 
@@ -96,14 +96,14 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
     sn_glycerol_3_phosphate
   }
 
-  branch from pyruvate side right {
-    pyruvate
+  branch from pyruvate_mnxm23 side right {
+    pyruvate_mnxm23
     <-> . +salicin_6_phosphate +phosphoenolpyruvate
     salicin
   }
 
-  branch from pyruvate side left {
-    pyruvate
+  branch from pyruvate_mnxm23 side left {
+    pyruvate_mnxm23
     <-> . +d_tagatose_1_phosphate +h +phosphoenolpyruvate
     keto_d_tagatose
   }
@@ -116,7 +116,7 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
 
   branch from s_lactate side left {
     s_lactate
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +r_lactaldehyde +h2o
-    nad
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh_mnxm10 +h +r_lactaldehyde +h2o
+    nad_mnxm8
   }
 }

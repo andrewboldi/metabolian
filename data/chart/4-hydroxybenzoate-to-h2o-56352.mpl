@@ -12,7 +12,7 @@ pathway 4-hydroxybenzoate-to-h2o-56352 "4-hydroxybenzoate to H2O" {
     3_bromo_4_hydroxybenzoate
     <-> . +bromide +nadph +o2 +hplus -co2 -nadp -h2o
     2_4_dibromophenol
-    <-> ec_1_14_19_55 [1.14.19.55] +h +o2 +nadph +bromide -nadp -h2o
+    <-> ec_1_14_19_55 [1.14.19.55] +h +o2_mnxm735438 +nadph_mnxm738702 +bromide_mnxm740736 -nadp_mnxm5 -h2o_water
     2_4_6_tribromophenol
   }
 }

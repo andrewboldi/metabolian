@@ -22,7 +22,7 @@ pathway 4-hydroxy-3-octaprenylben-to-h2o "4-hydroxy-3-octaprenylben… to H2O" {
     3_demethylubiquinol_8
     <-> ec_2_1_1_64 [2.1.1.64] +sam -sah -hplus
     ubiquinol_8
-    <-> . +nitrite +h -nh4 -h2o
+    <-> . +nitrite +h -nh4 -h2o_water
     ubiquinone_8
   }
 }

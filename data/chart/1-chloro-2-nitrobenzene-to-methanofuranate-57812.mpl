@@ -14,7 +14,7 @@ pathway 1-chloro-2-nitrobenzene-to-methanofuranate-57812 "1-chloro-2-nitrobenzen
     e_3_diazocoumarate
     <-> . +nadph -trans_4_coumarate -nadp
     dinitrogen
-    <-> ec_1_18_6_1 [1.18.6.1] +di_sulfido_diiron +atp +h2o -di_sulfido_diiron -nh3 -adp -pi -hplus
+    <-> ec_1_18_6_1 [1.18.6.1] +di_sulfido_diiron +atp +h2o -di_sulfido_diiron_chebi_33737 -nh3 -adp -pi -hplus
     h2
     <-> ec_1_12_98_2 [1.12.98.2] +5_10_methanylylidene_tetrahydromethanopterin -hplus
     5_10_methylenetetrahydromethanopterin
@@ -68,7 +68,7 @@ pathway 1-chloro-2-nitrobenzene-to-methanofuranate-57812 "1-chloro-2-nitrobenzen
 
   branch from e_3_aminocoumarate side right {
     e_3_aminocoumarate
-    <-> . +nitrite +atp +3_diazocoumarate +amp +h2o
+    <-> . +nitrite_mnxm107 +atp_mnxm3 +3_diazocoumarate +amp_mnxm728294 +h2o_water
     diphosphate
   }
 
@@ -86,13 +86,13 @@ pathway 1-chloro-2-nitrobenzene-to-methanofuranate-57812 "1-chloro-2-nitrobenzen
 
   branch from trans_4_coumarate side left {
     trans_4_coumarate
-    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +h +o2 +e_caffeate +h2o
+    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +h +o2_mnxm735438 +e_caffeate +h2o_water
     fad
   }
 
   branch from trans_4_coumarate side right {
     trans_4_coumarate
-    <-> ec_1_14_18_1 [1.14.18.1] +h +o2 +h2o
+    <-> ec_1_14_18_1 [1.14.18.1] +h +o2_mnxm735438 +h2o_water
     caffeic_acid_quinone
   }
 

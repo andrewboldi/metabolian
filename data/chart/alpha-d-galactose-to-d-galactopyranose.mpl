@@ -20,13 +20,13 @@ pathway alpha-d-galactose-to-d-galactopyranose "Alpha D galactose to D-galactopy
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     5alpha_dihydrotestosterone_glucuronide
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     5_hydroxytryptophan
   }
 
@@ -38,67 +38,67 @@ pathway alpha-d-galactose-to-d-galactopyranose "Alpha D galactose to D-galactopy
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     acetylcholine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +2_deoxy_alpha_d_ribose_1_phosphate +h2o
+    <-> . +2_deoxy_alpha_d_ribose_1_phosphate +h2o_water
     2_deoxy_d_ribofuranose
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp +atp +h2o_water
     r_acetoin
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +r_acetoin +phosphate +r_acetoin
-    h2o
+    h2o_water
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     r_adrenaline
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_1_7 [3.6.1.7] +acetate +phosphate +h2o
+    <-> ec_3_6_1_7 [3.6.1.7] +acetate +phosphate +h2o_water
     acetyl_phosphate
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     2_aminoethyl_phosphonate
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     etiocholan_3_ol_17_one_3_o_d_glucuronide
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     androsterone_3_glucosiduronic_acid
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +atp +h2o
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +atp +h2o_water
     l_arginine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +atp +h2o
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +atp +h2o_water
     l_asparagine
   }
 }

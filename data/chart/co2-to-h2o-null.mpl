@@ -155,7 +155,7 @@ pathway co2-to-h2o-null "CO2 to H2O" {
   branch from s_s_adenosyl_l_methionine side left {
     s_s_adenosyl_l_methionine
     <-> . +s_adenosyl_l_homocysteine +premithramycin_a3 +h
-    premithramycin_a3
+    premithramycin_a3_chebi_32049
   }
 
   branch from s_s_adenosyl_l_methionine side right {

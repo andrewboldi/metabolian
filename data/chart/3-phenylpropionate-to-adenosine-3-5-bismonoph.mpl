@@ -35,7 +35,7 @@ pathway 3-phenylpropionate-to-adenosine-3-5-bismonoph "3-phenylpropionate to ade
   branch from 3_phosphonato_5_adenylyl_sulfate side left {
     3_phosphonato_5_adenylyl_sulfate
     <-> . +neu5ac_2_3_6_o_sulfo_d_gal_1_4_6_o_sulfo_d_glcn +adenosine_3_5_bismonophosphate +hplus
-    neu5ac_2_3_6_o_sulfo_d_gal_1_4_6_o_sulfo_d_glcn
+    neu5ac_2_3_6_o_sulfo_d_gal_1_4_6_o_sulfo_d_glcn_chebi_232738
   }
 
   branch from 3_phosphonato_5_adenylyl_sulfate side right {

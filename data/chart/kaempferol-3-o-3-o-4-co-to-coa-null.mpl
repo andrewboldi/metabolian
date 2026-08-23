@@ -18,13 +18,13 @@ pathway kaempferol-3-o-3-o-4-co-to-coa-null "kaempferol 3-O-(3″-O-4-co… to C
 
   branch from trans_4_coumaroyl_coa side left {
     trans_4_coumaroyl_coa
-    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa
+    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa_chebi_57287
     avenanthramide_a
   }
 
   branch from trans_4_coumaroyl_coa side right {
     trans_4_coumaroyl_coa
-    <-> . +2r_3s_piscidate +coa
+    <-> . +2r_3s_piscidate +coa_chebi_57287
     cimicifugate_k
   }
 

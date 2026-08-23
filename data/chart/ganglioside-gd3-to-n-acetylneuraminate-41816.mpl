@@ -46,7 +46,7 @@ pathway ganglioside-gd3-to-n-acetylneuraminate-41816 "ganglioside GD3 to N-acety
 
   branch from udp_d_galactose side left {
     udp_d_galactose
-    <-> . +d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga +udp +hplus
-    d_galactosyl_1_3_d_galactosyl_1_3_d_galactosyl
+    <-> . +d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga_chebi_141778 +udp +hplus
+    d_galactosyl_1_3_d_galactosyl_1_3_d_galactosyl_chebi_141786
   }
 }

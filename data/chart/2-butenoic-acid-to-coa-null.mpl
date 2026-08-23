@@ -96,7 +96,7 @@ pathway 2-butenoic-acid-to-coa-null "2-butenoic acid to CoA" {
 
   branch from s_carnitine side right {
     s_carnitine
-    <-> . +atp +coa +adp +pi
+    <-> . +atp_chebi_30616 +coa_chebi_57287 +adp_chebi_456216 +pi
     s_carnitinyl_coa
   }
 

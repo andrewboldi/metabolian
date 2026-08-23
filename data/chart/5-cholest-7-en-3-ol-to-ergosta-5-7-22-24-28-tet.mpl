@@ -52,8 +52,8 @@ pathway 5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet "5α-cholest-7-en-3β-ol
 
   branch from ergosta_5_7_dien_3_ol side left {
     ergosta_5_7_dien_3_ol
-    <-> . +h +nadph +ergosterol
-    nadp
+    <-> . +h +nadph_mnxm738702 +ergosterol_mnxm741449
+    nadp_mnxm5
   }
 
   branch from ergosterol side right {

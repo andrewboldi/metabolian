@@ -16,9 +16,9 @@ pathway s-carvone-to-3r-3-isopropenyl-6-oxoh-null "(S)-carvone to (3R)-3-isoprop
     4r_limonene_1_2_epoxide
     <-> ec_3_3_2_8 [3.3.2.8] +h2o
     1s_2s_4r_limonene_1_2_diol
-    <-> ec_1_1_1_297 [1.1.1.297] +nad -nadh -hplus
+    <-> ec_1_1_1_297 [1.1.1.297] +nad_chebi_57540 -nadh_chebi_57945 -hplus
     1s_4r_1_hydroxylimonen_2_one
-    <-> ec_1_14_13_105 [1.14.13.105] +nadph +o2 +hplus -nadp -h2o
+    <-> ec_1_14_13_105 [1.14.13.105] +nadph_chebi_57783 +o2_chebi_15379 +hplus -nadp_chebi_58349 -h2o_chebi_15377
     4r_7r_7_hydroxy_4_isopropenyl_7_methyloxepan_2
     <-> ec_1_14_13_105 [1.14.13.105] -hplus
     3r_3_isopropenyl_6_oxoheptanoate

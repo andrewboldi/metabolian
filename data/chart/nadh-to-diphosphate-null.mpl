@@ -16,9 +16,9 @@ pathway nadh-to-diphosphate-null "NADH to diphosphate" {
     bis_3_azaniumylpropyl_azanium
     <-> ec_2_5_1_126 [2.5.1.126] +s_adenosylmethioninaminium -5_s_methyl_5_thioadenosine -hplus
     3_3_3_tetraminium
-    <-> ec_1_5_3_16 [1.5.3.16] +o2 +h2o -3_ammoniopropanal -h2o2
+    <-> ec_1_5_3_16 [1.5.3.16] +o2 +h2o_chebi_15377 -3_ammoniopropanal -h2o2
     bis_3_azaniumylpropyl_azanium
-    <-> . +3_ammoniopropanal +nad +h2o -nadh -hplus
+    <-> . +3_ammoniopropanal +nad_chebi_57540 +h2o_chebi_15377 -nadh_chebi_57945 -hplus
     alanine
     <-> ec_6_3_2_36 [6.3.2.36] +r_4_phosphonatopantoate +atp -amp -ppi -hplus
     r_4_phosphonatopantothenate

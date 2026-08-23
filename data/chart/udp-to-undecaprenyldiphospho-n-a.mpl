@@ -12,7 +12,7 @@ pathway udp-to-undecaprenyldiphospho-n-a "UDP to undecaprenyldiphospho-N-a…" {
     udp_alpha_d_glucose
     <-> ec_2_7_8_13 [2.7.8.13] +udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_meso_2 +ditrans_polycis_undecaprenyl_phosphate -ump
     undecaprenyldiphospho_n_acetylmuramoyl_l_alanyl
-    <-> ec_2_4_1_227 [2.4.1.227] +udpglcnac -udp -hplus
+    <-> ec_2_4_1_227 [2.4.1.227] +udpglcnac -udp_chebi_58223 -hplus
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
   }
 
@@ -30,13 +30,13 @@ pathway udp-to-undecaprenyldiphospho-n-a "UDP to undecaprenyldiphospho-N-a…" {
 
   branch from udpglcnac side left {
     udpglcnac
-    <-> . +o_n_acetyl_d_glucosaminyl_l_serine +udp +hplus
+    <-> . +o_n_acetyl_d_glucosaminyl_l_serine +udp_chebi_58223 +hplus
     n_acetyl_d_glucosaminyl_1_6_n_acetyl_d_glucosami
   }
 
   branch from udpglcnac side right {
     udpglcnac
-    <-> . +l_threonine +udp +hplus
+    <-> . +l_threonine +udp_chebi_58223 +hplus
     n_acetyl_d_glucosaminyl_l_threonyl
   }
 }

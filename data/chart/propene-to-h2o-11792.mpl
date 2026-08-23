@@ -18,9 +18,9 @@ pathway propene-to-h2o-11792 "propene to H2O" {
     propionate
     <-> ec_2_7_2_15 [2.7.2.15] +atp -adp
     propanoyl_phosphate
-    <-> . +co2 +h2o -h -o2 -phosphate
+    <-> . +co2 +h2o_water -h -o2_mnxm735438 -phosphate
     2_oxobutanoate
-    <-> ec_2_5_1_48 [2.5.1.48] +h +succinate +nh4 -h2o
+    <-> ec_2_5_1_48 [2.5.1.48] +h +succinate +nh4 -h2o_water
     o_succinyl_l_homoserine
   }
 
@@ -50,20 +50,20 @@ pathway propene-to-h2o-11792 "propene to H2O" {
 
   branch from 2_oxobutanoate side left {
     2_oxobutanoate
-    <-> ec_2_5_1_48 [2.5.1.48] +h2o +nh4 +phosphate
+    <-> ec_2_5_1_48 [2.5.1.48] +h2o_water +nh4 +phosphate
     o_phospho_l_homoserine
   }
 
   branch from 2_oxobutanoate side right {
     2_oxobutanoate
-    <-> ec_2_6_1_7 [2.6.1.7] +aminobutyric_acid +pyruvate
+    <-> ec_2_6_1_7 [2.6.1.7] +aminobutyric_acid +pyruvate_mnxm23
     alanine
   }
 
   branch from h side left {
     h
-    <-> ec_7_4_2_10 [7.4.2.10] +adp +glutathione +phosphate +glutathione +h2o
-    atp
+    <-> ec_7_4_2_10 [7.4.2.10] +adp_mnxm40333 +glutathione +phosphate +glutathione +h2o_water
+    atp_mnxm3
   }
 
   branch from h side right {
@@ -72,27 +72,27 @@ pathway propene-to-h2o-11792 "propene to H2O" {
     gamma_glu_ala
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +taurine
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +taurine_mnxm282
     hypotaurine
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +nadh +9z_12z_octadecadienoate +h +nad +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +nadh_mnxm10 +9z_12z_octadecadienoate +h +nad_mnxm8 +h2o_water
     6z_9z_12z_octadecatrienoate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp_mnxm40333 +atp_mnxm3 +h2o_water
     1_hexanesulfonic_acid
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp_mnxm40333 +atp_mnxm3 +h2o_water
     hg
   }
 
@@ -108,15 +108,15 @@ pathway propene-to-h2o-11792 "propene to H2O" {
     z_2_aminobutenoic_acid
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +h +adp_mnxm40333 +phosphate +atp_mnxm3
     histamine
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +atp
+  branch from h2o_water side right {
+    h2o_water
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp_mnxm40333 +phosphate +atp_mnxm3
     l_histidine
   }
 
@@ -135,30 +135,30 @@ pathway propene-to-h2o-11792 "propene to H2O" {
   branch from co2 side left {
     co2
     <-> ec_1_2_4_1 [1.2.4.1] +hetpp +h +thiamine_diphosphate
-    pyruvate
+    pyruvate_mnxm23
   }
 
   branch from co2 side right {
     co2
-    <-> ec_1_2_2_2 [1.2.2.2] +ubiquinone_8 +pyruvate +h2o +acetate
+    <-> ec_1_2_2_2 [1.2.2.2] +ubiquinone_8 +pyruvate_mnxm23 +h2o_water +acetate
     ubiquinol_8
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_10 [3.6.3.10] +h +adp +phosphate +atp
+  branch from h2o_water side left {
+    h2o_water
+    <-> ec_3_6_3_10 [3.6.3.10] +h +adp_mnxm40333 +phosphate +atp_mnxm3
     k
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +2_oxoglutarate +nh4
     4_oxoglutaramate
   }
 
   branch from 2_oxobutanoate side left {
     2_oxobutanoate
-    <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2 +h2o
+    <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2_mnxm735438 +h2o_water
     2s_2_aminobutanoate
   }
 
@@ -170,13 +170,13 @@ pathway propene-to-h2o-11792 "propene to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_5_1_12 [1.5.1.12] +nadh +3r_5s_1_pyrroline_3_hydroxy_5_carboxylate +nad
+    <-> ec_1_5_1_12 [1.5.1.12] +nadh_mnxm10 +3r_5s_1_pyrroline_3_hydroxy_5_carboxylate +nad_mnxm8
     trans_4_hydroxy_l_proline
   }
 
   branch from h side right {
     h
-    <-> ec_1_11_1_8 [1.11.1.8] +3_5_diiodo_l_tyrosine +h2o2 +2_aminoprop_2_enoate +h2o
+    <-> ec_1_11_1_8 [1.11.1.8] +3_5_diiodo_l_tyrosine +h2o2 +2_aminoprop_2_enoate +h2o_water
     l_thyroxine
   }
 }

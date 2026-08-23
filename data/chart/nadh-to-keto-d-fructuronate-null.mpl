@@ -42,19 +42,19 @@ pathway nadh-to-keto-d-fructuronate-null "NADH to keto-D-fructuronate" {
 
   branch from d_tagaturonate side left {
     d_tagaturonate
-    <-> ec_1_1_1_58 [1.1.1.58] +nad +nadh +hplus
+    <-> ec_1_1_1_58 [1.1.1.58] +nad_chebi_57540 +nadh_chebi_57945 +hplus
     d_altronate
   }
 
   branch from d_tagaturonate side right {
     d_tagaturonate
-    <-> ec_1_1_1_414 [1.1.1.414] +nad +nadh +hplus
+    <-> ec_1_1_1_414 [1.1.1.414] +nad_chebi_57540 +nadh_chebi_57945 +hplus
     l_galactonate
   }
 
   branch from keto_d_fructuronate side left {
     keto_d_fructuronate
-    <-> ec_1_1_1_57 [1.1.1.57] +nad +nadh +hplus
+    <-> ec_1_1_1_57 [1.1.1.57] +nad_chebi_57540 +nadh_chebi_57945 +hplus
     d_mannonate
   }
 

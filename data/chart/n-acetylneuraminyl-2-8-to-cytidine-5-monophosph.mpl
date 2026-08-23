@@ -15,15 +15,15 @@ pathway n-acetylneuraminyl-2-8-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(
     <-> . +h2o -n_acetylneuraminate
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
     <-> . +h2o -n_acetylneuraminate
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_88069
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_90151
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_d
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_141711
   }
 
   branch from udp_d_galactose side left {

@@ -10,21 +10,21 @@ pathway piceatannol-to-h2o-73815 "piceatannol to H2O" {
     piceatannol
     <-> . +o2 -3_4_dihydroxybenzaldehyde
     3_5_dihydroxybenzaldehyde
-    <-> . +3_4_dihydroxybenzaldehyde +4_hydroxybenzaldehyde -o2
+    <-> . +3_4_dihydroxybenzaldehyde +4_hydroxybenzaldehyde -o2_mnxm735438
     trans_resveratrol
-    <-> ec_1_14_14_57 [1.14.14.57] +h +o2 +nadph -oxyresveratrol -h2o
+    <-> ec_1_14_14_57 [1.14.14.57] +h +o2_mnxm735438 +nadph -oxyresveratrol -h2o
     nadp
   }
 
   branch from piceatannol side left {
     piceatannol
     <-> . +o2
-    trans_resveratrol
+    trans_resveratrol_chebi_45713
   }
 
   branch from piceatannol side right {
     piceatannol
-    <-> . +o2 +h2o
+    <-> . +o2 +h2o_chebi_15377
     piceatannolquinone
   }
 }

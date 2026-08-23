@@ -121,6 +121,6 @@ pathway lupanine-to-phosphate-null "lupanine to phosphate" {
   branch from phosphate side right {
     phosphate
     <-> ec_2_5_1_72 [2.5.1.72] +dihydroxyacetone_phosphate +h +quinolinate +h2o
-    iminoaspartate
+    iminoaspartate_mnxm1370457
   }
 }

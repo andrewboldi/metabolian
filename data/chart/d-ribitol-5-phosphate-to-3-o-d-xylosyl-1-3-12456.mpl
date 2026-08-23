@@ -90,8 +90,8 @@ pathway d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3-12456 "D-ribitol 5-phosphate 
 
   branch from udp_d_xylose side right {
     udp_d_xylose
-    <-> ec_2_4_2_61 [2.4.2.61] +3_o_d_ribitylphospho_2_3_n_acetyl_d_galactosamin +udp +hplus
-    3_o_d_xylosyl_1_4_d_ribitylphospho_2_3_n_acetyl
+    <-> ec_2_4_2_61 [2.4.2.61] +3_o_d_ribitylphospho_2_3_n_acetyl_d_galactosamin_chebi_142401 +udp +hplus
+    3_o_d_xylosyl_1_4_d_ribitylphospho_2_3_n_acetyl_chebi_142404
   }
 
   branch from udp_d_xylose side left {

@@ -28,7 +28,7 @@ pathway 4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol "(4R,5R)-4,5-dihydroxycy
 
   branch from 3r_4r_3_4_dihydroxycyclohexa_1_5_diene_1_carbox side left {
     3r_4r_3_4_dihydroxycyclohexa_1_5_diene_1_carbox
-    <-> ec_3_3_2_13 [3.3.2.13] +h2o +pyruvate
+    <-> ec_3_3_2_13 [3.3.2.13] +h2o_chebi_15377 +pyruvate
     chorismate
   }
 
@@ -70,8 +70,8 @@ pathway 4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol "(4R,5R)-4,5-dihydroxycy
 
   branch from phylloquinone side right {
     phylloquinone
-    <-> ec_1_14_13_194 [1.14.13.194] +h +o2 +nadph +omega_hydroxyphylloquinone +h2o
-    nadp
+    <-> ec_1_14_13_194 [1.14.13.194] +h +o2 +nadph_mnxm738702 +omega_hydroxyphylloquinone +h2o
+    nadp_mnxm5
   }
 
   branch from 2_3_epoxyphylloquinone side left {
@@ -89,7 +89,7 @@ pathway 4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol "(4R,5R)-4,5-dihydroxycy
   branch from l_1_4_dithiothreitol side left {
     l_1_4_dithiothreitol
     <-> ec_1_1_4_1 [1.1.4.1] +4r_5r_1_2_dithiane_4_5_diol +menaquinone_2 +h2o
-    2_3_epoxymenaquinone
+    2_3_epoxymenaquinone_mnxm741738
   }
 
   branch from 4r_5r_1_2_dithiane_4_5_diol side right {

@@ -20,7 +20,7 @@ pathway udp-2-acetamido-4-azanium-to-diphosphate-34159 "UDP-2-acetamido-4-azaniu
 
   branch from udp_n_n_diacetylbacillosamine side left {
     udp_n_n_diacetylbacillosamine
-    <-> ec_2_3_1_203 [2.3.1.203] +acetyl_coa +udp_2_acetamido_4_amino_2_4_6_trideoxyglucose +coa
+    <-> ec_2_3_1_203 [2.3.1.203] +acetyl_coa_mnxm1104266 +udp_2_acetamido_4_amino_2_4_6_trideoxyglucose +coa_mnxm727276
     h
   }
 

@@ -23,7 +23,7 @@ pathway 4-coumaroyl-coa-to-di-sulfido-diiron "4-coumaroyl-CoA to di-μ-sulfido-d
     <-> ec_1_13_11_53 [1.13.11.53] +o2 -carbon_monoxide -formate -hplus
     3_methylthio_propionate
     <-> ec_1_2_7_4 [1.2.7.4] +carbon_monoxide +di_sulfido_diiron +h2o -co2 -hplus
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33738
   }
 
   branch from 5_s_methyl_5_thioadenosine side left {
@@ -52,7 +52,7 @@ pathway 4-coumaroyl-coa-to-di-sulfido-diiron "4-coumaroyl-CoA to di-μ-sulfido-d
 
   branch from 1_2_dihydroxy_5_methylthio_pent_1_en_3_one side left {
     1_2_dihydroxy_5_methylthio_pent_1_en_3_one
-    <-> ec_3_1_3_77 [3.1.3.77] +h +phosphate +h2o
+    <-> ec_3_1_3_77 [3.1.3.77] +h +phosphate +h2o_water
     2_hydroxy_3_keto_5_methylthiopentenyl_1_phosphat
   }
 
@@ -68,14 +68,14 @@ pathway 4-coumaroyl-coa-to-di-sulfido-diiron "4-coumaroyl-CoA to di-μ-sulfido-d
     tert_butylammonium
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> . +18_hydroxycortisol +o2 +hplus +di_sulfido_diiron +h2o
     18_oxocortisol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> . +11_deoxycorticosterone +o2 +hplus +di_sulfido_diiron +h2o
     18_hydroxydeoxycorticosterone
   }
@@ -106,24 +106,24 @@ pathway 4-coumaroyl-coa-to-di-sulfido-diiron "4-coumaroyl-CoA to di-μ-sulfido-d
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    <-> . +11_deoxycorticosterone +di_sulfido_diiron_chebi_33738 +o2 +hplus +h2o
     19_hydroxy_11_deoxycorticosterone
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +19_hydroxy_11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    <-> . +19_hydroxy_11_deoxycorticosterone +di_sulfido_diiron_chebi_33738 +o2 +hplus +h2o
     19_oxo_deoxycorticosterone
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_heptaprenylbenzoate +o2 +hplus +di_sulfido_diiron +h2o
     3_4_dihydroxy_5_all_trans_heptaprenylbenzoate
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_decaprenylbenzoate +o2 +hplus +di_sulfido_diiron +h2o
     3_decaprenyl_4_5_dihydroxybenzoate
   }

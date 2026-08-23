@@ -18,7 +18,7 @@ pathway s-adenosyl-l-homocysteine-to-formate-null "S-adenosyl-L-homocysteine to 
 
   branch from menaquinone_8 side left {
     menaquinone_8
-    <-> . +nadh +hplus +nad
+    <-> . +nadh_chebi_57945 +hplus +nad_chebi_57540
     menaquinol_8
   }
 }

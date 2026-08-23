@@ -11,7 +11,7 @@ pathway 2r-3-1-5-6-dihydropy-to-1s-2z-5-amino-1-3-3-nul "(2R)-3-{[1-(5,6-dihydro
     <-> . -n_acetyl_l_cysteine
     2_3_3_1e_prop_1_en_1_yl_oxiran_2_yl_oxiran_2_yl
     <-> . +h2o
-    2_3_3_1e_prop_1_en_1_yl_oxiran_2_yl_oxiran_2_yl
+    2_3_3_1e_prop_1_en_1_yl_oxiran_2_yl_oxiran_2_yl_mnxm818438
     <-> . +fadh2 +h -1s_2z_5_amino_1_3_3_1e_prop_1_en_1_yl_oxiran_2
     fad
   }

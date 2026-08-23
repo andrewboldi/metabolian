@@ -40,7 +40,7 @@ pathway epiandrosterone-to-2-hydroxyestrone-42188 "epiandrosterone to 2-hydroxye
 
   branch from 2_hydroxyestrone side right {
     2_hydroxyestrone
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 

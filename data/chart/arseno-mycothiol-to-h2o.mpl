@@ -11,11 +11,11 @@ pathway arseno-mycothiol-to-h2o "Arseno-mycothiol to H2O" {
     <-> ec_2_8_4_2 [2.8.4.2] +h2o -h -mycothiol
     arsenate
     <-> ec_1_20_9_1 [1.20.9.1] +h +cu -arsenous_acid -h2o
-    cu
+    cu_mnxm731166
     <-> . +nadh +o2 -nad -h2o
     cu
     <-> ec_1_17_9_1 [1.17.9.1] +h +4_hydroxybenzaldehyde -4_methylphenol -h2o
-    cu
+    cu_mnxm731166
     <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +4_methylphenol -4_methylcatechol -h2o
     nadp
   }

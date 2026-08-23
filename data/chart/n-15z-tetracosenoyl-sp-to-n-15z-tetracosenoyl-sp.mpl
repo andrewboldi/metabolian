@@ -21,7 +21,7 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
   branch from n_15z_tetracosenoylsphingosine side left {
     n_15z_tetracosenoylsphingosine
     <-> ec_3_5_1_23 [3.5.1.23] +15z_tetracosenoate +sphing_4_enine +h
-    h2o
+    h2o_water
   }
 
   branch from 15z_tetracosenoate side right {
@@ -32,13 +32,13 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
 
   branch from 15z_tetracosenoate side left {
     15z_tetracosenoate
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from 15z_tetracosenoyl_coa side right {
     15z_tetracosenoyl_coa
-    <-> . +nadh +h +coa +nad
+    <-> . +nadh +h +coa_mnxm727276 +nad
     15_tetracosenal
   }
 
@@ -62,25 +62,25 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
 
   branch from 15z_tetracosenoate side right {
     15z_tetracosenoate
-    <-> . +h +cholesterol +h2o
+    <-> . +h +cholesterol +h2o_water
     cholest_5_en_3beta_yl_15z_tetracosenoate
   }
 
   branch from 15z_tetracosenoate side left {
     15z_tetracosenoate
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp_mnxm3 +h2o_water
     h
   }
 
   branch from 15z_tetracosenoyl_coa side right {
     15z_tetracosenoyl_coa
     <-> . +cholesterol +cholest_5_en_3beta_yl_15z_tetracosenoate
-    coa
+    coa_mnxm727276
   }
 
   branch from 15z_tetracosenoyl_coa side left {
     15z_tetracosenoyl_coa
-    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
+    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa_mnxm727276
     15z_tetracosenoyl_cholesterol
   }
 

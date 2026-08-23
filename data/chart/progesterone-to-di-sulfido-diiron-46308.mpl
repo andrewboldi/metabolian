@@ -12,7 +12,7 @@ pathway progesterone-to-di-sulfido-diiron-46308 "progesterone to di-μ-sulfido-d
     17_hydroxyprogesterone
     <-> ec_1_14_14_16 [1.14.14.16] +fmnh2 +o2 -fmn -h2o -hplus
     11_deoxycortisol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     18_hydroxy_11_deoxycortisol
   }
 }

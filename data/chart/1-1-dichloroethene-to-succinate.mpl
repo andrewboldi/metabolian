@@ -24,7 +24,7 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
 
   branch from 2_chlorooxirane side left {
     2_chlorooxirane
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +chloroethene +o2 +h2o
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +chloroethene_mnxm732238 +o2_mnxm735438 +h2o_water
     nad
   }
 
@@ -72,13 +72,13 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_108 [1.14.14.108] +fmnh2 +idramantone +o2 +1_hydroxy_4_oxahomoadamantan_5_one +h2o
+    <-> ec_1_14_14_108 [1.14.14.108] +fmnh2_mnxm1107623 +idramantone +o2_mnxm735438 +1_hydroxy_4_oxahomoadamantan_5_one +h2o_water
     h
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2 +3_n_morpholino_propanesulfonate +o2 +h +sulfite +h2o
+    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2_mnxm1107623 +3_n_morpholino_propanesulfonate +o2_mnxm735438 +h +sulfite +h2o_water
     3_n_morpholino_propanal
   }
 

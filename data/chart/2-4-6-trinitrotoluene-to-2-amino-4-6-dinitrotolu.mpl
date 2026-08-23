@@ -44,14 +44,14 @@ pathway 2-4-6-trinitrotoluene-to-2-amino-4-6-dinitrotolu "2,4,6-trinitrotolueneâ
 
   branch from 2_hydroxylamino_4_6_dinitrotoluene side left {
     2_hydroxylamino_4_6_dinitrotoluene
-    <-> . +4_4_6_6_tetranitro_2_2_azoxytoluene +h2o
-    o2
+    <-> . +4_4_6_6_tetranitro_2_2_azoxytoluene +h2o_water
+    o2_mnxm735438
   }
 
   branch from 2_hydroxylamino_4_6_dinitrotoluene side right {
     2_hydroxylamino_4_6_dinitrotoluene
-    <-> . +h2o +o2
-    4_4_6_6_tetranitro_2_2_azoxytoluene
+    <-> . +h2o_water +o2_mnxm735438
+    4_4_6_6_tetranitro_2_2_azoxytoluene_mnxm1364132
   }
 
   branch from udp_d_glucose side left {

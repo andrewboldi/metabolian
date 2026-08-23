@@ -32,7 +32,7 @@ pathway n-indole-3-acetyl-l-asp-to-hydroxyclavatol-methy "N-(indole-3-acetyl)-L-
 
   branch from n_indole_3_acetyl_l_aspartate side left {
     n_indole_3_acetyl_l_aspartate
-    <-> . +diphosphate +h +amp +indol_3_yl_acetate +atp
+    <-> . +diphosphate +h +amp +indol_3_yl_acetate +atp_mnxm3
     l_aspartate
   }
 

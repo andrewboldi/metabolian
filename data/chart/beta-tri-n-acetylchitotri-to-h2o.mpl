@@ -10,7 +10,7 @@ pathway beta-tri-n-acetylchitotri-to-h2o "beta-tri-N-acetylchitotri… to H2O" {
     beta_tri_n_acetylchitotriose
     <-> ec_3_2_1_14 [3.2.1.14] +h2o
     n_n_diacetylchitobiose
-    <-> ec_3_5_1_105 [3.5.1.105] +h2o -acetate
+    <-> ec_3_5_1_105 [3.5.1.105] +h2o_chebi_15377 -acetate
     n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
     <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -n_acetyl_d_glucosaminyl_1_4_d_glucosaminium -h2o
     atp
@@ -61,7 +61,7 @@ pathway beta-tri-n-acetylchitotri-to-h2o "beta-tri-N-acetylchitotri… to H2O" {
   branch from h2o side right {
     h2o
     <-> . +muscaflavin +h
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_mnxm1368853
   }
 
   branch from h side left {

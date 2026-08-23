@@ -10,9 +10,9 @@ pathway 7-12-dihydroxycholest-4-to-h2o-46632 "7α,12α-dihydroxycholest-4… to 
     dihydroxy_4_cholesten_3_one_7a12a
     <-> . +nadph +hplus -nadp
     dihydroxy_5b_cholestan_3_one_7a12a
-    <-> ec_1_1_1_213 [1.1.1.213] +h +nadph -5beta_cholestane_3alpha_7alpha_12alpha_triol
-    nadp
-    <-> . +h +5beta_cholestane_3alpha_7alpha_12alpha_triol +o2 +nadph -nadp -h2o
+    <-> ec_1_1_1_213 [1.1.1.213] +h +nadph_mnxm738702 -5beta_cholestane_3alpha_7alpha_12alpha_triol
+    nadp_mnxm5
+    <-> . +h +5beta_cholestane_3alpha_7alpha_12alpha_triol +o2 +nadph_mnxm738702 -nadp_mnxm5 -h2o
     5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
   }
 }

@@ -51,7 +51,7 @@ pathway d-arabinose-5-phosphate-to-dehydro-d-arabinono-1 "D-arabinose 5-phosphat
   branch from d_arabinose_5_phosphate side right {
     d_arabinose_5_phosphate
     <-> . +h +adp +atp
-    d_arabinopyranose
+    d_arabinopyranose_chebi_46996
   }
 
   branch from h side left {
@@ -62,8 +62,8 @@ pathway d-arabinose-5-phosphate-to-dehydro-d-arabinono-1 "D-arabinose 5-phosphat
 
   branch from h side right {
     h
-    <-> ec_1_14_13_107 [1.14.13.107] +o2 +nadph +limonene +limonene_1_2_epoxide +h2o
-    nadp
+    <-> ec_1_14_13_107 [1.14.13.107] +o2_mnxm735438 +nadph_mnxm738702 +limonene +limonene_1_2_epoxide +h2o
+    nadp_mnxm5
   }
 
   branch from adp side left {

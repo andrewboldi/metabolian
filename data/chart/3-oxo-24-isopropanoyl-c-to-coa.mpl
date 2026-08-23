@@ -127,7 +127,7 @@ pathway 3-oxo-24-isopropanoyl-c-to-coa "3-oxo-24-(isopropanoyl)-c… to CoA" {
   branch from hydrogencarbonate side left {
     hydrogencarbonate
     <-> ec_6_4_1_5 [6.4.1.5] +trans_geranyl_coa +atp +h +adp +phosphate
-    3_4_methylpent_3_en_1_yl_pent_2_enedioyl_coa
+    3_4_methylpent_3_en_1_yl_pent_2_enedioyl_coa_mnxm1371391
   }
 
   branch from hydrogencarbonate side right {

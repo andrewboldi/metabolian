@@ -15,7 +15,7 @@ pathway 6-o-methyl-dgmp-1-to-di-sulfido-diiron "6-O-methyl dGMP(1−) to di-μ-s
     <-> . +h2o -lactate -hplus
     2_deoxyguanosine_5_monophosphate_1
     <-> ec_1_1_1_436 [1.1.1.436] +lactate +di_sulfido_diiron +nad -pyruvate -nadh
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33737
   }
 
   branch from s_methyl_l_cysteine side left {
@@ -48,14 +48,14 @@ pathway 6-o-methyl-dgmp-1-to-di-sulfido-diiron "6-O-methyl dGMP(1−) to di-μ-s
     n2_1_hydroxy_2_oxopropyl_dgtp
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +di_sulfido_diiron +cholesterol +o2 +hplus +h2o
     25r_cholest_5_ene_3_26_diol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_19_35 [1.14.19.35] +linoleoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
     linolenoyl_containing_glycerolipid
   }
@@ -86,24 +86,24 @@ pathway 6-o-methyl-dgmp-1-to-di-sulfido-diiron "6-O-methyl dGMP(1−) to di-μ-s
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_35 [1.14.19.35] +7z_10z_hexadecadienoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_19_35 [1.14.19.35] +7z_10z_hexadecadienoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     7z_10z_13z_hexadecatrienoyl_containing_glycerol
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_26 [1.14.19.26] +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_19_26 [1.14.19.26] +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     o_s_6z_hexadecenoylpantetheine_4_phosphoryl_seri
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_19_40 [1.14.19.40] +o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1 +di_sulfido_diiron +o2 +hplus +h2o
     o_s_5_hexynoylpantetheine_4_phosphoryl_serine_1
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +calcidiol +di_sulfido_diiron +o2 +hplus +h2o
     23s_23_25_dihydroxycalciol
   }

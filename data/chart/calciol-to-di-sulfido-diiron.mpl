@@ -8,11 +8,11 @@ pathway calciol-to-di-sulfido-diiron "calciol to di-μ-sulfido-diiron" {
 
   spine at 0,0 {
     calciol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     calcidiol
-    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     24r_24_25_dihydroxycalciol
-    <-> ec_1_14_15_18 [1.14.15.18] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_18 [1.14.15.18] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     calcitetrol
   }
 }

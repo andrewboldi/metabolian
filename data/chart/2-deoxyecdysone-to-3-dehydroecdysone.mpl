@@ -10,7 +10,7 @@ pathway 2-deoxyecdysone-to-3-dehydroecdysone "2-deoxyecdysone… to 3-dehydroecd
     2_deoxyecdysone_22_phosphate
     <-> . +h2o -pi
     2_deoxyecdysone
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     ecdysone
     <-> ec_1_1_3_16 [1.1.3.16] +o2 -h2o2
     3_dehydroecdysone

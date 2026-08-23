@@ -12,7 +12,7 @@ pathway desferrioxamine-e-to-diphosphate "desferrioxamine E to diphosphate" {
     atp
     <-> . +diphosphate +h +amp +desferrioxamine_g +h2o -atp
     n_3_carboxypropanoyl_n_hydroxycadaverine
-    <-> ec_6_3_2_64 [6.3.2.64] +atp -amp -ppi -hplus
+    <-> ec_6_3_2_64 [6.3.2.64] +atp_chebi_30616 -amp_chebi_456215 -ppi -hplus
     1_12_dihydroxy_1_6_12_17_tetraazacyclodocosane_2
   }
 

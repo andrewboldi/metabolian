@@ -18,28 +18,159 @@ pathway all-trans-tridecaprenyl-to-nad-44820 "all-trans-tridecaprenyl… to NAD"
     menaquinol_13
   }
 
+  branch from 2_demethylmenaquinol_13 side left {
+    2_demethylmenaquinol_13
+    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
+    2_demethylmenaquinone_13
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +5_methyl_ctp +h2o +hplus
+    5_methyl_cmp
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> . +ttp +h2o +hplus
+    tmp
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +5_end_phopshomethylribonucleoside_1 +sam
+    5_end_bisphopshomethylribonucleoside
+  }
 
+  branch from sah side left {
+    sah
+    <-> . +desmethylnectriapyrone +sam +hplus
+    nectriapyrone
+  }
 
+  branch from h side right {
+    h
+    <-> . +dtdp +100_2 +aquayamycin
+    dtdp_beta_l_rhodinose
+  }
 
+  branch from h side left {
+    h
+    <-> . +dtdp +urdamycin_g +dtdp_beta_l_rhodinose
+    100_2
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadp +h2o_water
+    2_2_dichloroacetaldehyde
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadp +h2o_water
+    1_1_dichloroethylene_epoxide
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +anthracene +o2
+    anthracene_cis_1_2_dihydrodiol
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_3_1_29 [1.3.1.29] +nadh +h +anthracene_cis_1_2_dihydrodiol
+    1_2_anthracenediol
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +7_methyl_gtp +h2o +hplus
+    7_methylguanosine_5_phosphate
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadh_chebi_57945 +hplus +nad_chebi_57540
+    lycopaoctaene
+  }
 
+  branch from sam side right {
+    sam
+    <-> . +5_end_gtp_ribonucleotide_5 +sah
+    5_methyltriphosphate_guanosine_ribonucleotide_4
+  }
 
+  branch from sam side left {
+    sam
+    <-> . +malonyl-coa +acetyl_coa +nadph_chebi_57783 +hplus +sah +co2 +nadp_chebi_58349 +coa +h2o
+    desmethylnectriapyrone
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +ribonucleotide +sam +hplus
+    2_o_methylribonucleotide_1
+  }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_41 [2.1.1.41] +cycloartenol +sam +hplus
+    24_methylenecycloartanol
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +h2o_water
+    chloroacetyl_chloride
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +trichloroethene +h +o2 +nadph +h2o_water
+    trichloroacetaldehyde
+  }
 
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +tetracenomycin_b2 +tetracenomycin_b3
+    s_adenosyl_l_methionine
+  }
 
+  branch from h side left {
+    h
+    <-> . +anatabine +co2_mnxm13 +3_6_dihydropyridine
+    nicotinate
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +nadp +2_bromoacetaldehyde +bromide +h2o_water +o2
+    1_2_dibromoethane
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_99_31 [1.14.99.31] +tetradecanoyl_coa +h +o2 +nadp +h2o_water
+    trans_tetradec_11_enoyl_coa
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> . +9h_fluoren_9_one +h +o2 +nad
+    1_10_dihydro_1_10_dihydroxyfluoren_9_one
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> . +h +o2 +1_7_dimethylxanthine +formaldehyde +nad +h2o_water
+    1_methyl_7h_xanthine
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_178 [1.14.13.178] +nadh +1_methyl_7h_xanthine +h +o2 +xanthine +h2o_water
+    formaldehyde
+  }
 }

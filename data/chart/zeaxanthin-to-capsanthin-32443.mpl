@@ -8,7 +8,7 @@ pathway zeaxanthin-to-capsanthin-32443 "zeaxanthin to capsanthin" {
 
   spine at 0,0 {
     zeaxanthin
-    <-> ec_1_14_15_21 [1.14.15.21] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_21 [1.14.15.21] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     all_trans_violaxanthin
     <-> . +ascorbate -l_dehydroascorbate -h2o
     antheraxanthin

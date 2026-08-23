@@ -18,13 +18,13 @@ pathway 4s-limonene-to-nad-26085 "(4S)-limonene to NAD" {
     7_hydroxy_4_isopropenyl_7_methyloxepan_2_one
     <-> . -hplus
     3_isopropenyl_6_oxoheptanoate
-    <-> ec_1_14_13_105 [1.14.13.105] +nadp +h2o -o2 -nadph
+    <-> ec_1_14_13_105 [1.14.13.105] +nadp_mnxm5 +h2o_water -o2_mnxm735438 -nadph_mnxm738702
     1r_4s_1_hydroxylimonen_2_one
     <-> ec_1_14_13_105 [1.14.13.105] +nadph +o2 +hplus -nadp -h2o
     4s_7s_7_hydroxy_4_isopropenyl_7_methyloxepan_2
     <-> ec_1_14_13_105 [1.14.13.105] -hplus
     3s_3_isopropenyl_6_oxoheptanoate
-    <-> . +nadh +h -nad
+    <-> . +nadh_mnxm10 +h -nad_mnxm8
     3s_6r_6_hydroxy_3_isopropenylheptanoate
   }
 

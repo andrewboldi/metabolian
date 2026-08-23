@@ -10,9 +10,9 @@ pathway 19-hydroxyandrostenedione-to-4-hydroxyestrone-nu "19-Hydroxyandrostenedi
     19_hydroxyandrostenedione
     <-> . +o2 -3_17_dioxoandrost_4_en_19_al
     h2o2
-    <-> . +3_17_dioxoandrost_4_en_19_al +fmnh2 +o2 -formate -fmn -h2o -hplus
+    <-> . +3_17_dioxoandrost_4_en_19_al +fmnh2 +o2_chebi_15379 -formate -fmn -h2o -hplus
     estrone
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o -hplus
     4_hydroxyestrone
     <-> . +udp_d_glucuronate -udp -hplus
     4_hydroxyestrone_3_o_d_glucuronide
@@ -26,7 +26,7 @@ pathway 19-hydroxyandrostenedione-to-4-hydroxyestrone-nu "19-Hydroxyandrostenedi
 
   branch from 4_hydroxyestrone side right {
     4_hydroxyestrone
-    <-> . +o2 +hplus
+    <-> . +o2_chebi_15379 +hplus
     2z_10z_3_hydroxy_5_17_dioxo_4_5_secoestra_2_10
   }
 

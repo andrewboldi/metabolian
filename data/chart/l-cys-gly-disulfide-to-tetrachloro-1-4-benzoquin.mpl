@@ -39,6 +39,6 @@ pathway l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin "L-Cys-Gly disulfide…
   branch from 2_3_6_trichloro_4_hydroxyphenolate side right {
     2_3_6_trichloro_4_hydroxyphenolate
     <-> ec_2_5_1_18 [2.5.1.18] +glutathione +2_6_dichloro_3_glutathion_s_yl_hydroquinone
-    chloride
+    chloride_mnxm735978
   }
 }

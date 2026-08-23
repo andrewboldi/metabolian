@@ -55,7 +55,7 @@ pathway 3-hydroxysebacic-acid-to-hydrogen-donor-null "3-hydroxysebacic acid to h
   branch from coa side left {
     coa
     <-> . +h +2_hydroxycyclohepta_1_4_6_triene_1_carboxyl_coa +h2o
-    2_hydroxycyclohepta_1_4_6_triene_1_carboxylate
+    2_hydroxycyclohepta_1_4_6_triene_1_carboxylate_mnxm1368253
   }
 
   branch from coa side right {
@@ -85,7 +85,7 @@ pathway 3-hydroxysebacic-acid-to-hydrogen-donor-null "3-hydroxysebacic acid to h
   branch from h2o side right {
     h2o
     <-> . +4_methoxyglucobrassicin +glucose +h
-    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone_mnxm1363461
   }
 
   branch from h2o2 side left {
@@ -103,7 +103,7 @@ pathway 3-hydroxysebacic-acid-to-hydrogen-donor-null "3-hydroxysebacic acid to h
   branch from o2 side left {
     o2
     <-> . +3_methyl_4_nitrocatechol +h
-    2_hydroxy_5_nitro_6_oxohepta_2_4_dienoate
+    2_hydroxy_5_nitro_6_oxohepta_2_4_dienoate_mnxm1372618
   }
 
   branch from o2 side right {

@@ -18,7 +18,7 @@ pathway 7z-10z-13z-16z-docosate-to-3-s-hydroxy-docosa-7 "(7Z,10Z,13Z,16Z)-docosa
     3e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
     <-> .
     2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-    <-> . +h2o
+    <-> . +h2o_water
     3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
   }
 }

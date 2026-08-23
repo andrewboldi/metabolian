@@ -67,7 +67,7 @@ pathway udp-to-coa-null "UDP to CoA" {
   branch from h side right {
     h
     <-> . +isovitexin_8_c_glucoside +h2o
-    3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm
+    3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm_mnxm1372350
   }
 
   branch from co2 side left {
@@ -85,7 +85,7 @@ pathway udp-to-coa-null "UDP to CoA" {
   branch from coa side left {
     coa
     <-> . +4_hydroxy_6_2_oxoheptyl_pyran_2_one
-    3_5_7_trioxododecanoyl_coa
+    3_5_7_trioxododecanoyl_coa_mnxm1372581
   }
 
   branch from coa side right {
@@ -97,7 +97,7 @@ pathway udp-to-coa-null "UDP to CoA" {
   branch from h2o side left {
     h2o
     <-> ec_3_2_1_147 [3.2.1.147] +sinalbin +glucose
-    e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth
+    e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth_mnxm1372351
   }
 
   branch from h2o side right {

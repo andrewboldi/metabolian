@@ -10,7 +10,7 @@ pathway 2z-6e-farnesol-to-fmn "(2Z,6E)-farnesol to FMN" {
     2z_6e_farnesol
     <-> ec_1_1_1_71 [1.1.1.71] +nadp -nadph -11r_dihydroartemisinic_aldehyde
     h
-    <-> ec_1_3_1_92 [1.3.1.92] +11r_dihydroartemisinic_aldehyde +nadp -nadph -hplus
+    <-> ec_1_3_1_92 [1.3.1.92] +11r_dihydroartemisinic_aldehyde +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     artemisinic_aldehyde
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     artemisinate

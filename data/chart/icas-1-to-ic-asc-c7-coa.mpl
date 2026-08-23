@@ -13,6 +13,6 @@ pathway icas-1-to-ic-asc-c7-coa "icas#1 to IC-asc-ΔC7-CoA" {
     <-> . +coa -amp -hplus
     ic_asc_c7_coa
     <-> . +o2 -h2o2
-    ic_asc_c7_coa
+    ic_asc_c7_coa_chebi_166977
   }
 }

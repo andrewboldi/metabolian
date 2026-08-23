@@ -30,13 +30,13 @@ pathway 3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop "3,3'-diiodo-L-thyronin
 
   branch from 3_3_diiodo_l_thyronine side left {
     3_3_diiodo_l_thyronine
-    <-> . +3_3_5_triiodo_l_thyronine +nadph +nadp
-    iodide
+    <-> . +3_3_5_triiodo_l_thyronine_mnxm1013 +nadph +nadp
+    iodide_mnxm1371248
   }
 
   branch from 3_3_diiodo_l_thyronine side right {
     3_3_diiodo_l_thyronine
-    <-> . +3_3_5_triiodo_l_thyronine +nadph +iodide
+    <-> . +3_3_5_triiodo_l_thyronine_chebi_11684 +nadph +iodide_mnxm1371248
     nadp
   }
 

@@ -26,7 +26,7 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph-null "(1S,2R,5S,7S,8R,9R,11S,12… to 
 
   branch from nadp side right {
     nadp
-    <-> . +3_5_7_9_11_13_15_17_19_nonaoxohenicosanoate +h +o2 +nadph +co2 +h2o
+    <-> . +3_5_7_9_11_13_15_17_19_nonaoxohenicosanoate_mnxm1368576 +h +o2 +nadph +co2 +h2o
     homo_uwm6
   }
 
@@ -39,7 +39,7 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph-null "(1S,2R,5S,7S,8R,9R,11S,12… to 
   branch from h2o side right {
     h2o
     <-> . +h +6_carboxyhexanoyl_coa
-    2_oxocyclohexane_1_carbonyl_coa
+    2_oxocyclohexane_1_carbonyl_coa_mnxm1371925
   }
 
   branch from diphosphate side left {
@@ -75,7 +75,7 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph-null "(1S,2R,5S,7S,8R,9R,11S,12… to 
   branch from o2 side right {
     o2
     <-> . +h +3_4_dihydroxyfluorene
-    2_hydroxy_4_1_oxo_1_3_dihydro_2h_inden_2_ylidene
+    2_hydroxy_4_1_oxo_1_3_dihydro_2h_inden_2_ylidene_mnxm1371593
   }
 
   branch from nadph side left {
@@ -86,8 +86,8 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph-null "(1S,2R,5S,7S,8R,9R,11S,12… to 
 
   branch from nadph side right {
     nadph
-    <-> . +tirandamycin_f +h +o2 +nadp +h2o
-    tirandamycin_e
+    <-> . +tirandamycin_f_mnxm1368545 +h +o2 +nadp +h2o
+    tirandamycin_e_mnxm1368607
   }
 
   branch from h side left {
@@ -105,13 +105,13 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph-null "(1S,2R,5S,7S,8R,9R,11S,12… to 
   branch from o2 side left {
     o2
     <-> . +1_2_dihydroxyfluorene
-    2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene
+    2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene_mnxm1371588
   }
 
   branch from o2 side right {
     o2
     <-> ec_1_13_11_16 [1.13.11.16] +3_ethylcatechol
-    2_hydroxy_6_oxo_octa_2_4_dienoate
+    2_hydroxy_6_oxo_octa_2_4_dienoate_chebi_1139
   }
 
   branch from nadph side left {
@@ -123,7 +123,7 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph-null "(1S,2R,5S,7S,8R,9R,11S,12… to 
   branch from nadph side right {
     nadph
     <-> . +nadp +h2o +tirandamycin_c +o2
-    tirandamycin_f
+    tirandamycin_f_mnxm1368545
   }
 
   branch from nadp side left {

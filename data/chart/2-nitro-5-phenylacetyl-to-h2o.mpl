@@ -109,7 +109,7 @@ pathway 2-nitro-5-phenylacetyl-to-h2o "2-Nitro-5-[(Phenylacetyl)… to H2O" {
   branch from nadp side right {
     nadp
     <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nadph
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_mnxm1368853
   }
 
   branch from adp side left {

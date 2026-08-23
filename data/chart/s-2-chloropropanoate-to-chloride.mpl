@@ -60,19 +60,19 @@ pathway s-2-chloropropanoate-to-chloride "(S)-2-chloropropanoate to chloride" {
 
   branch from h2o side right {
     h2o
-    <-> ec_1_4_1_12 [1.4.1.12] +h +2_amino_5_oxohexanoate +nh4 +nadph +nadp
+    <-> ec_1_4_1_12 [1.4.1.12] +h +2_amino_5_oxohexanoate +nh4 +nadph_mnxm738702 +nadp_mnxm5
     2r_5s_2_5_diaminohexanoate
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_62 [1.1.1.62] +16alpha_hydroxyestrone +nadph +nadp
+    <-> ec_1_1_1_62 [1.1.1.62] +16alpha_hydroxyestrone +nadph_mnxm738702 +nadp_mnxm5
     16alpha_17beta_estriol
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_146 [1.1.1.146] +adrenosterone +nadph +nadp
+    <-> ec_1_1_1_146 [1.1.1.146] +adrenosterone +nadph_mnxm738702 +nadp_mnxm5
     11beta_hydroxyandrost_4_ene_3_17_dione
   }
 

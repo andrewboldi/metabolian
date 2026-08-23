@@ -13,11 +13,11 @@ pathway n-oleoyltaurine-to-taurine-63148 "N-oleoyltaurine to taurine" {
     <-> ec_1_14_11_17 [1.14.11.17] +akg +o2 -sulfite -succinate -co2 -hplus
     ammonioacetaldehyde
     <-> . +tetra_3_sulfido_tetrairon +h2o -glycine -hplus
-    tetra_3_sulfido_tetrairon
+    tetra_3_sulfido_tetrairon_chebi_33723
     <-> ec_1_18_1_2 [1.18.1.2] +nadp +hplus -nadph
     tetra_3_sulfido_tetrairon
     <-> . +taurine +h2o -sulfite -glycine -hplus
-    tetra_3_sulfido_tetrairon
+    tetra_3_sulfido_tetrairon_chebi_33723
     <-> ec_2_5_1_76 [2.5.1.76] +pser +sulfite +hplus -pi
     l_cysteate
     <-> ec_4_1_1_29 [4.1.1.29] +hplus -co2

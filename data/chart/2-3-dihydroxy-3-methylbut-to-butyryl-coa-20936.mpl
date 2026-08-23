@@ -10,7 +10,7 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa-20936 "2,3-dihydroxy-3-methylbu
     2_3_dihydroxy_3_methylbutanoate
     <-> . -h2o
     kiv
-    <-> ec_1_2_7_7 [1.2.7.7] +di_sulfido_diiron +coa -di_sulfido_diiron -co2 -hplus
+    <-> ec_1_2_7_7 [1.2.7.7] +di_sulfido_diiron +coa -di_sulfido_diiron_chebi_33738 -co2 -hplus
     isobutyryl_coa
     <-> ec_5_4_99_13 [5.4.99.13]
     butyryl_coa
@@ -40,14 +40,14 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa-20936 "2,3-dihydroxy-3-methylbu
     2_isobutyrylphloroglucinol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> . +pentalen_13_ol +o2 +hplus +di_sulfido_diiron +h2o
     pentalen_13_al
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_15_15 [1.14.15.15] +triol_ca +o2 +hplus +di_sulfido_diiron +h2o
     25r_3_7_12_trihydroxy_5_cholestan_26_oate
   }
@@ -78,13 +78,13 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa-20936 "2,3-dihydroxy-3-methylbu
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +di_sulfido_diiron +o2 +hplus +h2o
+    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +di_sulfido_diiron_chebi_33738 +o2 +hplus +h2o
     pulcherriminate
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_6 [1.14.15.6] +di_sulfido_diiron +cholesterol +o2 +hplus +pregnenolone +h2o
+    <-> ec_1_14_15_6 [1.14.15.6] +di_sulfido_diiron_chebi_33738 +cholesterol +o2 +hplus +pregnenolone +h2o
     4_methylpentanal
   }
 
@@ -94,14 +94,14 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa-20936 "2,3-dihydroxy-3-methylbu
     n6_isobutyryl_l_lysine
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +o2 +hplus +di_sulfido_diiron +h2o
     pikromycin
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_15_35 [1.14.15.35] +6_deoxyerythronolide_b +o2 +hplus +di_sulfido_diiron +h2o
     erythronolide_b
   }

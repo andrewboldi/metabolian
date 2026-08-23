@@ -18,7 +18,7 @@ pathway 1r-6r-2-3-carboxylatop-to-cyclic-dehypoxanthiny "(1R,6R)-2-(3-carboxylat
     1_4_dihydroxy_2_naphthoate
     <-> ec_2_5_1_74 [2.5.1.74] +all_trans_hexaprenyl_diphosphate +hplus -co2 -ppi
     2_demethylmenaquinol_6
-    <-> . +diphosphate +co2 -1_4_dihydroxy_6_naphthoate -all_trans_hexaprenyl_diphosphate
+    <-> . +diphosphate +co2_mnxm13 -1_4_dihydroxy_6_naphthoate -all_trans_hexaprenyl_diphosphate_mnxm726465
     h
     <-> . +d_glyceraldehyde +1_4_dihydroxy_6_naphthoate
     cyclic_dehypoxanthinylfutalosinate

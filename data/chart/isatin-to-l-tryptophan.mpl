@@ -12,11 +12,11 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
     2_aminophenylglyoxylate
     <-> ec_4_1_1_7 [4.1.1.7] +h -o_aminobenzaldehyde
     co2
-    <-> . +nadh +o_aminobenzaldehyde +o2 -nad -h2o
+    <-> . +nadh +o_aminobenzaldehyde +o2 -nad -h2o_water
     anthranilate
-    <-> ec_3_5_1_9 [3.5.1.9] +h +formate -h2o
+    <-> ec_3_5_1_9 [3.5.1.9] +h +formate -h2o_water
     n_formylanthranilate
-    <-> ec_3_7_1_3 [3.7.1.3] +l_alanine +h -h2o
+    <-> ec_3_7_1_3 [3.7.1.3] +l_alanine +h -h2o_water
     n_formylkynurenine
     <-> ec_1_13_11_11 [1.13.11.11] -l_tryptophan
     o2
@@ -36,19 +36,19 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
 
   branch from o_aminobenzaldehyde side left {
     o_aminobenzaldehyde
-    <-> . +h +formate +h2o
+    <-> . +h +formate +h2o_water
     2_formamidobenzaldehyde
   }
 
   branch from o_aminobenzaldehyde side right {
     o_aminobenzaldehyde
-    <-> . +h +o2 +nadph +nadp +h2o
+    <-> . +h +o2 +nadph +nadp +h2o_water
     2_1_benzoxazole
   }
 
   branch from anthranilate side left {
     anthranilate
-    <-> . +asperlicin_d +diphosphate +h +amp +h2o +l_tryptophan
+    <-> . +asperlicin_d +diphosphate +h +amp +h2o_water +l_tryptophan
     atp
   }
 
@@ -70,14 +70,14 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
     1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +nadh +h +1_naphthoate +nad
     1_naphthaldehyde
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +nadh +h +2_methylnaphthalene +o2 +nad
     2_naphthyl_methanol
   }
@@ -96,7 +96,7 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
 
   branch from n_formylkynurenine side left {
     n_formylkynurenine
-    <-> ec_3_5_1_9 [3.5.1.9] +h +formate +h2o
+    <-> ec_3_5_1_9 [3.5.1.9] +h +formate +h2o_water
     l_kynurenine
   }
 
@@ -168,7 +168,7 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_15_3 [1.14.15.3] +nadh +h +cyclohexane +nad +h2o
+    <-> ec_1_14_15_3 [1.14.15.3] +nadh +h +cyclohexane +nad +h2o_water
     cyclohexanol
   }
 

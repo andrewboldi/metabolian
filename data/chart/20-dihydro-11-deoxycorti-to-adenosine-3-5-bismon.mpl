@@ -10,7 +10,7 @@ pathway 20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon "20β-dihydro-11-deoxyc
     20_dihydro_11_deoxycortisol
     <-> . +nad -nadh -hplus
     11_deoxycortisol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     cortisol
     <-> ec_2_8_2_18 [2.8.2.18] +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
     cortisol_21_sulfate
@@ -67,7 +67,7 @@ pathway 20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon "20β-dihydro-11-deoxyc
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
     <-> . +5_androstane_3_17_diol_11_one_17_carboxylate_3_o +3_phosphonato_5_adenylyl_sulfate +hplus
-    5_androstane_3_17_diol_11_one_17_carboxylate_3_o
+    5_androstane_3_17_diol_11_one_17_carboxylate_3_o_chebi_178108
   }
 
   branch from adenosine_3_5_bismonophosphate side right {

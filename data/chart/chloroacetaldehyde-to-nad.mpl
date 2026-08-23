@@ -91,7 +91,7 @@ pathway chloroacetaldehyde-to-nad "chloroacetaldehyde to NAD" {
   branch from nad side left {
     nad
     <-> . +nadh +didemethylasterriquinone_d +h
-    hydrodidemethylasterriquinone_d
+    hydrodidemethylasterriquinone_d_mnxm1363713
   }
 
   branch from nad side right {

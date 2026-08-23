@@ -10,22 +10,22 @@ pathway demethylspheroidene-to-hydroxyspheroidenone-3090 "demethylspheroidene to
     demethylspheroidene
     <-> ec_2_1_1_210 [2.1.1.210] +sam -sah -hplus
     spheroidene
-    <-> ec_1_14_15_9 [1.14.15.9] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_9 [1.14.15.9] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     spheroiden_2_one
-    <-> ec_4_2_1_131 [4.2.1.131] +h2o
+    <-> ec_4_2_1_131 [4.2.1.131] +h2o_water
     hydroxyspheroidenone
   }
 
   branch from spheroidene side left {
     spheroidene
-    <-> ec_4_2_1_131 [4.2.1.131] +h2o
+    <-> ec_4_2_1_131 [4.2.1.131] +h2o_water
     hydroxyspheroidene
   }
 
   branch from spheroidene side right {
     spheroidene
-    <-> . +spheroiden_2_one +h2o
-    o2
+    <-> . +spheroiden_2_one +h2o_water
+    o2_mnxm735438
   }
 
   branch from sah side left {
@@ -40,14 +40,14 @@ pathway demethylspheroidene-to-hydroxyspheroidenone-3090 "demethylspheroidene to
     guanosine_5_monophosphate_1
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +pheophorbide_a +di_sulfido_diiron +o2 +hplus +h2o
     epoxypheophorbide_a
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_3_7_14 [1.3.7.14] +bacteriochlorophyllide_g +adp +pi +di_sulfido_diiron +atp +h2o +hplus
     divinyl_chlorophyllide_a
   }
@@ -72,7 +72,7 @@ pathway demethylspheroidene-to-hydroxyspheroidenone-3090 "demethylspheroidene to
 
   branch from spheroidene side right {
     spheroidene
-    <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +demethylspheroidene
+    <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +demethylspheroidene_mnxm1371489
     s_adenosyl_l_methionine
   }
 
@@ -90,36 +90,36 @@ pathway demethylspheroidene-to-hydroxyspheroidenone-3090 "demethylspheroidene to
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_3_7_15 [1.3.7.15] +bacteriochlorophyllide_a +di_sulfido_diiron +adp +pi +atp +h2o +hplus
+    <-> ec_1_3_7_15 [1.3.7.15] +bacteriochlorophyllide_a +di_sulfido_diiron_chebi_33737 +adp +pi +atp +h2o +hplus
     3_acetylchlorophyllide_a
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +25_hydroxy_24_oxocalciol +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +25_hydroxy_24_oxocalciol +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     1s_1_25_dihydroxy_24_oxocalciol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_4_2_1_164 [4.2.1.164] +dtdp_4_dehydro_2_6_dideoxy_d_glucose +di_sulfido_diiron +hplus +h2o
     dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +24r_24_25_dihydroxycalciol +di_sulfido_diiron +o2 +hplus +h2o
     25_hydroxy_24_oxocalciol
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +5_s_6_s_epoxy_15_r_hepe
     15_epi_lipoxin_a5
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +18_coa_18_oxo_dinorleukotriene_b4 +coa
     omega_carboxy_trinor_leukotriene_b4
   }

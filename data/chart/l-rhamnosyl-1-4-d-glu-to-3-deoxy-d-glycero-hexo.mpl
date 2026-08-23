@@ -36,7 +36,7 @@ pathway l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo "α-L-rhamnosyl-(1→4)-
 
   branch from 5_dehydro_4_deoxy_d_glucuronate side right {
     5_dehydro_4_deoxy_d_glucuronate
-    <-> ec_3_2_1_179 [3.2.1.179] +d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp +h2o
+    <-> ec_3_2_1_179 [3.2.1.179] +d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp +h2o_chebi_15377
     d_glcp_1_4_l_rhap_1_3_d_glcp
   }
 
@@ -54,13 +54,13 @@ pathway l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo "α-L-rhamnosyl-(1→4)-
 
   branch from 5_dehydro_4_deoxy_d_glucuronate side left {
     5_dehydro_4_deoxy_d_glucuronate
-    <-> ec_3_2_1_180 [3.2.1.180] +d_4_deoxy_4_glcpa_1_3_d_galpnac6s +h2o
+    <-> ec_3_2_1_180 [3.2.1.180] +d_4_deoxy_4_glcpa_1_3_d_galpnac6s +h2o_chebi_15377
     n_acetyl_d_galactosamine_6_sulfate
   }
 
   branch from 5_dehydro_4_deoxy_d_glucuronate side right {
     5_dehydro_4_deoxy_d_glucuronate
-    <-> ec_3_2_1_179 [3.2.1.179] +d_4_deoxy_4_glcpa_1_3_d_galpnac +h2o
-    n_acetyl_d_galactosamine
+    <-> ec_3_2_1_179 [3.2.1.179] +d_4_deoxy_4_glcpa_1_3_d_galpnac +h2o_chebi_15377
+    n_acetyl_d_galactosamine_chebi_28497
   }
 }

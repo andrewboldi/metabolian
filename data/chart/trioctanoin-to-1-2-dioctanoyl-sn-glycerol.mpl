@@ -20,7 +20,7 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl
 
   branch from 1_2_dioctanoyl_sn_glycerol side left {
     1_2_dioctanoyl_sn_glycerol
-    <-> ec_2_7_1_107 [2.7.1.107] +atp +adp +1_2_dioctanoyl_sn_glycero_3_phosphate
+    <-> ec_2_7_1_107 [2.7.1.107] +atp +adp +1_2_dioctanoyl_sn_glycero_3_phosphate_mnxm67267
     h
   }
 
@@ -56,7 +56,7 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl
 
   branch from octanoate side left {
     octanoate
-    <-> ec_3_5_1_23 [3.5.1.23] +n_octanoyldihydrosphingosine +h2o
+    <-> ec_3_5_1_23 [3.5.1.23] +n_octanoyldihydrosphingosine +h2o_water
     sphinganine
   }
 

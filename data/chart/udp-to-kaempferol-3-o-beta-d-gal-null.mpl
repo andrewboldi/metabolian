@@ -164,7 +164,7 @@ pathway udp-to-kaempferol-3-o-beta-d-gal-null "UDP to kaempferol 3-O-beta-D-galâ
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_156 [2.4.1.156] +udp +h +5_o_indol_3_ylacetyl_myo_inositol_d_galactoside
+    <-> ec_2_4_1_156 [2.4.1.156] +udp +h +5_o_indol_3_ylacetyl_myo_inositol_d_galactoside_mnxm735228
     indole_3_acetyl_myo_inositol
   }
 

@@ -133,7 +133,7 @@ pathway 2-dehydro-d-glucose-to-h2o-null "2-Dehydro-D-glucose to H2O" {
   branch from l_ascorbate side right {
     l_ascorbate
     <-> ec_7_2_1_3 [7.2.1.3] +monodehydro_l_ascorbate_radical +fe +h
-    fe
+    fe_mnxm1370984
   }
 
   branch from na side left {

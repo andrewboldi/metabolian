@@ -134,7 +134,7 @@ pathway 3-methylpyrrole-2-4-dicar-to-novobiocic-acid "3-Methylpyrrole-2,4-dicarâ
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> ec_2_1_1_114 [2.1.1.114] +h +3_polyprenyl_4_hydroxy_5_methoxybenzoate +s_adenosyl_l_methionine
+    <-> ec_2_1_1_114 [2.1.1.114] +h +3_polyprenyl_4_hydroxy_5_methoxybenzoate_mnxm737011 +s_adenosyl_l_methionine
     3_polyprenyl_4_5_dihydroxybenzoate
   }
 

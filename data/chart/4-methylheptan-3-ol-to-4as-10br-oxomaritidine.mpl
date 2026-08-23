@@ -16,11 +16,11 @@ pathway 4-methylheptan-3-ol-to-4as-10br-oxomaritidine "4-Methylheptan-3-ol to (4
     vanillin
     <-> . +s_adenosyl_l_homocysteine +h -3_4_dihydroxybenzaldehyde
     s_adenosyl_l_methionine
-    <-> . +3_4_dihydroxybenzaldehyde +tyraminium +hydrogen_donor -hydrogen_acceptor -h2o
+    <-> . +3_4_dihydroxybenzaldehyde +tyraminium +hydrogen_donor -hydrogen_acceptor -h2o_chebi_15377
     norbelladine
     <-> ec_2_1_1_336 [2.1.1.336] +sam -sah -hplus
     4_o_methylnorbelladine
-    <-> ec_1_14_19_50 [1.14.19.50] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_19_50 [1.14.19.50] +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     4as_10br_noroxomaritidine
     <-> . +nadph +hplus -nadp
     4as_10br_oxomaritidine

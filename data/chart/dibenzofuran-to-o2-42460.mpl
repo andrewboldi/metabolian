@@ -14,9 +14,9 @@ pathway dibenzofuran-to-o2-42460 "dibenzofuran to O2" {
     2_hydroxy_6_2_oxidophenyl_6_oxo_cis_cis_hexa_2_4
     <-> ec_3_7_1_8 [3.7.1.8] +h2o -salicylate
     2_oxopent_4_enoate
-    <-> . +h +butanoate -h2o
+    <-> . +h +butanoate -h2o_water
     2z_4z_2_hydroxy_6_oxonona_2_4_dienoic_acid
-    <-> . +h -o2
+    <-> . +h -o2_mnxm735438
     3_propylcatechol
   }
 
@@ -34,18 +34,18 @@ pathway dibenzofuran-to-o2-42460 "dibenzofuran to O2" {
 
   branch from 2z_4z_2_hydroxy_6_oxonona_2_4_dienoic_acid side left {
     2z_4z_2_hydroxy_6_oxonona_2_4_dienoic_acid
-    <-> . +h +butanoate +h2o
+    <-> . +h +butanoate +h2o_water
     2_keto_4_pentenoate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +tetrangulol
     tetrangomycin
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +urdamycinone_f
     aquayamycin
   }
@@ -58,18 +58,18 @@ pathway dibenzofuran-to-o2-42460 "dibenzofuran to O2" {
 
   branch from 3_propylcatechol side left {
     3_propylcatechol
-    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
+    <-> ec_1_13_11_16 [1.13.11.16] +h +o2_mnxm735438
     2_hydroxy_6_oxo_nona_2_4_dienoate
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +2_oxoglutarate +h +gibberellin_a24 +succinate +gibberellin_a36
     co2
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +amyrin
     soyasapogenol_b
   }
@@ -88,43 +88,43 @@ pathway dibenzofuran-to-o2-42460 "dibenzofuran to O2" {
 
   branch from butanoate side right {
     butanoate
-    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone +h2o
+    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone +h2o_water
     a_s_butyr_amido_r_butyrolactone
   }
 
   branch from butanoate side left {
     butanoate
-    <-> ec_3_1_1_1 [3.1.1.1] +tributyrin +h2o +h
+    <-> ec_3_1_1_1 [3.1.1.1] +tributyrin +h2o_water +h
     2s_3_hydroxy_1_2_propanediyl_dibutanoate
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +dihydrokalafungin +o2
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +dihydrokalafungin +o2_mnxm735438
     5_deoxodihydrokalafungin
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_1_1_45 [3.1.1.45] +2e_2_5_dichloro_4_oxo_2_hexenedioic_acid
     2_5_dichloro_carboxymethylenebut_2_en_4_olide
   }
 
   branch from 3_propylcatechol side right {
     3_propylcatechol
-    <-> . +h +o2
-    2_hydroxy_6_oxo_nona_2_4_dienoate
+    <-> . +h +o2_mnxm735438
+    2_hydroxy_6_oxo_nona_2_4_dienoate_mnxm1368673
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +1_2_4_trichlorobenzene +nad
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh_mnxm10 +h +1_2_4_trichlorobenzene +nad_mnxm8
     1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +nadh +h +bisphenol_a +nad +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +nadh_mnxm10 +h +bisphenol_a +nad_mnxm8 +h2o_water
     1_2_bis_4_hydroxyphenyl_propan_2_ol
   }
 }

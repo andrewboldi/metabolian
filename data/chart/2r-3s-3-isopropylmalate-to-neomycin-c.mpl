@@ -75,7 +75,7 @@ pathway 2r-3s-3-isopropylmalate-to-neomycin-c "(2R,3S)-3-isopropylmalate to neom
   branch from deoxyhumulone side right {
     deoxyhumulone
     <-> . +2e_geranyl_diphosphate +dimethylallyl_diphosphate +diphosphate +h
-    adhyperforin
+    adhyperforin_mnxm1372614
   }
 
   branch from anthranilate side left {
@@ -92,8 +92,8 @@ pathway 2r-3s-3-isopropylmalate-to-neomycin-c "(2R,3S)-3-isopropylmalate to neom
 
   branch from 5_phosphoribostamycin side left {
     5_phosphoribostamycin
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from ribostamycin side right {
@@ -104,13 +104,13 @@ pathway 2r-3s-3-isopropylmalate-to-neomycin-c "(2R,3S)-3-isopropylmalate to neom
 
   branch from 2_acetyl_6_hydroxyneomycin_c side left {
     2_acetyl_6_hydroxyneomycin_c
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp_mnxm3
+    h2o_water
   }
 
   branch from 6_hydroxyneomycin_c side right {
     6_hydroxyneomycin_c
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp_mnxm3 +h2o_water
     h
   }
 
@@ -129,12 +129,12 @@ pathway 2r-3s-3-isopropylmalate-to-neomycin-c "(2R,3S)-3-isopropylmalate to neom
   branch from 6_oxoneomycin_c side left {
     6_oxoneomycin_c
     <-> ec_2_6_1_95 [2.6.1.95] +akg +glutamate
-    neomycin_c
+    neomycin_c_chebi_65077
   }
 
   branch from 6_oxoneomycin_c side right {
     6_oxoneomycin_c
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp_mnxm3 +h2o_water
     adp
   }
 
@@ -158,7 +158,7 @@ pathway 2r-3s-3-isopropylmalate-to-neomycin-c "(2R,3S)-3-isopropylmalate to neom
 
   branch from neomycin_c side right {
     neomycin_c
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp_mnxm3 +h2o_water
     phosphate
   }
 

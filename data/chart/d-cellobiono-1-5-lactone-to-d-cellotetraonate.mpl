@@ -14,9 +14,9 @@ pathway d-cellobiono-1-5-lactone-to-d-cellotetraonate "D-cellobiono-1,5-lactone 
     cellotriose
     <-> ec_3_2_1_74 [3.2.1.74] +glucose -h2o
     cellotetraose
-    <-> . +o2 -h2o2
+    <-> . +o2_chebi_15379 -h2o2_chebi_16240
     d_cellotetraono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_cellotetraonate
   }
 }

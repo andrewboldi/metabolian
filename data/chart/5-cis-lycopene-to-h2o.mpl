@@ -10,13 +10,13 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
     5_cis_lycopene
     <-> . +o2 -pseudoionone
     5_cis_10_apo_lycopenal
-    <-> . +8_10_diapocarotene_8_10_dial +2e_geranial +pseudoionone -o2
+    <-> . +8_10_diapocarotene_8_10_dial +2e_geranial +pseudoionone -o2_mnxm735438
     all_trans_lycopene
-    <-> . +o2 -pseudoionone
+    <-> . +o2_mnxm735438 -pseudoionone
     4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
-    <-> ec_1_13_11_71 [1.13.11.71] +3_hydroxy_9_apo_delta_caroten_9_one +3r_hydroxy_ionone -o2
+    <-> ec_1_13_11_71 [1.13.11.71] +3_hydroxy_9_apo_delta_caroten_9_one +3r_hydroxy_ionone -o2_mnxm735438
     lutein
-    <-> . +h +o2 +nadph -loroxanthin -h2o
+    <-> . +h +o2_mnxm735438 +nadph -loroxanthin -h2o
     nadp
   }
 
@@ -32,14 +32,14 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
     all_trans_beta_carotene
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +dimeric_urushiol_peroxide +h2o
     3_8z_11e_13z_pentadeca_8_11_13_trien_1_yl_catech
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +8_methyltetraphene_1_5_6_11_12_pentol +h2o2
     dehydrorabelomycin
   }
@@ -52,7 +52,7 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
 
   branch from lutein side right {
     lutein
-    <-> . +nadp +h2o +h +o2 +nadph
+    <-> . +nadp +h2o +h +o2_mnxm735438 +nadph
     alpha_cryptoxanthin
   }
 
@@ -64,7 +64,7 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> . +12_13_dihydroxy_9z_octadecenoate +h +o2 +nadph +h2o
+    <-> . +12_13_dihydroxy_9z_octadecenoate +h +o2_mnxm735438 +nadph +h2o
     9z_12_13_17_trihydroxyoctadeca_9_enoate
   }
 
@@ -76,7 +76,7 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10376 +ser_gly
     z_omega_methylsulfanyl_hexyl_thiohydroximate
   }
 
@@ -92,14 +92,14 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
     sulcatone
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +h +dehydrorabelomycin
     3_2_formyl_6_hydroxy_4_methylphenyl_8_hydroxy_1
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +s_1_pyrroline_5_carboxylate +co2 +succinate +guanidine +ethene +h2o +h +l_arginine
     2_oxoglutarate
   }
@@ -154,13 +154,13 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10428 +ser_gly
     z_omega_methylsulfanyl_heptyl_thiohydroximate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10455 +ser_gly
     z_omega_methylsulfanyl_octyl_thiohydroximate
   }
 }

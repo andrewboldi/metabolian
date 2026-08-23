@@ -11,7 +11,7 @@ pathway 2-oxepin-2-3h-ylideneace-to-3-oxo-5-6-dehydrosub "2-oxepin-2(3H)-ylidene
     <-> ec_5_3_3_18 [5.3.3.18]
     2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa
     <-> ec_5_3_3_18 [5.3.3.18]
-    2_oxepin_2_3h_ylideneacetyl_coa
+    2_oxepin_2_3h_ylideneacetyl_coa_chebi_63252
     <-> ec_3_3_2_12 [3.3.2.12] +h2o
     3_8_dioxooct_5_enoyl_coa
     <-> ec_1_2_1_91 [1.2.1.91] +nadp +h2o -nadph -hplus

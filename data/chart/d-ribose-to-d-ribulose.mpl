@@ -10,7 +10,7 @@ pathway d-ribose-to-d-ribulose "D-ribose to D-ribulose" {
     d_ribose
     <-> ec_3_2_2_13 [3.2.2.13] +1_methyladenine -h2o
     1_methyladenosine
-    <-> ec_3_2_2_13 [3.2.2.13] +h2o -1_methyladenine
+    <-> ec_3_2_2_13 [3.2.2.13] +h2o -1_methyladenine_mnxm735901
     aldehydo_d_ribose
     <-> ec_5_3_1_20 [5.3.1.20]
     d_ribulose

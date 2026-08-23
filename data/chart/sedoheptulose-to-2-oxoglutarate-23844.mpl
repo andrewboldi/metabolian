@@ -10,7 +10,7 @@ pathway sedoheptulose-to-2-oxoglutarate-23844 "sedoheptulose to 2-oxoglutarate" 
     sedoheptulose
     <-> ec_2_7_1_14 [2.7.1.14] +atp -adp -hplus
     s7p
-    <-> ec_5_3_1_28 [5.3.1.28] -d_glycero_d_manno_heptose_7_phosphate
+    <-> ec_5_3_1_28 [5.3.1.28] -d_glycero_d_manno_heptose_7_phosphate_chebi_60204
     d_glycero_d_manno_heptose_7_phosphate
     <-> ec_2_7_1_168 [2.7.1.168] +atp -adp -hplus
     d_glycero_d_manno_heptose_1_7_bisphosphate

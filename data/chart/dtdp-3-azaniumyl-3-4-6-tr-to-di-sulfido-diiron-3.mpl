@@ -12,7 +12,7 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron-3 "dTDP-3-azaniumyl-3,4,6
     dtdp_d_desosamine
     <-> ec_2_4_1_277 [2.4.1.277] +10_deoxymethynolide -dtdp -hplus
     10_deoxymethymycin
-    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     methymycin
   }
 
@@ -28,14 +28,14 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron-3 "dTDP-3-azaniumyl-3,4,6
     3_5_dimethylorsellinate
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
     20s_24r_dihydroxyvitamin_d3
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
     20s_24s_dihydroxyvitamin_d3
   }
@@ -72,30 +72,30 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron-3 "dTDP-3-azaniumyl-3,4,6
 
   branch from 10_deoxymethynolide side right {
     10_deoxymethynolide
-    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa +h2o
-    co2
+    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph_mnxm738702 +nadp_mnxm5 +coa_mnxm727276 +h2o_water
+    co2_mnxm13
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +20s_hydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +20s_hydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     20_s_25_dihydroxyvitamin_d3
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +25_hydroxy_24_oxocalciol +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +25_hydroxy_24_oxocalciol +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     23_s_25_dihydroxy_24_oxovitamin_d3
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +cryptoxanthin +di_sulfido_diiron +o2 +hplus +h2o
     3s_5r_6s_cryptoxanthin_5_6_epoxide
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
     20s_23_24_trihydroxyvitamin_d3
   }

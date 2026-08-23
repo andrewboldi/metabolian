@@ -44,7 +44,7 @@ pathway 3-l-homoseryl-adenylyl-to-acetaldehyde-74259 "3'-(L-homoseryl)adenylyl t
 
   branch from fluoroacetaldehyde side left {
     fluoroacetaldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +fluoroacetate +h +nadph +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +fluoroacetate +h +nadph +h2o_water
     nadp
   }
 }

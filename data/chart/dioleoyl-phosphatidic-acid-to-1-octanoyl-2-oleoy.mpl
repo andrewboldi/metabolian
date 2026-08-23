@@ -18,31 +18,31 @@ pathway dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy "dioleoyl phosphatidic 
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o_water
     clavulanate
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o_water
     phenazine_1_carboxylate
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
     2_hydroxyphenazine
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
     piericidin_a
   }
 
   branch from 2_oleoylglycerol side left {
     2_oleoylglycerol
-    <-> . +atp +adp +hplus
+    <-> . +atp_chebi_30616 +adp_chebi_456216 +hplus
     2_oleoyl_sn_glycero_3_phosphate
   }
 
@@ -54,37 +54,37 @@ pathway dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy "dioleoyl phosphatidic 
 
   branch from adp side left {
     adp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o_water
     thiolactomycin
   }
 
   branch from adp side right {
     adp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o_water
     myxothiazol
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o_water
     polymyxin_b1
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o_water
     borrelidin
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
     amiclenomycin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
     penem_cgp31608
   }
 

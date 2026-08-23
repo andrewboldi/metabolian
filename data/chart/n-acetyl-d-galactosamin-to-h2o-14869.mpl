@@ -12,7 +12,7 @@ pathway n-acetyl-d-galactosamin-to-h2o-14869 "N-acetyl-α-D-galactosamin… to H
     d_galactosaminyl_1_3_l_fucosyl_1_2_d_galactosyl
     <-> . +h2o -l_fucosyl_1_2_d_galactoside
     2_ammonio_2_deoxy_d_galactopyranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -2_ammonio_2_deoxy_d_galactopyranose -h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -2_ammonio_2_deoxy_d_galactopyranose -h2o_water
     atp
   }
 }

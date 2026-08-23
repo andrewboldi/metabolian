@@ -24,7 +24,7 @@ pathway 2s-3-sulfopropanediol-to-3-hydroxyhexane-2-5-di "(2S)-3-sulfopropanediol
 
   branch from acetoacetate side right {
     acetoacetate
-    <-> ec_6_4_1_6 [6.4.1.6] +co2 +acetone +atp +h2o +amp +phosphate
+    <-> ec_6_4_1_6 [6.4.1.6] +co2_mnxm13 +acetone +atp +h2o_water +amp +phosphate
     h
   }
 }

@@ -73,7 +73,7 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine-22880 "L-arogenate to S-adenosy
   branch from r_r_2_3_dimethyl_6_phytylhydroquinone side left {
     r_r_2_3_dimethyl_6_phytylhydroquinone
     <-> ec_5_5_1_24 [5.5.1.24]
-    tocopherol
+    tocopherol_chebi_18185
   }
 
   branch from sah side right {

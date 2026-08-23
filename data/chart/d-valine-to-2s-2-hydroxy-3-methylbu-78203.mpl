@@ -18,7 +18,7 @@ pathway d-valine-to-2s-2-hydroxy-3-methylbu-78203 "D-valine to (2S)-2-hydroxy-3-
 
   branch from isobutyraldehyde side left {
     isobutyraldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +butanoate +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +butanoate +h2o_water
     nad
   }
 

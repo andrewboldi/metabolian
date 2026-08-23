@@ -99,6 +99,6 @@ pathway adenosine-to-h2o-null "adenosine to H2O" {
   branch from phosphate side right {
     phosphate
     <-> ec_3_1_3_64 [3.1.3.64] +2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1 +h2o
-    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1
+    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1_mnxm1559712
   }
 }

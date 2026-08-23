@@ -14,7 +14,7 @@ pathway n-acetyl-beta-d-muramate-to-h2o "N-acetyl-beta-D-muramate… to H2O" {
     h
     <-> . +n_acetyl_d_hexosamine +1_6_anhydrous_n_acetylmuramyl_tripeptide -h2o
     n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
-    <-> . +n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
+    <-> . +n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl_mnxm739017
     two_linked_disacharide_tetrapeptide_and_tripepti
     <-> ec_3_4_16_4 [3.4.16.4] +d_alanine -h2o
     two_linked_disacharide_pentapeptide_and_tripepti

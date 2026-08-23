@@ -10,7 +10,7 @@ pathway nadh-to-6z-9z-12z-15z-18z-21z-3-null "NADH to (6Z,9Z,12Z,15Z,18Z,21Z)-3â
     nadh
     <-> ec_1_1_1_211 [1.1.1.211] +h +3_oxo_6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_c -nad
     3r_6z_9z_12z_15z_18z_21z_3_hydroxytetracosahexa
-    <-> . +nad -nadh -hplus
+    <-> . +nad_chebi_57540 -nadh_chebi_57945 -hplus
     6z_9z_12z_15z_18z_21z_3_oxotetracosahexaenoyl_c
     <-> . +coa -acetyl_coa
     4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
@@ -38,13 +38,13 @@ pathway nadh-to-6z-9z-12z-15z-18z-21z-3-null "NADH to (6Z,9Z,12Z,15Z,18Z,21Z)-3â
 
   branch from h side right {
     h
-    <-> . +8z_11z_14z_17z_eicosatetraenoyl_coa +diphosphate +amp +coa +all_cis_8_11_14_17_icosatetraenoic_acid
+    <-> . +8z_11z_14z_17z_eicosatetraenoyl_coa +diphosphate +amp +coa_mnxm727276 +all_cis_8_11_14_17_icosatetraenoic_acid
     atp
   }
 
   branch from h side left {
     h
-    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +diphosphate +amp +atp +coa
+    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +diphosphate +amp +atp +coa_mnxm727276
     tetracosatetraenoic_acid_n_6
   }
 

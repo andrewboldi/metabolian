@@ -158,13 +158,13 @@ pathway o-phospho-l-serine-to-h2o "O-phospho-L-serine to H2O" {
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +pyruvate
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan_mnxm12911 +h2o +pyruvate
     z_omega_methylsulfanyl_hexyl_thiohydroximate
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +pyruvate
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan_mnxm12912 +h2o +pyruvate
     z_omega_methylsulfanyl_heptyl_thiohydroximate
   }
 }

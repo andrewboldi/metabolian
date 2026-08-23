@@ -10,11 +10,11 @@ pathway retinal-to-all-trans-neoxanthin-null "retinal to all-trans-neoxanthin" {
     retinal
     <-> ec_1_13_11_63 [1.13.11.63] +all_trans_3_hydroxyretinal -o2
     cryptoxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2_chebi_15379 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     zeaxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2_chebi_15379 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     antheraxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2_chebi_15379 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     all_trans_violaxanthin
     <-> ec_5_3_99_9 [5.3.99.9]
     all_trans_neoxanthin
@@ -22,25 +22,25 @@ pathway retinal-to-all-trans-neoxanthin-null "retinal to all-trans-neoxanthin" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_9 +methane +methanol +h2o
+    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_9 +methane +methanol +h2o_water
     ubiquinone_9
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_10 +methane +methanol +h2o
+    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_10 +methane +methanol +h2o_water
     ubiquinone_10
   }
 
   branch from zeaxanthin side left {
     zeaxanthin
-    <-> ec_1_13_11_84 [1.13.11.84] +o2 +hydroxy_cyclocitral
+    <-> ec_1_13_11_84 [1.13.11.84] +o2_chebi_15379 +hydroxy_cyclocitral
     crocetin_dialdehyde
   }
 
   branch from zeaxanthin side right {
     zeaxanthin
-    <-> ec_1_13_11_65 [1.13.11.65] +o2 +3r_all_trans_3_hydroxyretinal
+    <-> ec_1_13_11_65 [1.13.11.65] +o2_chebi_15379 +3r_all_trans_3_hydroxyretinal
     3r_11_cis_3_hydroxyretinal
   }
 
@@ -64,25 +64,25 @@ pathway retinal-to-all-trans-neoxanthin-null "retinal to all-trans-neoxanthin" {
 
   branch from retinal side right {
     retinal
-    <-> ec_1_17_3_2 [1.17.3.2] +nadh +all_trans_retinoate +h +h2o
-    nad
+    <-> ec_1_17_3_2 [1.17.3.2] +nadh_mnxm10 +all_trans_retinoate +h +h2o_water
+    nad_mnxm8
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinone_8 +h2o
+    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinone_8 +h2o_water
     ubiquinol_8
   }
 
   branch from o2 side right {
     o2
     <-> ec_1_10_3_11 [1.10.3.11] +ubiquinol_10 +ubiquinone_10
-    h2o
+    h2o_water
   }
 
   branch from zeaxanthin side left {
     zeaxanthin
-    <-> . +o2 +hydroxy_cyclocitral
+    <-> . +o2_chebi_15379 +hydroxy_cyclocitral
     3r_3_hydroxy_8_apo_carotenal
   }
 }

@@ -12,11 +12,11 @@ pathway gypenoside-xvii-to-d-glucopyranose-null "gypenoside XVII to D-glucopyran
     beta_d_glucose
     <-> . +ginsenoside_f2 -h2o
     ginsenoside_rd
-    <-> ec_3_2_1_191 [3.2.1.191] +h2o -glucose
+    <-> ec_3_2_1_191 [3.2.1.191] +h2o_chebi_15377 -glucose
     ginsenoside_c_k
     <-> . +glucose -h2o
     ginsenoside_rb1
-    <-> ec_3_2_1_191 [3.2.1.191] +h2o -glucose
+    <-> ec_3_2_1_191 [3.2.1.191] +h2o_chebi_15377 -glucose
     gypenoside_lxxv
   }
 

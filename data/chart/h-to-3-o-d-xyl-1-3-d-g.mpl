@@ -14,42 +14,173 @@ pathway h-to-3-o-d-xyl-1-3-d-g "H to 3-O-{β-D-Xyl-(1→3)-[β-D-G…" {
     udp_beta_l_rhamnose
     <-> . +nadp -h -nadph
     udp_4_dehydro_6_deoxy_d_glucose
-    <-> . +3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillate -udp
+    <-> . +3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillate -udp_chebi_58223
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_4_d
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_f
-    <-> . +udp_l_rhamnose -udp -hplus
+    <-> . +udp_l_rhamnose -udp_chebi_58223 -hplus
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r
-    <-> . +udp_d_xylose -udp -hplus
+    <-> . +udp_d_xylose -udp_chebi_58223 -hplus
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x
-    <-> . +udp_d_xylose -udp -hplus
-    3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x
+    <-> . +udp_d_xylose -udp_chebi_58223 -hplus
+    3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x_chebi_234164
     <-> . +udp +h -3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x
     udp_alpha_d_xylose
   }
 
+  branch from h2o side left {
+    h2o
+    <-> . +l_lysine +glycine +l_cysteine
+    glycyl_lysyl_cysteine
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_lysine +glycine +l_phenylalanine
+    glycyl_lysyl_phenylalanine
+  }
 
+  branch from udp_beta_l_rhamnose side left {
+    udp_beta_l_rhamnose
+    <-> ec_2_4_1_236 [2.4.1.236] +udp +luteolin_7_o_neohesperidoside
+    luteolin_7_o_beta_d_glucoside
+  }
 
+  branch from udp_beta_l_rhamnose side right {
+    udp_beta_l_rhamnose
+    <-> ec_2_4_1_236 [2.4.1.236] +udp +apigenin_7_o_neohesperidoside
+    apigenin_7_o_beta_d_glucoside
+  }
 
+  branch from quercetin_3_o_d_glucopyranoside side left {
+    quercetin_3_o_d_glucopyranoside
+    <-> . +malonyl-coa +coa
+    quercetin_3_o_6_o_malonyl_d_glucoside
+  }
 
+  branch from quercetin_3_o_d_glucopyranoside side right {
+    quercetin_3_o_d_glucopyranoside
+    <-> ec_2_4_2_35 [2.4.2.35] +udp +udp_alpha_d_xylose
+    quercetin_3_o_d_xylosyl_1_2_d_glucoside
+  }
 
+  branch from h side left {
+    h
+    <-> . +l_histidine +l_cysteine +l_arginine +h2o
+    his_arg_cys
+  }
 
+  branch from h side right {
+    h
+    <-> . +l_histidine +l_lysine +h2o
+    his_his_lys
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +13z_3_oxoicosenoyl_coa +h +nadp
+    3_s_hydroxy_13_cis_eicosenoyl_coenzyme_a
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +9z_octadecenoyl_coa +h +o2 +nadp +h2o
+    9z_12z_octadecadienoyl_coa
+  }
 
+  branch from udp_alpha_d_xylose side left {
+    udp_alpha_d_xylose
+    <-> . +udp +eugenol_beta_primeveroside +h
+    eugenyl_o_beta_d_glucopyranoside
+  }
 
+  branch from udp_alpha_d_xylose side right {
+    udp_alpha_d_xylose
+    <-> . +udp +delphinidin_3_o_beta_d_sambubioside +h
+    mirtillin
+  }
 
+  branch from h side left {
+    h
+    <-> . +l_histidine +l_lysine +l_isoleucine +h2o
+    his_lys_ile
+  }
 
+  branch from h side right {
+    h
+    <-> . +l_histidine +l_lysine +l_valine +h2o
+    his_lys_val
+  }
 
+  branch from quercetin side left {
+    quercetin
+    <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +taxifolin +o2 +h +succinate +h2o
+    co2
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_lysine +glycine +l_tyrosine
+    glycyl_tyrosyl_lysine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_valine +glycine
+    glycyl_valyl_histidine
+  }
 
+  branch from udp side right {
+    udp
+    <-> . +16_alpha_hydroxygypsogenate_28_beta_d_glucoside +16_hydroxygypsogenate
+    udp_alpha_d_glucose
+  }
 
+  branch from udp side left {
+    udp
+    <-> . +7_o_d_glucosyl_isovitexin +udp_alpha_d_glucose
+    isovitexin
+  }
 
+  branch from udp_beta_l_rhamnose side right {
+    udp_beta_l_rhamnose
+    <-> ec_2_4_1_351 [2.4.1.351] +udp +1_2_alpha_l_rhamnosyl_1_4_alpha_d_galacturonosy +h
+    alpha_d_galacturonosyl_1_2_alpha_l_rhamnosyl_1_4
+  }
 
+  branch from udp_beta_l_rhamnose side left {
+    udp_beta_l_rhamnose
+    <-> ec_2_4_1_159 [2.4.1.159] +udp +kaempferol_3_rutinoside
+    kaempferol_3_o_beta_d_glucoside
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +h2o +h +o2 +nadph
+    9z_12z_15z_18z_tetracosatetraenoyl_coa
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +13z_16z_docosadienoyl_coa +h +nadph
+    trans_cis_cis_2_13_16_docasatrienoyl_coenzyme_a
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +6z_9z_12z_15z_octadecatetraenoyl_coa +nadp +h2o +h +o2
+    9z_12z_15z_octadecatrienoyl_coa
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +h +5z_8z_11z_14z_17z_eicosapentaenoate +o2 +nadp +h2o
+    pgh3
+  }
+
+  branch from udp_alpha_d_xylose side right {
+    udp_alpha_d_xylose
+    <-> . +udp +erinacine_w +h
+    erinacol
+  }
 }

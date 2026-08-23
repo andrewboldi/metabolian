@@ -16,8 +16,8 @@ pathway isoepoxydon-to-e-ascladiol-62216 "(+)-isoepoxydon to (E)-ascladiol" {
     e_ascladiol
     <-> . +hydrogen_acceptor -hydrogen_donor
     patulin
-    <-> . +h +nadph -e_ascladiol
-    nadp
+    <-> . +h +nadph_mnxm738702 -e_ascladiol
+    nadp_mnxm5
   }
 
   branch from phyllostine side left {
@@ -26,15 +26,15 @@ pathway isoepoxydon-to-e-ascladiol-62216 "(+)-isoepoxydon to (E)-ascladiol" {
     gentisyl_alcohol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph_mnxm738702
     3_flavanol_trans
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph_mnxm738702
     cis_3_flavanol
   }
 
@@ -56,27 +56,27 @@ pathway isoepoxydon-to-e-ascladiol-62216 "(+)-isoepoxydon to (E)-ascladiol" {
     dtdp_4_hydroxyamino_4_6_dideoxy_alpha_d_glucose
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +dtdp_4_oxo_2_deoxy_alpha_d_pentos_2_ene +h +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +dtdp_4_oxo_2_deoxy_alpha_d_pentos_2_ene +h +nadp_mnxm5
     dtdp_4_oxo_2_deoxy_beta_l_xylose
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +3_keto_beta_d_galactose +h +nadp
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +3_keto_beta_d_galactose +h +nadp_mnxm5
     d_galactopyranose
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_113 [1.1.1.113] +h +l_xylono_1_4_lactone +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_1_1_113 [1.1.1.113] +h +l_xylono_1_4_lactone +nadph_mnxm738702
     l_xylopyranose
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +s_propane_1_2_diol +h +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_1_1_21 [1.1.1.21] +s_propane_1_2_diol +h +nadph_mnxm738702
     s_lactaldehyde
   }
 }

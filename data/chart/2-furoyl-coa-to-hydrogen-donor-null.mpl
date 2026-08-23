@@ -12,36 +12,167 @@ pathway 2-furoyl-coa-to-hydrogen-donor-null "2-furoyl-CoA to hydrogen donor" {
     atp
     <-> . +h +2_furoate +h2o2 -o2 -h2o
     furfural
-    <-> . +nad +h2o -nadh -hplus
-    2_furoate
-    <-> ec_6_2_1_31 [6.2.1.31] +atp +coa -amp -ppi
-    2_furoyl_coa
-    <-> ec_1_3_99_8 [1.3.99.8] +hydrogen_acceptor +h2o -hydrogen_donor -hplus
+    <-> . +nad +h2o_chebi_15377 -nadh -hplus
+    2_furoate_chebi_16739
+    <-> ec_6_2_1_31 [6.2.1.31] +atp_chebi_30616 +coa_chebi_57287 -amp -ppi
+    2_furoyl_coa_chebi_57333
+    <-> ec_1_3_99_8 [1.3.99.8] +hydrogen_acceptor +h2o_chebi_15377 -hydrogen_donor -hplus
     5_hydroxy_2_furoyl_coa
   }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    cyclosporin_a_metabolite_m1
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    androst_4_ene_3_17_dione
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +3_hydroxyadipyl_coa +h +h2o
+    3_hydroxyadipic_acid
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +3_hydroxyisovaleryl_coa +h2o
+    3_hydroxyisovaleric_acid
+  }
 
+  branch from furfural side left {
+    furfural
+    <-> . +hydrogen_cyanide
+    2r_2_furan_2_yl_2_hydroxyacetonitrile
+  }
 
+  branch from furfural side right {
+    furfural
+    <-> . +h +nadph +nadp
+    furfuryl_alcohol
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_77 [1.14.13.77] +taxa_4_20_11_dien_5alpha_ol +h +nadph +nadp +h2o
+    taxa_4_20_11_dien_5alpha_13alpha_diol
+  }
 
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_76 [1.14.13.76] +10beta_hydroxytaxa_4_20_11_dien_5alpha_yl_acetat +nadp +h2o +h +nadph
+    taxa_4_20_11_dien_5alpha_yl_acetate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_83 [3.1.1.83] +3s_6s_6_isopropenyl_3_methyloxepan_2_one
+    5r_6_hydroxy_5_isopropenyl_2_methylhexanoate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_1_14_13_185 [1.14.13.185] +10_deoxymethymycin +h +o2 +nadph +nadp
+    neomethymycin
+  }
 
+  branch from adp side left {
+    adp
+    <-> . +atp +1_6_anhydrous_n_acetylmuramate +h2o
+    n_acetylmuramate_6_phosphate
+  }
 
+  branch from adp side right {
+    adp
+    <-> . +h +na +phosphate +na +atp +h2o
+    20s_hydroxypregn_4_en_3_one
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    pmf
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    atorvastatin_acid
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    atorvastatin_lactone
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    cyclosporin_a_metabolite_m17
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +s_3_hydroxyglutaryl_coa +h2o +h
+    3_hydroxyglutarate
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +tetradecanoyl_coa +1_tetradecanoyl_sn_glycerol_3_phosphate +h
+    dimyristoyl_phosphatidic_acid
+  }
 
+  branch from h side left {
+    h
+    <-> . +10_deoxymethymycin +o2 +nadph +nadp +h2o
+    methymycin
+  }
 
+  branch from h side right {
+    h
+    <-> ec_1_14_13_53 [1.14.13.53] +formononetin +o2 +nadph +nadp +h2o
+    2_hydroxyformononetin
+  }
 
+  branch from h2o2 side left {
+    h2o2
+    <-> . +octanoyl_coa +coa +o2 +nad_mnxm8 +h2o +hexanoyl_coa +acetyl_coa +h
+    nadh_mnxm10
+  }
 
+  branch from h2o2 side right {
+    h2o2
+    <-> . +nadh_mnxm10 +acetyl_coa +h +coa +o2 +nad_mnxm8 +h2o
+    9z_12z_15z_18z_21z_tetracosapentaenoyl_coa
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_89 [1.14.13.89] +biochanin_a +h +nadph +2_hydroxybiochanin_a +h2o
+    nadp
+  }
 
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_89 [1.14.13.89] +daidzein +h +nadph +nadp +h2o
+    2_hydroxydaidzein
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_154 [4.2.1.154] +tetracenomycin_f1 +h
+    tetracenomycin_f2
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyacetophenone +o2 +nadph +nadp
+    4_hydroxyphenylacetate
+  }
 }

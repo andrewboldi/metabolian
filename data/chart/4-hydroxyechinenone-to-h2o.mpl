@@ -12,9 +12,9 @@ pathway 4-hydroxyechinenone-to-h2o "4'-hydroxyechinenone to H2O" {
     4_4_dihydroxyechinenone
     <-> . -h2o
     canthaxanthin
-    <-> . +nadh +h +o2 -nad -h2o
+    <-> . +nadh +h +o2_mnxm735438 -nad -h2o_water
     2_hydroxycanthaxanthin
-    <-> . +nadh +h +o2 -nad -h2o
+    <-> . +nadh +h +o2_mnxm735438 -nad -h2o_water
     2_2_dihydroxycanthaxanthin
   }
 

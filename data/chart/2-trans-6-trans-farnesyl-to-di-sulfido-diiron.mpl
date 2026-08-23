@@ -10,9 +10,9 @@ pathway 2-trans-6-trans-farnesyl-to-di-sulfido-diiron "2-trans,6-trans-farnesylâ
     fpp
     <-> ec_4_2_3_37 [4.2.3.37] -ppi
     epi_isozizaene
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     5r_albaflavenol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     albaflavenone
   }
 }

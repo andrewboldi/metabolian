@@ -12,7 +12,7 @@ pathway fmnh2-to-di-sulfido-diiron-52328 "FMNH2 to di-μ-sulfido-diiron" {
     n5_hydroxyamino_imino_methyl_l_ornithinium
     <-> . +nadph +o2 -no -nadp -h2o -hplus
     citrulline
-    <-> ec_1_14_15_41 [1.14.15.41] +no +l_tryptophan +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_41 [1.14.15.41] +no +l_tryptophan +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     4_nitro_l_tryptophan
   }
 }

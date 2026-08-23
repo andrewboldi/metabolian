@@ -12,7 +12,7 @@ pathway alpha-d-glucosamine-to-acetate-null "alpha-D-glucosamine… to acetate" 
     6_phospho_beta_d_glucosaminyl_1_4_n_acetyl_d_glu
     <-> . +acetate -h2o
     diacetylchitobiose_6_phosphate
-    <-> . +h2o -acetate
+    <-> . +h2o_chebi_15377 -acetate_chebi_30089
     n_monoacetylchitobiose_6_phosphate
   }
 }

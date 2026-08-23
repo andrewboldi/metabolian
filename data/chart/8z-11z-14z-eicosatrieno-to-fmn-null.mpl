@@ -12,13 +12,13 @@ pathway 8z-11z-14z-eicosatrieno-to-fmn-null "(8Z,11Z,14Z)-eicosatrieno… to FMN
     prostaglandin_g1
     <-> . +hydrogen_donor -hydrogen_acceptor -h2o
     prostaglandin_h1
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o -hplus
     19_hydroxyprostaglandin_h1
   }
 
   branch from prostaglandin_g1 side left {
     prostaglandin_g1
-    <-> . +o2
+    <-> . +o2_chebi_15379
     all_cis_icosa_8_11_14_trienoate
   }
 

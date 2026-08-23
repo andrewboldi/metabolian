@@ -18,10 +18,10 @@ pathway 4-hydroxy-2-oxo-5-methylh-to-nad "4-Hydroxy-2-oxo-5-methylh… to NAD" {
     fmnh2
     <-> . +fadh2 +h +ferrichrome -fad -fe
     deferrichrome
-    <-> . +fmn +fe -h -ferrichrome
+    <-> . +fmn +fe -h -ferrichrome_chebi_5019
     fmnh2
-    <-> . +diphosphate +h +amp +ferrichrome +h2o -n5_acetyl_n5_hydroxy_l_ornithine -glycine -atp
-    fe
+    <-> . +diphosphate +h +amp +ferrichrome_chebi_5019 +h2o -n5_acetyl_n5_hydroxy_l_ornithine -glycine -atp
+    fe_mnxm1370984
     <-> ec_1_14_12_17 [1.14.12.17] +nadh -h -nad
     fe
   }
@@ -110,14 +110,14 @@ pathway 4-hydroxy-2-oxo-5-methylh-to-nad "4-Hydroxy-2-oxo-5-methylh… to NAD" {
     iron_iii_oxide_hydroxide
   }
 
-  branch from fe side left {
-    fe
+  branch from fe_mnxm1370984 side left {
+    fe_mnxm1370984
     <-> ec_3_6_3_30 [3.6.3.30] +h +phosphate +atp +h2o
     adp
   }
 
-  branch from fe side right {
-    fe
+  branch from fe_mnxm1370984 side right {
+    fe_mnxm1370984
     <-> ec_3_6_3_30 [3.6.3.30] +h +adp +atp +h2o
     phosphate
   }

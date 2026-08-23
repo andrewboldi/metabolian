@@ -63,7 +63,7 @@ pathway n-hexadecanoylsphingosine-to-palmitoyl-coa "N-hexadecanoylsphingosine…
   branch from ppi side left {
     ppi
     <-> . +2_cis_6_cis_farnesyl_diphosphate
-    acoradiene
+    acoradiene_chebi_172925
   }
 
   branch from palmitoyl_coa side right {
@@ -80,7 +80,7 @@ pathway n-hexadecanoylsphingosine-to-palmitoyl-coa "N-hexadecanoylsphingosine…
 
   branch from ppi side right {
     ppi
-    <-> . +acoradiene
+    <-> . +acoradiene_chebi_172925
     fpp
   }
 

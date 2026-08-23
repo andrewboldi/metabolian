@@ -11,7 +11,7 @@ pathway co2-to-16-hydroxy-hentriaconta-3 "CO2 to 16-hydroxy-hentriaconta-3…" {
     <-> . +hentriaconta_3_6_9_12_19_22_25_28_octaene_16_one -6z_9z_12z_15z_3_oxo_2_2z_5z_8z_11z_tetradeca_2
     h
     <-> . +coa +6z_9z_12z_15z_3_oxo_2_2z_5z_8z_11z_tetradeca_2 -h2o
-    hentriaconta_3_6_9_12_19_22_25_28_octaene_16_one
+    hentriaconta_3_6_9_12_19_22_25_28_octaene_16_one_mnxm97328
     <-> . +h +nadph -16_hydroxy_hentriaconta_3_6_9_12_19_22_25_28_oct
     nadp
   }

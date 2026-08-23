@@ -13,6 +13,6 @@ pathway 4-carboxy-2-hydroxyhexa-2-to-4-carboxy-2-hydroxy "4-Carboxy-2-hydroxyhex
     <-> . +h -o2
     3_o_methylgallate
     <-> ec_1_13_11_8 [1.13.11.8] +h +o2
-    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
+    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien_chebi_81691
   }
 }

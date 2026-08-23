@@ -121,6 +121,6 @@ pathway s-adenosyl-l-homocysteine-to-hederagenin-3-o-bet "S-adenosyl-L-homocyste
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
     <-> . +udp +h +2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
-    2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
+    2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca_mnxm818732
   }
 }

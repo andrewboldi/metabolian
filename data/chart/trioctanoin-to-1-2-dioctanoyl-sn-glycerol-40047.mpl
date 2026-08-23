@@ -20,7 +20,7 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol-40047 "trioctanoin to 1,2-dioc
 
   branch from 1_2_dioctanoyl_sn_glycerol side left {
     1_2_dioctanoyl_sn_glycerol
-    <-> ec_2_7_1_107 [2.7.1.107] +atp +adp +1_2_dioctanoyl_sn_glycero_3_phosphate
+    <-> ec_2_7_1_107 [2.7.1.107] +atp +adp +1_2_dioctanoyl_sn_glycero_3_phosphate_mnxm67267
     h
   }
 
@@ -39,13 +39,13 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol-40047 "trioctanoin to 1,2-dioc
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
     <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_156398
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_156406 +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_156407
   }
 
   branch from 1_2_dioctanoyl_sn_glycero_3_phosphate side right {
@@ -56,7 +56,7 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol-40047 "trioctanoin to 1,2-dioc
 
   branch from octanoate side left {
     octanoate
-    <-> ec_3_5_1_23 [3.5.1.23] +n_octanoyldihydrosphingosine +h2o
+    <-> ec_3_5_1_23 [3.5.1.23] +n_octanoyldihydrosphingosine +h2o_water
     sphinganine
   }
 

@@ -12,9 +12,9 @@ pathway ferrioxamine-b-to-diphosphate "ferrioxamine B to diphosphate" {
     desferrioxamine_b
     <-> . +diphosphate +h +amp +h2o -atp -n_3_carboxypropanoyl_n_hydroxycadaverine
     n_hydroxy_n_acetylcadaverine
-    <-> . +n_3_carboxypropanoyl_n_hydroxycadaverine +atp -amp -ppi -hplus
+    <-> . +n_3_carboxypropanoyl_n_hydroxycadaverine +atp_chebi_30616 -amp_chebi_456215 -ppi -hplus
     bisucaberin_b
-    <-> . +atp -amp -ppi -hplus
+    <-> . +atp_chebi_30616 -amp_chebi_456215 -ppi -hplus
     1_12_dihydroxy_1_6_12_17_tetraazacyclodocosane_2
   }
 }

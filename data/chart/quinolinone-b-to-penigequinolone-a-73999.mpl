@@ -36,7 +36,7 @@ pathway quinolinone-b-to-penigequinolone-a-73999 "Quinolinone B to penigequinolo
 
   branch from 1_e_3_hydroxy_3_7_dimethylocta_1_6_dien_1_yl_qu side left {
     1_e_3_hydroxy_3_7_dimethylocta_1_6_dien_1_yl_qu
-    <-> . +h2o
+    <-> . +h2o_water
     4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol
   }
 
@@ -60,7 +60,7 @@ pathway quinolinone-b-to-penigequinolone-a-73999 "Quinolinone B to penigequinolo
 
   branch from quinolinone_b side left {
     quinolinone_b
-    <-> . +nadp +h2o +h +o2 +nadph
+    <-> . +nadp_mnxm5 +h2o_water +h +o2_mnxm735438 +nadph_mnxm738702
     quinolinone_a
   }
 

@@ -18,7 +18,7 @@ pathway 3s-3-hydroxyoleoyl-coa-to-nad-47428 "(3S)-3-hydroxyoleoyl-CoA to NAD" {
     3r_7z_hydroxyhexadec_7_enoyl_coa
     <-> . +nad -nadh -hplus
     7z_3_oxohexadecenoyl_coa
-    <-> . +nadh +h -nad
+    <-> . +nadh_mnxm10 +h -nad_mnxm8
     s_3_hydroxy_7_hexadecenoyl_coenzyme_a
   }
 

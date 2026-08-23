@@ -10,11 +10,11 @@ pathway h-to-herquline-a-null "H to herquline A" {
     h
     <-> . +2s_2_e_2s_2_amino_3_4_hydroxyphenyl_propylidene +h2o
     l_tyrosinal
-    <-> . -h2o -hplus
+    <-> . -h2o_chebi_15377 -hplus
     4_2s_5s_5_4_hydroxyphenyl_methyl_2_5_dihydropyra
     <-> . +nadph +hplus -nadp
     s_s_2_5_di_p_hydroxybenzyl_piperazine
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     1s_8r_14s_6_9_dioxo_15_17_diazatetracyclo_12_2
     <-> . +nadph +hplus -nadp
     1s_7r_8r_14s_6_9_dioxo_15_17_diazatetracyclo_12

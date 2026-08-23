@@ -12,13 +12,13 @@ pathway diphosphate-to-pyocyanine "diphosphate to pyocyanine" {
     l_glutamine
     <-> ec_2_1_1_327 [2.1.1.327] +phenazine_1_carboxylate +sam -sah
     5_methylphenazine_1_carboxylate
-    <-> ec_1_14_13_218 [1.14.13.218] +nadh +o2 +hplus -co2 -nad -h2o
+    <-> ec_1_14_13_218 [1.14.13.218] +nadh +o2 +hplus -co2 -nad -h2o_chebi_15377
     pyocyanine
   }
 
   branch from l_glutamine side left {
     l_glutamine
-    <-> ec_1_5_3_25 [1.5.3.25] +n_1_deoxy_d_fructos_1_yl_l_glutamine +o2 +h2o +h2o2
+    <-> ec_1_5_3_25 [1.5.3.25] +n_1_deoxy_d_fructos_1_yl_l_glutamine +o2_mnxm735438 +h2o +h2o2
     d_glucosone
   }
 
@@ -42,13 +42,13 @@ pathway diphosphate-to-pyocyanine "diphosphate to pyocyanine" {
 
   branch from h2o side left {
     h2o
-    <-> . +ent_kauran_17_oate +o2
+    <-> . +ent_kauran_17_oate +o2_mnxm735438
     ent_kaur_19_al_17_oate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ent_kaur_15_en_17_oate +o2
+    <-> . +ent_kaur_15_en_17_oate +o2_mnxm735438
     ent_kaur_15_en_19_al_17_oate
   }
 
@@ -66,7 +66,7 @@ pathway diphosphate-to-pyocyanine "diphosphate to pyocyanine" {
 
   branch from h side left {
     h
-    <-> . +4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth +o2
+    <-> . +4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth +o2_mnxm735438
     5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
   }
 
@@ -126,13 +126,13 @@ pathway diphosphate-to-pyocyanine "diphosphate to pyocyanine" {
 
   branch from h2o side left {
     h2o
-    <-> . +3_oxooctanoyl_coa +trans_4_coumaroyl_coa +co2 +coa
+    <-> . +3_oxooctanoyl_coa +trans_4_coumaroyl_coa +co2_mnxm13 +coa
     1_4_hydroxyphenyl_1_decene_3_5_dione
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_oxooctanoyl_coa +trans_4_coumaroyl_coa +co2 +coa
-    1_4_hydroxyphenyl_1_decene_3_5_dione
+    <-> . +3_oxooctanoyl_coa +trans_4_coumaroyl_coa +co2_mnxm13 +coa
+    1_4_hydroxyphenyl_1_decene_3_5_dione_mnxm1372205
   }
 }

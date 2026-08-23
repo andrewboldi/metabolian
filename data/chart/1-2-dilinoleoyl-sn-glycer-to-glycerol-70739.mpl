@@ -11,9 +11,9 @@ pathway 1-2-dilinoleoyl-sn-glycer-to-glycerol-70739 "1,2-dilinoleoyl-sn-glycerâ€
     <-> . +sam -sah -hplus
     1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
     <-> . +sam -sah -hplus
-    1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
+    1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp_chebi_189849
     <-> . +sam -sah -hplus
-    1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
+    1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp_chebi_42027
     <-> . +h2o -linoleate -hplus
     1_linoleoyl_sn_glycero_3_phosphocholine
     <-> . +h2o -phosphocholine -hplus

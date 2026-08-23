@@ -36,7 +36,7 @@ pathway d-manp-1-3-d-manp-to-d-mannopyranose "α-D-Manp-(1→3)-[α-D-Manp-… t
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp_mnxm40333 +phosphate +h2o_water
+    atp_mnxm3
   }
 }

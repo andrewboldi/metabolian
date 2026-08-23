@@ -50,7 +50,7 @@ pathway a-2-3-di-o-phytanyl-sn-gl-to-nad "a 2,3-di-O-phytanyl-sn-gl… to NAD" {
 
   branch from h side right {
     h
-    <-> . +co2 +5_hydroxy_4_oxopentanoate
+    <-> . +co2_mnxm13 +5_hydroxy_4_oxopentanoate
     2_hydroxy_3_oxoadipate
   }
 

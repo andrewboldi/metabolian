@@ -9,10 +9,10 @@ pathway 25r-3alpha-7alpha-dihyd-to-h2o-null "(25R)-3alpha,7alpha-dihyd… to H2O
   spine at 0,0 {
     25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
     <-> ec_1_14_13_15 [1.14.13.15] +nadp +h2o -o2 -nadph
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174
     <-> ec_1_1_1_1 [1.1.1.1] +nadh +h -nad
     25r_5beta_cholestane_3alpha_7alpha_26_triol
     <-> . +h +o2 +nadph -nadp -h2o
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174
   }
 }

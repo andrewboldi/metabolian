@@ -12,9 +12,9 @@ pathway h-to-fmn-null "H to FMN" {
     nadp
     <-> ec_1_14_13_112 [1.14.13.112] +h +5s_8r_9s_10s_13s_17r_17_2s_3s_5r_3_hydroxy_5_6 +o2 +nadph -nadp -h2o
     3_dehydro_6_deoxoteasterone
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     3_dehydro_6_hydroxyteasterone
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     3_dehydroteasterone
   }
 }

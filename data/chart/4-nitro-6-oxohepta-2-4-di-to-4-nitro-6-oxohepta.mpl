@@ -10,11 +10,11 @@ pathway 4-nitro-6-oxohepta-2-4-di-to-4-nitro-6-oxohepta "4-nitro-6-oxohepta-2,4-
     4_nitro_6_oxohepta_2_4_dienedioate
     <-> . -nitrite
     2_oxo_3_5_oxofuran_2_ylidene_propanoate
-    <-> . +nitrite
-    4_nitro_6_oxohepta_2_4_dienedioate
+    <-> . +nitrite_mnxm107
+    4_nitro_6_oxohepta_2_4_dienedioate_mnxm1372149
     <-> . +h -o2
     5_nitrosalicylate
-    <-> . +o2 -hplus
+    <-> . +o2_chebi_15379 -hplus
     4_nitro_6_oxohepta_2_4_dienedioate
   }
 }

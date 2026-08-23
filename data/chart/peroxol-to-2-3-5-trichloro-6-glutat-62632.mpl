@@ -19,7 +19,7 @@ pathway peroxol-to-2-3-5-trichloro-6-glutat-62632 "peroxol to 2,3,5-trichloro-6-
   branch from 2_3_6_trichloro_4_hydroxyphenolate side left {
     2_3_6_trichloro_4_hydroxyphenolate
     <-> ec_2_5_1_18 [2.5.1.18] +glutathione +2_6_dichloro_3_glutathion_s_yl_hydroquinone
-    chloride
+    chloride_mnxm735978
   }
 
   branch from glutathione side right {
@@ -36,7 +36,7 @@ pathway peroxol-to-2-3-5-trichloro-6-glutat-62632 "peroxol to 2,3,5-trichloro-6-
 
   branch from 2_3_5_trichloro_6_glutathion_s_yl_hydroquinone side right {
     2_3_5_trichloro_6_glutathion_s_yl_hydroquinone
-    <-> ec_2_5_1_18 [2.5.1.18] +h +glutathione +chloride
+    <-> ec_2_5_1_18 [2.5.1.18] +h +glutathione +chloride_mnxm735978
     2_3_5_6_tetrachlorohydroquinone
   }
 
@@ -48,7 +48,7 @@ pathway peroxol-to-2-3-5-trichloro-6-glutat-62632 "peroxol to 2,3,5-trichloro-6-
 
   branch from 2_6_dichloro_4_hydroxyphenolate side right {
     2_6_dichloro_4_hydroxyphenolate
-    <-> . +nadh +h +2_4_6_trichlorophenolate +o2 +chloride +h2o
+    <-> . +nadh +h +2_4_6_trichlorophenolate +o2_mnxm735438 +chloride_mnxm735978 +h2o_water
     nad
   }
 
@@ -66,13 +66,13 @@ pathway peroxol-to-2-3-5-trichloro-6-glutat-62632 "peroxol to 2,3,5-trichloro-6-
 
   branch from h side left {
     h
-    <-> ec_4_2_1_169 [4.2.1.169] +12_ethyl_8_isobutyl_3_vinylbacteriochlorophyllid +h2o
+    <-> ec_4_2_1_169 [4.2.1.169] +12_ethyl_8_isobutyl_3_vinylbacteriochlorophyllid +h2o_water
     12_ethyl_8_isobutylbacteriochlorophyllide_d
   }
 
   branch from h side right {
     h
-    <-> ec_2_1_1_90 [2.1.1.90] +5_hydroxybenzimidazolylcobamide +methanol +h2o
+    <-> ec_2_1_1_90 [2.1.1.90] +5_hydroxybenzimidazolylcobamide +methanol +h2o_water
     co_methyl_co_5_hydroxybenzimidazolylcob_i_amide
   }
 

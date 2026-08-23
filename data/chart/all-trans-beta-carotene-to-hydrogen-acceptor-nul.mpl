@@ -14,7 +14,7 @@ pathway all-trans-beta-carotene-to-hydrogen-acceptor-nul "all-trans-beta-caroten
     3_hydroxyechinenone
     <-> . +nadh +h +o2 -nad -h2o
     adonixanthin
-    <-> ec_1_14_99_64 [1.14.99.64] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
+    <-> ec_1_14_99_64 [1.14.99.64] +hydrogen_donor +o2_chebi_15379 -hydrogen_acceptor -h2o_chebi_15377
     astaxanthin
   }
 }

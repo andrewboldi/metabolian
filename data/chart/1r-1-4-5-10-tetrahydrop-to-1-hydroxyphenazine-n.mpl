@@ -10,9 +10,9 @@ pathway 1r-1-4-5-10-tetrahydrop-to-1-hydroxyphenazine-n "(1R)-1,4,5,10-tetrahydr
     1r_1_4_5_10_tetrahydrophenazine_1_carboxylate
     <-> ec_1_10_3_16 [1.10.3.16] +o2 -h2o2
     5_10_dihydrophenazine_1_carboxylate
-    <-> . +o2 -h2o2
+    <-> . +o2_chebi_15379 -h2o2_chebi_16240
     phenazine_1_carboxylate
-    <-> ec_1_14_13_218 [1.14.13.218] +nadh +o2 +hplus -co2 -nad -h2o
+    <-> ec_1_14_13_218 [1.14.13.218] +nadh +o2_chebi_15379 +hplus -co2 -nad -h2o
     1_hydroxyphenazine
   }
 }

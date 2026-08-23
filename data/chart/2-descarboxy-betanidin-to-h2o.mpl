@@ -73,7 +73,7 @@ pathway 2-descarboxy-betanidin-to-h2o "2-Descarboxy-betanidin to H2O" {
   branch from dopaxanthin_quinone side right {
     dopaxanthin_quinone
     <-> . +h
-    betanidin
+    betanidin_mnxm1371738
   }
 
   branch from h2o side left {
@@ -109,7 +109,7 @@ pathway 2-descarboxy-betanidin-to-h2o "2-Descarboxy-betanidin to H2O" {
   branch from betalamic_acid side right {
     betalamic_acid
     <-> . +h +h2o
-    4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+    4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_mnxm1368751
   }
 
   branch from l_tyrosine side left {

@@ -10,7 +10,7 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o-53476 "1-palmitoyl-2-[(6Z,9Z,12Z… to H2
     1_palmitoyl_2_6z_9z_12z_octadecatrienoyl_sn_glyc
     <-> . +cholesterol -1_hexadecanoyl_sn_glycero_3_phosphocholine
     cholesteryl_linolenate
-    <-> . +h2o -6z_9z_12z_octadecatrienoate -cholesterol
+    <-> . +h2o -6z_9z_12z_octadecatrienoate -cholesterol_mnxm726122
     h
     <-> . +6z_9z_12z_octadecatrienoate +adp +phosphate -atp -h2o
     6z_9z_12z_octadecatrienoate
@@ -18,13 +18,13 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o-53476 "1-palmitoyl-2-[(6Z,9Z,12Z… to H2
 
   branch from cholesteryl_linolenate side left {
     cholesteryl_linolenate
-    <-> ec_2_3_1_26 [2.3.1.26] +6z_9z_12z_octadecatrienoyl_coa +cholesterol
+    <-> ec_2_3_1_26 [2.3.1.26] +6z_9z_12z_octadecatrienoyl_coa +cholesterol_mnxm726122
     coa
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi +h2o +hplus
+    <-> . +1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi +h2o_chebi_15377 +hplus
     azelaate
   }
 
@@ -58,14 +58,14 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o-53476 "1-palmitoyl-2-[(6Z,9Z,12Z… to H2
     diphosphate
   }
 
-  branch from cholesterol side right {
-    cholesterol
+  branch from cholesterol_mnxm726122 side right {
+    cholesterol_mnxm726122
     <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +cholest_4_en_3_one
     nad
   }
 
-  branch from cholesterol side left {
-    cholesterol
+  branch from cholesterol_mnxm726122 side left {
+    cholesterol_mnxm726122
     <-> . +h +o2 +nadph +nadp +h2o
     5_6beta_epoxy_5alpha_cholestan_3beta_ol
   }
@@ -96,19 +96,19 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o-53476 "1-palmitoyl-2-[(6Z,9Z,12Z… to H2
 
   branch from cholesterol side right {
     cholesterol
-    <-> . +nad +nadh +hplus
+    <-> . +nad_chebi_57540 +nadh_chebi_57945 +hplus
     cholest_5_en_3_one
   }
 
   branch from cholesterol side left {
     cholesterol
-    <-> . +oleoyl_coa +coa
+    <-> . +oleoyl_coa +coa_chebi_57287
     cholesteryl_oleate
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +icosanoyl_coa +coa
+    <-> . +icosanoyl_coa +coa_chebi_57287
     1_palmitoyl_2_icosanoyl_sn_glycero_3_phosphochol
   }
 
@@ -142,14 +142,14 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o-53476 "1-palmitoyl-2-[(6Z,9Z,12Z… to H2
     norgalanthamine
   }
 
-  branch from cholesterol side right {
-    cholesterol
+  branch from cholesterol_mnxm726122 side right {
+    cholesterol_mnxm726122
     <-> . +udp +h +cholesteryl_alpha_d_glucoside
     udp_alpha_d_glucose
   }
 
-  branch from cholesterol side left {
-    cholesterol
+  branch from cholesterol_mnxm726122 side left {
+    cholesterol_mnxm726122
     <-> . +h +o2 +nadph +nadp +h2o
     cholest_5_en_3beta_22r_diol
   }
@@ -157,7 +157,7 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o-53476 "1-palmitoyl-2-[(6Z,9Z,12Z… to H2
   branch from adp side right {
     adp
     <-> ec_6_3_1_12 [6.3.1.12] +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +d_aspartate +atp +h +phosphate
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig_mnxm12375
   }
 
   branch from adp side left {

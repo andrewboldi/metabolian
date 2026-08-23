@@ -27,7 +27,7 @@ pathway s-4-hydroxymandelate-to-2-hydroxyacetophenone-n "(S)-4-hydroxymandelate 
   branch from o2 side right {
     o2
     <-> . +h +h2o +naphthalene_1_3_6_8_tetrol
-    flaviolin
+    flaviolin_mnxm1372541
   }
 
   branch from h2o2 side left {
@@ -63,7 +63,7 @@ pathway s-4-hydroxymandelate-to-2-hydroxyacetophenone-n "(S)-4-hydroxymandelate 
   branch from h2o side right {
     h2o
     <-> . +h +8_c_glucosyl_chrysin
-    1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
+    1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p_mnxm1364790
   }
 
   branch from nadp side left {
@@ -92,8 +92,8 @@ pathway s-4-hydroxymandelate-to-2-hydroxyacetophenone-n "(S)-4-hydroxymandelate 
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_11_1_7 [1.11.1.7] +betanidin_quinone +h2o +h
-    betanidin
+    <-> ec_1_11_1_7 [1.11.1.7] +betanidin_quinone_chebi_133394 +h2o +h
+    betanidin_mnxm1371738
   }
 
   branch from h2o2 side right {
@@ -146,7 +146,7 @@ pathway s-4-hydroxymandelate-to-2-hydroxyacetophenone-n "(S)-4-hydroxymandelate 
 
   branch from h2o side right {
     h2o
-    <-> . +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
+    <-> . +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p_mnxm1364790
     6_c_glucosyl_chrysin
   }
 

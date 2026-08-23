@@ -12,7 +12,7 @@ pathway phosphoramidate-to-cytidine-3-phospho-5-di "phosphoramidate to cytidine 
     n5_phospho_l_glutamine
     <-> ec_2_7_7_103 [2.7.7.103] +ctp +hplus -ppi
     n5_cytidine_5_diphosphoramidyl_l_glutamine
-    <-> ec_3_5_1_129 [3.5.1.129] +h2o -glutamate -hplus
+    <-> ec_3_5_1_129 [3.5.1.129] +h2o_chebi_15377 -glutamate -hplus
     cytidine_5_diphosphoramidate
     <-> ec_2_7_1_224 [2.7.1.224] +atp -adp -hplus
     cytidine_3_phospho_5_diphosphoramidate

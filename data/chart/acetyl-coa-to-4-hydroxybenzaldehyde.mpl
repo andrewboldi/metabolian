@@ -12,7 +12,7 @@ pathway acetyl-coa-to-4-hydroxybenzaldehyde "acetyl-CoA to 4-hydroxybenzaldehyde
     3_4_hydroxyphenyl_3_oxo_propanoyl_coa
     <-> ec_1_1_1_35 [1.1.1.35] +nadh +h -nad
     3_hydroxy_3_4_hydroxyphenyl_propionyl_coa
-    <-> . -acetyl_coa
+    <-> . -acetyl_coa_chebi_57288
     4_hydroxybenzaldehyde
   }
 
@@ -30,7 +30,7 @@ pathway acetyl-coa-to-4-hydroxybenzaldehyde "acetyl-CoA to 4-hydroxybenzaldehyde
 
   branch from 3_hydroxy_3_4_hydroxyphenyl_propionyl_coa side left {
     3_hydroxy_3_4_hydroxyphenyl_propionyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     trans_4_coumaroyl_coa
   }
 

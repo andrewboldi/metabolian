@@ -85,7 +85,7 @@ pathway garbanzol-to-2-hydroxyliquiritigenin "garbanzol to 2-hydroxyliquiritigen
   branch from 2_hydroxyliquiritigenin side right {
     2_hydroxyliquiritigenin
     <-> . +h
-    licodione
+    licodione_mnxm732886
   }
 
   branch from garbanzol side left {

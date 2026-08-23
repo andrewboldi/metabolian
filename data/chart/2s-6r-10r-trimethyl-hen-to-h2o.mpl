@@ -9,7 +9,7 @@ pathway 2s-6r-10r-trimethyl-hen-to-h2o "(2S,6R,10R)-trimethyl-hen… to H2O" {
   spine at 0,0 {
     2s_6r_10r_trimethyl_hendecanoyl_coa
     <-> . +h
-    2s_6r_10r_trimethyl_hendecanoyl_coa
+    2s_6r_10r_trimethyl_hendecanoyl_coa_mnxm30997
     <-> . +nadh +acetyl_coa +h2o2 -h -coa -o2 -nad -h2o
     4_8_12_trimethyltridecanoyl_coa
     <-> . +nadh +propanoyl_coa +h +h2o2 -coa -o2 -nad -h2o

@@ -8,7 +8,7 @@ pathway cyclohexanecarboxylate-to-diphosphate "cyclohexanecarboxylate to diphosp
 
   spine at 0,0 {
     cyclohexanecarboxylate
-    <-> ec_1_14_15_40 [1.14.15.40] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_40 [1.14.15.40] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     trans_4_hydroxycyclohexanecarboxylate
     <-> ec_1_1_1_226 [1.1.1.226] +nad -nadh -hplus
     4_oxocyclohexanecarboxylate

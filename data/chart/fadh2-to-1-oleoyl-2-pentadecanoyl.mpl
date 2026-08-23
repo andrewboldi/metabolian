@@ -12,7 +12,7 @@ pathway fadh2-to-1-oleoyl-2-pentadecanoyl "FADH2 to 1-oleoyl-2-pentadecanoyl-…
     tridecanoyl_coa
     <-> . +nadh +acetyl_coa +fadh2 +h -pentadecanoyl_coa -coa -nad -h2o
     fad
-    <-> . +pentadecanoyl_coa +1_oleoyl_sn_glycero_3_phosphate -coa
+    <-> . +pentadecanoyl_coa +1_oleoyl_sn_glycero_3_phosphate -coa_chebi_57287
     1_oleoyl_2_pentadecanoyl_sn_glycero_3_phosphate
   }
 
@@ -49,7 +49,7 @@ pathway fadh2-to-1-oleoyl-2-pentadecanoyl "FADH2 to 1-oleoyl-2-pentadecanoyl-…
   branch from h side right {
     h
     <-> ec_3_6_3_4 [3.6.3.4] +adp +phosphate +atp +h2o
-    cu
+    cu_mnxm731166
   }
 
   branch from coa side left {
@@ -66,7 +66,7 @@ pathway fadh2-to-1-oleoyl-2-pentadecanoyl "FADH2 to 1-oleoyl-2-pentadecanoyl-…
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_4 [3.6.3.4] +h +cu +phosphate +atp +cu
+    <-> ec_3_6_3_4 [3.6.3.4] +h +cu_mnxm731166 +phosphate +atp +cu_mnxm731166
     adp
   }
 

@@ -12,7 +12,7 @@ pathway coproporphyrinogen-iii-to-ammonium "coproporphyrinogen III to ammonium" 
     protoporphyrinogen9
     <-> . +menaquinone_8 -menaquinol_8
     protoporphyrin9
-    <-> . +nitrite +menaquinol_8 +h -nh4 -h2o
+    <-> . +nitrite +menaquinol_8 +h -nh4 -h2o_water
     menaquinone_8
     <-> . +aspartate -menaquinol_8
     iminoaspartate

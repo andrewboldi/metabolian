@@ -14,9 +14,9 @@ pathway lumisterol-3-to-di-sulfido-diiron-null "lumisterol 3 to di-μ-sulfido-di
     calciol
     <-> ec_1_14_14_24 [1.14.14.24] +fmnh2 +o2 -fmn -h2o -hplus
     calcidiol
-    <-> ec_1_14_15_18 [1.14.15.18] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_18 [1.14.15.18] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     calcitriol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1_23_s_25_trihydroxyvitamin_d3
   }
 

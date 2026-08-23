@@ -20,13 +20,13 @@ pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate "NDP-α-D-glucose to 2-hydroxy
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +h2o_water
     4_methylumbelliferone
   }
 
   branch from glucose side right {
     glucose
-    <-> . +h2o
+    <-> . +h2o_water
     beta_d_glcp_1_6_beta_d_glcp
   }
 
@@ -38,13 +38,13 @@ pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate "NDP-α-D-glucose to 2-hydroxy
 
   branch from glucose side right {
     glucose
-    <-> . +gypenoside_xvii +h2o
+    <-> . +gypenoside_xvii +h2o_water
     gypenoside_lxxv
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_177 [3.2.1.177] +d_xylp_1_6_d_glcp +h2o
+    <-> ec_3_2_1_177 [3.2.1.177] +d_xylp_1_6_d_glcp +h2o_water
     alpha_d_xylose
   }
 }

@@ -37,7 +37,7 @@ pathway 2-nitrophenolate-to-nitrite "2-nitrophenolate to nitrite" {
   branch from hydrogen_donor side right {
     hydrogen_donor
     <-> ec_1_16_99_1 [1.16.99.1] +cobalt +atp +h2o +hydrogen_acceptor +adp +pi +hplus
-    cobalt
+    cobalt_chebi_85033
   }
 
   branch from 1_4_benzoquinones side left {

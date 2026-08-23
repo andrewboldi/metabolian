@@ -16,8 +16,8 @@ pathway 1-2-di-o-myristoyl-sn-gly-to-h2o "1,2-di-O-myristoyl-sn-gly… to H2O" {
     o_s_tetradecanoylpantetheine_4_phosphoryl_serine
     <-> . +kdo_2_palmitoleoyl_lipid_iva -holo-acp
     kdo_2_palmitoleoyl_myristoyl_lipid_a
-    <-> . +h +adp +phosphate -kdo_2_palmitoleoyl_myristoyl_lipid_a -h2o
-    atp
+    <-> . +h +adp +phosphate -kdo_2_palmitoleoyl_myristoyl_lipid_a -h2o_water
+    atp_mnxm3
   }
 
   branch from ppi side left {
@@ -32,26 +32,26 @@ pathway 1-2-di-o-myristoyl-sn-gly-to-h2o "1,2-di-O-myristoyl-sn-gly… to H2O" {
     s_nephthenol
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_isoleucine +h +amp +jasmonic_acid_anion
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_isoleucine +h +amp_mnxm728294 +jasmonic_acid_anion
     l_isoleucine
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_phenylalanine +h +amp +l_phenylalanine
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_phenylalanine +h +amp_mnxm728294 +l_phenylalanine
     jasmonic_acid_anion
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_1_14_13_38 [1.14.13.38] +5a_11a_dehydrochlortetracycline +nadp +h +o2 +nadph
     anhydrochlortetracycline
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +benzo_a_pyrene_11_12_epoxide
     benzo_a_pyrene_trans_11_12_dihydrodiol
   }
@@ -82,48 +82,48 @@ pathway 1-2-di-o-myristoyl-sn-gly-to-h2o "1,2-di-O-myristoyl-sn-gly… to H2O" {
 
   branch from adp side left {
     adp
-    <-> . +sucrose +atp +h
+    <-> . +sucrose +atp_mnxm3 +h
     sucrose_6_g_phosphate
   }
 
   branch from adp side right {
     adp
-    <-> . +cyclo_l_phenylalanyl_l_seryl +h +phosphate +atp +l_phenylalanine
+    <-> . +cyclo_l_phenylalanyl_l_seryl +h +phosphate +atp_mnxm3 +l_phenylalanine
     l_serine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_3 [3.1.3.3] +o_phosphoserine +h2o +h
+    <-> ec_3_1_3_3 [3.1.3.3] +o_phosphoserine +h2o_water +h
     serine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +h2o
-    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
+    <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +h2o_water
+    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi_mnxm1101203
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_valine +h +amp +jasmonic_acid_anion
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_valine +h +amp_mnxm728294 +jasmonic_acid_anion
     l_valine
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_6_3_2_52 [6.3.2.52] +l_leucine +jasmonic_acid_anion +a_jasmonoyl_l_leucine +h +amp
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
+    <-> ec_6_3_2_52 [6.3.2.52] +l_leucine +jasmonic_acid_anion +a_jasmonoyl_l_leucine +h +amp_mnxm728294
     diphosphate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_1_1_45 [3.1.1.45] +2_chloro_5_methyl_cis_dienelactone
     2_chloro_5_methylmaleylacetate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +nadh +h +5_nitro_o_toluidine +nad
     2_4_diaminotoluene
   }

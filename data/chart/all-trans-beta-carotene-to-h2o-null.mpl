@@ -10,9 +10,9 @@ pathway all-trans-beta-carotene-to-h2o-null "all-trans-beta-carotene to H2O" {
     all_trans_beta_carotene
     <-> . +plastoquinone_9 +h2o -plastoquinol_9
     echinenone
-    <-> ec_1_14_99_63 [1.14.99.63] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
+    <-> ec_1_14_99_63 [1.14.99.63] +hydrogen_donor +o2 -hydrogen_acceptor -h2o_chebi_15377
     canthaxanthin
-    <-> . +nadh +h +o2 -nad -h2o
+    <-> . +nadh +h +o2_mnxm735438 -nad -h2o
     2_2_dihydroxycanthaxanthin
   }
 }

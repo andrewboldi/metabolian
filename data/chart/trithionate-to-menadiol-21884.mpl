@@ -18,167 +18,36 @@ pathway trithionate-to-menadiol-21884 "trithionate to menadiol" {
     orotate
     <-> ec_1_3_5_2 [1.3.5.2] +menadiol -s_dihydroorotate
     menadione
-    <-> . +h2o -o2
+    <-> . +h2o_water -o2
     menadiol
-    <-> . +o2 -superoxide -hplus
-    menadione
+    <-> . +o2_chebi_15379 -superoxide -hplus
+    menadione_chebi_28869
     <-> . +nadph +hplus -nadp
     menadiol
   }
 
-  branch from trioxidosulfanidosulfate side left {
-    trioxidosulfanidosulfate
-    <-> ec_2_8_5_2 [2.8.5.2] +3_disulfanyl_l_alanine +iron +fe2 +hplus
-    s_2_sulfodisulfanyl_l_cysteine_1
-  }
 
-  branch from trioxidosulfanidosulfate side right {
-    trioxidosulfanidosulfate
-    <-> ec_2_8_5_2 [2.8.5.2] +l_cysteine +iron +fe2 +hplus
-    s_sulfosulfanyl_l_cysteine_1
-  }
 
-  branch from sulfate side left {
-    sulfate
-    <-> . +sulfosungeidine_e +hplus
-    sungeidine_b
-  }
 
-  branch from sulfate side right {
-    sulfate
-    <-> . +o2 +hplus
-    h2s
-  }
 
-  branch from 6_decylubiquinol side left {
-    6_decylubiquinol
-    <-> ec_1_6_5_2 [1.6.5.2] +h +6_decylubiquinone +nadph
-    nadp
-  }
 
-  branch from 6_decylubiquinol side right {
-    6_decylubiquinol
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +6_decylubiquinone
-    nad
-  }
 
-  branch from tetrathionate side left {
-    tetrathionate
-    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +phylloquinone
-    phylloquinol
-  }
 
-  branch from tetrathionate side right {
-    tetrathionate
-    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +2_demethylmenaquinone_8
-    2_demethylmenaquinol_8
-  }
 
-  branch from s_dihydroorotate side left {
-    s_dihydroorotate
-    <-> ec_1_3_5_2 [1.3.5.2] +orotate +hydroquinone
-    1_4_benzoquinone
-  }
 
-  branch from s_dihydroorotate side right {
-    s_dihydroorotate
-    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_2 +orotate
-    ubiquinone_2
-  }
 
-  branch from 6_decylubiquinone side left {
-    6_decylubiquinone
-    <-> . +6_decylubiquinol +h2o
-    h2o2
-  }
 
-  branch from orotate side right {
-    orotate
-    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_9 +s_dihydroorotate
-    ubiquinone_9
-  }
 
-  branch from orotate side left {
-    orotate
-    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_10 +s_dihydroorotate
-    ubiquinone_10
-  }
 
-  branch from ubiquinol_6 side right {
-    ubiquinol_6
-    <-> ec_2_1_1_64 [2.1.1.64] +3_demethylubiquinol_6 +sam +hplus
-    sah
-  }
 
-  branch from ubiquinol_6 side left {
-    ubiquinol_6
-    <-> . +spermidine +ubiquinone_6 +h2o +4_aminobutanal
-    propane_1_3_diamine
-  }
 
-  branch from menadione side right {
-    menadione
-    <-> ec_1_10_5_1 [1.10.5.1] +beta_nicotinamide_d_riboside +menadiol +1_d_ribofuranosyl_1_4_dihydronicotinamide
-    h
-  }
 
-  branch from menadione side left {
-    menadione
-    <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrin_ix +menadiol
-    protoporphyrinogen_ix
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +5_6_eet +h2o
-    fad
-  }
 
-  branch from o2 side left {
-    o2
-    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +fad +h2o
-    11s_12r_eet
-  }
 
-  branch from superoxide side right {
-    superoxide
-    <-> . +chromium +nadph +o2 +nadp +hplus
-    chromium
-  }
 
-  branch from superoxide side left {
-    superoxide
-    <-> . +nadh +o2 +chromium +nad +hplus
-    chromium
-  }
 
-  branch from tetrathionate side right {
-    tetrathionate
-    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +ubiquinone_8
-    ubiquinol_8
-  }
 
-  branch from tetrathionate side left {
-    tetrathionate
-    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +ubiquinone_10
-    ubiquinol_10
-  }
 
-  branch from orotate side right {
-    orotate
-    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_7 +s_dihydroorotate
-    ubiquinone_7
-  }
 
-  branch from orotate side left {
-    orotate
-    <-> ec_1_3_5_2 [1.3.5.2] +plastoquinol_9 +s_dihydroorotate
-    plastoquinone_9
-  }
-
-  branch from ubiquinone_6 side right {
-    ubiquinone_6
-    <-> ec_1_6_99_3 [1.6.99.3] +h +ubiquinol_6 +nad
-    nadh
-  }
 }

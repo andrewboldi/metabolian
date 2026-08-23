@@ -14,9 +14,9 @@ pathway 2e-hexadecenedioyl-coa-to-2e-hexadecenedioyl-co "(2E)-hexadecenedioyl-Co
     3_oxohexadecanedioyl_coa
     <-> . +coa -acetyl_coa
     tetradecanedioyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 -coa -o2 -nad -h2o
+    <-> . +nadh_mnxm10 +acetyl_coa_mnxm1104266 +h +h2o2 -coa_mnxm727276 -o2 -nad_mnxm8 -h2o_water
     hexadecanedioyl_coa
-    <-> . +o2 -h2o2
+    <-> . +o2_chebi_15379 -h2o2_chebi_16240
     2e_hexadecenedioyl_coa
   }
 

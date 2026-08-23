@@ -69,7 +69,7 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o-null "3(S)-hydroxy-tetracosa-12… to H2
   branch from atp side left {
     atp
     <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +amp
-    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
+    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi_mnxm1101201
   }
 
   branch from atp side right {

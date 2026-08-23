@@ -12,7 +12,7 @@ pathway linoelaidic-acid-to-5z-11z-14z-icosatrienoy "linoelaidic acid to (5Z,11Z
     diphosphate
     <-> ec_2_3_1_119 [2.3.1.119] +malonyl_coa +h +9z_12z_octadecadienoyl_coa +nadph -co2 -nadp -coa -h2o
     11z_14z_icosadienoyl_coa
-    <-> ec_1_14_19_37 [1.14.19.37] +fe2 +o2 +hplus -iron -h2o
+    <-> ec_1_14_19_37 [1.14.19.37] +fe2 +o2 +hplus -iron -h2o_chebi_15377
     5z_11z_14z_icosatrienoyl_coa
   }
 }

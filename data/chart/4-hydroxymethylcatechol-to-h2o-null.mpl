@@ -108,7 +108,7 @@ pathway 4-hydroxymethylcatechol-to-h2o-null "4-hydroxymethylcatechol to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_1_11_1_1 [1.11.1.1] +nadh +h +h2o2
+    <-> ec_1_11_1_1 [1.11.1.1] +nadh_chebi_77176 +h +h2o2
     alpha_nad
   }
 

@@ -14,7 +14,7 @@ pathway 4-coumarate-to-r-3-ammonio-3-phenylpro "4-coumarate to (R)-3-ammonio-3-p
     r_3_ammonio_3_phenylpropanoate
     <-> ec_6_2_1_78 [6.2.1.78] +atp +coa -amp -ppi
     3r_3_ammonio_3_phenylpropanoyl_coa
-    <-> . +diphosphate +amp -coa -r_3_ammonio_3_phenylpropanoate
-    atp
+    <-> . +diphosphate +amp_mnxm728294 -coa_mnxm727276 -r_3_ammonio_3_phenylpropanoate
+    atp_mnxm3
   }
 }

@@ -10,9 +10,9 @@ pathway 1r-1-hydroxy-2-trimet-to-succinate "[(1R)-1-Hydroxy-2-(trimet… to succ
     1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate
     <-> ec_1_14_11_72 [1.14.11.72] +co2 +succinate -2_trimethylamino_ethyl_phosphonate -o2
     2_oxoglutarate
-    <-> . +2_trimethylamino_ethyl_phosphonate +akg +o2 -succinate -co2 -h2o
+    <-> . +2_trimethylamino_ethyl_phosphonate +akg +o2_chebi_15379 -succinate_chebi_30031 -co2_chebi_16526 -h2o
     2_trimethylamino_vinylphosphonate
-    <-> . +akg +o2 -formaldehyde -succinate -co2
+    <-> . +akg +o2_chebi_15379 -formaldehyde -succinate_chebi_30031 -co2_chebi_16526
     methyldehydrofosmidomycin
   }
 }

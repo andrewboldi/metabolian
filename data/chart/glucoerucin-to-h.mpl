@@ -10,7 +10,7 @@ pathway glucoerucin-to-h "glucoerucin to H" {
     glucoerucin
     <-> ec_1_14_13_237 [1.14.13.237] +h +o2 +nadph -nadp -h2o
     glucoraphanin
-    <-> . +h2o -glucose -hplus
+    <-> . +h2o_chebi_15377 -glucose -hplus
     z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi
     <-> . -sulfur_atom -sulfate
     5_methylsulfinylpentyl_nitrile

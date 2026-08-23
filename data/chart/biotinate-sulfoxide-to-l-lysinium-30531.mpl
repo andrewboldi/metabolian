@@ -19,7 +19,7 @@ pathway biotinate-sulfoxide-to-l-lysinium-30531 "biotinate sulfoxide to L-lysini
   branch from ppi side left {
     ppi
     <-> . +3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3 +atp +coa +amp
-    3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3
+    3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3_chebi_83794
   }
 
   branch from ppi side right {

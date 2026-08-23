@@ -85,7 +85,7 @@ pathway geranylgeranyl-to-h2o-null "Geranylgeranyl… to H2O" {
   branch from h side right {
     h
     <-> . +nh4 +7_8_dihydropterin +h2o
-    7_8_dihydrolumazine
+    7_8_dihydrolumazine_mnxm1363715
   }
 
   branch from nadph side left {
@@ -168,7 +168,7 @@ pathway geranylgeranyl-to-h2o-null "Geranylgeranyl… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +aurodrosopterin +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
+    <-> . +aurodrosopterin +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido_mnxm1371398
     7_8_dihydrolumazine
   }
 }

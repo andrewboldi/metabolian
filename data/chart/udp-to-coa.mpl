@@ -24,7 +24,7 @@ pathway udp-to-coa "UDP to CoA" {
 
   branch from h side right {
     h
-    <-> . +2z_4e_2_hydroxy_6_oxo_4_bromophenoxy_hexa_2_4_d +4_bromo_2_3_dihydroxydiphenyl_ether
+    <-> . +2z_4e_2_hydroxy_6_oxo_4_bromophenoxy_hexa_2_4_d_mnxm1368555 +4_bromo_2_3_dihydroxydiphenyl_ether
     o2
   }
 
@@ -61,7 +61,7 @@ pathway udp-to-coa "UDP to CoA" {
   branch from h side right {
     h
     <-> . +benzene_1_2_4_triol +o2
-    2_4_6_trioxohexanoate
+    2_4_6_trioxohexanoate_mnxm1368565
   }
 
   branch from malonyl_coa side left {
@@ -84,7 +84,7 @@ pathway udp-to-coa "UDP to CoA" {
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_93 [2.3.1.93] +2e_2_methylbut_2_enoyl_coa +13_hydroxylupanine
+    <-> ec_2_3_1_93 [2.3.1.93] +2e_2_methylbut_2_enoyl_coa +13_hydroxylupanine_mnxm1371287
     13alpha_tigloyloxylupanine
   }
 }

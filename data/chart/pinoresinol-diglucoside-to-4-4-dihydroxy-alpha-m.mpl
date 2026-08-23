@@ -10,18 +10,18 @@ pathway pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m "Pinoresinol diglucosid
     pinoresinol_diglucoside
     <-> . +h2o -pinoresinol
     glucose
-    <-> ec_1_17_9_2 [1.17.9.2] +pinoresinol +copper +h2o -copper -hplus
+    <-> ec_1_17_9_2 [1.17.9.2] +pinoresinol +copper +h2o_chebi_15377 -copper_chebi_49552 -hplus
     6_hydroxypinoresinol
-    <-> ec_1_17_9_2 [1.17.9.2] +h +cu -cu -h2o
+    <-> ec_1_17_9_2 [1.17.9.2] +h +cu -cu_mnxm731166 -h2o
     pinoresinol
-    <-> . +p_hydroxybenzyl_alcohol +cu -4_hydroxybenzaldehyde -cu
+    <-> . +p_hydroxybenzyl_alcohol +cu_mnxm731166 -4_hydroxybenzaldehyde -cu
     h
     <-> . +4_hydroxyacetophenone +4_hydroxybenzaldehyde -4_4_dihydroxy_alpha_methylstilbene
     o2
   }
 
-  branch from cu side left {
-    cu
+  branch from cu_mnxm731166 side left {
+    cu_mnxm731166
     <-> . +cuii_phytate
     1d_myo_inositol_hexakisphosphate
   }

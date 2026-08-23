@@ -12,7 +12,7 @@ pathway diphosphate-to-chlorophyllide-b-null "diphosphate to chlorophyllide b" {
     2e_6e_10e_geranylgeranyl_diphosphate
     <-> . +chlorophyllide_b -geranylgeranyl_chlorophyll_b
     diphosphate
-    <-> ec_2_5_1_62 [2.5.1.62] +geranylgeranyl_chlorophyll_b -2e_6e_10e_geranylgeranyl_diphosphate -chlorophyllide_b
+    <-> ec_2_5_1_62 [2.5.1.62] +geranylgeranyl_chlorophyll_b -2e_6e_10e_geranylgeranyl_diphosphate -chlorophyllide_b_mnxm741349
     h
   }
 
@@ -64,8 +64,8 @@ pathway diphosphate-to-chlorophyllide-b-null "diphosphate to chlorophyllide b" {
     medicagenic_acid
   }
 
-  branch from chlorophyllide_b side left {
-    chlorophyllide_b
+  branch from chlorophyllide_b_mnxm741349 side left {
+    chlorophyllide_b_mnxm741349
     <-> . +h2o
     71_dihydroxychlorophyllide_a
   }
@@ -103,7 +103,7 @@ pathway diphosphate-to-chlorophyllide-b-null "diphosphate to chlorophyllide b" {
   branch from h2o side left {
     h2o
     <-> . +formate +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
-    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
+    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin_mnxm741042
   }
 
   branch from chlorophyllide_b side right {

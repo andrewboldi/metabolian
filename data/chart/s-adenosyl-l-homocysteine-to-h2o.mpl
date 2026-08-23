@@ -60,7 +60,7 @@ pathway s-adenosyl-l-homocysteine-to-h2o "S-adenosyl-L-homocysteine to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +dca_cl
+    <-> . +dca_cl_chebi_131936
     dehydrodiconiferyl_acid_gem_diol
   }
 

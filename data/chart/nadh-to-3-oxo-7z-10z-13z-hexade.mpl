@@ -12,9 +12,9 @@ pathway nadh-to-3-oxo-7z-10z-13z-hexade "NADH to 3-oxo-(7Z,10Z,13Z)-hexade…" {
     coa
     <-> . +nadh +acetyl_coa +h +5_8_11_tetradecatrienoyl_coenzyme_a -coa -nad -h2o
     2e_7z_10z_13z_hexadecatetraenoyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     3r_7z_10z_13z_3_hydroxyhexadecatrienoyl_coa
-    <-> . +nad -nadh -hplus
+    <-> . +nad_chebi_57540 -nadh_chebi_57945 -hplus
     3_oxo_7z_10z_13z_hexadecatrienoyl_coa
   }
 }

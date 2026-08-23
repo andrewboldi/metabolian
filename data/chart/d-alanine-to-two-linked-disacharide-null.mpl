@@ -37,7 +37,7 @@ pathway d-alanine-to-two-linked-disacharide-null "D-alanine to Two linked disach
   branch from h side right {
     h
     <-> . +muscaflavin +h2o
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_mnxm1368853
   }
 
   branch from d_alanine side left {

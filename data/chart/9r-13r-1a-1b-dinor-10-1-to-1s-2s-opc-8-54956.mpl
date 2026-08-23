@@ -11,14 +11,14 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8-54956 "(9R,13R)-1a,1b-dinor-10,1â
     <-> . +atp +coa -amp -ppi
     9s_13s_1a_1b_dinor_10_11_dihydro_12_oxo_15_phyt
     <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +h -3_oxo_opc8_coa
-    coa
+    coa_mnxm727276
     <-> ec_1_1_1_211 [1.1.1.211] +nadh +h +3_oxo_opc8_coa -nad
     3_hydroxy_opc8_coa
     <-> ec_4_2_1_17 [4.2.1.17] -h2o
     trans_2_enoyl_opc8_coa
     <-> ec_1_3_3_6 [1.3.3.6] +h2o2 -o2
     opc8_coa
-    <-> . +diphosphate +amp -atp -coa -1s_2s_opc_8
+    <-> . +diphosphate +amp_mnxm728294 -atp_mnxm3 -coa_mnxm727276 -1s_2s_opc_8
     h
   }
 
@@ -34,14 +34,14 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8-54956 "(9R,13R)-1a,1b-dinor-10,1â
     z_bisabolene
   }
 
-  branch from coa side left {
-    coa
+  branch from coa_mnxm727276 side left {
+    coa_mnxm727276
     <-> ec_2_3_1_183 [2.3.1.183] +acetyl_coa +demethylphosphinothricin +h
     n_acetyl_demethyl_l_phosphinothricin
   }
 
-  branch from coa side right {
-    coa
+  branch from coa_mnxm727276 side right {
+    coa_mnxm727276
     <-> . +spermidine +trans_4_coumaroyl_coa +h
     n1_n5_n10_e_tri_p_coumaroylspermidine
   }
@@ -94,15 +94,15 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8-54956 "(9R,13R)-1a,1b-dinor-10,1â
     s_adenosyl_l_methionine
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_isoleucine +h +amp +jasmonic_acid_anion
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_isoleucine +h +amp_mnxm728294 +jasmonic_acid_anion
     l_isoleucine
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_phenylalanine +h +amp +l_phenylalanine
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_phenylalanine +h +amp_mnxm728294 +l_phenylalanine
     jasmonic_acid_anion
   }
 
@@ -132,7 +132,7 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8-54956 "(9R,13R)-1a,1b-dinor-10,1â
 
   branch from acetyl_coa side left {
     acetyl_coa
-    <-> . +thienamycin +coa
+    <-> . +thienamycin +coa_mnxm727276
     n_acetylthienamycin
   }
 
@@ -148,14 +148,14 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8-54956 "(9R,13R)-1a,1b-dinor-10,1â
     co2
   }
 
-  branch from coa side right {
-    coa
+  branch from coa_mnxm727276 side right {
+    coa_mnxm727276
     <-> . +subaphyllin +h +e_feruloyl_coa
     putrescine
   }
 
-  branch from coa side left {
-    coa
+  branch from coa_mnxm727276 side left {
+    coa_mnxm727276
     <-> . +2_methylpropanoyl_coa +n_demethyl_desepoxymaytansinol
     n_demethyl_desepoxyansamitocin_p_3
   }

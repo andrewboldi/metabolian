@@ -16,7 +16,7 @@ pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-
     menaquinone_9
     <-> ec_1_3_99_38 [1.3.99.38] +hydrogen_donor -hydrogen_acceptor
     dihydromenaquinone_9
-    <-> ec_1_14_15_27 [1.14.15.27] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_27 [1.14.15.27] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     hydroxy_dihydromenaquinone_9
     <-> ec_2_8_2_40 [2.8.2.40] +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
     sulfo_dihydromenaquinone_9
@@ -30,7 +30,7 @@ pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +3_phosphonato_5_adenylyl_sulfate +hplus
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_142153 +3_phosphonato_5_adenylyl_sulfate +hplus
     3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam
   }
 
@@ -49,12 +49,12 @@ pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
     <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +3_phosphonato_5_adenylyl_sulfate +hplus
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_142154
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +3_phosphonato_5_adenylyl_sulfate +hplus
-    3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_142154 +3_phosphonato_5_adenylyl_sulfate +hplus
+    3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam_chebi_142172
   }
 }

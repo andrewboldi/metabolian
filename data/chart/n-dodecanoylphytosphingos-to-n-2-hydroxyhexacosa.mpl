@@ -48,7 +48,7 @@ pathway n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa "N-dodecanoylphytosphin
 
   branch from n_2_hydroxyhexacosanyl_4r_phytosphingosine side right {
     n_2_hydroxyhexacosanyl_4r_phytosphingosine
-    <-> . +h +n_hexacosanoyl_4r_hydroxysphinganine +o2 +nadph +h2o
+    <-> . +h +n_hexacosanoyl_4r_hydroxysphinganine +o2_mnxm735438 +nadph +h2o_water
     nadp
   }
 

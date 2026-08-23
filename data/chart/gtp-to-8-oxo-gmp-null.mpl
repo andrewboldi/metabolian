@@ -10,9 +10,9 @@ pathway gtp-to-8-oxo-gmp-null "GTP to 8-oxo-GMP" {
     gtp
     <-> . +hydroxyl -h2o
     8_oxo_gtp
-    <-> ec_3_6_1_69 [3.6.1.69] +h2o -pi -hplus
+    <-> ec_3_6_1_69 [3.6.1.69] +h2o_chebi_15377 -pi -hplus
     8_oxo_gdp
-    <-> ec_3_6_1_58 [3.6.1.58] +h2o -pi -hplus
+    <-> ec_3_6_1_58 [3.6.1.58] +h2o_chebi_15377 -pi -hplus
     8_oxo_gmp
   }
 }

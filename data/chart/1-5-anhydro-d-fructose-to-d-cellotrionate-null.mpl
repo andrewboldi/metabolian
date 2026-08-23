@@ -16,7 +16,7 @@ pathway 1-5-anhydro-d-fructose-to-d-cellotrionate-null "1,5-anhydro-D-fructose t
     cellotriose
     <-> . +o2 -h2o2
     d_cellotriono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_cellotrionate
   }
 

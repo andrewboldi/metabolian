@@ -66,7 +66,7 @@ pathway 6-deoxocastasterone-to-fmn-69875 "6-deoxocastasterone to FMN" {
 
   branch from castasterone side left {
     castasterone
-    <-> . +h +o2 +nadph +brassinolide +h2o
+    <-> . +h +o2_mnxm735438 +nadph +brassinolide_mnxm739698 +h2o_water
     nadp
   }
 }

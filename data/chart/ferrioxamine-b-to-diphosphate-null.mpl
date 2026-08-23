@@ -12,9 +12,9 @@ pathway ferrioxamine-b-to-diphosphate-null "ferrioxamine B to diphosphate" {
     desferrioxamine_b
     <-> . +diphosphate +h +amp +h2o -atp -n_3_carboxypropanoyl_n_hydroxycadaverine
     n_hydroxy_n_acetylcadaverine
-    <-> . +n_3_carboxypropanoyl_n_hydroxycadaverine +atp -amp -ppi -hplus
+    <-> . +n_3_carboxypropanoyl_n_hydroxycadaverine +atp_chebi_30616 -amp_chebi_456215 -ppi -hplus
     bisucaberin_b
-    <-> . +atp -amp -ppi -hplus
+    <-> . +atp_chebi_30616 -amp_chebi_456215 -ppi -hplus
     1_12_dihydroxy_1_6_12_17_tetraazacyclodocosane_2
   }
 
@@ -63,7 +63,7 @@ pathway ferrioxamine-b-to-diphosphate-null "ferrioxamine B to diphosphate" {
   branch from fe side right {
     fe
     <-> ec_1_16_3_1 [1.16.3.1] +h +o2 +h2o
-    fe
+    fe_mnxm1370983
   }
 
   branch from diphosphate side left {

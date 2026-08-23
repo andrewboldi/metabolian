@@ -42,7 +42,7 @@ pathway dtdp-3-n-n-dimethylamino-to-l-glutamate-null "dTDP-3-N,N-dimethylamino-â
 
   branch from dtdp_3_4_didehydro_2_6_dideoxy_d_glucose side left {
     dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
-    <-> ec_4_2_1_159 [4.2.1.159] +h2o
+    <-> ec_4_2_1_159 [4.2.1.159] +h2o_chebi_15377
     dtdp_4_dehydro_6_deoxy_d_glucose
   }
 

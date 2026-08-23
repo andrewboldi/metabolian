@@ -16,21 +16,117 @@ pathway 8-amino-8-demethylribofla-to-adp-53416 "8-amino-8-demethylribofla… to 
     roseoflavin_5_phosphate
   }
 
+  branch from sah side left {
+    sah
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_365 [2.1.1.365] +d_man3me_1_4_d_man3me +sam +hplus
+    1_3_3_tri_o_methyl_4_mannobiose
+  }
 
+  branch from roseoflavin side left {
+    roseoflavin
+    <-> . +atp +adp
+    8_demethyl_8_dimethylamino_riboflavin_5_phosphat
+  }
 
+  branch from roseoflavin side right {
+    roseoflavin
+    <-> ec_2_1_1_343 [2.1.1.343] +s_adenosyl_l_homocysteine +h +8_amino_8_demethylriboflavin_chebi_137336
+    s_adenosyl_l_methionine
+  }
 
+  branch from roseoflavin_5_phosphate side left {
+    roseoflavin_5_phosphate
+    <-> ec_2_7_7_2 [2.7.7.2] +roseoflavin_adenine_dinucleotide +h +atp
+    diphosphate
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +4_glutathionyl_cyclophosphamide +h2o +glutathione
+    aldophosphamide
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +carboxyphosphamide +aldophosphamide +h2o
+    nad
+  }
 
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_163 [2.7.1.163] +h +4_o_phosphohygromycin +atp
+    hygromycin_b
+  }
 
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_151 [2.7.1.151] +1d_myo_inositol_1_4_5_trisphosphate +h +atp
+    1d_myo_inositol_4_5_bisphosphate
+  }
 
+  branch from sam side right {
+    sam
+    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +5_s_methyl_5_thioadenosine +hplus
+    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
+  }
 
+  branch from sam side left {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    n4_methylcytidine_5_monophosphate_1
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +sam +n4_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
 
+  branch from sah side left {
+    sah
+    <-> . +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +n_indol_3_ylacetyl_glycine +amp +indol_3_yl_acetate
+    glycine
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +indol_3_yl_acetyl_l_isoleucine +h +amp +l_isoleucine
+    indol_3_yl_acetate
+  }
 
+  branch from h side right {
+    h
+    <-> . +co2 +nh4 +atropaldehyde
+    3_carbamoyl_2_phenylpropionaldehyde
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +5_phenyl_1_3_oxazinane_2_4_dione +nad
+    4_hydroxy_5_phenyltetrahydro_1_3_oxazin_2_one
+  }
 
+  branch from adp side right {
+    adp
+    <-> . +1d_myo_inositol_3_4_6_trisphosphate +h +atp
+    d_myo_inositol_3_6_bisphosphate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +desferrioxamine_g +phosphate +h2o +atp
+    n_3_carboxypropanoyl_n_hydroxycadaverine
+  }
 }

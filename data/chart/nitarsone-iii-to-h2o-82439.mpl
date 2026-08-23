@@ -12,13 +12,13 @@ pathway nitarsone-iii-to-h2o-82439 "nitarsone (III) to H2O" {
     4_nitrocyclohexa_2_5_dien_1_one
     <-> . +arsenite +gsh +hplus -h2o
     arsenic_triglutathione
-    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate -arsenic_triglutathione -h2o
+    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate -arsenic_triglutathione -h2o_water
     atp
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o_water
     ala_his
   }
 
@@ -28,27 +28,27 @@ pathway nitarsone-iii-to-h2o-82439 "nitarsone (III) to H2O" {
     1_beta_d_arabinofuranosylcytosine_5_monophosphat
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_159 [3.2.1.159] +agarotriose +3_6_anhydro_l_galactopyranose
     neoagarotetraose
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_1_159 [3.2.1.159] +agaropentaose +3_6_anhydro_l_galactopyranose
     neoagarohexaose
   }
 
   branch from nitarsone_iii side left {
     nitarsone_iii
-    <-> . +h +nadph +p_aminophenylarsonous_acid +h2o
+    <-> . +h +nadph +p_aminophenylarsonous_acid +h2o_water
     nadp
   }
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +l_glutamine +n_acetyl_l_glutaminyl_l_glutamine +h2o
+    <-> . +acetyl_coa +l_glutamine +n_acetyl_l_glutaminyl_l_glutamine +h2o_water
     coa
   }
 
@@ -72,13 +72,13 @@ pathway nitarsone-iii-to-h2o-82439 "nitarsone (III) to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h2o
+    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h2o_water
     d_myo_inositol_1_2_3_4_tetrakisphosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h +h2o
+    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h +h2o_water
     1d_myo_inositol_2_4_bisphosphate
   }
 
@@ -94,14 +94,14 @@ pathway nitarsone-iii-to-h2o-82439 "nitarsone (III) to H2O" {
     reduced_beta_nicotinamide_d_ribonucleotide
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +neocarrabiose +neocarrabiose_sulfate
     neocarratetraose_4_o_sulfate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_4_2_3_38 [4.2.3.38] +diphosphate +alpha_bisabolol
     2e_6e_farnesyl_diphosphate
   }

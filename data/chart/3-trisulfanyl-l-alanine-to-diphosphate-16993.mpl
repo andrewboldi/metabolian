@@ -12,7 +12,7 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate-16993 "3-trisulfanyl-L-alanine to
     s_sulfosulfanyl_l_cysteine_1
     <-> ec_3_1_6_20 [3.1.6.20] +h2o -sulfate -hplus
     3_disulfanyl_l_alanine
-    <-> ec_2_8_1_4 [2.8.1.4] +uridine_5_monophosphate_1 +di_sulfido_diiron +atp +hplus -4_thiouridine_5_phosphate_1 -di_sulfido_diiron -amp -ppi
+    <-> ec_2_8_1_4 [2.8.1.4] +uridine_5_monophosphate_1 +di_sulfido_diiron +atp +hplus -4_thiouridine_5_phosphate_1 -di_sulfido_diiron_chebi_33737 -amp -ppi
     l_cysteine
   }
 

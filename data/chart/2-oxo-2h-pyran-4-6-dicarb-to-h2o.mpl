@@ -13,7 +13,7 @@ pathway 2-oxo-2h-pyran-4-6-dicarb-to-h2o "2-oxo-2H-pyran-4,6-dicarb… to H2O" {
     <-> . +h2o -h -methanol
     1e_4_oxobut_1_ene_1_2_4_tricarboxylate
     <-> . +h +methanol -h2o
-    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
+    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien_chebi_81691
   }
 
   branch from 1e_4_oxobut_1_ene_1_2_4_tricarboxylate side left {

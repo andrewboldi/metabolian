@@ -85,6 +85,6 @@ pathway r-10-hydroxyoctadecanoa-to-l-2-aminoadipate "(R)-10-hydroxyoctadecanoaâ€
   branch from ppi side right {
     ppi
     <-> ec_4_2_3_126 [4.2.3.126] +fpp
-    muurolene
+    muurolene_chebi_64798
   }
 }

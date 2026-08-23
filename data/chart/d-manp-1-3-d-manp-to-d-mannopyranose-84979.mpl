@@ -24,7 +24,7 @@ pathway d-manp-1-3-d-manp-to-d-mannopyranose-84979 "α-D-Manp-(1→3)-[α-D-Manp
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +h2o_water
     epimelibiose
   }
 

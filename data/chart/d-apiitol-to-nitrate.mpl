@@ -86,19 +86,19 @@ pathway d-apiitol-to-nitrate "D-apiitol to nitrate" {
 
   branch from ubiquinol_8 side right {
     ubiquinol_8
-    <-> ec_1_6_5_3 [1.6.5.3] +nadh +ubiquinone_8 +h +nad
+    <-> ec_1_6_5_3 [1.6.5.3] +nadh_mnxm10 +ubiquinone_8 +h +nad_mnxm8
     pmf
   }
 
   branch from ubiquinone_8 side left {
     ubiquinone_8
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +h +pmf +ubiquinol_8
-    nad
+    <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh_mnxm10 +h +pmf +ubiquinol_8
+    nad_mnxm8
   }
 
   branch from ubiquinone_8 side right {
     ubiquinone_8
-    <-> . +pmf +nadh +h +pmf +ubiquinol_8 +nad
+    <-> . +pmf +nadh_mnxm10 +h +pmf +ubiquinol_8 +nad_mnxm8
     na
   }
 
@@ -176,19 +176,19 @@ pathway d-apiitol-to-nitrate "D-apiitol to nitrate" {
 
   branch from ubiquinone_8 side left {
     ubiquinone_8
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +h +pmf +ubiquinol_8 +nad
-    nadh
+    <-> ec_1_6_5_3 [1.6.5.3] +pmf +h +pmf +ubiquinol_8 +nad_mnxm8
+    nadh_mnxm10
   }
 
   branch from ubiquinol_8 side right {
     ubiquinol_8
     <-> ec_1_2_2_1 [1.2.2.1] +ubiquinone_8 +h +formate
-    co2
+    co2_mnxm13
   }
 
   branch from ubiquinol_8 side left {
     ubiquinol_8
-    <-> . +hexadecanoate +ubiquinone_8 +atp +coa +nad +h2o +nadh +diphosphate +h +amp
+    <-> . +hexadecanoate +ubiquinone_8 +atp_mnxm3 +coa +nad_mnxm8 +h2o_water +nadh_mnxm10 +diphosphate +h +amp_mnxm728294
     acetyl_coa
   }
 

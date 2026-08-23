@@ -10,7 +10,7 @@ pathway norcraugsodine-to-o-pantetheine-4-phospho-null "Norcraugsodine to O-(pan
     norcraugsodine
     <-> . +h +h2o -tyramine
     3_4_dihydroxybenzaldehyde
-    <-> . +nad +h2o -nadh -hplus
+    <-> . +nad +h2o_chebi_15377 -nadh -hplus
     3_4_dihydroxybenzoate
     <-> ec_6_2_1_62 [6.2.1.62] +holo-acp +atp -amp -ppi
     o_s_3_4_dihydroxybenzoyl_pantetheine_4_phosphory

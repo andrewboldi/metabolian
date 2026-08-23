@@ -158,7 +158,7 @@ pathway gdp-to-h2o "GDP to H2O" {
 
   branch from d_glucopyranose_1_phosphate side right {
     d_glucopyranose_1_phosphate
-    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +phosphate
+    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143182 +phosphate
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 

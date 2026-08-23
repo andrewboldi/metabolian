@@ -20,7 +20,7 @@ pathway 2e-11z-octadecadienoyl-to-coa-83027 "(2E,11Z)-octadecadienoyl-… to CoA
 
   branch from 11z_3_oxooctadecenoyl_coa side left {
     11z_3_oxooctadecenoyl_coa
-    <-> . +coa +acetyl_coa
+    <-> . +coa_chebi_57287 +acetyl_coa
     palmitoleoyl_coa
   }
 }

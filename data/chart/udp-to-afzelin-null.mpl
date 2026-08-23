@@ -27,7 +27,7 @@ pathway udp-to-afzelin-null "UDP to afzelin" {
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
     <-> . +udp +2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1 +h
-    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1
+    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1_mnxm1559712
   }
 
   branch from h side left {
@@ -68,7 +68,7 @@ pathway udp-to-afzelin-null "UDP to afzelin" {
 
   branch from kaempferol_7_o_d_glucoside side left {
     kaempferol_7_o_d_glucoside
-    <-> . +malonyl-coa +coa
+    <-> . +malonyl-coa +coa_chebi_57287
     kaempferol_7_o_6_o_malonyl_d_glucoside
   }
 

@@ -61,7 +61,7 @@ pathway propanoate-to-d-threonine "propanoate to D-threonine" {
   branch from phosphate side right {
     phosphate
     <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade +h2o
-    coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade
+    coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade_mnxm818836
   }
 
   branch from propanoate side left {

@@ -12,9 +12,9 @@ pathway h-to-amicoumacin-a "H to amicoumacin A" {
     atp
     <-> . +nh4 +ai_77_b -h2o
     amicoumacin_a
-    <-> ec_2_7_1_230 [2.7.1.230] +atp -adp -hplus
+    <-> ec_2_7_1_230 [2.7.1.230] +atp_chebi_30616 -adp_chebi_456216 -hplus
     amicoumacin_a_2_phosphate
-    <-> ec_3_1_3_107 [3.1.3.107] +h2o -pi
+    <-> ec_3_1_3_107 [3.1.3.107] +h2o_chebi_15377 -pi
     amicoumacin_a
   }
 }

@@ -11,7 +11,7 @@ pathway s-s-2-5-di-p-hydroxybe-to-fr901483-83579 "(S,S)-2,5-di-(p-hydroxybe… t
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     1s_4s_4_4_hydroxyphenyl_methyl_2_5_diazaspiro_b
     <-> . +nadph +hplus -nadp
-    1s_4s_4_4_hydroxyphenyl_methyl_2_5_diazaspiro_b
+    1s_4s_4_4_hydroxyphenyl_methyl_2_5_diazaspiro_b_chebi_233175
     <-> . +sam -sah -hplus
     1s_4s_4_4_hydroxyphenyl_methyl_2_methyl_2_5_dia
     <-> . +sam -sah -hplus

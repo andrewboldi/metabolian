@@ -14,7 +14,7 @@ pathway quillate-to-3-o-d-galactosyl-1-2-85031 "quillate to 3-O-[β-D-galactosyl
     3_o_d_galactosyl_1_2_d_glucuronosyl_quillate
     <-> . +udp_d_xylose -udp -hplus
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillate
-    <-> . +udp +h -3_o_d_galactosyl_1_2_d_glucuronosyl_quillate
+    <-> . +udp_mnxm1102128 +h -3_o_d_galactosyl_1_2_d_glucuronosyl_quillate
     udp_alpha_d_xylose
   }
 

@@ -11,7 +11,7 @@ pathway h-to-4-2-aminophenyl-2-4-dio-null "H to 4-(2-aminophenyl)-2,4-dio…" {
     <-> ec_1_1_1_86 [1.1.1.86] +2_oxopentanoate +nadph -nadp
     2r_hydroxypentanoate
     <-> . +fad +hplus -fadh2
-    2_oxopentanoate
+    2_oxopentanoate_chebi_28644
     <-> . +l_kynurenine -4_2_aminophenyl_2_4_dioxobutanoate
     l_2_aminopentanoic_acid
   }

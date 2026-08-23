@@ -12,7 +12,7 @@ pathway 1-2-di-9z-12z-octadeca-to-h2o-67436 "1,2-di-[(9Z,12Z)-octadeca… to H2O
     1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc
     <-> . +h2o -tetradecanoate -hplus
     2_linoleoyl_sn_glycero_3_phosphocholine
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -2_linoleoyl_sn_glycero_3_phosphocholine -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -2_linoleoyl_sn_glycero_3_phosphocholine -h2o_water
     atp
   }
 }

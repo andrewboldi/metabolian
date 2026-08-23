@@ -10,11 +10,11 @@ pathway pmf-to-ammonium "PMF to ammonium" {
     pmf
     <-> . +n_acetylputrescine +o2 +h2o -pmf -nh4 -h2o2
     4_acetamidobutanal
-    <-> . +nad +h2o -nadh -hplus
+    <-> . +nad +h2o_chebi_15377 -nadh -hplus
     4_acetamidobutanoate
-    <-> ec_3_5_1_63 [3.5.1.63] +h2o -acetate
+    <-> ec_3_5_1_63 [3.5.1.63] +h2o_chebi_15377 -acetate
     gaba
-    <-> . +o2 +h2o -h2o2 -nh3
+    <-> . +o2_chebi_15379 +h2o_chebi_15377 -h2o2_chebi_16240 -nh3
     4_oxobutanoate
   }
 
@@ -32,13 +32,13 @@ pathway pmf-to-ammonium "PMF to ammonium" {
 
   branch from h2o2 side left {
     h2o2
-    <-> . +decanoyl_coa +coa +o2 +nad +h2o +nadh +acetyl_coa +h
+    <-> . +decanoyl_coa +coa +o2 +nad_mnxm8 +h2o +nadh_mnxm10 +acetyl_coa +h
     octanoyl_coa
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +decanoyl_coa +nadh +acetyl_coa +h +coa +o2 +nad +h2o
+    <-> . +decanoyl_coa +nadh_mnxm10 +acetyl_coa +h +coa +o2 +nad_mnxm8 +h2o
     dodecanoyl_coa
   }
 
@@ -62,7 +62,7 @@ pathway pmf-to-ammonium "PMF to ammonium" {
 
   branch from o2 side right {
     o2
-    <-> . +nadh +9z_12z_15z_octadecatrienoyl_coa +h +nad +h2o
+    <-> . +nadh_mnxm10 +9z_12z_15z_octadecatrienoyl_coa +h +nad_mnxm8 +h2o
     6z_9z_12z_15z_octadecatetraenoyl_coa
   }
 
@@ -80,13 +80,13 @@ pathway pmf-to-ammonium "PMF to ammonium" {
 
   branch from h2o2 side left {
     h2o2
-    <-> . +dodecanoyl_coa +nadh +acetyl_coa +h +coa +o2 +nad +h2o
+    <-> . +dodecanoyl_coa +nadh_mnxm10 +acetyl_coa +h +coa +o2 +nad_mnxm8 +h2o
     tetradecanoyl_coa
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +h +coa +o2 +nad +h2o
+    <-> . +nadh_mnxm10 +acetyl_coa +tetradecanoyl_coa +h +coa +o2 +nad_mnxm8 +h2o
     hexadecanoyl_coa
   }
 }

@@ -10,7 +10,7 @@ pathway nadh-to-r-z-3-hydroxyhexacos-17 "NADH to (R,Z)-3-hydroxyhexacos-17…" {
     nadh
     <-> . +erucoyl_coa +acetyl_coa +h +h2o2 -coa -o2 -nad -h2o
     15z_tetracosenoyl_coa
-    <-> . +malonyl-coa +hplus -co2 -coa
+    <-> . +malonyl-coa +hplus -co2 -coa_chebi_57287
     3_oxo_17z_hexacosenoyl_coa
     <-> . +nadph +hplus -nadp
     r_z_3_hydroxyhexacos_17_enoyl_coa

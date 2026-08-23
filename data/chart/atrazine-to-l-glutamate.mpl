@@ -16,7 +16,7 @@ pathway atrazine-to-l-glutamate "atrazine to L-glutamate" {
     isopropylaminium
     <-> . +glutamate +atp -adp -pi -hplus
     n_isopropyl_l_glutamine
-    <-> . +h2o -l_glutamate
+    <-> . +h2o_water -l_glutamate
     isopropylamine
   }
 
@@ -46,25 +46,25 @@ pathway atrazine-to-l-glutamate "atrazine to L-glutamate" {
 
   branch from n_isopropyl_l_glutamine side left {
     n_isopropyl_l_glutamine
-    <-> . +h +o2 +nadph +nadp +h2o
+    <-> . +h +o2 +nadph +nadp +h2o_water
     n_l_glutamyl_l_alaninol
   }
 
   branch from n_isopropyl_l_glutamine side right {
     n_isopropyl_l_glutamine
-    <-> . +nadh +h +o2 +n_l_glutamyl_l_alaninol +h2o
-    nad
+    <-> . +nadh_mnxm10 +h +o2 +n_l_glutamyl_l_alaninol +h2o_water
+    nad_mnxm8
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +xanthurenate_8_o_beta_d_glucoside +h2o +3_hydroxykynurenine_o_beta_d_glucoside +h
+    <-> . +xanthurenate_8_o_beta_d_glucoside +h2o_water +3_hydroxykynurenine_o_beta_d_glucoside +h
     2_oxoglutarate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +leukotriene_c5 +h2o +leukotriene_d5
+    <-> . +leukotriene_c5 +h2o_water +leukotriene_d5
     h
   }
 
@@ -80,27 +80,27 @@ pathway atrazine-to-l-glutamate "atrazine to L-glutamate" {
     php
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +h +adp_mnxm40333 +phosphate +atp_mnxm3
     glutathione_disulfide
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +glutathione +phosphate +glutathione
-    atp
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +h +adp_mnxm40333 +glutathione +phosphate +glutathione
+    atp_mnxm3
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_2_3_2_2 [2.3.2.2] +3_cyano_l_alanine +h +h2o
+    <-> ec_2_3_2_2 [2.3.2.2] +3_cyano_l_alanine +h +h2o_water
     glutamyl_cyanoalanine
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_2_3_2_2 [2.3.2.2] +gamma_glutamyl_beta_aminopropiononitrile +co2 +h2o +h
+    <-> ec_2_3_2_2 [2.3.2.2] +gamma_glutamyl_beta_aminopropiononitrile +co2_mnxm13 +h2o_water +h
     3_cyano_l_alanine
   }
 }

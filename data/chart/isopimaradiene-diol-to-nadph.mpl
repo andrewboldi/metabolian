@@ -10,9 +10,9 @@ pathway isopimaradiene-diol-to-nadph "isopimaradiene-diol to NADPH" {
     isopimaradiene_diol
     <-> . -h2o
     isopimara_7_15_dienal
-    <-> . +nadp +h2o -nadph -hplus
+    <-> . +nadp +h2o_chebi_15377 -nadph -hplus
     isopimarate
-    <-> . +nadp +h2o -o2 -nadph
+    <-> . +nadp_mnxm5 +h2o -o2 -nadph_mnxm738702
     isopimara_7_15_dienal
   }
 
@@ -42,7 +42,7 @@ pathway isopimaradiene-diol-to-nadph "isopimaradiene-diol to NADPH" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_70 [1.14.13.70] +h +24_25_dihydrolanosterol +nadph +nadp +4_4_dimethyl_8_14_cholestadien_3_ol +h2o
+    <-> ec_1_14_13_70 [1.14.13.70] +h +24_25_dihydrolanosterol +nadph_mnxm738702 +nadp_mnxm5 +4_4_dimethyl_8_14_cholestadien_3_ol +h2o
     formate
   }
 
@@ -52,15 +52,15 @@ pathway isopimaradiene-diol-to-nadph "isopimaradiene-diol to NADPH" {
     4beta_methylzymosterol_4alpha_carboxylate
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +h +5z_8z_11z_14z_17z_eicosapentaenoate +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_2_1_5 [1.2.1.5] +h +5z_8z_11z_14z_17z_eicosapentaenoate +nadp_mnxm5 +h2o
     abietal
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +5z_8z_11z_14z_17z_eicosapentaenoate +nadp +isopimara_7_15_dienal +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_2_1_5 [1.2.1.5] +5z_8z_11z_14z_17z_eicosapentaenoate +nadp_mnxm5 +isopimara_7_15_dienal +h2o
     h
   }
 
@@ -88,21 +88,21 @@ pathway isopimaradiene-diol-to-nadph "isopimaradiene-diol to NADPH" {
     dendroamide_a
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +9z_octadecenoate +h +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_2_1_5 [1.2.1.5] +9z_octadecenoate +h +nadph_mnxm738702 +h2o
     cis_9_octadecenal
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +15z_tetracosenoate +h +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_2_1_5 [1.2.1.5] +15z_tetracosenoate +h +nadph_mnxm738702 +h2o
     15_tetracosenal
   }
 
   branch from o2 side left {
     o2
-    <-> . +9z_12z_octadecadienoate +h +nadph +nadp +h2o
+    <-> . +9z_12z_octadecadienoate +h +nadph_mnxm738702 +nadp_mnxm5 +h2o
     vernolic_acid
   }
 
@@ -112,15 +112,15 @@ pathway isopimaradiene-diol-to-nadph "isopimaradiene-diol to NADPH" {
     nadh
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +hexacosanoate +h +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_2_1_5 [1.2.1.5] +hexacosanoate +h +nadp_mnxm5 +h2o
     hexacosanal
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +h +triacontanoate +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_2_1_5 [1.2.1.5] +h +triacontanoate +nadp_mnxm5 +h2o
     triacontanal
   }
 }

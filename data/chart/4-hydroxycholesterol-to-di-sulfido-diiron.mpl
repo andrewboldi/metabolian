@@ -8,11 +8,11 @@ pathway 4-hydroxycholesterol-to-di-sulfido-diiron "4β-hydroxycholesterol to di-
 
   spine at 0,0 {
     4_hydroxycholesterol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_4_26_dihydroxycholesterol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_3_4_dihydroxycholest_5_en_26_al
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_3_4_dihydroxycholest_5_en_26_oate
   }
 }

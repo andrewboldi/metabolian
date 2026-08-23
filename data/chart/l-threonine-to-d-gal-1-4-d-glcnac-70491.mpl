@@ -42,7 +42,7 @@ pathway l-threonine-to-d-gal-1-4-d-glcnac-70491 "L-threonine to β-D-Gal-(1→4)
 
   branch from udpglcnac side left {
     udpglcnac
-    <-> . +3_o_d_gal_1_3_d_gal_1_4_d_glcnac_1_6_d_galnac_l +udp +hplus
-    3_o_d_glcnac_1_4_d_gal_1_3_d_glcnac_1_4_d_gal_1
+    <-> . +3_o_d_gal_1_3_d_gal_1_4_d_glcnac_1_6_d_galnac_l_chebi_235341 +udp +hplus
+    3_o_d_glcnac_1_4_d_gal_1_3_d_glcnac_1_4_d_gal_1_chebi_235340
   }
 }

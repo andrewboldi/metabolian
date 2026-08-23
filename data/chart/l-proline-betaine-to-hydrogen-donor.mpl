@@ -26,8 +26,8 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
 
   branch from n_methylproline side right {
     n_methylproline
-    <-> . +l_proline +formaldehyde +h2o2 +h2o
-    o2
+    <-> . +l_proline_mnxm114 +formaldehyde_mnxm1364673 +h2o2 +h2o_water
+    o2_mnxm735438
   }
 
   branch from formaldehyde side left {

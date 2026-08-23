@@ -32,13 +32,13 @@ pathway dibenzothiophene-to-fmn "dibenzothiophene to FMN" {
 
   branch from fmn_n5_oxide side left {
     fmn_n5_oxide
-    <-> . +fmn_n5_peroxide +dibenzothiophene_5_5_dioxide
-    2_hydroxybiphenyl_2_sulfinate
+    <-> . +fmn_n5_peroxide_mnxm1132931 +dibenzothiophene_5_5_dioxide
+    2_hydroxybiphenyl_2_sulfinate_mnxm3798
   }
 
   branch from fmn_n5_oxide side right {
     fmn_n5_oxide
-    <-> . +fmn_n5_peroxide +uracil
+    <-> . +fmn_n5_peroxide_mnxm1132931 +uracil
     z_3_ureidoacrylate
   }
 
@@ -68,7 +68,7 @@ pathway dibenzothiophene-to-fmn "dibenzothiophene to FMN" {
 
   branch from fmn_n5_oxide side left {
     fmn_n5_oxide
-    <-> . +fmn_n5_peroxide +thymine
+    <-> . +fmn_n5_peroxide_mnxm1132931 +thymine
     z_2_methylureidoacrylate
   }
 }

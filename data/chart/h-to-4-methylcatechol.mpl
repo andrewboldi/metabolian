@@ -93,7 +93,7 @@ pathway h-to-4-methylcatechol "H to 4-methylcatechol" {
   branch from h side left {
     h
     <-> . +coa +2_hydroxycyclohepta_1_4_6_triene_1_carboxyl_coa +h2o
-    2_hydroxycyclohepta_1_4_6_triene_1_carboxylate
+    2_hydroxycyclohepta_1_4_6_triene_1_carboxylate_mnxm1368253
   }
 
   branch from h side right {
@@ -105,7 +105,7 @@ pathway h-to-4-methylcatechol "H to 4-methylcatechol" {
   branch from h2o side left {
     h2o
     <-> . +4_methoxyglucobrassicin +glucose +h
-    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone_mnxm1363461
   }
 
   branch from h2o side right {
@@ -141,7 +141,7 @@ pathway h-to-4-methylcatechol "H to 4-methylcatechol" {
   branch from nad side left {
     nad
     <-> ec_1_4_1_21 [1.4.1.21] +nadh +h +l_aspartate
-    iminoaspartate
+    iminoaspartate_mnxm1370457
   }
 
   branch from nad side right {

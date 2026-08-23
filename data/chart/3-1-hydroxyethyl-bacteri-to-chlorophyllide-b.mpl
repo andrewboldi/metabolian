@@ -8,7 +8,7 @@ pathway 3-1-hydroxyethyl-bacteri-to-chlorophyllide-b "3-(1-hydroxyethyl)bacteriâ
 
   spine at 0,0 {
     3_1_hydroxyethyl_bacteriochlorophyllide_a
-    <-> ec_1_3_7_15 [1.3.7.15] +di_sulfido_diiron +adp +pi -di_sulfido_diiron -atp -h2o -hplus
+    <-> ec_1_3_7_15 [1.3.7.15] +di_sulfido_diiron +adp +pi -di_sulfido_diiron_chebi_33738 -atp -h2o -hplus
     3_1_hydroxyethyl_chlorophyllide_a
     <-> ec_4_2_1_165 [4.2.1.165] -h2o
     chlorophyllide_a

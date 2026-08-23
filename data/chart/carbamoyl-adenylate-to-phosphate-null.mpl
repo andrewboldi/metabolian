@@ -18,7 +18,7 @@ pathway carbamoyl-adenylate-to-phosphate-null "carbamoyl adenylate to phosphate"
 
   branch from carbamoyl_adenylate side left {
     carbamoyl_adenylate
-    <-> . +l_cysteinate_group +amp +hplus
+    <-> . +l_cysteinate_group +amp_chebi_456215 +hplus
     c_terminal_s_carbamoyl_l_cysteinate
   }
 }

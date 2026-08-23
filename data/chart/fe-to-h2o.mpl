@@ -9,7 +9,7 @@ pathway fe-to-h2o "Fe to H2O" {
   spine at 0,0 {
     fe
     <-> . +h +sulfate -sulfite -h2o
-    fe
+    fe_mnxm1370984
     <-> . +desferricoprogen -coprogen
     h
     <-> . +adp +coprogen +phosphate -coprogen -h2o

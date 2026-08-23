@@ -10,7 +10,7 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol-6 "1-naphthaleneacetamide
     1_naphthaleneacetamide
     <-> . +h2o -nh3
     1_naphthaleneacetate
-    <-> ec_3_1_1_1 [3.1.1.1] +h2o -1_naphthol
+    <-> ec_3_1_1_1 [3.1.1.1] +h2o_water -1_naphthol
     acetate
     <-> . +1_naphthol +o2
     naphthalene_1_4_diol
@@ -36,7 +36,7 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol-6 "1-naphthaleneacetamide
 
   branch from 1_naphthol side right {
     1_naphthol
-    <-> ec_3_1_1_1 [3.1.1.1] +1_naphthylbutanoic_acid +h2o +h
+    <-> ec_3_1_1_1 [3.1.1.1] +1_naphthylbutanoic_acid +h2o_water +h
     butanoate
   }
 
@@ -48,43 +48,43 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol-6 "1-naphthaleneacetamide
 
   branch from naphthalene_1_4_diol side right {
     naphthalene_1_4_diol
-    <-> ec_1_2_5_3 [1.2.5.3] +1_4_naphthoquinone +co +h2o
+    <-> ec_1_2_5_3 [1.2.5.3] +1_4_naphthoquinone +co +h2o_water
     co2
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +atrazine_desethyl_2_hydroxy +h +chloride
     deethylatrazine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +2s_4s_2_methyl_2_3_3_4_tetrahydroxytetrahydrofu
     2s_4s_2_methyl_2_4_dihydroxydihydrofuran_3_one
   }
 
   branch from acetate side left {
     acetate
-    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +h2o
+    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +h2o_water
     n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
   }
 
   branch from acetate side right {
     acetate
-    <-> . +s_4_hydroxy_nonenal_3_yl_l_cysteine +h2o
+    <-> . +s_4_hydroxy_nonenal_3_yl_l_cysteine +h2o_water
     4_hydroxy_2_nonenal_n_acetyl_l_cysteine
   }
 
   branch from 1_naphthol side left {
     1_naphthol
-    <-> ec_1_11_2_1 [1.11.2.1] +h2o2 +h2o
+    <-> ec_1_11_2_1 [1.11.2.1] +h2o2 +h2o_water
     naphthalene
   }
 
   branch from 1_naphthol side right {
     1_naphthol
-    <-> ec_3_1_3_1 [3.1.3.1] +1_naphthyl_dihydrogen_phosphate +h2o +h
+    <-> ec_3_1_3_1 [3.1.3.1] +1_naphthyl_dihydrogen_phosphate +h2o_water +h
     phosphate
   }
 

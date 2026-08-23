@@ -14,7 +14,7 @@ pathway geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien "geranyl diphosphate to
     geranial
     <-> ec_1_2_1_86 [1.2.1.86] +nad +h2o -nadh -hplus
     geranate
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h -nad -h2o
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh_mnxm10 +h -nad_mnxm8 -h2o_water
     citral
     <-> . +o2 +h2o -h2o2 -hplus
     3_7_dimethylocta_2_6_dienoate

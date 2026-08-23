@@ -26,7 +26,7 @@ pathway 1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls "1-octadecanoyl-2-(15-h
 
   branch from 1_stearoyl_sn_glycero_3_phosphoethanolamine side right {
     1_stearoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 
@@ -45,12 +45,12 @@ pathway 1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls "1-octadecanoyl-2-(15-h
   branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine side left {
     1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine
     <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    h2o
+    h2o_water
   }
 
   branch from 1_stearoyl_sn_glycero_3_phosphoethanolamine side right {
     1_stearoyl_sn_glycero_3_phosphoethanolamine
-    <-> ec_3_1_1_4 [3.1.1.4] +5z_8z_11z_14z_eicosatetraenoate +h +h2o
+    <-> ec_3_1_1_4 [3.1.1.4] +5z_8z_11z_14z_eicosatetraenoate +h +h2o_water
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet
   }
 

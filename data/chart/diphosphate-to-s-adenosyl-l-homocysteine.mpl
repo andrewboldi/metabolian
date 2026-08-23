@@ -10,7 +10,7 @@ pathway diphosphate-to-s-adenosyl-l-homocysteine "diphosphate to S-adenosyl-L-ho
     diphosphate
     <-> . +3_decaprenyl_4_hydroxybenzoate -4_hydroxybenzoate
     all_trans_decaprenyl_diphosphate
-    <-> ec_2_5_1_39 [2.5.1.39] +4_hydroxybenzoate -ppi
+    <-> ec_2_5_1_39 [2.5.1.39] +4_hydroxybenzoate_chebi_17879 -ppi
     4_hydroxy_3_all_trans_decaprenylbenzoate
     <-> ec_4_1_1_98 [4.1.1.98] +hplus -co2
     2_all_trans_decaprenylphenol
@@ -18,11 +18,11 @@ pathway diphosphate-to-s-adenosyl-l-homocysteine "diphosphate to S-adenosyl-L-ho
     3_all_trans_decaprenyl_benzene_1_2_diol
     <-> ec_2_1_1_222 [2.1.1.222] +sam -sah -hplus
     2_decaprenyl_6_methoxyphenol
-    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_decaprenyl_6_methoxyhydroquinone
     <-> ec_2_1_1_201 [2.1.1.201] +sam -sah -hplus
     2_decaprenyl_6_methoxy_3_methylhydroquinone
-    <-> . +h +o2 +nadph -nadp -h2o
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 -nadp_mnxm5 -h2o_water
     3_demethylubiquinol_10
     <-> ec_2_1_1_64 [2.1.1.64] +sam -sah -hplus
     ubiquinol_10

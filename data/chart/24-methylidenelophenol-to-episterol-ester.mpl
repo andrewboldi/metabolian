@@ -44,7 +44,7 @@ pathway 24-methylidenelophenol-to-episterol-ester "24-methylidenelophenol to epi
 
   branch from nadp side left {
     nadp
-    <-> . +3_deoxo_4b_deoxypaxilline +h +o2 +nadph +h2o
+    <-> . +3_deoxo_4b_deoxypaxilline +h +o2_mnxm735438 +nadph +h2o_water
     beta_pc_m6
   }
 
@@ -56,13 +56,13 @@ pathway 24-methylidenelophenol-to-episterol-ester "24-methylidenelophenol to epi
 
   branch from nad side left {
     nad
-    <-> . +nadh +benzenesulfonic_acid +o2 +h +catechol
+    <-> . +nadh +benzenesulfonic_acid +o2_mnxm735438 +h +catechol
     sulfite
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +4_formylbenzoate +h2o +nadh +h
+    <-> ec_1_2_1_3 [1.2.1.3] +4_formylbenzoate +h2o_water +nadh +h
     terephthalate
   }
 
@@ -74,7 +74,7 @@ pathway 24-methylidenelophenol-to-episterol-ester "24-methylidenelophenol to epi
 
   branch from nadh side right {
     nadh
-    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin +nad +h +o2
+    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin +nad +h +o2_mnxm735438
     dibenzo_p_dioxin
   }
 
@@ -86,43 +86,43 @@ pathway 24-methylidenelophenol-to-episterol-ester "24-methylidenelophenol to epi
 
   branch from co2 side right {
     co2
-    <-> . +2_oxoglutarate +oa_6129_a +o2 +oa_6129_b2
+    <-> . +2_oxoglutarate +oa_6129_a +o2_mnxm735438 +oa_6129_b2
     succinate
   }
 
   branch from h side left {
     h
-    <-> . +r_mandelonitrile +nadp +h2o +o2 +nadph
+    <-> . +r_mandelonitrile +nadp +h2o_water +o2_mnxm735438 +nadph
     z_phenylacetaldehyde_oxime
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +o2 +l_cysteine +nadph +nadp +h2o
+    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +o2_mnxm735438 +l_cysteine +nadph +nadp +h2o_water
     s_phenylacetothiohydroximoyl_l_cysteine
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_45 [1.14.14.45] +h +e_4_hydroxyphenylacetaldehyde_oxime +o2 +l_cysteine +nadp +h2o
+    <-> ec_1_14_14_45 [1.14.14.45] +h +e_4_hydroxyphenylacetaldehyde_oxime +o2_mnxm735438 +l_cysteine +nadp +h2o_water
     s_hydroxyphenylacetothiohydroximoyl_l_cysteine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +mycinamicin_viii +o2 +nadp +h2o
+    <-> . +h +mycinamicin_viii +o2_mnxm735438 +nadp +h2o_water
     mycinamicin_vii
   }
 
   branch from nadp side left {
     nadp
-    <-> . +mycinamicin_iv +o2 +nadph +h2o
+    <-> . +mycinamicin_iv +o2_mnxm735438 +nadph +h2o_water
     mycinamicin_v
   }
 
   branch from nadp side right {
     nadp
-    <-> . +nocardicin_a +h2o +o2 +nadph
+    <-> . +nocardicin_a +h2o_water +o2_mnxm735438 +nadph
     nocardicin_c_dizwitterion
   }
 }

@@ -39,19 +39,19 @@ pathway udp-to-quercetin "UDP to quercetin" {
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
     <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm8960
   }
 
   branch from udp side left {
     udp
-    <-> . +udp_alpha_d_glucose +oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    <-> . +udp_alpha_d_glucose +oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm8960
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm1372530
   }
 
   branch from udp side right {
     udp
-    <-> . +h +udp_alpha_d_glucose +oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    <-> . +h +udp_alpha_d_glucose +oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm1372530
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm12517
   }
 
   branch from h side left {

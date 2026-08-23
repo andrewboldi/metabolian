@@ -18,13 +18,13 @@ pathway s-cyclopeptine-to-methyl-isocyanate "(S)-cyclopeptine to methyl isocyana
 
   branch from cyclopenine side left {
     cyclopenine
-    <-> ec_1_14_11_81 [1.14.11.81] +cyclopeptine +2_oxoglutarate +o2 +succinate +h2o
-    co2
+    <-> ec_1_14_11_81 [1.14.11.81] +cyclopeptine +2_oxoglutarate +o2_mnxm735438 +succinate_mnxm25 +h2o_water
+    co2_mnxm13
   }
 
   branch from methyl_isocyanate side right {
     methyl_isocyanate
-    <-> . +co2 +methylamine +h2o
+    <-> . +co2_mnxm13 +methylamine +h2o_water
     h
   }
 }

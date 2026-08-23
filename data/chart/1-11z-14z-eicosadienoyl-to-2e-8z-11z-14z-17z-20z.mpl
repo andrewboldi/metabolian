@@ -16,7 +16,7 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
     8z_11z_14z_17z_icosatetraenoyl_coa
     <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     5z_8z_11z_14z_17z_icosapentaenoyl_coa
-    <-> . +malonyl-coa +hplus -co2 -coa
+    <-> . +malonyl-coa +hplus -co2 -coa_chebi_57287
     7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa
     <-> . +nadph +hplus -nadp
     3r_7z_10z_13z_16z_19z_3_hydroxydocosapentaenoyl
@@ -24,7 +24,7 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
     2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
     <-> . +nadph +hplus -nadp
     7z_10z_13z_16z_19z_docosapentaenoyl_coa
-    <-> . +malonyl-coa +hplus -co2 -coa
+    <-> . +malonyl-coa +hplus -co2 -coa_chebi_57287
     9z_12z_15z_18z_21z_3_oxotetracosapentaenoyl_coa
     <-> . +nadph +hplus -nadp
     3r_9z_12z_15z_18z_21z_3_hydroxytetracosapentaen
@@ -34,7 +34,7 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
     9z_12z_15z_18z_21z_tetracosapentaenoyl_coa
     <-> . +fe2 +o2 +hplus -iron -h2o
     6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
-    <-> . +malonyl-coa +hplus -co2 -coa
+    <-> . +malonyl-coa +hplus -co2 -coa_chebi_57287
     8z_11z_14z_17z_20z_23z_3_oxohexacosahexaenoyl_c
     <-> . +nadph +hplus -nadp
     3r_8z_11z_14z_17z_20z_23z_hydroxyhexacosahexaen
@@ -50,7 +50,7 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
 
   branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side right {
     5z_8z_11z_14z_17z_icosapentaenoyl_coa
-    <-> . +h2o +coa +hplus
+    <-> . +h2o +coa_chebi_57287 +hplus
     all_cis_5_8_11_14_17_icosapentaenoate
   }
 
@@ -68,13 +68,13 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
 
   branch from malonyl-coa side left {
     malonyl-coa
-    <-> . +3_m_hydroxyphenyl_propanoyl_coa +hplus +co2 +coa
+    <-> . +3_m_hydroxyphenyl_propanoyl_coa +hplus +co2 +coa_chebi_57287
     3_3_5_trihydroxybibenzyl
   }
 
   branch from malonyl-coa side right {
     malonyl-coa
-    <-> ec_2_3_1_281 [2.3.1.281] +nadh +nadph +hplus +co2 +nad +nadp +coa +h2o
+    <-> ec_2_3_1_281 [2.3.1.281] +nadh +nadph +hplus +co2 +nad +nadp +coa_chebi_57287 +h2o
     2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae
   }
 }

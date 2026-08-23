@@ -17,7 +17,7 @@ pathway isethionate-to-3-sulfonatopyruvate-29715 "isethionate to 3-sulfonatopyru
     <-> ec_3_2_1_199 [3.2.1.199] +h2o -dag
     6_sulfo_d_quinovose
     <-> ec_5_1_3_43 [5.1.3.43]
-    6_sulfo_d_quinovose
+    6_sulfo_d_quinovose_chebi_142957
     <-> ec_5_3_1_31 [5.3.1.31]
     6_deoxy_6_sulfo_d_fructofuranose
     <-> ec_2_7_1_184 [2.7.1.184] +atp -adp -hplus
@@ -54,8 +54,8 @@ pathway isethionate-to-3-sulfonatopyruvate-29715 "isethionate to 3-sulfonatopyru
     inositol_phosphophytoceramide_t18_0
   }
 
-  branch from 6_sulfo_d_quinovose side left {
-    6_sulfo_d_quinovose
+  branch from 6_sulfo_d_quinovose_chebi_142957 side left {
+    6_sulfo_d_quinovose_chebi_142957
     <-> ec_5_3_1_31 [5.3.1.31]
     6_sulfo_d_rhamnose
   }

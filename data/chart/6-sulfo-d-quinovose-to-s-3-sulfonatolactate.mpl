@@ -22,13 +22,13 @@ pathway 6-sulfo-d-quinovose-to-s-3-sulfonatolactate "6-sulfo-D-quinovose to (S)-
 
   branch from 6_sulfo_d_quinovose side left {
     6_sulfo_d_quinovose
-    <-> ec_1_14_14_181 [1.14.14.181] +fmnh2 +h +o2 +6_dehydro_d_glucose +sulfite +h2o
+    <-> ec_1_14_14_181 [1.14.14.181] +fmnh2 +h +o2 +6_dehydro_d_glucose +sulfite +h2o_water
     fmn
   }
 
   branch from 6_sulfo_d_quinovose side right {
     6_sulfo_d_quinovose
-    <-> ec_1_14_14_181 [1.14.14.181] +fadh2 +h +o2 +6_dehydro_d_glucose +sulfite +h2o
+    <-> ec_1_14_14_181 [1.14.14.181] +fadh2 +h +o2 +6_dehydro_d_glucose +sulfite +h2o_water
     fad
   }
 }

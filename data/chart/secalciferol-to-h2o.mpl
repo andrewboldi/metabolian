@@ -19,7 +19,7 @@ pathway secalciferol-to-h2o "secalciferol to H2O" {
   branch from calcidiol side left {
     calcidiol
     <-> . +h +o2 +nadph +nadp +h2o
-    23s_25_dihydroxyvitamin_d3
+    23s_25_dihydroxyvitamin_d3_mnxm1371441
   }
 
   branch from h side right {

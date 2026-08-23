@@ -18,7 +18,7 @@ pathway nadh-to-5-oxo-6-trans-leukotriene "NADH to 5-Oxo-6-trans-leukotriene…"
 
   branch from 12_dehydro_leukotriene_b4 side left {
     12_dehydro_leukotriene_b4
-    <-> . +nadh +hplus +nad
+    <-> . +nadh_chebi_57945 +hplus +nad_chebi_57540
     10_11_dihydro_12_oxoleukotriene_b4
   }
 }

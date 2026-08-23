@@ -54,7 +54,7 @@ pathway alpha-d-galactose-to-nad-null "alpha-D-galactose… to NAD" {
 
   branch from keto_d_sorbose side right {
     keto_d_sorbose
-    <-> ec_1_1_1_15 [1.1.1.15] +nad +nadh +hplus
+    <-> ec_1_1_1_15 [1.1.1.15] +nad_chebi_57540 +nadh_chebi_57945 +hplus
     d_iditol
   }
 

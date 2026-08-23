@@ -14,36 +14,167 @@ pathway glycodeoxycholate-to-h2o-47552 "glycodeoxycholate to H2O" {
     cholate
     <-> ec_1_1_1_159 [1.1.1.159] +nad -nadh -hplus
     3_12_dihydroxy_7_oxo_5_cholanate
-    <-> . +nadh +h -nad
-    cholate
-    <-> . +nadp +h2o -o2 -deoxycholate -nadph
+    <-> . +nadh_mnxm10 +h -nad_mnxm8
+    cholate_mnxm1371683
+    <-> . +nadp +h2o_water -o2 -deoxycholate_mnxm738432 -nadph
     h
-    <-> . +adp +deoxycholate +phosphate -deoxycholate -h2o
+    <-> . +adp +deoxycholate_mnxm738432 +phosphate -deoxycholate_mnxm738432 -h2o_water
     atp
   }
 
+  branch from deoxycholate side left {
+    deoxycholate
+    <-> . +udp_d_glucuronate +udp
+    deoxycholic_acid_24_o_d_glucuronide
+  }
 
+  branch from deoxycholate side right {
+    deoxycholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    3_sulfodeoxycholate
+  }
 
+  branch from cholate side left {
+    cholate
+    <-> . +nad +nadh +hplus
+    7_12_dihydroxy_3_oxo_5_cholan_24_oate
+  }
 
+  branch from cholate side right {
+    cholate
+    <-> . +udp_d_glucuronate +udp
+    cholic_acid_24_o_d_glucuronide
+  }
 
+  branch from 3_12_dihydroxy_7_oxo_5_cholanate side left {
+    3_12_dihydroxy_7_oxo_5_cholanate
+    <-> . +nadp_chebi_58349 +nadph_chebi_57783 +hplus
+    ursocholate
+  }
 
+  branch from cholate_mnxm1371683 side right {
+    cholate_mnxm1371683
+    <-> . +udp_mnxm1102128 +beta_d_galactosyl_cholate
+    udp_alpha_d_galactose
+  }
 
+  branch from cholate_mnxm1371683 side left {
+    cholate_mnxm1371683
+    <-> ec_2_8_3_25 [2.8.3.25] +choloyl_coa +7alpha_12alpha_dihydroxy_3_oxochol_4_en_24_oate
+    7_12_dihydroxy_3_oxochol_4_en_24_oyl_coa
+  }
 
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_14_12_10 [1.14.12.10] +nadh_mnxm10 +h +3_fluorobenzoic_acid +o2
+    5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+  }
 
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_3_1_25 [1.3.1.25] +nadh_mnxm10 +co2 +h +3_fluorocatechol
+    3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +3_4_dihydro_3_hydroxy_4_s_glutathionyl_bromobenz +glutathione
+    bromobenzene_3_4_oxide
+  }
 
+  branch from h side left {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +2_3_dihydro_2_s_glutathionyl_3_hydroxy_bromobenz +glutathione
+    bromobenzene_2_3_oxide
+  }
 
+  branch from o2 side right {
+    o2
+    <-> ec_1_4_3_3 [1.4.3.3] +cephalosporin_c +h2o_water +nh4 +h2o2
+    7r_7_5_carboxy_5_oxopentanamido_deacetylcephalo
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +h +z_4_2_hydroxy_5_sulfonatophenyl_2_oxobut_3_enoa
+    1_2_dihydroxynaphthalene_6_sulfonate
+  }
 
+  branch from deoxycholate_mnxm738432 side right {
+    deoxycholate_mnxm738432
+    <-> ec_3_1_2_26 [3.1.2.26] +deoxycholoyl_coa +h2o_water +h
+    coa
+  }
 
+  branch from deoxycholate_mnxm738432 side left {
+    deoxycholate_mnxm738432
+    <-> . +udp_mnxm1102128 +deoxycholic_acid_3_glucuronide +h
+    udp_alpha_d_glucuronate
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +thiobenzamide_s_oxide +h +o2 +nadp +h2o_water
+    thiobenzamide_s_s_dioxide
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_179 [1.14.13.179] +formaldehyde +nadp +1_7_dimethylxanthine +h2o_water +h +o2
+    caffeine
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +adp
+    l_arabinopyranose
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +h +cyclohexane_1_carbonyl_coa +amp +phosphate +coa +h2o_water
+    cyclohexane_1_carboxylate
+  }
 
+  branch from h2o_water side right {
+    h2o_water
+    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
+    1s_2r_naphthalene_1_2_oxide
+  }
 
+  branch from h2o_water side left {
+    h2o_water
+    <-> ec_3_3_2_9 [3.3.2.9] +1_nitronaphthalene_5_6_oxide
+    1_nitro_5_6_dihydroxy_dihydronaphthalene
+  }
 
+  branch from glycodeoxycholate side right {
+    glycodeoxycholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    3_sulfoglycodeoxycholate
+  }
 
+  branch from deoxycholate side left {
+    deoxycholate
+    <-> . +nadp_chebi_58349 +nadph_chebi_57783 +hplus
+    12_dehydrodeoxycholate
+  }
 
+  branch from cholate side right {
+    cholate
+    <-> . +allodeoxycholoyl_coa +choloyl_coa_chebi_57373
+    allodeoxycholate
+  }
 
+  branch from cholate side left {
+    cholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    cholate_7_sulfate
+  }
+
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_3_1_25 [1.3.1.25] +h +4_fluorocatechol +5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox +nad_mnxm8
+    co2
+  }
 }

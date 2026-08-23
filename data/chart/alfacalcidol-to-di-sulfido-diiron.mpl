@@ -8,13 +8,13 @@ pathway alfacalcidol-to-di-sulfido-diiron "alfacalcidol to di-μ-sulfido-diiron"
 
   spine at 0,0 {
     alfacalcidol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     calcitriol
-    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     calcitetrol
-    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1s_1_25_dihydroxy_24_oxocalciol
-    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1s_1_23_25_trihydroxy_24_oxocalciol
   }
 

@@ -14,11 +14,11 @@ pathway glycodeoxycholate-to-h2o "glycodeoxycholate to H2O" {
     cholate
     <-> ec_1_1_1_159 [1.1.1.159] +nad -nadh -hplus
     3_12_dihydroxy_7_oxo_5_cholanate
-    <-> . +nadh +h -nad
-    cholate
-    <-> . +nadp +h2o -o2 -deoxycholate -nadph
+    <-> . +nadh_mnxm10 +h -nad_mnxm8
+    cholate_mnxm1371683
+    <-> . +nadp +h2o_water -o2 -deoxycholate_mnxm738432 -nadph
     h
-    <-> . +adp +deoxycholate +phosphate -deoxycholate -h2o
+    <-> . +adp +deoxycholate_mnxm738432 +phosphate -deoxycholate_mnxm738432 -h2o_water
     atp
   }
 
@@ -48,37 +48,37 @@ pathway glycodeoxycholate-to-h2o "glycodeoxycholate to H2O" {
 
   branch from 3_12_dihydroxy_7_oxo_5_cholanate side left {
     3_12_dihydroxy_7_oxo_5_cholanate
-    <-> . +nadp +nadph +hplus
+    <-> . +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     ursocholate
   }
 
-  branch from cholate side right {
-    cholate
-    <-> . +udp +beta_d_galactosyl_cholate
+  branch from cholate_mnxm1371683 side right {
+    cholate_mnxm1371683
+    <-> . +udp_mnxm1102128 +beta_d_galactosyl_cholate
     udp_alpha_d_galactose
   }
 
-  branch from cholate side left {
-    cholate
+  branch from cholate_mnxm1371683 side left {
+    cholate_mnxm1371683
     <-> ec_2_8_3_25 [2.8.3.25] +choloyl_coa +7alpha_12alpha_dihydroxy_3_oxochol_4_en_24_oate
     7_12_dihydroxy_3_oxochol_4_en_24_oyl_coa
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +h +4_fluorocatechol
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_3_1_25 [1.3.1.25] +nadh_mnxm10 +co2 +h +4_fluorocatechol
     5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +h +4_fluorocatechol
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_3_1_25 [1.3.1.25] +nadh_mnxm10 +co2 +h +4_fluorocatechol
     4_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
   branch from h side right {
     h
-    <-> . +2_s_glutathionyl_acetyl_glutathione +h2o +2_s_glutathionyl_acetate
+    <-> . +2_s_glutathionyl_acetyl_glutathione +h2o_water +2_s_glutathionyl_acetate
     glutathione
   }
 
@@ -100,27 +100,27 @@ pathway glycodeoxycholate-to-h2o "glycodeoxycholate to H2O" {
     3_2_carboxyvinyl_naphthalene_2_carboxylic_acid
   }
 
-  branch from deoxycholate side right {
-    deoxycholate
-    <-> ec_3_1_2_26 [3.1.2.26] +deoxycholoyl_coa +h2o +h
+  branch from deoxycholate_mnxm738432 side right {
+    deoxycholate_mnxm738432
+    <-> ec_3_1_2_26 [3.1.2.26] +deoxycholoyl_coa +h2o_water +h
     coa
   }
 
-  branch from deoxycholate side left {
-    deoxycholate
-    <-> . +udp +deoxycholic_acid_3_glucuronide +h
+  branch from deoxycholate_mnxm738432 side left {
+    deoxycholate_mnxm738432
+    <-> . +udp_mnxm1102128 +deoxycholic_acid_3_glucuronide +h
     udp_alpha_d_glucuronate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +h +carboxyphosphamide +nadp +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +h +carboxyphosphamide +nadp +h2o_water
     aldophosphamide
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +ifosfamide +o2 +nadp +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +h +ifosfamide +o2 +nadp +h2o_water
     4_hydroxyifosfamide
   }
 
@@ -136,14 +136,14 @@ pathway glycodeoxycholate-to-h2o "glycodeoxycholate to H2O" {
     diphosphate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +benzo_a_pyrene_7_8_diol
     benzo_a_pyrene_7_8_oxide
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2_2_dichloroacetaldehyde
     2_2_dichloro_1_1_ethanediol
   }
@@ -156,13 +156,13 @@ pathway glycodeoxycholate-to-h2o "glycodeoxycholate to H2O" {
 
   branch from deoxycholate side left {
     deoxycholate
-    <-> . +nadp +nadph +hplus
+    <-> . +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     12_dehydrodeoxycholate
   }
 
   branch from cholate side right {
     cholate
-    <-> . +allodeoxycholoyl_coa +choloyl_coa
+    <-> . +allodeoxycholoyl_coa +choloyl_coa_chebi_57373
     allodeoxycholate
   }
 
@@ -172,9 +172,9 @@ pathway glycodeoxycholate-to-h2o "glycodeoxycholate to H2O" {
     cholate_7_sulfate
   }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_1_1_1 [1.1.1.1] +nad +h +aldophosphamide
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_1_1_1 [1.1.1.1] +nad_mnxm8 +h +aldophosphamide
     alcophosphamide
   }
 }

@@ -11,7 +11,7 @@ pathway n-acetyl-d-glucosaminyl-to-ammonium "N-acetyl-β-D-glucosaminyl… to am
     <-> ec_3_4_17_8 [3.4.17.8] +h2o -d_alanine
     n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany
     <-> ec_3_4_17_13 [3.4.17.13] +h2o -d_alanine
-    n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany
+    n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany_chebi_233809
     <-> ec_2_6_1_21 [2.6.1.21] +d_alanine +akg -pyruvate
     d_glutamate
     <-> ec_1_4_3_7 [1.4.3.7] +o2 +h2o -h2o2 -nh3

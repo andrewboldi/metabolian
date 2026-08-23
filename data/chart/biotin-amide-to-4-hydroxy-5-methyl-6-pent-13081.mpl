@@ -53,7 +53,7 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent-13081 "biotin amide to 4-hydro
   branch from ppi side right {
     ppi
     <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    himachalene_chebi_49214
   }
 
   branch from acetyl-acp side left {
@@ -71,7 +71,7 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent-13081 "biotin amide to 4-hydro
   branch from biotinate side left {
     biotinate
     <-> ec_3_5_1_12 [3.5.1.12] +biocytin +h2o
-    l_lysinium
+    l_lysinium_chebi_32551
   }
 
   branch from nh3 side right {

@@ -47,7 +47,7 @@ pathway s-reticuline-to-h2o2-null "(S)-reticuline to H2O2" {
   branch from dopamine side left {
     dopamine
     <-> . +7_o_demethylcephaeline +h2o
-    protoemetine
+    protoemetine_mnxm1108080
   }
 
   branch from h side right {

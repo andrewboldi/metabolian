@@ -41,7 +41,7 @@ pathway n-acetyl-d-galactosamin-to-nad-64372 "N-acetyl-β-D-galactosamin… to N
   branch from galactitol_1_phosphate side right {
     galactitol_1_phosphate
     <-> ec_3_1_3_50 [3.1.3.50] +galactitol +phosphate
-    h2o
+    h2o_water
   }
 
   branch from galactitol_1_phosphate side left {
@@ -58,7 +58,7 @@ pathway n-acetyl-d-galactosamin-to-nad-64372 "N-acetyl-β-D-galactosamin… to N
 
   branch from nad side left {
     nad
-    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin +nadh +h +o2
+    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin +nadh +h +o2_mnxm735438
     dibenzo_p_dioxin
   }
 
@@ -70,19 +70,19 @@ pathway n-acetyl-d-galactosamin-to-nad-64372 "N-acetyl-β-D-galactosamin… to N
 
   branch from nadh side left {
     nadh
-    <-> ec_1_14_13_1 [1.14.13.1] +5_methylsalicylate +h +o2 +nad +4_methylcatechol +h2o
+    <-> ec_1_14_13_1 [1.14.13.1] +5_methylsalicylate +h +o2_mnxm735438 +nad +4_methylcatechol +h2o_water
     co2
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_14_12_26 [1.14.12.26] +h +o2 +2_4_dichlorotoluene +nad
+    <-> ec_1_14_12_26 [1.14.12.26] +h +o2_mnxm735438 +2_4_dichlorotoluene +nad
     1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene
   }
 
   branch from h side left {
     h
-    <-> . +s_carnitine +coa +h2o
+    <-> . +s_carnitine +coa +h2o_water
     s_carnitinyl_coa
   }
 
@@ -100,13 +100,13 @@ pathway n-acetyl-d-galactosamin-to-nad-64372 "N-acetyl-β-D-galactosamin… to N
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +2_5_dichlorotoluene +h +o2
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +2_5_dichlorotoluene +h +o2_mnxm735438
     1r_2s_3_6_dichloro_4_methylcyclohexa_3_5_diene
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +3_4_dichlorotoluene +h +o2
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +3_4_dichlorotoluene +h +o2_mnxm735438
     1r_2s_3_4_dichloro_6_methylcyclohexa_3_5_diene
   }
 }

@@ -22,8 +22,8 @@ pathway 3-mercaptopropionate-to-ammonium-53776 "3-mercaptopropionate to ammonium
 
   branch from 3_sulfinatopropionate side left {
     3_sulfinatopropionate
-    <-> . +3_sulfinopropionyl_coa +adp +phosphate +coa
-    atp
+    <-> . +3_sulfinopropionyl_coa +adp_mnxm40333 +phosphate +coa_mnxm727276
+    atp_mnxm3
   }
 
   branch from propionyl_coa side right {

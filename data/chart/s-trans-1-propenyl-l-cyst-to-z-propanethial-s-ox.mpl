@@ -30,7 +30,7 @@ pathway s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox "S-trans-1-propenyl-L-c
 
   branch from e_prop_1_en_1_so_peroxol side left {
     e_prop_1_en_1_so_peroxol
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     thiosulfinate
   }
 

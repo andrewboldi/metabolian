@@ -12,7 +12,7 @@ pathway 1-3-dimethylamino-propy-to-di-sulfido-diiron "1-[3-(dimethylamino)propyâ
     citalopram_aldehyde
     <-> . +co2 +para_isopropylaniline +dimethylamine -isoproturon -h2o
     h
-    <-> . +isoproturon +di_sulfido_diiron +o2 +hplus -formaldehyde -di_sulfido_diiron -h2o
+    <-> . +isoproturon +di_sulfido_diiron +o2_chebi_15379 +hplus -formaldehyde -di_sulfido_diiron_chebi_33737 -h2o_chebi_15377
     isoproturon_monodemethyl
   }
 

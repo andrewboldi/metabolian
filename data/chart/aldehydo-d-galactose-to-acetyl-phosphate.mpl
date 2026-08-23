@@ -103,6 +103,6 @@ pathway aldehydo-d-galactose-to-acetyl-phosphate "aldehydo-D-galactose… to ace
   branch from ppi side right {
     ppi
     <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    himachalene_chebi_49214
   }
 }

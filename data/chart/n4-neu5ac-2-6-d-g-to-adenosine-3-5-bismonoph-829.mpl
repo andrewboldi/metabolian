@@ -11,9 +11,9 @@ pathway n4-neu5ac-2-6-d-g-to-adenosine-3-5-bismonoph-829 "N4-{[α-Neu5Ac-(2→6)
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
     <-> . +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n_chebi_232692
     <-> . +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n_chebi_232693
   }
 
   branch from adenosine_3_5_bismonophosphate side left {
@@ -31,7 +31,7 @@ pathway n4-neu5ac-2-6-d-g-to-adenosine-3-5-bismonoph-829 "N4-{[α-Neu5Ac-(2→6)
   branch from 3_phosphonato_5_adenylyl_sulfate side left {
     3_phosphonato_5_adenylyl_sulfate
     <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +adenosine_3_5_bismonophosphate +hplus
-    3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam
+    3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam_chebi_142172
   }
 
   branch from 3_phosphonato_5_adenylyl_sulfate side right {

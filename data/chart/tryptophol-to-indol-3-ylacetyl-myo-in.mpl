@@ -29,7 +29,7 @@ pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-
   branch from glucose side right {
     glucose
     <-> ec_2_3_1_n12 [2.3.1.n12] +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +1_o_sinapoyl_d_glucose
-    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o_chebi_72649
   }
 
   branch from glucose side left {

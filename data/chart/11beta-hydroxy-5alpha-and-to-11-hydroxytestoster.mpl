@@ -12,7 +12,7 @@ pathway 11beta-hydroxy-5alpha-and-to-11-hydroxytestoster "11beta-hydroxy-5alpha-
     h
     <-> ec_1_1_1_239 [1.1.1.239] +nadh +11beta_hydroxyandrost_4_ene_3_17_dione -nad
     11_hydroxytestosterone
-    <-> . +nad -nadh -hplus
+    <-> . +nad_chebi_57540 -nadh_chebi_57945 -hplus
     11_oxotestosterone
     <-> ec_1_1_1_146 [1.1.1.146] +h +nadph -11_hydroxytestosterone
     nadp
@@ -20,13 +20,13 @@ pathway 11beta-hydroxy-5alpha-and-to-11-hydroxytestoster "11beta-hydroxy-5alpha-
 
   branch from 11_hydroxytestosterone side left {
     11_hydroxytestosterone
-    <-> . +nadph +hplus +nadp
+    <-> . +nadph_chebi_57783 +hplus +nadp_chebi_58349
     11_hydroxyandrost_4_ene_3_17_dione
   }
 
   branch from 11_oxotestosterone side right {
     11_oxotestosterone
-    <-> . +nadph +hplus +nadp
+    <-> . +nadph_chebi_57783 +hplus +nadp_chebi_58349
     adrenosterone
   }
 }

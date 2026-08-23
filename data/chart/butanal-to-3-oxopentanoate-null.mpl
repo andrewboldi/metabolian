@@ -18,7 +18,7 @@ pathway butanal-to-3-oxopentanoate-null "butanal to 3-oxopentanoate" {
 
   branch from h side left {
     h
-    <-> . +d_glucuronate +propranolol +h2o
+    <-> . +d_glucuronate +propranolol +h2o_water
     propranolol_glucuronide
   }
 

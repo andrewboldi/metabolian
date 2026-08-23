@@ -24,7 +24,7 @@ pathway diphosphate-to-cdp-null "diphosphate to CDP" {
 
   branch from h side right {
     h
-    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate +2_3_dihydroxy_4_methoxybenzoate
+    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate_mnxm1368569 +2_3_dihydroxy_4_methoxybenzoate
     o2
   }
 
@@ -36,8 +36,8 @@ pathway diphosphate-to-cdp-null "diphosphate to CDP" {
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +2e_geranyl_diphosphate +5_hydroxyanthrotainin
-    previridicatumtoxin
+    <-> . +2e_geranyl_diphosphate +5_hydroxyanthrotainin_chebi_218553
+    previridicatumtoxin_chebi_219739
   }
 
   branch from h side left {
@@ -49,6 +49,6 @@ pathway diphosphate-to-cdp-null "diphosphate to CDP" {
   branch from h side right {
     h
     <-> . +2_hydroxy_6_oxo_hept_2_4_dienoate +co2
-    2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate
+    2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate_mnxm1368571
   }
 }

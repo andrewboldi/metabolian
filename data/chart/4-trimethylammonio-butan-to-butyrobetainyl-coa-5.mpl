@@ -12,7 +12,7 @@ pathway 4-trimethylammonio-butan-to-butyrobetainyl-coa-5 "4-(trimethylammonio)bu
     butyrobetainyl_coa
     <-> ec_1_3_8_13 [1.3.8.13] +fad +hplus -fadh2
     e_4_trimethylammonio_but_2_enoyl_coa
-    <-> . +fadh2 +h -butyrobetainyl_coa
-    fad
+    <-> . +fadh2_mnxm1105762 +h -butyrobetainyl_coa
+    fad_mnxm1364149
   }
 }

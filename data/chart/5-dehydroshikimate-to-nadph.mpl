@@ -33,7 +33,7 @@ pathway 5-dehydroshikimate-to-nadph "5-Dehydroshikimate to NADPH" {
   branch from h side right {
     h
     <-> . +chlorohydroquinone +o2
-    5_chlorocarbonyl_4_hydroxy_penta_2_4_dienate
+    5_chlorocarbonyl_4_hydroxy_penta_2_4_dienate_mnxm1363476
   }
 
   branch from 3_dehydroquinate side left {
@@ -105,13 +105,13 @@ pathway 5-dehydroshikimate-to-nadph "5-Dehydroshikimate to NADPH" {
   branch from o2 side right {
     o2
     <-> . +h +2_3_5_trihydroxytoluene
-    2_4_6_trioxoheptanoate
+    2_4_6_trioxoheptanoate_mnxm1372606
   }
 
   branch from nadph side left {
     nadph
     <-> . +h +o2 +desmethylanthrotainin +nadp +h2o
-    12a_deshydroxy_desmethylanthrotainin
+    12a_deshydroxy_desmethylanthrotainin_mnxm1368211
   }
 
   branch from nadph side right {
@@ -140,7 +140,7 @@ pathway 5-dehydroshikimate-to-nadph "5-Dehydroshikimate to NADPH" {
 
   branch from h side right {
     h
-    <-> . +adenosine_3_5_bisphosphate +22r_23r_28_homocastasterone_22_o_sulfate +3_phosphoadenylyl_sulfate
+    <-> . +adenosine_3_5_bisphosphate +22r_23r_28_homocastasterone_22_o_sulfate_mnxm1367945 +3_phosphoadenylyl_sulfate
     a_brassinosteroid_glycoside
   }
 
@@ -165,7 +165,7 @@ pathway 5-dehydroshikimate-to-nadph "5-Dehydroshikimate to NADPH" {
   branch from nadh side right {
     nadh
     <-> ec_1_3_1_41 [1.3.1.41] +h +xanthommatin +nad
-    5_12_dihydroxanthommatin
+    5_12_dihydroxanthommatin_mnxm1371648
   }
 
   branch from nad side left {

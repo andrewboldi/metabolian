@@ -31,7 +31,7 @@ pathway 8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine "8-hydroxy-2'-deoxyguanosiâ
   branch from h2o side left {
     h2o
     <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly
-    n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly
+    n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly_mnxm818769
   }
 
   branch from h2o side right {
@@ -115,7 +115,7 @@ pathway 8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine "8-hydroxy-2'-deoxyguanosiâ
   branch from udp side left {
     udp
     <-> ec_2_4_2_25 [2.4.2.25] +udp_alpha_d_apiose +apigenin_7_o_beta_d_glucoside
-    apiin
+    apiin_mnxm1371939
   }
 
   branch from udp side right {

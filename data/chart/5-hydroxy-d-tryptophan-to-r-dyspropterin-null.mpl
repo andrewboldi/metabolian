@@ -50,13 +50,13 @@ pathway 5-hydroxy-d-tryptophan-to-r-dyspropterin-null "5-hydroxy-D-tryptophan to
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_156 [1.14.13.156] +h +1_8_cineole +nadph +6_endo_hydroxycineole +h2o
-    nadp
+    <-> ec_1_14_13_156 [1.14.13.156] +h +1_8_cineole +nadph_mnxm738702 +6_endo_hydroxycineole +h2o
+    nadp_mnxm5
   }
 
   branch from o2 side left {
     o2
-    <-> . +artemisinate +nadp +h2o +h +nadph
+    <-> . +artemisinate +nadp_mnxm5 +h2o +h +nadph_mnxm738702
     amorpha_4_11_diene
   }
 

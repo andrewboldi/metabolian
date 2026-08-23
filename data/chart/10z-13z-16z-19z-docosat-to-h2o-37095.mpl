@@ -10,11 +10,11 @@ pathway 10z-13z-16z-19z-docosat-to-h2o-37095 "(10Z,13Z,16Z,19Z)-docosat… to H2
     10z_13z_16z_19z_docosatetraenoyl_coa
     <-> . +malonyl-coa +hplus -co2 -coa
     12z_15z_18z_21z_3_oxotetracosatetraenoyl_coa
-    <-> . +co2 +coa -h -all_cis_10_13_16_19_docosatetraenoyl_coa
+    <-> . +co2_mnxm13 +coa_mnxm727276 -h -all_cis_10_13_16_19_docosatetraenoyl_coa
     malonyl_coa
-    <-> . +diphosphate +h +amp +all_cis_10_13_16_19_docosatetraenoyl_coa -coa -lynenic_acid
+    <-> . +diphosphate +h +amp +all_cis_10_13_16_19_docosatetraenoyl_coa -coa_mnxm727276 -lynenic_acid
     atp
-    <-> . +coa +lynenic_acid -h2o
+    <-> . +coa_mnxm727276 +lynenic_acid -h2o
     all_cis_10_13_16_19_docosatetraenoyl_coa
   }
 
@@ -26,13 +26,13 @@ pathway 10z-13z-16z-19z-docosat-to-h2o-37095 "(10Z,13Z,16Z,19Z)-docosat… to H2
 
   branch from malonyl_coa side right {
     malonyl_coa
-    <-> . +methylmalonyl_coa +2s_2_methylbutanoyl_coa +h +nadph +co2 +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1a_aglycone +coa +h2o
+    <-> . +methylmalonyl_coa +2s_2_methylbutanoyl_coa +h +nadph +co2_mnxm13 +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1a_aglycone +coa_mnxm727276 +h2o
     nadp
   }
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> . +2_methylpropanoyl_coa +methylmalonyl_coa +h +nadph +co2 +nadp +coa +h2o
+    <-> . +2_methylpropanoyl_coa +methylmalonyl_coa +h +nadph +co2_mnxm13 +nadp +coa_mnxm727276 +h2o
     6_8a_seco_6_8a_deoxy_5_oxoavermectin_2b_aglycone
   }
 
@@ -50,13 +50,13 @@ pathway 10z-13z-16z-19z-docosat-to-h2o-37095 "(10Z,13Z,16Z,19Z)-docosat… to H2
 
   branch from all_cis_10_13_16_19_docosatetraenoyl_coa side right {
     all_cis_10_13_16_19_docosatetraenoyl_coa
-    <-> . +r_carnitine +coa
+    <-> . +r_carnitine +coa_mnxm727276
     10z_13z_16z_19z_docosatetraenoylcarnitine
   }
 
   branch from all_cis_10_13_16_19_docosatetraenoyl_coa side left {
     all_cis_10_13_16_19_docosatetraenoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa_mnxm727276 +nad +h2o
     fad
   }
 
@@ -72,14 +72,14 @@ pathway 10z-13z-16z-19z-docosat-to-h2o-37095 "(10Z,13Z,16Z,19Z)-docosat… to H2
     adp
   }
 
-  branch from coa side right {
-    coa
+  branch from coa_mnxm727276 side right {
+    coa_mnxm727276
     <-> . +acetyl_coa +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c
     3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
   }
 
-  branch from coa side left {
-    coa
+  branch from coa_mnxm727276 side left {
+    coa_mnxm727276
     <-> . +acetyl_coa +18_coa_18_oxo_dinorleukotriene_b4
     18_20_dioxo_20_coa_leukotriene_b4
   }
@@ -108,39 +108,39 @@ pathway 10z-13z-16z-19z-docosat-to-h2o-37095 "(10Z,13Z,16Z,19Z)-docosat… to H2
     o_s_18_carbamoyl_3_5_7_9_11_13_15_17_octaoxoocta
   }
 
-  branch from co2 side right {
-    co2
+  branch from co2_mnxm13 side right {
+    co2_mnxm13
     <-> . +5_aminoimidazole_4_carboxylic_acid +nh4 +h +h2o
     5_ureidoimidazole_4_carboxylic_acid
   }
 
-  branch from co2 side left {
-    co2
+  branch from co2_mnxm13 side left {
+    co2_mnxm13
     <-> . +3_imidazol_5_yl_pyruvate +h
     imidazole_4_acetaldehyde
   }
 
-  branch from coa side right {
-    coa
+  branch from coa_mnxm727276 side right {
+    coa_mnxm727276
     <-> . +6z_9z_12z_15z_octadecatetraenoyl_coa +r_carnitine
     stearidonyl_carnitine
   }
 
-  branch from coa side left {
-    coa
+  branch from coa_mnxm727276 side left {
+    coa_mnxm727276
     <-> . +9z_12z_15z_18z_21z_tetracosapentaenoyl_coa +r_carnitine
     tetracosapentaenoyl_carnitine
   }
 
   branch from malonyl_coa side right {
     malonyl_coa
-    <-> . +2_methylpropanoyl_coa +methylmalonyl_coa +h +nadph +co2 +nadp +coa +h2o
+    <-> . +2_methylpropanoyl_coa +methylmalonyl_coa +h +nadph +co2_mnxm13 +nadp +coa_mnxm727276 +h2o
     6_8a_seco_6_8a_deoxy_5_oxoavermectin_1b_aglycon
   }
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> ec_2_3_1_115 [2.3.1.115] +glycitin +h +coa
+    <-> ec_2_3_1_115 [2.3.1.115] +glycitin +h +coa_mnxm727276
     malonylglycitin
   }
 

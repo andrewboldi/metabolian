@@ -24,7 +24,7 @@ pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate
 
   branch from succinyl_coa side right {
     succinyl_coa
-    <-> ec_6_2_1_4 [6.2.1.4] +itp +succinate +coa +phosphate
+    <-> ec_6_2_1_4 [6.2.1.4] +itp +succinate +coa_mnxm727276 +phosphate
     idp
   }
 
@@ -84,19 +84,19 @@ pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate
 
   branch from trans_4_coumaroyl_coa side right {
     trans_4_coumaroyl_coa
-    <-> ec_2_3_1_219 [2.3.1.219] +trans_feruloylacetyl_coa +h2o +co2 +coa
+    <-> ec_2_3_1_219 [2.3.1.219] +trans_feruloylacetyl_coa +h2o_chebi_15377 +co2 +coa
     demethoxycurcumin
   }
 
   branch from 4_hydroxybenzoyl_coa side left {
     4_hydroxybenzoyl_coa
     <-> . +nadh +acetyl_coa +h +trans_4_coumaroyl_coa +nad +h2o
-    coa
+    coa_mnxm727276
   }
 
   branch from 4_hydroxybenzoyl_coa side right {
     4_hydroxybenzoyl_coa
-    <-> . +nadh +acetyl_coa +h +coa +nad +h2o
+    <-> . +nadh +acetyl_coa +h +coa_mnxm727276 +nad +h2o
     4_coumaroyl_coa
   }
 
@@ -114,13 +114,13 @@ pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate
 
   branch from succinyl_coa side left {
     succinyl_coa
-    <-> ec_2_3_1_61 [2.3.1.61] +r_dihydrolipoamide +h +coa
+    <-> ec_2_3_1_61 [2.3.1.61] +r_dihydrolipoamide +h +coa_mnxm727276
     s_8_succinyldihydrolipoamide
   }
 
   branch from succinyl_coa side right {
     succinyl_coa
-    <-> ec_2_3_1_61 [2.3.1.61] +r_dihydrolipoamide +coa
+    <-> ec_2_3_1_61 [2.3.1.61] +r_dihydrolipoamide +coa_mnxm727276
     s_succinyl_dihydrolipoamide
   }
 
@@ -150,7 +150,7 @@ pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate
 
   branch from h side left {
     h
-    <-> . +methylenecyclopropyl_pyruvic_acid +co2
+    <-> . +methylenecyclopropyl_pyruvic_acid +co2_mnxm13
     2_oxo_3_carboxy_4_5_cyclopropylhex_5_enoate
   }
 

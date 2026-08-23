@@ -14,38 +14,169 @@ pathway nadh-to-o-5z-tetradecenoyl-l "NADH to O-[(5Z)-tetradecenoyl]-L-…" {
     7z_hexadecenoyl_coa
     <-> . +fad +hplus -fadh2
     2e_7z_hexadecadienoyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     3s_7z_3_hydroxyhexadecenoyl_coa
-    <-> . +nad -nadh -hplus
+    <-> . +nad_chebi_57540 -nadh_chebi_57945 -hplus
     7z_3_oxohexadecenoyl_coa
-    <-> . +coa -acetyl_coa
+    <-> . +coa_chebi_57287 -acetyl_coa_chebi_57288
     5z_tetradecenoyl_coa
-    <-> . +carnitine -coa
+    <-> . +carnitine -coa_chebi_57287
     o_5z_tetradecenoyl_l_carnitine
   }
 
+  branch from coa side left {
+    coa
+    <-> . +13z_icosenoyl_coa +sn_glycerol_3_phosphate
+    1_acylglycerol_3p_13_eicose
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +11z_eicosenoyl_coa +sn_glycerol_3_phosphate
+    1_11z_eicosenoyl_glycero_3_phosphate
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +nadh +7z_10z_13z_16z_docosatetraenoyl_coa +h +nad +h2o
+    4z_7z_10z_13z_16z_docosapentaenoyl_coa
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +nadh +7z_10z_13z_16z_19z_docosapentaenoyl_coa +h +nad +h2o
+    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +9z_12z_15z_18z_21z_tetracosapentaenoyl_coa +h +o2 +h2o
+    6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_5_1_3 [1.5.1.3] +nadh +h +folate
+    7_8_dihydrofolate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +taurine +lithocholate
+    taurolithocholate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +d_glucuronate +telmisartan
+    telmisartan_glucuronide
+  }
 
+  branch from 7z_hexadecenoyl_coa side left {
+    7z_hexadecenoyl_coa
+    <-> . +s_carnitine +coa
+    2e_hexadecenoylcarnitine
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> . +acetyl_coa +fadh2_mnxm1105762 +diphosphate +h +amp +fad_mnxm1364149 +atp +coa +nad +h2o
+    9z_hexadecenoate
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> . +decanoyl_coa +fad_mnxm1364149 +coa +nad +h2o +acetyl_coa +fadh2_mnxm1105762 +h
+    octanoyl_coa
+  }
 
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c +coa
+    3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
+  }
 
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +18_coa_18_oxo_dinorleukotriene_b4 +coa
+    18_20_dioxo_20_coa_leukotriene_b4
+  }
 
+  branch from h side right {
+    h
+    <-> . +9z_octadecenoyl_coa +sn_glycerol_3_phosphate +coa
+    1_octadec_9_enoylglycero_3_phosphate
+  }
 
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    s_glutathionyl_ethacrynic_acid
+  }
 
+  branch from h2o2 side right {
+    h2o2
+    <-> . +octanoyl_coa +nadh +acetyl_coa +h +coa +o2 +nad +h2o
+    hexadecanoyl_coa
+  }
 
+  branch from h2o2 side left {
+    h2o2
+    <-> . +nadh +acetyl_coa +hexadecanoyl_coa +h +coa +o2 +nad +h2o
+    octadecanoyl_coa
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +5z_8z_11z_icosatrienoyl_coa +sn_glycerol_3_phosphate
+    1_acylglycerol_3p_5_8_11_eico
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +erucoyl_coa +sn_glycerol_3_phosphate
+    1_acylglycerol_3p_13_docose
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +octanoyl_coa +nadh +acetyl_coa +h +h2o2 +coa +nad +h2o
+    6z_9z_12z_octadecatrienoyl_coa
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +octanoyl_coa +nadh +acetyl_coa +h +h2o2 +coa +nad +h2o
+    6z_9z_12z_15z_octadecatetraenoyl_coa
+  }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +2_6_dimethylheptanoyl_coa +acetyl_coa +fadh2_mnxm1105762 +h +fad_mnxm1364149 +coa +h2o
+    4_8_dimethylnonanoyl_coa
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +fadh2_mnxm1105762 +h +fad_mnxm1364149 +coa +h2o
+    tetradecanoyl_coa
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_histidine +l_methionine +l_tryptophan
+    tryptophanyl_histidyl_methionine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +l_lysine +l_isoleucine +l_tryptophan
+    tryptophanyl_isoleucyl_lysine
+  }
+
+  branch from carnitine side right {
+    carnitine
+    <-> . +myristoyl_coa +coa_chebi_57287
+    o_tetradecanoyl_l_carnitine
+  }
 }

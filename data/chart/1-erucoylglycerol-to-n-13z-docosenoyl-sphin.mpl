@@ -24,7 +24,7 @@ pathway 1-erucoylglycerol-to-n-13z-docosenoyl-sphin "1-erucoylglycerol to N-[(13
 
   branch from erucoyl_coa side right {
     erucoyl_coa
-    <-> . +diphosphate +amp +atp +coa
+    <-> . +diphosphate +amp_mnxm728294 +atp_mnxm3 +coa_mnxm727276
     13z_docosenoate
   }
 
@@ -43,12 +43,12 @@ pathway 1-erucoylglycerol-to-n-13z-docosenoyl-sphin "1-erucoylglycerol to N-[(13
   branch from erucoyl_coa side left {
     erucoyl_coa
     <-> . +r_carnitine +erucoylcarnitine
-    coa
+    coa_mnxm727276
   }
 
   branch from erucoyl_coa side right {
     erucoyl_coa
-    <-> . +acetyl_coa +coa
+    <-> . +acetyl_coa +coa_mnxm727276
     15z_3_oxotetracosenoyl_coa
   }
 

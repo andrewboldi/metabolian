@@ -10,9 +10,9 @@ pathway nadh-to-propionyl-coa "NADH to propionyl-CoA" {
     nadh
     <-> ec_1_1_1_31 [1.1.1.31] +s_2_methyl_3_oxopropanoate +h -nad
     r_3_hydroxyisobutyrate
-    <-> . +nad -nadh -hplus
+    <-> . +nad_chebi_57540 -nadh_chebi_57945 -hplus
     r_methylmalonate_semialdehyde
-    <-> . +nad +coa +h2o -hco3 -nadh -hplus
+    <-> . +nad_chebi_57540 +coa +h2o -hco3 -nadh_chebi_57945 -hplus
     propionyl_coa
   }
 }

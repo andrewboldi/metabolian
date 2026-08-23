@@ -13,7 +13,7 @@ pathway sn-glycero-3-phospho-1-to-sn-glycerol-3-phosphat "sn-glycero-3-phospho-(
     <-> . +9e_tetradecenoic_acid +h -h2o
     1_2_di_7z_tetradecenoyl_sn_glycero_3_phospho_1_s
     <-> . +phosphate -h -h2o
-    1_2_di_7z_tetradecenoyl_sn_glycero_3_phospho_1_s
+    1_2_di_7z_tetradecenoyl_sn_glycero_3_phospho_1_s_chebi_234299
     <-> . +cmp +h -sn_glycerol_3_phosphate
     cdp_1_2_di_7z_tetradecenoyl_sn_glycerol
   }

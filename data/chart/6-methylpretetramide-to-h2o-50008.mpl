@@ -12,42 +12,42 @@ pathway 6-methylpretetramide-to-h2o-50008 "6-methylpretetramide to H2O" {
     4_hydroxy_6_methylpretetramide
     <-> ec_1_14_13_233 [1.14.13.233] +nadph +o2 -nadp -h2o
     4_de_dimethylamino_4_oxoanhydrotetracycline
-    <-> . +h +nadph -nadp -h2o
-    4_hydroxy_6_methylpretetramide
+    <-> . +h +nadph_mnxm738702 -nadp_mnxm5 -h2o_water
+    4_hydroxy_6_methylpretetramide_mnxm5001
   }
 
   branch from 4_de_dimethylamino_4_oxoanhydrotetracycline side left {
     4_de_dimethylamino_4_oxoanhydrotetracycline
-    <-> ec_1_14_13_232 [1.14.13.232] +h +6_methylpretetramide +nadph +nadp +h2o
-    o2
+    <-> ec_1_14_13_232 [1.14.13.232] +h +6_methylpretetramide +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
+    o2_mnxm735438
   }
 
   branch from 4_de_dimethylamino_4_oxoanhydrotetracycline side right {
     4_de_dimethylamino_4_oxoanhydrotetracycline
-    <-> . +fadh2 +h +o2 +chloride +4_dedimethylamine_4_oxo_anhydro_7_cl_tetracyclin +h2o
+    <-> . +fadh2 +h +o2_mnxm735438 +chloride +4_dedimethylamine_4_oxo_anhydro_7_cl_tetracyclin +h2o_water
     fad
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +alpha_hydroxytamoxifen +h2o +h +o2 +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_14_1 [1.14.14.1] +alpha_hydroxytamoxifen +h2o_water +h +o2_mnxm735438 +nadph_mnxm738702
     tamoxifen
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
     alpha_hydroxy_n_desmethyltamoxifen
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +hydrogencarbonate +benzoate
     terephthalate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_1_2_20 [3.1.2.20] +h +7_isojasmonate +coa
     7_isojasmonic_acid_coa
   }
@@ -70,39 +70,39 @@ pathway 6-methylpretetramide-to-h2o-50008 "6-methylpretetramide to H2O" {
     5_methyl_3_oxo_4_hexenoyl_coa
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +cyclophosphamide +h +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_14_14_1 [1.14.14.1] +cyclophosphamide +h +o2_mnxm735438 +nadp_mnxm5 +h2o_water
     4_hydroxycyclophosphamide
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +h +carboxyphosphamide +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_2_1_5 [1.2.1.5] +h +carboxyphosphamide +nadp_mnxm5 +h2o_water
     aldophosphamide
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +ifosfamide +o2 +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_14_14_1 [1.14.14.1] +h +ifosfamide +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
     4_hydroxyifosfamide
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +p_hydroxyfelbamate +h2o +h +o2 +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_14_1 [1.14.14.1] +p_hydroxyfelbamate +h2o_water +h +o2_mnxm735438 +nadph_mnxm738702
     felbamate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +n_6_dimethylallyl_adenosine_5_phosphate +phosphate
     n6_2_isopentenyl_adenosine
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_31 [3.2.1.31] +d_glucuronate +luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
-    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
+    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc_mnxm3650
   }
 }

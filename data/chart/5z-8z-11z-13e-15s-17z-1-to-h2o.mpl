@@ -10,17 +10,17 @@ pathway 5z-8z-11z-13e-15s-17z-1-to-h2o "(5Z,8Z,11Z,13E,15S,17Z)-1… to H2O" {
     5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13
     <-> . +gsh -gssg -h2o
     15_s_hepe
-    <-> . +h2o
+    <-> . +h2o_water
     15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
     <-> . +h
     14_15_dihete
-    <-> . +h +adp +phosphate -14_15_dihete -h2o
+    <-> . +h +adp +phosphate -14_15_dihete -h2o_water
     atp
   }
 
   branch from 15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate side left {
     15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
-    <-> . +h +l_cysteine +h2o
+    <-> . +h +l_cysteine +h2o_water
     eoxin_e4
   }
 
@@ -32,24 +32,24 @@ pathway 5z-8z-11z-13e-15s-17z-1-to-h2o "(5Z,8Z,11Z,13E,15S,17Z)-1… to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     l_l_homocystine
   }
 
   branch from atp side right {
     atp
-    <-> . +co2 +pyruvate +h2o +h +adp +phosphate
+    <-> . +co2 +pyruvate +h2o_water +h +adp +phosphate
     oxaloacetate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +diphosphate +intermedeol
     2e_6e_farnesyl_diphosphate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +acetyl_coa +l_glutamine +h +n_acetyl_l_glutaminyl_l_glutamine
     coa
   }
@@ -66,14 +66,14 @@ pathway 5z-8z-11z-13e-15s-17z-1-to-h2o "(5Z,8Z,11Z,13E,15S,17Z)-1… to H2O" {
     ectocarpin_c
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +chanoclavine_i_aldehyde
     didehydroagroclavine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +2s_bisdechlorogeodin
     asterric_acid
   }
@@ -86,7 +86,7 @@ pathway 5z-8z-11z-13e-15s-17z-1-to-h2o "(5Z,8Z,11Z,13E,15S,17Z)-1… to H2O" {
 
   branch from h side right {
     h
-    <-> . +mycophenolate +2_morpholin_4_yl_ethanol +h2o
+    <-> . +mycophenolate +2_morpholin_4_yl_ethanol +h2o_water
     mycophenolate_mofetil
   }
 
@@ -98,25 +98,25 @@ pathway 5z-8z-11z-13e-15s-17z-1-to-h2o "(5Z,8Z,11Z,13E,15S,17Z)-1… to H2O" {
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     l_arabinopyranose
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +alpha_d_glucosamine_6_phosphate +h2o +h
+    <-> ec_3_1_3_29 [3.1.3.29] +alpha_d_glucosamine_6_phosphate +h2o_water +h
     beta_d_glucosamine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_3_5_6_pentakisphosphate +h2o
+    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_3_5_6_pentakisphosphate +h2o_water
     1d_myo_inositol_1_2_5_6_tetrakisphosphate
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o_water
     ala_his
   }
 

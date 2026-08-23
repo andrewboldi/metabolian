@@ -55,7 +55,7 @@ pathway z-4-hydroxyphenyl-acet-to-h2o "(Z)-(4-hydroxyphenyl)acet… to H2O" {
   branch from z_1_glutathion_s_yl_n_hydroxy_2_4_hydroxyphenyl side left {
     z_1_glutathion_s_yl_n_hydroxy_2_4_hydroxyphenyl
     <-> . +glutathione +h2o
-    1_aci_nitro_2_4_hydroxyphenyl_ethane
+    1_aci_nitro_2_4_hydroxyphenyl_ethane_mnxm1107170
   }
 
   branch from z_4_hydroxyphenyl_acetaldehyde_oxime side right {

@@ -36,13 +36,13 @@ pathway abietatriene-to-fmn-48080 "abietatriene to FMN" {
 
   branch from abietatriene side right {
     abietatriene
-    <-> . +h +o2 +nadph +dehydroabietadienol +h2o
+    <-> . +h +o2_mnxm735438 +nadph +dehydroabietadienol +h2o_water
     nadp
   }
 
   branch from abietatriene side left {
     abietatriene
-    <-> . +nadp +h2o +o2 +nadph +miltiradiene
+    <-> . +nadp +h2o_water +o2_mnxm735438 +nadph +miltiradiene
     h
   }
 

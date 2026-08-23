@@ -18,13 +18,13 @@ pathway maltoheptaose-to-d-maltotetraonate-null "maltoheptaose to D-maltotetraon
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o_water
     nigerose
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +cellobiosan +h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +cellobiosan +h2o_water
     levoglucosan
   }
 }

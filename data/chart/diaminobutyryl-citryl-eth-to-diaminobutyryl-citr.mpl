@@ -103,7 +103,7 @@ pathway diaminobutyryl-citryl-eth-to-diaminobutyryl-citr "diaminobutyryl-citryl-
   branch from diphosphate side left {
     diphosphate
     <-> ec_4_2_3_133 [4.2.3.133] +2e_6e_farnesyl_diphosphate
-    alpha_copaene
+    alpha_copaene_mnxm735801
   }
 
   branch from diphosphate side right {

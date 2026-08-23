@@ -44,8 +44,8 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor "3'-iodo-L-thyronine to hydrogen do
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> . +o3_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_3 +3_phosphonato_5_adenylyl_sulfate +hplus
-    o3_6_o_sulfo_n_acetyl_d_glucosaminyl_1_3_d_galac
+    <-> . +o3_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_3_chebi_176491 +3_phosphonato_5_adenylyl_sulfate +hplus
+    o3_6_o_sulfo_n_acetyl_d_glucosaminyl_1_3_d_galac_chebi_176490
   }
 
   branch from adenosine_3_5_bismonophosphate side right {

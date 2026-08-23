@@ -16,14 +16,14 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
     4_methoxycyclopenine
     <-> ec_4_1_99_27 [4.1.99.27] -methyl_isocyanate -hplus
     4_methoxyviridicatin
-    <-> . +h +o2 +nadph -nadp -h2o
+    <-> . +h +o2_mnxm735438 +nadph -nadp -h2o_water
     yaequinolone_a2
   }
 
   branch from s_4_methoxycyclopeptine side left {
     s_4_methoxycyclopeptine
-    <-> ec_1_14_11_81 [1.14.11.81] +2_oxoglutarate +o2 +4_methoxycyclopenine +succinate +h2o
-    co2
+    <-> ec_1_14_11_81 [1.14.11.81] +2_oxoglutarate +o2_mnxm735438 +4_methoxycyclopenine +succinate_mnxm25 +h2o_water
+    co2_mnxm13
   }
 
   branch from yaequinolone_a2 side right {
@@ -34,7 +34,7 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +8_8a_deoxyoleandolide +co2 +coa +h2o +s_methylmalonyl_coa +h +nadph
+    <-> . +8_8a_deoxyoleandolide +co2_mnxm13 +coa +h2o_water +s_methylmalonyl_coa +h +nadph
     acetyl_coa
   }
 
@@ -44,14 +44,14 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
     dtdp_d_olivose
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +gdp_2_acetamido_2_6_dideoxy_alpha_d_xylo_hexos_4
     gdp_n_acetyl_d_glucosamine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_1_179 [3.2.1.179] +4_deoxy_l_threo_hex_4_enopyranuronate +d_glcp_1_4_l_rhap_1_3_d_glcp
     d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp
   }
@@ -74,15 +74,15 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
     dehydroascorbate_bicyclic_form
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +3_dimethylselenopropanal +nh4 +h2o2 +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +3_dimethylselenopropanal +nh4 +h2o2 +h2o_water
     dimethylselenopropanoate_amine
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +8_8a_deoxyoleandolide +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +8_8a_deoxyoleandolide +h2o_water
     oleandolide
   }
 
@@ -100,24 +100,24 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> . +acetyl_coa +malonyl_coa +h +nadph +co2 +5z_8z_11z_14z_17z_eicosapentaenoate +h2o
+    <-> . +acetyl_coa +malonyl_coa +h +nadph +co2_mnxm13 +5z_8z_11z_14z_17z_eicosapentaenoate +h2o_water
     coa
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +ethylamine +acetaldehyde +h2o
+    <-> . +h +o2_mnxm735438 +nadph +ethylamine +acetaldehyde +h2o_water
     nh4
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_4_11_25 [3.4.11.25] +3s_3_3s_3_aminobutanoyl_amino_5_methylhexanoic +3r_beta_leucine
     beta_homovaline_beta_homoalanine_beta_homoleucin
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_158 [3.2.1.158] +agarotriose +neoagarotriose
     agarohexaose
   }

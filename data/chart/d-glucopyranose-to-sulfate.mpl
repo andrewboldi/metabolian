@@ -10,9 +10,9 @@ pathway d-glucopyranose-to-sulfate "D-glucopyranose to sulfate" {
     glucose
     <-> ec_3_2_1_147 [3.2.1.147] +2_butenyl_thiohydroximate_o_sulfate -h2o
     gluconapin
-    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
+    <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o_chebi_15377
     z_progoitrin
-    <-> . +h2o -glucose -hplus
+    <-> . +h2o_chebi_15377 -glucose -hplus
     z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani
     <-> . -sulfate
     3r_3_hydroxy_3_thiiran_2_yl_propanenitrile
@@ -56,7 +56,7 @@ pathway d-glucopyranose-to-sulfate "D-glucopyranose to sulfate" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_7_3_2 [1.7.3.2] +acetylindoxyl +o2
+    <-> ec_1_7_3_2 [1.7.3.2] +acetylindoxyl +o2_mnxm735438
     n_acetylisatin
   }
 

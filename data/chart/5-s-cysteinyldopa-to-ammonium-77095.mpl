@@ -24,7 +24,7 @@ pathway 5-s-cysteinyldopa-to-ammonium-77095 "5-S-cysteinyldopa to ammonium" {
 
   branch from 5_s_cysteinyldopaquinone side left {
     5_s_cysteinyldopaquinone
-    <-> . +7_2s_2_amino_2_carboxylatoethyl_5_hydroxy_2h_1_4 +h2o
+    <-> . +7_2s_2_amino_2_carboxylatoethyl_5_hydroxy_2h_1_4 +h2o_water
     h
   }
 
@@ -60,7 +60,7 @@ pathway 5-s-cysteinyldopa-to-ammonium-77095 "5-S-cysteinyldopa to ammonium" {
 
   branch from 5_s_cysteinyldopa side left {
     5_s_cysteinyldopa
-    <-> . +h +h2o
+    <-> . +h +h2o_water
     1_4_benzothiazinyl_alanine
   }
 

@@ -48,7 +48,7 @@ pathway n-acetylneuraminyl-2-3-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(
 
   branch from cmp_n_acetyl_neuraminate side right {
     cmp_n_acetyl_neuraminate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cytidine_5_monophosphate +hplus
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_82940 +cytidine_5_monophosphate +hplus
     neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
   }
 

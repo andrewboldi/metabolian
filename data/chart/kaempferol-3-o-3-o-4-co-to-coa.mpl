@@ -16,14 +16,75 @@ pathway kaempferol-3-o-3-o-4-co-to-coa "kaempferol 3-O-(3″-O-4-co… to CoA" {
     kaempferol_3_o_3_6_o_di_4_coumaroyl_glucoside
   }
 
+  branch from trans_4_coumaroyl_coa side left {
+    trans_4_coumaroyl_coa
+    <-> . +2r_3s_piscidate +coa_chebi_57287
+    cimicifugate_k
+  }
 
+  branch from trans_4_coumaroyl_coa side right {
+    trans_4_coumaroyl_coa
+    <-> . +h +o2 +nadph +nadp +h2o
+    trans_caffeoyl_coa
+  }
 
+  branch from h side left {
+    h
+    <-> . +adp +1_tetracosanoyl_sn_glycero_3_phosphocholine +phosphate +1_tetracosanoyl_sn_glycero_3_phosphocholine +h2o
+    atp
+  }
 
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    pe_12_0_0_0
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +9z_12z_15z_octadecatrienoyl_coa +r_carnitine
+    linolenoylcarnitine
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +r_carnitine +11z_14z_17z_icosatrienoyl_coa
+    11z_14z_17z_eicosatrienoylcarnitine
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +r_carnitine +11z_14z_icosadienoyl_coa
+    11z_14z_eicosadienoylcarnitine
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +13z_16z_docosadienoyl_coa +r_carnitine
+    13z_16z_docosadienoylcarnitine
+  }
 
+  branch from trans_4_coumaroyl_coa side left {
+    trans_4_coumaroyl_coa
+    <-> . +feruloyl_diketide +h +co2 +coa
+    demethoxycurcumin
+  }
 
+  branch from trans_4_coumaroyl_coa side right {
+    trans_4_coumaroyl_coa
+    <-> . +4_coumaroyl_diketide +h +co2 +coa
+    1e_4z_6e_5_hydroxy_1_7_bis_4_hydroxyphenyl_hept
+  }
 
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    lysope_0_0_15_0
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_hexadecenoylglycerophosphoethanolamine_c16_1_p
+  }
 }

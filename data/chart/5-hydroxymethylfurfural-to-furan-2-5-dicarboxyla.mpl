@@ -10,8 +10,8 @@ pathway 5-hydroxymethylfurfural-to-furan-2-5-dicarboxyla "5-hydroxymethylfurfura
     5_hydroxymethylfurfural
     <-> ec_1_1_3_47 [1.1.3.47] +o2 +h2o -h2o2 -hplus
     furan_2_5_dicarboxylate
-    <-> . +h +h2o2 -5_formyl_2_furoate -h2o
-    o2
+    <-> . +h +h2o2_mnxm732620 -5_formyl_2_furoate -h2o_water
+    o2_mnxm735438
     <-> . +5_formyl_2_furoate +h2o
     5_dihydroxymethyl_2_furoate
     <-> . +o2 -h2o2 -hplus
@@ -24,74 +24,74 @@ pathway 5-hydroxymethylfurfural-to-furan-2-5-dicarboxyla "5-hydroxymethylfurfura
     co2
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_1_3_23 [1.1.3.23] +h +thiamine_acetate +h2o2 +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_1_3_23 [1.1.3.23] +h +thiamine_acetate +h2o2_mnxm732620 +h2o_water
     thiamine_1_aldehyde
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_1_3_13 [1.1.3.13] +formaldehyde +h2o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_1_3_13 [1.1.3.13] +formaldehyde +h2o2_mnxm732620
     methanol
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     9z_12z_octadecadienoate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     9e_octadecenoate
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     9z_hexadecenoate
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     8z_11z_14z_eicosatrienoate
   }
 
-  branch from h2o2 side right {
-    h2o2
-    <-> ec_1_1_3_6 [1.1.3.6] +cholesterol +o2
+  branch from h2o2_mnxm732620 side right {
+    h2o2_mnxm732620
+    <-> ec_1_1_3_6 [1.1.3.6] +cholesterol +o2_mnxm735438
     cholest_4_en_3_one
   }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> ec_1_1_99_9 [1.1.99.9] +isopyridoxal +o2
+  branch from h2o2_mnxm732620 side left {
+    h2o2_mnxm732620
+    <-> ec_1_1_99_9 [1.1.99.9] +isopyridoxal +o2_mnxm735438
     pyridoxine
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +beta_d_glucosamine +h2o +h2o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +beta_d_glucosamine +h2o_water +h2o2_mnxm732620
     2_amino_2_deoxy_d_gluconate
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +3_hydroxy_3_methyloxindole +co2 +h
     indol_3_yl_acetate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     decanoate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     tetradecanoate
   }

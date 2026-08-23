@@ -10,7 +10,7 @@ pathway 1d-chiro-inositol-to-h2o-25832 "1D-chiro-inositol to H2O" {
     1d_chiro_inositol
     <-> ec_1_1_1_369 [1.1.1.369] +nad -nadh -hplus
     2d_2_3_5_4_6_pentahydroxycyclohexanone
-    <-> ec_1_1_1_369 [1.1.1.369] +nadh +h -nad
+    <-> ec_1_1_1_369 [1.1.1.369] +nadh_mnxm10 +h -nad_mnxm8
     inositol
     <-> ec_3_1_3_25 [3.1.3.25] +phosphate -h2o
     1d_myo_inositol_2_phosphate
@@ -40,15 +40,15 @@ pathway 1d-chiro-inositol-to-h2o-25832 "1D-chiro-inositol to H2O" {
     sn_glycerol_3_phosphate
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_14_14_1 [1.14.14.1] +nadh +h +estrone +o2 +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_14_14_1 [1.14.14.1] +nadh_mnxm10 +h +estrone +o2 +h2o
     2_hydroxyestrone
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +l_cysteate +h2o
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +l_cysteate +h2o
     3_sulfino_l_alanine
   }
 
@@ -70,15 +70,15 @@ pathway 1d-chiro-inositol-to-h2o-25832 "1D-chiro-inositol to H2O" {
     20_trihydroxy_leukotriene_b4
   }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_1_1_147 [1.1.1.147] +h +16_oxosteroid +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_1_1_147 [1.1.1.147] +h +16_oxosteroid +nad_mnxm8
     16alpha_hydroxysteroid
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_1_1_174 [1.1.1.174] +h +cyclohexan_1_2_dione +nad
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> ec_1_1_1_174 [1.1.1.174] +h +cyclohexan_1_2_dione +nad_mnxm8
     2_hydroxycyclohexan_1_one
   }
 
@@ -106,15 +106,15 @@ pathway 1d-chiro-inositol-to-h2o-25832 "1D-chiro-inositol to H2O" {
     1d_myo_inositol_4_phosphate
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +r_methylmalonyl_coa +coa
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +r_methylmalonyl_coa +coa
     s_2_methyl_3_oxopropanoate
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_14_99_2 [1.14.99.2] +nadh +kynurenate +h +o2
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_14_99_2 [1.14.99.2] +nadh_mnxm10 +kynurenate +h +o2
     7_8_dihydro_7_8_dihydroxykynurenate
   }
 

@@ -14,7 +14,7 @@ pathway 2-azaniumyl-2-deoxyisocho-to-nad "2-azaniumyl-2-deoxyisocho… to NAD" {
     4_amino_4_deoxyprephenate
     <-> ec_1_3_1_121 [1.3.1.121] +nad -co2 -nadh -hplus
     3_4_aminophenyl_pyruvate
-    <-> ec_1_3_1_121 [1.3.1.121] +nadh +co2 +h -nad
-    4_amino_4_deoxyprephenate
+    <-> ec_1_3_1_121 [1.3.1.121] +nadh_mnxm10 +co2_mnxm13 +h -nad_mnxm8
+    4_amino_4_deoxyprephenate_mnxm814750
   }
 }

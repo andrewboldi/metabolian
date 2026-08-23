@@ -14,21 +14,21 @@ pathway h-to-ammonium "H to ammonium" {
     z_3_ureidoacrylate
     <-> ec_1_14_99_46 [1.14.99.46] +fmn_n5_oxide -uracil -h
     fmn_n5_peroxide
-    <-> . +uracil -fmn_n5_oxide -hplus
+    <-> . +uracil_chebi_17568 -fmn_n5_oxide_chebi_144890 -hplus
     ureidoacrylate
-    <-> ec_3_5_1_110 [3.5.1.110] +h2o +hplus -nh3 -co2
+    <-> ec_3_5_1_110 [3.5.1.110] +h2o_chebi_15377 +hplus -nh3 -co2
     z_3_aminoacrylate
   }
 
   branch from h2o side left {
     h2o
     <-> ec_3_2_1_137 [3.2.1.137] +d_mannopyranose +s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
-    s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
+    s_cerevisiae_mannan_fragment_with_alpha_1_2_mann_mnxm1560242
   }
 
   branch from h2o side right {
     h2o
-    <-> . +d_mannopyranose +s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
+    <-> . +d_mannopyranose +s_cerevisiae_mannan_fragment_with_alpha_1_2_mann_mnxm1560242
     s_cerevisiae_mannan_fragment_with_alpha_1_3_mann
   }
 
@@ -58,7 +58,7 @@ pathway h-to-ammonium "H to ammonium" {
 
   branch from h side left {
     h
-    <-> . +co2 +chrysophanol_9_anthrone
+    <-> . +co2_mnxm13 +chrysophanol_9_anthrone
     chrysophanol_anthrone
   }
 
@@ -77,13 +77,13 @@ pathway h-to-ammonium "H to ammonium" {
   branch from h2o side right {
     h2o
     <-> . +alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl +3_o_methyl_alpha_d_mannosyl_1_4_3_1_o_3_o_dimet
-    alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl
+    alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl_mnxm1560062
   }
 
   branch from h2o side left {
     h2o
     <-> . +alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl +3_o_methyl_alpha_d_mannosyl_1_4_4_1_o_3_o_dimet
-    alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl
+    alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl_mnxm1560063
   }
 
   branch from nadh side right {

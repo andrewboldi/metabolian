@@ -16,7 +16,7 @@ pathway nadh-to-3-4-dimethoxyphenyl-meth-null "NADH to (3,4-dimethoxyphenyl)meth
     2_hydroxyacetophenone
     <-> ec_1_1_99_36 [1.1.99.36] +3_4_dimethoxybenzaldehyde -phenylglyoxal
     3_4_dimethoxyphenyl_methanol
-    <-> ec_1_11_1_14 [1.11.1.14] +h2o2 -h2o
+    <-> ec_1_11_1_14 [1.11.1.14] +h2o2 -h2o_chebi_15377
     3_4_dimethoxyphenyl_methyloxidanyl
   }
 
@@ -59,7 +59,7 @@ pathway nadh-to-3-4-dimethoxyphenyl-meth-null "NADH to (3,4-dimethoxyphenyl)meth
   branch from 3_4_dimethoxyphenyl_methanol side left {
     3_4_dimethoxyphenyl_methanol
     <-> ec_1_1_3_7 [1.1.3.7] +3_4_dimethoxybenzaldehyde +o2
-    h2o2
+    h2o2_mnxm732620
   }
 
   branch from 3_4_dimethoxyphenyl_methanol side right {

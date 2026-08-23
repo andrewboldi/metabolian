@@ -8,11 +8,11 @@ pathway narbomycin-to-h2o "narbomycin to H2O" {
 
   spine at 0,0 {
     narbomycin
-    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     novapikromycin
-    <-> . +nadp +h2o -o2 -nadph -narbomycin
+    <-> . +nadp +h2o_water -o2_mnxm735438 -nadph -narbomycin_mnxm739111
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +narbomycin +phosphate -narbomycin -h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +narbomycin_mnxm739111 +phosphate -narbomycin_mnxm739111 -h2o_water
     atp
   }
 
@@ -28,21 +28,21 @@ pathway narbomycin-to-h2o "narbomycin to H2O" {
     formaldehyde
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +fluorene +nad +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +fluorene +nad +h2o_water
     9h_fluoren_9_ol
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +fluorene +nad
     3s_4r_3_4_dihydroxy_3_4_dihydrofluorene
   }
 
   branch from nadph side left {
     nadph
-    <-> . +8_8a_deoxyoleandolide +h +o2 +nadp +h2o
+    <-> . +8_8a_deoxyoleandolide +h +o2_mnxm735438 +nadp +h2o_water
     oleandolide
   }
 
@@ -60,25 +60,25 @@ pathway narbomycin-to-h2o "narbomycin to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +l_4_hydroxyphenylglycyl_l_arginine +h +nocardicin_g +amp +l_serine +l_arginine +h2o
+    <-> . +diphosphate +l_4_hydroxyphenylglycyl_l_arginine +h +nocardicin_g +amp +l_serine +l_arginine +h2o_water
     l_4_hydroxymethyl_glycine
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +o2 +ethene +nad
+  branch from h2o_water side left {
+    h2o_water
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +o2_mnxm735438 +ethene +nad
     oxirane
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +nadh +o2 +2_6_dichlorophenol +nad
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +nadh +o2_mnxm735438 +2_6_dichlorophenol +nad
     2_6_dichloro_4_hydroxyphenolate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_22 [1.14.13.22] +2_hydroxycyclohexan_1_one +h +o2 +nadph +h2o
+    <-> ec_1_14_13_22 [1.14.13.22] +2_hydroxycyclohexan_1_one +h +o2_mnxm735438 +nadph +h2o_water
     2_hydroxyhexano_6_lactone
   }
 
@@ -88,14 +88,14 @@ pathway narbomycin-to-h2o "narbomycin to H2O" {
     auraviketone
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2_succinylbenzoate +h
     spirodilactone
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +2_2_bis_4_chlorophenyl_ethanol
     unsym_bis_4_chlorophenyl_ethylene
   }
@@ -112,27 +112,27 @@ pathway narbomycin-to-h2o "narbomycin to H2O" {
     coa
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +nadh +h +o_toluate +nad
     1_6_dihydroxy_2_methylcyclohexa_2_4_dienecarboxy
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +1_4_dichlorobenzene +nad
     3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +4_ethylphenol +o2 +nadp +h2o
+    <-> . +h +4_ethylphenol +o2_mnxm735438 +nadp +h2o_water
     4_1_hydroxyethyl_phenol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +naphthalene +h +o2 +nadp +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +naphthalene +h +o2_mnxm735438 +nadp +h2o_water
     1s_2r_naphthalene_1_2_oxide
   }
 
@@ -144,7 +144,7 @@ pathway narbomycin-to-h2o "narbomycin to H2O" {
 
   branch from adp side right {
     adp
-    <-> ec_3_6_3_49 [3.6.3.49] +h +phosphate +atp +h2o
+    <-> ec_3_6_3_49 [3.6.3.49] +h +phosphate +atp +h2o_water
     chloride
   }
 
@@ -156,7 +156,7 @@ pathway narbomycin-to-h2o "narbomycin to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_hexakisphosphate +h +h2o
+    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_hexakisphosphate +h +h2o_water
     myo_inositol_pentakisphosphate
   }
 
@@ -168,7 +168,7 @@ pathway narbomycin-to-h2o "narbomycin to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_42 [3.6.3.42] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_42 [3.6.3.42] +h +adp +phosphate +h2o_water
     beta_d_glucan
   }
 }

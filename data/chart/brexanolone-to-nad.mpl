@@ -10,9 +10,9 @@ pathway brexanolone-to-nad "brexanolone to NAD" {
     brexanolone
     <-> . +nadph +hplus -nadp
     5alpha_pregnane_3alpha_20alpha_diol
-    <-> ec_1_1_1_209 [1.1.1.209] +nadp -h -nadph
+    <-> ec_1_1_1_209 [1.1.1.209] +nadp_mnxm5 -h -nadph_mnxm738702
     5alpha_pregnan_20alpha_ol_3_one
-    <-> ec_1_1_1_149 [1.1.1.149] +nadp -5alpha_pregnane_3_20_dione -nadph
+    <-> ec_1_1_1_149 [1.1.1.149] +nadp_mnxm5 -5alpha_pregnane_3_20_dione -nadph_mnxm738702
     h
     <-> ec_1_1_1_51 [1.1.1.51] +nadh +5alpha_pregnane_3_20_dione -nad
     5alpha_pregnan_20alpha_ol_3_one

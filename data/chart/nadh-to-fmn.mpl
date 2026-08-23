@@ -28,7 +28,7 @@ pathway nadh-to-fmn "NADH to FMN" {
 
   branch from 7_hydroxy_3_oxochol_24_oyl_coa side right {
     7_hydroxy_3_oxochol_24_oyl_coa
-    <-> ec_1_3_1_116 [1.3.1.116] +nad +nadh +hplus
+    <-> ec_1_3_1_116 [1.3.1.116] +nad_chebi_57540 +nadh_chebi_57945 +hplus
     7_hydroxy_3_oxochol_4_en_24_oyl_coa
   }
 }

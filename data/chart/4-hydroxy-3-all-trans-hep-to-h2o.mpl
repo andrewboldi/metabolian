@@ -14,7 +14,7 @@ pathway 4-hydroxy-3-all-trans-hep-to-h2o "4-hydroxy-3-all-trans-hep… to H2O" {
     3_all_trans_heptaprenyl_benzene_1_2_diol
     <-> ec_2_1_1_222 [2.1.1.222] +sam -sah -hplus
     2_methoxy_6_all_trans_heptaprenyl_phenol
-    <-> . +h +o2 +nadph -2_methoxy_6_all_trans_heptaprenylhydroquinone -h2o
-    nadp
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 -2_methoxy_6_all_trans_heptaprenylhydroquinone -h2o_water
+    nadp_mnxm5
   }
 }

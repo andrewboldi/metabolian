@@ -13,7 +13,7 @@ pathway chenodeoxycholoyl-coa-to-nad-null "chenodeoxycholoyl-CoA to NAD" {
     <-> ec_6_2_1_7 [6.2.1.7] +diphosphate +h +amp -atp -coa
     3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a
     <-> . +h +nadph -nadp -h2o
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174
     <-> . +nadh +h -nad
     5beta_cholestane_3alpha_7alpha_27_triol
   }
@@ -66,16 +66,16 @@ pathway chenodeoxycholoyl-coa-to-nad-null "chenodeoxycholoyl-CoA to NAD" {
     actn
   }
 
-  branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side left {
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+  branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174 side left {
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174
     <-> . +nadp +h +nadph
     25r_5beta_cholestane_3alpha_7alpha_26_triol
   }
 
-  branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side right {
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+  branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174 side right {
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174
     <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1107209
   }
 
   branch from nadp side left {

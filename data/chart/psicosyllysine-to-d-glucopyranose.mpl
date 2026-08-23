@@ -23,12 +23,12 @@ pathway psicosyllysine-to-d-glucopyranose "psicosyllysine to D-glucopyranose…"
   branch from fructoselysine_6_phosphate side left {
     fructoselysine_6_phosphate
     <-> . +beta_d_glucose_6_phosphate +l_lysine
-    h2o
+    h2o_water
   }
 
   branch from fructoselysine_6_phosphate side right {
     fructoselysine_6_phosphate
-    <-> . +l_lysine +h2o
+    <-> . +l_lysine +h2o_water
     alpha_d_glucose_6_phosphate
   }
 
@@ -46,7 +46,7 @@ pathway psicosyllysine-to-d-glucopyranose "psicosyllysine to D-glucopyranose…"
 
   branch from fructoselysine_6_phosphate side left {
     fructoselysine_6_phosphate
-    <-> . +d_lysine +h2o
+    <-> . +d_lysine +h2o_water
     beta_d_glucose_6_phosphate
   }
 

@@ -11,7 +11,7 @@ pathway 1-hexadecanoyl-2-9z-octa-to-oleoyl-sn-glycero-3 "1-hexadecanoyl-2-(9Z-oc
     <-> . +h2o -phosphoethanolamine -hplus
     1_palmitoyl_2_oleoyl_sn_glycerol
     <-> . +cdp_choline -cytidine_5_monophosphate -hplus
-    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
+    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph_chebi_73001
     <-> . +n_acetylsphingosine -2_oleoyl_sn_glycero_3_phosphocholine
     1_o_palmitoyl_n_acetylsphingosine
     <-> . +2_oleoyl_sn_glycero_3_phosphocholine +oleoyl_coa -coa

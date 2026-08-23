@@ -54,7 +54,7 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-7-l-d "UDP-3-O-[(3R)-hydroxyacylâ
 
   branch from adp_l_glycero_d_manno_heptose side right {
     adp_l_glycero_d_manno_heptose
-    <-> ec_2_4_1_56 [2.4.1.56] +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +adp +core_oligosaccharide_lipid_a
+    <-> ec_2_4_1_56 [2.4.1.56] +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +adp_mnxm40333 +core_oligosaccharide_lipid_a
     h
   }
 }

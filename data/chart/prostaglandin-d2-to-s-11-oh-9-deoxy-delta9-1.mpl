@@ -67,7 +67,7 @@ pathway prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1 "prostaglandin D2 to S-(11-
   branch from delta12_prostaglandin_j2 side left {
     delta12_prostaglandin_j2
     <-> . +glutathione
-    s_9_deoxy_delta9_12_pgd2_glutathione
+    s_9_deoxy_delta9_12_pgd2_glutathione_mnxm1560440
   }
 
   branch from h2o side right {

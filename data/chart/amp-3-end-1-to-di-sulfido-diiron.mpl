@@ -12,7 +12,7 @@ pathway amp-3-end-1-to-di-sulfido-diiron "AMP 3'-end(1−) to di-μ-sulfido-diir
     3_l_tyrosyl_adenylyl_1_group
     <-> ec_2_3_2_21 [2.3.2.21] -amp_3_end_1
     cyclo_l_tyrosyl_l_tyrosyl
-    <-> ec_1_14_19_70 [1.14.19.70] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_70 [1.14.19.70] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     mycocyclosin
   }
 

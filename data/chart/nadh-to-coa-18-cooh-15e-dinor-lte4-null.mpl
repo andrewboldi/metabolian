@@ -31,7 +31,7 @@ pathway nadh-to-coa-18-cooh-15e-dinor-lte4-null "NADH to CoA-18-COOH-15E-dinor-L
   branch from 16e_18_oxo_18_coa_dinor_lte4 side left {
     16e_18_oxo_18_coa_dinor_lte4
     <-> . +h2o
-    16_s_hydroxy_18_oxo_18_coa_lte4
+    16_s_hydroxy_18_oxo_18_coa_lte4_mnxm1560436
   }
 
   branch from h2o side right {
@@ -96,7 +96,7 @@ pathway nadh-to-coa-18-cooh-15e-dinor-lte4-null "NADH to CoA-18-COOH-15E-dinor-L
 
   branch from h2o side right {
     h2o
-    <-> . +dca_cl
+    <-> . +dca_cl_chebi_131936
     dehydrodiconiferyl_acid_gem_diol
   }
 }

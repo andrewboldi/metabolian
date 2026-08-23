@@ -18,13 +18,13 @@ pathway h-to-heptanal-null "H to heptanal" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_93 [1.14.13.93] +h +2_cis_abscisate +o2 +nadph +8_hydroxyabscisate
-    nadp
+    <-> ec_1_14_13_93 [1.14.13.93] +h +2_cis_abscisate +o2 +nadph_mnxm738702 +8_hydroxyabscisate
+    nadp_mnxm5
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_94 [1.14.13.94] +h +o2 +nadph +lithocholate +nadp
+    <-> ec_1_14_13_94 [1.14.13.94] +h +o2 +nadph_mnxm738702 +lithocholate +nadp_mnxm5
     6beta_hydroxylithocholate
   }
 
@@ -42,13 +42,13 @@ pathway h-to-heptanal-null "H to heptanal" {
 
   branch from h side left {
     h
-    <-> ec_1_14_13_96 [1.14.13.96] +5beta_cholestane_3alpha_7alpha_diol +o2 +nadph +nadp +h2o
+    <-> ec_1_14_13_96 [1.14.13.96] +5beta_cholestane_3alpha_7alpha_diol +o2 +nadph_mnxm738702 +nadp_mnxm5 +h2o
     5beta_cholestane_3alpha_7alpha_12alpha_triol
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_13_97 [1.14.13.97] +taurohyocholate +nadp +h2o +o2 +nadph
+    <-> ec_1_14_13_97 [1.14.13.97] +taurohyocholate +nadp_mnxm5 +h2o +o2 +nadph_mnxm738702
     taurochenodeoxycholate
   }
 
@@ -66,13 +66,13 @@ pathway h-to-heptanal-null "H to heptanal" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_88 [1.14.13.88] +h +o2 +3_hydroxyflavanone +nadph +nadp
+    <-> ec_1_14_13_88 [1.14.13.88] +h +o2 +3_hydroxyflavanone +nadph_mnxm738702 +nadp_mnxm5
     3_5_dihydroxyflavanone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_137 [1.14.13.137] +indolin_2_one +nadp +h +o2 +nadph
+    <-> ec_1_14_13_137 [1.14.13.137] +indolin_2_one +nadp_mnxm5 +h +o2 +nadph_mnxm738702
     indole
   }
 

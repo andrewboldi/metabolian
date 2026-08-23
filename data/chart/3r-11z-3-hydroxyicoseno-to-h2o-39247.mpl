@@ -16,7 +16,7 @@ pathway 3r-11z-3-hydroxyicoseno-to-h2o-39247 "(3R,11Z)-3-hydroxyicoseno… to H2
     8z_11z_icosadienoyl_coa
     <-> . +diphosphate +h +amp -8_11_eicosadienoic_acid -coa
     atp
-    <-> . +h +adp +8_11_eicosadienoic_acid +phosphate -atp -h2o
+    <-> . +h +adp +8_11_eicosadienoic_acid +phosphate -atp -h2o_water
     8_11_eicosadienoic_acid
   }
 }

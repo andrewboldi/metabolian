@@ -109,7 +109,7 @@ pathway dimethylsulfoniopropanoyl-to-h2o "dimethylsulfoniopropanoyl… to H2O" {
   branch from coa side right {
     coa
     <-> . +2s_2_methylbutanoyl_coa +3_dodecanoyl_4_3_methylbutanoyl_sucrose
-    3_dodecanoyl_3_2_methylbutanoyl_4_3_methylbutano
+    3_dodecanoyl_3_2_methylbutanoyl_4_3_methylbutano_mnxm819859
   }
 
   branch from coa side left {
@@ -139,6 +139,6 @@ pathway dimethylsulfoniopropanoyl-to-h2o "dimethylsulfoniopropanoyl… to H2O" {
   branch from nad side left {
     nad
     <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    thujan_3_ol
+    thujan_3_ol_mnxm97633
   }
 }

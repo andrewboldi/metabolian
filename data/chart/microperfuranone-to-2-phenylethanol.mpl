@@ -14,42 +14,173 @@ pathway microperfuranone-to-2-phenylethanol "(−)-microperfuranone to 2-phenyle
     nadp
     <-> ec_1_1_1_110 [1.1.1.110] +r_3_phenyllactate +nad -nadh -hplus
     keto_phenylpyruvate
-    <-> ec_4_1_1_43 [4.1.1.43] +hplus -co2
+    <-> ec_4_1_1_43 [4.1.1.43] +hplus -co2_chebi_16526
     phenylacetaldehyde
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     2_phenylethanol
     <-> . +acetyl_coa -coa
     phenethyl_acetate
-    <-> . +h2o -2_phenylethanol -acetate
+    <-> . +h2o -2_phenylethanol_mnxm2476 -acetate
     h
-    <-> . +glucose +2_phenylethanol -h2o
+    <-> . +glucose +2_phenylethanol_mnxm2476 -h2o
     2_phenylethyl_d_glucopyranoside
-    <-> . +udp +h -2_phenylethanol
+    <-> . +udp +h -2_phenylethanol_mnxm2476
     udp_alpha_d_glucose
   }
 
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +4r_5r_4_5_dihydroxycyclohex_1_ene_1_carboxyaden +h
+    4r_5r_4_5_dihydroxycyclohex_1_ene_1_carboxylate
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +l_isoleucyl_amp +diphosphate +h
+    l_isoleucine
+  }
 
+  branch from 3_phenylpyruvate side left {
+    3_phenylpyruvate
+    <-> . +l_phenylalanine +l_isoleucine
+    3_methyl_2_oxopentanoate
+  }
 
+  branch from 3_phenylpyruvate side right {
+    3_phenylpyruvate
+    <-> . +l_phenylalanine +l_isoleucine
+    s_3_methyl_2_oxopentanoate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +2_5_6_trihydroxy_3_methylpyridine +2_oxobut_3_enoic_acid +h
+    3_methyl_5_hydroxy_6_3_carboxy_3_oxopropenyl_1h
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +2_oxobut_3_enoic_acid +h +3_methyl_5_hydroxy_6_3_carboxy_3_oxopropenyl_1h
+    2_5_6_trihydroxy_3_methylpyridine_mnxm1369183
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +4_hydroxy_5_methyl_2_propyl_3_2h_furanone +h +nadph
+    2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +curcumin +h +nadph
+    dihydrocurcumin
+  }
 
+  branch from h side left {
+    h
+    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate +o2
+    2_3_dihydroxy_4_methoxybenzoate
+  }
 
+  branch from h side right {
+    h
+    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate_mnxm1368569 +2_3_dihydroxy_4_methoxybenzoate
+    o2
+  }
 
+  branch from acetate side left {
+    acetate
+    <-> . +2_hydroxy_5_nitropenta_2_4_dienoate +h +h2o
+    2_hydroxy_5_nitro_6_oxohepta_2_4_dienoate
+  }
 
+  branch from acetate side right {
+    acetate
+    <-> . +2_hydroxy_5_nitropenta_2_4_dienoate_mnxm1367406 +h +h2o
+    2_hydroxy_5_nitro_6_oxohepta_2_4_dienoate_mnxm1372618
+  }
 
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_5_1_21 [2.5.1.21] +squalene +h +nadp +nadph
+    farnesyl_diphosphate
+  }
 
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_2_3_10 [4.2.3.10] +2e_geranyl_diphosphate +h2o
+    endo_fenchol
+  }
 
+  branch from co2 side left {
+    co2
+    <-> . +3_5_7_trioxododecanoyl_coa +coa_mnxm727276
+    olivetol
+  }
 
+  branch from co2 side right {
+    co2
+    <-> . +2z_4e_2_hydroxy_6_oxohepta_2_4_dienoate +h
+    2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate
+  }
 
+  branch from amp side left {
+    amp
+    <-> . +microcin_c_intermediate_1 +h
+    microcin_c_intermediate_2
+  }
 
+  branch from amp side right {
+    amp
+    <-> . +l_homoseryl_adenylate +h
+    l_homoserine_lactone
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +l_leucine +h +diphosphate
+    l_leucyl_adenylate
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +l_methionyl_adenylate +h
+    l_methionine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_1_2_3_1 [1.2.3.1] +2e_geranial +o2 +h +h2o2
+    geranate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_1_11_1_7 [1.11.1.7] +betanidin_quinone +h +h2o2
+    betanidin
+  }
 
+  branch from h side left {
+    h
+    <-> . +2_hydroxy_6_oxo_hept_2_4_dienoate +co2
+    2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate_mnxm1368571
+  }
 
+  branch from h side right {
+    h
+    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate +co2
+    2_hydroxy_6_methoxy_hexa_2_4_dienoate
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +nadp +dihydrocurcumin +h
+    tetrahydrocurcumin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_1 [1.1.1.1] +s_nitrosoglutathione +h +nadp
+    sulfinamide_glutathione
+  }
 }

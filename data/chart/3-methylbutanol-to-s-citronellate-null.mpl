@@ -14,7 +14,7 @@ pathway 3-methylbutanol-to-s-citronellate-null "3-methylbutanol to (S)-citronell
     r_citronellol
     <-> ec_1_1_1_71 [1.1.1.71] +nadp -s_citronellal -nadph
     h
-    <-> . +s_citronellal +nadp +h2o -nadph -hplus
+    <-> . +s_citronellal +nadp_chebi_58349 +h2o -nadph_chebi_57783 -hplus
     s_citronellate
   }
 

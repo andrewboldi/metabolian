@@ -67,7 +67,7 @@ pathway beta-fabatriose-to-soyasapogenol-b "beta-Fabatriose to soyasapogenol Bâ€
   branch from h2o side left {
     h2o
     <-> ec_2_3_1_217 [2.3.1.217] +e_feruloyl_coa +p_coumaroyl_diketide_coa +co2 +h +coa
-    demethoxycurcumin
+    demethoxycurcumin_chebi_65737
   }
 
   branch from h2o side right {

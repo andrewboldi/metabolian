@@ -99,7 +99,7 @@ pathway phaseollin-to-coa "(-)-Phaseollin to CoA" {
   branch from nadp side right {
     nadp
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    thujan_3_ol
+    thujan_3_ol_mnxm97633
   }
 
   branch from h2o side left {

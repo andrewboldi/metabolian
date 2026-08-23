@@ -14,14 +14,14 @@ pathway 7-hydroxy-3-oxochol-4-en-to-isolithocholate-4754 "7α-hydroxy-3-oxochol-
     r_4_8s_9s_10r_13r_14s_17r_10_13_dimethyl_3_oxo
     <-> ec_1_3_1_114 [1.3.1.114] +nadh -nad
     3_oxo_5_cholanate
-    <-> ec_1_1_1_391 [1.1.1.391] +nadh +hplus -nad
+    <-> ec_1_1_1_391 [1.1.1.391] +nadh_chebi_57945 +hplus -nad_chebi_57540
     isolithocholate
   }
 
   branch from 3_oxochola_4_6_dien_24_oate side left {
     3_oxochola_4_6_dien_24_oate
     <-> . +7beta_hydroxy_3_oxochol_4_enate
-    h2o
+    h2o_water
   }
 
   branch from nad side right {
@@ -32,7 +32,7 @@ pathway 7-hydroxy-3-oxochol-4-en-to-isolithocholate-4754 "7α-hydroxy-3-oxochol-
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +citronellic_acid +h2o
+    <-> . +nadh +h +citronellic_acid +h2o_water
     s_citronellal
   }
 

@@ -18,13 +18,13 @@ pathway fadh2-to-all-cis-hexadeca-7-10-13-null "FADH2 to all-cis-hexadeca-7,10,1
     fad
     <-> . +nadh +acetyl_coa +fadh2 +h +5_8_11_tetradecatrienoyl_coenzyme_a -fad -7z_10z_13z_hexadecatrienoyl_coa -nad -h2o
     coa
-    <-> . +7z_10z_13z_hexadecatrienoyl_coa +phytol -coa
+    <-> . +7z_10z_13z_hexadecatrienoyl_coa +phytol -coa_chebi_57287
     all_cis_hexadeca_7_10_13_trienoate_phytyl_ester
   }
 
   branch from phytol side left {
     phytol
-    <-> . +palmitoyl_coa +coa
+    <-> . +palmitoyl_coa +coa_chebi_57287
     palmitate_phytyl_ester
   }
 }

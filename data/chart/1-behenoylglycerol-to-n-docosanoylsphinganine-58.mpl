@@ -18,14 +18,14 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine-58 "1-behenoylglycerol to 
 
   branch from behenate side left {
     behenate
-    <-> . +h +o2 +nadph +22_hydroxydocosanoate +h2o
+    <-> . +h +o2 +nadph +22_hydroxydocosanoate +h2o_water
     nadp
   }
 
   branch from behenate side right {
     behenate
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from docosanoyl_coa side left {
@@ -36,7 +36,7 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine-58 "1-behenoylglycerol to 
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +o2 +h2o2
+    <-> . +o2_chebi_15379 +h2o2
     trans_2_docosenoyl_coa
   }
 
@@ -54,31 +54,31 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine-58 "1-behenoylglycerol to 
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> ec_2_3_1_198 [2.3.1.198] +2_docosanoyl_sn_glycero_3_phosphate +coa
+    <-> ec_2_3_1_198 [2.3.1.198] +2_docosanoyl_sn_glycero_3_phosphate +coa_mnxm727276
     sn_glycerol_3_phosphate
   }
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +nadh +eicosanoyl_coa +acetyl_coa +h +h2o2 +o2 +nad +h2o
-    coa
+    <-> . +nadh +eicosanoyl_coa +acetyl_coa_mnxm1104266 +h +h2o2_mnxm732620 +o2 +nad +h2o_water
+    coa_mnxm727276
   }
 
   branch from ppi side left {
     ppi
-    <-> . +piperonylate +atp +nadph +hplus +amp +nadp
+    <-> . +piperonylate +atp +nadph_chebi_57783 +hplus +amp +nadp_chebi_58349
     piperonal
   }
 
   branch from ppi side right {
     ppi
-    <-> . +3_hydroxybenzoate +atp +nadph +hplus +amp +nadp
+    <-> . +3_hydroxybenzoate +atp +nadph_chebi_57783 +hplus +amp +nadp_chebi_58349
     3_hydroxybenzaldehyde
   }
 
   branch from sphinganine side left {
     sphinganine
-    <-> . +fe2 +o2 +hplus +iron +h2o
+    <-> . +fe2 +o2_chebi_15379 +hplus +iron +h2o
     phytosphingosine
   }
 

@@ -16,14 +16,75 @@ pathway isorhamnetin-to-s-adenosyl-l-homocysteine "isorhamnetin… to S-adenosyl
     rhamnacene_3_olate
   }
 
+  branch from trans_4_coumaroyl_coa side left {
+    trans_4_coumaroyl_coa
+    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin +coa
+    pelargonidin_3_o_beta_d_glucoside_5_o_6_coumaroy
+  }
 
+  branch from trans_4_coumaroyl_coa side right {
+    trans_4_coumaroyl_coa
+    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin_mnxm1371951 +coa
+    pelargonidin_3_o_beta_d_glucoside_5_o_6_coumaroy_mnxm1372534
+  }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +cicerin_7_o_glucoside
+    cicerin
+  }
 
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +h +isoorientin_4_o_beta_d_glucoside
+    isoorientin
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +alpha_d_galf_1_4_alpha_d_gal_1_3_beta_d_mannac_1
+    alpha_d_galf_1_4_alpha_d_gal_1_3_beta_d_mannac_1_mnxm1132518
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +alpha_d_gal_1_4_alpha_neu5ac_2_3_beta_d_galactos
+    alpha_d_gal_1_4_alpha_neu5_7_9ac3_2_3_beta_d_gal
+  }
 
+  branch from trans_4_coumaroyl_coa side left {
+    trans_4_coumaroyl_coa
+    <-> . +trans_p_coumaryl_alcohol +coa
+    4_coumaryl_4_coumarate
+  }
 
+  branch from trans_4_coumaroyl_coa side right {
+    trans_4_coumaroyl_coa
+    <-> . +pelargonidin_3_o_d_sambubioside +h +coa
+    pelargonidin_3_o_beta_d_4_coumaroyl_sambubioside
+  }
 
+  branch from udp side left {
+    udp
+    <-> . +ansamitocinoside_p3 +h +udp_alpha_d_glucose
+    n_demethylansamitocin_p_3
+  }
 
+  branch from udp side right {
+    udp
+    <-> . +2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1 +h +udp_alpha_d_glucose
+    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1_mnxm1559712
+  }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +cucurbitacin_c_3_o_beta_d_glucopyranoside +h
+    cucurbitacin_c
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +cucurbitacin_e_2_o_d_glucopyranoside +h
+    cucurbitacin_e
+  }
 }

@@ -16,16 +16,87 @@ pathway nadh-to-keto-d-fructuronate "NADH to keto-D-fructuronate" {
     keto_d_fructuronate
   }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +7z_10z_13z_16z_docosatetraenoyl_coa +h +h2o2 +coa +o2 +h2o
+    9z_12z_15z_18z_tetracosatetraenoyl_coa
+  }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +acetyl_coa +7z_10z_13z_16z_19z_docosapentaenoyl_coa +h +h2o2 +coa +o2 +h2o
+    9z_12z_15z_18z_21z_tetracosapentaenoyl_coa
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +l_aspartate +l_arginine +l_tyrosine
+    tyrosyl_aspartyl_arginine
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_leucine +l_arginine +l_tyrosine
+    tyrosyl_leucyl_arginine
+  }
 
+  branch from d_tagaturonate side left {
+    d_tagaturonate
+    <-> ec_1_1_1_58 [1.1.1.58] +nad_chebi_57540 +nadh_chebi_57945 +hplus
+    d_altronate
+  }
 
+  branch from d_tagaturonate side right {
+    d_tagaturonate
+    <-> ec_1_1_1_414 [1.1.1.414] +nad_chebi_57540 +nadh_chebi_57945 +hplus
+    l_galactonate
+  }
 
+  branch from keto_d_fructuronate side left {
+    keto_d_fructuronate
+    <-> ec_1_1_1_57 [1.1.1.57] +nad_chebi_57540 +nadh_chebi_57945 +hplus
+    d_mannonate
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> . +acetyl_coa +4z_7z_10z_13z_16z_docosapentaenoyl_coa +h +h2o2 +coa +o2 +nad +h2o
+    6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> . +acetyl_coa +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +h +h2o2 +coa +o2 +nad +h2o
+    6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_7_1_33 [2.7.1.33] +adp +n_r_4_phosphopantothenoyl_l_cysteine +atp
+    n_r_pantothenoyl_l_cysteine
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
+    l_aspartate
+  }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +tetracosanoyl_coa +acetyl_coa +h +h2o2 +coa +o2 +h2o
+    hexacosanoyl_coa
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +tyrosyl_phenylalanyl_tyrosine +l_tyrosine
+    l_phenylalanine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +tyrosyl_tryptophanyl_phenylalanine +l_phenylalanine +l_tyrosine
+    l_tryptophan
+  }
 }

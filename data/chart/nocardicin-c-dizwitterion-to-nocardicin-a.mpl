@@ -8,9 +8,9 @@ pathway nocardicin-c-dizwitterion-to-nocardicin-a "nocardicin C dizwitterion to 
 
   spine at 0,0 {
     nocardicin_c_dizwitterion
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_n_hydroxynocardicin_c
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_n_n_dihydroxynocardicin_c
     <-> . -h2o -hplus
     nocardicin_a

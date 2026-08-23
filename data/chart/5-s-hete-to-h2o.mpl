@@ -11,8 +11,8 @@ pathway 5-s-hete-to-h2o "5(S)-HETE to H2O" {
     <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     5_s_15_s_dihete
     <-> . -5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate
-    o2
-    <-> . +h +adp +5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate +phosphate -5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate -h2o
+    o2_mnxm735438
+    <-> . +h +adp +5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate +phosphate -5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate -h2o_water
     atp
   }
 

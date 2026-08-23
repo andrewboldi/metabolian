@@ -73,7 +73,7 @@ pathway udp-to-quercetagetin "UDP to quercetagetin" {
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    1_octadeca_trienoylglycerophosphocholine_sn1_lpc
+    1_octadeca_trienoylglycerophosphocholine_sn1_lpc_mnxm744812
   }
 
   branch from udp_beta_l_rhamnose side left {

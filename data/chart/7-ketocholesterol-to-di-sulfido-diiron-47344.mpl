@@ -8,11 +8,11 @@ pathway 7-ketocholesterol-to-di-sulfido-diiron-47344 "7-ketocholesterol to di-μ
 
   spine at 0,0 {
     7_ketocholesterol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_3_26_dihydroxycholest_5_en_7_one
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_3_hydroxycholest_5_en_7_one_26_al
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_3_hydroxycholest_5_en_7_one_26_oate
   }
 

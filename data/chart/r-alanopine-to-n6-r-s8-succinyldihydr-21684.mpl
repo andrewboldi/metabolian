@@ -66,14 +66,14 @@ pathway r-alanopine-to-n6-r-s8-succinyldihydr-21684 "(R)-β-alanopine to N6-[(R)
 
   branch from kiv side left {
     kiv
-    <-> ec_1_2_4_4 [1.2.4.4] +co2 +2_methyl_1_hydroxypropylthiamine_diphosphate +thiamine_diphosphate
+    <-> ec_1_2_4_4 [1.2.4.4] +co2_mnxm13 +2_methyl_1_hydroxypropylthiamine_diphosphate +thiamine_diphosphate
     h
   }
 
   branch from kiv side right {
     kiv
-    <-> ec_2_6_1_66 [2.6.1.66] +l_valine +pyruvate
-    alanine
+    <-> ec_2_6_1_66 [2.6.1.66] +l_valine +pyruvate_mnxm23
+    alanine_mnxm733981
   }
 
   branch from n6_r_dihydrolipoyl_l_lysine side left {
@@ -121,7 +121,7 @@ pathway r-alanopine-to-n6-r-s8-succinyldihydr-21684 "(R)-β-alanopine to N6-[(R)
   branch from ppi side right {
     ppi
     <-> . +isopimara_8_14_15_diene
-    5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622
   }
 
   branch from ppi side left {
@@ -132,8 +132,8 @@ pathway r-alanopine-to-n6-r-s8-succinyldihydr-21684 "(R)-β-alanopine to N6-[(R)
 
   branch from kiv side right {
     kiv
-    <-> . +nadh +2_methylpropanoate +co2 +h +h2o
-    nad
+    <-> . +nadh_mnxm10 +2_methylpropanoate +co2_mnxm13 +h +h2o_water
+    nad_mnxm8
   }
 
   branch from nh3 side left {

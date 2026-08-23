@@ -12,27 +12,133 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o-62052 "1-oleoyl-2-acyl-sn-glycer… to 
     1_oleoyl_sn_glycero_3_phosphate
     <-> . +palmitoyl_coa -coa
     1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate -h2o_water
     atp
   }
 
+  branch from 1_oleoyl_sn_glycero_3_phosphate side left {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +palmitoleoyl_coa +coa
+    1_9z_octadecenoyl_2_9z_hexadecenoyl_sn_glycero_3
+  }
 
+  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +coa
+    1_oleoyl_2_4z_7z_10z_13z_16z_19z_docosahexaenoyl
+  }
 
+  branch from 1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate side left {
+    1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate
+    <-> . +atp_chebi_30616 +adp_chebi_456216 +hplus
+    1_oleoyl_2_palmitoyl_sn_glycerol
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +3_oxo_24_ethyl_cholest_4_en_26_oate +coa_mnxm727276 +diphosphate +amp
+    3_oxo_24_ethyl_cholest_4_en_26_oyl_coa
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +amp +2_naphthoyl_coa +h +coa_mnxm727276
+    2_naphthoic_acid
+  }
 
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +nadp +nocardicin_a +o2 +nadph
+    nocardicin_c_dizwitterion
+  }
 
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +l_threonine +tabtoxinine_lactam
+    tabtoxin
+  }
 
+  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
+  }
 
+  branch from 1_oleoyl_sn_glycero_3_phosphate side left {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_72840 +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
+    1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+  }
 
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +cholesterol +coa
+    cholesteryl_palmitate
+  }
 
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +hexadecasphinganine +coa +hplus
+    n_palmitoylhexadecasphinganine
+  }
 
+  branch from h side right {
+    h
+    <-> . +paromomycin_ii
+    paromomycin
+  }
 
+  branch from h side left {
+    h
+    <-> . +2_oxoglutarate +antibiotic_ji_20ba +l_glutamate
+    6_oxo_g418
+  }
 
+  branch from adp side right {
+    adp
+    <-> ec_6_3_2_47 [6.3.2.47] +3_2r_3r_3_carbamoyloxiran_2_yl_carbonyl_amino_l +l_valine +atp +h +phosphate
+    dapdiamide_e
+  }
 
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_166 [2.7.1.166] +alpha_kdo8n_2_6_lipid_iva +atp +h
+    4_o_phospho_alpha_kdo8n_2_6_lipid_iva
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> . +beta_d_galacturonate +h2o_water
+    1_phospho_alpha_d_galacturonate
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> ec_2_5_1_95 [2.5.1.95] +4_6_ch3_coo_c_beta_d_man_1_4_beta_glca_1_2_6_o_a +d_man_beta_1_4_glca_beta_1_2_6_o_acetyl_d_man_al
+    phosphoenolpyruvate
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +pppgp_2_5_a +diphosphate
+    gtp
+  }
 
+  branch from atp side left {
+    atp
+    <-> ec_2_7_6_3 [2.7.6.3] +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +h +amp
+    6_1_hydroxyethyl_7_methyl_7_8_dihydropterin
+  }
 
+  branch from h2o_water side right {
+    h2o_water
+    <-> ec_3_5_1_117 [3.5.1.117] +6_aminohexanoic_acid_cyclic_oligomer
+    n_6_aminohexanoyl_6_aminohexanoic_acid
+  }
+
+  branch from h2o_water side left {
+    h2o_water
+    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat +h +diphosphate
+    precursor_z_hydrate
+  }
 }

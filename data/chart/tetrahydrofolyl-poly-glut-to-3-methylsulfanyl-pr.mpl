@@ -144,7 +144,7 @@ pathway tetrahydrofolyl-poly-glut-to-3-methylsulfanyl-pr "tetrahydrofolyl-poly(g
 
   branch from coa side right {
     coa
-    <-> . +albireodelphin +trans_caffeoyl_coa
-    gentiodelphin
+    <-> . +albireodelphin_mnxm1368868 +trans_caffeoyl_coa
+    gentiodelphin_mnxm1371969
   }
 }

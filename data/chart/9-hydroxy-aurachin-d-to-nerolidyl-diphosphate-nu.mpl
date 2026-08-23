@@ -145,6 +145,6 @@ pathway 9-hydroxy-aurachin-d-to-nerolidyl-diphosphate-nu "9'-hydroxy-aurachin D 
   branch from 2e_6e_farnesyl_diphosphate side right {
     2e_6e_farnesyl_diphosphate
     <-> ec_4_2_3_133 [4.2.3.133] +diphosphate
-    alpha_copaene
+    alpha_copaene_mnxm735801
   }
 }

@@ -30,7 +30,7 @@ pathway tetradecyl-acetate-to-15-hydroxypalmitate "Tetradecyl acetate to 15-hydr
 
   branch from tetradecan_1_ol side left {
     tetradecan_1_ol
-    <-> . +myristoyl_coa +coa
+    <-> . +myristoyl_coa +coa_chebi_57287
     tetradecyl_tetradecanoate
   }
 
@@ -66,7 +66,7 @@ pathway tetradecyl-acetate-to-15-hydroxypalmitate "Tetradecyl acetate to 15-hydr
 
   branch from tetradecan_1_ol side left {
     tetradecan_1_ol
-    <-> . +nadh +hplus +nad +coa
+    <-> . +nadh +hplus +nad +coa_chebi_57287
     myristoyl_coa
   }
 }

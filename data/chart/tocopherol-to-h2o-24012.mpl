@@ -12,32 +12,163 @@ pathway tocopherol-to-h2o-24012 "γ-tocopherol to H2O" {
     r_r_r_tocopherol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     13_hydroxy_tocopherol
-    <-> . +h +o2 +nadph -nadp -h2o
+    <-> . +h +o2_mnxm735438 +nadph -nadp -h2o_water
     13_carboxy_alpha_tocopherol
   }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_223 [2.1.1.223] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_309 [2.1.1.309] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
+  }
 
+  branch from 13_hydroxy_tocopherol side left {
+    13_hydroxy_tocopherol
+    <-> ec_1_14_13_30 [1.14.13.30] +h +o2_mnxm735438 +nadph +nadp +h2o_water
+    alpha_tocopherol
+  }
 
+  branch from fmn side right {
+    fmn
+    <-> . +4z_7z_10z_13z_16z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_20_hydroxydocosapentaenoate
+  }
 
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_19_50 [1.14.19.50] +4_o_methylnorbelladine +fmnh2 +o2 +h2o +hplus
+    4ar_10bs_noroxomaritidine
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +6_trans_leukotriene_b4 +nadph
+    5_oxo_6_trans_leukotriene_b4
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +6_trans_12_epi_leukotriene_b4 +h +nadph
+    5_oxo_6e_12_epi_leukotriene_b4
+  }
 
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +6_hydroxytetrahydro_beta_carboline +h +serotonin
+    formaldehyde
+  }
 
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +formaldehyde +r_noradrenaline +h
+    4_6_7_trihydroxy_1_2_3_4_tetrahydroisoquinoline
+  }
 
+  branch from tocopherol side right {
+    tocopherol
+    <-> . +nadph_chebi_57783 +o2 +hplus +nadp_chebi_58349 +h2o
+    13_hydroxy_tocopherol_chebi_84963
+  }
 
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_310 [2.1.1.310] +cytidine_5_monophosphate_1 +sah +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
 
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_311 [2.1.1.311] +5_methylcytidine_5_monophosphate_1 +sah +hplus
+    cytidine_5_monophosphate_1
+  }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_312 [2.1.1.312] +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
+  }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_313 [2.1.1.313] +sam +n3_methyluridine_5_monophosphate_1 +hplus
+    uridine_5_monophosphate_1
+  }
 
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +chenodeoxycholate +o2 +fmn +h2o +hplus
+    muricholate
+  }
 
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +arachidonate +o2 +fmn +h2o +hplus
+    14_15_eet
+  }
 
+  branch from fmn side left {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    11_12_eet
+  }
 
+  branch from fmn side right {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    12_hete
+  }
 
+  branch from h side left {
+    h
+    <-> . +acetyl_coa +n_1_acetylspermidine +coa
+    n_3_4_acetamidobutyl_amino_propyl_acetamide
+  }
 
+  branch from h side right {
+    h
+    <-> . +acetyl_coa +n_1_acetylspermine +coa
+    n_1_n_12_diacetylspermine
+  }
 
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +5z_8z_11z_14z_17z_eicosapentaenoate
+    15_r_hydroperoxy_epe
+  }
 
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +5_s_6_s_epoxy_15_r_hepe +h2o_water
+    15_r_hepe
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +nadp +5_oxo_6e_12_epi_leukotriene_b4 +h
+    6_7_dihydro_5_oxo_12_epi_ltb4
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +h +nadp
+    6_7_dihydro_leukotriene_b4
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +h +12_dehydro_leukotriene_b4 +nadph
+    10_11_dihydro_12_oxo_ltb4
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +10_11_dihydro_12_oxo_ltb4 +nadph
+    6_7_dihydro_12_epi_ltb4
+  }
 }

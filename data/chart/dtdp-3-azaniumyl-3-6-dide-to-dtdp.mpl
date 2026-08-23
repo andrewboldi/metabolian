@@ -62,13 +62,13 @@ pathway dtdp-3-azaniumyl-3-6-dide-to-dtdp "dTDP-3-azaniumyl-3,6-dide… to dTDP"
 
   branch from tylactone side right {
     tylactone
-    <-> . +2s_ethylmalonyl_coa +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa +h2o
+    <-> . +2s_ethylmalonyl_coa +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa +h2o_water
     co2
   }
 
   branch from tylactone side left {
     tylactone
-    <-> . +2s_ethylmalonyl_coa +malonyl_coa +s_methylmalonyl_coa +h +nadph +co2 +coa +h2o
+    <-> . +2s_ethylmalonyl_coa +malonyl_coa +s_methylmalonyl_coa +h +nadph +co2 +coa +h2o_water
     nadp
   }
 }

@@ -18,7 +18,7 @@ pathway digallate-to-nadp-16365 "digallate to NADP" {
     3e_2_oxohex_3_enedioate
     <-> ec_4_1_1_77 [4.1.1.77] +hplus -co2
     2_oxopent_4_enoate
-    <-> . +h +benzoate -h2o
+    <-> . +h +benzoate -h2o_water
     hpk
     <-> ec_1_3_1_40 [1.3.1.40] +nadph -nadp
     2_6_dioxo_6_phenylhexanoate
@@ -38,18 +38,18 @@ pathway digallate-to-nadp-16365 "digallate to NADP" {
 
   branch from hpk side left {
     hpk
-    <-> ec_3_7_1_8 [3.7.1.8] +h +benzoate +h2o
+    <-> ec_3_7_1_8 [3.7.1.8] +h +benzoate +h2o_water
     2_keto_4_pentenoate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +leukotriene_f4_cytosol +glycine
     leukotriene_c4
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +1_methyl_4_imidazoleacetic_acid +nad
     1_methylimidazole_4_acetaldehyde
   }
@@ -68,13 +68,13 @@ pathway digallate-to-nadp-16365 "digallate to NADP" {
 
   branch from nadp side right {
     nadp
-    <-> . +5b_cholestane_3a_7a_12a_25_26_pentol +h2o +h +o2 +nadph
+    <-> . +5b_cholestane_3a_7a_12a_25_26_pentol +h2o_water +h +o2_mnxm735438 +nadph
     5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
   }
 
   branch from h side left {
     h
-    <-> . +adp +d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp +phosphate +d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp +h2o
+    <-> . +adp +d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp +phosphate +d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp +h2o_water
     atp
   }
 
@@ -86,24 +86,24 @@ pathway digallate-to-nadp-16365 "digallate to NADP" {
 
   branch from benzoate side left {
     benzoate
-    <-> ec_3_6_1_7 [3.6.1.7] +h +phosphate +h2o
+    <-> ec_3_6_1_7 [3.6.1.7] +h +phosphate +h2o_water
     benzoyl_phosphate
   }
 
   branch from benzoate side right {
     benzoate
-    <-> ec_3_6_1_20 [3.6.1.20] +h +amp +h2o
+    <-> ec_3_6_1_20 [3.6.1.20] +h +amp +h2o_water
     benzoyl_amp
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2_methylfumaryl_coa +pyruvate
     acetyl_coa
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_7_4_2_11 [7.4.2.11] +h +adp +phosphate +atp
     d_methionine
   }
@@ -122,7 +122,7 @@ pathway digallate-to-nadp-16365 "digallate to NADP" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_100 [1.14.13.100] +h +3beta_hydroxy_cholest_5_en_26_oate +o2 +nadph +h2o
+    <-> ec_1_14_13_100 [1.14.13.100] +h +3beta_hydroxy_cholest_5_en_26_oate +o2_mnxm735438 +nadph +h2o_water
     3beta_7alpha_dihydroxy_5_cholestenoate
   }
 

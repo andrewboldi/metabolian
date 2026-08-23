@@ -12,7 +12,7 @@ pathway 2e-geranial-to-3r-6s-6-isopropenyl-3-m-null "(2E)-geranial to (3R,6S)-6-
     neodihydrocarveol
     <-> ec_1_1_1_296 [1.1.1.296] +nad -nadh -hplus
     dihydrocarvone
-    <-> ec_1_14_13_105 [1.14.13.105] +nadph +o2 +hplus -nadp -h2o
+    <-> ec_1_14_13_105 [1.14.13.105] +nadph_chebi_57783 +o2 +hplus -nadp_chebi_58349 -h2o
     3r_6s_6_isopropenyl_3_methyloxepan_2_one
   }
 }

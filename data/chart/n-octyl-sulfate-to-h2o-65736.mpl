@@ -12,7 +12,7 @@ pathway n-octyl-sulfate-to-h2o-65736 "n-octyl sulfate to H2O" {
     octanal
     <-> . +nadp +h2o -nadph -hplus
     octanoate
-    <-> ec_3_1_1_1 [3.1.1.1] +h +dioctanoylglycerol -h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +h +dioctanoylglycerol -h2o_water
     1_2_3_trioctanoylglycerol
   }
 
@@ -22,14 +22,14 @@ pathway n-octyl-sulfate-to-h2o-65736 "n-octyl sulfate to H2O" {
     octan_1_ol
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxohexanoyl_l_homoserine_lactone +h
     n_3_oxohexanoyl_l_homoserine
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +5_chloro_2_methyl_maleylacetate
     5_chloro_2_methyl_dienelactone
   }
@@ -46,15 +46,15 @@ pathway n-octyl-sulfate-to-h2o-65736 "n-octyl sulfate to H2O" {
     2_5_dichloro_3_methyl_muconolactone
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +2_chloro_3_methyl_maleylacetate
     2_chloro_3_methyl_dienelactone
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_1_14_13_7 [1.14.13.7] +h +3_chlorophenol +o2 +nadph +nadp
+  branch from h2o_water side left {
+    h2o_water
+    <-> ec_1_14_13_7 [1.14.13.7] +h +3_chlorophenol +o2_mnxm735438 +nadph_mnxm738702 +nadp_mnxm5
     3_chlorocatechol
   }
 }

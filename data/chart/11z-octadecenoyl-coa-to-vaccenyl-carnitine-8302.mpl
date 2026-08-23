@@ -10,8 +10,8 @@ pathway 11z-octadecenoyl-coa-to-vaccenyl-carnitine-8302 "(11Z)-octadecenoyl-CoA 
     11z_octadecenoyl_coa
     <-> . +fad +hplus -fadh2
     2e_11z_octadecadienoyl_coa
-    <-> . +fadh2 +h -vaccenyl_coenzyme_a
-    fad
+    <-> . +fadh2_mnxm1105762 +h -vaccenyl_coenzyme_a
+    fad_mnxm1364149
     <-> . +r_carnitine +vaccenyl_coenzyme_a -coa -vaccenyl_carnitine
     h
   }

@@ -18,8 +18,8 @@ pathway 3-hydroxy-2-methylpropano-to-propionyl-coa-20888 "3-hydroxy-2-methylprop
 
   branch from 3_hydroxyisobutyrate side left {
     3_hydroxyisobutyrate
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +s_2_methyl_3_oxopropanoate +h
-    nad
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh_mnxm10 +s_2_methyl_3_oxopropanoate +h
+    nad_mnxm8
   }
 
   branch from propionyl_coa side right {

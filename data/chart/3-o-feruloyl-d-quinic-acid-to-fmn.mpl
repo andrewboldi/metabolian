@@ -18,13 +18,13 @@ pathway 3-o-feruloyl-d-quinic-acid-to-fmn "3-O-feruloyl-D-quinic acid to FMN" {
 
   branch from h side left {
     h
-    <-> . +d_glucuronate +4_hydroxymidazolam +h2o
+    <-> . +d_glucuronate +4_hydroxymidazolam +h2o_water
     4_oh_midazolam_glucuronide
   }
 
   branch from h side right {
     h
-    <-> . +d_glucuronate +6_beta_oh_gliclazide +h2o
+    <-> . +d_glucuronate +6_beta_oh_gliclazide +h2o_water
     6_beta_oh_gliclazide_glucuronide
   }
 
@@ -54,7 +54,7 @@ pathway 3-o-feruloyl-d-quinic-acid-to-fmn "3-O-feruloyl-D-quinic acid to FMN" {
 
   branch from h side left {
     h
-    <-> . +d_glucuronate +n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl +h2o
+    <-> . +d_glucuronate +n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl +h2o_water
     7_beta_oh_gliclazide_glucuronide
   }
 

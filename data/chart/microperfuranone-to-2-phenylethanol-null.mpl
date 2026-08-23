@@ -14,173 +14,42 @@ pathway microperfuranone-to-2-phenylethanol-null "(−)-microperfuranone to 2-ph
     nadp
     <-> ec_1_1_1_110 [1.1.1.110] +r_3_phenyllactate +nad -nadh -hplus
     keto_phenylpyruvate
-    <-> ec_4_1_1_43 [4.1.1.43] +hplus -co2
+    <-> ec_4_1_1_43 [4.1.1.43] +hplus -co2_chebi_16526
     phenylacetaldehyde
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     2_phenylethanol
     <-> . +acetyl_coa -coa
     phenethyl_acetate
-    <-> . +h2o -2_phenylethanol -acetate
+    <-> . +h2o -2_phenylethanol_mnxm2476 -acetate
     h
-    <-> . +glucose +2_phenylethanol -h2o
+    <-> . +glucose +2_phenylethanol_mnxm2476 -h2o
     2_phenylethyl_d_glucopyranoside
-    <-> . +udp +h -2_phenylethanol
+    <-> . +udp +h -2_phenylethanol_mnxm2476
     udp_alpha_d_glucose
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_galactose +h +6_o_phosphonohexopyranose
-    adp
-  }
 
-  branch from atp side right {
-    atp
-    <-> ec_2_7_1_1 [2.7.1.1] +aldehydo_d_mannose +h +adp
-    6_o_phosphonohexopyranose
-  }
 
-  branch from 3_phenylpyruvate side left {
-    3_phenylpyruvate
-    <-> ec_5_3_2_1 [5.3.2.1] +h
-    2_hydroxy_3_phenylpropenoate
-  }
 
-  branch from 3_phenylpyruvate side right {
-    3_phenylpyruvate
-    <-> ec_5_3_2_1 [5.3.2.1]
-    enol_phenylpyruvate
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_80 [3.2.1.80] +sucrose +beta_d_fructose
-    1_f_beta_d_fructosylsucrose
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +beta_d_fructose +neokestose
-    6g_6_kestotetraose
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_115 [1.1.1.115] +h +d_ribonate +nadph +h2o
-    beta_d_ribopyranose
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +nadph +syringaresinol
-    5_5_dimethoxylariciresinol
-  }
 
-  branch from h side left {
-    h
-    <-> ec_4_1_1_65 [4.1.1.65] +co2 +1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
-    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
-  }
 
-  branch from h side right {
-    h
-    <-> ec_4_1_1_65 [4.1.1.65] +co2 +24_1_18_3_pe
-    1_15z_tetracosenoyl_2_9z_12z_15z_octadecatrienoy
-  }
 
-  branch from acetate side left {
-    acetate
-    <-> ec_3_7_1_6 [3.7.1.6] +acetylpyruvate +h2o +h
-    pyruvate
-  }
 
-  branch from acetate side right {
-    acetate
-    <-> ec_2_8_3_11 [2.8.3.11] +acetyl_coa +3s_citramalate
-    3s_citramalyl_coa
-  }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +curcumin_4_o_beta_d_gentiotetraside +h
-    curcumin_4_o_beta_d_gentiotrioside
-  }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +curcumin_4_o_d_gentiotetraside +h
-    curcumin_4_o_d_gentiotrioside
-  }
 
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +alpha_amorphene
-    2e_6e_farnesyl_diphosphate
-  }
 
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +12_ethyl_8_isobutylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate +h
-    12_ethyl_8_isobutylbacteriochlorophyllide_c
-  }
 
-  branch from co2 side left {
-    co2
-    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinol_9 +h +formate
-    ubiquinone_9
-  }
 
-  branch from co2 side right {
-    co2
-    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinol_10 +h +formate
-    ubiquinone_10
-  }
 
-  branch from amp side left {
-    amp
-    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +atp +coa +diphosphate
-    5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co
-  }
 
-  branch from amp side right {
-    amp
-    <-> . +atp +coa +diphosphate +5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h
-    6_7_dihydro_5_oxo_12_epi_ltb4
-  }
 
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    beta_nicotinamide_d_riboside
-  }
 
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    glutathion_s_yl_bimane
-  }
 
-  branch from 3_phenylpyruvate side left {
-    3_phenylpyruvate
-    <-> . +3_methyl_2_oxopentanoate +l_phenylalanine
-    l_isoleucine
-  }
 
-  branch from 3_phenylpyruvate side right {
-    3_phenylpyruvate
-    <-> . +l_phenylalanine +l_isoleucine
-    s_3_methyl_2_oxopentanoate
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +s_malate +h +nad
-    3r_3_hydroxy_4_oxobutanoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +nadh +l_alanine +h +nad
-    s_2_aminopropanal
-  }
 }

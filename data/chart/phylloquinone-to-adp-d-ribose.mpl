@@ -117,6 +117,6 @@ pathway phylloquinone-to-adp-d-ribose "phylloquinone to ADP-D-ribose" {
   branch from adp_d_ribose side left {
     adp_d_ribose
     <-> . +h2o +nicotinamide +hplus
-    nad
+    nad_chebi_77017
   }
 }

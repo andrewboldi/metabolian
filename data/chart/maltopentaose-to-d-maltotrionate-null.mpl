@@ -12,7 +12,7 @@ pathway maltopentaose-to-d-maltotrionate-null "maltopentaose to D-maltotrionate"
     d_glcp_1_4_d_glcp_1_4_d_glcp
     <-> . +o2 -h2o2
     d_maltotriono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_maltotrionate
   }
 }

@@ -11,10 +11,10 @@ pathway all-trans-retinol-to-11-cis-retinal-null "all-trans-retinol to 11-cis-re
     <-> . +h +nadph -nadp
     all_trans_13_14_dihydroretinol
     <-> ec_1_3_99_23 [1.3.99.23] +hydrogen_acceptor -hydrogen_donor
-    all_trans_retinol
+    all_trans_retinol_chebi_17336
     <-> .
     11_cis_retinol
-    <-> . +nadp -nadph -hplus
+    <-> . +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     11_cis_retinal
   }
 

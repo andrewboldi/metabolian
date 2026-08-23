@@ -18,13 +18,13 @@ pathway 1-2-didecanoylglycerol-to-10-oxocaprate-48596 "1,2-didecanoylglycerol to
 
   branch from 10_hydroxycaprate side left {
     10_hydroxycaprate
-    <-> . +decanoate +nadp +h2o +nadph
+    <-> . +decanoate_mnxm1043 +nadp +h2o_water +nadph
     h
   }
 
   branch from 10_hydroxycaprate side right {
     10_hydroxycaprate
-    <-> . +decanoate +h +o2 +nadph +h2o
+    <-> . +decanoate_mnxm1043 +h +o2_mnxm735438 +nadph +h2o_water
     nadp
   }
 
@@ -54,8 +54,8 @@ pathway 1-2-didecanoylglycerol-to-10-oxocaprate-48596 "1,2-didecanoylglycerol to
 
   branch from 10_hydroxycaprate side left {
     10_hydroxycaprate
-    <-> . +nadh +h +decanedioate +h2o
-    nad
+    <-> . +nadh_mnxm10 +h +decanedioate +h2o_water
+    nad_mnxm8
   }
 
   branch from fmn side right {

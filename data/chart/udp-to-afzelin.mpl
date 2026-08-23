@@ -33,7 +33,7 @@ pathway udp-to-afzelin "UDP to afzelin" {
   branch from h side left {
     h
     <-> . +h2o +desepoxy_mupirocin_p
-    deoxymupirocin_c
+    deoxymupirocin_c_mnxm1372378
   }
 
   branch from h side right {

@@ -19,13 +19,13 @@ pathway 3-hydroxy-5-steroid-to-hydrogen-donor-24076 "3β-hydroxy-Δ5-steroid to 
   branch from 3_oxo_4_steroid side left {
     3_oxo_4_steroid
     <-> ec_1_3_1_22 [1.3.1.22] +nadp +nadph +hplus
-    3_oxo_5_steroid
+    3_oxo_5_steroid_chebi_13601
   }
 
   branch from 3_oxo_4_steroid side right {
     3_oxo_4_steroid
     <-> ec_1_3_1_3 [1.3.1.3] +nadp +nadph +hplus
-    3_oxo_5_steroid
+    3_oxo_5_steroid_chebi_1624
   }
 
   branch from hydrogen_donor side left {

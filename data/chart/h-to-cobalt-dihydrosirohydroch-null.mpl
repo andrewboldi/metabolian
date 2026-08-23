@@ -104,8 +104,8 @@ pathway h-to-cobalt-dihydrosirohydroch-null "H to cobalt-dihydrosirohydroch…" 
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_c_isothiocyanate +h
-    welwitindolinone_c_isothiocyanate
+    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_c_isothiocyanate_mnxm1364035 +h
+    welwitindolinone_c_isothiocyanate_mnxm1364033
   }
 
   branch from s_adenosyl_l_methionine side right {

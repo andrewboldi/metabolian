@@ -35,7 +35,7 @@ pathway s-3-hydroxypalmitoyl-coa-to-1-palmitoyl-2-palmi "(S)-3-hydroxypalmitoyl-
   branch from r_3_hydroxypalmitoyl_coa side left {
     r_3_hydroxypalmitoyl_coa
     <-> . +r_carnitine +3_hydroxyhexadecanoylcarnitine
-    coa
+    coa_mnxm727276
   }
 
   branch from trans_hexadecenoyl_coa side right {

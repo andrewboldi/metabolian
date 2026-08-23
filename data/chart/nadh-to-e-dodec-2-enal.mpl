@@ -12,8 +12,8 @@ pathway nadh-to-e-dodec-2-enal "NADH to (E)-dodec-2-enal" {
     dodecan_1_ol
     <-> ec_3_1_6_21 [3.1.6.21] +h +sulfate -h2o
     dodecyl_sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +akg +o2 -sulfate -succinate -co2 -hplus
-    dodecanal
+    <-> ec_1_14_11_77 [1.14.11.77] +akg +o2 -sulfate_chebi_16189 -succinate -co2 -hplus
+    dodecanal_chebi_27836
     <-> . +nadp -nadph -hplus
     e_dodec_2_enal
   }
@@ -42,10 +42,10 @@ pathway nadh-to-e-dodec-2-enal "NADH to (E)-dodec-2-enal" {
     4_4_diaponeurosporen_1_1_diol
   }
 
-  branch from dodecanal side left {
-    dodecanal
+  branch from dodecanal_chebi_27836 side left {
+    dodecanal_chebi_27836
     <-> . +nadp +nadph +hplus
-    dodecan_1_ol
+    dodecan_1_ol_chebi_28878
   }
 
   branch from nadh side right {

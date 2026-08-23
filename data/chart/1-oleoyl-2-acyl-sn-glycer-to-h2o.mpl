@@ -12,7 +12,7 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
     1_oleoyl_sn_glycero_3_phosphate
     <-> . +palmitoyl_coa -coa
     1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate -h2o_water
     atp
   }
 
@@ -24,19 +24,19 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
 
   branch from 1_oleoyl_sn_glycero_3_phosphate side right {
     1_oleoyl_sn_glycero_3_phosphate
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_72840 +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
     1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
   }
 
   branch from 1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate side left {
     1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate
-    <-> . +atp +adp +hplus
+    <-> . +atp_chebi_30616 +adp_chebi_456216 +hplus
     1_oleoyl_2_palmitoyl_sn_glycerol
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_3 [6.2.1.3] +18_hydroxyoctadecanoate +coa +18_hydroxystearoyl_coa +amp
+    <-> ec_6_2_1_3 [6.2.1.3] +18_hydroxyoctadecanoate +coa_mnxm727276 +18_hydroxystearoyl_coa +amp
     diphosphate
   }
 
@@ -46,14 +46,14 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
     linoleyl_amp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy
     1r_6s_6_amino_5_oxocyclohex_2_ene_1_carboxylic
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_2_1_1_90 [2.1.1.90] +h +5_hydroxybenzimidazolylcobamide +methanol
     co_methyl_co_5_hydroxybenzimidazolylcob_i_amide
   }
@@ -72,13 +72,13 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
 
   branch from h side right {
     h
-    <-> ec_3_1_4_42 [3.1.4.42] +sn_glycerol_3_phosphate +h2o
+    <-> ec_3_1_4_42 [3.1.4.42] +sn_glycerol_3_phosphate +h2o_water
     glycerol_1_2_cyclic_phosphate
   }
 
   branch from h side left {
     h
-    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany +h2o
+    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany +h2o_water
     n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d
   }
 
@@ -102,30 +102,30 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
 
   branch from phosphate side left {
     phosphate
-    <-> . +bis_myo_inositol_1_3_phosphate +h2o
+    <-> . +bis_myo_inositol_1_3_phosphate +h2o_water
     bis_1l_myo_inositol_3_1_phosphate_1_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> . +s_adenosyl_l_homocysteine +diphosphate +co2 +dieckmann_product +nadp +coa +amp +h2o +s_adenosyl_l_methionine +h +l_serine +nadph
+    <-> . +s_adenosyl_l_homocysteine +diphosphate +co2 +dieckmann_product +nadp +coa_mnxm727276 +amp +h2o_water +s_adenosyl_l_methionine +h +l_serine +nadph
     malonyl_coa
   }
 
   branch from atp side left {
     atp
-    <-> . +s_adenosyl_l_homocysteine +5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2 +diphosphate +co2 +nadp +coa +amp +h2o +malonyl_coa +h +4_hydroxy_4_methyl_l_glutamic_acid +nadph
+    <-> . +s_adenosyl_l_homocysteine +5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2 +diphosphate +co2 +nadp +coa_mnxm727276 +amp +h2o_water +malonyl_coa +h +4_hydroxy_4_methyl_l_glutamic_acid +nadph
     s_adenosyl_l_methionine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +beta_d_glucose_6_phosphate +beta_d_fructose
     sucrose_6_g_phosphate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_4_19_11 [3.4.19.11] +meso_diaminopimeloyl_alanine +n_acetylmuramoyl_l_ala_d_glu
     n_acetylmuramoyl_l_ala_d_glu_l_meso_diaminopimel
   }

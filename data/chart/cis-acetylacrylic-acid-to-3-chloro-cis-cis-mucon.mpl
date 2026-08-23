@@ -17,7 +17,7 @@ pathway cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon "cis-acetylacrylic acid
     <-> . +chloride
     r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
     <-> ec_5_5_1_7 [5.5.1.7] -hplus
-    3_chloro_cis_cis_muconate
+    3_chloro_cis_cis_muconate_chebi_17589
   }
 
   branch from h2o side left {
@@ -83,7 +83,7 @@ pathway cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon "cis-acetylacrylic acid
   branch from r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate side left {
     r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
     <-> . +h +chloride +h2o
-    maleylacetate
+    maleylacetate_mnxm1363850
   }
 
   branch from h2o side right {

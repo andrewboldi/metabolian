@@ -12,7 +12,7 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
     dtdp_d_desosamine
     <-> ec_2_4_1_277 [2.4.1.277] +10_deoxymethynolide -dtdp -hplus
     10_deoxymethymycin
-    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     methymycin
   }
 
@@ -28,14 +28,14 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
     3_5_dimethoxyflavone
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +cryptoxanthin +di_sulfido_diiron +o2 +hplus +h2o
     3s_5r_6s_cryptoxanthin_5_6_epoxide
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
     20s_23_24_trihydroxyvitamin_d3
   }
@@ -72,30 +72,30 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
 
   branch from 10_deoxymethynolide side right {
     10_deoxymethynolide
-    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa +h2o
-    co2
+    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph_mnxm738702 +nadp_mnxm5 +coa_mnxm727276 +h2o_water
+    co2_mnxm13
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +20s_23_dihydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +20s_23_dihydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     20s_23_25_trihydroxyvitamin_d3
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_53 [1.14.19.53] +all_trans_retinol +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_19_53 [1.14.19.53] +all_trans_retinol +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     all_trans_3_4_didehydroretinol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
     all_trans_4_hydroxyretinol
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_15_19 [1.14.15.19] +testosterone +di_sulfido_diiron +o2 +hplus +h2o
     1_hydroxytestosterone
   }

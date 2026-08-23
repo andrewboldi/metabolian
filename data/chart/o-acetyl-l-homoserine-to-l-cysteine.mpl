@@ -116,8 +116,8 @@ pathway o-acetyl-l-homoserine-to-l-cysteine "O-acetyl-L-homoserine to L-cysteine
 
   branch from acetate side left {
     acetate
-    <-> . +acetylpyruvate +h +h2o
-    2_4_6_trioxoheptanoate
+    <-> . +acetylpyruvate_mnxm1369322 +h +h2o
+    2_4_6_trioxoheptanoate_mnxm1372606
   }
 
   branch from acetate side right {

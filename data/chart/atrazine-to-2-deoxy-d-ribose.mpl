@@ -121,6 +121,6 @@ pathway atrazine-to-2-deoxy-d-ribose "atrazine to 2-deoxy-D-ribose…" {
   branch from adp side right {
     adp
     <-> ec_2_7_1_119 [2.7.1.119] +h +7_o_phosphohygromycin +atp
-    hygromycin_b
+    hygromycin_b_mnxm732871
   }
 }

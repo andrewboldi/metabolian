@@ -24,8 +24,8 @@ pathway nickel-sirohydrochlorin-to-coenzyme-f430 "nickel-sirohydrochlorin to coe
 
   branch from 15_173_seco_f430_173_acid side right {
     15_173_seco_f430_173_acid
-    <-> . +h +h2o
-    coenzyme_f430
+    <-> . +h +h2o_water
+    coenzyme_f430_mnxm726722
   }
 
   branch from nickel_sirohydrochlorin side left {

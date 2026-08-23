@@ -87,7 +87,7 @@ pathway arginyl-glycine-to-h2o "Arginyl-Glycine to H2O" {
   branch from glycine side right {
     glycine
     <-> . +myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1 +h2o
-    myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1
+    myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1_mnxm1132187
   }
 
   branch from h side left {
@@ -122,7 +122,7 @@ pathway arginyl-glycine-to-h2o "Arginyl-Glycine to H2O" {
 
   branch from amp side right {
     amp
-    <-> . +coelenterazine_disulfonate_dioxetanone +h +o2 +h2o
+    <-> . +coelenterazine_disulfonate_dioxetanone_mnxm1112430 +h +o2 +h2o
     adenylylcoelenterazine_disulfonate
   }
 

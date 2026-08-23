@@ -74,8 +74,8 @@ pathway l-selenocystathionine-to-3-l-selenocysteinyl-ade "L-selenocystathionine 
 
   branch from oxobut side right {
     oxobut
-    <-> . +n_n_dimethyl_l_argininium +l_aminobutyrate
-    5_3_3_dimethylguanidino_2_oxopentanoate
+    <-> . +n_n_dimethyl_l_argininium_chebi_58326 +l_aminobutyrate
+    5_3_3_dimethylguanidino_2_oxopentanoate_chebi_197301
   }
 
   branch from nh3 side left {

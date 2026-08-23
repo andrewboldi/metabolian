@@ -151,7 +151,7 @@ pathway cmp-to-phosphate-null "CMP to phosphate" {
   branch from adp side left {
     adp
     <-> ec_2_7_1_5 [2.7.1.5] +lyxulose +h +atp
-    l_xylulose_1_phosphate
+    l_xylulose_1_phosphate_mnxm738644
   }
 
   branch from adp side right {

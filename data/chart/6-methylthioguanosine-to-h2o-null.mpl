@@ -24,7 +24,7 @@ pathway 6-methylthioguanosine-to-h2o-null "6-Methylthioguanosine… to H2O" {
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_5_1_38 [2.5.1.38] +h +isonocardicin_a +nocardicin_f
+    <-> ec_2_5_1_38 [2.5.1.38] +h +isonocardicin_a_mnxm732872 +nocardicin_f
     s_methyl_5_thioadenosine
   }
 

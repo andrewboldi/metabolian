@@ -162,13 +162,13 @@ pathway diphosphate-to-6-oxoparomamine "diphosphate to 6'-oxoparomamine" {
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_14_11_12 [1.14.11.12] +o2 +gibberellin_a44 +h +succinate +gibberellin_a19
+    <-> ec_1_14_11_12 [1.14.11.12] +o2_mnxm735438 +gibberellin_a44 +h +succinate +gibberellin_a19
     co2
   }
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> ec_1_14_11_12 [1.14.11.12] +o2 +gibberellin_a44_closed_lactone_form +co2 +h +gibberellin_a19
+    <-> ec_1_14_11_12 [1.14.11.12] +o2_mnxm735438 +gibberellin_a44_closed_lactone_form +co2 +h +gibberellin_a19
     succinate
   }
 

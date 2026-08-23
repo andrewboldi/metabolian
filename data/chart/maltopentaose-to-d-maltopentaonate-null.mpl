@@ -11,10 +11,10 @@ pathway maltopentaose-to-d-maltopentaonate-null "maltopentaose to D-maltopentaon
     <-> . +beta_d_fructose -h2o
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
     <-> . +h2o -beta_d_fructose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143181
     <-> . +o2 -h2o2
     d_maltopentaono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_maltopentaonate
   }
 }

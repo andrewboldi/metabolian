@@ -12,7 +12,7 @@ pathway nadh-to-diphosphate "NADH to diphosphate" {
     2_methyl_butan_2_3_diol
     <-> . +nadp +h2o -2_methylbutan_2_ol -o2 -nadph
     h
-    <-> ec_1_14_19_48 [1.14.19.48] +2_methylbutan_2_ol +nadph +o2 +hplus -nadp -h2o
+    <-> ec_1_14_19_48 [1.14.19.48] +2_methylbutan_2_ol +nadph_chebi_57783 +o2_chebi_15379 +hplus -nadp_chebi_58349 -h2o_chebi_15377
     3_hydroxy_3_methylbut_1_ene
     <-> . +diphosphate -h2o
     dimethylallyl_diphosphate
@@ -20,28 +20,159 @@ pathway nadh-to-diphosphate "NADH to diphosphate" {
     terrequinone_a
   }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
+    3r_6e_nerolidol
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
+    2_trans_6_cis_farnesol
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +beta_l_arabinofuranose +phosphate +beta_l_arabinofuranose +h2o
+    atp
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    d_arabinopyranose
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +pentalenate +nadp +h2o +h +nadph
+    1_deoxypentalenate
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +h +nadph +nadp +h2o
+    pmf
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_270 [1.1.1.270] +31_norcycloartenol +nadp +h
+    31_norcycloartenone
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +hexadecanoate +adp +nadp +coa +phosphate +h +atp +h2o
+    acetyl_coa
+  }
 
+  branch from 3_hydroxy_3_methylbut_1_ene side left {
+    3_hydroxy_3_methylbut_1_ene
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    e_2_pentenal
+  }
 
+  branch from dimethylallyl_diphosphate side right {
+    dimethylallyl_diphosphate
+    <-> ec_1_17_1_2 [1.17.1.2] +nadh +h +nad +h2o
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+  }
 
+  branch from dimethylallyl_diphosphate side left {
+    dimethylallyl_diphosphate
+    <-> ec_1_17_1_2 [1.17.1.2] +nadp +h2o +nadph
+    1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_2_1 [3.2.2.1] +guanosine +guanine
+    beta_d_ribofuranose
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_10 [3.2.1.10] +alpha_d_glucose +beta_d_glucose
+    isomaltose
+  }
 
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_6_2_1_3 [6.2.1.3] +hexadecanoate +atp +coa +amp
+    hexadecanoyl_coa
+  }
 
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_7_7_23 [2.7.7.23] +utp +alpha_d_glucosamine_1_phosphate +h
+    udp_alpha_d_glucosamine
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +11r_dihydroartemisinic_aldehyde +nad
+    2e_6e_farnesol
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +z_but_2_enol +h +nad
+    butan_1_ol
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    d_arabinopyranose_chebi_46996
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_glycero_d_manno_heptopyranose
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +cis_3_hexenal
+    e_hex_2_en_1_ol
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +e_hex_2_enal +h
+    3z_hex_3_en_1_ol
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +brassicasterol +h +nadph
+    24_epicampesterol
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_86 [1.1.1.86] +s_3_methyl_2_oxopentanoate +h2o +h +nadph
+    s_2_ethyl_2_hydroxy_3_oxobutanoate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_2_1 [3.2.2.1] +inosine +beta_d_ribofuranose
+    hypoxanthine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_3 [4.2.1.3] +cis_aconitate
+    d_erythro_isocitrate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +all_trans_beta_carotene +h +nadph +nadp +h2o
+    cryptoxanthin
+  }
 }

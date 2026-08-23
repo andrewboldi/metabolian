@@ -62,7 +62,7 @@ pathway n-hexanoyl-sphing-4-enine-to-sphingosine-41295 "N-(hexanoyl)sphing-4-eni
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety_chebi_197340 +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d_chebi_197339
   }
 }

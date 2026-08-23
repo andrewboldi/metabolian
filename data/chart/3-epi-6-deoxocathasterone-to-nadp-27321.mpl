@@ -16,7 +16,7 @@ pathway 3-epi-6-deoxocathasterone-to-nadp-27321 "3-epi-6-deoxocathasterone to NA
     typhasterol
     <-> ec_1_14_14_180 [1.14.14.180] +fmnh2 +o2 -fmn -h2o -hplus
     7_oxatyphasterol
-    <-> ec_1_14_14_108 [1.14.14.108] +4_oxahomoadamantan_5_one +fmn +h +h2o -fmnh2 -o2
+    <-> ec_1_14_14_108 [1.14.14.108] +4_oxahomoadamantan_5_one +fmn +h +h2o_water -fmnh2_mnxm1107623 -o2_mnxm735438
     adamantanone
     <-> ec_1_1_1_184 [1.1.1.184] +h +nadph -nadp
     adamantanol
@@ -24,7 +24,7 @@ pathway 3-epi-6-deoxocathasterone-to-nadp-27321 "3-epi-6-deoxocathasterone to NA
 
   branch from 6_deoxotyphasterol side left {
     6_deoxotyphasterol
-    <-> ec_1_14_13_112 [1.14.13.112] +h +o2 +nadph +nadp +h2o
+    <-> ec_1_14_13_112 [1.14.13.112] +h +o2_mnxm735438 +nadph +nadp +h2o_water
     6_deoxycathasterone
   }
 
@@ -42,31 +42,31 @@ pathway 3-epi-6-deoxocathasterone-to-nadp-27321 "3-epi-6-deoxocathasterone to NA
 
   branch from typhasterol side right {
     typhasterol
-    <-> . +h +o2 +nadph +nadp +h2o
-    7_oxatyphasterol
+    <-> . +h +o2_mnxm735438 +nadph +nadp +h2o_water
+    7_oxatyphasterol_mnxm726214
   }
 
-  branch from fmnh2 side left {
-    fmnh2
+  branch from fmnh2_mnxm1107623 side left {
+    fmnh2_mnxm1107623
     <-> ec_2_5_1_129 [2.5.1.129] +prenyl_phosphate +h +phosphate
     prenylated_fmnh2
   }
 
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_5_6_1_9 [5.6.1.9] +atp +tetra_3_sulfido_tetrairon +h2o +h +adp +fmnh +phosphate
-    tetra_3_sulfido_tetrairon
+  branch from fmnh2_mnxm1107623 side right {
+    fmnh2_mnxm1107623
+    <-> ec_5_6_1_9 [5.6.1.9] +atp +tetra_3_sulfido_tetrairon +h2o_water +h +adp +fmnh +phosphate
+    tetra_3_sulfido_tetrairon_chebi_33723
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +benzo_a_pyrene_2_3_oxide +nadp +h2o +h +nadph
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +benzo_a_pyrene_2_3_oxide +nadp +h2o_water +h +nadph
     benzo_a_pyrene
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_14_1 [1.14.14.1] +h +nadph +7_12_dimethyltetraphene +nadp +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_14_14_1 [1.14.14.1] +h +nadph +7_12_dimethyltetraphene +nadp +h2o_water
     1a_11b_dihydro_4_9_dimethylbenz_a_anthra_3_4_b_o
   }
 
@@ -108,7 +108,7 @@ pathway 3-epi-6-deoxocathasterone-to-nadp-27321 "3-epi-6-deoxocathasterone to NA
 
   branch from 4_oxahomoadamantan_5_one side left {
     4_oxahomoadamantan_5_one
-    <-> . +nadh +h +o2 +1_hydroxy_4_oxahomoadamantan_5_one +h2o
+    <-> . +nadh +h +o2_mnxm735438 +1_hydroxy_4_oxahomoadamantan_5_one +h2o_water
     nad
   }
 
@@ -124,39 +124,39 @@ pathway 3-epi-6-deoxocathasterone-to-nadp-27321 "3-epi-6-deoxocathasterone to NA
     udp_alpha_d_glucuronate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
     2e_9z_12z_15z_18z_tetracosapentaenoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2e_11z_14z_icosatrienoyl_coa
     3s_hydroxy_eicosa_cis_cis_11_14_dienoyl_coa
   }
 
-  branch from fmnh2 side right {
-    fmnh2
+  branch from fmnh2_mnxm1107623 side right {
+    fmnh2_mnxm1107623
     <-> ec_1_3_1_6 [1.3.1.6] +h +fumarate +succinate
-    fmn
+    fmn_mnxm1364147
   }
 
-  branch from fmnh2 side left {
-    fmnh2
-    <-> ec_1_1_99_31 [1.1.99.31] +h +o2 +fmn
+  branch from fmnh2_mnxm1107623 side left {
+    fmnh2_mnxm1107623
+    <-> ec_1_1_99_31 [1.1.99.31] +h +o2_mnxm735438 +fmn_mnxm1364147
     h2o2
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_14_1 [1.14.14.1] +trans_3_4_dihydro_3_4_dihydroxy_7_12_dimethylben +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_14_14_1 [1.14.14.1] +trans_3_4_dihydro_3_4_dihydroxy_7_12_dimethylben +h +nadph +nadp +h2o_water
     1aalpha_2beta_3alpha_11calpha_1a_2_3_11c_tetrah
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +dibenzo_a_l_pyrene_11_12_epoxide +nadp +h2o +h +nadph
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +dibenzo_a_l_pyrene_11_12_epoxide +nadp +h2o_water +h +nadph
     dibenzo_a_l_pyrene
   }
 

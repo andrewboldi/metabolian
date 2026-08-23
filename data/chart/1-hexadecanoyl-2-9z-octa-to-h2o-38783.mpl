@@ -12,7 +12,7 @@ pathway 1-hexadecanoyl-2-9z-octa-to-h2o-38783 "1-hexadecanoyl-2-(9Z-octa… to H
     2_oleoyl_sn_glycero_3_phosphocholine
     <-> . +linoleoyl_coa -coa
     pc_18_2_9z_12z_18_1_9z
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -pc_18_2_9z_12z_18_1_9z -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -pc_18_2_9z_12z_18_1_9z -h2o_water
     atp
   }
 }

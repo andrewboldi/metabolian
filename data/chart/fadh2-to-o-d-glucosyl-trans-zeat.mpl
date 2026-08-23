@@ -14,9 +14,9 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat "FADH2 to O-β-D-glucosyl-trans-zeat…
     n6_2_isopentenyl_adenosine
     <-> . +atp -adp -hplus
     n6_dimethylallyl_adenosine_5_phosphate
-    <-> . +nadph +o2 +hplus -nadp -h2o
+    <-> . +nadph +o2 +hplus -nadp -h2o_chebi_15377
     9_ribosyl_trans_zeatin_5_phosphate
-    <-> ec_3_2_2_n1 [3.2.2.n1] +h2o -d_ribofuranose_5_phosphate
+    <-> ec_3_2_2_n1 [3.2.2.n1] +h2o_chebi_15377 -d_ribofuranose_5_phosphate
     trans_zeatin
     <-> ec_2_4_1_203 [2.4.1.203] +udp_d_glucose -udp -hplus
     o_d_glucosyl_trans_zeatin
@@ -48,13 +48,13 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat "FADH2 to O-β-D-glucosyl-trans-zeat…
 
   branch from fadh2 side left {
     fadh2
-    <-> . +ochratoxin_b +h +o2 +chloride +fad +h2o
+    <-> . +ochratoxin_b +h +o2_mnxm735438 +chloride +fad +h2o
     ochratoxin_a
   }
 
   branch from fadh2 side right {
     fadh2
-    <-> . +2_4_5_dichloro_1h_pyrrole_2_carbonyl_phenol +h +o2 +chloride +fad +h2o
+    <-> . +2_4_5_dichloro_1h_pyrrole_2_carbonyl_phenol +h +o2_mnxm735438 +chloride +fad +h2o
     pyrrolomycin_c
   }
 
@@ -66,37 +66,37 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat "FADH2 to O-β-D-glucosyl-trans-zeat…
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp_mnxm40333 +phosphate +atp_mnxm3 +h2o
     6_deoxy_d_sorbose
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_gulopyranose +phosphate +l_gulopyranose +h2o
-    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +adp_mnxm40333 +l_gulopyranose +phosphate +l_gulopyranose +h2o
+    atp_mnxm3
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +pyrrolomycin_c +h +o2 +chloride +h2o
+    <-> . +fadh2 +pyrrolomycin_c +h +o2_mnxm735438 +chloride +h2o
     pyrrolomycin_d
   }
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +h +2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol +o2 +h2o
+    <-> . +fadh2 +h +2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol +o2_mnxm735438 +h2o
     4_hydroxycarbofuran_phenol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp_mnxm40333 +phosphate +atp_mnxm3
     d_talopyranose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp_mnxm40333 +phosphate +atp_mnxm3
     d_xylulofuranose
   }
 

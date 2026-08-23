@@ -28,20 +28,20 @@ pathway 1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl "1-stearoyl-2-myristoyl
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side right {
     1_stearoyl_sn_glycero_3_phosphate
-    <-> ec_3_1_1_4 [3.1.1.4] +h +octadecanoate +h2o
+    <-> ec_3_1_1_4 [3.1.1.4] +h +octadecanoate +h2o_water
     3_phosphonooxy_1_2_propanediyl_dioctadecanoate
   }
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side left {
     1_stearoyl_sn_glycero_3_phosphate
     <-> . +octadecanoyl_coa +h +3_phosphonooxy_1_2_propanediyl_dioctadecanoate
-    coa
+    coa_mnxm727276
   }
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side right {
     1_stearoyl_sn_glycero_3_phosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp_mnxm40333 +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from oleoyl_coa side left {

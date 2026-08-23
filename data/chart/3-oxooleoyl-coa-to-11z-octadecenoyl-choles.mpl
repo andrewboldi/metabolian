@@ -12,13 +12,13 @@ pathway 3-oxooleoyl-coa-to-11z-octadecenoyl-choles "3-oxooleoyl-CoA to (11Z-octa
     acetyl_coa
     <-> . +nadh +fadh2 +9z_hexadecenoyl_coa +h -coa -11z_octadecenoyl_coa -nad -h2o
     fad
-    <-> . +11z_octadecenoyl_coa +cholesterol -coa
+    <-> . +11z_octadecenoyl_coa +cholesterol -coa_chebi_57287
     11z_octadecenoyl_cholesterol
   }
 
   branch from cholesterol side left {
     cholesterol
-    <-> ec_1_14_19_21 [1.14.19.21] +nadh +o2 +hplus +nad +h2o
+    <-> ec_1_14_19_21 [1.14.19.21] +nadh_chebi_57945 +o2 +hplus +nad_chebi_57540 +h2o_chebi_15377
     dehydrocholesterol_7
   }
 

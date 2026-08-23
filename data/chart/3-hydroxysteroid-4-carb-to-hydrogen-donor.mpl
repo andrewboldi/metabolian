@@ -25,7 +25,7 @@ pathway 3-hydroxysteroid-4-carb-to-hydrogen-donor "3β-hydroxysteroid-4α-carb�
   branch from 3_oxo_steroid side right {
     3_oxo_steroid
     <-> . +nad +nadh +hplus
-    3_hydroxy_steroid
+    3_hydroxy_steroid_chebi_36836
   }
 
   branch from 3_oxo_1_steroid side left {

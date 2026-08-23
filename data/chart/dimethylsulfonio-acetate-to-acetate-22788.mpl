@@ -64,7 +64,7 @@ pathway dimethylsulfonio-acetate-to-acetate-22788 "(dimethylsulfonio)acetate to 
 
   branch from 3_methylthio_propanoyl_coa side left {
     3_methylthio_propanoyl_coa
-    <-> ec_1_2_4_2 [1.2.4.2] +nadh +co2 +coa +nad
+    <-> ec_1_2_4_2 [1.2.4.2] +nadh +co2_mnxm13 +coa_mnxm727276 +nad
     4_methylsulfanyl_2_oxobutanoate
   }
 
@@ -76,8 +76,8 @@ pathway dimethylsulfonio-acetate-to-acetate-22788 "(dimethylsulfonio)acetate to 
 
   branch from 3_methylthio_acryloyl_coa side left {
     3_methylthio_acryloyl_coa
-    <-> . +3_methylthio_propanoyl_coa +fad +h
-    fadh2
+    <-> . +3_methylthio_propanoyl_coa +fad_mnxm1364149 +h
+    fadh2_mnxm1105762
   }
 
   branch from methionine side right {

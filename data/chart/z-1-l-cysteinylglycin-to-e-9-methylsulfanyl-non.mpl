@@ -14,11 +14,11 @@ pathway z-1-l-cysteinylglycin-to-e-9-methylsulfanyl-non "(Z)-1-(L-cysteinylglyci
     h
     <-> . +co2 +e_9_methylsulfanyl_nonanal_oxime +nadp +h2o -h -o2 -nadph
     l_hexahomomethionine
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     n_hydroxy_l_hexahomomethioninate
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     n_n_dihydroxy_l_hexahomomethioninate
-    <-> . +hplus -co2 -h2o
+    <-> . +hplus -co2_chebi_16526 -h2o_chebi_15377
     e_9_methylsulfanyl_nonanal_oxime
   }
 }

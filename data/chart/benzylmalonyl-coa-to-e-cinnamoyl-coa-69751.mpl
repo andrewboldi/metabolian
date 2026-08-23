@@ -36,7 +36,7 @@ pathway benzylmalonyl-coa-to-e-cinnamoyl-coa-69751 "benzylmalonyl-CoA to (E)-cin
 
   branch from r_3_phenyllactate side right {
     r_3_phenyllactate
-    <-> ec_1_1_3_15 [1.1.3.15] +o2 +h2o2
+    <-> ec_1_1_3_15 [1.1.3.15] +o2_mnxm735438 +h2o2_mnxm732620
     3_phenylpyruvate
   }
 }

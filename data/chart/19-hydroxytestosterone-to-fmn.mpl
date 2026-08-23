@@ -12,7 +12,7 @@ pathway 19-hydroxytestosterone-to-fmn "19-hydroxytestosterone to FMN" {
     testosterone
     <-> ec_1_1_1_145 [1.1.1.145] +nadh +h -nad
     androst_5_ene_3_17_diol
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     androst_5_ene_3_7_17_triol
   }
 }

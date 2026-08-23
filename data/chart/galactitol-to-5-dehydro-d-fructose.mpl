@@ -18,7 +18,7 @@ pathway galactitol-to-5-dehydro-d-fructose "galactitol to 5-dehydro-D-fructose" 
 
   branch from keto_l_tagatose side left {
     keto_l_tagatose
-    <-> ec_1_1_1_12 [1.1.1.12] +nadh +h +nad
+    <-> ec_1_1_1_12 [1.1.1.12] +nadh_mnxm10 +h +nad_mnxm8
     l_altritol
   }
 

@@ -16,31 +16,31 @@ pathway premithramycin-b-to-nadph-85459 "premithramycin B to NADPH" {
     iso_mithramycin
     <-> .
     mithramycin
-    <-> . +nadp -h -nadph
+    <-> . +nadp_mnxm5 -h -nadph_mnxm738702
     mithramycin_dk
   }
 
   branch from premithramycin_b_lactone side left {
     premithramycin_b_lactone
-    <-> . +mithramycin_dk +co2
-    h2o
+    <-> . +mithramycin_dk +co2_mnxm13
+    h2o_water
   }
 
   branch from mithramycin_dk side right {
     mithramycin_dk
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
     atp
   }
 
   branch from mithramycin_dk side left {
     mithramycin_dk
-    <-> . +co2 +nadp +h +o2 +nadph
-    premithramycin_b
+    <-> . +co2_mnxm13 +nadp_mnxm5 +h +o2_mnxm735438 +nadph_mnxm738702
+    premithramycin_b_mnxm1372564
   }
 
   branch from mithramycin side right {
     mithramycin
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o_water
     adp
   }
 
@@ -56,39 +56,39 @@ pathway premithramycin-b-to-nadph-85459 "premithramycin B to NADPH" {
     z_6_hydroxyferulate
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +h +10e_12z_hexadeca_10_12_dienoate +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +h +10e_12z_hexadeca_10_12_dienoate +nadp_mnxm5 +h2o_water
     bombykol
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +h +2_5_dihydroxybenzoate +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +h +2_5_dihydroxybenzoate +nadp_mnxm5 +h2o_water
     2_5_dihydroxybenzaldehyde
   }
 
   branch from mithramycin_dk side left {
     mithramycin_dk
-    <-> . +co2 +h2o
-    premithramycin_b_lactone
+    <-> . +co2_mnxm13 +h2o_water
+    premithramycin_b_lactone_mnxm1372608
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +luteolin +h +o2 +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +luteolin +h +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
     hypolaetin
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +4_sulfoacetophenone +h +o2 +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +4_sulfoacetophenone +h +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
     4_sulfophenyl_acetate
   }
 
   branch from h side right {
     h
-    <-> . +5_hydroxy_cmp +diphosphate +h2o
+    <-> . +5_hydroxy_cmp +diphosphate +h2o_water
     5_hydroxy_ctp
   }
 
@@ -98,15 +98,15 @@ pathway premithramycin-b-to-nadph-85459 "premithramycin B to NADPH" {
     diphosphate
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +lambertine +nadp
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +lambertine +nadp_mnxm5
     berberine
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +lambertine +h +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +lambertine +h +nadp_mnxm5
     r_canadine
   }
 }

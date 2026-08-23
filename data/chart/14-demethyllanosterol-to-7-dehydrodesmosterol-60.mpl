@@ -32,37 +32,37 @@ pathway 14-demethyllanosterol-to-7-dehydrodesmosterol-60 "14-demethyllanosterol 
 
   branch from 3_dehydro_4_methylzymosterol side left {
     3_dehydro_4_methylzymosterol
-    <-> . +3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth +h +o2 +nadph +h2o
-    nadp
+    <-> . +3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth +h +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
+    nadp_mnxm5
   }
 
   branch from 4_hydroxymethylzymosterol side right {
     4_hydroxymethylzymosterol
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth +h +o2 +h2o
-    nad
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh_mnxm10 +3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth +h +o2_mnxm735438 +h2o_water
+    nad_mnxm8
   }
 
   branch from 4_hydroxymethylzymosterol side left {
     4_hydroxymethylzymosterol
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +4_formylzymosterol +nad
-    h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh_mnxm10 +h +o2_mnxm735438 +4_formylzymosterol +nad_mnxm8
+    h2o_water
   }
 
   branch from 4_formylzymosterol side right {
     4_formylzymosterol
-    <-> ec_1_14_13_72 [1.14.13.72] +nadp +4_carboxyzymosterol +h2o +nadph
-    o2
+    <-> ec_1_14_13_72 [1.14.13.72] +nadp_mnxm5 +4_carboxyzymosterol +h2o_water +nadph_mnxm738702
+    o2_mnxm735438
   }
 
   branch from 4_carboxyzymosterol side left {
     4_carboxyzymosterol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +nadp +h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +h +o2_mnxm735438 +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth
   }
 
   branch from 4_carboxyzymosterol side right {
     4_carboxyzymosterol
-    <-> ec_1_14_13_72 [1.14.13.72] +3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth +h +o2 +nad +h2o
-    nadh
+    <-> ec_1_14_13_72 [1.14.13.72] +3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth +h +o2_mnxm735438 +nad_mnxm8 +h2o_water
+    nadh_mnxm10
   }
 }

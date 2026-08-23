@@ -10,17 +10,17 @@ pathway heptosyl-heptosyl-kdo2-li-to-lipid-a-core-null "Heptosyl-heptosyl-kdo2-l
     heptosyl_heptosyl_kdo2_lipida
     <-> . +adp -h -heptosyl_kdo_2_lipid_a
     adp_l_glycero_d_manno_heptose
-    <-> ec_2_4_99_23 [2.4.99.23] +kdo_2_lipid_a_6_e_coli -adp -hplus
+    <-> ec_2_4_99_23 [2.4.99.23] +kdo_2_lipid_a_6_e_coli -adp_chebi_456216 -hplus
     heptosyl_kdo_2_lipid_a
-    <-> ec_2_4_99_24 [2.4.99.24] +adp_l_glycero_d_manno_heptose -adp -hplus
+    <-> ec_2_4_99_24 [2.4.99.24] +adp_l_glycero_d_manno_heptose -adp_chebi_456216 -hplus
     heptosyl_2_kdo_2_lipid_a
     <-> . +udp_d_glucose -udp -hplus
     glucosyl_heptosyl_2_kdo_2_lipid_a
-    <-> . +atp -adp -hplus
+    <-> . +atp -adp_chebi_456216 -hplus
     glucosyl_heptosyl_4_phosphonatoheptosyl_kdo_2_li
-    <-> . +adp_l_glycero_d_manno_heptose -adp -hplus
+    <-> . +adp_l_glycero_d_manno_heptose -adp_chebi_456216 -hplus
     glucosyl_heptosyl_2_4_phosphonatoheptosyl_kdo_2
-    <-> . +atp -adp -hplus
+    <-> . +atp -adp_chebi_456216 -hplus
     glucosyl_heptosyl_phosphonatoheptosyl_2_kdo_2_li
     <-> . +udp_d_galactose -udp -hplus
     galactosyl_glucosyl_heptosyl_phosphonatoheptosyl
@@ -28,37 +28,37 @@ pathway heptosyl-heptosyl-kdo2-li-to-lipid-a-core-null "Heptosyl-heptosyl-kdo2-l
     galactosyl_glucosyl_2_heptosyl_3_kdo_2_lipid_a_b
     <-> . +udp_d_glucose -udp -hplus
     galactosyl_glucosyl_3_heptosyl_3_kdo_2_lipid_a_b
-    <-> . +adp_l_glycero_d_manno_heptose -adp -hplus
+    <-> . +adp_l_glycero_d_manno_heptose -adp_chebi_456216 -hplus
     lipid_a_core
   }
 
   branch from h side left {
     h
     <-> . +adp +cholesterol +phosphate +cholesterol +h2o
-    atp
+    atp_mnxm3
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp_mnxm3 +h2o
     citrate
   }
 
   branch from heptosyl_2_kdo_2_lipid_a side left {
     heptosyl_2_kdo_2_lipid_a
-    <-> ec_2_7_1_235 [2.7.1.235] +atp +adp +hplus
+    <-> ec_2_7_1_235 [2.7.1.235] +atp +adp_chebi_456216 +hplus
     l_d_hep_1_3_4_o_phospho_l_d_hep_1_5_kdo_2_4_kdo
   }
 
   branch from adp side right {
     adp
-    <-> . +h +coenzyme_b +atp
+    <-> . +h +coenzyme_b +atp_mnxm3
     7_mercaptoheptanoylthreonine
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp_mnxm3 +h2o
     core_oligosaccharide_lipid_a
   }
 
@@ -70,7 +70,7 @@ pathway heptosyl-heptosyl-kdo2-li-to-lipid-a-core-null "Heptosyl-heptosyl-kdo2-l
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp_mnxm3 +h2o
     r_carnitine
   }
 
@@ -94,7 +94,7 @@ pathway heptosyl-heptosyl-kdo2-li-to-lipid-a-core-null "Heptosyl-heptosyl-kdo2-l
 
   branch from udp_d_galactose side left {
     udp_d_galactose
-    <-> . +o3_d_galactosyl_1_3_6_o_sulfo_n_acetyl_d_glucosa +udp +hplus
-    o3_d_galactosyl_1_3_d_galactosyl_1_4_6_o_sulfo_n
+    <-> . +o3_d_galactosyl_1_3_6_o_sulfo_n_acetyl_d_glucosa_chebi_176494 +udp +hplus
+    o3_d_galactosyl_1_3_d_galactosyl_1_4_6_o_sulfo_n_chebi_176635
   }
 }

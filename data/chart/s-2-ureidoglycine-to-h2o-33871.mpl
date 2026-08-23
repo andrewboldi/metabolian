@@ -12,7 +12,7 @@ pathway s-2-ureidoglycine-to-h2o-33871 "(S)-2-ureidoglycine to H2O" {
     urea
     <-> . +h2o -nh3
     carbamate
-    <-> ec_3_5_1_110 [3.5.1.110] +h +z_2_methyl_3_aminoperacrylic_acid -h2o
+    <-> ec_3_5_1_110 [3.5.1.110] +h +z_2_methyl_3_aminoperacrylic_acid -h2o_water
     z_2_methylureidoperacrylic_acid
   }
 }

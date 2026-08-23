@@ -12,7 +12,7 @@ pathway nadh-to-glyoxylate-null "NADH to glyoxylate" {
     h
     <-> ec_1_2_1_23 [1.2.1.23] +nadh +glyoxylate -nad -h2o
     glyoxal
-    <-> ec_1_2_3_15 [1.2.3.15] +o2 +h2o -h2o2 -hplus
-    glyoxylate
+    <-> ec_1_2_3_15 [1.2.3.15] +o2_chebi_15379 +h2o_chebi_15377 -h2o2 -hplus
+    glyoxylate_chebi_36655
   }
 }

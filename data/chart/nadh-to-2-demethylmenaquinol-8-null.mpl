@@ -14,7 +14,7 @@ pathway nadh-to-2-demethylmenaquinol-8-null "NADH to 2-demethylmenaquinol-8" {
     6_carboxydemethylmenaquinol_6
     <-> . +diphosphate -all_trans_hexaprenyl_diphosphate
     1_4_dihydroxy_6_naphthoate
-    <-> . +all_trans_octaprenyl_diphosphate +hplus -co2 -ppi
+    <-> . +all_trans_octaprenyl_diphosphate +hplus -co2_chebi_16526 -ppi
     2_demethylmenaquinol_8
     <-> . +dimethyl_sulfoxide -dimethyl_sulfide -h2o
     2_demethylmenaquinone_8
@@ -24,13 +24,13 @@ pathway nadh-to-2-demethylmenaquinol-8-null "NADH to 2-demethylmenaquinol-8" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +h +coa +h2o
+    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +h +coa +h2o_water
     2e_hexadecenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +hexadecanoyl_coa +h +fad +coa +h2o
+    <-> . +nadh +acetyl_coa +fadh2 +hexadecanoyl_coa +h +fad +coa +h2o_water
     octadecanoyl_coa
   }
 
@@ -42,43 +42,43 @@ pathway nadh-to-2-demethylmenaquinol-8-null "NADH to 2-demethylmenaquinol-8" {
 
   branch from h side right {
     h
-    <-> . +l_dehydroascorbic_acid +7_hydroxy_e4_neuroprostane +h2o +l_ascorbate
+    <-> . +l_dehydroascorbic_acid +7_hydroxy_e4_neuroprostane +h2o_water +l_ascorbate
     7_hydroperoxy_h4_neuroprostane
   }
 
   branch from nadh side left {
     nadh
-    <-> . +octanoyl_coa +acetyl_coa +fadh2 +h +vaccenyl_coenzyme_a +coa +nad +h2o
+    <-> . +octanoyl_coa +acetyl_coa +fadh2 +h +vaccenyl_coenzyme_a +coa +nad +h2o_water
     fad
   }
 
   branch from nadh side right {
     nadh
-    <-> . +octanoyl_coa +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
+    <-> . +octanoyl_coa +acetyl_coa +fadh2 +h +fad +coa +nad +h2o_water
     9z_octadecenoyl_coa
   }
 
   branch from h side left {
     h
-    <-> . +l_dehydroascorbic_acid +7_hydroxy_d4_neuroprostane +h2o +7_hydroperoxy_h4_neuroprostane
+    <-> . +l_dehydroascorbic_acid +7_hydroxy_d4_neuroprostane +h2o_water +7_hydroperoxy_h4_neuroprostane
     l_ascorbate
   }
 
   branch from h side right {
     h
-    <-> . +l_dehydroascorbic_acid +11_hydroxy_d4_neuroprostane +h2o +l_ascorbate
+    <-> . +l_dehydroascorbic_acid +11_hydroxy_d4_neuroprostane +h2o_water +l_ascorbate
     11_hydroperoxy_h4_neuroprostane
   }
 
   branch from nad side left {
     nad
-    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o_water
     9z_12z_octadecadienoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o_water
     9z_12z_15z_octadecatrienoyl_coa
   }
 

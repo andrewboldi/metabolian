@@ -12,7 +12,7 @@ pathway glycerophosphatidylethano-to-1-2-dihexadecanoyl "glycerophosphatidyletha
     2_hexadecanoyl_sn_glycero_3_phosphoethanolamine
     <-> ec_3_1_1_32 [3.1.1.32] +hexadecanoate +h -h2o
     1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
-    <-> . +h2o -palmitate -hplus
+    <-> . +h2o_chebi_15377 -palmitate -hplus
     1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
     <-> . +palmitoyl_coa -coa
     1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
@@ -62,7 +62,7 @@ pathway glycerophosphatidylethano-to-1-2-dihexadecanoyl "glycerophosphatidyletha
 
   branch from h side right {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +9z_myristoleoyl_coa +nadph +nadp +coa
+    <-> ec_1_2_1_84 [1.2.1.84] +9z_myristoleoyl_coa +nadph +nadp +coa_mnxm727276
     9z_tetradecen_1_ol
   }
 

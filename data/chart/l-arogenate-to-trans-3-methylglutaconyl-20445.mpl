@@ -168,13 +168,13 @@ pathway l-arogenate-to-trans-3-methylglutaconyl-20445 "L-arogenate to trans-3-me
 
   branch from acetoacetate side right {
     acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +2_methylpropanoate
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa_mnxm1103802 +2_methylpropanoate
     2_methylpropanoyl_coa
   }
 
   branch from acetoacetate side left {
     acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +chloroacetate +h
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa_mnxm1103802 +chloroacetate +h
     chloroacetyl_coa
   }
 

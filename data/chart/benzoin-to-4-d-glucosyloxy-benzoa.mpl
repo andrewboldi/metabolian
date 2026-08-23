@@ -50,13 +50,13 @@ pathway benzoin-to-4-d-glucosyloxy-benzoa "benzoin to 4-(β-D-glucosyloxy)benzoa
 
   branch from 4_d_glucosyloxy_benzoate side right {
     4_d_glucosyloxy_benzoate
-    <-> . +beta_d_glucose +4_hydroxybenzoate
-    h2o
+    <-> . +beta_d_glucose +4_hydroxybenzoate_mnxm164
+    h2o_water
   }
 
   branch from 4_d_glucosyloxy_benzoate side left {
     4_d_glucosyloxy_benzoate
-    <-> . +4_hydroxybenzoate +h2o
+    <-> . +4_hydroxybenzoate_mnxm164 +h2o_water
     alpha_d_glucose
   }
 

@@ -12,49 +12,49 @@ pathway 2-4-6-trichlorophenolate-to-6-chlorobenzene-1-2 "2,4,6-trichlorophenolat
     2_6_dichlorobenzoquinone
     <-> . +h2o -chloride -hplus
     2_chloro_6_hydroxy_1_4_benzoquinone
-    <-> . +fadh2 +h -6_chlorobenzene_1_2_4_triol
-    fad
+    <-> . +fadh2_mnxm1105762 +h -6_chlorobenzene_1_2_4_triol
+    fad_mnxm1364149
   }
 
   branch from 2_6_dichlorobenzoquinone side left {
     2_6_dichlorobenzoquinone
-    <-> . +fadh2 +h +fad
+    <-> . +fadh2_mnxm1105762 +h +fad_mnxm1364149
     2_6_dichloro_4_hydroxyphenolate
   }
 
-  branch from fad side right {
-    fad
-    <-> . +fadh2 +h +2_5_dichloro_p_benzoquinone
+  branch from fad_mnxm1364149 side right {
+    fad_mnxm1364149
+    <-> . +fadh2_mnxm1105762 +h +2_5_dichloro_p_benzoquinone
     2_5_dichlorohydroquinone
   }
 
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +h +15_oxo_spinosyn_macrolactone
+  branch from fad_mnxm1364149 side left {
+    fad_mnxm1364149
+    <-> . +fadh2_mnxm1105762 +h +15_oxo_spinosyn_macrolactone
     spinosyn_macrolactone
   }
 
   branch from 2_4_6_trichlorophenolate side right {
     2_4_6_trichlorophenolate
-    <-> . +fadh2 +h +o2 +fad +2_6_dichloro_4_hydroxyphenolate +h2o
-    chloride
+    <-> . +fadh2_mnxm1105762 +h +o2_mnxm735438 +fad_mnxm1364149 +2_6_dichloro_4_hydroxyphenolate +h2o_water
+    chloride_mnxm735978
   }
 
-  branch from fadh2 side left {
-    fadh2
-    <-> . +8_desmethylnovobiocic_acid +h +o2 +chloride +fad +h2o
+  branch from fadh2_mnxm1105762 side left {
+    fadh2_mnxm1105762
+    <-> . +8_desmethylnovobiocic_acid +h +o2_mnxm735438 +chloride_mnxm735978 +fad_mnxm1364149 +h2o_water
     chlorobiocic_acid
   }
 
-  branch from fadh2 side right {
-    fadh2
-    <-> ec_1_14_14_9 [1.14.14.9] +h +2_4_hydroxyphenyl_ethanol +o2 +fad +h2o
+  branch from fadh2_mnxm1105762 side right {
+    fadh2_mnxm1105762
+    <-> ec_1_14_14_9 [1.14.14.9] +h +2_4_hydroxyphenyl_ethanol +o2_mnxm735438 +fad_mnxm1364149 +h2o_water
     hydroxytyrosol
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxohexanoyl_l_homoserine_lactone +h2o
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxohexanoyl_l_homoserine_lactone +h2o_water
     n_3_oxohexanoyl_l_homoserine
   }
 
@@ -64,15 +64,15 @@ pathway 2-4-6-trichlorophenolate-to-6-chlorobenzene-1-2 "2,4,6-trichlorophenolat
     2_5_dichloro_3_methyl_muconolactone
   }
 
-  branch from fad side left {
-    fad
-    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +h +o2 +l_tyrosine +h2o
+  branch from fad_mnxm1364149 side left {
+    fad_mnxm1364149
+    <-> ec_1_14_14_9 [1.14.14.9] +fadh2_mnxm1105762 +h +o2_mnxm735438 +l_tyrosine +h2o_water
     l_dopa
   }
 
-  branch from fad side right {
-    fad
-    <-> ec_1_1_99_13 [1.1.99.13] +alpha_lactose +fadh2 +h
+  branch from fad_mnxm1364149 side right {
+    fad_mnxm1364149
+    <-> ec_1_1_99_13 [1.1.99.13] +alpha_lactose +fadh2_mnxm1105762 +h
     3_ketolactose
   }
 }

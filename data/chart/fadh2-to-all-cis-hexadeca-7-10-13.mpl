@@ -18,7 +18,7 @@ pathway fadh2-to-all-cis-hexadeca-7-10-13 "FADH2 to all-cis-hexadeca-7,10,13-…
     fad
     <-> . +nadh +acetyl_coa +fadh2 +h +5_8_11_tetradecatrienoyl_coenzyme_a -fad -7z_10z_13z_hexadecatrienoyl_coa -nad -h2o
     coa
-    <-> . +7z_10z_13z_hexadecatrienoyl_coa +phytol -coa
+    <-> . +7z_10z_13z_hexadecatrienoyl_coa +phytol -coa_chebi_57287
     all_cis_hexadeca_7_10_13_trienoate_phytyl_ester
   }
 }

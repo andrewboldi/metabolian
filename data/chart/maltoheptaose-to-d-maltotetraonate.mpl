@@ -18,7 +18,7 @@ pathway maltoheptaose-to-d-maltotetraonate "maltoheptaose to D-maltotetraonate" 
 
   branch from glucose side left {
     glucose
-    <-> . +ginsenoside_mx +h2o
+    <-> . +ginsenoside_mx +h2o_water
     ginsenoside_c_mx1
   }
 

@@ -10,7 +10,7 @@ pathway isopimaradiene-diol-to-abietol-null "isopimaradiene-diol to abietol" {
     isopimaradiene_diol
     <-> . +nadp +h2o -o2 -isopimara_7_15_dienol -nadph
     h
-    <-> . +isopimara_7_15_dienol +nadph +o2 +hplus -nadp -h2o
+    <-> . +isopimara_7_15_dienol +nadph_chebi_57783 +o2_chebi_15379 +hplus -nadp_chebi_58349 -h2o_chebi_15377
     isopimara_7_15_dienal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph -abietol
     nadp

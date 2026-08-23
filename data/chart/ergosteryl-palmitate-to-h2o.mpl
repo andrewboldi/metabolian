@@ -14,9 +14,9 @@ pathway ergosteryl-palmitate-to-h2o "ergosteryl palmitate to H2O" {
     vitamin_d2
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     25_hydroxyvitamin_d2
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1_25_dihydroxyvitamin_d2
-    <-> . +h +o2 +nadph -24r_1alpha_24_25_trihydroxyvitamin_d2 -h2o
+    <-> . +h +o2_mnxm735438 +nadph -24r_1alpha_24_25_trihydroxyvitamin_d2 -h2o_water
     nadp
   }
 
@@ -44,38 +44,38 @@ pathway ergosteryl-palmitate-to-h2o "ergosteryl palmitate to H2O" {
     8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_15_22 [1.14.15.22] +calciol +di_sulfido_diiron +o2 +hplus +h2o
     calcidiol
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_15_22 [1.14.15.22] +calcidiol +di_sulfido_diiron +o2 +hplus +h2o
     calcitriol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_99_2 [1.14.99.2] +kynurenate +h +o2 +nadph
+    <-> ec_1_14_99_2 [1.14.99.2] +kynurenate +h +o2_mnxm735438 +nadph
     7_8_dihydro_7_8_dihydroxykynurenate
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +toluene +h2o
+    <-> . +h +o2_mnxm735438 +nadph +toluene +h2o_water
     3_methylphenol
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     s_glutathionyl_ethacrynic_acid
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     propanoyl_coa
   }
@@ -118,55 +118,55 @@ pathway ergosteryl-palmitate-to-h2o "ergosteryl palmitate to H2O" {
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_26 [1.14.15.26] +toluene +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_15_26 [1.14.15.26] +toluene_chebi_17578 +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     benzyl_alcohol
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_25 [1.14.15.25] +p_cymene +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_15_25 [1.14.15.25] +p_cymene +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     4_isopropylbenzyl_alcohol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +mevastatin +di_sulfido_diiron +o2 +hplus +h2o
     pravastatin_lactone
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +alachlor +di_sulfido_diiron +o2 +hplus +n_2_6_diethylphenyl_2_chloroacetamide +h2o
     methyl_formate
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     choloyl_coa
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     taurolithocholate_3_sulfate
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> ec_1_13_11_38 [1.13.11.38] +1_hydroxy_2_naphthoate +h
     trans_2_carboxybenzylidenepyruvic_acid
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_3 [1.13.11.3] +2_oxo_2h_pyran_4_6_dicarboxylate +h +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_13_11_3 [1.13.11.3] +2_oxo_2h_pyran_4_6_dicarboxylate +h +h2o_water
     3_4_5_trihydroxybenzoate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_7 [1.14.13.7] +nadp +h2o +h +3_methylphenol +o2
+    <-> ec_1_14_13_7 [1.14.13.7] +nadp +h2o_water +h +3_methylphenol +o2_mnxm735438
     3_methylcatechol
   }
 

@@ -28,7 +28,7 @@ pathway d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine "α-D-GalNAc-(1→3)-[α
 
   branch from n_acetyl_d_galactosamine side right {
     n_acetyl_d_galactosamine
-    <-> ec_3_1_3_10 [3.1.3.10] +n_acetyl_alpha_d_galactosamine_1_phosphate +h2o
+    <-> ec_3_1_3_10 [3.1.3.10] +n_acetyl_alpha_d_galactosamine_1_phosphate +h2o_water
     phosphate
   }
 
@@ -70,7 +70,7 @@ pathway d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine "α-D-GalNAc-(1→3)-[α
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o_water
     atp
   }
 

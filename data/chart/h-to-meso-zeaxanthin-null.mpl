@@ -10,7 +10,7 @@ pathway h-to-meso-zeaxanthin-null "H to meso-zeaxanthin" {
     h
     <-> ec_1_14_13_129 [1.14.13.129] +6_r_beta_epsilon_carotene +o2 +nadph -zeinoxanthin -h2o
     nadp
-    <-> ec_1_14_14_158 [1.14.14.158] +zeinoxanthin +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_158 [1.14.14.158] +zeinoxanthin +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     lutein
     <-> ec_5_3_3_22 [5.3.3.22]
     meso_zeaxanthin

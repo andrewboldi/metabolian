@@ -33,13 +33,13 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s-22956 "1-(α,β-saturated… to 1
   branch from ethanolaminium side left {
     ethanolaminium
     <-> . +1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +serine
-    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex_chebi_78262
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
     <-> . +1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +serine
-    1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex_chebi_78265
   }
 
   branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side left {
@@ -87,7 +87,7 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s-22956 "1-(α,β-saturated… to 1
   branch from ethanolaminium side right {
     ethanolaminium
     <-> . +1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah +serine
-    1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah
+    1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah_chebi_78264
   }
 
   branch from ethanolaminium side left {

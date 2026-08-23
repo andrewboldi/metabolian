@@ -34,14 +34,14 @@ pathway d-galactosyl-1-4-d-to-d-galactosyl-1-3-l-18417 "β-D-galactosyl-(1→4)-
 
   branch from udp_n_acetyl_d_galactosamine side left {
     udp_n_acetyl_d_galactosamine
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +udp +hplus
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_90151 +udp +hplus
     n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino
   }
 
   branch from udp_n_acetyl_d_galactosamine side right {
     udp_n_acetyl_d_galactosamine
     <-> . +neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g +udp +hplus
-    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino
+    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino_chebi_141836
   }
 
   branch from udp_d_galactose side left {
@@ -53,7 +53,7 @@ pathway d-galactosyl-1-4-d-to-d-galactosyl-1-3-l-18417 "β-D-galactosyl-(1→4)-
   branch from udp_d_galactose side right {
     udp_d_galactose
     <-> . +l_fuc_1_2_d_gal_1_3_d_glcnac_1_4_neu5ac_2_3_d_g +udp +hplus
-    d_galactosyl_1_3_l_fucosyl_1_2_d_galactosyl_1_3
+    d_galactosyl_1_3_l_fucosyl_1_2_d_galactosyl_1_3_chebi_142289
   }
 
   branch from gdp_l_fucose side left {

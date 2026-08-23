@@ -10,9 +10,9 @@ pathway 2-methylpropanaminium-to-h2o "2-methylpropanaminium to H2O" {
     2_methylpropanaminium
     <-> . +nad +h2o -nh3 -nadh -hplus
     isobutyraldehyde
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h -nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh_mnxm10 +h -nad_mnxm8
     butan_1_ol
-    <-> ec_3_1_1_2 [3.1.1.2] +propanoate +h -h2o
+    <-> ec_3_1_1_2 [3.1.1.2] +propanoate +h -h2o_water
     butyl_propionate
   }
 }

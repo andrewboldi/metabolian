@@ -10,13 +10,13 @@ pathway glutathione-disulfide-to-glycine "glutathione disulfide to glycine" {
     glutathione_disulfide
     <-> ec_1_11_1_12 [1.11.1.12] +14s_hdohe +h2o -glutathione
     14_s_hpdhe
-    <-> . -h2o
+    <-> . -h2o_chebi_15377
     13s_14s_epoxy_4z_7z_9e_11e_16z_19z_docosahexaen
     <-> . +gsh
     13r_s_glutathionyl_14s_hydroxy_4z_7z_9e_11e_16
-    <-> . +h2o -glutamate
+    <-> . +h2o_chebi_15377 -glutamate
     13r_glycinylcystein_s_yl_14s_hydroxy_4z_7z_9e_1
-    <-> . +h2o -glycine
+    <-> . +h2o_chebi_15377 -glycine
     13r_s_cysteinyl_14s_hydroxy_4z_7z_9e_11e_16_z_1
   }
 
@@ -28,7 +28,7 @@ pathway glutathione-disulfide-to-glycine "glutathione disulfide to glycine" {
 
   branch from 13s_14s_epoxy_4z_7z_9e_11e_16z_19z_docosahexaen side right {
     13s_14s_epoxy_4z_7z_9e_11e_16z_19z_docosahexaen
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     13r_14s_dihydroxy_4z_7z_9e_11e_16z_19z_docosahe
   }
 }

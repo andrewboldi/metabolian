@@ -32,7 +32,7 @@ pathway 24-methylidenelophenol-to-avenasterol "24-methylidenelophenol to avenast
 
   branch from nadh side left {
     nadh
-    <-> . +h +isoputreanine +nad +h2o
+    <-> . +h +isoputreanine +nad +h2o_water
     n_3_aminopropyl_4_aminobutanal
   }
 
@@ -56,7 +56,7 @@ pathway 24-methylidenelophenol-to-avenasterol "24-methylidenelophenol to avenast
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +lithocholate +h2o
+    <-> . +h +o2_mnxm735438 +nadph +lithocholate +h2o_water
     deoxycholate
   }
 
@@ -110,19 +110,19 @@ pathway 24-methylidenelophenol-to-avenasterol "24-methylidenelophenol to avenast
 
   branch from nadh side right {
     nadh
-    <-> . +all_trans_retinoate +h +nad +h2o
+    <-> . +all_trans_retinoate +h +nad +h2o_water
     13_cis_retinal
   }
 
   branch from co2 side left {
     co2
-    <-> . +p_hydroxybenzyl_alcohol +l_alanine +diphosphate +h +amp +4_methyl_5_2_phosphooxyethyl_thiazole +h2o +1_deoxy_d_xylulose_5_phosphate +l_cysteine +l_tyrosine
+    <-> . +p_hydroxybenzyl_alcohol +l_alanine +diphosphate +h +amp +4_methyl_5_2_phosphooxyethyl_thiazole +h2o_water +1_deoxy_d_xylulose_5_phosphate +l_cysteine +l_tyrosine
     atp
   }
 
   branch from co2 side right {
     co2
-    <-> ec_2_3_1_119 [2.3.1.119] +eicosanoyl_coa +nadp +coa +h2o +malonyl_coa +h +nadph
+    <-> ec_2_3_1_119 [2.3.1.119] +eicosanoyl_coa +nadp +coa +h2o_water +malonyl_coa +h +nadph
     octadecanoyl_coa
   }
 
@@ -152,7 +152,7 @@ pathway 24-methylidenelophenol-to-avenasterol "24-methylidenelophenol to avenast
 
   branch from nadp side left {
     nadp
-    <-> . +calcitroate +h2o +o2 +nadph
+    <-> . +calcitroate +h2o_water +o2_mnxm735438 +nadph
     24_25_26_27_tetranor_23_oxo_hydroxyvitamin_d3
   }
 

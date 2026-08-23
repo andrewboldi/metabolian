@@ -12,7 +12,7 @@ pathway but-1-en-3-ol-to-1-hydroxybutan-2-one "but-1-en-3-ol to 1-hydroxybutan-2
     h
     <-> . +butan_2_ol +nad -nadh -hplus
     butan_2_one
-    <-> . +nadh +o2 +hplus -nad -h2o
+    <-> . +nadh +o2_chebi_15379 +hplus -nad -h2o_chebi_15377
     1_hydroxybutan_2_one
   }
 
@@ -30,8 +30,8 @@ pathway but-1-en-3-ol-to-1-hydroxybutan-2-one "but-1-en-3-ol to 1-hydroxybutan-2
 
   branch from butan_2_ol side left {
     butan_2_ol
-    <-> ec_1_1_1_71 [1.1.1.71] +butanal +nadh +h
-    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +butanal +nadh_mnxm10 +h
+    nad_mnxm8
   }
 
   branch from butan_2_ol side right {
@@ -102,8 +102,8 @@ pathway but-1-en-3-ol-to-1-hydroxybutan-2-one "but-1-en-3-ol to 1-hydroxybutan-2
 
   branch from butan_2_ol side left {
     butan_2_ol
-    <-> ec_1_1_1_71 [1.1.1.71] +z_but_2_enol +h +nad
-    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +z_but_2_enol +h +nad_mnxm8
+    nadh_mnxm10
   }
 
   branch from o2 side right {

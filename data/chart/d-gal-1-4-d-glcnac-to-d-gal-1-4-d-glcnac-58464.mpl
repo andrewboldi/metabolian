@@ -25,7 +25,7 @@ pathway d-gal-1-4-d-glcnac-to-d-gal-1-4-d-glcnac-58464 "β-D-Gal-(1→4)-β-D-Gl
   branch from udpglcnac side right {
     udpglcnac
     <-> . +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac +udp +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac_chebi_233673
   }
 
   branch from udp_d_galactose side left {

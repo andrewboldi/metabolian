@@ -12,7 +12,7 @@ pathway quercetin-7-olate-to-h2o "quercetin-7-olate to H2O" {
     quercitrin_7_olate
     <-> ec_3_2_1_40 [3.2.1.40] +h2o -quercetin_7_olate
     l_rhamnopyranose
-    <-> ec_3_2_1_194 [3.2.1.194] +glucose +ginsenoside_f1 -h2o
+    <-> ec_3_2_1_194 [3.2.1.194] +glucose +ginsenoside_f1 -h2o_water
     20s_ginsenoside_re
   }
 }

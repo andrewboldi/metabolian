@@ -44,13 +44,13 @@ pathway capsiconiate-to-trans-caffeoyl-coa-null "capsiconiate to trans-caffeoyl-
 
   branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
-    <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
+    <-> ec_4_1_2_61 [4.1.2.61] +h2o_chebi_15377 +acetyl_coa
     3_4_dihydroxybenzaldehyde
   }
 
   branch from trans_caffeoyl_coa side right {
     trans_caffeoyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     3_hydroxy_3_3_4_dihydroxyphenyl_propanoyl_coa
   }
 
@@ -68,8 +68,8 @@ pathway capsiconiate-to-trans-caffeoyl-coa-null "capsiconiate to trans-caffeoyl-
 
   branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
-    <-> . +5_hydroxyanthrotainin +s_adenosyl_l_methionine
-    5_hydroxy_desmethylanthrotainin
+    <-> . +5_hydroxyanthrotainin_chebi_218553 +s_adenosyl_l_methionine
+    5_hydroxy_desmethylanthrotainin_mnxm1368221
   }
 
   branch from s_adenosyl_l_homocysteine side right {
@@ -93,7 +93,7 @@ pathway capsiconiate-to-trans-caffeoyl-coa-null "capsiconiate to trans-caffeoyl-
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
     <-> . +s_adenosyl_l_homocysteine +haemanthamine +h
-    11_hydroxyvittatine
+    11_hydroxyvittatine_mnxm1371559
   }
 
   branch from s_adenosyl_l_methionine side right {

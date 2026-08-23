@@ -14,13 +14,13 @@ pathway r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate "(R)-2-(4-chloro-2-methy
     5_chloro_3_methylcatechol
     <-> . +o2 -hplus
     4_chloro_2_methyl_cis_cis_muconate
-    <-> . +h -5_chloro_3_methylcatechol
-    o2
+    <-> . +h -5_chloro_3_methylcatechol_mnxm8164
+    o2_mnxm735438
   }
 
   branch from 4_chloro_2_methylphenol side left {
     4_chloro_2_methylphenol
-    <-> ec_1_14_13_20 [1.14.13.20] +h +o2 +nadph +5_chloro_3_methylcatechol +h2o
+    <-> ec_1_14_13_20 [1.14.13.20] +h +o2_mnxm735438 +nadph +5_chloro_3_methylcatechol_mnxm8164 +h2o_water
     nadp
   }
 
@@ -36,22 +36,22 @@ pathway r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate "(R)-2-(4-chloro-2-methy
     cis_2_methyl_4_carboxylatomethylenebut_2_en_1_4
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +2_hexaprenyl_6_methoxyphenol +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +2_hexaprenyl_6_methoxyphenol +h2o_water
     2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +deacetylcephalosporin_c +co2 +succinate +h2o +penicillin_n
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +deacetylcephalosporin_c +co2_mnxm13 +succinate_mnxm25 +h2o_water +penicillin_n
     2_oxoglutarate
   }
 
-  branch from 5_chloro_3_methylcatechol side right {
-    5_chloro_3_methylcatechol
-    <-> ec_1_3_1_119 [1.3.1.119] +1r_2s_5_chloro_3_methylcyclohexa_3_5_diene_1_2 +nad +h
-    nadh
+  branch from 5_chloro_3_methylcatechol_mnxm8164 side right {
+    5_chloro_3_methylcatechol_mnxm8164
+    <-> ec_1_3_1_119 [1.3.1.119] +1r_2s_5_chloro_3_methylcyclohexa_3_5_diene_1_2 +nad_mnxm8 +h
+    nadh_mnxm10
   }
 
   branch from 4_chloro_2_methyl_cis_cis_muconate side left {
@@ -68,18 +68,18 @@ pathway r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate "(R)-2-(4-chloro-2-methy
 
   branch from h side left {
     h
-    <-> ec_1_1_1_53 [1.1.1.53] +nadh +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nad
+    <-> ec_1_1_1_53 [1.1.1.53] +nadh_mnxm10 +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nad_mnxm8
     3alpha_20alpha_21_trihydroxy_5beta_pregnane_11_o
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_12_18 [1.14.12.18] +nadh +h +4_chlorobiphenyl +nad
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_14_12_18 [1.14.12.18] +nadh_mnxm10 +h +4_chlorobiphenyl +nad_mnxm8
     1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> ec_1_14_12_18 [1.14.12.18] +h +nadph +1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2 +nadp
     4_chlorobiphenyl
   }

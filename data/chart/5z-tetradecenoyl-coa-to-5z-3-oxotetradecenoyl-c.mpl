@@ -18,7 +18,7 @@ pathway 5z-tetradecenoyl-coa-to-5z-3-oxotetradecenoyl-c "(5Z)-tetradecenoyl-CoA 
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_2_3_1 [1.2.3.1] +famciclovir +o2 +h2o
+    <-> ec_1_2_3_1 [1.2.3.1] +famciclovir +o2 +h2o_water
     6_oxo_famciclovir
   }
 
@@ -30,8 +30,8 @@ pathway 5z-tetradecenoyl-coa-to-5z-3-oxotetradecenoyl-c "(5Z)-tetradecenoyl-CoA 
 
   branch from 2e_5z_tetradecadienoyl_coa side left {
     2e_5z_tetradecadienoyl_coa
-    <-> . +o2 +h2o2
-    5z_tetradecenoyl_coa
+    <-> . +o2_chebi_15379 +h2o2_chebi_16240
+    5z_tetradecenoyl_coa_chebi_84650
   }
 
   branch from 5z_tetradecenoyl_coa side right {
@@ -48,25 +48,25 @@ pathway 5z-tetradecenoyl-coa-to-5z-3-oxotetradecenoyl-c "(5Z)-tetradecenoyl-CoA 
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_10 [1.14.14.10] +nadh +h +nitrilotriacetate +glyoxylate +nad +h2o
+    <-> ec_1_14_14_10 [1.14.14.10] +nadh_mnxm10 +h +nitrilotriacetate +glyoxylate +nad_mnxm8 +h2o_water
     aminodiacetate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +2_hydroxy_pentan_3_one +h2o
+    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +2_hydroxy_pentan_3_one +h2o_water
     3_nitro_2_pentanol
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_11_1_16 [1.11.1.16] +catechol +h2o
+    <-> ec_1_11_1_16 [1.11.1.16] +catechol +h2o_water
     1_2_benzoquinone
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_11_1_16 [1.11.1.16] +2_methoxy_1_4_benzoquinone +h2o
+    <-> ec_1_11_1_16 [1.11.1.16] +2_methoxy_1_4_benzoquinone +h2o_water
     2_methoxyhydroquinone
   }
 }

@@ -62,7 +62,7 @@ pathway 3s-7z-10z-3-hydroxyhexa-to-4z-decenoyl-coa-8439 "(3S,7Z,10Z)-3-hydroxyhe
 
   branch from 2e_8z_tetradecadienoyl_coa side right {
     2e_8z_tetradecadienoyl_coa
-    <-> . +h2o
+    <-> . +h2o_water
     3s_3_hydroxy_cis_8_tetradecenoyl_coenzyme_a
   }
 

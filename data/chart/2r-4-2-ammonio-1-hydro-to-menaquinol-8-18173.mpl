@@ -14,7 +14,7 @@ pathway 2r-4-2-ammonio-1-hydro-to-menaquinol-8-18173 "(2R)-4-(2-ammonio-1-hydroâ
     4_hydroxyphenylacetate
     <-> ec_4_1_1_83 [4.1.1.83] +hplus -co2
     p_cresol
-    <-> . +copper +h2o -copper -hplus
+    <-> . +copper +h2o -copper_chebi_49552 -hplus
     p_hydroxybenzyl_alcohol
     <-> . +mk_8 -4_hydroxybenzaldehyde
     menaquinol_8

@@ -24,7 +24,7 @@ pathway acetoin-to-nad-null "acetoin to NAD" {
 
   branch from h side right {
     h
-    <-> . +2_4_6_trioxoheptanoate +2_3_5_trihydroxytoluene
+    <-> . +2_4_6_trioxoheptanoate_mnxm1372606 +2_3_5_trihydroxytoluene
     o2
   }
 
@@ -109,7 +109,7 @@ pathway acetoin-to-nad-null "acetoin to NAD" {
   branch from nad side right {
     nad
     <-> . +nadh +didemethylasterriquinone_d +h
-    hydrodidemethylasterriquinone_d
+    hydrodidemethylasterriquinone_d_mnxm1363713
   }
 
   branch from nad side left {

@@ -16,28 +16,159 @@ pathway petunidin-to-h2o "petunidin to H2O" {
     atp
   }
 
+  branch from s_s_adenosyl_l_methionine side left {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_300 [2.1.1.300] +s_adenosyl_l_homocysteine +h +argemonine
+    pavine
+  }
 
+  branch from s_s_adenosyl_l_methionine side right {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_267 [2.1.1.267] +s_adenosyl_l_homocysteine +h +isorhamnetin
+    quercetin
+  }
 
+  branch from delphinidin_3_o_d_glucoside_betaine side left {
+    delphinidin_3_o_d_glucoside_betaine
+    <-> ec_2_4_1_297 [2.4.1.297] +udp_mnxm1102128 +delphinidin_3_o_sophoroside
+    udp_alpha_d_glucose
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_galactofuranose
+  }
 
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_galactofuranose_chebi_59497
+  }
 
+  branch from l_methionine side right {
+    l_methionine
+    <-> ec_3_4_11_4 [3.4.11.4] +met_gly_gly +h2o
+    glycylglycine
+  }
 
+  branch from l_methionine side left {
+    l_methionine
+    <-> ec_1_14_13_8 [1.14.13.8] +l_methionine_s_oxide +nadp +h2o +h +nadph
+    o2
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_10 [3.3.2.10] +12_13_dihode
+    a_12_13_epode
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +sangivamycin
+    toyocamycin
+  }
 
+  branch from petunidin side right {
+    petunidin
+    <-> . +udp_d_galactose +udp
+    petunidin_3_o_d_galactoside_betaine
+  }
 
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +rebaudioside_b +udp
+    rebaudioside_a
+  }
 
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +dehydroepiandrosterone +udp +hplus
+    dehydroepiandrosterone_3_d_glucoside
+  }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +isoarctigenin +h +matairesinol
+    s_adenosyl_l_methionine
+  }
 
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +9_n_methoxy_tryptophan +h +s_adenosyl_l_methionine
+    9_n_hydroxy_l_tryptophan
+  }
 
+  branch from h side left {
+    h
+    <-> . +acetyl_coa +l_ornithine +coa
+    n5_acetyl_l_ornithine
+  }
 
+  branch from h side right {
+    h
+    <-> ec_1_1_1_393 [1.1.1.393] +3_7_12_trioxo_5_cholan_24_oate +nadph +3beta_hydroxy_7_12_dioxo_5beta_cholan_24_oic_aci
+    nadp
+  }
 
+  branch from s_s_adenosyl_l_methionine side left {
+    s_s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +h +1_3_5_dichloro_2_6_dihydroxy_4_methoxyphenyl_hex
+    3_5_dichloro_2_4_6_trihydroxyphenyl_hexan_1_one
+  }
 
+  branch from s_s_adenosyl_l_methionine side right {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_41 [2.1.1.41] +s_adenosyl_l_homocysteine +h +eburicol
+    lanosterol
+  }
 
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +beta_patchoulene
+    2e_6e_farnesyl_diphosphate
+  }
 
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +2e_6e_farnesyl_diphosphate
+    gamma_patchoulene
+  }
 
+  branch from phosphate side left {
+    phosphate
+    <-> . +aldehydo_d_mannose +h2o
+    aldehydo_d_mannose_6_phosphate
+  }
 
+  branch from phosphate side right {
+    phosphate
+    <-> . +aldehydo_d_mannose +h2o
+    alpha_d_mannose_1_phosphate
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    n_acetyl_dl_methionine
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    methyl_beta_d_galactoside
+  }
 
+  branch from l_methionine side left {
+    l_methionine
+    <-> ec_3_4_11_1 [3.4.11.1] +glycine +h2o
+    methionyl_glycine
+  }
+
+  branch from l_methionine side right {
+    l_methionine
+    <-> ec_3_3_2_6 [3.3.2.6] +l_methionine_p_nitroanilide +h2o
+    4_nitroaniline
+  }
 }

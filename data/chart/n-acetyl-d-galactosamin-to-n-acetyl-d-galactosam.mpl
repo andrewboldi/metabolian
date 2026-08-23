@@ -11,7 +11,7 @@ pathway n-acetyl-d-galactosamin-to-n-acetyl-d-galactosam "N-acetyl-β-D-galactos
     <-> . +udp_d_galactose -udp -hplus
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_82637
     <-> . +udp_n_acetyl_d_galactosamine -udp -hplus
     n_acetyl_d_galactosaminyl_1_4_n_acetylneuraminos
   }

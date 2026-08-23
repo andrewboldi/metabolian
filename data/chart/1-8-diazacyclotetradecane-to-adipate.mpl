@@ -79,7 +79,7 @@ pathway 1-8-diazacyclotetradecane-to-adipate "1,8-diazacyclotetradecane… to ad
   branch from glutamate side right {
     glutamate
     <-> . +di_sulfido_diiron +h2o +akg +nh3 +hplus
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33738
   }
 
   branch from glutamate side left {

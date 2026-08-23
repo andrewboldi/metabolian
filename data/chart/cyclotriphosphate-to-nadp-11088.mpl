@@ -26,13 +26,13 @@ pathway cyclotriphosphate-to-nadp-11088 "cyclotriphosphate to NADP" {
 
   branch from triphosphate side left {
     triphosphate
-    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +6_hydroxymethyl_7_8_dihydropterin
+    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o_water +h +6_hydroxymethyl_7_8_dihydropterin
     acetate
   }
 
   branch from triphosphate side right {
     triphosphate
-    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +glycolaldehyde
+    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o_water +h +glycolaldehyde
     6_hydroxymethyl_7_8_dihydropterin
   }
 
@@ -68,19 +68,19 @@ pathway cyclotriphosphate-to-nadp-11088 "cyclotriphosphate to NADP" {
 
   branch from nadp side right {
     nadp
-    <-> . +h +21_hydroxyprogesterone +o2 +nadph +h2o
+    <-> . +h +21_hydroxyprogesterone +o2_mnxm735438 +nadph +h2o_water
     aldosterone
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +o2 +nadph +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +o2_mnxm735438 +nadph +h2o_water
     21_hydroxyprogesterone
   }
 
   branch from triphosphate side right {
     triphosphate
-    <-> ec_4_2_3_12 [4.2.3.12] +7_8_dihydroneopterin_3_triphosphate +h
+    <-> ec_4_2_3_12 [4.2.3.12] +7_8_dihydroneopterin_3_triphosphate_mnxm1369356 +h
     6_pyruvoyl_5_6_7_8_tetrahydropterin
   }
 
@@ -92,19 +92,19 @@ pathway cyclotriphosphate-to-nadp-11088 "cyclotriphosphate to NADP" {
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +aspartate +atp +amp
+    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +aspartate +atp +amp_chebi_456215
     3_l_aspartate_adenylyl_1_group
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_11 [6.2.1.11] +biotinate +atp +coa +amp
+    <-> ec_6_2_1_11 [6.2.1.11] +biotinate +atp +coa +amp_chebi_456215
     biotinyl_coa
   }
 
   branch from nicotinate_d_ribonucleotide side right {
     nicotinate_d_ribonucleotide
-    <-> ec_2_7_1_173 [2.7.1.173] +atp +adp +hplus
+    <-> ec_2_7_1_173 [2.7.1.173] +atp +adp_chebi_456216 +hplus
     d_ribosylnicotinate
   }
 
@@ -116,37 +116,37 @@ pathway cyclotriphosphate-to-nadp-11088 "cyclotriphosphate to NADP" {
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp_mnxm3 +h2o_water
     glycine
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_21 [3.6.3.21] +glycine +adp +phosphate +glycine +h2o
-    atp
+    <-> ec_3_6_3_21 [3.6.3.21] +glycine +adp +phosphate +glycine +h2o_water
+    atp_mnxm3
   }
 
   branch from nadph side right {
     nadph
-    <-> . +antipyrine +h +o2 +nadp +methanol
+    <-> . +antipyrine +h +o2_mnxm735438 +nadp +methanol
     edaravone
   }
 
   branch from nadph side left {
     nadph
-    <-> . +5_hydroxyomeprazole +nadp +h2o +h +o2
+    <-> . +5_hydroxyomeprazole +nadp +h2o_water +h +o2_mnxm735438
     5_methoxy_2_4_methoxy_3_5_dimethylpyridin_2_yl_m
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +6_hydroxypaclitaxel +h2o +h +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +6_hydroxypaclitaxel +h2o_water +h +o2_mnxm735438 +nadph
     paclitaxel
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxytolbutamide +h2o +h +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxytolbutamide +h2o_water +h +o2_mnxm735438 +nadph
     tolbutamide
   }
 }

@@ -40,14 +40,14 @@ pathway 2-c-methyl-d-erythritol-to-pseudouridine-5-phosp "2-C-methyl-D-erythrito
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622
     stemar_13_ene
   }
 
   branch from 2_c_methyl_d_erythritol_2_4_cyclic_diphosphate side right {
     2_c_methyl_d_erythritol_2_4_cyclic_diphosphate
     <-> ec_1_17_7_1 [1.17.7.1] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +di_sulfido_diiron +h2o +hplus
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33738
   }
 
   branch from cytidine_5_monophosphate side left {
@@ -59,7 +59,7 @@ pathway 2-c-methyl-d-erythritol-to-pseudouridine-5-phosp "2-C-methyl-D-erythrito
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
     <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne_chebi_78572
   }
 
   branch from nh3 side left {
@@ -94,13 +94,13 @@ pathway 2-c-methyl-d-erythritol-to-pseudouridine-5-phosp "2-C-methyl-D-erythrito
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622
     stemod_13_17_ene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622
     9_pimara_7_15_diene
   }
 

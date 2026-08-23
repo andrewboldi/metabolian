@@ -39,7 +39,7 @@ pathway phorbol-12-13-dibutanoate-to-o-s-2e-butenoylpant "phorbol 12,13-dibutano
   branch from ppi side right {
     ppi
     <-> . +isopimara_8_14_15_diene
-    5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    5_9_10_labda_8_20_13_dien_15_yl_diphosphate_chebi_58622
   }
 
   branch from ppi side left {

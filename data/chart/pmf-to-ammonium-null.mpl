@@ -10,11 +10,11 @@ pathway pmf-to-ammonium-null "PMF to ammonium" {
     pmf
     <-> . +n_acetylputrescine +o2 +h2o -pmf -nh4 -h2o2
     4_acetamidobutanal
-    <-> . +nad +h2o -nadh -hplus
+    <-> . +nad +h2o_chebi_15377 -nadh -hplus
     4_acetamidobutanoate
-    <-> ec_3_5_1_63 [3.5.1.63] +h2o -acetate
+    <-> ec_3_5_1_63 [3.5.1.63] +h2o_chebi_15377 -acetate
     gaba
-    <-> . +o2 +h2o -h2o2 -nh3
+    <-> . +o2_chebi_15379 +h2o_chebi_15377 -h2o2_chebi_16240 -nh3
     4_oxobutanoate
   }
 
@@ -38,8 +38,8 @@ pathway pmf-to-ammonium-null "PMF to ammonium" {
 
   branch from nh4 side right {
     nh4
-    <-> ec_1_4_1_20 [1.4.1.20] +nadh +3_methyl_2_oxopentanoate +h +l_isoleucine +h2o
-    nad
+    <-> ec_1_4_1_20 [1.4.1.20] +nadh_mnxm10 +3_methyl_2_oxopentanoate +h +l_isoleucine +h2o
+    nad_mnxm8
   }
 
   branch from h2o2 side left {

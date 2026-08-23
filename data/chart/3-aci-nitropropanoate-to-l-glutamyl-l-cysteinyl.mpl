@@ -11,7 +11,7 @@ pathway 3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl "3-aci-nitropropanoate t
     <-> ec_1_7_3_5 [1.7.3.5] +o2 +h2o -nitrite -h2o2 -hplus
     3_oxopropanoate
     <-> ec_2_6_1_18 [2.6.1.18] +alanine -pyruvate
-    alanine
+    alanine_chebi_57966
     <-> ec_6_3_2_23 [6.3.2.23] +glu_cys +atp -adp -pi -hplus
     l_glutamyl_l_cysteinyl_alaninate
   }

@@ -18,7 +18,7 @@ pathway 3-hydroxy-4-methoxybenzoa-to-3-5-dibromocatechol "3-hydroxy-4-methoxyben
 
   branch from 3_hydroxy_4_methoxybenzoate side left {
     3_hydroxy_4_methoxybenzoate
-    <-> ec_1_2_3_1 [1.2.3.1] +h +h2o2 +o2 +h2o
+    <-> ec_1_2_3_1 [1.2.3.1] +h +h2o2 +o2_mnxm735438 +h2o_water
     isovanillin
   }
 }

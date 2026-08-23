@@ -52,7 +52,7 @@ pathway aldehydo-d-allose-to-5-hydroxyisouric-acid-14805 "aldehydo-D-allose to 5
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> . +o2 +h2o +h2o2 +s_allantoin
+    <-> . +o2_mnxm735438 +h2o_water +h2o2_mnxm732620 +s_allantoin
     co2
   }
 

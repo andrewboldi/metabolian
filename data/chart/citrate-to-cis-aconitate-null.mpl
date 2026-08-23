@@ -10,9 +10,9 @@ pathway citrate-to-cis-aconitate-null "citrate to cis-aconitate" {
     citrate
     <-> ec_3_5_1_68 [3.5.1.68] +l_glutamate -h2o
     citrylglutamate
-    <-> . +h2o -glutamate
-    citrate
-    <-> . -h2o
+    <-> . +h2o_chebi_15377 -glutamate
+    citrate_chebi_16947
+    <-> . -h2o_chebi_15377
     cis_aconitate
   }
 }

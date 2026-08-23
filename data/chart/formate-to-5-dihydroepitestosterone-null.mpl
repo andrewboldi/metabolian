@@ -12,7 +12,7 @@ pathway formate-to-5-dihydroepitestosterone-null "formate to 5β-dihydroepitesto
     androst_4_ene_3_17_dione
     <-> ec_1_1_1_209 [1.1.1.209] +nadh +h -nad
     epitestosterone
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     5_dihydroepitestosterone
   }
 }

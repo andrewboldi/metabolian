@@ -16,8 +16,8 @@ pathway s-anthraniloyl-l-cysteine-to-1-2-aminophenyl-dec "S-anthraniloyl-L-cyste
     l_cysteine
     <-> . +1_2_aminophenyl_decane_1_3_dione -h2o
     2_heptyl_4_quinolone
-    <-> . +h2o
-    1_2_aminophenyl_decane_1_3_dione
+    <-> . +h2o_water
+    1_2_aminophenyl_decane_1_3_dione_mnxm1368563
   }
 
   branch from malonyl-coa side left {

@@ -16,37 +16,37 @@ pathway premithramycin-b-to-nadph "premithramycin B to NADPH" {
     iso_mithramycin
     <-> .
     mithramycin
-    <-> . +nadp -h -nadph
+    <-> . +nadp_mnxm5 -h -nadph_mnxm738702
     mithramycin_dk
   }
 
   branch from premithramycin_b_lactone side left {
     premithramycin_b_lactone
-    <-> . +mithramycin_dk +co2
-    h2o
+    <-> . +mithramycin_dk +co2_mnxm13
+    h2o_water
   }
 
   branch from mithramycin_dk side right {
     mithramycin_dk
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o_water
     atp
   }
 
   branch from mithramycin_dk side left {
     mithramycin_dk
-    <-> . +co2 +nadp +h +o2 +nadph
-    premithramycin_b
+    <-> . +co2_mnxm13 +nadp_mnxm5 +h +o2_mnxm735438 +nadph_mnxm738702
+    premithramycin_b_mnxm1372564
   }
 
   branch from mithramycin side right {
     mithramycin
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o_water
     adp
   }
 
   branch from h side left {
     h
-    <-> . +4_o_acetyl_udp_n_acetylglucosamine +h2o +4_o_acetyl_n_acetylmannosamine
+    <-> . +4_o_acetyl_udp_n_acetylglucosamine +h2o_water +4_o_acetyl_n_acetylmannosamine
     udp
   }
 
@@ -56,57 +56,57 @@ pathway premithramycin-b-to-nadph "premithramycin B to NADPH" {
     nojirimycin_b
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_3_1_93 [1.3.1.93] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy +h +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_3_1_93 [1.3.1.93] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy +h +nadp_mnxm5
     auricoloyl_coa
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose +h +nadp
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose +h +nadp_mnxm5
     gdp_6_deoxy_d_altro_heptose
   }
 
   branch from mithramycin_dk side left {
     mithramycin_dk
-    <-> . +co2 +h2o
-    premithramycin_b_lactone
+    <-> . +co2_mnxm13 +h2o_water
+    premithramycin_b_lactone_mnxm1372608
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +gdp_6_deoxy_4_keto_l_xylo_heptose +h +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +gdp_6_deoxy_4_keto_l_xylo_heptose +h +nadph_mnxm738702
     gdp_6_deoxy_l_gluco_heptose
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +tridecane_3_4_dione +h +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +tridecane_3_4_dione +h +nadph_mnxm738702
     cai_1
   }
 
   branch from h side right {
     h
-    <-> . +dihydromonacolin_l_carboxylate +h2o
+    <-> . +dihydromonacolin_l_carboxylate +h2o_water
     dihydromonacolin_l
   }
 
   branch from h side left {
     h
-    <-> . +monacolin_l_carboxylate +h2o
+    <-> . +monacolin_l_carboxylate +h2o_water
     monacolin_l
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +acetyl_coa +malonyl_coa +s_methylmalonyl_coa +h +decarboxy_dehydroxy_demycosaminyl_nystatin +nadp +coa +h2o
-    co2
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +acetyl_coa +malonyl_coa +s_methylmalonyl_coa +h +decarboxy_dehydroxy_demycosaminyl_nystatin +nadp_mnxm5 +coa +h2o_water
+    co2_mnxm13
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +7_2_dihydroxy_4_5_methylenedioxyisoflavan +h +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +7_2_dihydroxy_4_5_methylenedioxyisoflavan +h +o2_mnxm735438 +nadp_mnxm5 +h2o_water
     10_2_dihydroxy_4_5_methylenedioxy_isoflav_8_ene
   }
 }

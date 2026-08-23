@@ -10,11 +10,11 @@ pathway udp-to-soyasaponin-i-null "UDP to soyasaponin I" {
     udp
     <-> . +h +soyasapogenol_b_23_o_beta_d_glucoside -soyasapogenol_b
     udp_alpha_d_glucose
-    <-> ec_2_4_1_262 [2.4.1.262] +soyasapogenol_b +udp_d_glucuronate -udp -hplus
+    <-> ec_2_4_1_262 [2.4.1.262] +soyasapogenol_b +udp_d_glucuronate -udp_chebi_58223 -hplus
     soyasapogenol_b_3_o_glucuronate
-    <-> ec_2_4_1_272 [2.4.1.272] +udp_d_galactose -udp -hplus
+    <-> ec_2_4_1_272 [2.4.1.272] +udp_d_galactose -udp_chebi_58223 -hplus
     soyasaponin_iii
-    <-> ec_2_4_1_273 [2.4.1.273] +udp_l_rhamnose -udp -hplus
+    <-> ec_2_4_1_273 [2.4.1.273] +udp_l_rhamnose -udp_chebi_58223 -hplus
     soyasaponin_i
   }
 
@@ -44,25 +44,25 @@ pathway udp-to-soyasaponin-i-null "UDP to soyasaponin I" {
 
   branch from udp_d_glucuronate side left {
     udp_d_glucuronate
-    <-> . +hyocholate +udp
+    <-> . +hyocholate +udp_chebi_58223
     hyocholic_acid_24_o_d_glucuronide
   }
 
   branch from udp_d_glucuronate side right {
     udp_d_glucuronate
-    <-> . +hyodeoxycholate +udp +hplus
+    <-> . +hyodeoxycholate +udp_chebi_58223 +hplus
     hyodeoxycholate_6_o_d_glucuronide
   }
 
   branch from udp_d_galactose side left {
     udp_d_galactose
-    <-> ec_2_4_1_86 [2.4.1.86] +n_acetyl_d_glucosaminide +udp +hplus
+    <-> ec_2_4_1_86 [2.4.1.86] +n_acetyl_d_glucosaminide +udp_chebi_58223 +hplus
     d_galactosyl_1_3_n_acetyl_d_glucosaminide
   }
 
   branch from udp_d_galactose side right {
     udp_d_galactose
-    <-> . +n_acetyl_d_glucosaminide +udp +hplus
-    d_galactosyl_1_3_n_acetyl_d_glucosaminide
+    <-> . +n_acetyl_d_glucosaminide_chebi_27425 +udp_chebi_58223 +hplus
+    d_galactosyl_1_3_n_acetyl_d_glucosaminide_chebi_139508
   }
 }

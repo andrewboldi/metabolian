@@ -77,7 +77,7 @@ pathway d-glucosamine-to-5-o-phosphonato-d-ribof-13725 "α-D-glucosamine… to 5
   branch from ppi side right {
     ppi
     <-> . +gpp
-    pinene
+    pinene_chebi_50025
   }
 
   branch from ppi side left {

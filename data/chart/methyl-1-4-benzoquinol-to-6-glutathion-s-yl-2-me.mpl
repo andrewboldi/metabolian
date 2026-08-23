@@ -138,13 +138,13 @@ pathway methyl-1-4-benzoquinol-to-6-glutathion-s-yl-2-me "methyl-1,4-benzoquinol
 
   branch from glutathione side left {
     glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10478 +h2o
     1_methylsulfanyl_9_aci_nitrononane
   }
 
   branch from glutathione side right {
     glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10478 +h2o
     9_methylthiononanonitrile_oxide
   }
 }

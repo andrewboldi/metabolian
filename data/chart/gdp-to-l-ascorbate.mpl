@@ -12,7 +12,7 @@ pathway gdp-to-l-ascorbate "GDP to L-ascorbate" {
     gdp_l_gulose
     <-> ec_5_1_3_18 [5.1.3.18]
     gdp_l_galactose
-    <-> ec_2_7_7_69 [2.7.7.69] +pi -gdp -hplus
+    <-> ec_2_7_7_69 [2.7.7.69] +pi -gdp_chebi_58189 -hplus
     l_galactose_1_phosphate
     <-> ec_3_1_3_93 [3.1.3.93] +h2o -pi
     l_galactopyranose
@@ -24,13 +24,13 @@ pathway gdp-to-l-ascorbate "GDP to L-ascorbate" {
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +lividomycin_b +lividomycin_b +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +lividomycin_b +lividomycin_b +h2o_water
     atp
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o_water
     paromomycin_ii
   }
 
@@ -78,25 +78,25 @@ pathway gdp-to-l-ascorbate "GDP to L-ascorbate" {
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o_water
     5_ribosylparomamine
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o_water
     2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o_water
     6_deamino_6_hydroxyparomomycin_ii
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o_water
     6_deamino_6_oxoparomomycin_ii
   }
 

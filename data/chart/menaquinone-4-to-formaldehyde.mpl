@@ -14,7 +14,7 @@ pathway menaquinone-4-to-formaldehyde "menaquinone-4 to formaldehyde" {
     s_adenosyl_l_methionine
     <-> ec_2_5_1_74 [2.5.1.74] +diphosphate +co2 +demethylmenaquinol_4 -1_4_dihydroxy_2_naphthoate -2e_6e_10e_geranylgeranyl_diphosphate
     h
-    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_octaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus -co2 -ppi
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_octaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus -co2_chebi_16526 -ppi
     2_demethylmenaquinol_8
     <-> ec_2_1_1_163 [2.1.1.163] +sam -sah -hplus
     menaquinol_8
@@ -46,7 +46,7 @@ pathway menaquinone-4-to-formaldehyde "menaquinone-4 to formaldehyde" {
 
   branch from h side right {
     h
-    <-> . +neocarratetraose_4_o_disulfate +h2o +sulfate
+    <-> . +neocarratetraose_4_o_disulfate +h2o_water +sulfate
     neocarratetraose_4_o_sulfate
   }
 
@@ -64,8 +64,8 @@ pathway menaquinone-4-to-formaldehyde "menaquinone-4 to formaldehyde" {
 
   branch from 2_demethylmenaquinol_8 side left {
     2_demethylmenaquinol_8
-    <-> . +trimethylamine +2_demethylmenaquinone_8 +h2o +h
-    trimethylamine_n_oxide
+    <-> . +trimethylamine +2_demethylmenaquinone_8 +h2o_water +h
+    trimethylamine_n_oxide_mnxm736072
   }
 
   branch from 2_demethylmenaquinol_8 side right {
@@ -88,13 +88,13 @@ pathway menaquinone-4-to-formaldehyde "menaquinone-4 to formaldehyde" {
 
   branch from h side left {
     h
-    <-> . +neocarrabiose +sulfate +h2o
+    <-> . +neocarrabiose +sulfate +h2o_water
     neocarrabiose_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o
+    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o_water
     chitobiose_6_phosphate
   }
 
@@ -143,12 +143,12 @@ pathway menaquinone-4-to-formaldehyde "menaquinone-4 to formaldehyde" {
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
     2e_6e_10e_geranylgeranyl_diphosphate
     <-> ec_4_2_3_146 [4.2.3.146] +diphosphate +cyclooctat_9_en_7_ol
-    h2o
+    h2o_water
   }
 
   branch from 2_demethylmenaquinol_8 side left {
     2_demethylmenaquinol_8
-    <-> . +d_alanine +2_demethylmenaquinone_8 +h2o +nh4
+    <-> . +d_alanine +2_demethylmenaquinone_8 +h2o_water +nh4
     pyruvate
   }
 

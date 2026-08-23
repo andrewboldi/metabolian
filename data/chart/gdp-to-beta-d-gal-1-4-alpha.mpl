@@ -12,7 +12,7 @@ pathway gdp-to-beta-d-gal-1-4-alpha "GDP to beta-D-Gal-(1->4)-[alpha-…" {
     gdp_beta_l_fucose
     <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_alpha_d_glcnac_1_2_beta_d_gal_1_4 +h -alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1
     udp_alpha_d_galactose
-    <-> . +udp +alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1 +h -beta_d_gal_1_4_alpha_l_fuc_1_3_alpha_d_glcnac_1
+    <-> . +udp +alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1 +h -beta_d_gal_1_4_alpha_l_fuc_1_3_alpha_d_glcnac_1_mnxm1560188
     udp_n_acetyl_alpha_d_glucosamine
   }
 }

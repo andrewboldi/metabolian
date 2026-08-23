@@ -11,14 +11,14 @@ pathway 1-5-anhydro-d-fructose-to-microthecin-null "1,5-anhydro-D-fructose to mi
     <-> ec_1_1_1_292 [1.1.1.292] +nadh +h -nad
     1_5_anhydro_d_mannitol
     <-> ec_1_1_1_292 [1.1.1.292] +nadp -nadph -hplus
-    1_5_anhydro_d_fructose
+    1_5_anhydro_d_fructose_chebi_16715
     <-> ec_4_2_1_110 [4.2.1.110] -h2o
     microthecin
   }
 
   branch from 1_5_anhydro_d_mannitol side left {
     1_5_anhydro_d_mannitol
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 
@@ -34,14 +34,14 @@ pathway 1-5-anhydro-d-fructose-to-microthecin-null "1,5-anhydro-D-fructose to mi
     1s_2r_4r_neoisodihydrocarveol
   }
 
-  branch from 1_5_anhydro_d_fructose side right {
-    1_5_anhydro_d_fructose
+  branch from 1_5_anhydro_d_fructose_chebi_16715 side right {
+    1_5_anhydro_d_fructose_chebi_16715
     <-> ec_4_2_1_111 [4.2.1.111] +h2o
     ascopyrone_m
   }
 
-  branch from 1_5_anhydro_d_fructose side left {
-    1_5_anhydro_d_fructose
+  branch from 1_5_anhydro_d_fructose_chebi_16715 side left {
+    1_5_anhydro_d_fructose_chebi_16715
     <-> ec_1_1_1_263 [1.1.1.263] +nadp +nadph +hplus
     1_5_anhydro_d_glucitol
   }
@@ -55,7 +55,7 @@ pathway 1-5-anhydro-d-fructose-to-microthecin-null "1,5-anhydro-D-fructose to mi
   branch from 1_5_anhydro_d_fructose side left {
     1_5_anhydro_d_fructose
     <-> ec_4_2_1_110 [4.2.1.110] +1_5_anhydro_4_deoxy_d_glycero_hex_3_en_2_ulose
-    h2o
+    h2o_water
   }
 
   branch from nadh side right {
@@ -72,13 +72,13 @@ pathway 1-5-anhydro-d-fructose-to-microthecin-null "1,5-anhydro-D-fructose to mi
 
   branch from h side right {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o_water
     1_5_l_arabinotriose
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o_water
     xxxg_xyloglucan_oligosaccharide
   }
 
@@ -91,6 +91,6 @@ pathway 1-5-anhydro-d-fructose-to-microthecin-null "1,5-anhydro-D-fructose to mi
   branch from nad side left {
     nad
     <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    neodihydrocarveol
+    neodihydrocarveol_chebi_158
   }
 }

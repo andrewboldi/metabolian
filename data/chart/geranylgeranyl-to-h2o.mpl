@@ -77,7 +77,7 @@ pathway geranylgeranyl-to-h2o "geranylgeranyl… to H2O" {
   branch from nadph side right {
     nadph
     <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    thujan_3_ol
+    thujan_3_ol_mnxm97633
   }
 
   branch from nadp side left {

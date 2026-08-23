@@ -12,7 +12,7 @@ pathway d-glucopyranose-to-d-glucopyranose-null "D-glucopyranose to D-glucopyran
     d_glucosyl_n_hexadecanoylsphingosine
     <-> . +25_acyl_27_norcholesterol -n_hexadecanoylsphingosine
     25_acyl_27_norcholesteryl_d_glucoside
-    <-> . +h2o -glucose
+    <-> . +h2o_chebi_15377 -glucose
     25_acyl_27_norcholesterol
   }
 }

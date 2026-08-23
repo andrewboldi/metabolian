@@ -13,7 +13,7 @@ pathway s-3-indol-3-ylmethyl-to-malbrancheamide-62288 "(S)-3-(indol-3-ylmethyl)-
     <-> . +hydrogen_acceptor +hplus -hydrogen_donor
     1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy
     <-> . +nadph +hplus -nadp
-    1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy
+    1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy_chebi_145675
     <-> .
     premalbrancheamide
     <-> . +fadh2 +chloride +o2 -fad -h2o

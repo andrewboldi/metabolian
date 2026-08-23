@@ -10,9 +10,9 @@ pathway fmnh2-to-nad "FMNH2 to NAD" {
     fmnh2
     <-> . +h +coprogen -fmn -fe
     desferricoprogen
-    <-> . +fe -coprogen
+    <-> . +fe_mnxm1370984 -coprogen_mnxm726879
     h
-    <-> . +fmnh2 +coprogen -fmn -fe
+    <-> . +fmnh2 +coprogen_mnxm726879 -fmn -fe
     desferricoprogen
     <-> ec_1_14_13_7 [1.14.13.7] +nadh +fmn -h -nad
     fmnh2

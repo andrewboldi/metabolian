@@ -10,7 +10,7 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa-35811 "(3R,4R)-7,2'-dihydroxy-4'… to CoA"
     3r_4r_7_2_dihydroxy_4_methoxyisoflavanol
     <-> ec_4_2_1_139 [4.2.1.139] -h2o
     medicarpin
-    <-> . +glucose -h2o
+    <-> . +glucose -h2o_water
     medicocarpin
     <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +h -coa
     medicarpin_3_o_glucoside_6_malonate
@@ -25,7 +25,7 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa-35811 "(3R,4R)-7,2'-dihydroxy-4'… to CoA"
   branch from medicarpin side right {
     medicarpin
     <-> . +h +nadph +nadp
-    vestitol
+    vestitol_chebi_9971
   }
 
   branch from medicocarpin side left {
@@ -36,18 +36,18 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa-35811 "(3R,4R)-7,2'-dihydroxy-4'… to CoA"
 
   branch from medicocarpin side right {
     medicocarpin
-    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +atp +h2o +medicarpin_3_o_glucoside_6_malonate +coa +amp
+    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +atp +h2o_water +medicarpin_3_o_glucoside_6_malonate +coa +amp
     diphosphate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_4_1_2_34 [4.1.2.34] +2_formylbenzoate +h +pyruvate
     trans_2_carboxybenzylidenepyruvic_acid
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_1_2_5_2 [1.2.5.2] +h +propynoate +pyrroloquinoline_quinol +pyrroloquinoline_quinone
     prop_2_ynal
   }
@@ -66,13 +66,13 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa-35811 "(3R,4R)-7,2'-dihydroxy-4'… to CoA"
 
   branch from 3r_4r_7_2_dihydroxy_4_methoxyisoflavanol side left {
     3r_4r_7_2_dihydroxy_4_methoxyisoflavanol
-    <-> ec_1_1_1_348 [1.1.1.348] +nadp +nadph +hplus
+    <-> ec_1_1_1_348 [1.1.1.348] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     vestitone
   }
 
   branch from medicarpin side right {
     medicarpin
-    <-> . +medicocarpin +h2o
+    <-> . +medicocarpin +h2o_water
     beta_d_glucose
   }
 
@@ -88,27 +88,27 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa-35811 "(3R,4R)-7,2'-dihydroxy-4'… to CoA"
     z_n_sulfonatooxy_alkenimidothioate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +3_beta_d_galactosyl_sn_glycerol +glycerol
     aldehydo_d_galactose
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +l_threo_3_methylmalic_acid +h
     mesaconate
   }
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> . +8_8a_deoxyoleandolide +co2 +nadp +coa +h2o +h +nadph
+    <-> . +8_8a_deoxyoleandolide +co2 +nadp +coa +h2o_water +h +nadph
     methylmalonyl_coa
   }
 
   branch from malonyl_coa side right {
     malonyl_coa
-    <-> . +methylmalonyl_coa +2s_2_methylbutanoyl_coa +h +nadph +nadp +6_8a_seco_6_8a_deoxy_5_oxoavermectin_2a_aglycon +coa +h2o
+    <-> . +methylmalonyl_coa +2s_2_methylbutanoyl_coa +h +nadph +nadp +6_8a_seco_6_8a_deoxy_5_oxoavermectin_2a_aglycon +coa +h2o_water
     co2
   }
 
@@ -120,7 +120,7 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa-35811 "(3R,4R)-7,2'-dihydroxy-4'… to CoA"
 
   branch from h side right {
     h
-    <-> . +h2o +mesaconate +coa
+    <-> . +h2o_water +mesaconate +coa
     2_methylfumaryl_coa
   }
 

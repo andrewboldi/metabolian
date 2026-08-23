@@ -60,7 +60,7 @@ pathway 2-oxo-4-aminobutyrate-to-h2o "2-Oxo-4-aminobutyrate to H2O" {
 
   branch from h side right {
     h
-    <-> ec_2_3_1_115 [2.3.1.115] +apiin +coa +malonylapiin
+    <-> ec_2_3_1_115 [2.3.1.115] +apiin_mnxm1371939 +coa +malonylapiin
     malonyl_coa
   }
 
@@ -121,13 +121,13 @@ pathway 2-oxo-4-aminobutyrate-to-h2o "2-Oxo-4-aminobutyrate to H2O" {
   branch from h2o2 side right {
     h2o2
     <-> ec_1_17_3_2 [1.17.3.2] +1_methyl_7h_xanthine +o2 +h2o
-    1_methyluric_acid
+    1_methyluric_acid_mnxm1372254
   }
 
   branch from o2 side left {
     o2
     <-> . +h +1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
-    6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro
+    6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro_mnxm1369029
   }
 
   branch from o2 side right {
@@ -145,7 +145,7 @@ pathway 2-oxo-4-aminobutyrate-to-h2o "2-Oxo-4-aminobutyrate to H2O" {
   branch from h2o side right {
     h2o
     <-> . +dialdehyde
-    4_21_dehydrocorynantheine_aldehyde
+    4_21_dehydrocorynantheine_aldehyde_mnxm1370790
   }
 
   branch from tetradecanoyl_coa side left {

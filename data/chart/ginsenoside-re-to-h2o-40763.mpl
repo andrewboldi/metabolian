@@ -14,7 +14,7 @@ pathway ginsenoside-re-to-h2o-40763 "ginsenoside Re to H2O" {
     l_rhamnofuranose
     <-> .
     beta_l_rhamnose
-    <-> ec_3_2_1_40 [3.2.1.40] +quercetin -h2o
+    <-> ec_3_2_1_40 [3.2.1.40] +quercetin -h2o_water
     quercitrin
   }
 
@@ -26,7 +26,7 @@ pathway ginsenoside-re-to-h2o-40763 "ginsenoside Re to H2O" {
 
   branch from beta_l_rhamnose side right {
     beta_l_rhamnose
-    <-> ec_3_2_1_40 [3.2.1.40] +tilianin +h2o
+    <-> ec_3_2_1_40 [3.2.1.40] +tilianin +h2o_water
     linarin
   }
 
@@ -38,25 +38,25 @@ pathway ginsenoside-re-to-h2o-40763 "ginsenoside Re to H2O" {
 
   branch from quercitrin side right {
     quercitrin
-    <-> . +quercetin_3_o_rhamnoside_7_o_glucoside +udp_alpha_d_glucose
+    <-> . +quercetin_3_o_rhamnoside_7_o_glucoside_mnxm727836 +udp_alpha_d_glucose
     udp
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +o2 +ethene +nad
     oxirane
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +nadh +o2 +2_6_dichlorophenol +nad
     2_6_dichloro_4_hydroxyphenolate
   }
 
   branch from quercetin side left {
     quercetin
-    <-> ec_1_14_13_21 [1.14.13.21] +luteolin +h +o2 +nadph +h2o
+    <-> ec_1_14_13_21 [1.14.13.21] +luteolin +h +o2 +nadph +h2o_water
     nadp
   }
 
@@ -66,14 +66,14 @@ pathway ginsenoside-re-to-h2o-40763 "ginsenoside Re to H2O" {
     quercetin_4_o_d_glucopyranoside
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2_succinylbenzoate +h
     spirodilactone
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +2_2_bis_4_chlorophenyl_ethanol
     unsym_bis_4_chlorophenyl_ethylene
   }

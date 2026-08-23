@@ -10,15 +10,15 @@ pathway paraoxon-to-h2o-18053 "paraoxon to H2O" {
     paraoxon
     <-> ec_3_1_8_1 [3.1.8.1] +h2o -4_nitrophenolate -hplus
     diethylphosphate
-    <-> . +hydrogen_sulfide +h -h2o
+    <-> . +hydrogen_sulfide +h -h2o_water
     o_o_diethyl_hydrogen_thiophosphate
-    <-> ec_3_1_8_1 [3.1.8.1] +h +4_nitrophenol -h2o
+    <-> ec_3_1_8_1 [3.1.8.1] +h +4_nitrophenol -h2o_water
     parathion
   }
 
   branch from diethylphosphate side left {
     diethylphosphate
-    <-> . +ethyl_dihydrogen_phosphate +h +h2o
+    <-> . +ethyl_dihydrogen_phosphate +h +h2o_water
     ethanol
   }
 
@@ -36,32 +36,32 @@ pathway paraoxon-to-h2o-18053 "paraoxon to H2O" {
 
   branch from o_o_diethyl_hydrogen_thiophosphate side right {
     o_o_diethyl_hydrogen_thiophosphate
-    <-> ec_3_1_8_1 [3.1.8.1] +4_aminophenol +h2o
+    <-> ec_3_1_8_1 [3.1.8.1] +4_aminophenol +h2o_water
     aminoparathion
   }
 
   branch from o_o_diethyl_hydrogen_thiophosphate side left {
     o_o_diethyl_hydrogen_thiophosphate
-    <-> ec_3_1_8_1 [3.1.8.1] +3_5_6_trichloro_2_pyridinol +h2o
+    <-> ec_3_1_8_1 [3.1.8.1] +3_5_6_trichloro_2_pyridinol +h2o_water
     chlorpyrifos
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_6_3_24 [3.6.3.24] +h +adp +ni +phosphate +ni
     atp
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     normetanephrine
   }
 
   branch from parathion side right {
     parathion
-    <-> ec_1_14_14_1 [1.14.14.1] +hydrogen_sulfide +h +h2o
-    paraoxon
+    <-> ec_1_14_14_1 [1.14.14.1] +hydrogen_sulfide +h +h2o_water
+    paraoxon_mnxm4766
   }
 
   branch from hydrogen_sulfide side left {
@@ -72,7 +72,7 @@ pathway paraoxon-to-h2o-18053 "paraoxon to H2O" {
 
   branch from hydrogen_sulfide side right {
     hydrogen_sulfide
-    <-> . +thiosulfate +h2o +h
+    <-> . +thiosulfate +h2o_water +h
     sulfate
   }
 
@@ -84,37 +84,37 @@ pathway paraoxon-to-h2o-18053 "paraoxon to H2O" {
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     15z_tetracosenoyl_coa
   }
 
   branch from o_o_diethyl_hydrogen_thiophosphate side left {
     o_o_diethyl_hydrogen_thiophosphate
-    <-> ec_3_1_8_1 [3.1.8.1] +2_isopropyl_6_methylpyrimidin_4_ol +h2o
+    <-> ec_3_1_8_1 [3.1.8.1] +2_isopropyl_6_methylpyrimidin_4_ol +h2o_water
     diazinon
   }
 
   branch from o_o_diethyl_hydrogen_thiophosphate side right {
     o_o_diethyl_hydrogen_thiophosphate
-    <-> ec_3_1_8_1 [3.1.8.1] +chlorferron +h2o
+    <-> ec_3_1_8_1 [3.1.8.1] +chlorferron +h2o_water
     coumaphos
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_1_7_1_4 [1.7.1.4] +nitrite +nadh +h +nad
     ammonium_hydroxide
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_6_3_9 [3.6.3.9] +h +adp +k +phosphate +atp +k
     na
   }
 
   branch from 4_nitrophenol side left {
     4_nitrophenol
-    <-> ec_3_2_1_139 [3.2.1.139] +d_glucuronate +h +h2o
+    <-> ec_3_2_1_139 [3.2.1.139] +d_glucuronate +h +h2o_water
     4_nitrophenyl_alpha_d_glucuronide
   }
 

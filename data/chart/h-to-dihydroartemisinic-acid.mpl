@@ -10,7 +10,7 @@ pathway h-to-dihydroartemisinic-acid "H to dihydroartemisinic acid…" {
     h
     <-> ec_1_2_1_5 [1.2.1.5] +2e_6e_farnesoate +nadph -11r_dihydroartemisinic_aldehyde -h2o
     nadp
-    <-> . +11r_dihydroartemisinic_aldehyde +nadp +h2o -nadph -hplus
+    <-> . +11r_dihydroartemisinic_aldehyde +nadp_chebi_58349 +h2o_chebi_15377 -nadph_chebi_57783 -hplus
     dihydroartemisinate
     <-> . +o2
     dihydroartemisinic_acid_hydroperoxide

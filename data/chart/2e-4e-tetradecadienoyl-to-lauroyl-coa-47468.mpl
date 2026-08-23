@@ -38,20 +38,20 @@ pathway 2e-4e-tetradecadienoyl-to-lauroyl-coa-47468 "(2E,4E)-tetradecadienoyl-â€
 
   branch from 2e_5z_tetradecadienoyl_coa side left {
     2e_5z_tetradecadienoyl_coa
-    <-> . +3z_dodecenoyl_coa +acetyl_coa +h2o2 +o2 +h2o
-    coa
+    <-> . +3z_dodecenoyl_coa +acetyl_coa_mnxm1104266 +h2o2 +o2 +h2o_water
+    coa_mnxm727276
   }
 
   branch from 3s_5z_3_hydroxytetradec_5_enoyl_coa side right {
     3s_5z_3_hydroxytetradec_5_enoyl_coa
-    <-> . +nadh +3_oxomyrist_5_enoyl_coenzyme_a +nad
+    <-> . +nadh_mnxm10 +3_oxomyrist_5_enoyl_coenzyme_a +nad_mnxm8
     h
   }
 
   branch from 3s_5z_3_hydroxytetradec_5_enoyl_coa side left {
     3s_5z_3_hydroxytetradec_5_enoyl_coa
-    <-> . +nadh +3_oxomyrist_5_enoyl_coenzyme_a +h
-    nad
+    <-> . +nadh_mnxm10 +3_oxomyrist_5_enoyl_coenzyme_a_mnxm1560526 +h
+    nad_mnxm8
   }
 
   branch from trans_dodec_2_enoyl_coa side right {
@@ -80,8 +80,8 @@ pathway 2e-4e-tetradecadienoyl-to-lauroyl-coa-47468 "(2E,4E)-tetradecadienoyl-â€
 
   branch from 2e_5z_tetradecadienoyl_coa side right {
     2e_5z_tetradecadienoyl_coa
-    <-> . +5z_tetradecenoyl_coa +fad +h
-    fadh2
+    <-> . +5z_tetradecenoyl_coa_mnxm1101197 +fad_mnxm1364149 +h
+    fadh2_mnxm1105762
   }
 
   branch from lauroyl_coa side left {

@@ -20,87 +20,16 @@ pathway n-acetyl-9-o-acetylneuram-to-l-tyrosine-22600 "N-acetyl-9-O-acetylneuram
     tyrosine
   }
 
-  branch from n_acetylneuraminate side left {
-    n_acetylneuraminate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-  }
 
-  branch from n_acetylneuraminate side right {
-    n_acetylneuraminate
-    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_4_glc_1_1_cer_d18_1 +h2o
-    neu5ac_2_3_gal_1_4_glc_1_1_cer_d18_1_18_0
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_3_1_7_2 [3.1.7.2] +h2o +gtp +hplus
-    guanosine_3_diphosphate_5_triphosphate_hexaanion
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_125 [4.2.3.125] +fpp
-    muurolene
-  }
 
-  branch from tyrosine side left {
-    tyrosine
-    <-> ec_4_1_1_25 [4.1.1.25] +hplus +co2
-    tyraminium
-  }
 
-  branch from tyrosine side right {
-    tyrosine
-    <-> ec_1_3_1_78 [1.3.1.78] +nadp +co2 +nadph
-    l_arogenate
-  }
 
-  branch from n_acetylneuraminate side left {
-    n_acetylneuraminate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-  }
 
-  branch from n_acetylneuraminate side right {
-    n_acetylneuraminate
-    <-> . +neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g +h2o
-    d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
-  }
 
-  branch from cytidine_5_monophosphate_1 side left {
-    cytidine_5_monophosphate_1
-    <-> ec_2_1_1_198 [2.1.1.198] +sam +sah +hplus
-    2_o_methylcytidine_5_monophosphate_1
-  }
 
-  branch from cytidine_5_monophosphate_1 side right {
-    cytidine_5_monophosphate_1
-    <-> ec_2_1_1_199 [2.1.1.199] +sam +sah +hplus
-    n4_methylcytidine_5_monophosphate_1
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_126 [4.2.3.126] +fpp
-    muurolene
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_127 [4.2.3.127] +fpp
-    copaene
-  }
 
-  branch from tyrosine side left {
-    tyrosine
-    <-> ec_5_4_3_6 [5.4.3.6]
-    3_amino_3_4_hydroxyphenyl_propanoic_acid
-  }
-
-  branch from tyrosine side right {
-    tyrosine
-    <-> ec_1_14_18_1 [1.14.18.1] +o2 +h2o
-    l_dopaquinone
-  }
 }

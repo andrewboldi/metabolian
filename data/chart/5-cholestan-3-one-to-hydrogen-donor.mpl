@@ -10,11 +10,11 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
     5_cholestan_3_one
     <-> ec_1_3_1_3 [1.3.1.3] +nadp -nadph -hplus
     cholest_4_en_3_one
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25s_26_hydroxycholest_4_en_3_one
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25s_3_ketocholest_4_en_26_al
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25s_4_dafachronate
     <-> ec_6_2_1_42 [6.2.1.42] +atp +coa -amp -ppi
     25s_3_oxocholest_4_en_26_oyl_coa
@@ -34,14 +34,14 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
     fmn
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_2_7_8 [1.2.7.8] +3_indol_3_yl_pyruvate +coa +di_sulfido_diiron +co2 +hplus
     indol_3_ylacetyl_coa
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_3_7_5 [1.3.7.5] +2r_3z_phycocyanobilin +di_sulfido_diiron +hplus
     biliverdin
   }
@@ -78,24 +78,24 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_4 [1.14.15.4] +steroid +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_15_4 [1.14.15.4] +steroid +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     11_hydroxy_steroid
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_3_7_4 [1.3.7.4] +di_sulfido_diiron +biliverdin +hplus
+    <-> ec_1_3_7_4 [1.3.7.4] +di_sulfido_diiron_chebi_33737 +biliverdin +hplus
     3z_phytochromobilin
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_2_7_3 [1.2.7.3] +akg +coa +di_sulfido_diiron +co2 +hplus
     succinyl_coa
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_7_7_1 [1.7.7.1] +nh3 +h2o +di_sulfido_diiron +hplus
     nitrite
   }

@@ -14,11 +14,11 @@ pathway udp-to-d-glucose-null "UDP to β-D-glucose" {
     udp_alpha_d_glucose
     <-> ec_1_14_13_86 [1.14.13.86] +h +o2 +nadph +apigenin -nadp -h2o
     2_hydroxy_2_3_dihydrogenistein
-    <-> ec_4_2_1_105 [4.2.1.105] -h2o -hplus
+    <-> ec_4_2_1_105 [4.2.1.105] -h2o_chebi_15377 -hplus
     genistein
-    <-> ec_2_4_1_170 [2.4.1.170] +udp_d_glucose -udp -hplus
+    <-> ec_2_4_1_170 [2.4.1.170] +udp_d_glucose -udp_chebi_58223 -hplus
     genistein_7_o_d_glucoside
-    <-> . +h2o -d_glucose
+    <-> . +h2o_chebi_15377 -d_glucose
     genistein
   }
 
@@ -156,13 +156,13 @@ pathway udp-to-d-glucose-null "UDP to β-D-glucose" {
 
   branch from udp_d_glucose side left {
     udp_d_glucose
-    <-> ec_2_4_1_185 [2.4.1.185] +s_naringenin +udp +hplus
+    <-> ec_2_4_1_185 [2.4.1.185] +s_naringenin +udp_chebi_58223 +hplus
     naringenin_7_o_d_glucoside
   }
 
   branch from udp_d_glucose side right {
     udp_d_glucose
-    <-> . +tigogenin +udp +hplus
+    <-> . +tigogenin +udp_chebi_58223 +hplus
     tigogenin_3_o_d_glucopyranoside
   }
 }

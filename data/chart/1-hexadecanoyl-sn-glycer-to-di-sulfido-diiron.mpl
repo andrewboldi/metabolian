@@ -14,7 +14,7 @@ pathway 1-hexadecanoyl-sn-glycer-to-di-sulfido-diiron "1-hexadecanoyl-sn--glycer
     lysophosphatidylinositol_16_0
     <-> ec_6_2_1_57 [6.2.1.57] +holo-acp +palmitate +atp -amp -ppi
     o_s_hexadecanoylpantetheine_4_phosphoryl_serine
-    <-> ec_1_14_19_11 [1.14.19.11] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_11 [1.14.19.11] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     o_s_4z_hexadecenoylpantetheine_4_phosphoryl_seri
   }
 

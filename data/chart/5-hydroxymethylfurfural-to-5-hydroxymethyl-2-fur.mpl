@@ -14,26 +14,26 @@ pathway 5-hydroxymethylfurfural-to-5-hydroxymethyl-2-fur "5-hydroxymethylfurfura
     2_dihydroxymethyl_5_formylfuran
     <-> . +o2 -h2o2 -hplus
     5_formyl_2_furoate
-    <-> . +h +h2o2 -5_hydroxymethyl_2_furoic_acid
-    o2
+    <-> . +h +h2o2_mnxm732620 -5_hydroxymethyl_2_furoic_acid
+    o2_mnxm735438
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +5z_8z_11z_14z_eicosatetraenoate +h
     9_s_hpete
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_14_1 [1.14.14.1] +5z_8z_11z_14z_eicosatetraenoate +h +nadph +5_6_eet +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_14_14_1 [1.14.14.1] +5z_8z_11z_14z_eicosatetraenoate +h +nadph +5_6_eet +h2o_water
     nadp
   }
 
   branch from 5_hydroxymethyl_2_furoic_acid side left {
     5_hydroxymethyl_2_furoic_acid
-    <-> . +o2 +h2o +h2o2
-    5_hydroxymethylfurfural
+    <-> . +o2_mnxm735438 +h2o_water +h2o2_mnxm732620
+    5_hydroxymethylfurfural_mnxm10320
   }
 
   branch from h side right {
@@ -48,27 +48,27 @@ pathway 5-hydroxymethylfurfural-to-5-hydroxymethyl-2-fur "5-hydroxymethylfurfura
     avermectin_b1a_aglycone
   }
 
-  branch from h2o2 side right {
-    h2o2
-    <-> ec_1_4_3_3 [1.4.3.3] +cephalosporin_c +o2 +h2o +nh4
+  branch from h2o2_mnxm732620 side right {
+    h2o2_mnxm732620
+    <-> ec_1_4_3_3 [1.4.3.3] +cephalosporin_c +o2_mnxm735438 +h2o_water +nh4
     7r_7_5_carboxy_5_oxopentanamido_deacetylcephalo
   }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> . +7r_7_4_carboxybutanamido_cephalosporanate +h2o +7r_7_5_carboxy_5_oxopentanamido_deacetylcephalo
+  branch from h2o2_mnxm732620 side left {
+    h2o2_mnxm732620
+    <-> . +7r_7_4_carboxybutanamido_cephalosporanate +h2o_water +7r_7_5_carboxy_5_oxopentanamido_deacetylcephalo
     co2
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_14_1 [1.14.14.1] +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_14_14_1 [1.14.14.1] +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o_water
     16_r_hete
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +nadph +nadp +h2o_water
     9r_10s_9_10_epome
   }
 }

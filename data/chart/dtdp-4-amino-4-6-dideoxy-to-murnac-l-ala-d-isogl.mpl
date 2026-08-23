@@ -20,14 +20,14 @@ pathway dtdp-4-amino-4-6-dideoxy-to-murnac-l-ala-d-isogl "dTDP-4-amino-4,6-dideo
 
   branch from dtdp_4_acetamido_4_6_dideoxy_d_galactose side left {
     dtdp_4_acetamido_4_6_dideoxy_d_galactose
-    <-> . +acetyl_coa +dtdp_4_amino_4_6_dideoxy_alpha_d_glucose +h
-    coa
+    <-> . +acetyl_coa_mnxm1104266 +dtdp_4_amino_4_6_dideoxy_alpha_d_glucose +h
+    coa_mnxm727276
   }
 
   branch from dtdp_4_acetamido_4_6_dideoxy_d_galactose side right {
     dtdp_4_acetamido_4_6_dideoxy_d_galactose
-    <-> ec_2_3_1_210 [2.3.1.210] +dtdp_4_amino_4_6_dideoxy_d_galactose +h +coa
-    acetyl_coa
+    <-> ec_2_3_1_210 [2.3.1.210] +dtdp_4_amino_4_6_dideoxy_d_galactose_mnxm1107704 +h +coa_mnxm727276
+    acetyl_coa_mnxm1104266
   }
 
   branch from d_fucnac4_1_4_d_mannaca_1_4_d_glcnac_undecapren side left {
@@ -50,7 +50,7 @@ pathway dtdp-4-amino-4-6-dideoxy-to-murnac-l-ala-d-isogl "dTDP-4-amino-4,6-dideo
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +histamine +coa
+    <-> . +acetyl_coa_mnxm1104266 +histamine +coa_mnxm727276
     n_acetylhistamine
   }
 

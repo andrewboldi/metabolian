@@ -12,7 +12,7 @@ pathway 3-nitrophenol-to-nh4-80595 "3-nitrophenol to NH4" {
     3_hydroxyamino_phenol
     <-> ec_5_4_4_3 [5.4.4.3]
     aminohydroquinone
-    <-> . +h +h2o -nh4
+    <-> . +h +h2o_water -nh4
     benzene_1_2_4_triol
   }
 }

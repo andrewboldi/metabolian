@@ -21,7 +21,7 @@ pathway 3-sinapoyloxypropylglucos-to-s-sulfanylglutathio "3-sinapoyloxypropylglu
   branch from glucose side left {
     glucose
     <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +d_maltose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143183
   }
 
   branch from glucose side right {
@@ -32,7 +32,7 @@ pathway 3-sinapoyloxypropylglucos-to-s-sulfanylglutathio "3-sinapoyloxypropylglu
 
   branch from sulfur_atom side left {
     sulfur_atom
-    <-> ec_3_2_1_147 [3.2.1.147] +glucose +indol_3_yl_acetonitrile +h +sulfate +h2o
+    <-> ec_3_2_1_147 [3.2.1.147] +glucose +indol_3_yl_acetonitrile +h +sulfate_mnxm58 +h2o_water
     z_glucobrassicin
   }
 
@@ -50,19 +50,19 @@ pathway 3-sinapoyloxypropylglucos-to-s-sulfanylglutathio "3-sinapoyloxypropylglu
 
   branch from glucose side right {
     glucose
-    <-> . +maltoheptaose +h2o
+    <-> . +maltoheptaose +h2o_water
     maltononaose
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_206 [3.2.1.206] +3_4_dhpea_ea +h2o
+    <-> ec_3_2_1_206 [3.2.1.206] +3_4_dhpea_ea +h2o_water
     oleuropein
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_1_11_1_9 [1.11.1.9] +glutathione_disulfide +prostaglandin_e2 +h2o
+    <-> ec_1_11_1_9 [1.11.1.9] +glutathione_disulfide +prostaglandin_e2 +h2o_water
     15s_15_hydroperoxy_prostaglandin_e2
   }
 

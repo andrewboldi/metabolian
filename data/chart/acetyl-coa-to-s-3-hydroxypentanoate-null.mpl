@@ -12,7 +12,7 @@ pathway acetyl-coa-to-s-3-hydroxypentanoate-null "acetyl-CoA to (S)-3-hydroxypen
     3_oxopentanoyl_coa
     <-> . +nadh -s_3_hydroxypentanoyl_coa -nad
     h
-    <-> . +s_3_hydroxypentanoyl_coa +h2o -coa -hplus
+    <-> . +s_3_hydroxypentanoyl_coa +h2o -coa_chebi_57287 -hplus
     s_3_hydroxypentanoate
   }
 }

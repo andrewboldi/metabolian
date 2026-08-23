@@ -10,7 +10,7 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa "(3R,4R)-7,2'-dihydroxy-4'… to CoA" {
     3r_4r_7_2_dihydroxy_4_methoxyisoflavanol
     <-> ec_4_2_1_139 [4.2.1.139] -h2o
     medicarpin
-    <-> . +glucose -h2o
+    <-> . +glucose -h2o_water
     medicocarpin
     <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +h -coa
     medicarpin_3_o_glucoside_6_malonate

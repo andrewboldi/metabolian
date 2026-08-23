@@ -16,7 +16,7 @@ pathway dec-pp-beta-d-glcnac-1-to-nad "Dec-PP-[beta-D-GlcNAc-(1-… to NAD" {
     araf_3_galf_30_rha_glcnac_p_p_c50
     <-> ec_1_1_1_333 [1.1.1.333] +trans_octacis_decaprenylphospho_d_arabinofuranos +nad -nadh -hplus
     trans_octacis_decaprenylphospho_d_erythro_pentof
-    <-> . +nadh +h -nad
+    <-> . +nadh_mnxm10 +h -nad_mnxm8
     trans_octacis_decaprenylphospho_d_ribofuranose
   }
 
@@ -44,15 +44,15 @@ pathway dec-pp-beta-d-glcnac-1-to-nad "Dec-PP-[beta-D-GlcNAc-(1-… to NAD" {
     atp
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +acetyl_coa +fadh2 +h +fad +coa +h2o
     5z_8z_11z_14z_17z_eicosapentaenoyl_coa
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +acetyl_coa +fadh2 +h +fad +coa +h2o
     11z_14z_17z_icosatrienoyl_coa
   }
 
@@ -92,27 +92,27 @@ pathway dec-pp-beta-d-glcnac-1-to-nad "Dec-PP-[beta-D-GlcNAc-(1-… to NAD" {
     6_trans_leukotriene_b4
   }
 
-  branch from nadh side left {
-    nadh
-    <-> . +acetyl_coa +fadh2 +h +coa +13z_16z_19z_docosatrienoyl_coa +nad +h2o
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> . +acetyl_coa +fadh2 +h +coa +13z_16z_19z_docosatrienoyl_coa +nad_mnxm8 +h2o
     fad
   }
 
-  branch from nadh side right {
-    nadh
-    <-> . +8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa +h +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> . +8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa +h +nad_mnxm8
     3_s_hydroxy_dihomo_gama_linolenoyl_coenzyme_a
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +acetyl_coa +fadh2 +h +fad +coa +h2o
     6z_9z_12z_15z_octadecatetraenoyl_coa
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +ubiquinone_6 +h +ubiquinol_6
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +ubiquinone_6 +h +ubiquinol_6
     pmf
   }
 }

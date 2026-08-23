@@ -18,7 +18,7 @@ pathway isoxazolin-5-one-to-n4-acetylcytidine-22112 "isoxazolin-5-one to N4-acet
 
   branch from acetyl_amp side left {
     acetyl_amp
-    <-> ec_6_2_1_1 [6.2.1.1] +coa +h +amp
+    <-> ec_6_2_1_1 [6.2.1.1] +coa +h +amp_mnxm728294
     acetyl_coa
   }
 

@@ -19,7 +19,7 @@ pathway udp-n-acetyl-d-muramate-to-ammonium "UDP-N-acetyl-α-D-muramate to ammon
     <-> ec_6_3_2_10 [6.3.2.10] +d_alanyl_d_alanine +atp -adp -pi -hplus
     udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_meso_2
     <-> ec_3_4_17_8 [3.4.17.8] +h2o -d_alanine
-    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso_chebi_64420
     <-> ec_3_4_17_13 [3.4.17.13] +h2o -d_alanine
     udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
     <-> ec_1_4_3_19 [1.4.3.19] +d_alanine +o2 +h2o -pyruvate -h2o2

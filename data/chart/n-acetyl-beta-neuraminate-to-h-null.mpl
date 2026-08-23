@@ -57,7 +57,7 @@ pathway n-acetyl-beta-neuraminate-to-h-null "N-acetyl-beta-neuraminate… to H" 
   branch from pyruvate side right {
     pyruvate
     <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_beta_neuraminate
-    n_acetyl_d_mannosamine
+    n_acetyl_d_mannosamine_chebi_63153
   }
 
   branch from h2o side left {

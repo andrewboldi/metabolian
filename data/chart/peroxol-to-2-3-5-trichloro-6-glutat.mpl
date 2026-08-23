@@ -31,7 +31,7 @@ pathway peroxol-to-2-3-5-trichloro-6-glutat "peroxol to 2,3,5-trichloro-6-(gluta
   branch from 2_3_5_trichloro_6_glutathion_s_yl_hydroquinone side left {
     2_3_5_trichloro_6_glutathion_s_yl_hydroquinone
     <-> ec_2_5_1_18 [2.5.1.18] +2_3_5_6_tetrachlorohydroquinone +h +glutathione
-    chloride
+    chloride_mnxm735978
   }
 
   branch from 2_6_dichloro_4_hydroxyphenolate side right {
@@ -42,7 +42,7 @@ pathway peroxol-to-2-3-5-trichloro-6-glutat "peroxol to 2,3,5-trichloro-6-(gluta
 
   branch from 2_6_dichloro_4_hydroxyphenolate side left {
     2_6_dichloro_4_hydroxyphenolate
-    <-> . +nadh +h +2_4_6_trichlorophenolate +o2 +chloride +h2o
+    <-> . +nadh +h +2_4_6_trichlorophenolate +o2_mnxm735438 +chloride_mnxm735978 +h2o_water
     nad
   }
 

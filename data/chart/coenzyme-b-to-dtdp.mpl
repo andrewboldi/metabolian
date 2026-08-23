@@ -8,7 +8,7 @@ pathway coenzyme-b-to-dtdp "coenzyme B to dTDP" {
 
   spine at 0,0 {
     coenzyme_b
-    <-> ec_1_8_98_6 [1.8.98.6] +coenzyme_m +di_sulfido_diiron +co2 -formate -di_sulfido_diiron
+    <-> ec_1_8_98_6 [1.8.98.6] +coenzyme_m +di_sulfido_diiron +co2 -formate -di_sulfido_diiron_chebi_33737
     com_s_s_cob
     <-> . +ctp +formate +hplus -co2 -h2o
     dctp

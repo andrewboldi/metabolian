@@ -13,7 +13,7 @@ pathway 3-amino-4-hydroxybenzalde-to-di-sulfido-diiron "3-amino-4-hydroxybenzald
     <-> ec_1_17_98_5 [1.17.98.5] +formate +hplus -co2
     h2
     <-> ec_1_12_7_2 [1.12.7.2] +di_sulfido_diiron -hplus
-    di_sulfido_diiron
+    di_sulfido_diiron_chebi_33738
   }
 
   branch from 3_amino_4_hydroxybenzaldehyde side left {

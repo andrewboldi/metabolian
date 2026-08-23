@@ -8,13 +8,13 @@ pathway 1-stearoyl-2-acylglycerol-to-di-sulfido-diiron "1-stearoyl 2-acylglycero
 
   spine at 0,0 {
     1_stearoyl_2_acylglycerolipid
-    <-> ec_1_14_19_28 [1.14.19.28] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_28 [1.14.19.28] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1_oleoyl_2_acylglycerolipid
-    <-> ec_1_14_19_45 [1.14.19.45] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_45 [1.14.19.45] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1_linoleoyl_2_acylglycerolipid
-    <-> ec_1_14_19_46 [1.14.19.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_46 [1.14.19.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1_linolenoyl_2_acylglycerolipid
-    <-> ec_1_14_19_36 [1.14.19.36] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_36 [1.14.19.36] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1_6z_9z_12z_15z_octadec_6_9_12_15_tetraenoyl_2_a
   }
 }

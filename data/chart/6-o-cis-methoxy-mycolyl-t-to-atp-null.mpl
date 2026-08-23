@@ -60,7 +60,7 @@ pathway 6-o-cis-methoxy-mycolyl-t-to-atp-null "6-O-cis-methoxy-mycolyl-t… to A
 
   branch from glucose side right {
     glucose
-    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +d_maltose
+    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143182 +d_maltose
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 

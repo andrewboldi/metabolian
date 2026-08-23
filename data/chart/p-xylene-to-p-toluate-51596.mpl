@@ -8,7 +8,7 @@ pathway p-xylene-to-p-toluate-51596 "p-xylene to p-toluate" {
 
   spine at 0,0 {
     p_xylene
-    <-> ec_1_14_15_26 [1.14.15.26] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_26 [1.14.15.26] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     4_methylbenzyl_alcohol
     <-> . +o2 -h2o2
     p_tolualdehyde
@@ -24,13 +24,13 @@ pathway p-xylene-to-p-toluate-51596 "p-xylene to p-toluate" {
 
   branch from 4_methylbenzyl_alcohol side right {
     4_methylbenzyl_alcohol
-    <-> . +nadh +h +p_xylene +o2 +h2o
-    nad
+    <-> . +nadh_mnxm10 +h +p_xylene_mnxm3685 +o2_mnxm735438 +h2o_water
+    nad_mnxm8
   }
 
   branch from 4_methylbenzyl_alcohol side left {
     4_methylbenzyl_alcohol
-    <-> ec_1_1_1_21 [1.1.1.21] +h +4_methylbenzaldehyde +nad
-    nadh
+    <-> ec_1_1_1_21 [1.1.1.21] +h +4_methylbenzaldehyde +nad_mnxm8
+    nadh_mnxm10
   }
 }

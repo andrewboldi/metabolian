@@ -48,13 +48,13 @@ pathway 5-deoxyadenosine-to-hop-22-29-ene "5'-deoxyadenosine to hop-22(29)-ene" 
 
   branch from l_methionine side right {
     l_methionine
-    <-> . +l_leucine +l_arginine +h2o
+    <-> . +l_leucine +l_arginine +h2o_water
     methionyl_arginyl_leucine
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> . +l_asparagine +l_tyrosine +h2o
+    <-> . +l_asparagine +l_tyrosine +h2o_water
     methionyl_asparaginyl_tyrosine
   }
 

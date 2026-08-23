@@ -16,7 +16,7 @@ pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate-86199 "(3R,9Z)-hydroxyicos-9-enoâ
     2e_9z_icosadi_2_9_enoyl_coa
     <-> . +h +nadph -9z_icos_9_enoyl_coa
     nadp
-    <-> . +9z_icos_9_enoyl_coa +h2o -coa -hplus
+    <-> . +9z_icos_9_enoyl_coa +h2o_chebi_15377 -coa -hplus
     gadoleate
     <-> . +atp +coa -amp -ppi
     9z_icos_9_enoyl_coa
@@ -24,13 +24,13 @@ pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate-86199 "(3R,9Z)-hydroxyicos-9-enoâ
 
   branch from nadp side left {
     nadp
-    <-> . +acetyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
+    <-> . +acetyl_coa +malonyl_coa +h +nadph +co2 +coa_mnxm727276 +h2o
     5z_8z_11z_14z_eicosatetraenoate
   }
 
   branch from nadp side right {
     nadp
-    <-> . +acetyl_coa +malonyl_coa +h +nadph +4z_7z_10z_13z_16z_19z_docosahexaenoate +coa +h2o
+    <-> . +acetyl_coa +malonyl_coa +h +nadph +4z_7z_10z_13z_16z_19z_docosahexaenoate +coa_mnxm727276 +h2o
     co2
   }
 

@@ -19,7 +19,7 @@ pathway 3-end-pnpgpcpcpa-5-to-diphosphate "3'-end pNpGpCpCpA(5−) to diphosphat
     <-> ec_2_7_7_72 [2.7.7.72] +ctp +atp -ppi
     trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden
     <-> . +ctp +atp -ppi
-    trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden
+    trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden_chebi_195187
   }
 
   branch from 3_end_ribonucleotide_1 side left {

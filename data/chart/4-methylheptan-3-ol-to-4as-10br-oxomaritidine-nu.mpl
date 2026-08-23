@@ -16,11 +16,11 @@ pathway 4-methylheptan-3-ol-to-4as-10br-oxomaritidine-nu "4-Methylheptan-3-ol to
     vanillin
     <-> . +s_adenosyl_l_homocysteine +h -3_4_dihydroxybenzaldehyde
     s_adenosyl_l_methionine
-    <-> . +3_4_dihydroxybenzaldehyde +tyraminium +hydrogen_donor -hydrogen_acceptor -h2o
+    <-> . +3_4_dihydroxybenzaldehyde +tyraminium +hydrogen_donor -hydrogen_acceptor -h2o_chebi_15377
     norbelladine
     <-> ec_2_1_1_336 [2.1.1.336] +sam -sah -hplus
     4_o_methylnorbelladine
-    <-> ec_1_14_19_50 [1.14.19.50] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_19_50 [1.14.19.50] +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     4as_10br_noroxomaritidine
     <-> . +nadph +hplus -nadp
     4as_10br_oxomaritidine
@@ -40,25 +40,25 @@ pathway 4-methylheptan-3-ol-to-4as-10br-oxomaritidine-nu "4-Methylheptan-3-ol to
 
   branch from h2o2 side left {
     h2o2
-    <-> . +4e_decenoyl_coa +o2
+    <-> . +4e_decenoyl_coa +o2_mnxm735438
     2e_4z_deca_2_4_dienoyl_coa
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +4z_7z_10z_13z_16z_docosapentaenoyl_coa +o2
+    <-> . +4z_7z_10z_13z_16z_docosapentaenoyl_coa +o2_mnxm735438
     2_4_7_10_13_16_docosahexenoylcoa
   }
 
   branch from h2o side left {
     h2o
     <-> ec_3_2_1_137 [3.2.1.137] +d_mannopyranose +s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
-    s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
+    s_cerevisiae_mannan_fragment_with_alpha_1_2_mann_mnxm1560242
   }
 
   branch from h2o side right {
     h2o
-    <-> . +d_mannopyranose +s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
+    <-> . +d_mannopyranose +s_cerevisiae_mannan_fragment_with_alpha_1_2_mann_mnxm1560242
     s_cerevisiae_mannan_fragment_with_alpha_1_3_mann
   }
 

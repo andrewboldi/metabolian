@@ -67,7 +67,7 @@ pathway s-ethyl-l-cysteine-to-o-succinyl-l-homoserine-nu "S-ethyl-L-cysteine to 
   branch from s_ethyl_l_cysteine side left {
     s_ethyl_l_cysteine
     <-> . +2_ammonioprop_2_enoate
-    ethanethiol
+    ethanethiol_chebi_46511
   }
 
   branch from h side right {
@@ -96,7 +96,7 @@ pathway s-ethyl-l-cysteine-to-o-succinyl-l-homoserine-nu "S-ethyl-L-cysteine to 
 
   branch from o_acetyl_l_serine side right {
     o_acetyl_l_serine
-    <-> ec_2_5_1_53 [2.5.1.53] +uracil +h +acetate
+    <-> ec_2_5_1_53 [2.5.1.53] +uracil_mnxm1368456 +h +acetate
     isowillardiine
   }
 

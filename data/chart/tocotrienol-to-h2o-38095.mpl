@@ -9,15 +9,15 @@ pathway tocotrienol-to-h2o-38095 "γ-tocotrienol to H2O" {
   spine at 0,0 {
     tocotrienol
     <-> ec_2_1_1_95 [2.1.1.95] +sam -sah -hplus
-    tocotrienol
+    tocotrienol_chebi_33270
     <-> . +h +o2 +nadph -nadp -h2o
     13_hydroxy_alpha_tocotrienol
     <-> . +h +o2 +nadph -nadp -h2o
     13_carboxy_tocotrienol
   }
 
-  branch from tocotrienol side left {
-    tocotrienol
+  branch from tocotrienol_chebi_33270 side left {
+    tocotrienol_chebi_33270
     <-> . +monodehydro_l_ascorbate_radical +l_ascorbate
     alpha_tocotrienoxyl_radical
   }

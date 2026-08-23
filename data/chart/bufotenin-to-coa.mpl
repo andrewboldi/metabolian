@@ -54,7 +54,7 @@ pathway bufotenin-to-coa "bufotenin to CoA" {
 
   branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
-    <-> . +2r_3s_piscidate +coa
+    <-> . +2r_3s_piscidate +coa_chebi_57287
     cimicifugate_d
   }
 

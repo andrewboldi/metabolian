@@ -10,8 +10,8 @@ pathway nadp-to-3-demethylubiquinol-10-null "NADP to 3-demethylubiquinol-10" {
     nadp
     <-> . +3_demethylubiquinone_10 +h2o -nadph -2_decaprenyl_6_methoxy_3_methyl_1_4_benzoquinone
     o2
-    <-> ec_1_14_13_253 [1.14.13.253] +2_decaprenyl_6_methoxy_3_methyl_1_4_benzoquinone +nadh +o2 -nad -h2o
-    3_demethylubiquinone_10
+    <-> ec_1_14_13_253 [1.14.13.253] +2_decaprenyl_6_methoxy_3_methyl_1_4_benzoquinone +nadh +o2_chebi_15379 -nad -h2o_chebi_15377
+    3_demethylubiquinone_10_chebi_231824
     <-> . +nadh +hplus -nad
     3_demethylubiquinol_10
   }

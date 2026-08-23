@@ -12,38 +12,38 @@ pathway isonicotinyl-coa-to-h2o "isonicotinyl-CoA to H2O" {
     n6_isonicotinyl_l_lysine
     <-> . +h2o -l_lysinium
     isonicotinate
-    <-> ec_3_1_1_1 [3.1.1.1] +h +acetohydrazide -h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +h +acetohydrazide -h2o_water
     n_acetylisoniazid
-    <-> . +h +adp +phosphate -n_acetylisoniazid -h2o
+    <-> . +h +adp +phosphate -n_acetylisoniazid -h2o_water
     atp
   }
 
   branch from isonicotinate side left {
     isonicotinate
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o_water
     4_pyridinecarboxaldehyde
   }
 
   branch from isonicotinate side right {
     isonicotinate
-    <-> . +h +glycine +h2o
+    <-> . +h +glycine +h2o_water
     isonicotinylglycine
   }
 
   branch from n_acetylisoniazid side left {
     n_acetylisoniazid
     <-> . +acetyl_coa +isoniazide
-    coa
+    coa_mnxm727276
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +z_n_n_but_2_ene_2_3_diyl_diacetamide +acetamide
     n_3_oxobutan_2_yl_acetamide
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +h +ergosterol
     ergosteryl_oleate
   }
@@ -62,38 +62,38 @@ pathway isonicotinyl-coa-to-h2o "isonicotinyl-CoA to H2O" {
 
   branch from h side right {
     h
-    <-> ec_1_11_1_7 [1.11.1.7] +a_radical_of_luteolin_7_o_diglucuronide +h2o +h2o2
+    <-> ec_1_11_1_7 [1.11.1.7] +a_radical_of_luteolin_7_o_diglucuronide +h2o_water +h2o2
     luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
   }
 
   branch from h side left {
     h
-    <-> . +fe +o2 +h2o +h2o2
+    <-> . +fe +o2 +h2o_water +h2o2
     feo_oh_monomer
   }
 
   branch from acetohydrazide side right {
     acetohydrazide
-    <-> ec_2_3_1_5 [2.3.1.5] +hydrazine +coa
+    <-> ec_2_3_1_5 [2.3.1.5] +hydrazine +coa_mnxm727276
     acetyl_coa
   }
 
   branch from acetohydrazide side left {
     acetohydrazide
-    <-> . +h +hydrazine +h2o
+    <-> . +h +hydrazine +h2o_water
     acetate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +4_e_2_methylamino_ethenyl_phenol
     r_synephrine
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_31 [3.2.1.31] +luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc +beta_d_glucuronate
-    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
+    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc_mnxm3650
   }
 
   branch from adp side right {
@@ -110,13 +110,13 @@ pathway isonicotinyl-coa-to-h2o "isonicotinyl-CoA to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_104 [3.1.3.104] +d_gluconate +h2o
+    <-> ec_3_1_3_104 [3.1.3.104] +d_gluconate +h2o_water
     6_phospho_d_gluconate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +l_glyceraldehyde_3_phosphate +h2o +h
+    <-> . +l_glyceraldehyde_3_phosphate +h2o_water +h
     l_glyceraldehyde
   }
 

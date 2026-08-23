@@ -42,7 +42,7 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-pentadecanal "1,3-dioleoyl-2-palmitoylg… 
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph_chebi_73007 +h2o +hplus
     2_oleoyl_sn_glycero_3_phosphoethanolamine
   }
 

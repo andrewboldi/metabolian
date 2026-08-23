@@ -50,13 +50,13 @@ pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a-8281 "β-D-GalNAc-(1→3)-α-
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_1_1_3_9 [1.1.3.9] +o2 +h2o +h +h2o2
+    <-> ec_1_1_3_9 [1.1.3.9] +o2 +h2o_water +h +h2o2
     d_galactonate
   }
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 

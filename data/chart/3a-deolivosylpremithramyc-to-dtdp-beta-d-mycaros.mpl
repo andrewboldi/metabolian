@@ -10,9 +10,9 @@ pathway 3a-deolivosylpremithramyc-to-dtdp-beta-d-mycaros "3A-Deolivosylpremithra
     3a_deolivosylpremithramycin_b
     <-> . +dtdp +h -dtdp_d_olivose
     premithramycin_a3
-    <-> . +s_adenosyl_l_homocysteine +h -premithramycin_a3
+    <-> . +s_adenosyl_l_homocysteine +h -premithramycin_a3_chebi_32049
     s_adenosyl_l_methionine
-    <-> . +premithramycin_a3 +dtdp +h -dtdp_beta_d_mycarose
+    <-> . +premithramycin_a3_chebi_32049 +dtdp +h -dtdp_beta_d_mycarose
     premithramycin_a2
   }
 }

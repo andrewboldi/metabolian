@@ -25,7 +25,7 @@ pathway 2-hydroxy-4-isopropenylcy-to-2-hydroxy-4-isoprop "2-hydroxy-4-isopropeny
   branch from h side right {
     h
     <-> . +deferrichrome +fe
-    ferrichrome
+    ferrichrome_chebi_5019
   }
 
   branch from perillate side left {

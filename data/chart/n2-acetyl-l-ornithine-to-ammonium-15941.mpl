@@ -50,8 +50,8 @@ pathway n2-acetyl-l-ornithine-to-ammonium-15941 "N2-acetyl-L-ornithine to ammoni
 
   branch from r_2_amino_4_oxopentanoic_acid side right {
     r_2_amino_4_oxopentanoic_acid
-    <-> . +acetyl_coa +l_alanine
-    coa
+    <-> . +acetyl_coa_mnxm1104266 +l_alanine
+    coa_mnxm727276
   }
 
   branch from nh3 side left {

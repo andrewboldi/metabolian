@@ -10,11 +10,11 @@ pathway 5-cholestan-3-one-to-amp-24552 "5α-cholestan-3-one to AMP" {
     5_cholestan_3_one
     <-> . +nadp -nadph -hplus
     cholest_4_en_3_one
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_26_hydroxycholest_4_en_3_one
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_3_ketocholest_4_en_26_al
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_4_dafachronate
     <-> ec_6_2_1_42 [6.2.1.42] +atp +coa -25r_3_oxocholest_4_en_26_oyl_coa -amp
     diphosphate
@@ -26,14 +26,14 @@ pathway 5-cholestan-3-one-to-amp-24552 "5α-cholestan-3-one to AMP" {
     25_hydroxycholest_4_en_3_one
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
     1_acyl_2_palmitoleoylglycerolipid
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_19_36 [1.14.19.36] +1_linoleoyl_2_acylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
     1_linolenoyl_2_acylglycerolipid
   }
@@ -58,37 +58,37 @@ pathway 5-cholestan-3-one-to-amp-24552 "5α-cholestan-3-one to AMP" {
 
   branch from amp side left {
     amp
-    <-> ec_3_6_1_21 [3.6.1.21] +adp_alpha_d_mannose +h2o +h
+    <-> ec_3_6_1_21 [3.6.1.21] +adp_alpha_d_mannose +h2o_water +h
     alpha_d_mannose_1_phosphate
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_3_1_108 [1.3.1.108] +dihydrocaffeoyl_coa +nad +di_sulfido_diiron +nadh
+    <-> ec_1_3_1_108 [1.3.1.108] +dihydrocaffeoyl_coa +nad +di_sulfido_diiron_chebi_33737 +nadh
     trans_caffeoyl_coa
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +epothilone_c +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +epothilone_c +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     epothilone_a
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +epothilone_d +di_sulfido_diiron +o2 +hplus +h2o
     epothilone_b
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_15_17 [1.14.15.17] +pheophorbide_a +di_sulfido_diiron +o2 +hplus
     red_chlorophyll_catabolite
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o_water
     thiosulfate
   }
 

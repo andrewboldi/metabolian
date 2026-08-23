@@ -32,7 +32,7 @@ pathway cobalt-precorrin-6b-to-l-glutamate-36067 "cobalt-precorrin-6B to L-gluta
 
   branch from cobalt_precorrin_8 side left {
     cobalt_precorrin_8
-    <-> ec_2_1_1_132 [2.1.1.132] +s_adenosyl_l_homocysteine +co2 +h +co_precorrin_6b
+    <-> ec_2_1_1_132 [2.1.1.132] +s_adenosyl_l_homocysteine +co2_mnxm13 +h +co_precorrin_6b
     s_adenosyl_l_methionine
   }
 

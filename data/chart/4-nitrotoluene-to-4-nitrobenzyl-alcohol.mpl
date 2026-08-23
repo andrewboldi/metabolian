@@ -8,7 +8,7 @@ pathway 4-nitrotoluene-to-4-nitrobenzyl-alcohol "4-nitrotoluene to 4-nitrobenzyl
 
   spine at 0,0 {
     4_nitrotoluene
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     4_nitrobenzyl_alcohol
     <-> . +o2 -h2o2
     4_nitrobenzaldehyde
@@ -18,7 +18,7 @@ pathway 4-nitrotoluene-to-4-nitrobenzyl-alcohol "4-nitrotoluene to 4-nitrobenzyl
 
   branch from 4_nitrobenzyl_alcohol side left {
     4_nitrobenzyl_alcohol
-    <-> . +4_nitrotoluene +nadh +h +o2 +h2o
+    <-> . +4_nitrotoluene_mnxm10227 +nadh +h +o2_mnxm735438 +h2o_water
     nad
   }
 

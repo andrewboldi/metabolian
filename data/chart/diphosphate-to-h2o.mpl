@@ -42,8 +42,8 @@ pathway diphosphate-to-h2o "diphosphate to H2O" {
 
   branch from 5_carboxyvanillic_acid side left {
     5_carboxyvanillic_acid
-    <-> . +4_methylene_2_oxoglutarate +h +h2o
-    4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth
+    <-> . +4_methylene_2_oxoglutarate_mnxm1369195 +h +h2o
+    4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth_mnxm1371283
   }
 
   branch from h2o side right {

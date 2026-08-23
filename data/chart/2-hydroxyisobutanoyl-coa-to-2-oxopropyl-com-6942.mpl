@@ -24,7 +24,7 @@ pathway 2-hydroxyisobutanoyl-coa-to-2-oxopropyl-com-6942 "2-hydroxyisobutanoyl-C
 
   branch from acetoacetate side right {
     acetoacetate
-    <-> ec_6_4_1_6 [6.4.1.6] +co2 +acetone +atp +h2o +amp +phosphate
+    <-> ec_6_4_1_6 [6.4.1.6] +co2_mnxm13 +acetone_mnxm398 +atp_mnxm3 +h2o_water +amp_mnxm728294 +phosphate
     h
   }
 

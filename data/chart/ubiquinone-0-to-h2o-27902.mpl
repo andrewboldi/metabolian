@@ -10,19 +10,19 @@ pathway ubiquinone-0-to-h2o-27902 "ubiquinone-0 to H2O" {
     ubiquinone_0
     <-> ec_1_17_5_2 [1.17.5.2] +caffeine +h2o -1_3_7_trimethyluric_acid
     ubiquinol_0
-    <-> ec_1_3_98_1 [1.3.98.1] +orotate -ubiquinone_0
+    <-> ec_1_3_98_1 [1.3.98.1] +orotate -ubiquinone_0_mnxm7858
     s_dihydroorotate
     <-> ec_1_3_5_2 [1.3.5.2] +phylloquinone -orotate
     phylloquinol
     <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside -h -1_d_ribofuranosyl_1_4_dihydronicotinamide
     phylloquinone
-    <-> . +h +adp +phosphate -phylloquinone -h2o
+    <-> . +h +adp +phosphate -phylloquinone -h2o_water
     atp
   }
 
   branch from ubiquinol_0 side left {
     ubiquinol_0
-    <-> . +h +nadph +ubiquinone_0
+    <-> . +h +nadph +ubiquinone_0_mnxm7858
     nadp
   }
 
@@ -47,7 +47,7 @@ pathway ubiquinone-0-to-h2o-27902 "ubiquinone-0 to H2O" {
   branch from s_dihydroorotate side left {
     s_dihydroorotate
     <-> ec_1_3_3_1 [1.3.3.1] +orotate +h2o2
-    o2
+    o2_mnxm735438
   }
 
   branch from phylloquinol side right {
@@ -58,7 +58,7 @@ pathway ubiquinone-0-to-h2o-27902 "ubiquinone-0 to H2O" {
 
   branch from phylloquinol side left {
     phylloquinol
-    <-> . +d_alanine +phylloquinone +h2o +nh4
+    <-> . +d_alanine +phylloquinone +h2o_water +nh4
     pyruvate
   }
 
@@ -76,43 +76,43 @@ pathway ubiquinone-0-to-h2o-27902 "ubiquinone-0 to H2O" {
 
   branch from h side right {
     h
-    <-> . +11z_eicosenoyl_coa +h2o +coa
+    <-> . +11z_eicosenoyl_coa +h2o_water +coa
     11z_eicosenoate
   }
 
   branch from h side left {
     h
-    <-> . +erucoyl_coa +h2o +coa
+    <-> . +erucoyl_coa +h2o_water +coa
     13z_docosenoate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_5 [3.6.3.5] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_5 [3.6.3.5] +h +adp +phosphate +h2o_water
     zn
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     1_pentanesulfonate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +3_s_hydroxy_10_13_16_all_cis_docosatrienoyl_coa
     trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +trans_cis_cis_cis_cis_2_10_13_16_19_docosapentae
     3_s_hydroxy_docosa_10_13_16_19_all_cis_tetraenoy
   }
 
   branch from 1_3_7_trimethyluric_acid side right {
     1_3_7_trimethyluric_acid
-    <-> ec_1_7_3_3 [1.7.3.3] +o2 +h2o +3_6_8_trimethylallantoin +h2o2
+    <-> ec_1_7_3_3 [1.7.3.3] +o2_mnxm735438 +h2o_water +3_6_8_trimethylallantoin +h2o2
     co2
   }
 
@@ -124,7 +124,7 @@ pathway ubiquinone-0-to-h2o-27902 "ubiquinone-0 to H2O" {
 
   branch from phylloquinone side right {
     phylloquinone
-    <-> ec_1_7_5_1 [1.7.5.1] +nitrite +h2o +phylloquinol
+    <-> ec_1_7_5_1 [1.7.5.1] +nitrite +h2o_water +phylloquinol
     nitrate
   }
 
@@ -142,13 +142,13 @@ pathway ubiquinone-0-to-h2o-27902 "ubiquinone-0 to H2O" {
 
   branch from beta_nicotinamide_d_riboside side left {
     beta_nicotinamide_d_riboside
-    <-> ec_3_2_2_1 [3.2.2.1] +h2o +h +beta_d_ribofuranose
+    <-> ec_3_2_2_1 [3.2.2.1] +h2o_water +h +beta_d_ribofuranose
     nicotinamide
   }
 
   branch from beta_nicotinamide_d_riboside side right {
     beta_nicotinamide_d_riboside
-    <-> . +h2o +h +nicotinamide
+    <-> . +h2o_water +h +nicotinamide
     aldehydo_d_ribose
   }
 
@@ -166,13 +166,13 @@ pathway ubiquinone-0-to-h2o-27902 "ubiquinone-0 to H2O" {
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
   }
 }

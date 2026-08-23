@@ -24,8 +24,8 @@ pathway 1-erucoylglycerol-to-n-13z-docosenoyl-sphin-5808 "1-erucoylglycerol to N
 
   branch from erucoyl_coa side right {
     erucoyl_coa
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from ppi side left {
@@ -42,14 +42,14 @@ pathway 1-erucoylglycerol-to-n-13z-docosenoyl-sphin-5808 "1-erucoylglycerol to N
 
   branch from erucoyl_coa side left {
     erucoyl_coa
-    <-> . +diphosphate +amp +atp +coa
+    <-> . +diphosphate +amp_mnxm728294 +atp_mnxm3 +coa_mnxm727276
     13z_docosenoate
   }
 
   branch from erucoyl_coa side right {
     erucoyl_coa
-    <-> . +diphosphate +amp +13z_docosenoate +atp
-    coa
+    <-> . +diphosphate +amp_mnxm728294 +13z_docosenoate +atp_mnxm3
+    coa_mnxm727276
   }
 
   branch from ppi side left {

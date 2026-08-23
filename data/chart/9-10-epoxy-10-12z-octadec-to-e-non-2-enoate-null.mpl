@@ -12,7 +12,7 @@ pathway 9-10-epoxy-10-12z-octadec-to-e-non-2-enoate-null "9,10-epoxy-10,12Z-octa
     9s_hydroperoxy_10e_12z_octadecadienoate
     <-> . -9_oxononanoate
     e_non_2_enal
-    <-> . +nadp +h2o -nadph -hplus
+    <-> . +nadp +h2o_chebi_15377 -nadph -hplus
     e_non_2_enoate
   }
 

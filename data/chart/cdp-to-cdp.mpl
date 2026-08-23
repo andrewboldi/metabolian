@@ -12,7 +12,7 @@ pathway cdp-to-cdp "CDP to CDP" {
     cdp_3_6_dideoxy_d_glucose
     <-> ec_5_1_3_10 [5.1.3.10]
     cdp_3_6_dideoxy_d_mannose
-    <-> ec_2_4_1_60 [2.4.1.60] +d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga -cdp -hplus
+    <-> ec_2_4_1_60 [2.4.1.60] +d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga -cdp_chebi_58069 -hplus
     d_tyvelose_1_3_d_mannopyranosyl_1_4_l_rhamnopyr
   }
 

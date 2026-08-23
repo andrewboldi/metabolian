@@ -11,19 +11,19 @@ pathway l-arabinopyranose-to-l-arabinose-1-phosphate-nu "β-L-arabinopyranose to
     <-> ec_1_1_1_46 [1.1.1.46] +nadp -h -nadph
     l_arabinono_1_4_lactone
     <-> ec_1_1_1_376 [1.1.1.376] +nadh +h -nad
-    l_arabinopyranose
+    l_arabinopyranose_chebi_17535
     <-> ec_2_7_1_46 [2.7.1.46] +atp -adp -hplus
     l_arabinose_1_phosphate
   }
 
-  branch from l_arabinopyranose side left {
-    l_arabinopyranose
-    <-> ec_1_1_1_21 [1.1.1.21] +nadp +nadph +hplus
+  branch from l_arabinopyranose_chebi_17535 side left {
+    l_arabinopyranose_chebi_17535
+    <-> ec_1_1_1_21 [1.1.1.21] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     l_arabinitol
   }
 
-  branch from l_arabinopyranose side right {
-    l_arabinopyranose
+  branch from l_arabinopyranose_chebi_17535 side right {
+    l_arabinopyranose_chebi_17535
     <-> .
     beta_l_arabinofuranose
   }

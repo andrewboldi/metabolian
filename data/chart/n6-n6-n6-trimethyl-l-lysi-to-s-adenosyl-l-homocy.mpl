@@ -75,7 +75,7 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-l
   branch from 3_dehydrocarnitine side right {
     3_dehydrocarnitine
     <-> . +nad +nadh +hplus
-    carnitine
+    carnitine_chebi_16347
   }
 
   branch from acetate side left {
@@ -98,7 +98,7 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-l
 
   branch from methionine side right {
     methionine
-    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +5_deoxyadenosine +di_sulfido_diiron +sah
+    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +5_deoxyadenosine +di_sulfido_diiron_chebi_33737 +sah
     2_methyladenosine_5_monophosphate_1
   }
 

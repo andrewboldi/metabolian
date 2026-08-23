@@ -15,22 +15,22 @@ pathway 2-hydroxypropyl-com-to-formaldehyde-null "2-hydroxypropyl-CoM to formald
     <-> . +glutathione_disulfide -s_methylthio_glutathione
     glutathione
     <-> . +s_methylthio_glutathione +hydrogen_donor -gsh -hydrogen_acceptor
-    methanethiol
+    methanethiol_chebi_16007
     <-> ec_2_1_1_334 [2.1.1.334] +sam -sah -hplus
-    dimethyl_sulfide
+    dimethyl_sulfide_chebi_17437
     <-> ec_1_14_13_131 [1.14.13.131] +nadh +o2 +hplus -formaldehyde -nad -h2o
-    methanethiol
+    methanethiol_chebi_16007
   }
 
   branch from h side left {
     h
-    <-> . +adp +sm_d18_0_24_1_sphingomyelin +phosphate +sm_d18_0_24_1_sphingomyelin +h2o
+    <-> . +adp +sm_d18_0_24_1_sphingomyelin +phosphate +sm_d18_0_24_1_sphingomyelin +h2o_water
     atp
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     sm_d18_1_14_0_sphingomyelin
   }
 
@@ -43,42 +43,42 @@ pathway 2-hydroxypropyl-com-to-formaldehyde-null "2-hydroxypropyl-CoM to formald
   branch from glutathione side right {
     glutathione
     <-> ec_3_4_17_25 [3.4.17.25] +glycine +gamma_l_glutamyl_l_cysteine
-    h2o
+    h2o_water
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     sm_d18_1_15_0_sphingomyelin
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp +phosphate +atp +h2o_water
     sm_d18_1_16_1_sphingomyelin
   }
 
   branch from dimethyl_sulfide side left {
     dimethyl_sulfide
-    <-> ec_1_8_5_3 [1.8.5.3] +menaquinone_2 +h2o +dimethyl_sulfoxide
+    <-> ec_1_8_5_3 [1.8.5.3] +menaquinone_2 +h2o_water +dimethyl_sulfoxide
     menaquinol
   }
 
   branch from dimethyl_sulfide side right {
     dimethyl_sulfide
-    <-> . +nadh +h +dimethyl_sulfoxide +h2o
-    nad
+    <-> . +nadh_mnxm10 +h +dimethyl_sulfoxide +h2o_water
+    nad_mnxm8
   }
 
   branch from glutathione_disulfide side left {
     glutathione_disulfide
-    <-> ec_1_11_1_12 [1.11.1.12] +resolvin_d5 +h2o +h +glutathione
+    <-> ec_1_11_1_12 [1.11.1.12] +resolvin_d5 +h2o_water +h +glutathione
     7s_17s_hhpdha
   }
 
   branch from glutathione_disulfide side right {
     glutathione_disulfide
-    <-> ec_1_11_1_12 [1.11.1.12] +15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate +h2o +glutathione
+    <-> ec_1_11_1_12 [1.11.1.12] +15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate +h2o_water +glutathione
     15_r_hpete
   }
 

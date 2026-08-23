@@ -36,13 +36,13 @@ pathway 5-amino-1-5-phospho-d-ri-to-6-mercaptopurine "5-amino-1-(5-phospho-D-riâ
 
   branch from h side right {
     h
-    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxohexanoyl_l_homoserine_lactone +h2o +l_homoserine_lactone
+    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxohexanoyl_l_homoserine_lactone +h2o_water +l_homoserine_lactone
     3_oxohexanoic_acid
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_1_97 [3.5.1.97] +3_oxooctanoic_acid +l_homoserine_lactone +h2o
+    <-> ec_3_5_1_97 [3.5.1.97] +3_oxooctanoic_acid +l_homoserine_lactone +h2o_water
     3_oxo_n_3s_2_oxotetrahydrofuran_3_yl_octanamide
   }
 

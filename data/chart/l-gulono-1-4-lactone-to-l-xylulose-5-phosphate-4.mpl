@@ -26,13 +26,13 @@ pathway l-gulono-1-4-lactone-to-l-xylulose-5-phosphate-4 "L-gulono-1,4-lactone t
 
   branch from l_gulonate side right {
     l_gulonate
-    <-> ec_1_1_1_45 [1.1.1.45] +nadp +3_dehydro_l_gulonate +nadph
+    <-> ec_1_1_1_45 [1.1.1.45] +nadp +3_dehydro_l_gulonate_mnxm736 +nadph
     h
   }
 
   branch from 3_dehydro_l_gulonate side left {
     3_dehydro_l_gulonate
-    <-> ec_1_1_1_130 [1.1.1.130] +nadp +nadph +hplus
+    <-> ec_1_1_1_130 [1.1.1.130] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     2_3_diketogulonate
   }
 

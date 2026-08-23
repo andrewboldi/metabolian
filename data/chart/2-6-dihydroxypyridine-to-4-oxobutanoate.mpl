@@ -16,7 +16,7 @@ pathway 2-6-dihydroxypyridine-to-4-oxobutanoate "2,6-Dihydroxypyridine to 4-oxob
     4_6_hydroxy_pyridin_3_yl_4_oxobutanal
     <-> . +nadp +h2o -nadph -4_6_hydroxypyridin_3_yl_4_oxobutyrate
     h
-    <-> ec_1_14_13_163 [1.14.13.163] +4_6_hydroxypyridin_3_yl_4_oxobutyrate +nadh +o2 +hplus -4_oxobutanoate -nad -h2o
+    <-> ec_1_14_13_163 [1.14.13.163] +4_6_hydroxypyridin_3_yl_4_oxobutyrate +nadh +o2_chebi_15379 +hplus -4_oxobutanoate -nad -h2o_chebi_15377
     pyridine_2_5_diol
   }
 }

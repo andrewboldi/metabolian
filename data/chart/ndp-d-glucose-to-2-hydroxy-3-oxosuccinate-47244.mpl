@@ -26,7 +26,7 @@ pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate-47244 "NDP-α-D-glucose to 2-h
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_175 [3.2.1.175] +h +2_cis_abscisate +h2o
+    <-> ec_3_2_1_175 [3.2.1.175] +h +2_cis_abscisate +h2o_water
     abscisic_acid_d_glucopyranosyl_ester
   }
 
@@ -44,13 +44,13 @@ pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate-47244 "NDP-α-D-glucose to 2-h
 
   branch from glucose side left {
     glucose
-    <-> . +nadp +3_dehydro_d_glucose +nadph
+    <-> . +nadp_mnxm5 +3_dehydro_d_glucose +nadph_mnxm738702
     h
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_85 [3.2.1.85] +alpha_d_galactose_6_phosphate +h +h2o
+    <-> ec_3_2_1_85 [3.2.1.85] +alpha_d_galactose_6_phosphate +h +h2o_water
     lactose_6_phosphate
   }
 }

@@ -12,22 +12,93 @@ pathway h-to-amicoumacin-a-null "H to amicoumacin A" {
     atp
     <-> . +nh4 +ai_77_b -h2o
     amicoumacin_a
-    <-> ec_2_7_1_230 [2.7.1.230] +atp -adp -hplus
+    <-> ec_2_7_1_230 [2.7.1.230] +atp_chebi_30616 -adp_chebi_456216 -hplus
     amicoumacin_a_2_phosphate
-    <-> ec_3_1_3_107 [3.1.3.107] +h2o -pi
+    <-> ec_3_1_3_107 [3.1.3.107] +h2o_chebi_15377 -pi
     amicoumacin_a
   }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    3_s_hydroxy_pravastatin_tetranor
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    3_s_hydroxy_pravastatin
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +thromboxane_a1 +h
+    thromboxane_b1
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate
+    9_12_13_trihome
+  }
 
+  branch from h side left {
+    h
+    <-> . +myxochelin_a +nadp +nadph
+    myxochelin_aldehyde_intermediate
+  }
 
+  branch from h side right {
+    h
+    <-> . +6_oxoprostaglandin_e1 +nadph +nadp
+    6_oxoprostaglandin_f1alpha
+  }
 
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    3_hydroxymorphinan_o_glucuronide
+  }
 
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    4_oh_midazolam_glucuronide
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    4_hydroxy_triazolam_glucuronide
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    4_hydroxyvoriconazole_glucuronide
+  }
 
+  branch from nh4 side left {
+    nh4
+    <-> . +2_2_difluorodeoxyuridine +h +h2o
+    gemcitabine
+  }
 
+  branch from nh4 side right {
+    nh4
+    <-> . +5_amino_6_5_phospho_d_ribosylamino_uracil +h +h2o
+    2_5_diamino_6_ribosylamino_4_3h_pyrimidinone_5_p
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +delta_17_6_keto_prostaglandin_f1alpha
+    pgi3
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +thromboxane_b3
+    txa3
+  }
 }

@@ -10,7 +10,7 @@ pathway 5-pregnan-20-ol-3-one-to-5-pregnane-3-20-dione "5β-pregnan-20α-ol-3-on
     5_pregnan_20_ol_3_one
     <-> . +nadph +hplus -nadp
     pregnanediol
-    <-> ec_1_1_1_149 [1.1.1.149] +nadp -h -nadph
+    <-> ec_1_1_1_149 [1.1.1.149] +nadp_mnxm5 -h -nadph_mnxm738702
     3_hydroxy_5_pregnan_20_one
     <-> . +nadp -nadph -hplus
     5_pregnane_3_20_dione
@@ -19,6 +19,6 @@ pathway 5-pregnan-20-ol-3-one-to-5-pregnane-3-20-dione "5β-pregnan-20α-ol-3-on
   branch from 5_pregnane_3_20_dione side left {
     5_pregnane_3_20_dione
     <-> ec_1_1_1_277 [1.1.1.277] +nadp +nadph +hplus
-    3_hydroxy_5_pregnan_20_one
+    3_hydroxy_5_pregnan_20_one_chebi_16229
   }
 }

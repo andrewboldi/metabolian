@@ -10,7 +10,7 @@ pathway 2-phenylacetonitrile-oxide-to-h2o "2-phenylacetonitrile oxide to H2O" {
     2_phenylacetonitrile_oxide
     <-> . +glutathione -h2o
     z_1_glutathione_s_yl_2_phenylacetohydroximate
-    <-> ec_3_4_19_16 [3.4.19.16] +h2o -glutamate
+    <-> ec_3_4_19_16 [3.4.19.16] +h2o_chebi_15377 -glutamate
     s_z_n_hydroxy_2_phenylethanimidoyl_l_cysteinylgl
     <-> . +h2o -h -z_2_phenyl_1_thioacetohydroximate
     ser_gly

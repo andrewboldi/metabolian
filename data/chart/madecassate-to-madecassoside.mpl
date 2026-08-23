@@ -11,7 +11,7 @@ pathway madecassate-to-madecassoside "madecassate to madecassoside" {
     <-> . +udp_d_glucose -udp
     2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o
     <-> . +udp_d_glucose -udp -hplus
-    2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o
+    2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o_chebi_234054
     <-> . +udp_l_rhamnose -udp -hplus
     madecassoside
   }

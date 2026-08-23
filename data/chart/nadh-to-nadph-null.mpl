@@ -73,7 +73,7 @@ pathway nadh-to-nadph-null "NADH to NADPH" {
   branch from nadph side right {
     nadph
     <-> ec_1_1_1_117 [1.1.1.117] +h +d_arabinono_1_4_lactone +nadp
-    d_arabinofuranose
+    d_arabinofuranose_chebi_145590
   }
 
   branch from nadh side left {

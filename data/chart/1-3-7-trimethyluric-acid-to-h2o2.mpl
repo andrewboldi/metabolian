@@ -11,7 +11,7 @@ pathway 1-3-7-trimethyluric-acid-to-h2o2 "1,3,7-trimethyluric acid to H2O2" {
     <-> . +h2o2 -o2 -h2o
     caffeine
     <-> ec_1_17_5_2 [1.17.5.2] +ubiquinone_8 +h2o -ubiquinol_8
-    1_3_7_trimethyluric_acid
+    1_3_7_trimethyluric_acid_mnxm1368926
     <-> ec_1_7_3_3 [1.7.3.3] +o2 +h2o -3_6_8_trimethylallantoin -h2o2
     co2
   }

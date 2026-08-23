@@ -18,7 +18,7 @@ pathway o-s-fatty-acylpantethein-to-h2o-68124 "O-(S-fatty acylpantethein… to H
     13_cis_retinal
     <-> . +nad +h2o -nadh -hplus
     13_cis_retinoate
-    <-> . +h +o2 +nadph -nadp -h2o
+    <-> . +h +o2 +nadph -nadp -h2o_water
     4_oxo_13_cis_retinoate
   }
 

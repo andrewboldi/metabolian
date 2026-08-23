@@ -12,18 +12,18 @@ pathway n-acetyl-d-galactosamin-to-h2o "N-acetyl-α-D-galactosamin… to H2O" {
     l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco
     <-> . +h2o -l_fucopyranose
     d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d
-    <-> ec_3_2_1_51 [3.2.1.51] +l_fucopyranose +4_methylumbelliferone -h2o
+    <-> ec_3_2_1_51 [3.2.1.51] +l_fucopyranose +4_methylumbelliferone -h2o_water
     4_methylumbelliferyl_alpha_l_fucopyranoside
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_4_2_1_131 [4.2.1.131] +chlorobactene
     hydroxychlorobactene
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_4_2_1_105 [4.2.1.105] +formononetin +h
     2_7_dihydroxy_4_methoxyisoflavanone
   }
@@ -36,18 +36,18 @@ pathway n-acetyl-d-galactosamin-to-h2o "N-acetyl-α-D-galactosamin… to H2O" {
 
   branch from 4_methylumbelliferone side right {
     4_methylumbelliferone
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +h2o_water
     beta_d_glucose
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_4_2_1_84 [4.2.1.84] +h +3_5_dibromo_4_hydroxybenzonitrile
     3_5_dibromo_4_hydroxybenzamide
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +3_5_dibromo_4_hydroxybenzoate +nh4 +3_5_dibromo_4_hydroxybenzamide
     h
   }

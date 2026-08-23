@@ -12,7 +12,7 @@ pathway nadh-to-11-oxotestosterone-null "NADH to 11-oxotestosterone" {
     11beta_hydroxydihydrotestosterone
     <-> ec_1_3_1_22 [1.3.1.22] +nadp -nadph -11_hydroxytestosterone
     h
-    <-> . +11_hydroxytestosterone +nadp -nadph -hplus
+    <-> . +11_hydroxytestosterone +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     11_oxotestosterone
   }
 }

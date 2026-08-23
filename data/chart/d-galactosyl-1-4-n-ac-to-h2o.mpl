@@ -12,7 +12,7 @@ pathway d-galactosyl-1-4-n-ac-to-h2o "β-D-galactosyl-(1→4)-N-ac… to H2O" {
     l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco
     <-> . +h2o -l_fucopyranose
     d_galactosyl_1_4_n_acetyl_d_glucosaminide
-    <-> ec_3_2_1_51 [3.2.1.51] +l_fucopyranose +h +4_nitrophenol -h2o
+    <-> ec_3_2_1_51 [3.2.1.51] +l_fucopyranose +h +4_nitrophenol -h2o_water
     4_nitrophenyl_l_fucoside
   }
 

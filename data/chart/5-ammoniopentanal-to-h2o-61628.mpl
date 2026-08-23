@@ -12,7 +12,7 @@ pathway 5-ammoniopentanal-to-h2o-61628 "5-ammoniopentanal to H2O" {
     1_piperideinium
     <-> . +nh4 +h2o2 -cadaverine
     o2
-    <-> . +2_oxoglutarate +cadaverine -l_glutamate -h2o
+    <-> . +2_oxoglutarate +cadaverine -l_glutamate -h2o_water
     1_piperideinium
   }
 }

@@ -13,6 +13,6 @@ pathway uroporphyrinogen-iii-to-coproporphyrinogen-iii-1 "uroporphyrinogen III t
     <-> ec_1_3_3_15 [1.3.3.15] +o2 -h2o2
     coproporphyrin_iii
     <-> . +h2o -coproporphyrinogen_iii
-    h2o2
+    h2o2_mnxm732620
   }
 }

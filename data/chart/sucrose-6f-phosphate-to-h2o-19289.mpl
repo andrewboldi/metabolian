@@ -14,7 +14,7 @@ pathway sucrose-6f-phosphate-to-h2o-19289 "sucrose 6F-phosphate to H2O" {
     3_ketosucrose
     <-> ec_3_2_1_218 [3.2.1.218] +h2o -d_fructofuranose
     3_dehydro_d_glucose
-    <-> ec_3_2_1_218 [3.2.1.218] +beta_d_fructose -h2o
+    <-> ec_3_2_1_218 [3.2.1.218] +beta_d_fructose -h2o_water
     3_dehydro_alpha_d_glucosyl_beta_d_fructofuranosi
   }
 
@@ -26,7 +26,7 @@ pathway sucrose-6f-phosphate-to-h2o-19289 "sucrose 6F-phosphate to H2O" {
 
   branch from d_fructofuranose side right {
     d_fructofuranose
-    <-> . +sucrose +isomaltose
+    <-> . +sucrose_mnxm1104180 +isomaltose
     isomaltotriose
   }
 }

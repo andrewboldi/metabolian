@@ -22,26 +22,147 @@ pathway 1-chlorohexane-to-h2o "1-Chlorohexane to H2O" {
     capecitabine
   }
 
+  branch from h side left {
+    h
+    <-> ec_2_7_1_100 [2.7.1.100] +5_methylsulfanyl_alpha_d_ribose_1_phosphate +adp +aldehydo_s_methyl_5_thio_d_ribose
+    atp
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +isocitrate +2_caffeoylisocitric_acid
+    coa
+  }
 
+  branch from chloride side left {
+    chloride
+    <-> . +2_hydroxy_1_4_benzoquinone +h
+    5_chloro_1_2_4_trihydroxybenzene
+  }
 
+  branch from chloride side right {
+    chloride
+    <-> . +h +5_chloro_1_2_4_trihydroxybenzene
+    hydroxybenzoquinone
+  }
 
+  branch from hexanal side left {
+    hexanal
+    <-> . +nad_chebi_57540 +nadh_chebi_57945 +hplus
+    hexan_1_ol_chebi_87393
+  }
 
+  branch from hexanal side right {
+    hexanal
+    <-> ec_1_6_99_1 [1.6.99.1] +2_hexenal +h +nadph
+    nadp
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_370 [1.1.1.370] +nadh +l_epi_2_inosose +h
+    inositol
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_2_8_1_9 [2.8.1.9] +nadh +benzamidoxime +h +h2o
+    benzamidine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_49 [4.2.1.49] +urocanate
+    4_imidazolone_5_propanoate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_2_1 [3.5.2.1] +barbituric_acid +h
+    3_oxo_3_ureidopropanoate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_4_99_1_6 [4.99.1.6] +z_indol_3_ylacetaldehyde_oxime
+    indol_3_yl_acetonitrile
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_14 [3.1.1.14] +chlorophyllide_a +phytol
+    chlorophyll_a
+  }
 
+  branch from h side left {
+    h
+    <-> ec_2_7_1_1 [2.7.1.1] +itp +d_sorbitol +idp
+    d_sorbitol_6_phosphate
+  }
 
+  branch from h side right {
+    h
+    <-> ec_1_5_98_1 [1.5.98.1] +5_10_methylenetetrahydromethanopterin +coenzyme_gamma_f420_2 +5_10_methenyl_5_6_7_8_tetrahydromethanopterin
+    1_5_dihydrocoenzyme_f420
+  }
 
+  branch from chloride side left {
+    chloride
+    <-> . +5_chlorocarbonyl_4_hydroxy_penta_2_4_dienate +h2o +h
+    maleylacetate
+  }
 
+  branch from chloride side right {
+    chloride
+    <-> ec_4_5_1_4 [4.5.1.4] +2_keto_4_pentenoate +h +nh4 +h2o
+    l_2_amino_4_chloropent_4_enoate
+  }
 
+  branch from acrolein side left {
+    acrolein
+    <-> . +phosphoramide_mustard
+    aldophosphamide
+  }
 
+  branch from acrolein side right {
+    acrolein
+    <-> . +isophosphamide_mustard
+    aldoifosfamide
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_193 [1.1.1.193] +5_amino_6_5_phospho_d_ribosylamino_uracil +h +nad
+    5_amino_6_5_phospho_d_ribitylamino_uracil
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_4 [1.1.1.4] +actn +h +nad
+    meso_butane_2_3_diol
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_76 [1.1.1.76] +nadh +actn +h
+    s_s_butane_2_3_diol
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_60 [1.1.1.60] +nadh +2r_tartronate_semialdehyde +h
+    r_glycerate
+  }
 
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_114 [4.1.1.114] +13z_heptacos_13_ene
+    3_dodecyl_4_tridecyloxetan_2_one
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine +h
+    2_3_bis_o_phytanyl_sn_glycero_1_phosphoethanolam
+  }
 }

@@ -18,8 +18,8 @@ pathway l-glutamate-5-semialdehyde-to-nh4 "L-glutamate 5-semialdehyde to NH4" {
 
   branch from 2s_2_amino_5_iminopentanoate side left {
     2s_2_amino_5_iminopentanoate
-    <-> . +n_demethylindolmycin +h
-    2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl
+    <-> . +n_demethylindolmycin_mnxm1105093 +h
+    2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl_mnxm1363707
   }
 
   branch from h side right {

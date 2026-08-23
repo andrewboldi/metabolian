@@ -28,13 +28,13 @@ pathway isatin-to-2r-dimboa-glucoside-68608 "isatin to (2R)-DIMBOA glucoside" {
 
   branch from hboa side left {
     hboa
-    <-> ec_1_14_13_139 [1.14.13.139] +3_hydroxyindolin_2_one +h +o2 +nadph +h2o
-    nadp
+    <-> ec_1_14_13_139 [1.14.13.139] +3_hydroxyindolin_2_one_mnxm1367396 +h +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
+    nadp_mnxm5
   }
 
   branch from hboa side right {
     hboa
-    <-> ec_1_14_13_139 [1.14.13.139] +nadh +3_hydroxyindolin_2_one +h +o2 +h2o
+    <-> ec_1_14_13_139 [1.14.13.139] +nadh +3_hydroxyindolin_2_one_mnxm1367396 +h +o2_mnxm735438 +h2o_water
     nad
   }
 
@@ -70,13 +70,13 @@ pathway isatin-to-2r-dimboa-glucoside-68608 "isatin to (2R)-DIMBOA glucoside" {
 
   branch from glucose side right {
     glucose
-    <-> . +7_8_dihydroxycoumarin +h2o
+    <-> . +7_8_dihydroxycoumarin +h2o_water
     daphnin
   }
 
   branch from glucose side left {
     glucose
-    <-> . +7_8_dihydroxycoumarin +h2o
+    <-> . +7_8_dihydroxycoumarin +h2o_water
     daphnetin_8_glucoside
   }
 
@@ -142,13 +142,13 @@ pathway isatin-to-2r-dimboa-glucoside-68608 "isatin to (2R)-DIMBOA glucoside" {
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +h2o_water
     linustatin
   }
 
   branch from glucose side left {
     glucose
-    <-> . +quercetin_4_o_d_glucopyranoside +h +h2o
+    <-> . +quercetin_4_o_d_glucopyranoside +h +h2o_water
     quercetin_3_4_di_o_d_glucoside
   }
 }

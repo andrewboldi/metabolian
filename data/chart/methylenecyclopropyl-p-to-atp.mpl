@@ -111,18 +111,18 @@ pathway methylenecyclopropyl-p-to-atp "β-(methylenecyclopropyl)p… to ATP" {
   branch from pyruvate side right {
     pyruvate
     <-> ec_4_1_3_3 [4.1.3.3] +n_acetylneuraminate
-    n_acetyl_d_mannosamine
+    n_acetyl_d_mannosamine_chebi_63154
   }
 
   branch from glutathione side left {
     glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10429 +h2o
     1_methylsulfanyl_7_aci_nitroheptane
   }
 
   branch from glutathione side right {
     glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa_mnxm10429 +h2o
     7_methylthioheptanonitrile_oxide
   }
 

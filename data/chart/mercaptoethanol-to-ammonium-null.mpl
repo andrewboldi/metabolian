@@ -33,7 +33,7 @@ pathway mercaptoethanol-to-ammonium-null "mercaptoethanol to ammonium" {
   branch from h side left {
     h
     <-> ec_2_3_1_156 [2.3.1.156] +malonyl_coa +2s_2_methylbutanoyl_coa +coa +2_2_methylbutanoyl_phloroglucinol
-    co2
+    co2_mnxm13
   }
 
   branch from h side right {

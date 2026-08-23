@@ -12,7 +12,7 @@ pathway maltoheptaose-to-d-maltohexaonate-null "maltoheptaose to D-maltohexaonat
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
     <-> . +o2 -h2o2
     d_maltohexaono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_maltohexaonate
   }
 
@@ -24,7 +24,7 @@ pathway maltoheptaose-to-d-maltohexaonate-null "maltoheptaose to D-maltohexaonat
 
   branch from glucose side right {
     glucose
-    <-> . +avenacin_a_2 +des_acyl_avenacin_a
+    <-> . +avenacin_a_2_mnxm1368265 +des_acyl_avenacin_a
     benzoyl_d_glucoside
   }
 

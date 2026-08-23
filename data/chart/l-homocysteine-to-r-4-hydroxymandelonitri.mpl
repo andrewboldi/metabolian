@@ -49,7 +49,7 @@ pathway l-homocysteine-to-r-4-hydroxymandelonitri "L-homocysteine to (R)-4-hydro
   branch from h side right {
     h
     <-> . +o2 +premithramycinone_g +h2o
-    1_4_5_7_10_tetrahydroxy_3_3_oxobutanoyl_anthrace
+    1_4_5_7_10_tetrahydroxy_3_3_oxobutanoyl_anthrace_mnxm1372602
   }
 
   branch from glucose side left {
@@ -73,7 +73,7 @@ pathway l-homocysteine-to-r-4-hydroxymandelonitri "L-homocysteine to (R)-4-hydro
   branch from h2o side right {
     h2o
     <-> . +emodin
-    hypericin
+    hypericin_mnxm1368709
   }
 
   branch from udp side left {

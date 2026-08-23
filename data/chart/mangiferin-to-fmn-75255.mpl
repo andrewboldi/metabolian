@@ -18,7 +18,7 @@ pathway mangiferin-to-fmn-75255 "mangiferin to FMN" {
     3_oxopuerarin
     <-> . -1_5_anhydro_d_erythro_hex_1_en_3_ulose
     daidzein
-    <-> ec_1_14_14_90 [1.14.14.90] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_90 [1.14.14.90] +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     2_hydroxydaidzein
   }
 
@@ -31,7 +31,7 @@ pathway mangiferin-to-fmn-75255 "mangiferin to FMN" {
   branch from norathyriol side right {
     norathyriol
     <-> . +nadp +h2o +h +nadph +gentisein
-    o2
+    o2_mnxm735438
   }
 
   branch from 3_dehydro_d_glucose side left {
@@ -60,7 +60,7 @@ pathway mangiferin-to-fmn-75255 "mangiferin to FMN" {
 
   branch from 2_hydroxydaidzein side left {
     2_hydroxydaidzein
-    <-> ec_1_3_1_51 [1.3.1.51] +nadp +nadph +hplus
+    <-> ec_1_3_1_51 [1.3.1.51] +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     2_hydroxy_2_3_dihydrodaidzein
   }
 
@@ -84,7 +84,7 @@ pathway mangiferin-to-fmn-75255 "mangiferin to FMN" {
 
   branch from h2o side left {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_pentyl_thiohydroximate
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth_mnxm10337 +z_omega_methylsulfanyl_pentyl_thiohydroximate
     ser_gly
   }
 

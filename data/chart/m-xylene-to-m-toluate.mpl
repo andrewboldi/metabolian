@@ -8,7 +8,7 @@ pathway m-xylene-to-m-toluate "m-xylene to m-toluate" {
 
   spine at 0,0 {
     m_xylene
-    <-> ec_1_14_15_26 [1.14.15.26] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_26 [1.14.15.26] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     3_methylbenzyl_alcohol
     <-> . +o2 -h2o2
     m_tolualdehyde

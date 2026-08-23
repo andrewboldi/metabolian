@@ -8,7 +8,7 @@ pathway met-arg-tyr-leu-his-to-ammonium "Met-Arg-Tyr-Leu-His to ammonium" {
 
   spine at 0,0 {
     met_arg_tyr_leu_his
-    <-> ec_1_14_15_42 [1.14.15.42] +no +di_sulfido_diiron +o2 -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_42 [1.14.15.42] +no +di_sulfido_diiron +o2 -di_sulfido_diiron_chebi_33737 -h2o
     met_arg_3_no2_tyr_leu_his
     <-> . +h2o +hplus -l_histidine -leucine -arginine -methionine
     3_nitro_l_tyrosine

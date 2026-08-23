@@ -11,15 +11,15 @@ pathway n4-d-gal-1-4-d-gl-to-cytidine-5-monophosphate "N4-{[β-D-Gal-(1→4)-β-
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
     <-> . +udpglcnac -udp -hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_chebi_232683
     <-> . +udp_d_galactose -udp -hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_chebi_232685
     <-> . +udpglcnac -udp -hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_chebi_232687
     <-> . +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_6
     <-> . +udp_d_galactose -udp -hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_chebi_232689
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
   }

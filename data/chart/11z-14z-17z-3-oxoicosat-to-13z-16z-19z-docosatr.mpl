@@ -16,14 +16,14 @@ pathway 11z-14z-17z-3-oxoicosat-to-13z-16z-19z-docosatr "(11Z,14Z,17Z)-3-oxoicos
     11z_14z_17z_icosatrienoyl_coa
     <-> . +malonyl-coa +hplus -co2 -coa
     13z_16z_19z_3_oxodocosatrienoyl_coa
-    <-> . +h +nadph -3_s_hydroxy_docosa_13_16_19_all_cis_trienoyl_coe
-    nadp
-    <-> . +3_s_hydroxy_docosa_13_16_19_all_cis_trienoyl_coe -h2o
+    <-> . +h +nadph_mnxm738702 -3_s_hydroxy_docosa_13_16_19_all_cis_trienoyl_coe
+    nadp_mnxm5
+    <-> . +3_s_hydroxy_docosa_13_16_19_all_cis_trienoyl_coe -h2o_water
     trans_cis_cis_cis_2_13_16_19_docosatetraenoyl_co
-    <-> . +h +nadph -13z_16z_19z_docosatrienoyl_coa
-    nadp
+    <-> . +h +nadph_mnxm738702 -13z_16z_19z_docosatrienoyl_coa
+    nadp_mnxm5
     <-> . +r_carnitine +13z_16z_19z_docosatrienoyl_coa -13z_16z_19z_docosatrienoylcarnitine
-    coa
+    coa_mnxm727276
   }
 
   branch from 11z_14z_17z_icosatrienoyl_coa side left {

@@ -17,13 +17,13 @@ pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl-6 "2-acyl-6-[α-D-mannosy
     <-> . +h2o -fatty-acid -hplus
     6_amino_acid_carboxyl_end_amidated_6_phosphoetha
     <-> . +h2o -phosphoethanolamine -hplus
-    6_amino_acid_carboxyl_end_amidated_6_phosphoetha
+    6_amino_acid_carboxyl_end_amidated_6_phosphoetha_chebi_233273
     <-> . +h2o -fatty-acid -hplus
-    6_amino_acid_carboxyl_end_amidated_6_phosphoetha
+    6_amino_acid_carboxyl_end_amidated_6_phosphoetha_chebi_233420
     <-> . +stearoyl_coa -coa
-    6_amino_acid_carboxyl_end_amidated_6_phosphoetha
+    6_amino_acid_carboxyl_end_amidated_6_phosphoetha_chebi_233421
     <-> . +udp_n_acetyl_d_galactosamine -udp -hplus
-    6_amino_acid_carboxyl_end_amidated_6_phosphoetha
+    6_amino_acid_carboxyl_end_amidated_6_phosphoetha_chebi_233422
   }
 
   branch from c_terminal_proteinogenic_amino_acid side left {

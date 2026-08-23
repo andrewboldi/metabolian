@@ -18,13 +18,13 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate-null "(-)-Jasmonoyl-L-isoleucine t
 
   branch from h side left {
     h
-    <-> . +m_chloro_hippuric_acid +h2o +3_chlorobenzoate
+    <-> . +m_chloro_hippuric_acid +h2o_water +3_chlorobenzoate
     glycine
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_8_1 [3.1.8.1] +o_s_dimethyl_hydrogen_phosphorothioate +acetamide +h2o
+    <-> ec_3_1_8_1 [3.1.8.1] +o_s_dimethyl_hydrogen_phosphorothioate +acetamide +h2o_water
     acephate
   }
 
@@ -36,8 +36,8 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate-null "(-)-Jasmonoyl-L-isoleucine t
 
   branch from n_7_isojasmonyl_l_isoleucinate side right {
     n_7_isojasmonyl_l_isoleucinate
-    <-> . +diphosphate +h +amp +l_isoleucine +jasmonate
-    atp
+    <-> . +diphosphate +h +amp_mnxm728294 +l_isoleucine +jasmonate
+    atp_mnxm3
   }
 
   branch from 7_isojasmonate side left {
@@ -48,19 +48,19 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate-null "(-)-Jasmonoyl-L-isoleucine t
 
   branch from jasmonoyl_l_isoleucine side right {
     jasmonoyl_l_isoleucine
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +amp +atp +jasmonate
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +amp_mnxm728294 +atp_mnxm3 +jasmonate
     l_isoleucine
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_91 [1.14.14.91] +2_methoxy_4_hydroxycinnamate +nadp +h2o +3_2_methoxyphenyl_2_propenoic_acid +nadph
-    o2
+    <-> ec_1_14_14_91 [1.14.14.91] +2_methoxy_4_hydroxycinnamate +nadp_mnxm5 +h2o_water +3_2_methoxyphenyl_2_propenoic_acid +nadph_mnxm738702
+    o2_mnxm735438
   }
 
   branch from h side right {
     h
-    <-> ec_3_4_21_10 [3.4.21.10] +4_nitroaniline +n_benzoyl_arginine +h2o
+    <-> ec_3_4_21_10 [3.4.21.10] +4_nitroaniline +n_benzoyl_arginine +h2o_water
     n_2_benzoyl_d_arginine_4_nitroanilide
   }
 }

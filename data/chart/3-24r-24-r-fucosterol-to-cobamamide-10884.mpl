@@ -104,13 +104,13 @@ pathway 3-24r-24-r-fucosterol-to-cobamamide-10884 "(3β,24R,24'R)-fucosterol… 
 
   branch from adenosylcobinamide side left {
     adenosylcobinamide
-    <-> ec_6_3_1_10 [6.3.1.10] +adp +phosphate +atp +adenosylcob_iii_yrate
+    <-> ec_6_3_1_10 [6.3.1.10] +adp_mnxm40333 +phosphate +atp_mnxm3 +adenosylcob_iii_yrate
     1_aminopropan_2_ol
   }
 
   branch from adenosylcobinamide side right {
     adenosylcobinamide
-    <-> ec_3_5_1_90 [3.5.1.90] +h2o +1_aminopropan_2_ol +adenosylcob_iii_yrate
+    <-> ec_3_5_1_90 [3.5.1.90] +h2o_water +1_aminopropan_2_ol +adenosylcob_iii_yrate
     h
   }
 
@@ -183,6 +183,6 @@ pathway 3-24r-24-r-fucosterol-to-cobamamide-10884 "(3β,24R,24'R)-fucosterol… 
   branch from triphosphate side right {
     triphosphate
     <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +adenosine_5_tetraphosphate +h
-    atp
+    atp_mnxm3
   }
 }

@@ -10,7 +10,7 @@ pathway nadh-to-keto-d-tagatose "NADH to keto-D-tagatose…" {
     nadh
     <-> ec_1_1_1_12 [1.1.1.12] +h +ketose -nad
     d_altritol
-    <-> ec_1_1_1_407 [1.1.1.407] +nad -nadh -hplus
+    <-> ec_1_1_1_407 [1.1.1.407] +nad_chebi_57540 -nadh_chebi_57945 -hplus
     keto_d_tagatose
     <-> ec_2_7_1_101 [2.7.1.101] +atp -adp -hplus
     keto_d_tagatose_6_phosphate
@@ -48,14 +48,14 @@ pathway nadh-to-keto-d-tagatose "NADH to keto-D-tagatose…" {
 
   branch from keto_d_tagatose side right {
     keto_d_tagatose
-    <-> . +d_tagatofuranose_6_phosphate +h +adp
-    atp
+    <-> . +d_tagatofuranose_6_phosphate +h +adp_mnxm40333
+    atp_mnxm3
   }
 
   branch from nadh side left {
     nadh
     <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nad
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_mnxm1368853
   }
 
   branch from nadh side right {
@@ -91,12 +91,12 @@ pathway nadh-to-keto-d-tagatose "NADH to keto-D-tagatose…" {
   branch from keto_d_tagatose side left {
     keto_d_tagatose
     <-> .
-    d_tagatopyranose
+    d_tagatopyranose_chebi_49092
   }
 
   branch from keto_d_tagatose side right {
     keto_d_tagatose
-    <-> . +h +adp +phosphate +atp
+    <-> . +h +adp_mnxm40333 +phosphate +atp_mnxm3
     h2o
   }
 }

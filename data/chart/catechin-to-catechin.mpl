@@ -12,33 +12,159 @@ pathway catechin-to-catechin "(+)-catechin to (−)-catechin" {
     2r_3s_4s_leucocyanidin
     <-> ec_1_14_20_4 [1.14.20.4] +akg +o2 -succinate -co2 -h2o -hplus
     4s_2_3_dehydroleucocyanidin
-    <-> . -h2o
+    <-> . -h2o_water
     cyanidin
-    <-> ec_1_3_1_112 [1.3.1.112] +h +nadph -catechin
-    nadp
+    <-> ec_1_3_1_112 [1.3.1.112] +h +nadph_mnxm738702 -catechin_chebi_33992
+    nadp_mnxm5
   }
 
+  branch from 2r_3s_4s_leucocyanidin side left {
+    2r_3s_4s_leucocyanidin
+    <-> ec_1_14_11_19 [1.14.11.19] +2_oxoglutarate +o2_mnxm735438 +succinate_mnxm25 +epitaxifolin +h2o_water
+    co2_mnxm13
+  }
 
+  branch from 2r_3s_4s_leucocyanidin side right {
+    2r_3s_4s_leucocyanidin
+    <-> ec_1_14_20_4 [1.14.20.4] +2_oxoglutarate +o2_mnxm735438 +cyanidin +co2_mnxm13 +h +h2o_water
+    succinate_mnxm25
+  }
 
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_25 [1.14.11.25] +2_deoxymugineate +akg +o2 +co2 +hplus
+    3_epi_3_hydroxy_2_deoxymugineate
+  }
 
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_28 [1.14.11.28] +l_proline +akg +o2 +co2
+    cis_3_hydroxy_l_proline
+  }
 
+  branch from cyanidin side left {
+    cyanidin
+    <-> ec_2_1_1_267 [2.1.1.267] +s_adenosyl_l_homocysteine +peonidin +h
+    s_s_adenosyl_l_methionine
+  }
 
+  branch from cyanidin side right {
+    cyanidin
+    <-> ec_1_3_1_112 [1.3.1.112] +nadp_mnxm5 +h +nadph_mnxm738702
+    epicatechin
+  }
 
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +haxglutamyl_folate_dhf +l_glutamate
+    heptaglutamyl_folate_dhf
+  }
 
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +hexaglutamyl_folate_thf +l_glutamate
+    heptaglutamyl_folate_thf
+  }
 
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +h +1_4_dihydroxy_2_naphthoate +nadph_mnxm738702 +h2o_water
+    menadione
+  }
 
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_8_2_2 [1.8.2.2] +methanesulfonate +h +nadph_mnxm738702 +h2o_water
+    methanethiol
+  }
 
+  branch from catechin_chebi_33992 side left {
+    catechin_chebi_33992
+    <-> ec_2_1_1_42 [2.1.1.42] +s_adenosyl_l_homocysteine +h +3_methylcatechin
+    s_adenosyl_l_methionine
+  }
 
+  branch from 2r_3s_4s_leucocyanidin side right {
+    2r_3s_4s_leucocyanidin
+    <-> ec_1_14_11_19 [1.14.11.19] +2_oxoglutarate +o2_mnxm735438 +co2_mnxm13 +h +succinate_mnxm25 +h2o_water
+    idb_1027
+  }
 
+  branch from 2r_3s_4s_leucocyanidin side left {
+    2r_3s_4s_leucocyanidin
+    <-> ec_1_14_11_19 [1.14.11.19] +2_oxoglutarate +o2_mnxm735438 +co2_mnxm13 +succinate_mnxm25 +h2o_water
+    taxifolin
+  }
 
+  branch from akg side right {
+    akg
+    <-> ec_2_3_3_14 [2.3.3.14] +acetyl_coa +h2o +coa +hplus
+    2r_homocitrate
+  }
 
+  branch from akg side left {
+    akg
+    <-> . +nad +nadh +hplus
+    2_hydroxyglutarate
+  }
 
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_7 [1.14.11.7] +l_proline_chebi_50342 +akg +o2 +co2
+    trans_3_hydroxy_l_proline
+  }
 
+  branch from succinate side left {
+    succinate
+    <-> ec_2_8_3_2 [2.8.3.2] +oxalate +succinyl_coa
+    oxalyl_coa
+  }
 
+  branch from h2o_water side right {
+    h2o_water
+    <-> . +leukotriene_f4_cytosol +l_glutamate
+    leukotriene_e4
+  }
 
+  branch from h2o_water side left {
+    h2o_water
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +l_glutamate +phosphate +l_glutamate
+    atp
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o_water
+    l_glutamate
+  }
 
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o_water
+    glycine_betaine
+  }
 
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_7_1_4 [1.7.1.4] +nitrite +h +nadp_mnxm5 +h2o_water
+    ammonium_hydroxide
+  }
 
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +h +cholesterol +o2_mnxm735438 +nadp_mnxm5 +4_methylpentanal +h2o_water
+    pregnenolone
+  }
 
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_2_7_1_23 [2.7.1.23] +dtdp +h +nad_mnxm8
+    dttp
+  }
+
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_15_4 [1.14.15.4] +h +21_hydroxyprogesterone +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
+    corticosterone
+  }
 }

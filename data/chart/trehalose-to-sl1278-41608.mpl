@@ -48,8 +48,8 @@ pathway trehalose-to-sl1278-41608 "α,α-trehalose to SL1278" {
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +o3_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_3 +3_phosphonato_5_adenylyl_sulfate +hplus
-    o3_6_o_sulfo_n_acetyl_d_glucosaminyl_1_3_d_galac
+    <-> . +o3_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_3_chebi_176491 +3_phosphonato_5_adenylyl_sulfate +hplus
+    o3_6_o_sulfo_n_acetyl_d_glucosaminyl_1_3_d_galac_chebi_176490
   }
 
   branch from adenosine_3_5_bismonophosphate side left {

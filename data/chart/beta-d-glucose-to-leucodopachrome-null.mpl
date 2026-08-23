@@ -44,13 +44,13 @@ pathway beta-d-glucose-to-leucodopachrome-null "beta-D-glucose to leucodopachrom
 
   branch from 1_o_feruloyl_d_glucose side left {
     1_o_feruloyl_d_glucose
-    <-> . +glucose +lampranthin_ii
-    betanin
+    <-> . +glucose +lampranthin_ii_mnxm1371043
+    betanin_mnxm1371652
   }
 
   branch from 1_o_feruloyl_d_glucose side right {
     1_o_feruloyl_d_glucose
-    <-> . +lampranthin_ii +betanin
+    <-> . +lampranthin_ii_mnxm1371045 +betanin_mnxm1371652
     glucose
   }
 

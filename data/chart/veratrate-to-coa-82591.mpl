@@ -24,32 +24,32 @@ pathway veratrate-to-coa-82591 "veratrate to CoA" {
 
   branch from 1_o_vanilloyl_d_glucose side left {
     1_o_vanilloyl_d_glucose
-    <-> . +pelargonidin_3_glucoside +h +vanillate
+    <-> . +pelargonidin_3_glucoside +h +vanillate_mnxm982
     pelargonin
   }
 
   branch from 1_o_vanilloyl_d_glucose side right {
     1_o_vanilloyl_d_glucose
-    <-> ec_2_4_1_299 [2.4.1.299] +mirtillin +h +vanillate
+    <-> ec_2_4_1_299 [2.4.1.299] +mirtillin +h +vanillate_mnxm982
     delphin
   }
 
   branch from cyanidin_3_o_beta_d_glucoside side left {
     cyanidin_3_o_beta_d_glucoside
-    <-> ec_2_4_1_298 [2.4.1.298] +udp +cyanidin_3_5_di_o_beta_d_glucoside
+    <-> ec_2_4_1_298 [2.4.1.298] +udp_mnxm1102128 +cyanidin_3_5_di_o_beta_d_glucoside
     udp_alpha_d_glucose
   }
 
   branch from cyanidin_3_o_beta_d_glucoside side right {
     cyanidin_3_o_beta_d_glucoside
     <-> ec_2_4_1_297 [2.4.1.297] +cyanidin_3_o_sophoroside +udp_alpha_d_glucose +h
-    udp
+    udp_mnxm1102128
   }
 
   branch from 1_o_4_hydroxybenzoyl_d_glucopyranose side left {
     1_o_4_hydroxybenzoyl_d_glucopyranose
     <-> ec_2_4_1_300 [2.4.1.300] +aldehydo_d_glucose +4_hydroxybenzoate +h
-    h2o
+    h2o_water
   }
 
   branch from 1_o_4_hydroxybenzoyl_d_glucopyranose side right {
@@ -60,7 +60,7 @@ pathway veratrate-to-coa-82591 "veratrate to CoA" {
 
   branch from cyanidin_3_o_6_o_malonyl_d_glucoside side left {
     cyanidin_3_o_6_o_malonyl_d_glucoside
-    <-> ec_2_4_1_254 [2.4.1.254] +udp +cyanidin_3_o_6_o_malonyl_2_o_glucuronyl_glucosid
+    <-> ec_2_4_1_254 [2.4.1.254] +udp_mnxm1102128 +cyanidin_3_o_6_o_malonyl_2_o_glucuronyl_glucosid
     udp_alpha_d_glucuronate
   }
 
@@ -78,7 +78,7 @@ pathway veratrate-to-coa-82591 "veratrate to CoA" {
 
   branch from veratrate side right {
     veratrate
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o_water
     3_4_dimethoxybenzaldehyde
   }
 
@@ -96,7 +96,7 @@ pathway veratrate-to-coa-82591 "veratrate to CoA" {
 
   branch from 4_hydroxybenzoate side left {
     4_hydroxybenzoate
-    <-> . +4_hydroxybenzoate_1_phenylethylidene +h2o +h
+    <-> . +4_hydroxybenzoate_1_phenylethylidene +h2o_water +h
     acetophenone_hydrazone
   }
 
@@ -120,7 +120,7 @@ pathway veratrate-to-coa-82591 "veratrate to CoA" {
 
   branch from h side left {
     h
-    <-> . +mycophenolate +2_morpholin_4_yl_ethanol +h2o
+    <-> . +mycophenolate +2_morpholin_4_yl_ethanol +h2o_water
     mycophenolate_mofetil
   }
 

@@ -12,7 +12,7 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-h2o-40835 "1,2-dioleoyl-sn-glycero-3… to 
     choline_alfoscerate
     <-> . +1_acyl_sn_glycero_3_phosphoethanolamine -1_o_acyl_sn_glycero_3_phosphocholine
     2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    <-> ec_3_1_1_5 [3.1.1.5] +hexadecanoate +h -h2o
+    <-> ec_3_1_1_5 [3.1.1.5] +hexadecanoate +h -h2o_water
     2_hexadecanoyl_sn_glycero_3_phosphoethanolamine
   }
 }

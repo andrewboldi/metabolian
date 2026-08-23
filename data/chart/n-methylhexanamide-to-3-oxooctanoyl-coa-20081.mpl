@@ -97,6 +97,6 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa-20081 "N-methylhexanamide to 3-o
   branch from ppi side right {
     ppi
     <-> ec_4_2_3_82 [4.2.3.82] +fpp
-    santalene
+    santalene_chebi_61677
   }
 }

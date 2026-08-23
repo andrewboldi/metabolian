@@ -55,12 +55,12 @@ pathway r-3-hydroxy-3-methyl-2-to-nad-null "(R)-3-hydroxy-3-methyl-2-… to NAD"
   branch from h side left {
     h
     <-> ec_3_6_3_4 [3.6.3.4] +adp +phosphate +atp +h2o
-    cu
+    cu_mnxm731166
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_4 [3.6.3.4] +h +cu +phosphate +atp +cu
+    <-> ec_3_6_3_4 [3.6.3.4] +h +cu_mnxm731166 +phosphate +atp +cu_mnxm731166
     adp
   }
 

@@ -19,7 +19,7 @@ pathway h-to-2-hydroxyacetophenone-null "H to 2-hydroxyacetophenone" {
   branch from glycine side left {
     glycine
     <-> . +myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1 +h2o
-    myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1
+    myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1_mnxm1132187
   }
 
   branch from glycine side right {

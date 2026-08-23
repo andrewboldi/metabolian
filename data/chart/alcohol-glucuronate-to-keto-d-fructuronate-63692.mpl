@@ -26,7 +26,7 @@ pathway alcohol-glucuronate-to-keto-d-fructuronate-63692 "alcohol glucuronate…
 
   branch from aldehydo_d_glucuronate side right {
     aldehydo_d_glucuronate
-    <-> . +nadh +d_glucarate +h +h2o
+    <-> . +nadh +d_glucarate +h +h2o_water
     nad
   }
 
@@ -56,13 +56,13 @@ pathway alcohol-glucuronate-to-keto-d-fructuronate-63692 "alcohol glucuronate…
 
   branch from aldehydo_d_glucuronate side left {
     aldehydo_d_glucuronate
-    <-> . +udp +h +h2o
+    <-> . +udp_mnxm1102128 +h +h2o_water
     udp_alpha_d_glucuronate
   }
 
   branch from aldehydo_d_glucuronate side right {
     aldehydo_d_glucuronate
-    <-> ec_3_1_1_19 [3.1.1.19] +h +h2o
+    <-> ec_3_1_1_19 [3.1.1.19] +h +h2o_water
     d_glucurono_6_2_lactone
   }
 }

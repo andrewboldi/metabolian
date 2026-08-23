@@ -44,31 +44,31 @@ pathway monosaccharide-1-phosphate-to-phosphate-13205 "monosaccharide 1-phosphat
 
   branch from h side left {
     h
-    <-> ec_1_4_1_20 [1.4.1.20] +nadh +nh4 +r_3_methyl_2_oxopentanoate +nad +h2o
+    <-> ec_1_4_1_20 [1.4.1.20] +nadh +nh4 +r_3_methyl_2_oxopentanoate +nad_mnxm8 +h2o_water
     l_isoleucine
   }
 
   branch from h side right {
     h
     <-> ec_3_6_3_22 [3.6.3.22] +adp +l_isoleucine +phosphate +atp +l_isoleucine
-    h2o
+    h2o_water
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     myo_inositol
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     2_hydroxyethane_1_sulfonate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +2_keto_3_deoxy_d_glycero_d_galactononic_acid +h2o
+    <-> . +2_keto_3_deoxy_d_glycero_d_galactononic_acid +h2o_water
     2_keto_3_deoxy_d_glycero_d_galactononic_acid_9_p
   }
 
@@ -158,19 +158,19 @@ pathway monosaccharide-1-phosphate-to-phosphate-13205 "monosaccharide 1-phosphat
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o_water
     l_lysine
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_1_23 [1.2.1.23] +nadh +r_lactate +r_lactaldehyde +h2o
-    nad
+    <-> ec_1_2_1_23 [1.2.1.23] +nadh +r_lactate +r_lactaldehyde +h2o_water
+    nad_mnxm8
   }
 
   branch from h side right {
     h
-    <-> . +hexadecanoate +core_oligosaccharide_lipid_a +h2o
+    <-> . +hexadecanoate +core_oligosaccharide_lipid_a +h2o_water
     hepta_acylated_core_oligosaccharide_lipid_a
   }
 }

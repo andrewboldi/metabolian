@@ -29,7 +29,7 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
   branch from ginsenoside_c_k side left {
     ginsenoside_c_k
     <-> ec_3_2_1_193 [3.2.1.193] +glucose +ginsenoside_f2
-    h2o
+    h2o_water
   }
 
   branch from fmn side right {
@@ -46,37 +46,37 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
 
   branch from ginsenoside_f2 side right {
     ginsenoside_f2
-    <-> ec_3_2_1_193 [3.2.1.193] +glucose +l_arabinopyranose +h2o
+    <-> ec_3_2_1_193 [3.2.1.193] +glucose +l_arabinopyranose +h2o_water
     ginsenoside_rb2
   }
 
   branch from ginsenoside_f2 side left {
     ginsenoside_f2
-    <-> ec_3_2_1_193 [3.2.1.193] +glucose +d_xylopyranose +h2o
+    <-> ec_3_2_1_193 [3.2.1.193] +glucose +d_xylopyranose +h2o_water
     ginsenoside_rb3
   }
 
   branch from ginsenoside_rb1 side right {
     ginsenoside_rb1
-    <-> . +beta_d_glucose +h2o
+    <-> . +beta_d_glucose +h2o_water
     gypenoside_xvii
   }
 
   branch from ginsenoside_rb1 side left {
     ginsenoside_rb1
-    <-> . +glucose +h2o
+    <-> . +glucose +h2o_water
     3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b
   }
 
   branch from glucose side right {
     glucose
-    <-> . +oleandomycin +h2o
+    <-> . +oleandomycin +h2o_water
     glucosyl_oleandomycin
   }
 
   branch from glucose side left {
     glucose
-    <-> . +7_8_dihydroxycoumarin +h2o
+    <-> . +7_8_dihydroxycoumarin +h2o_water
     daphnin
   }
 
@@ -118,13 +118,13 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
 
   branch from glucose side right {
     glucose
-    <-> . +7_8_dihydroxycoumarin +h2o
+    <-> . +7_8_dihydroxycoumarin +h2o_water
     daphnetin_8_glucoside
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +h2o_water
     linustatin
   }
 }

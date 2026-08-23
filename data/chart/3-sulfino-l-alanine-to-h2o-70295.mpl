@@ -11,7 +11,7 @@ pathway 3-sulfino-l-alanine-to-h2o-70295 "3-sulfino-L-alanine to H2O" {
     <-> . +akg -glutamate
     3_sulfinatopyruvate
     <-> . +nadh +h +nh4 -nad -h2o
-    3_sulfino_l_alanine
+    3_sulfino_l_alanine_mnxm1364516
     <-> . +o2
     l_cysteate
     <-> . +h +adp +phosphate -l_cysteate -h2o

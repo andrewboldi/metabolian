@@ -12,23 +12,23 @@ pathway palustradiene-diol-to-abietate "palustradiene-diol to abietate" {
     palustradienal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph -abietol
     nadp
-    <-> . +abietol +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +abietol +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     abieta_7_13_dien_18_18_diol
-    <-> . -h2o
+    <-> . -h2o_chebi_15377
     abietal
-    <-> ec_1_2_1_74 [1.2.1.74] +nad +h2o -nadh -hplus
+    <-> ec_1_2_1_74 [1.2.1.74] +nad +h2o_chebi_15377 -nadh -hplus
     abietate
   }
 
   branch from palustradienal side left {
     palustradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh_mnxm10 +h +nad_mnxm8
     levopimaradienol
   }
 
   branch from palustradienal side right {
     palustradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh_mnxm10 +h +nad_mnxm8
     palustradienol
   }
 
@@ -58,19 +58,19 @@ pathway palustradiene-diol-to-abietate "palustradiene-diol to abietate" {
 
   branch from abietol side left {
     abietol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
-    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh_mnxm10 +neoabietadienal +h
+    nad_mnxm8
   }
 
   branch from abietal side right {
     abietal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +levopimaradienol +nad
-    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +levopimaradienol +nad_mnxm8
+    nadh_mnxm10
   }
 
   branch from abietal side left {
     abietal
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh_mnxm10 +h +nad_mnxm8 +h2o
     5z_7e_9e_14z_17z_icosapentaenoate
   }
 

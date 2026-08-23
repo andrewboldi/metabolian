@@ -10,7 +10,7 @@ pathway beta-tri-n-acetylchitotri-to-h2o-null "beta-tri-N-acetylchitotri… to H
     beta_tri_n_acetylchitotriose
     <-> ec_3_2_1_14 [3.2.1.14] +h2o
     n_n_diacetylchitobiose
-    <-> ec_3_5_1_105 [3.5.1.105] +h2o -acetate
+    <-> ec_3_5_1_105 [3.5.1.105] +h2o_chebi_15377 -acetate
     n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
     <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -n_acetyl_d_glucosaminyl_1_4_d_glucosaminium -h2o
     atp

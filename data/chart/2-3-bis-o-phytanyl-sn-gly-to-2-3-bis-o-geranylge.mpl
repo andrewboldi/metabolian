@@ -44,7 +44,7 @@ pathway 2-3-bis-o-phytanyl-sn-gly-to-2-3-bis-o-geranylge "2,3-bis-O-phytanyl-sn-
 
   branch from 2_3_bis_o_phytanyl_sn_glycerol_1_phosphate side left {
     2_3_bis_o_phytanyl_sn_glycerol_1_phosphate
-    <-> ec_2_7_7_67 [2.7.7.67] +ctp +h +cdp_2_3_bis_o_phytanyl_sn_glycerol
+    <-> ec_2_7_7_67 [2.7.7.67] +ctp_mnxm1103718 +h +cdp_2_3_bis_o_phytanyl_sn_glycerol
     diphosphate
   }
 

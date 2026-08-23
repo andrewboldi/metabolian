@@ -13,6 +13,6 @@ pathway neu5ac-2-3-d-gal-1-to-cytidine-5-monophosphate "α-Neu5Ac-(2→3)-β-D-G
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne_chebi_78572
   }
 }

@@ -8,13 +8,13 @@ pathway spirilloxanthin-to-di-sulfido-diiron "spirilloxanthin to di-μ-sulfido-d
 
   spine at 0,0 {
     spirilloxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_hydroxyspirilloxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_2_dihydroxyspirilloxanthin
     <-> . -h2o
     2_oxospirilloxanthin
-    <-> ec_1_14_15_9 [1.14.15.9] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_9 [1.14.15.9] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_2_dioxospirilloxanthin
   }
 }

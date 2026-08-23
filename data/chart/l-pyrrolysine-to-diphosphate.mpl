@@ -12,22 +12,93 @@ pathway l-pyrrolysine-to-diphosphate "L-pyrrolysine to diphosphate" {
     2r_3r_3_methylglutamyl_5_semialdehyde_n6_lysine
     <-> . +nadh +h +nh4 -nad -h2o
     n6_3r_3_methyl_d_ornithyl_l_lysine
-    <-> . +nad -nh3 -nadh -hplus
-    l_pyrrolysine
+    <-> . +nad_chebi_57540 -nh3 -nadh_chebi_57945 -hplus
+    l_pyrrolysine_chebi_58499
     <-> ec_6_1_1_26 [6.1.1.26] +amp_3_end_1 +atp -amp -ppi
     3_l_pyrrolysyl_adenylyl_zwitterionic_group
   }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_144 [1.1.1.144] +nadh +h +4s_perillyl_aldehyde
+    s_perillyl_alcohol
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_221 [1.1.1.221] +nadh +h +dehydrovomifoliol
+    vomifoliol
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_7_1_9 [3.7.1.9] +2e_2_hydroxypenta_2_4_dienoate +h +formate
+    2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +hexadecanoate +h +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli
+    hepta_acylated_kdo_2_lipid_a
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +h +two_linked_disacharide_pentapeptide_and_tetrapep
+    two_disacharide_linked_murein_units_pentapeptide
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_10 [3.2.1.10] +isomaltose
+    glucose
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_213 [1.1.1.213] +h +c7a_hydroxy_5b_cholestan_3_one +nad
+    5beta_cholestane_3alpha_7alpha_diol
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_213 [1.1.1.213] +h +5beta_pregnan_3_20_dione +nad
+    3_hydroxy_5_pregnan_20_one
+  }
 
+  branch from h side left {
+    h
+    <-> . +udp +epicatechin_3_o_glucoside +epicatechin
+    udp_alpha_d_glucose
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_3_1_280 [2.3.1.280] +acetyl_coa +r_1_aminoethyl_phosphonic_acid +coa
+    1r_1_acetamidoethyl_phosphonate
+  }
 
+  branch from nh4 side left {
+    nh4
+    <-> ec_3_5_99_11 [3.5.99.11] +h +2e_4z_2_hydroxymuconate +h2o
+    2e_4z_2_aminomuconic_acid
+  }
 
+  branch from nh4 side right {
+    nh4
+    <-> ec_4_4_1_1 [4.4.1.1] +l_homocysteine +pyruvate +h2o
+    cystathionine
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +o2 +p_cymene +h2o
+    4_isopropylbenzyl_alcohol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_3_1_60 [1.3.1.60] +nadh +h +1_2_dihydroxydibenzothiophene
+    1_2_dihydrodibenzothiophene_1alpha_2alpha_diol
+  }
 }

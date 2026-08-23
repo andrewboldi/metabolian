@@ -9,11 +9,11 @@ pathway cobalt-to-diphosphate-65816 "cobalt to diphosphate" {
   spine at 0,0 {
     cobalt
     <-> ec_1_16_99_1 [1.16.99.1] +hydrogen_donor +atp +h2o -hydrogen_acceptor -adp -pi -hplus
-    cobalt
+    cobalt_chebi_85033
     <-> ec_2_1_1_382 [2.1.1.382] +syringate +hplus -methyl_co
     3_o_methylgallate
     <-> ec_2_1_1_389 [2.1.1.389] +methyl_co +thf -6s_5_methyltetrahydrofolate -hplus
-    cobalt
+    cobalt_chebi_85033
     <-> ec_1_5_1_20 [1.5.1.20] +6s_5_methyltetrahydrofolate +nadp -nadph -hplus
     methylene_thf
     <-> ec_2_1_1_74 [2.1.1.74] +uridine_5_monophosphate_1 +nadh +hplus -thf -nad

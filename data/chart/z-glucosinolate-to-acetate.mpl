@@ -20,13 +20,13 @@ pathway z-glucosinolate-to-acetate "(Z)-glucosinolate to acetate" {
 
   branch from glucose side left {
     glucose
-    <-> . +ginsenoside_mc +h2o
+    <-> . +ginsenoside_mc +h2o_water
     notoginsenoside_fe
   }
 
   branch from glucose side right {
     glucose
-    <-> . +ginsenoside_c_mx1 +h2o
+    <-> . +ginsenoside_c_mx1 +h2o_water
     ginsenoside_rb3
   }
 
@@ -38,13 +38,13 @@ pathway z-glucosinolate-to-acetate "(Z)-glucosinolate to acetate" {
 
   branch from sulfur_atom side right {
     sulfur_atom
-    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_oxon +nadp +h2o +h +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_oxon +nadp +h2o_water +h +o2_mnxm735438 +nadph
     fenthion
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_186 [3.2.1.186] +26_degluco_protogracillin +h2o
+    <-> ec_3_2_1_186 [3.2.1.186] +26_degluco_protogracillin +h2o_water
     protogracillin
   }
 
@@ -56,13 +56,13 @@ pathway z-glucosinolate-to-acetate "(Z)-glucosinolate to acetate" {
 
   branch from sulfur_atom side left {
     sulfur_atom
-    <-> ec_1_13_11_18 [1.13.11.18] +o2 +h2o +sulfite
+    <-> ec_1_13_11_18 [1.13.11.18] +o2_mnxm735438 +h2o_water +sulfite_mnxm726339
     h
   }
 
   branch from sulfur_atom side right {
     sulfur_atom
     <-> . +thiosulfate +h
-    sulfite
+    sulfite_mnxm726339
   }
 }

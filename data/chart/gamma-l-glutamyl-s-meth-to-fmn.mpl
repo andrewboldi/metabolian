@@ -12,7 +12,7 @@ pathway gamma-l-glutamyl-s-meth-to-fmn "gamma-L-glutamyl-(S)-meth… to FMN" {
     s_methylcysteine
     <-> . +acetyl_coa -coa -hplus
     n_acetyl_s_methyl_l_cysteine
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     r_n_acetyl_s_methyl_l_cysteine_sulfoxide
   }
 

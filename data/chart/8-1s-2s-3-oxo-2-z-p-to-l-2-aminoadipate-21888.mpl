@@ -24,7 +24,7 @@ pathway 8-1s-2s-3-oxo-2-z-p-to-l-2-aminoadipate-21888 "8-[(1S,2S)-3-oxo-2-{(Z)-p
 
   branch from 15z_12_oxophyto_10_15_dienoyl_coa side right {
     15z_12_oxophyto_10_15_dienoyl_coa
-    <-> . +atp +coa +9s_13s_15z_12_oxophyto_10_15_dienoate +phosphate
+    <-> . +atp_mnxm3 +coa_mnxm727276 +9s_13s_15z_12_oxophyto_10_15_dienoate +phosphate
     adp
   }
 
@@ -67,7 +67,7 @@ pathway 8-1s-2s-3-oxo-2-z-p-to-l-2-aminoadipate-21888 "8-[(1S,2S)-3-oxo-2-{(Z)-p
   branch from ppi side left {
     ppi
     <-> ec_4_2_3_115 [4.2.3.115] +gpp
-    terpinene
+    terpinene_chebi_10334
   }
 
   branch from holo-acp side right {

@@ -10,7 +10,7 @@ pathway atrochrysone-to-s-adenosyl-l-homocysteine-null "atrochrysone to S-adenos
     atrochrysone
     <-> . -h2o
     emodin_anthrone
-    <-> . +o2 -h2o -hplus
+    <-> . +o2 -h2o_chebi_15377 -hplus
     emodin
     <-> ec_2_1_1_283 [2.1.1.283] +sam -sah -hplus
     questin_2_olate

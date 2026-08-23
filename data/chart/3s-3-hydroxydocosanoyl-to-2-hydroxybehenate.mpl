@@ -20,7 +20,7 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate "(3S)-3-hydroxydocosanoyl-â€
 
   branch from fad side left {
     fad
-    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +h +glycine_betaine +h2o
+    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +h +glycine_betaine +h2o_water
     betaine_aldehyde
   }
 
@@ -32,13 +32,13 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate "(3S)-3-hydroxydocosanoyl-â€
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o_water
     atp
   }
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +lysopa_22_0_0_0 +coa +h
+    <-> . +lysopa_22_0_0_0 +coa_mnxm727276 +h
     sn_glycerol_3_phosphate
   }
 
@@ -50,19 +50,19 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate "(3S)-3-hydroxydocosanoyl-â€
 
   branch from fadh2 side right {
     fadh2
-    <-> . +nadh +acetyl_coa +diphosphate +h +amp +fad +atp +coa +nad +h2o
+    <-> . +nadh +acetyl_coa +diphosphate +h +amp +fad +atp +coa_mnxm727276 +nad +h2o_water
     tetradecanoate
   }
 
   branch from h side left {
     h
     <-> ec_2_3_1_80 [2.3.1.80] +acetyl_coa +s_4_hydroxy_nonenal_3_yl_l_cysteine +4_hydroxy_2_nonenal_n_acetyl_l_cysteine
-    coa
+    coa_mnxm727276
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_188 [2.3.1.188] +16_sinapoyloxypalmitic_acid +coa +e_sinapoyl_coa
+    <-> ec_2_3_1_188 [2.3.1.188] +16_sinapoyloxypalmitic_acid +coa_mnxm727276 +e_sinapoyl_coa
     16_hydroxyhexadecanoate
   }
 
@@ -74,13 +74,13 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate "(3S)-3-hydroxydocosanoyl-â€
 
   branch from fad side right {
     fad
-    <-> . +l_glutamate_5_semialdehyde +fadh2 +h +h2o
+    <-> . +l_glutamate_5_semialdehyde +fadh2 +h +h2o_water
     l_proline
   }
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> . +s_carnitine +coa
+    <-> . +s_carnitine +coa_mnxm727276
     o_behenoylcarnitine
   }
 }

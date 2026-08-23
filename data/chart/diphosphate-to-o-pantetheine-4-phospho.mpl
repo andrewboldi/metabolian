@@ -14,9 +14,9 @@ pathway diphosphate-to-o-pantetheine-4-phospho "diphosphate to O-(pantetheine-4'
     4_hydroxyamino_benzoate
     <-> . +h2o +hplus -nh3
     3_4_dihydroxybenzoate
-    <-> . +atp +hplus -ppi
+    <-> . +atp_chebi_30616 +hplus -ppi
     3_4_dihydroxybenzoyl_amp
-    <-> . +holo-acp -amp -hplus
+    <-> . +holo-acp -amp_chebi_456215 -hplus
     o_s_3_4_dihydroxybenzoyl_pantetheine_4_phosphory
     <-> . +n8_n_8_citryl_bis_spermidine_3 -holo-acp -hplus
     n1_3_4_dihydroxybenzoyl_n8_n_8_citryl_bis_spermi

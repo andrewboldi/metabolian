@@ -8,9 +8,9 @@ pathway 2-oxospirilloxanthin-to-2-2-dioxospirilloxanthin "2-oxospirilloxanthin t
 
   spine at 0,0 {
     2_oxospirilloxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_hydroxy_2_oxospirilloxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     2_2_dihydroxy_2_oxospirilloxanthin
     <-> . -h2o
     2_2_dioxospirilloxanthin

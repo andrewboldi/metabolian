@@ -30,7 +30,7 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor-83779 "3'-iodo-L-thyronine to hydro
 
   branch from 3_3_5_triiodo_l_thyronine_sulfate side left {
     3_3_5_triiodo_l_thyronine_sulfate
-    <-> . +3_3_5_triiodo_l_thyronine +h +sulfate
+    <-> . +3_3_5_triiodo_l_thyronine_chebi_11684 +h +sulfate
     h2o
   }
 

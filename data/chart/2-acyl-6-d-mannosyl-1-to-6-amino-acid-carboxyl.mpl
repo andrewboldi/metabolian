@@ -17,13 +17,13 @@ pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl "2-acyl-6-[α-D-mannosyl-
     <-> . +h2o -fatty-acid -hplus
     6_amino_acid_carboxyl_end_amidated_6_phosphoetha
     <-> . +h2o -phosphoethanolamine -hplus
-    6_amino_acid_carboxyl_end_amidated_6_phosphoetha
+    6_amino_acid_carboxyl_end_amidated_6_phosphoetha_chebi_233273
     <-> . +h2o -fatty-acid -hplus
-    6_amino_acid_carboxyl_end_amidated_6_phosphoetha
+    6_amino_acid_carboxyl_end_amidated_6_phosphoetha_chebi_233420
     <-> . +stearoyl_coa -coa
-    6_amino_acid_carboxyl_end_amidated_6_phosphoetha
+    6_amino_acid_carboxyl_end_amidated_6_phosphoetha_chebi_233421
     <-> . +udp_n_acetyl_d_galactosamine -udp -hplus
-    6_amino_acid_carboxyl_end_amidated_6_phosphoetha
+    6_amino_acid_carboxyl_end_amidated_6_phosphoetha_chebi_233422
   }
 
   branch from c_terminal_proteinogenic_amino_acid side left {
@@ -53,6 +53,6 @@ pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl "2-acyl-6-[α-D-mannosyl-
   branch from udp_n_acetyl_d_galactosamine side left {
     udp_n_acetyl_d_galactosamine
     <-> . +neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g +udp +hplus
-    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino
+    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino_chebi_141836
   }
 }

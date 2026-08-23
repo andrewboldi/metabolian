@@ -126,7 +126,7 @@ pathway ent-kaur-16-ene-to-hydrogen-donor-null "ent-kaur-16-ene to hydrogen dono
 
   branch from 2_trans_6_trans_10_trans_geranylgeranyl_diphosph side left {
     2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    <-> ec_4_2_1_174 [4.2.1.174] +h2o
+    <-> ec_4_2_1_174 [4.2.1.174] +h2o_chebi_15377
     peregrinol_diphosphate
   }
 }

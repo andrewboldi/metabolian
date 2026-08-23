@@ -36,8 +36,8 @@ pathway l-homocysteine-to-r-4-hydroxymandelonitri-null "L-homocysteine to (R)-4-
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
-    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
+    <-> . +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy_mnxm1364792 +h
+    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p_mnxm1364778
   }
 
   branch from r_4_hydroxymandelonitrile side left {
@@ -72,7 +72,7 @@ pathway l-homocysteine-to-r-4-hydroxymandelonitri-null "L-homocysteine to (R)-4-
 
   branch from glucose side right {
     glucose
-    <-> . +pelargonidin_3_o_6_o_malyl_beta_d_glucoside +1_o_malyl_beta_d_glucose
+    <-> . +pelargonidin_3_o_6_o_malyl_beta_d_glucoside_mnxm1368293 +1_o_malyl_beta_d_glucose
     pelargonidin_3_glucoside
   }
 
@@ -108,7 +108,7 @@ pathway l-homocysteine-to-r-4-hydroxymandelonitri-null "L-homocysteine to (R)-4-
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p +h
-    1_phenyl_3_2_4_6_trihydroxyphenyl_propane_1_3_di
+    <-> . +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p_mnxm1364790 +h
+    1_phenyl_3_2_4_6_trihydroxyphenyl_propane_1_3_di_mnxm1364770
   }
 }

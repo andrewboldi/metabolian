@@ -25,6 +25,6 @@ pathway o3-d-galactosyl-1-3-to-3-o-neu5ac-2-3-d-g "O3-{β-D-galactosyl-(1→3)-�
   branch from gdp_l_fucose side right {
     gdp_l_fucose
     <-> . +methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl +gdp +hplus
-    methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl
+    methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl_chebi_145985
   }
 }

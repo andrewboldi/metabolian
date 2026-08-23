@@ -10,11 +10,11 @@ pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
     retinal
     <-> ec_1_13_11_63 [1.13.11.63] +all_trans_3_hydroxyretinal -o2
     cryptoxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2_chebi_15379 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     zeaxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2_chebi_15379 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     antheraxanthin
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2_chebi_15379 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     all_trans_violaxanthin
     <-> ec_5_3_99_9 [5.3.99.9]
     all_trans_neoxanthin
@@ -22,25 +22,25 @@ pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
 
   branch from o2 side left {
     o2
-    <-> . +o4_o5_dimethylthujaplicatin +h +nadph +nadp +h2o
+    <-> . +o4_o5_dimethylthujaplicatin +h +nadph +nadp +h2o_water
     dihydroanhydropodorhizol
   }
 
   branch from o2 side right {
     o2
-    <-> . +previridicatumtoxin +nadph +nadp +h2o
+    <-> . +previridicatumtoxin +nadph +nadp +h2o_water
     viridicatumtoxin
   }
 
   branch from zeaxanthin side left {
     zeaxanthin
-    <-> ec_1_13_11_84 [1.13.11.84] +o2 +hydroxy_cyclocitral
+    <-> ec_1_13_11_84 [1.13.11.84] +o2_chebi_15379 +hydroxy_cyclocitral
     crocetin_dialdehyde
   }
 
   branch from zeaxanthin side right {
     zeaxanthin
-    <-> ec_1_13_11_65 [1.13.11.65] +o2 +3r_all_trans_3_hydroxyretinal
+    <-> ec_1_13_11_65 [1.13.11.65] +o2_chebi_15379 +3r_all_trans_3_hydroxyretinal
     3r_11_cis_3_hydroxyretinal
   }
 
@@ -58,31 +58,31 @@ pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
 
   branch from retinal side left {
     retinal
-    <-> . +o2 +h2o +h2o2 +hplus
+    <-> . +o2_chebi_15379 +h2o +h2o2 +hplus
     retinoate
   }
 
   branch from retinal side right {
     retinal
-    <-> ec_1_17_3_2 [1.17.3.2] +nadh +all_trans_retinoate +h +h2o
+    <-> ec_1_17_3_2 [1.17.3.2] +nadh +all_trans_retinoate +h +h2o_water
     nad
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_190 [1.14.13.190] +abietatriene +h +nadph +nadp +h2o
+    <-> ec_1_14_13_190 [1.14.13.190] +abietatriene +h +nadph +nadp +h2o_water
     ferruginol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_10_3_2 [1.10.3.2] +gossypol +h2o
+    <-> ec_1_10_3_2 [1.10.3.2] +gossypol +h2o_water
     hemigossypol
   }
 
   branch from zeaxanthin side left {
     zeaxanthin
-    <-> . +o2 +hydroxy_cyclocitral
+    <-> . +o2_chebi_15379 +hydroxy_cyclocitral
     3r_3_hydroxy_8_apo_carotenal
   }
 }

@@ -18,19 +18,19 @@ pathway 1-4-dinitrobenzene-to-ammonium-57784 "1,4-dinitrobenzene to ammonium" {
 
   branch from ubiquinone_8 side left {
     ubiquinone_8
-    <-> . +trimethylamine +h2o +ubiquinol_8 +trimethylamine_n_oxide
+    <-> . +trimethylamine +h2o_water +ubiquinol_8 +trimethylamine_n_oxide
     h
   }
 
   branch from ubiquinone_8 side right {
     ubiquinone_8
-    <-> . +nadh +h +ubiquinol_8 +nad
+    <-> . +nadh_mnxm10 +h +ubiquinol_8 +nad_mnxm8
     na
   }
 
   branch from ubiquinol_8 side left {
     ubiquinol_8
-    <-> ec_1_7_99_4 [1.7.99.4] +nitrite +ubiquinone_8 +h2o +nitrate
+    <-> ec_1_7_99_4 [1.7.99.4] +nitrite_mnxm107 +ubiquinone_8 +h2o_water +nitrate
     pmf
   }
 

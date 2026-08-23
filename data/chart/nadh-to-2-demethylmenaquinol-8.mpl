@@ -14,7 +14,7 @@ pathway nadh-to-2-demethylmenaquinol-8 "NADH to 2-demethylmenaquinol-8" {
     6_carboxydemethylmenaquinol_6
     <-> . +diphosphate -all_trans_hexaprenyl_diphosphate
     1_4_dihydroxy_6_naphthoate
-    <-> . +all_trans_octaprenyl_diphosphate +hplus -co2 -ppi
+    <-> . +all_trans_octaprenyl_diphosphate +hplus -co2_chebi_16526 -ppi
     2_demethylmenaquinol_8
     <-> . +dimethyl_sulfoxide -dimethyl_sulfide -h2o
     2_demethylmenaquinone_8

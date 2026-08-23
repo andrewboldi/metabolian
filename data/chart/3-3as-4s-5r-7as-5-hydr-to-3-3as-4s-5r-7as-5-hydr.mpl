@@ -13,7 +13,7 @@ pathway 3-3as-4s-5r-7as-5-hydr-to-3-3as-4s-5r-7as-5-hydr "3-[(3aS,4S,5R,7aS)-5-h
     <-> . +hydrogen_acceptor -hydrogen_donor
     2e_3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_oc
     <-> . +h2o
-    3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
+    3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy_mnxm9981
   }
 
   branch from ppi side left {

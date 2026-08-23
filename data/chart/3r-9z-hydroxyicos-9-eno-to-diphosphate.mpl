@@ -16,7 +16,7 @@ pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate "(3R,9Z)-hydroxyicos-9-eno… to 
     2e_9z_icosadi_2_9_enoyl_coa
     <-> . +h +nadph -9z_icos_9_enoyl_coa
     nadp
-    <-> . +9z_icos_9_enoyl_coa +h2o -coa -hplus
+    <-> . +9z_icos_9_enoyl_coa +h2o_chebi_15377 -coa -hplus
     gadoleate
     <-> . +atp +coa -amp -ppi
     9z_icos_9_enoyl_coa
@@ -49,7 +49,7 @@ pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate "(3R,9Z)-hydroxyicos-9-eno… to 
   branch from h side left {
     h
     <-> . +acetyl_coa +blasticidin_s +acetylblasticidin_s
-    coa
+    coa_mnxm727276
   }
 
   branch from h side right {
@@ -72,13 +72,13 @@ pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate "(3R,9Z)-hydroxyicos-9-eno… to 
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_84 [1.2.1.84] +9z_11e_tetradec_9_11_dienoyl_coa +h +nadph +coa
+    <-> ec_1_2_1_84 [1.2.1.84] +9z_11e_tetradec_9_11_dienoyl_coa +h +nadph +coa_mnxm727276
     9z_11e_tetradecadien_1_ol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_84 [1.2.1.84] +h +11z_tetradecenol +coa +nadph
+    <-> ec_1_2_1_84 [1.2.1.84] +h +11z_tetradecenol +coa_mnxm727276 +nadph
     cis_tetradec_11_enoyl_coa
   }
 

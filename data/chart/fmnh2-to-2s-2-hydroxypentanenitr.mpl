@@ -16,8 +16,8 @@ pathway fmnh2-to-2s-2-hydroxypentanenitr "FMNH2 to (2S)-2-hydroxypentanenitr…"
     fmn
     <-> ec_1_14_14_5 [1.14.14.5] +butanal +sulfite +h2o -h -butane_1_sulfonate -o2
     fmnh2
-    <-> . +butane_1_sulfonate +fmnh2 +o2 -fmn -sulfite -h2o -hplus
-    butanal
+    <-> . +butane_1_sulfonate +fmnh2_chebi_57618 +o2_chebi_15379 -fmn_chebi_58210 -sulfite_chebi_17359 -h2o_chebi_15377 -hplus
+    butanal_chebi_15743
     <-> . +hydrogen_cyanide
     2s_2_hydroxypentanenitrile
   }

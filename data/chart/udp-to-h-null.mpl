@@ -9,10 +9,10 @@ pathway udp-to-h-null "UDP to H" {
   spine at 0,0 {
     udp
     <-> . +oleanolate_3_beta_d_glucuronoside_3_1_galactosid -udp_alpha_d_glucose
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    <-> . +udp +h -oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm12516
+    <-> . +udp +h -oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm8960
     udp_alpha_d_glucose
-    <-> . +udp +h +oleanolate_3_beta_d_glucuronoside_3_1_galactosid -oleanolic_acid_3_o_beta_d_glucosiduronic_acid
+    <-> . +udp +h +oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm8960 -oleanolic_acid_3_o_beta_d_glucosiduronic_acid
     udp_alpha_d_galactose
     <-> ec_2_4_1_17 [2.4.1.17] +udp +oleanolic_acid_3_o_beta_d_glucosiduronic_acid -h -oleanolate
     udp_alpha_d_glucuronate
@@ -28,7 +28,7 @@ pathway udp-to-h-null "UDP to H" {
 
   branch from h side right {
     h
-    <-> ec_2_5_1_91 [2.5.1.91] +diphosphate +all_trans_decaprenyl_diphosphate +ipp
+    <-> ec_2_5_1_91 [2.5.1.91] +diphosphate +all_trans_decaprenyl_diphosphate_mnxm1371338 +ipp
     2e_6e_farnesyl_diphosphate
   }
 

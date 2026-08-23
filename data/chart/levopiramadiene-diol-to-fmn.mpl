@@ -12,7 +12,7 @@ pathway levopiramadiene-diol-to-fmn "levopiramadiene-diol to FMN" {
     levopimaradienal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph -abietol
     nadp
-    <-> ec_1_14_14_145 [1.14.14.145] +abietol +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_145 [1.14.14.145] +abietol +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     abietate
   }
 

@@ -34,7 +34,7 @@ pathway 3r-3-3r-3-3r-3-to-acetate-76007 "(3R)-3-{[(3R)-3-{[(3R)-3-… to acetate
 
   branch from bhb side right {
     bhb
-    <-> . +atp +coa +3r_3_hydroxybutanoyl_coa +amp
+    <-> . +atp +coa_mnxm727276 +3r_3_hydroxybutanoyl_coa +amp
     diphosphate
   }
 
@@ -46,13 +46,13 @@ pathway 3r-3-3r-3-3r-3-to-acetate-76007 "(3R)-3-{[(3R)-3-{[(3R)-3-… to acetate
 
   branch from bhb side right {
     bhb
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh_mnxm10 +h +nad_mnxm8 +h2o_water
     r_3_hydroxybutanal
   }
 
   branch from bhb side left {
     bhb
-    <-> . +h +coa +h2o
+    <-> . +h +coa_mnxm727276 +h2o_water
     3_hydroxybutanoyl_coa
   }
 }

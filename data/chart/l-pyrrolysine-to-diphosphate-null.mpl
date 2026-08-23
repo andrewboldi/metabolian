@@ -12,22 +12,93 @@ pathway l-pyrrolysine-to-diphosphate-null "L-pyrrolysine to diphosphate" {
     2r_3r_3_methylglutamyl_5_semialdehyde_n6_lysine
     <-> . +nadh +h +nh4 -nad -h2o
     n6_3r_3_methyl_d_ornithyl_l_lysine
-    <-> . +nad -nh3 -nadh -hplus
-    l_pyrrolysine
+    <-> . +nad_chebi_57540 -nh3 -nadh_chebi_57945 -hplus
+    l_pyrrolysine_chebi_58499
     <-> ec_6_1_1_26 [6.1.1.26] +amp_3_end_1 +atp -amp -ppi
     3_l_pyrrolysyl_adenylyl_zwitterionic_group
   }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +5_dihydrotestosterone +h
+    5_androstane_3_17_diol
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +h +cyclohex_2_enone
+    cyclohex_2_en_1_ol
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_4_99_1_5 [4.99.1.5] +pyridine_2_aldoxime
+    2_cyanopyridine
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +2_phenylpropionaldoxime
+    2_phenylpropiononitrile
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +mandelonitrile
+    mandelaldoxime
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +propionaldoxime
+    propionitrile
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_184 [1.1.1.184] +indan_1_one +h +nad
+    r_indan_1_ol
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_184 [1.1.1.184] +4_pyridinecarboxaldehyde +h +nad
+    4_pyridinemethanol
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_8_1_5 [3.8.1.5] +1_3_dichloropropane +h2o +chloride
+    compound_0040745
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +h2o +bromide
+    propane_1_3_diol
+  }
 
+  branch from nh4 side left {
+    nh4
+    <-> ec_1_4_1_20 [1.4.1.20] +nadh +4_ethylthio_2_oxobutanoate +nad +h2o
+    l_ethionine
+  }
 
+  branch from nh4 side right {
+    nh4
+    <-> ec_3_5_4_42 [3.5.4.42] +cyanurate +h +h2o
+    ammelide
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methylcyclohexanone +h
+    3_methylcyclohexanol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +3_methylbutan_2_one
+    3_methyl_2_butanol
+  }
 }

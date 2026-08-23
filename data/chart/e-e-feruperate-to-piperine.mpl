@@ -18,7 +18,7 @@ pathway e-e-feruperate-to-piperine "(E,E)-feruperate to piperine" {
 
   branch from e_e_piperate side left {
     e_e_piperate
-    <-> . +atp +coa +e_e_piperoyl_coa +phosphate
+    <-> . +atp_mnxm3 +coa_mnxm727276 +e_e_piperoyl_coa +phosphate
     adp
   }
 

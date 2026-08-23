@@ -123,7 +123,7 @@ pathway beta-d-fructose-to-h2o "beta-D-fructose… to H2O" {
   branch from h side right {
     h
     <-> ec_4_1_1_65 [4.1.1.65] +co2 +1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
-    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
+    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn_mnxm32640
   }
 
   branch from h side left {

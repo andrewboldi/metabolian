@@ -9,7 +9,7 @@ pathway d-mannopyranose-to-h2o "D-mannopyranose to H2O" {
   spine at 0,0 {
     d_mannopyranose
     <-> . +n_2r_3r_4r_5s_6r_2_4_dihydroxy_6_hydroxymethyl_5 -h2o
-    n_2r_3r_4r_5s_6r_2_4_dihydroxy_6_hydroxymethyl_5
+    n_2r_3r_4r_5s_6r_2_4_dihydroxy_6_hydroxymethyl_5_chebi_153593
     <-> . +beta_d_mannose -h2o
     d_man_1_3_d_man_1_3_d_man_1_6_d_man_1_6_d_man_1
     <-> . +d_mannopyranose -h2o

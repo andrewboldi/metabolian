@@ -10,7 +10,7 @@ pathway 4-hydroxytetracenomycin-a2-to-h2o "4-hydroxytetracenomycin A2 to H2O" {
     4_hydroxytetracenomycin_a2
     <-> . +nadp +h2o -tetracenomycin_a2 -o2 -nadph
     h
-    <-> ec_1_14_13_200 [1.14.13.200] +tetracenomycin_a2 +nadph +o2 +hplus -nadp -h2o
+    <-> ec_1_14_13_200 [1.14.13.200] +tetracenomycin_a2 +nadph_chebi_57783 +o2_chebi_15379 +hplus -nadp_chebi_58349 -h2o_chebi_15377
     tetracenomycin_c
     <-> . +nadp -h -nadph
     4_dehydro_tetracenomycin_c
@@ -18,21 +18,117 @@ pathway 4-hydroxytetracenomycin-a2-to-h2o "4-hydroxytetracenomycin A2 to H2O" {
     tetracenomycin_a2_epoxyquinone
   }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    abequopyranose
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    tyvelopyranose
+  }
 
+  branch from tetracenomycin_a2 side left {
+    tetracenomycin_a2
+    <-> . +nadp +h2o +h +o2 +nadph
+    tetracenomycin_c_mnxm1367248
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +nadh +gibberellin_a4 +nad +h2o
+    16alpha_17_epoxy_gibberellin_a4
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +h +gibberellin_a12 +nadph +nadp +h2o
+    16alpha_17_epoxy_gibberellin_a12
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +h +octanal +nadp
+    2_ethylhexan_1_ol
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadp
+    2_trans_6_cis_farnesol
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_9 [3.3.2.9] +1r_2s_1_2_dihydronaphthalene_1_2_diol
+    1s_2r_naphthalene_1_2_oxide
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_3_2_9 [3.3.2.9] +1s_2r_naphthalene_1_2_oxide
+    1s_2s_1_2_dihydronaphthalene_1_2_diol
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +11r_dihydroartemisinic_aldehyde
+    2e_6e_farnesol
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +z_but_2_enol +h +nadph
+    butan_1_ol
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +beta_d_ribofuranose +n_6_dimethylallyladenine
+    n6_2_isopentenyl_adenosine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +dihydrozeatin +beta_d_ribofuranose
+    dihydrozeatin_riboside
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    ascarylopyranose
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +yersiniose_a +phosphate +yersiniose_a +h2o
+    atp
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +nadh +h +gibberellin_a12 +16alpha_17_epoxy_gibberellin_a12 +h2o
+    nad
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +nadh +gibberellin_a9 +nad +h2o
+    16alpha_17_epoxy_gibberellin_a9
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +e_hex_2_en_1_ol +nadp +h
+    cis_3_hexenal
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +3z_hex_3_en_1_ol +nadp +h
+    e_hex_2_enal
+  }
 }

@@ -10,13 +10,13 @@ pathway h-to-4-methyl-5-cholest-8-en-null "H to 4α-methyl-5α-cholest-8-en…" 
     h
     <-> ec_1_14_13_70 [1.14.13.70] +24_25_dihydrolanosterol +o2 +nadph -lanost_8_ene_3_30_diol -h2o
     nadp
-    <-> . +lanost_8_ene_3_30_diol +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +lanost_8_ene_3_30_diol +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     3_hydroxylanost_8_en_32_al
-    <-> . +fmnh2 +o2 -formate -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -formate -fmn -h2o_chebi_15377 -hplus
     4_4_dimethyl_8_14_cholestadien_3_ol
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     4_4_dimethyl_5_cholest_8_en_3_ol
-    <-> . +fe2 +o2 +hplus -iron -h2o
+    <-> . +fe2 +o2_chebi_15379 +hplus -iron -h2o_chebi_15377
     3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate
     <-> . +nad -co2 -nadh
     4_methyl_5_cholest_8_en_3_one
@@ -48,13 +48,13 @@ pathway h-to-4-methyl-5-cholest-8-en-null "H to 4α-methyl-5α-cholest-8-en…" 
 
   branch from o2 side left {
     o2
-    <-> . +nadh +7z_10z_13z_16z_19z_docosapentaenoyl_coa +h +nad +h2o
+    <-> . +nadh_mnxm10 +7z_10z_13z_16z_19z_docosapentaenoyl_coa +h +nad_mnxm8 +h2o
     4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +9z_12z_15z_18z_21z_tetracosapentaenoyl_coa +h +nad +h2o
+    <-> . +nadh_mnxm10 +9z_12z_15z_18z_21z_tetracosapentaenoyl_coa +h +nad_mnxm8 +h2o
     6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
   }
 

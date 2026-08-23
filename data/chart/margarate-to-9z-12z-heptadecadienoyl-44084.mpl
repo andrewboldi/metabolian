@@ -18,13 +18,13 @@ pathway margarate-to-9z-12z-heptadecadienoyl-44084 "margarate to (9Z,12Z)-heptad
 
   branch from heptadecanoyl_coa side left {
     heptadecanoyl_coa
-    <-> . +h2o +h +coa
+    <-> . +h2o_water +h +coa_mnxm727276
     heptadecanoate
   }
 
   branch from heptadecanoyl_coa side right {
     heptadecanoyl_coa
-    <-> . +malonyl_coa +h +coa +3_oxononadecanoyl_coenzyme_a
+    <-> . +malonyl_coa +h +coa_mnxm727276 +3_oxononadecanoyl_coenzyme_a
     co2
   }
 
@@ -42,25 +42,25 @@ pathway margarate-to-9z-12z-heptadecadienoyl-44084 "margarate to (9Z,12Z)-heptad
 
   branch from 9z_heptadecenoyl_coa side left {
     9z_heptadecenoyl_coa
-    <-> . +h2o +coa
+    <-> . +h2o_water +coa_mnxm727276
     9z_heptadecenoic_acid
   }
 
   branch from 9z_heptadecenoyl_coa side right {
     9z_heptadecenoyl_coa
-    <-> . +nadp +h2o +heptadecanoyl_coa +o2 +nadph
+    <-> . +nadp +h2o_water +heptadecanoyl_coa +o2_mnxm735438 +nadph
     h
   }
 
   branch from heptadecanoyl_coa side left {
     heptadecanoyl_coa
     <-> . +acetyl_coa +h +3_oxononadecanoyl_coenzyme_a
-    coa
+    coa_mnxm727276
   }
 
   branch from heptadecanoyl_coa side right {
     heptadecanoyl_coa
-    <-> . +cholesterol +coa
+    <-> . +cholesterol +coa_mnxm727276
     cholest_5_en_3b_yl_heptadecanoate
   }
 
@@ -78,13 +78,13 @@ pathway margarate-to-9z-12z-heptadecadienoyl-44084 "margarate to (9Z,12Z)-heptad
 
   branch from 9z_heptadecenoyl_coa side left {
     9z_heptadecenoyl_coa
-    <-> . +r_carnitine +coa
+    <-> . +r_carnitine +coa_mnxm727276
     heptadecenoylcarnitine_8
   }
 
   branch from 9z_heptadecenoyl_coa side right {
     9z_heptadecenoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
+    <-> . +sn_glycerol_3_phosphate +coa_mnxm727276
     1_9z_heptadecenoyl_sn_glycero_3_phosphate_ammoni
   }
 }

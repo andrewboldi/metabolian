@@ -42,7 +42,7 @@ pathway 1-6-anhydro-n-acetyl-mu-to-diphosphate "1,6-anhydro-N-acetyl-β-mu… to
 
   branch from n_acetylneuraminate side right {
     n_acetylneuraminate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +h2o
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_chebi_87791 +h2o
     gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_8_neu5ac
   }
 
@@ -91,13 +91,13 @@ pathway 1-6-anhydro-n-acetyl-mu-to-diphosphate "1,6-anhydro-N-acetyl-β-mu… to
   branch from cmp_n_acetyl_neuraminate side right {
     cmp_n_acetyl_neuraminate
     <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cytidine_5_monophosphate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_156397
   }
 
   branch from cmp_n_acetyl_neuraminate side left {
     cmp_n_acetyl_neuraminate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cytidine_5_monophosphate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_156396 +cytidine_5_monophosphate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_156398
   }
 
   branch from ppi side right {
@@ -109,6 +109,6 @@ pathway 1-6-anhydro-n-acetyl-mu-to-diphosphate "1,6-anhydro-N-acetyl-β-mu… to
   branch from ppi side left {
     ppi
     <-> . +3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3 +atp +coa +amp
-    3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3
+    3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3_chebi_83794
   }
 }

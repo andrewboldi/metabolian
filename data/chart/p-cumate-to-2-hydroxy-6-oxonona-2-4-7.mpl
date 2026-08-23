@@ -18,53 +18,53 @@ pathway p-cumate-to-2-hydroxy-6-oxonona-2-4-7 "p-cumate to 2-hydroxy-6-oxonona-2
     2e_4z_2_hydroxy_7_methyl_6_oxo_2_4_octadienoate
     <-> . +h2o -isobutyrate -hplus
     2_oxopent_4_enoate
-    <-> ec_3_7_1_14 [3.7.1.14] +h +fumarate -h2o
+    <-> ec_3_7_1_14 [3.7.1.14] +h +fumarate -h2o_water
     2_hydroxy_6_ketononatrienedioate
-    <-> ec_1_13_11_16 [1.13.11.16] +h -o2
+    <-> ec_1_13_11_16 [1.13.11.16] +h -o2_mnxm735438
     2e_3_2_3_dihydroxyphenyl_prop_2_enoate
-    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
+    <-> ec_1_13_11_16 [1.13.11.16] +h +o2_mnxm735438
     2_hydroxy_6_oxonona_2_4_7_trienedioic_acid
   }
 
   branch from 2e_4z_2_hydroxy_7_methyl_6_oxo_2_4_octadienoate side left {
     2e_4z_2_hydroxy_7_methyl_6_oxo_2_4_octadienoate
-    <-> . +2_methylpropanoate +h +h2o
+    <-> . +2_methylpropanoate +h +h2o_water
     2e_2_hydroxypenta_2_4_dienoate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +urdamycinone_f
     aquayamycin
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +dihydrokalafungin +o2
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +dihydrokalafungin +o2_mnxm735438
     5_deoxodihydrokalafungin
   }
 
   branch from 2e_3_2_3_dihydroxyphenyl_prop_2_enoate side right {
     2e_3_2_3_dihydroxyphenyl_prop_2_enoate
-    <-> ec_1_3_1_87 [1.3.1.87] +nadh +h +nad
+    <-> ec_1_3_1_87 [1.3.1.87] +nadh_mnxm10 +h +nad_mnxm8
     e_3_5r_6s_5_6_dihydroxycyclohexa_1_3_dienyl_acr
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +phenanthrene_3_4_diol
     2_hydroxy_2h_benzo_h_chromene_2_carboxylate
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +nadh +h +phenanthrene +nad
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +nadh_mnxm10 +h +phenanthrene +nad_mnxm8
     3s_4r_3_4_dihydrophenanthrene_3_4_diol
   }
 
   branch from 2_hydroxy_6_oxonona_2_4_7_trienedioic_acid side left {
     2_hydroxy_6_oxonona_2_4_7_trienedioic_acid
-    <-> ec_1_13_11_16 [1.13.11.16] +o2
+    <-> ec_1_13_11_16 [1.13.11.16] +o2_mnxm735438
     caffeic_acid
   }
 
@@ -82,7 +82,7 @@ pathway p-cumate-to-2-hydroxy-6-oxonona-2-4-7 "p-cumate to 2-hydroxy-6-oxonona-2
 
   branch from fumarate side right {
     fumarate
-    <-> . +h +pyruvate +h2o
+    <-> . +h +pyruvate +h2o_water
     3_maleylpyruvate
   }
 
@@ -92,26 +92,26 @@ pathway p-cumate-to-2-hydroxy-6-oxonona-2-4-7 "p-cumate to 2-hydroxy-6-oxonona-2
     3_methylbenzylsuccinate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_1_1_45 [3.1.1.45] +2e_2_5_dichloro_4_oxo_2_hexenedioic_acid
     2_5_dichloro_carboxymethylenebut_2_en_4_olide
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +nadh +h +bisphenol_a +o2 +nad
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +nadh_mnxm10 +h +bisphenol_a +o2_mnxm735438 +nad_mnxm8
     1_2_bis_4_hydroxyphenyl_propan_2_ol
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +2_oxoglutarate +h +gibberellin_a24 +succinate +gibberellin_a36
-    co2
+    co2_mnxm13
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +amyrin
     soyasapogenol_b
   }

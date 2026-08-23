@@ -14,7 +14,7 @@ pathway 1-hexadecanoyl-2-9z-12z-to-h2o "1-hexadecanoyl-2-(9Z,12Z-… to H2O" {
     1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
     <-> . +h2o -linoleate -hplus
     1_stearoyl_sn_glycero_3_phosphocholine
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_stearoyl_sn_glycero_3_phosphocholine -h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -1_stearoyl_sn_glycero_3_phosphocholine -h2o_water
     atp
   }
 

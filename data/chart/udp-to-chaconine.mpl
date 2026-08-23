@@ -14,19 +14,19 @@ pathway udp-to-chaconine "UDP to γ-chaconine" {
     gamma_solanine
     <-> . +udp +h -solanidine
     udp_alpha_d_galactose
-    <-> . +solanidine +udp_d_glucose -udp -hplus
+    <-> . +solanidine +udp_d_glucose -udp_chebi_58223 -hplus
     chaconine
   }
 
   branch from udp_d_glucose side left {
     udp_d_glucose
-    <-> . +mogroside_ii_e +udp +hplus
+    <-> . +mogroside_ii_e +udp_chebi_58223 +hplus
     mogroside_iiie
   }
 
   branch from udp_d_glucose side right {
     udp_d_glucose
-    <-> . +stromemycin_aglycone +udp +hplus
+    <-> . +stromemycin_aglycone +udp_chebi_58223 +hplus
     stromemycin
   }
 }

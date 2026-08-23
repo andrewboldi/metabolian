@@ -18,7 +18,7 @@ pathway hexanedioyl-coa-to-3-oxoadipyl-coa-null "hexanedioyl-CoA to 3-oxoadipyl-
 
   branch from 3s_hydroxyadipyl_coa side left {
     3s_hydroxyadipyl_coa
-    <-> ec_4_2_1_17 [4.2.1.17] +h2o
+    <-> ec_4_2_1_17 [4.2.1.17] +h2o_chebi_15377
     e_2_3_didehydroadipoyl_coa
   }
 }

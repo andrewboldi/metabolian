@@ -90,8 +90,8 @@ pathway 6-o-cis-methoxy-mycolyl-t-to-atp "6-O-cis-methoxy-mycolyl-t… to ATP" {
 
   branch from udp side left {
     udp
-    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h +udp_alpha_d_glucose
-    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
+    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy_mnxm1364792 +h +udp_alpha_d_glucose
+    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p_mnxm1364778
   }
 
   branch from h side right {
@@ -126,8 +126,8 @@ pathway 6-o-cis-methoxy-mycolyl-t-to-atp "6-O-cis-methoxy-mycolyl-t… to ATP" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p +h
-    1_phenyl_3_2_4_6_trihydroxyphenyl_propane_1_3_di
+    <-> . +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p_mnxm1364790 +h
+    1_phenyl_3_2_4_6_trihydroxyphenyl_propane_1_3_di_mnxm1364770
   }
 
   branch from adp side right {

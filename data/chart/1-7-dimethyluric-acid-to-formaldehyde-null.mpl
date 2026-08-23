@@ -10,11 +10,11 @@ pathway 1-7-dimethyluric-acid-to-formaldehyde-null "1,7-Dimethyluric acid to for
     1_7_dimethyluric_acid
     <-> ec_1_17_3_2 [1.17.3.2] +h2o2 -1_7_dimethylxanthine -h2o
     o2
-    <-> ec_1_14_13_178 [1.14.13.178] +1_7_dimethylxanthine +nadh +o2 +hplus -formaldehyde -nad -h2o
+    <-> ec_1_14_13_178 [1.14.13.178] +1_7_dimethylxanthine +nadh +o2_chebi_15379 +hplus -formaldehyde -nad -h2o_chebi_15377
     7_methylxanthine
     <-> ec_2_1_1_159 [2.1.1.159] +sam -sah -hplus
     theobromine
-    <-> ec_1_14_13_179 [1.14.13.179] +nadh +o2 +hplus -formaldehyde -nad -h2o
+    <-> ec_1_14_13_179 [1.14.13.179] +nadh +o2_chebi_15379 +hplus -formaldehyde -nad -h2o_chebi_15377
     7_methylxanthine
   }
 }

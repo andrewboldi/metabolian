@@ -14,7 +14,7 @@ pathway 4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan "4-(2-iminoethyl)phenol
     2_4_hydroxyphenyl_ethanol
     <-> . +udp_d_glucose -udp -hplus
     salidroside
-    <-> . +udp +h -2_4_hydroxyphenyl_ethanol
+    <-> . +udp_mnxm1102128 +h -2_4_hydroxyphenyl_ethanol
     udp_alpha_d_glucose
   }
 
@@ -44,13 +44,13 @@ pathway 4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan "4-(2-iminoethyl)phenol
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +beta_d_man_1_2_alpha_d_glc_1_3_alpha_d_man_1_2_a +h
+    <-> . +udp_mnxm1102128 +beta_d_man_1_2_alpha_d_glc_1_3_alpha_d_man_1_2_a +h
     beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
+    <-> . +udp_mnxm1102128 +h +beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
     beta_d_man_1_2_alpha_d_man_1_2_alpha_d_glc_1_3_a
   }
 
@@ -126,27 +126,27 @@ pathway 4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan "4-(2-iminoethyl)phenol
     withanone_27_o_d_glucoside
   }
 
-  branch from udp side left {
-    udp
+  branch from udp_mnxm1102128 side left {
+    udp_mnxm1102128
     <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_0_2_18_3_digalactosyldiacylglycerol +1_18_0_2_18_3_monogalactosyldiacylglycerol
     udp_alpha_d_galactose
   }
 
-  branch from udp side right {
-    udp
+  branch from udp_mnxm1102128 side right {
+    udp_mnxm1102128
     <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_1_2_18_2_digalactosyldiacylglycerol +udp_alpha_d_galactose
     1_18_1_2_18_2_monogalactosyldiacylglycerol
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d +h
+    <-> . +udp_mnxm1102128 +alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d +h
     beta_d_gal_1_3_alpha_d_galnac_pp_und
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +alpha_d_glc_1_2_beta_d_glc_1_3_alpha_d_glcnac_pp +h
+    <-> . +udp_mnxm1102128 +alpha_d_glc_1_2_beta_d_glc_1_3_alpha_d_glcnac_pp +h
     d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
   }
 }

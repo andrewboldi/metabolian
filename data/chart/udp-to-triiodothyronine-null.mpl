@@ -81,13 +81,13 @@ pathway udp-to-triiodothyronine-null "UDP to triiodothyronine…" {
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
     <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm8960
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm8960
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid_mnxm1372530
   }
 
   branch from udp_alpha_d_glucuronate side left {

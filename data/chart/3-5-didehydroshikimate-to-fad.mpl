@@ -16,7 +16,7 @@ pathway 3-5-didehydroshikimate-to-fad "3,5-didehydroshikimate to FAD" {
     2_phytyl_1_4_dihydroxynaphthalene
     <-> . +diphosphate +co2 -1_4_dihydroxy_2_naphthoate -phytyl_diphosphate
     h
-    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_heptaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus -co2 -ppi
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_heptaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus -co2_chebi_16526 -ppi
     2_demethylmenaquinol_7
     <-> ec_2_1_1_163 [2.1.1.163] +sam -sah -hplus
     menaquinol_7

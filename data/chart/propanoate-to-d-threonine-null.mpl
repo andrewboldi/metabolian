@@ -85,7 +85,7 @@ pathway propanoate-to-d-threonine-null "propanoate to D-threonine" {
   branch from propanoate side right {
     propanoate
     <-> ec_4_1_3_32 [4.1.3.32] +pyruvate
-    2r_3s_2_3_dimethylmalate
+    2r_3s_2_3_dimethylmalate_mnxm1364559
   }
 
   branch from h side left {

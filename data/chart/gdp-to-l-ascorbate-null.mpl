@@ -12,7 +12,7 @@ pathway gdp-to-l-ascorbate-null "GDP to L-ascorbate" {
     gdp_l_gulose
     <-> ec_5_1_3_18 [5.1.3.18]
     gdp_l_galactose
-    <-> ec_2_7_7_69 [2.7.7.69] +pi -gdp -hplus
+    <-> ec_2_7_7_69 [2.7.7.69] +pi -gdp_chebi_58189 -hplus
     l_galactose_1_phosphate
     <-> ec_3_1_3_93 [3.1.3.93] +h2o -pi
     l_galactopyranose
@@ -30,7 +30,7 @@ pathway gdp-to-l-ascorbate-null "GDP to L-ascorbate" {
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo +1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo +1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo +h2o_water
     atp
   }
 
@@ -43,7 +43,7 @@ pathway gdp-to-l-ascorbate-null "GDP to L-ascorbate" {
   branch from l_galactopyranose side right {
     l_galactopyranose
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    h2o
+    h2o_water
   }
 
   branch from l_galactono_1_4_lactone side left {
@@ -84,25 +84,25 @@ pathway gdp-to-l-ascorbate-null "GDP to L-ascorbate" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o_water
     1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_1d_m
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o_water
     1_octadecanoyl_2_9z_12z_15z_octadecatrienoyl_sn
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o_water
     1_9z_octadecenoyl_2_9z_12z_octadecadienoyl_sn_gl
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o_water
     1_2_dilinoleoyl_sn_glycero_3_phospho_1d_myo_inos
   }
 

@@ -10,9 +10,9 @@ pathway gypenoside-xvii-to-ginsenoside-rd-null "gypenoside XVII to ginsenoside R
     gypenoside_xvii
     <-> . +glucose -h2o
     ginsenoside_rb1
-    <-> ec_3_2_1_195 [3.2.1.195] +h2o -glucose
+    <-> ec_3_2_1_195 [3.2.1.195] +h2o_chebi_15377 -glucose
     ginsenoside_rd
-    <-> . +h2o -glucose
+    <-> . +h2o_chebi_15377 -glucose
     20s_ginsenoside_rg3
     <-> ec_2_4_1_363 [2.4.1.363] +udp_d_glucose -udp -hplus
     ginsenoside_rd

@@ -97,7 +97,7 @@ pathway udp-to-h2o "UDP to H2O" {
   branch from undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino side right {
     undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
     <-> . +formate +h2o
-    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
+    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin_mnxm741042
   }
 
   branch from undecaprenyl_phosphate side left {

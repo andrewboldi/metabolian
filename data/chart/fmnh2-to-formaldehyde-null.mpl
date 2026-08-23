@@ -12,7 +12,7 @@ pathway fmnh2-to-formaldehyde-null "FMNH2 to formaldehyde" {
     fmn
     <-> . +fmnh2 +methanesulfinate +h +o2 -fmn -h2o
     methanesulfonate
-    <-> ec_1_14_14_34 [1.14.14.34] +fmnh2 +o2 -sulfite -formaldehyde -h2o -hplus
-    fmn
+    <-> ec_1_14_14_34 [1.14.14.34] +fmnh2_chebi_57618 +o2_chebi_15379 -sulfite -formaldehyde_chebi_16842 -h2o_chebi_15377 -hplus
+    fmn_chebi_58210
   }
 }

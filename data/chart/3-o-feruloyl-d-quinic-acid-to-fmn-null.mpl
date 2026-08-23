@@ -18,13 +18,13 @@ pathway 3-o-feruloyl-d-quinic-acid-to-fmn-null "3-O-feruloyl-D-quinic acid to FM
 
   branch from e_feruloyl_coa side left {
     e_feruloyl_coa
-    <-> . +hexanoyl_coa +malonyl_coa +h +h2o +co2 +coa
+    <-> . +hexanoyl_coa +malonyl_coa +h +h2o_water +co2 +coa
     1_dehydro_6_gingerdione
   }
 
   branch from e_feruloyl_coa side right {
     e_feruloyl_coa
-    <-> . +hexanoyl_coa +malonyl_coa +h +h2o +co2 +coa
+    <-> . +hexanoyl_coa +malonyl_coa +h +h2o_water +co2 +coa
     6_dehydrogingerdione
   }
 
@@ -37,7 +37,7 @@ pathway 3-o-feruloyl-d-quinic-acid-to-fmn-null "3-O-feruloyl-D-quinic acid to FM
   branch from h side right {
     h
     <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +amp +coa
-    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19_mnxm1132437
   }
 
   branch from coa side left {
@@ -66,14 +66,14 @@ pathway 3-o-feruloyl-d-quinic-acid-to-fmn-null "3-O-feruloyl-D-quinic acid to FM
 
   branch from e_feruloyl_coa side left {
     e_feruloyl_coa
-    <-> ec_2_3_1_217 [2.3.1.217] +p_coumaroyl_diketide_coa +h2o +co2 +h +coa
+    <-> ec_2_3_1_217 [2.3.1.217] +p_coumaroyl_diketide_coa +h2o_water +co2 +h +coa
     demethoxycurcumin
   }
 
   branch from e_feruloyl_coa side right {
     e_feruloyl_coa
-    <-> ec_2_3_1_217 [2.3.1.217] +p_coumaroyl_diketide_coa +h2o +co2 +h +coa
-    demethoxycurcumin
+    <-> ec_2_3_1_217 [2.3.1.217] +p_coumaroyl_diketide_coa +h2o_water +co2 +h +coa
+    demethoxycurcumin_chebi_65737
   }
 
   branch from h side left {

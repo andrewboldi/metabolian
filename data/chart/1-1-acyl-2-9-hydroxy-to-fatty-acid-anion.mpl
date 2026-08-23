@@ -18,7 +18,7 @@ pathway 1-1-acyl-2-9-hydroxy-to-fatty-acid-anion "1'-[1-acyl-2-(9-hydroxy-(… t
 
   branch from 9_hode side left {
     9_hode
-    <-> . +9s_hydroperoxy_10e_12z_octadecadienoate +h +nadph +h2o
+    <-> . +9s_hydroperoxy_10e_12z_octadecadienoate +h +nadph +h2o_water
     nadp
   }
 

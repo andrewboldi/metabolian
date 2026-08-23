@@ -12,7 +12,7 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph "13,14-dihydro-15-keto-PGF… to NADP
     15_oxoprostaglandin_f2
     <-> .
     prostaglandin_i2
-    <-> ec_1_1_1_231 [1.1.1.231] +nadp -nadph
+    <-> ec_1_1_1_231 [1.1.1.231] +nadp_mnxm5 -nadph_mnxm738702
     5z_13e_6_9alpha_epoxy_11alpha_hydroxy_15_oxopro
   }
 
@@ -25,7 +25,7 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph "13,14-dihydro-15-keto-PGF… to NADP
   branch from 15_oxoprostaglandin_f2 side right {
     15_oxoprostaglandin_f2
     <-> .
-    prostaglandin_i2
+    prostaglandin_i2_mnxm1560735
   }
 
   branch from prostaglandin_i2 side left {
@@ -34,15 +34,15 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph "13,14-dihydro-15-keto-PGF… to NADP
     h
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +l_leucine +h +o2 +nadp +3_methylbutyraldehyde_oxime +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +l_leucine +h +o2 +nadp_mnxm5 +3_methylbutyraldehyde_oxime +h2o
     co2
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer +h +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer +h +nadp_mnxm5
     cdp_ascarylose
   }
 
@@ -52,27 +52,27 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph "13,14-dihydro-15-keto-PGF… to NADP
     11beta_prostaglandin_f2
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_15 [1.14.13.15] +dihydroxy_4_cholesten_3_one_7a26 +h +o2 +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_13_15 [1.14.13.15] +dihydroxy_4_cholesten_3_one_7a26 +h +o2 +nadph_mnxm738702 +h2o
     7alpha_hydroxy_3_oxo_4_cholestenoic_acid
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_15 [1.14.13.15] +26_hydroxycholesterol +h +o2 +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_14_13_15 [1.14.13.15] +26_hydroxycholesterol +h +o2 +nadph_mnxm738702 +h2o
     3beta_hydroxy_cholest_5_en_26_oate
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +dtdp_beta_l_rhamnose +nadp +h
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +dtdp_beta_l_rhamnose +nadp_mnxm5 +h
     dtdp_4_dehydro_6_deoxy_alpha_d_glucose
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_3_1_22 [1.3.1.22] +5_dihydrodeoxycorticosterone +nadp +h
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_3_1_22 [1.3.1.22] +5_dihydrodeoxycorticosterone +nadp_mnxm5 +h
     21_hydroxyprogesterone
   }
 }

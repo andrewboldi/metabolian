@@ -98,13 +98,13 @@ pathway 3-keto-beta-d-galactose-to-h2o "3-keto-beta-D-galactose to H2O" {
 
   branch from glucose side right {
     glucose
-    <-> . +lampranthin_ii +1_o_feruloyl_d_glucose
-    betanin
+    <-> . +lampranthin_ii_mnxm1371043 +1_o_feruloyl_d_glucose
+    betanin_mnxm1371652
   }
 
   branch from glucose side left {
     glucose
-    <-> . +lampranthin_ii +betanin
+    <-> . +lampranthin_ii_mnxm1371045 +betanin_mnxm1371652
     1_o_feruloyl_d_glucose
   }
 

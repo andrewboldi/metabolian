@@ -30,8 +30,8 @@ pathway fluoroacetyl-coa-to-glyoxylate "fluoroacetyl-CoA to glyoxylate" {
 
   branch from fluoroacetyl_coa side left {
     fluoroacetyl_coa
-    <-> ec_6_2_1_1 [6.2.1.1] +diphosphate +amp +atp +coa
-    fluoroacetate
+    <-> ec_6_2_1_1 [6.2.1.1] +diphosphate +amp +atp +coa_mnxm727276
+    fluoroacetate_mnxm1475
   }
 
   branch from glyoxylate side right {

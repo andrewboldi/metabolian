@@ -18,7 +18,7 @@ pathway udp-to-di-sulfido-diiron "UDP to di-μ-sulfido-diiron" {
     l_aminobutyrate
     <-> . +akg -glutamate
     oxobut
-    <-> ec_1_2_7_1 [1.2.7.1] +di_sulfido_diiron +coa -di_sulfido_diiron -co2 -hplus
+    <-> ec_1_2_7_1 [1.2.7.1] +di_sulfido_diiron +coa -di_sulfido_diiron_chebi_33738 -co2 -hplus
     propionyl_coa
   }
 }

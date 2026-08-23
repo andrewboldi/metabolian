@@ -14,7 +14,7 @@ pathway propan-1-ol-to-h2o-65468 "propan-1-ol to H2O" {
     h
     <-> . +alachlor +1_propanol -h2o
     butachlor
-    <-> ec_1_14_15_23 [1.14.15.23] +di_sulfido_diiron +o2 +hplus -n_2_6_diethylphenyl_2_chloroacetamide -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_23 [1.14.15.23] +di_sulfido_diiron +o2 +hplus -n_2_6_diethylphenyl_2_chloroacetamide -di_sulfido_diiron_chebi_33737 -h2o_chebi_15377
     butyl_formate
     <-> . +n_2_6_diethylphenyl_2_chloroacetamide +methanol -h2o
     2_chloro_n_2_6_diethylphenyl_n_methylacetamide
@@ -106,7 +106,7 @@ pathway propan-1-ol-to-h2o-65468 "propan-1-ol to H2O" {
 
   branch from acetate side left {
     acetate
-    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa +r_lactate
+    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa_mnxm1104266 +r_lactate
     r_lactoyl_coa
   }
 
@@ -118,7 +118,7 @@ pathway propan-1-ol-to-h2o-65468 "propan-1-ol to H2O" {
 
   branch from 1_propanol side left {
     1_propanol
-    <-> ec_2_3_1_84 [2.3.1.84] +propyl_benzoate +coa
+    <-> ec_2_3_1_84 [2.3.1.84] +propyl_benzoate +coa_mnxm727276
     benzoyl_coa
   }
 

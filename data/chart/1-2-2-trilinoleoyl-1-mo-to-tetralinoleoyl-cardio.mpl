@@ -24,7 +24,7 @@ pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'
 
   branch from tetralinoleoyl_cardiolipin side right {
     tetralinoleoyl_cardiolipin
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +trilinoleoyl_2_monolysocardiolipin
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_73008 +trilinoleoyl_2_monolysocardiolipin
     1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
   }
 
@@ -61,7 +61,7 @@ pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'
   branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side right {
     1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_73008
   }
 
   branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side left {
@@ -97,7 +97,7 @@ pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'
   branch from linoleoyl_coa side right {
     linoleoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_72838
   }
 
   branch from linoleoyl_coa side left {

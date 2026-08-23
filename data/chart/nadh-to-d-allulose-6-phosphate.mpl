@@ -118,7 +118,7 @@ pathway nadh-to-d-allulose-6-phosphate "NADH to D-Allulose 6-phosphate" {
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_1 [1.3.1.1] +nadh +thymine +h
+    <-> ec_1_3_1_1 [1.3.1.1] +nadh +thymine_mnxm1369303 +h
     5_6_dihydrothymine
   }
 

@@ -18,13 +18,13 @@ pathway gibberellin-a53-to-succinate-60800 "gibberellin A53 to succinate" {
 
   branch from gibberellin_a44_2_diacid_form side left {
     gibberellin_a44_2_diacid_form
-    <-> . +2_oxoglutarate +h +o2 +succinate +gibberellin_a38 +h2o
-    co2
+    <-> . +2_oxoglutarate +h +o2_mnxm735438 +succinate_mnxm25 +gibberellin_a38 +h2o_water
+    co2_mnxm13
   }
 
   branch from gibberellin_a17 side right {
     gibberellin_a17
-    <-> . +gibberellin_a28 +co2 +succinate +h +o2
+    <-> . +gibberellin_a28 +co2_mnxm13 +succinate_mnxm25 +h +o2_mnxm735438
     2_oxoglutarate
   }
 }

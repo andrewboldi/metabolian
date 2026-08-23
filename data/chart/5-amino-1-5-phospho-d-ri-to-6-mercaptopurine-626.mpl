@@ -42,7 +42,7 @@ pathway 5-amino-1-5-phospho-d-ri-to-6-mercaptopurine-626 "5-amino-1-(5-phospho-D
 
   branch from h side left {
     h
-    <-> ec_3_1_4_42 [3.1.4.42] +sn_glycerol_3_phosphate +h2o
+    <-> ec_3_1_4_42 [3.1.4.42] +sn_glycerol_3_phosphate +h2o_water
     glycerol_1_2_cyclic_phosphate
   }
 
@@ -54,7 +54,7 @@ pathway 5-amino-1-5-phospho-d-ri-to-6-mercaptopurine-626 "5-amino-1-(5-phospho-D
 
   branch from atp side left {
     atp
-    <-> . +s_adenosyl_l_homocysteine +diphosphate +co2 +dieckmann_product +nadp +coa +amp +h2o +s_adenosyl_l_methionine +h +l_serine +nadph
+    <-> . +s_adenosyl_l_homocysteine +diphosphate +co2 +dieckmann_product +nadp +coa +amp +h2o_water +s_adenosyl_l_methionine +h +l_serine +nadph
     malonyl_coa
   }
 

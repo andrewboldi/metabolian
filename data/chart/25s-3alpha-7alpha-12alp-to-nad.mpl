@@ -55,7 +55,7 @@ pathway 25s-3alpha-7alpha-12alp-to-nad "(25S)-3alpha,7alpha,12alp… to NAD" {
   branch from o2 side left {
     o2
     <-> ec_1_16_3_1 [1.16.3.1] +fe +h +h2o
-    fe
+    fe_mnxm1370984
   }
 
   branch from o2 side right {

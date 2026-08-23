@@ -10,7 +10,7 @@ pathway ginsenoside-mc-to-h2o "ginsenoside Mc to H2O" {
     ginsenoside_mc
     <-> ec_3_2_1_191 [3.2.1.191] +glucose -h2o
     ginsenoside_rc
-    <-> . +h2o -ginsenoside_rd
+    <-> . +h2o_chebi_15377 -ginsenoside_rd
     l_arabinofuranose
     <-> ec_3_2_1_193 [3.2.1.193] +glucose +ginsenoside_f2 -h2o
     ginsenoside_rc
@@ -19,7 +19,7 @@ pathway ginsenoside-mc-to-h2o "ginsenoside Mc to H2O" {
   branch from ginsenoside_rc side left {
     ginsenoside_rc
     <-> . +glucose +l_arabinofuranose +h2o
-    ginsenoside_f2
+    ginsenoside_f2_mnxm1371025
   }
 
   branch from h2o side right {

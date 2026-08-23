@@ -12,7 +12,7 @@ pathway 5-6-7-8-tetrahydrobiopter-to-r-dyspropterin-null "5,6,7,8-tetrahydrobiop
     6r_6_lactoyl_5_6_7_8_tetrahydropterin
     <-> ec_1_1_1_325 [1.1.1.325] +h +nadph -6r_l_threo_tetrahydrobiopterin
     nadp
-    <-> ec_1_1_1_325 [1.1.1.325] +6r_l_threo_tetrahydrobiopterin +nadp -nadph -hplus
+    <-> ec_1_1_1_325 [1.1.1.325] +6r_l_threo_tetrahydrobiopterin +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     r_dyspropterin
   }
 }

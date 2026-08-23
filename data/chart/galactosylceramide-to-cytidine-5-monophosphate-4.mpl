@@ -11,7 +11,7 @@ pathway galactosylceramide-to-cytidine-5-monophosphate-4 "galactosylceramide to 
     <-> . +h2o -d_galactopyranose
     n_acylsphingoid
     <-> . +udp_d_galactose -udp -hplus
-    galactosylceramide
+    galactosylceramide_chebi_143593
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n_acetyl_neuraminosyl_2_3_d_galactosyl_1_1_ceram
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
@@ -36,8 +36,8 @@ pathway galactosylceramide-to-cytidine-5-monophosphate-4 "galactosylceramide to 
     galactitol
   }
 
-  branch from galactosylceramide side right {
-    galactosylceramide
+  branch from galactosylceramide_chebi_143593 side right {
+    galactosylceramide_chebi_143593
     <-> . +udp_d_galactose +udp +hplus
     d_galactosyl_1_4_d_galactosyl_1_1_ceramide
   }
@@ -50,8 +50,8 @@ pathway galactosylceramide-to-cytidine-5-monophosphate-4 "galactosylceramide to 
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_chebi_78447 +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_chebi_78455
   }
 
   branch from d_galactopyranose side left {
@@ -93,12 +93,12 @@ pathway galactosylceramide-to-cytidine-5-monophosphate-4 "galactosylceramide to 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
     <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_chebi_90512
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
     <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_141697
   }
 }

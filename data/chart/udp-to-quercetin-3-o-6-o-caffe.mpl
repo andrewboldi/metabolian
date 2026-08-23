@@ -12,7 +12,7 @@ pathway udp-to-quercetin-3-o-6-o-caffe "UDP to quercetin 3-O-[(6-O-caffe…" {
     udp_beta_l_rhamnose
     <-> . +udp +quercetin_3_gentiobioside -quercetin_3_o_d_glucopyranoside
     udp_alpha_d_glucose
-    <-> . +quercetin_3_o_d_glucopyranoside +udp_d_glucose -udp -hplus
+    <-> . +quercetin_3_o_d_glucopyranoside +udp_d_glucose -udp_chebi_58223 -hplus
     quercetin_3_o_d_glucosyl_1_2_d_glucoside
     <-> . +trans_caffeoyl_coa -coa -hplus
     quercetin_3_o_6_o_caffeoyl_d_glucosyl_1_2_d_gluc
@@ -68,13 +68,13 @@ pathway udp-to-quercetin-3-o-6-o-caffe "UDP to quercetin 3-O-[(6-O-caffe…" {
 
   branch from udp_d_glucose side left {
     udp_d_glucose
-    <-> . +16_hydroxygypsogenate +udp
+    <-> . +16_hydroxygypsogenate +udp_chebi_58223
     16_hydroxygypsogenate_28_d_glucoside
   }
 
   branch from udp_d_glucose side right {
     udp_d_glucose
-    <-> . +l_fucosyl_l_seryl +udp +hplus
+    <-> . +l_fucosyl_l_seryl +udp_chebi_58223 +hplus
     d_glucosyl_1_3_l_fucosyl_l_seryl
   }
 

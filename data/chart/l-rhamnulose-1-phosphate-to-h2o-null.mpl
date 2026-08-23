@@ -45,7 +45,7 @@ pathway l-rhamnulose-1-phosphate-to-h2o-null "L-rhamnulose 1-phosphate to H2O" {
   branch from l_rhamnulose_1_phosphate side left {
     l_rhamnulose_1_phosphate
     <-> . +h +adp +atp
-    l_rhamnulose
+    l_rhamnulose_mnxm731756
   }
 
   branch from h side right {

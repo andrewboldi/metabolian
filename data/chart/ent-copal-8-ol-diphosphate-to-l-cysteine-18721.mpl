@@ -91,7 +91,7 @@ pathway ent-copal-8-ol-diphosphate-to-l-cysteine-18721 "ent-copal-8-ol diphospha
   branch from h2s side left {
     h2s
     <-> ec_1_8_98_7 [1.8.98.7] +l_cysteine +sam +h2o +5_deoxyadenosine +methionine +hplus
-    l_3_oxoalanine
+    l_3_oxoalanine_chebi_85621
   }
 
   branch from h2s side right {

@@ -10,9 +10,9 @@ pathway udp-to-d-galf-1-5-d-galf-null "UDP to β-D-Galf-(1→5)-β-D-Galf-(…" 
     udp
     <-> ec_2_4_1_288 [2.4.1.288] +h +beta_d_galf_1_5_beta_d_galf_1_6_14_beta_d_galf -d_galf_1_5_d_galf_1_4_l_rhap_1_3_d_glcpnac_1_di
     udp_d_galactofuranose
-    <-> . +l_rhap_1_3_d_glcpnac_1_diphospho_trans_octacis -udp -hplus
+    <-> . +l_rhap_1_3_d_glcpnac_1_diphospho_trans_octacis -udp_chebi_58223 -hplus
     d_galf_1_4_l_rhap_1_3_d_glcpnac_1_diphospho_tra
-    <-> . +udp_d_galactofuranose -udp -hplus
+    <-> . +udp_d_galactofuranose -udp_chebi_58223 -hplus
     d_galf_1_5_d_galf_1_4_l_rhap_1_3_d_glcpnac_1_di
   }
 }

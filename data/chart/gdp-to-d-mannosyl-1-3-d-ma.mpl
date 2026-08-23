@@ -14,7 +14,7 @@ pathway gdp-to-d-mannosyl-1-3-d-ma "GDP to α-D-mannosyl-(1→3)-α-D-ma…" {
     alpha_d_man_1_3_alpha_d_man_1_3_alpha_d_glcnac_p
     <-> ec_2_4_1_349 [2.4.1.349] +gdp +h -d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos
     gdp_alpha_d_mannose
-    <-> ec_2_4_1_349 [2.4.1.349] +d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos +gdp_d_mannose -gdp -hplus
+    <-> ec_2_4_1_349 [2.4.1.349] +d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos +gdp_d_mannose -gdp_chebi_58189 -hplus
     d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n
   }
 }

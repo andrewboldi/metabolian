@@ -12,9 +12,9 @@ pathway udp-to-d-glucopyranose "UDP to D-glucopyranose" {
     udp_alpha_d_glucose
     <-> . +glucose +20s_protopanaxadiol -h2o
     20s_ginsenoside_rh2
-    <-> ec_2_4_1_365 [2.4.1.365] +udp_d_glucose -udp -hplus
+    <-> ec_2_4_1_365 [2.4.1.365] +udp_d_glucose -udp_chebi_58223 -hplus
     20s_ginsenoside_rg3
-    <-> . +h2o -glucose
+    <-> . +h2o_chebi_15377 -glucose
     20s_ginsenoside_rh2
   }
 }

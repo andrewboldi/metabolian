@@ -12,19 +12,19 @@ pathway udp-to-gypsogenate "UDP to gypsogenate…" {
     udp_alpha_d_glucose
     <-> . +gypsogenin +fmnh2 +o2 -fmn -h2o -hplus
     gypsogenate
-    <-> . +udp_d_glucose -udp
+    <-> . +udp_d_glucose -udp_chebi_58223
     gypsogenate_28_d_glucoside
   }
 
   branch from udp_d_glucose side left {
     udp_d_glucose
-    <-> . +mogroside_iiie +udp +hplus
+    <-> . +mogroside_iiie +udp_chebi_58223 +hplus
     isomogroside_iv
   }
 
   branch from udp_d_glucose side right {
     udp_d_glucose
-    <-> . +mogroside_iiie +udp +hplus
+    <-> . +mogroside_iiie +udp_chebi_58223 +hplus
     mogroside_iv
   }
 }

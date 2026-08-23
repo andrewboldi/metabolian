@@ -11,7 +11,7 @@ pathway asiatate-to-asiaticoside "asiatate to asiaticoside" {
     <-> . +udp_d_glucose -udp
     2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl
     <-> . +udp_d_glucose -udp -hplus
-    2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl
+    2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl_chebi_234052
     <-> . +udp_l_rhamnose -udp -hplus
     asiaticoside
   }

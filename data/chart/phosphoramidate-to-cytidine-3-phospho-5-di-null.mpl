@@ -12,7 +12,7 @@ pathway phosphoramidate-to-cytidine-3-phospho-5-di-null "phosphoramidate to cyti
     n5_phospho_l_glutamine
     <-> ec_2_7_7_103 [2.7.7.103] +ctp +hplus -ppi
     n5_cytidine_5_diphosphoramidyl_l_glutamine
-    <-> ec_3_5_1_129 [3.5.1.129] +h2o -glutamate -hplus
+    <-> ec_3_5_1_129 [3.5.1.129] +h2o_chebi_15377 -glutamate -hplus
     cytidine_5_diphosphoramidate
     <-> ec_2_7_1_224 [2.7.1.224] +atp -adp -hplus
     cytidine_3_phospho_5_diphosphoramidate
@@ -32,14 +32,14 @@ pathway phosphoramidate-to-cytidine-3-phospho-5-di-null "phosphoramidate to cyti
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> . +adp_mnxm40333 +phosphate +atp_mnxm3 +h2o
     9e_12e_octadecadienoyl_coa
   }
 
   branch from h side right {
     h
-    <-> . +adp +1_4_alpha_d_glucan +phosphate +1_4_alpha_d_glucan +h2o
-    atp
+    <-> . +adp_mnxm40333 +1_4_alpha_d_glucan +phosphate +1_4_alpha_d_glucan +h2o
+    atp_mnxm3
   }
 
   branch from h2o side left {

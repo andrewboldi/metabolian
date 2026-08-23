@@ -69,7 +69,7 @@ pathway h-to-4-methylcatechol-null "H to 4-methylcatechol" {
   branch from h2o side left {
     h2o
     <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly
-    n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly
+    n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly_mnxm818769
   }
 
   branch from o2 side right {

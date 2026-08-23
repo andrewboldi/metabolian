@@ -12,9 +12,9 @@ pathway tetradecanoate-ester-to-1-myristoyl-2-oleoyl-sn "tetradecanoate ester to
     aliphatic_alcohol
     <-> . +tetradecanoate +fmnh2 +o2 -fmn -h2o -hplus
     14_hydroxymyristate
-    <-> . +nadp +h2o -tetradecanoate -o2 -nadph
+    <-> . +nadp +h2o_water -tetradecanoate_mnxm314 -o2_mnxm735438 -nadph
     h
-    <-> . +glycerophosphatidylethanolamine +tetradecanoate -h2o
+    <-> . +glycerophosphatidylethanolamine +tetradecanoate_mnxm314 -h2o_water
     1_myristoyl_sn_glycero_3_phosphoethanolamine
     <-> . +oleoyl_coa -coa
     1_myristoyl_2_oleoyl_sn_glycero_3_phosphoethanol
@@ -56,56 +56,56 @@ pathway tetradecanoate-ester-to-1-myristoyl-2-oleoyl-sn "tetradecanoate ester to
     glutathione
   }
 
-  branch from tetradecanoate side left {
-    tetradecanoate
-    <-> ec_3_1_1_28 [3.1.1.28] +r_carnitine +h +h2o
+  branch from tetradecanoate_mnxm314 side left {
+    tetradecanoate_mnxm314
+    <-> ec_3_1_1_28 [3.1.1.28] +r_carnitine +h +h2o_water
     o_tetradecanoyl_r_carnitine
   }
 
-  branch from tetradecanoate side right {
-    tetradecanoate
-    <-> ec_3_1_1_13 [3.1.1.13] +h +cholesterol +h2o
+  branch from tetradecanoate_mnxm314 side right {
+    tetradecanoate_mnxm314
+    <-> ec_3_1_1_13 [3.1.1.13] +h +cholesterol +h2o_water
     cholesteryl_myristate
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +h +z_4_2_hydroxy_5_sulfonatophenyl_2_oxobut_3_enoa
     1_2_dihydroxynaphthalene_6_sulfonate
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +3_hydroxy_2_naphthoate
     3_6_carboxymethylene_cyclohexa_2_4_dien_1_yliden
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadp +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2_mnxm735438 +nadp +h2o_water
     4_hydroxy_n_desmethyltamoxifen
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +alpha_hydroxytamoxifen +nadp +h2o +h +o2
+    <-> ec_1_14_14_1 [1.14.14.1] +alpha_hydroxytamoxifen +nadp +h2o_water +h +o2_mnxm735438
     tamoxifen
   }
 
   branch from 1_myristoyl_sn_glycero_3_phosphoethanolamine side left {
     1_myristoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +1_nitronaphthalene_5_6_oxide
     1_nitro_5_6_dihydroxy_dihydronaphthalene
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_1_14_14_1 [1.14.14.1] +11h_14_15_eeta
     11_14_15_trihydroxy_5z_8z_12e_icosatrienoic_acid
   }
@@ -142,31 +142,31 @@ pathway tetradecanoate-ester-to-1-myristoyl-2-oleoyl-sn "tetradecanoate ester to
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadph +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2_mnxm735438 +nadph +h2o_water
     alpha_hydroxy_n_desmethyltamoxifen
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +cyclophosphamide +h +o2 +nadph +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +cyclophosphamide +h +o2_mnxm735438 +nadph +h2o_water
     4_hydroxycyclophosphamide
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +bromobenzene_3_4_oxide
     bromobenzene_3_4_dihydrodiol
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +bromobenzene_2_3_oxide
     bromobenzene_2_3_dihydrodiol
   }
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +7_8_dihydro_7_hydroxy_8s_glutathionylbenzo_a_pyr +h2o +glutathione
+    <-> ec_2_5_1_18 [2.5.1.18] +7_8_dihydro_7_hydroxy_8s_glutathionylbenzo_a_pyr +h2o_water +glutathione
     benzo_a_pyrene_7_8_diol
   }
 

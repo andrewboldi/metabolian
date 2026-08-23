@@ -24,7 +24,7 @@ pathway trans-methylferulate-to-h2o "trans-methylferulate to H2O" {
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +4_bromophenol_2_3_epoxide +nadp +h2o +4_bromophenol +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +4_bromophenol_2_3_epoxide_mnxm1370792 +nadp +h2o +4_bromophenol +nadph
     o2
   }
 
@@ -36,7 +36,7 @@ pathway trans-methylferulate-to-h2o "trans-methylferulate to H2O" {
 
   branch from methanol side right {
     methanol
-    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a +h2o +h
+    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a_mnxm1364549 +h2o +h
     c_132_carboxypyropheophorbide_a
   }
 
@@ -60,8 +60,8 @@ pathway trans-methylferulate-to-h2o "trans-methylferulate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +2_6_dihydroxypseudooxynicotine
-    2_6_dihydroxy_n_methylmyosmine
+    <-> . +2_6_dihydroxypseudooxynicotine_mnxm1368966
+    2_6_dihydroxy_n_methylmyosmine_mnxm1372612
   }
 
   branch from h side left {
@@ -72,7 +72,7 @@ pathway trans-methylferulate-to-h2o "trans-methylferulate to H2O" {
 
   branch from h side right {
     h
-    <-> . +2_6_dihydroxynicotinate +o2 +h2o +co2 +maleamate
+    <-> . +2_6_dihydroxynicotinate_mnxm1369056 +o2 +h2o +co2 +maleamate
     formate
   }
 }

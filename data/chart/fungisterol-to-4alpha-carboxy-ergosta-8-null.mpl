@@ -43,7 +43,7 @@ pathway fungisterol-to-4alpha-carboxy-ergosta-8-null "fungisterol to 4alpha-carb
   branch from nadp side left {
     nadp
     <-> . +h +mycinamicin_v +o2 +nadph +h2o
-    mycinamicin_ii
+    mycinamicin_ii_mnxm738938
   }
 
   branch from nadp side right {
@@ -55,7 +55,7 @@ pathway fungisterol-to-4alpha-carboxy-ergosta-8-null "fungisterol to 4alpha-carb
   branch from h side left {
     h
     <-> . +mycinamicin_iv +o2 +nadph +nadp +h2o
-    mycinamicin_i
+    mycinamicin_i_mnxm738935
   }
 
   branch from h side right {

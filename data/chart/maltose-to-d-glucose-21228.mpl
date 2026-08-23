@@ -9,14 +9,14 @@ pathway maltose-to-d-glucose-21228 "α-maltose to α-D-glucose…" {
   spine at 0,0 {
     maltose
     <-> ec_5_1_3_3 [5.1.3.3]
-    maltose
+    maltose_chebi_18147
     <-> . +maltotriose -d_glucose
     maltotetraose
-    <-> . +maltose -d_glucose
+    <-> . +maltose_chebi_18147 -d_glucose
     maltopentaose
-    <-> . +maltose -d_glucose
+    <-> . +maltose_chebi_18147 -d_glucose
     maltohexaose
-    <-> . +maltose -d_glucose
+    <-> . +maltose_chebi_18147 -d_glucose
     maltoheptaose
     <-> . +pi -g1p
     maltohexaose

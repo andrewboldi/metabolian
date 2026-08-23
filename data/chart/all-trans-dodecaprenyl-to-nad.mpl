@@ -18,28 +18,159 @@ pathway all-trans-dodecaprenyl-to-nad "all-trans-dodecaprenyl… to NAD" {
     menaquinol_12
   }
 
+  branch from 2_demethylmenaquinol_12 side left {
+    2_demethylmenaquinol_12
+    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
+    demethylmenaquinone_12
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +siccayne +dmapp
+    pestalodiol
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> . +fpp
+    dauca_4_7_diene
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +malonyl-coa +acetyl_coa +sam +nadph_chebi_57783 +hplus +co2 +nadp_chebi_58349 +coa +h2o
+    soppiline_b
+  }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_296 [2.1.1.296] +5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib +sam +hplus
+    5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib_chebi_167614
+  }
 
+  branch from h side right {
+    h
+    <-> . +dtdp +100_2 +aquayamycin
+    dtdp_beta_l_rhodinose
+  }
 
+  branch from h side left {
+    h
+    <-> . +dtdp +urdamycin_g +dtdp_beta_l_rhodinose
+    100_2
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_99_31 [1.14.99.31] +tetradecanoyl_coa +h +o2 +nadp +h2o_water
+    trans_tetradec_11_enoyl_coa
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_99_32 [1.14.99.32] +tetradecanoyl_coa +h +o2 +nadp +h2o_water
+    cis_tetradec_11_enoyl_coa
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_28 [1.2.1.28] +3_hydroxybenzoate +nadh +h +h2o_water
+    3_hydroxybenzaldehyde
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_3_1_19 [1.3.1.19] +nadh +phthalate +h
+    1_2_dihydrophthalic_acid
+  }
 
+  branch from 1_4_dihydroxy_2_naphthoate side right {
+    1_4_dihydroxy_2_naphthoate
+    <-> ec_2_5_1_74 [2.5.1.74] +diphosphate +co2_mnxm13 +h +2_demethylmenaquinol_8
+    octaprenyl_diphosphate
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> . +8_oxo_datp +h2o +hplus
+    8_oxo_damp
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_88 [2.7.7.88] +ppp5_aaca_mrna +gdp +hplus
+    g5_ppp5_aaca_mrna
+  }
 
+  branch from sam side left {
+    sam
+    <-> . +l_histidine +sah +hplus
+    n_methyl_l_histidine
+  }
 
+  branch from sam side right {
+    sam
+    <-> . +l_lysinium +sah +hplus
+    n6_n6_n6_trimethyl_l_lysine
+  }
 
+  branch from sah side left {
+    sah
+    <-> . +n6_methyl_l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysine_1
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +2s_4s_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph_chebi_57783 +hplus +amp +co2 +ppi +nadp_chebi_58349 +coa +h2o
+    5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_289 [1.1.1.289] +l_sorbopyranose +h +nadph
+    d_sorbitol
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_77 [1.3.1.77] +3_hydroxy_2_phenylchromenylium +h +nadph
+    2r_3r_flavan_3_ol
+  }
 
+  branch from h side left {
+    h
+    <-> . +s_adenosyl_l_homocysteine +tetracenomycin_b2 +tetracenomycin_b3
+    s_adenosyl_l_methionine
+  }
 
+  branch from h side right {
+    h
+    <-> . +anatabine +co2_mnxm13 +3_6_dihydropyridine
+    nicotinate
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +h +o2 +typhasterol +nadp +h2o_water
+    castasterone
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +h +6_deoxotyphasterol +o2 +nadp +h2o_water
+    6_deoxocastasterone
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_14_12_12 [1.14.12.12] +h +anthracene +o2 +nad
+    anthracene_cis_1_2_dihydrodiol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_3_1_29 [1.3.1.29] +h +anthracene_cis_1_2_dihydrodiol +nad
+    1_2_anthracenediol
+  }
 }

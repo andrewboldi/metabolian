@@ -12,11 +12,11 @@ pathway adp-d-glycero-d-manno-hep-to-adp "ADP-D-glycero-D-manno-hep… to ADP" {
     adp_l_glycero_d_manno_heptose
     <-> . +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli -heptosyl_kdo_2_lipid_a -adp
     h
-    <-> ec_2_4_99_24 [2.4.99.24] +adp_l_glycero_d_manno_heptose +heptosyl_kdo_2_lipid_a -h -adp
+    <-> ec_2_4_99_24 [2.4.99.24] +adp_l_glycero_d_manno_heptose_chebi_61506 +heptosyl_kdo_2_lipid_a -h -adp
     alpha_hep_1_3_alpha_hep_1_5_alpha_kdo_2_4_alpha
     <-> ec_2_7_1_235 [2.7.1.235] +atp -h -adp
     alpha_hep_1_3_4_o_phospho_alpha_hep_1_5_alpha_kd
-    <-> ec_2_4_99_25 [2.4.99.25] +adp_l_glycero_d_manno_heptose -h -adp
+    <-> ec_2_4_99_25 [2.4.99.25] +adp_l_glycero_d_manno_heptose_chebi_61506 -h -adp
     heptosyl_3_kdo2_lipid_a_phosphate_e_coli
   }
 }

@@ -39,7 +39,7 @@ pathway n-arachidonoylsphingosine-to-n-acylsphingosine-4 "N-arachidonoylsphingos
   branch from n_acylsphingosine side right {
     n_acylsphingosine
     <-> . +d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4 +h2o
-    d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4
+    d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4_chebi_141842
   }
 
   branch from n_acyl_d_galactosylsphingosine side left {
@@ -93,7 +93,7 @@ pathway n-arachidonoylsphingosine-to-n-acylsphingosine-4 "N-arachidonoylsphingos
   branch from n_acylsphingosine side left {
     n_acylsphingosine
     <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu +h2o
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu_chebi_156068
   }
 
   branch from udp_d_galactose side right {

@@ -16,7 +16,7 @@ pathway 3e-5z-8z-11z-14z-icosap-to-coa-45224 "(3E,5Z,8Z,11Z,14Z)-icosap… to Co
     2e_8z_11z_14z_icosatetraenoyl_coa
     <-> ec_1_3_1_93 [1.3.1.93] +nadh +h -nad
     8z_11z_14z_eicosatrienoyl_coa
-    <-> ec_2_3_1_86 [2.3.1.86] +co2 +nadp +coa +h2o -malonyl_coa -h -o2 -nadph
+    <-> ec_2_3_1_86 [2.3.1.86] +co2 +nadp_mnxm5 +coa +h2o -malonyl_coa -h -o2 -nadph_mnxm738702
     6z_9z_12z_octadecatrienoyl_coa
     <-> . +r_carnitine -coa
     gamma_linolenyl_carnitine

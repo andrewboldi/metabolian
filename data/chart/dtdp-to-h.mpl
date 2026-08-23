@@ -16,69 +16,13 @@ pathway dtdp-to-h "dTDP to H" {
     premithramycin_a2
   }
 
-  branch from dtdp_d_olivose side left {
-    dtdp_d_olivose
-    <-> . +3a_deolivosylpremithramycin_b +dtdp +h
-    premithramycin_a3
-  }
 
-  branch from dtdp side right {
-    dtdp
-    <-> . +premithramycin_a3 +h +dtdp_beta_d_mycarose
-    premithramycin_a2
-  }
 
-  branch from dtdp side left {
-    dtdp
-    <-> ec_2_4_1_311 [2.4.1.311] +dtdp_beta_l_4_epi_vancosamine +desvancosaminyl_vancomycin +h
-    chloroorienticin_b
-  }
 
-  branch from h side right {
-    h
-    <-> ec_3_2_1_31 [3.2.1.31] +alpha_d_glucuronic_acid +4_nitrophenol +h2o
-    p_nitrophenyl_beta_d_glucuronide
-  }
 
-  branch from h side left {
-    h
-    <-> ec_2_5_1_18 [2.5.1.18] +fluoride +s_2_4_dinitrophenyl_glutathione +glutathione
-    1_fluoro_2_4_dinitrobenzene
-  }
 
-  branch from dtdp side right {
-    dtdp
-    <-> ec_2_4_1_311 [2.4.1.311] +dtdp_beta_l_4_epi_vancosamine +devancosaminyl_vancomycin +h
-    chloroorienticin_b
-  }
 
-  branch from dtdp side left {
-    dtdp
-    <-> ec_2_4_1_322 [2.4.1.322] +dtdp_beta_l_vancosamine +devancosaminyl_vancomycin +h
-    vancomycin
-  }
 
-  branch from h side right {
-    h
-    <-> ec_1_1_1_2 [1.1.1.2] +4_cyanobenzaldehyde +nadph +nadp
-    4_cyanobenzyl_alcohol
-  }
 
-  branch from h side left {
-    h
-    <-> ec_1_1_1_2 [1.1.1.2] +4_formylbenzoate +nadph +nadp
-    4_carboxybenzyl_alcohol
-  }
 
-  branch from premithramycinone side right {
-    premithramycinone
-    <-> . +s_adenosyl_l_homocysteine +h +4_demethylpremithramycinone
-    s_adenosyl_l_methionine
-  }
-
-  branch from premithramycinone side left {
-    premithramycinone
-    <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    4_demethylpremithracinone
-  }
 }

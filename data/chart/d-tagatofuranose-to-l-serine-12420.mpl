@@ -73,7 +73,7 @@ pathway d-tagatofuranose-to-l-serine-12420 "D-tagatofuranose… to L-serine" {
   branch from d_glucose_6_phosphate side left {
     d_glucose_6_phosphate
     <-> ec_5_1_3_15 [5.1.3.15]
-    d_glucose_6_phosphate
+    d_glucose_6_phosphate_chebi_58247
   }
 
   branch from d_glucose_6_phosphate side right {

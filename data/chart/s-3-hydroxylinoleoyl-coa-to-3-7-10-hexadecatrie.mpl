@@ -20,8 +20,8 @@ pathway s-3-hydroxylinoleoyl-coa-to-3-7-10-hexadecatrie "(S)-3-hydroxylinoleoyl-
 
   branch from 9z_12z_3_oxolinoleoyl_coa side left {
     9z_12z_3_oxolinoleoyl_coa
-    <-> . +acetyl_coa +cis_cis_palmito_7_10_dienoyl_coa
-    coa
+    <-> . +acetyl_coa_mnxm1104266 +cis_cis_palmito_7_10_dienoyl_coa
+    coa_mnxm727276
   }
 
   branch from 3_7_10_hexadecatrienoyl_coenzyme_a side right {

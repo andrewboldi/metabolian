@@ -37,7 +37,7 @@ pathway h-to-bacteriochlorophyll-b-null "H to bacteriochlorophyll b" {
   branch from h side right {
     h
     <-> . +geranoyl_coa
-    trans_geranyl_coa
+    trans_geranyl_coa_mnxm1371416
   }
 
   branch from nadph side left {

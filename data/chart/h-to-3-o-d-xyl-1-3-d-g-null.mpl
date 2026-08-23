@@ -14,16 +14,16 @@ pathway h-to-3-o-d-xyl-1-3-d-g-null "H to 3-O-{β-D-Xyl-(1→3)-[β-D-G…" {
     udp_beta_l_rhamnose
     <-> . +nadp -h -nadph
     udp_4_dehydro_6_deoxy_d_glucose
-    <-> . +3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillate -udp
+    <-> . +3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillate -udp_chebi_58223
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_4_d
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_f
-    <-> . +udp_l_rhamnose -udp -hplus
+    <-> . +udp_l_rhamnose -udp_chebi_58223 -hplus
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r
-    <-> . +udp_d_xylose -udp -hplus
+    <-> . +udp_d_xylose -udp_chebi_58223 -hplus
     3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x
-    <-> . +udp_d_xylose -udp -hplus
-    3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x
+    <-> . +udp_d_xylose -udp_chebi_58223 -hplus
+    3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x_chebi_234164
     <-> . +udp +h -3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x
     udp_alpha_d_xylose
   }

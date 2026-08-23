@@ -68,7 +68,7 @@ pathway 25r-3-7-dihydroxy-5-to-hopan-22-ol-21776 "(25R)-3α,7α-dihydroxy-5β-�
 
   branch from c30_botryococcene side left {
     c30_botryococcene
-    <-> . +diphosphate +nadp +h +nadph
+    <-> . +diphosphate +nadp_mnxm5 +h +nadph_mnxm738702
     2e_6e_farnesyl_diphosphate
   }
 

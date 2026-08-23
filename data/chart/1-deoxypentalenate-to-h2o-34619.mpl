@@ -16,26 +16,26 @@ pathway 1-deoxypentalenate-to-h2o-34619 "1-deoxypentalenate to H2O" {
     pentalenolactone_d
     <-> ec_1_14_11_36 [1.14.11.36] +akg +o2 -succinate -co2 -h2o
     pentalenolactone_f
-    <-> ec_1_14_19_8 [1.14.19.8] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_8 [1.14.19.8] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     pentalenolactone
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -pentalenolactone -h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -pentalenolactone -h2o_water
     atp
   }
 
   branch from pentalenolactone_f side left {
     pentalenolactone_f
-    <-> . +h +o2 +nadph +pentalenolactone +h2o
-    nadp
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +pentalenolactone +h2o_water
+    nadp_mnxm5
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_15_26 [1.14.15.26] +toluene +di_sulfido_diiron +o2 +hplus +h2o
     benzyl_alcohol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_15_25 [1.14.15.25] +p_cymene +di_sulfido_diiron +o2 +hplus +h2o
     4_isopropylbenzyl_alcohol
   }
@@ -52,38 +52,38 @@ pathway 1-deoxypentalenate-to-h2o-34619 "1-deoxypentalenate to H2O" {
     2_4_dichlorobenzoate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_2_8 [3.2.2.8] +pyrimidine +d_ribose +h
     pyrimidine_nucleoside
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +cholate +h
     3_12_dihydroxy_5_chol_6_en_24_oic_acid
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +mevastatin +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +mevastatin +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     pravastatin_lactone
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +alachlor +o2 +hplus +n_2_6_diethylphenyl_2_chloroacetamide +di_sulfido_diiron +h2o
+    <-> . +alachlor +o2 +hplus +n_2_6_diethylphenyl_2_chloroacetamide +di_sulfido_diiron_chebi_33737 +h2o
     methyl_formate
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +acetochlor +di_sulfido_diiron +o2 +hplus +ethyl_formate +h2o
     n_2_ethyl_6_methylphenyl_2_chloroacetamide
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +5_cholestan_3_ol +di_sulfido_diiron +o2 +hplus +h2o
     25r_26_hydroxycholestanol
   }
@@ -114,20 +114,20 @@ pathway 1-deoxypentalenate-to-h2o-34619 "1-deoxypentalenate to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +1_ribosylimidazole_4_acetate +h2o
+    <-> . +h +1_ribosylimidazole_4_acetate +h2o_water
     1_5_phosphoribosyl_imidazole_4_acetate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph +phosphoenolpyruvate +h2o
+    <-> . +h +4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph +phosphoenolpyruvate +h2o_water
     iminoerythrose_4_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> . +nadh +3_dehydro_atp +h
-    nad
+    <-> . +nadh_mnxm10 +3_dehydro_atp +h
+    nad_mnxm8
   }
 
   branch from atp side left {
@@ -136,14 +136,14 @@ pathway 1-deoxypentalenate-to-h2o-34619 "1-deoxypentalenate to H2O" {
     n_methylanthranilate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_6_1_17 [3.6.1.17] +xtp +xmp +h
     p_1_p_4_bis_5_xanthosyl_tetraphosphate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_1_4_43 [3.1.4.43] +1d_myo_inositol_1_phosphate +h
     1d_myo_inositol_1_2_cyclic_phosphate
   }

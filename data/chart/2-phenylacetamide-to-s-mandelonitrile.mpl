@@ -10,7 +10,7 @@ pathway 2-phenylacetamide-to-s-mandelonitrile "2-phenylacetamide to (S)-mandelon
     2_phenylacetamide
     <-> ec_4_2_1_84 [4.2.1.84] -h2o
     phenylacetonitrile
-    <-> ec_1_14_14_77 [1.14.14.77] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_77 [1.14.14.77] +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     r_mandelonitrile
     <-> ec_4_1_2_10 [4.1.2.10] -hydrogen_cyanide
     benzaldehyde

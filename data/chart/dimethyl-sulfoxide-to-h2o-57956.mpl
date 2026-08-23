@@ -10,9 +10,9 @@ pathway dimethyl-sulfoxide-to-h2o-57956 "dimethyl sulfoxide to H2O" {
     dimethyl_sulfoxide
     <-> ec_1_14_13_245 [1.14.13.245] +nadh +o2 +hplus -nad -h2o
     sulfonyldimethane
-    <-> ec_1_14_14_35 [1.14.14.35] +fmnh2 +h +o2 -formaldehyde -methanesulfonate -h2o
+    <-> ec_1_14_14_35 [1.14.14.35] +fmnh2 +h +o2_mnxm735438 -formaldehyde -methanesulfonate -h2o_water
     fmn
-    <-> ec_3_6_1_18 [3.6.1.18] +h +amp -h2o
+    <-> ec_3_6_1_18 [3.6.1.18] +h +amp -h2o_water
     fad
   }
 }

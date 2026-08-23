@@ -10,7 +10,7 @@ pathway 4-aminobenzoate-to-nad-58888 "4-aminobenzoate to NAD" {
     4_aminobenzoate
     <-> ec_1_14_99_68 [1.14.99.68] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     4_nitrobenzoate
-    <-> ec_1_2_1_19 [1.2.1.19] +h +nadph -4_nitrobenzaldehyde -h2o
+    <-> ec_1_2_1_19 [1.2.1.19] +h +nadph -4_nitrobenzaldehyde -h2o_water
     nadp
     <-> ec_1_1_1_188 [1.1.1.188] +nadh +h +4_nitrobenzaldehyde -nad
     4_nitrobenzyl_alcohol

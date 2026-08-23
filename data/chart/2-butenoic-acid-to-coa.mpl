@@ -91,12 +91,12 @@ pathway 2-butenoic-acid-to-coa "2-butenoic acid to CoA" {
   branch from h2o side left {
     h2o
     <-> ec_3_5_4_16 [3.5.4.16] +h +2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_o
-    7_8_dihydroneopterin_3_triphosphate
+    7_8_dihydroneopterin_3_triphosphate_mnxm1369356
   }
 
   branch from s_carnitine side right {
     s_carnitine
-    <-> . +atp +coa +adp +pi
+    <-> . +atp +coa_chebi_57287 +adp +pi
     s_carnitinyl_coa
   }
 

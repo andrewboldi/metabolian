@@ -49,7 +49,7 @@ pathway 3-palmitoyl-sn-glycerol-to-h2o-77727 "3-palmitoyl-sn-glycerol to H2O" {
   branch from linoleoyl_coa side right {
     linoleoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +coa
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_73008
   }
 
   branch from h side left {
@@ -73,7 +73,7 @@ pathway 3-palmitoyl-sn-glycerol-to-h2o-77727 "3-palmitoyl-sn-glycerol to H2O" {
   branch from adp side right {
     adp
     <-> ec_3_6_3_17 [3.6.3.17] +h +phosphate +atp +h2o
-    d_galactofuranose
+    d_galactofuranose_chebi_59497
   }
 
   branch from phosphate side left {

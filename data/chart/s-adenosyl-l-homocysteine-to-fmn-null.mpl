@@ -18,46 +18,177 @@ pathway s-adenosyl-l-homocysteine-to-fmn-null "S-adenosyl-L-homocysteine to FMN"
     nad
     <-> . +nadh +h +3r_4r_3_4_bis_4_hydroxy_3_methoxybenzyl_tetrahy -nad
     secoisolariciresinol
-    <-> ec_1_1_1_331 [1.1.1.331] +nad -nadh -hplus
-    matairesinol
-    <-> ec_1_14_19_72 [1.14.19.72] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_1_1_331 [1.1.1.331] +nad_chebi_57540 -nadh_chebi_57945 -hplus
+    matairesinol_chebi_6698
+    <-> ec_1_14_19_72 [1.14.19.72] +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     pluviatolide
     <-> ec_2_1_1_323 [2.1.1.323] +sam -sah -hplus
     bursehernin
-    <-> ec_1_14_14_131 [1.14.14.131] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_131 [1.14.14.131] +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     5_desmethylyatein
     <-> ec_2_1_1_330 [2.1.1.330] +sam -sah -hplus
     dihydroanhydropodorhizol
-    <-> ec_1_14_20_8 [1.14.20.8] +akg +o2 -succinate -co2 -h2o
+    <-> ec_1_14_20_8 [1.14.20.8] +akg +o2_chebi_15379 -succinate -co2 -h2o_chebi_15377
     deoxypodophyllotoxin
-    <-> . +fmnh2 +o2 -formaldehyde -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -formaldehyde -fmn -h2o_chebi_15377 -hplus
     4_demethyldeoxypodophyllotoxin
-    <-> ec_1_14_14_132 [1.14.14.132] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_132 [1.14.14.132] +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     4_demethylepipodophyllotoxin
   }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_1_21_98_3 [1.21.98.3] +5_deoxyadenosine +h +l_methionine +divinylprotochlorophyllide +h2o
+    mg_protoporphyrin_ix_13_monomethyl_ester
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +r_laudanosolinium
+    r_norlaudanosoline
+  }
 
+  branch from h side left {
+    h
+    <-> . +adp +vaccenic_acid +phosphate +vaccenic_acid +h2o
+    atp
+  }
 
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    linoelaidic_acid
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +pitavastatin +h2o
+    pitavastatin_m3
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +taurohyocholate +nadp +h2o +nadph
+    taurochenodeoxycholate
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +hydroxy_torasemide +nadp +h2o +h +o2
+    torasemide
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +h +o2 +torasemide +nadp +h2o
+    4_hydroxy_torasemide
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +4_maleylacetoacetate +h
+    3_5_dioxooctanedioic_acid
+  }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +3_5_dioxooctanedioic_acid
+    4_fumarylacetoacetate
+  }
 
+  branch from pluviatolide side left {
+    pluviatolide
+    <-> . +h +o2 +nadph +nadp +h2o
+    hinokinin
+  }
 
+  branch from deoxypodophyllotoxin side right {
+    deoxypodophyllotoxin
+    <-> . +h +o2 +nadph +nadp +h2o
+    peltatin
+  }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +12_ethyl_8_isobutyl_3_vinylbacteriochlorophyllid +h +s_adenosyl_l_methionine
+    12_ethyl_8_propyl_3_vinylbacteriochlorophyllide
+  }
 
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +3_all_trans_hexaprenyl_4_amino_5_methoxybenzoate +h +s_adenosyl_l_methionine
+    4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate
+  }
 
+  branch from h side left {
+    h
+    <-> . +nonadecanoyl_coa +h2o +coa
+    nonadecanoate
+  }
 
+  branch from h side right {
+    h
+    <-> . +nonadecanoate +phosphate +nonadecanoate +atp +h2o
+    adp
+  }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +h +alpha_tocopherol
+    2r_2_5_8_trimethyl_2_4_8_12_trimethyltridecyl_c
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +h +tacrolimus
+    31_o_demethyl_fk_506
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +o2 +nadph +h2o
+    4beta_methylzymosterol_4alpha_carboxylate
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +2_undecylpyrrole +h2o +h +nadph
+    4_keto_2_undecylpyrroline
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_lysine +l_glutamate
+    histidyl_lysyl_glutamate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_histidine +l_lysine +l_threonine
+    histidyl_lysyl_threonine
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +hydroxy_torasemide +h2o
+    torasemide_carboxylic_acid
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +5_6_7_8_tetrahydrobiopterin +l_tryptophan +5_hydroxytryptophan +h2o
+    tetrahydrobiopterin_4a_carbinolamine
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +sapropterin +nadp +h
+    6_1_hydroxy_2_oxopropyl_tetrahydropterin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_237 [1.14.13.237] +h +o2 +omega_methylthio_alkyl_glucosinolate +nadp +h2o
+    omega_methylsulfinyl_alkyl_glucosinolate
+  }
 }

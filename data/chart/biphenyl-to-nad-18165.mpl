@@ -18,11 +18,11 @@ pathway biphenyl-to-nad-18165 "biphenyl to NAD" {
     2_6_dioxo_6_phenylhexa_3_enoate
     <-> ec_3_7_1_8 [3.7.1.8] +h2o -benzoate -hplus
     2_oxopent_4_enoate
-    <-> . +h +succinate -h2o
+    <-> . +h +succinate -h2o_water
     2_hydroxy_6_oxonona_2_4_diene_1_9_dioate
     <-> ec_1_13_11_16 [1.13.11.16] +h -3_2_3_dihydroxyphenyl_propanoate
-    o2
-    <-> ec_1_3_1_87 [1.3.1.87] +nadh +h +3_2_3_dihydroxyphenyl_propanoate -nad
+    o2_mnxm735438
+    <-> ec_1_3_1_87 [1.3.1.87] +nadh_mnxm10 +h +3_2_3_dihydroxyphenyl_propanoate -nad_mnxm8
     cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol
   }
 
@@ -34,145 +34,145 @@ pathway biphenyl-to-nad-18165 "biphenyl to NAD" {
 
   branch from 2_6_dioxo_6_phenylhexa_3_enoate side right {
     2_6_dioxo_6_phenylhexa_3_enoate
-    <-> ec_1_13_11_39 [1.13.11.39] +o2 +h
-    biphenyl_2_3_diol
+    <-> ec_1_13_11_39 [1.13.11.39] +o2_mnxm735438 +h
+    biphenyl_2_3_diol_mnxm1143
   }
 
   branch from 2_hydroxy_6_oxonona_2_4_diene_1_9_dioate side left {
     2_hydroxy_6_oxonona_2_4_diene_1_9_dioate
-    <-> ec_3_7_1_14 [3.7.1.14] +h +succinate +h2o
+    <-> ec_3_7_1_14 [3.7.1.14] +h +succinate +h2o_water
     2e_2_hydroxypenta_2_4_dienoate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_6_3_9 [3.6.3.9] +h +adp +k +phosphate +atp +k
     na
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_1_3_4 [3.1.3.4] +h +1_2_diacyl_sn_glycerol_didodecanoyl_n_c12_0 +phosphate
     1_2_didodecanoyl_sn_glycerol_3_phosphate
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +9_cis_retinal +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +9_cis_retinal +h +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     4_oh_9_cis_retinal
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +9_cis_retinal +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +9_cis_retinal +h +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     4_oh_retinal
   }
 
   branch from 3_2_3_dihydroxyphenyl_propanoate side right {
     3_2_3_dihydroxyphenyl_propanoate
-    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
+    <-> ec_1_13_11_16 [1.13.11.16] +h +o2_mnxm735438
     2_hydroxy_6_oxonona_2_4_dienedioic_acid
   }
 
   branch from 3_2_3_dihydroxyphenyl_propanoate side left {
     3_2_3_dihydroxyphenyl_propanoate
-    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
+    <-> ec_1_13_11_16 [1.13.11.16] +h +o2_mnxm735438
     2e_4z_2_hydroxy_6_oxonona_2_4_dienedioate
   }
 
   branch from cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol side right {
     cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol
-    <-> ec_1_14_12_19 [1.14.12.19] +nadh +h +o2 +nad
+    <-> ec_1_14_12_19 [1.14.12.19] +nadh_mnxm10 +h +o2_mnxm735438 +nad_mnxm8
     3_phenylpropanoate
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +z_3_aminoperacrylic_acid +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +z_3_aminoperacrylic_acid +h2o_water
     z_3_aminoacrylate
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +5_aminopentanoate +h2o
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +5_aminopentanoate +h2o_water
     1_piperideinium
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_3_4 [3.1.3.4] +1_2_diacyl_sn_glycerol_ditetradec_7_enoyl_n_c14 +phosphate +h2o
+    <-> ec_3_1_3_4 [3.1.3.4] +1_2_diacyl_sn_glycerol_ditetradec_7_enoyl_n_c14 +phosphate +h2o_water
     1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate
   }
 
   branch from h side right {
     h
-    <-> . +adp +pe_18_1_11z_18_1_9z +phosphate +pe_18_1_11z_18_1_9z +h2o
+    <-> . +adp +pe_18_1_11z_18_1_9z +phosphate +pe_18_1_11z_18_1_9z +h2o_water
     atp
   }
 
   branch from succinate side left {
     succinate
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     adp
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_12 [1.14.11.12] +gibberellin_a20 +co2 +h2o +h +gibberellin_a19 +o2
+    <-> ec_1_14_11_12 [1.14.11.12] +gibberellin_a20 +co2 +h2o_water +h +gibberellin_a19 +o2_mnxm735438
     2_oxoglutarate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     1_11z_octadecenoyl_2_9z_12z_octadecadienoyl_sn_g
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +h +adp +phosphate +atp
     phosphatidylglycerophosphate_didodecanoyl_n_c12
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +all_trans_retinal +h +nadph +4_oh_retinal +h2o
-    nadp
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +all_trans_retinal +h +nadph_mnxm738702 +4_oh_retinal +h2o_water
+    nadp_mnxm5
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +all_trans_retinol +h +nadph +nadp +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +all_trans_retinol +h +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     4_hydroxyvitamin_a1
   }
 
   branch from 3_2_3_dihydroxyphenyl_propanoate side left {
     3_2_3_dihydroxyphenyl_propanoate
-    <-> ec_1_3_1_87 [1.3.1.87] +nadh +h +nad
+    <-> ec_1_3_1_87 [1.3.1.87] +nadh_mnxm10 +h +nad_mnxm8
     3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_propan
   }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_1_1_1 [1.1.1.1] +5_hydroxyindol_3_yl_acetaldehyde +h +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_1_1_1 [1.1.1.1] +5_hydroxyindol_3_yl_acetaldehyde +h +nad_mnxm8
     5_hydroxytryptophol
   }
 
-  branch from nadh side left {
-    nadh
-    <-> . +h +7alpha_hydroxycholest_4_en_3_one +nad
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> . +h +7alpha_hydroxycholest_4_en_3_one +nad_mnxm8
     20_hydroxycholesterol
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +all_trans_3_4_didehydroretinoate +h2o
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +all_trans_3_4_didehydroretinoate +h2o_water
     all_trans_3_4_didehydroretinol
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +8_dehydrocholesterol +o2 +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +8_dehydrocholesterol +o2_mnxm735438 +h2o_water
     27alpha_hydroxy_8_dehydrocholesterol
   }
 }

@@ -115,7 +115,7 @@ pathway imp-to-h2o "IMP to H2O" {
   branch from h2o side left {
     h2o
     <-> . +1_formyl_2_indanone +pyruvate
-    2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene
+    2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene_mnxm1371589
   }
 
   branch from h2o side right {

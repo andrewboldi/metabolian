@@ -14,9 +14,9 @@ pathway ergosteryl-palmitate-to-h2o-33543 "ergosteryl palmitate to H2O" {
     vitamin_d2
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     25_hydroxyvitamin_d2
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     1_25_dihydroxyvitamin_d2
-    <-> . +h +o2 +nadph -24r_1alpha_24_25_trihydroxyvitamin_d2 -h2o
+    <-> . +h +o2_mnxm735438 +nadph -24r_1alpha_24_25_trihydroxyvitamin_d2 -h2o_water
     nadp
   }
 

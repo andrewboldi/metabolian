@@ -12,7 +12,7 @@ pathway 4-nitrobenzaldehyde-to-h2o "4-nitrobenzaldehyde to H2O" {
     4_nitrobenzoate
     <-> . +nadh +hplus -nad -h2o
     4_hydroxyamino_benzoate
-    <-> . +o2 -h2o
+    <-> . +o2 -h2o_water
     4_nitrobenzoate
   }
 }

@@ -12,7 +12,7 @@ pathway 2e-6z-9z-12z-15z-18z-te-to-nad "(2E,6Z,9Z,12Z,15Z,18Z)-te… to NAD" {
     3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno
     <-> . +nad -nadh -hplus
     6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa
-    <-> . +nadh +h -nad
+    <-> . +nadh_mnxm10 +h -nad_mnxm8
     3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno
   }
 }

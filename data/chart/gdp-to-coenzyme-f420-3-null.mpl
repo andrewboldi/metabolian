@@ -50,13 +50,13 @@ pathway gdp-to-coenzyme-f420-3-null "GDP to coenzyme α-F420-3" {
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +1_oh_midazolam_glucuronide +1_oh_midazolam_glucuronide +h2o
-    atp
+    <-> . +h +adp_mnxm40333 +1_oh_midazolam_glucuronide +1_oh_midazolam_glucuronide +h2o
+    atp_mnxm3
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp_mnxm40333 +atp_mnxm3 +h2o
     a_2_demethylmenaquinone
   }
 

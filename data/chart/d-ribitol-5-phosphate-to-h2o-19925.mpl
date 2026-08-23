@@ -14,7 +14,7 @@ pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
     2s_3_4_hydroxyphenyl_2_isocyanopropanoate
     <-> ec_1_14_20_9 [1.14.20.9] +akg +o2 -succinate -co2 -h2o
     2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate
-    <-> . +o2 -h2o
+    <-> . +o2_mnxm735438 -h2o_water
     2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan
   }
 
@@ -32,7 +32,7 @@ pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
 
   branch from 2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate side left {
     2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate
-    <-> . +h +o2 +h2o
+    <-> . +h +o2_mnxm735438 +h2o_water
     paerucumarin
   }
 
@@ -54,14 +54,14 @@ pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
     h
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_6_3_27 [3.6.3.27] +h +adp +phosphate +phosphate
     atp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +neocasomorphin +l_isoleucine
     neocasomorphin_1_5
   }
@@ -108,26 +108,26 @@ pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
     3r_3_hydroxy_l_glutamate
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +formaldehyde +nadp +nordazepam +h2o +h +nadph
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +formaldehyde_mnxm1364673 +nadp +nordazepam +h2o_water +h +nadph
     diazepam
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +25r_cholest_5_en_3beta_7alpha_26_triol +h +nadph +3beta_7alpha_dihydroxy_5_cholestenoate +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +25r_cholest_5_en_3beta_7alpha_26_triol +h +nadph +3beta_7alpha_dihydroxy_5_cholestenoate +h2o_water
     nadp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +apelin_13 +l_phenylalanine
     apelin_1_12
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +maltodecaose +beta_d_fructose
     maltononaose
   }

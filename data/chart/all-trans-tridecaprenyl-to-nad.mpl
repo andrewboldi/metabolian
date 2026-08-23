@@ -44,14 +44,14 @@ pathway all-trans-tridecaprenyl-to-nad "all-trans-tridecaprenyl… to NAD" {
 
   branch from sah side left {
     sah
-    <-> . +2s_4r_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +co2 +ppi +nadp +coa +h2o
+    <-> . +2s_4r_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph_chebi_57783 +hplus +amp +co2 +ppi +nadp_chebi_58349 +coa +h2o
     5s_5_2r_2_carboxylato_2_hydroxy_2_methylethyl_2
   }
 
   branch from h side right {
     h
     <-> . +acetyl_coa +demethyl_desacetyl_rifamycin_sv +27_o_demethylrifamycin_sv
-    coa
+    coa_mnxm727276
   }
 
   branch from h side left {
@@ -62,13 +62,13 @@ pathway all-trans-tridecaprenyl-to-nad "all-trans-tridecaprenyl… to NAD" {
 
   branch from nadph side right {
     nadph
-    <-> . +h +2_nitrobenzoate +nadp +h2o
+    <-> . +h +2_nitrobenzoate +nadp +h2o_water
     2_hydroxylaminobenzoic_acid
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_246 [1.1.1.246] +h +sophorol +nadp +h2o
+    <-> ec_1_1_1_246 [1.1.1.246] +h +sophorol +nadp +h2o_water
     maackiain
   }
 
@@ -80,7 +80,7 @@ pathway all-trans-tridecaprenyl-to-nad "all-trans-tridecaprenyl… to NAD" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +o2 +1_7_dimethylxanthine +formaldehyde +h2o
+    <-> . +nadh +h +o2 +1_7_dimethylxanthine +formaldehyde +h2o_water
     1_methyl_7h_xanthine
   }
 
@@ -122,13 +122,13 @@ pathway all-trans-tridecaprenyl-to-nad "all-trans-tridecaprenyl… to NAD" {
 
   branch from nadp side right {
     nadp
-    <-> . +thiobenzamide_s_oxide +h2o +h +o2 +nadph
+    <-> . +thiobenzamide_s_oxide +h2o_water +h +o2 +nadph
     thiobenzamide
   }
 
   branch from nadp side left {
     nadp
-    <-> . +thiobenzamide_s_oxide +h +o2 +nadph +h2o
+    <-> . +thiobenzamide_s_oxide +h +o2 +nadph +h2o_water
     thiobenzamide_s_s_dioxide
   }
 
@@ -146,31 +146,31 @@ pathway all-trans-tridecaprenyl-to-nad "all-trans-tridecaprenyl… to NAD" {
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_179 [1.14.13.179] +formaldehyde +nadp +1_7_dimethylxanthine +h2o +h +o2
+    <-> ec_1_14_13_179 [1.14.13.179] +formaldehyde +nadp +1_7_dimethylxanthine +h2o_water +h +o2
     caffeine
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +xanthine +nadp +h2o
+    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +xanthine +nadp +h2o_water
     formaldehyde
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +formaldehyde +nad +h2o
+    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +formaldehyde +nad +h2o_water
     xanthine
   }
 
   branch from nadh side left {
     nadh
-    <-> . +4_hydroxylamino_2_6_dinitrotoluene +h +nad +h2o
+    <-> . +4_hydroxylamino_2_6_dinitrotoluene +h +nad +h2o_water
     4_amino_2_6_dinitrotoluene
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +2_hydroxylamino_4_6_dinitrotoluene +h2o
+    <-> . +nadh +h +2_hydroxylamino_4_6_dinitrotoluene +h2o_water
     2_amino_4_6_dinitrotoluene
   }
 }

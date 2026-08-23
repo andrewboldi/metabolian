@@ -33,7 +33,7 @@ pathway udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido "UDP-2,4-diacetamido-2,
   branch from 2_4_diacetamido_2_4_6_trideoxy_beta_l_gulose side left {
     2_4_diacetamido_2_4_6_trideoxy_beta_l_gulose
     <-> . +phosphate +h +phosphoenolpyruvate +h2o
-    5_7_diacetamido_3_5_7_9_tetradeoxy_l_glycero_d_g
+    5_7_diacetamido_3_5_7_9_tetradeoxy_l_glycero_d_g_mnxm1130088
   }
 
   branch from h side right {

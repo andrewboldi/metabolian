@@ -58,8 +58,8 @@ pathway plastoquinone-9-to-neurosporaxanthin-30175 "plastoquinone-9 to neurospor
 
   branch from torulene side right {
     torulene
-    <-> . +4_ketotorulene +h2o
-    o2
+    <-> . +4_ketotorulene +h2o_water
+    o2_mnxm735438
   }
 
   branch from 3_methylbut_2_enal side left {

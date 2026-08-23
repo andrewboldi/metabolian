@@ -12,7 +12,7 @@ pathway n-n-diacetylchitotriose-to-n-n-n-triacetylchitot "N,N''-diacetylchitotri
     n_n_n_triacetylchitotriose
     <-> . +o2 -h2o2
     n_n_n_triacetylchitotriono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     n_n_n_triacetylchitotrionate
   }
 

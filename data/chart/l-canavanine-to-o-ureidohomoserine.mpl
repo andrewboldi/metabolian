@@ -11,7 +11,7 @@ pathway l-canavanine-to-o-ureidohomoserine "L-canavanine to O-Ureidohomoserine" 
     <-> ec_2_1_4_3 [2.1.4.3] +ornithine -arginine -hplus
     l_canaline
     <-> ec_3_5_3_1 [3.5.3.1] +urea +h -h2o
-    l_canavanine
+    l_canavanine_mnxm12052
     <-> ec_4_3_2_1 [4.3.2.1] +fumarate
     canavaninosuccinate
     <-> ec_6_3_4_5 [6.3.4.5] +diphosphate +h +amp -atp -o_ureidohomoserine
@@ -24,14 +24,14 @@ pathway l-canavanine-to-o-ureidohomoserine "L-canavanine to O-Ureidohomoserine" 
     l_homoserine
   }
 
-  branch from l_canavanine side right {
-    l_canavanine
+  branch from l_canavanine_mnxm12052 side right {
+    l_canavanine_mnxm12052
     <-> ec_4_1_1_19 [4.1.1.19] +co2 +h
     3_aminopropoxy_guanidine
   }
 
-  branch from l_canavanine side left {
-    l_canavanine
+  branch from l_canavanine_mnxm12052 side left {
+    l_canavanine_mnxm12052
     <-> ec_1_13_12_1 [1.13.12.1] +o2 +h +beta_guinidoxypropionamide +h2o
     co2
   }
@@ -96,14 +96,14 @@ pathway l-canavanine-to-o-ureidohomoserine "L-canavanine to O-Ureidohomoserine" 
     deethylatrazine
   }
 
-  branch from l_canavanine side right {
-    l_canavanine
+  branch from l_canavanine_mnxm12052 side right {
+    l_canavanine_mnxm12052
     <-> ec_4_4_1_43 [4.4.1.43] +n_hydroxyguanidinium
     l_vinylglycine
   }
 
-  branch from l_canavanine side left {
-    l_canavanine
+  branch from l_canavanine_mnxm12052 side left {
+    l_canavanine_mnxm12052
     <-> . +h +phosphate +atp +h2o
     adp
   }

@@ -28,7 +28,7 @@ pathway co2-to-nad "CO2 to NAD" {
 
   branch from h side right {
     h
-    <-> . +dichlorocarbene +h2o +formate
+    <-> . +dichlorocarbene_mnxm1107421 +h2o +formate
     chloride
   }
 

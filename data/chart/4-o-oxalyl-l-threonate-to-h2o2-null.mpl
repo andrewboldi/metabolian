@@ -84,7 +84,7 @@ pathway 4-o-oxalyl-l-threonate-to-h2o2-null "4-O-oxalyl-L-threonate to H2O2" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +co2 +16_epivellosimine
+    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde_mnxm1371564 +co2 +16_epivellosimine_mnxm732388
     methanol
   }
 
@@ -169,6 +169,6 @@ pathway 4-o-oxalyl-l-threonate-to-h2o2-null "4-O-oxalyl-L-threonate to H2O2" {
   branch from superoxide side right {
     superoxide
     <-> . +fe +o2
-    fe
+    fe_mnxm1370983
   }
 }

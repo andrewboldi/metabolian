@@ -10,7 +10,7 @@ pathway 4-e-2-3-4-dihydroxyph-to-excited-state-fungal "4-[(E)-2-(3,4-dihydroxyph
     4_e_2_3_4_dihydroxyphenyl_ethenyl_1_7_dihydroxy
     <-> . -o2 -3_hydroxyhispidin
     h
-    <-> . +3_hydroxyhispidin +o2
+    <-> . +3_hydroxyhispidin +o2_chebi_15379
     4_e_2_3_4_dihydroxyphenyl_ethenyl_1_hydroxy_6_ox
     <-> . -excited_state_fungal_oxyluciferin
     co2
@@ -18,7 +18,7 @@ pathway 4-e-2-3-4-dihydroxyph-to-excited-state-fungal "4-[(E)-2-(3,4-dihydroxyph
 
   branch from 3_hydroxyhispidin side left {
     3_hydroxyhispidin
-    <-> . +nadph +o2 +hplus +nadp +h2o
+    <-> . +nadph +o2_chebi_15379 +hplus +nadp +h2o
     hispidin
   }
 }

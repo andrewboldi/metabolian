@@ -19,7 +19,7 @@ pathway d-gal-1-3-d-galnac-to-n-acetyl-d-galactosamin "β-D-Gal-(1→3)-β-D-Gal
   branch from gdp_l_fucose side left {
     gdp_l_fucose
     <-> . +methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl +gdp +hplus
-    methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl
+    methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl_chebi_145940
   }
 
   branch from gdp_l_fucose side right {

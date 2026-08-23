@@ -104,7 +104,7 @@ pathway n-acetyl-d-galactosamin-to-glyoxylate "N-acetyl-α-D-galactosamin… to 
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_82637 +cmp_n_acetyl_neuraminate +hplus
     neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_ne
   }
 

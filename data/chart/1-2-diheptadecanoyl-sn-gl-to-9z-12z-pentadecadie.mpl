@@ -34,19 +34,19 @@ pathway 1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie "1,2-diheptadecanoyl-sn
 
   branch from r_2_hydroxyhexadecanoate side right {
     r_2_hydroxyhexadecanoate
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o_water
     r_2_hydroxyhexadecanal
   }
 
   branch from pentadecanoyl_coa side left {
     pentadecanoyl_coa
     <-> . +acetyl_coa +3_oxoheptadecanoyl_coenzyme_a
-    coa
+    coa_mnxm727276
   }
 
   branch from pentadecanoyl_coa side right {
     pentadecanoyl_coa
-    <-> . +cholesterol +coa
+    <-> . +cholesterol +coa_mnxm727276
     cholest_5_en_3b_yl_pentadecanoate
   }
 
@@ -64,13 +64,13 @@ pathway 1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie "1,2-diheptadecanoyl-sn
 
   branch from pentadecanoyl_coa side left {
     pentadecanoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
+    <-> . +sn_glycerol_3_phosphate +coa_mnxm727276
     1_pentadecanoyl_glycero_3_phosphate
   }
 
   branch from pentadecanoyl_coa side right {
     pentadecanoyl_coa
-    <-> . +s_carnitine +coa
+    <-> . +s_carnitine +coa_mnxm727276
     o_pentadecanoylcarnitine
   }
 

@@ -18,28 +18,159 @@ pathway all-trans-undecaprenyl-to-nad "all-trans-undecaprenyl… to NAD" {
     menaquinol_11
   }
 
+  branch from 2_demethylmenaquinol_11 side left {
+    2_demethylmenaquinol_11
+    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
+    2_demethylmenaquinone_11
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +n1_3_4_dihydroxybenzoyl_n8_citryl_spermidine +spermidine +atp +amp +hplus
+    n1_3_4_dihydroxybenzoyl_n8_n_8_citryl_bis_spermi
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> . +l_tryptophan +atp +h2o +amp +hplus
+    d_tryptophan
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +g5_ppp5_m2_aaca_mrna +sam
+    m7g5_ppp5_m2_aaca_mrna
+  }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_374 [2.1.1.374] +3_bromo_2_heptyl_1_hydroxy_4_1h_quinolinone +sam +hplus
+    3_bromo_2_heptyl_1_methoxy_4_1h_quinolinone
+  }
 
+  branch from h side right {
+    h
+    <-> . +dtdp_l_oleandrose +avermectin_a1a_monosaccharide +dtdp
+    avermectin_a1a
+  }
 
+  branch from h side left {
+    h
+    <-> ec_2_1_1_68 [2.1.1.68] +s_adenosyl_l_homocysteine +trans_sinapyl_alcohol +e_5_hydroxyconiferyl_alcohol
+    s_adenosyl_l_methionine
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +9_hydroxybenzo_a_pyrene_4_5_oxide +nadp +h2o_water +h +o2
+    9_hydroxybenzo_a_pyrene
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadp +h2o_water
+    2_2_dichloroacetaldehyde
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_12 [1.1.1.12] +nadh +l_sorbopyranose +h
+    l_iditol
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_3_1_77 [1.3.1.77] +nadh +3_hydroxy_2_phenylchromenylium +h
+    2r_3r_flavan_3_ol
+  }
 
+  branch from 1_4_dihydroxy_2_naphthoate side right {
+    1_4_dihydroxy_2_naphthoate
+    <-> ec_4_1_3_36 [4.1.3.36] +coa
+    2_succinylbenzoyl_coa
+  }
 
+  branch from 1_4_dihydroxy_2_naphthoate side left {
+    1_4_dihydroxy_2_naphthoate
+    <-> . +nadh +diphosphate +co2_mnxm13 +h +2_demethylmenaquinone_8 +nad
+    octaprenyl_diphosphate
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +trans_cinnamate +atp +coa_chebi_57287 +amp
+    e_cinnamoyl_coa
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_222 [4.2.3.222] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    phomopsene
+  }
 
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_374 [2.1.1.374] +3_methyl_1_oxo_2_3_oxo_3_pyrrolidin_1_yl_propyl +sah +hplus
+    3_5_dimethyl_1_oxo_2_3_oxo_3_pyrrolidin_1_yl_pro
+  }
 
+  branch from sam side left {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +malonyl-coa +acetyl_coa +sam +nadph_chebi_57783 +hplus +co2 +nadp_chebi_58349 +coa_chebi_57287 +h2o
+    soppiline_a
+  }
 
+  branch from sah side left {
+    sah
+    <-> . +avenanthramide_c +sam +hplus
+    avenanthramide_b
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +h2o_water
+    1_1_dichloroethylene_epoxide
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +h2o_water
+    chloroacetyl_chloride
+  }
 
+  branch from h side right {
+    h
+    <-> . +3_amino_3_deoxy_d_fructose_6_phosphate
+    3_amino_3_deoxy_6_o_phosphono_d_glucopyranose
+  }
 
+  branch from h side left {
+    h
+    <-> . +dtdp +100_1 +urdamycinone_b
+    dtdp_beta_l_rhodinose
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +trichloroethene +h +o2 +nadp +h2o_water
+    trichloroacetaldehyde
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +nadp +2_bromoacetaldehyde +bromide +h2o_water +o2
+    1_2_dibromoethane
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +3_methylphenol +o2 +nad +h2o_water
+    3_hydroxybenzyl_alcohol
+  }
 }

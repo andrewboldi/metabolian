@@ -18,7 +18,7 @@ pathway nadh-to-5-androstane-3-17-dione "NADH to 5α-androstane-3,17-dione" {
 
   branch from androsterone side left {
     androsterone
-    <-> . +nad +nadh +hplus
+    <-> . +nad_chebi_57540 +nadh_chebi_57945 +hplus
     5_androstane_3_17_diol
   }
 

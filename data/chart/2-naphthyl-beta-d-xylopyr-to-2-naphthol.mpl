@@ -84,13 +84,13 @@ pathway 2-naphthyl-beta-d-xylopyr-to-2-naphthol "2-Naphthyl-beta-D-xylopyr… to
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +coa_disulfide +h2o +hplus
+    <-> . +coa_disulfide +h2o_chebi_15377 +hplus
     4_phosphopantetheinyl_coa_disulfide
   }
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
     <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +3_phosphonato_5_adenylyl_sulfate +hplus
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_142153
   }
 }

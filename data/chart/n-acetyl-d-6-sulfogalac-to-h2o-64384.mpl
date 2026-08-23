@@ -10,9 +10,9 @@ pathway n-acetyl-d-6-sulfogalac-to-h2o-64384 "N-acetyl-β-D-6-sulfogalac… to H
     n_acetyl_d_6_sulfogalactosaminyl_1_4_l_iduronyl
     <-> . +h2o -n_acetyl_d_6_sulfogalactosamine
     l_iduronyl_1_3_n_acetyl_d_6_sulfogalactosamine
-    <-> ec_3_2_1_180 [3.2.1.180] +n_acetyl_d_6_sulfogalactosamine +4_deoxy_l_threo_hex_4_enopyranuronate -h2o
+    <-> ec_3_2_1_180 [3.2.1.180] +n_acetyl_d_6_sulfogalactosamine +4_deoxy_l_threo_hex_4_enopyranuronate -h2o_water
     beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac6
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac6 -h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac6 -h2o_water
     atp
   }
 

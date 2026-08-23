@@ -12,7 +12,7 @@ pathway d-glycerate-to-h2o "D-glycerate to H2O" {
     2_d_mannosyl_d_glycerate
     <-> ec_3_2_1_170 [3.2.1.170] +h2o -d_mannopyranose
     d_glycerate
-    <-> . +d_mannopyranose +l_tryptophan -h2o
+    <-> . +d_mannopyranose +l_tryptophan -h2o_water
     1_1_2_3_4_5_pentahydroxypent_1_yl_1_2_3_4_tetrah
   }
 }

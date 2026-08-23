@@ -10,7 +10,7 @@ pathway deamido-nad-to-h2o "deamido-NAD to H2O" {
     deamido_nad
     <-> ec_1_1_1_28 [1.1.1.28] +r_lactate -nicotinamide_hypoxanthine_dinucleotide
     pyruvate
-    <-> ec_1_2_1_12 [1.2.1.12] +glyceric_acid_1_3_biphosphate +nicotinamide_hypoxanthine_dinucleotide -h -nicotinamide_hypoxanthine_dinucleotide -phosphate
+    <-> ec_1_2_1_12 [1.2.1.12] +glyceric_acid_1_3_biphosphate +nicotinamide_hypoxanthine_dinucleotide -h -nicotinamide_hypoxanthine_dinucleotide_mnxm588097 -phosphate
     d_glyceraldehyde_3_phosphate
     <-> . +h2o -phosphate
     d_glyceraldehyde

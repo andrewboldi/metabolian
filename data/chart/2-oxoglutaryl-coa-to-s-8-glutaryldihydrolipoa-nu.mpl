@@ -9,7 +9,7 @@ pathway 2-oxoglutaryl-coa-to-s-8-glutaryldihydrolipoa-nu "2-oxoglutaryl-CoA to S
   spine at 0,0 {
     2_oxoglutaryl_coa
     <-> . +h
-    2_oxoglutaryl_coa
+    2_oxoglutaryl_coa_mnxm1370830
     <-> . +glutarate -2_oxoglutarate -h
     glutaryl_coa
     <-> ec_2_3_1_61 [2.3.1.61] +r_dihydrolipoamide +h -s_8_glutaryldihydrolipoamide

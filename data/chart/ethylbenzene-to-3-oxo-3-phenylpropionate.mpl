@@ -48,7 +48,7 @@ pathway ethylbenzene-to-3-oxo-3-phenylpropionate "ethylbenzene to 3-oxo-3-phenyl
 
   branch from 3_oxo_3_phenylpropionate side right {
     3_oxo_3_phenylpropionate
-    <-> ec_6_4_1_8 [6.4.1.8] +co2 +acetophenone
+    <-> ec_6_4_1_8 [6.4.1.8] +co2 +acetophenone_mnxm1719
     h
   }
 

@@ -28,8 +28,8 @@ pathway 6s-5-formyl-5-6-7-8-tet-to-l-glutamate-null "(6S)-5-formyl-5,6,7,8-tetâ€
 
   branch from h side right {
     h
-    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate +co2
-    2_hydroxy_6_methoxy_hexa_2_4_dienoate
+    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate_mnxm1368569 +co2
+    2_hydroxy_6_methoxy_hexa_2_4_dienoate_mnxm1368617
   }
 
   branch from adp side left {
@@ -125,7 +125,7 @@ pathway 6s-5-formyl-5-6-7-8-tet-to-l-glutamate-null "(6S)-5-formyl-5,6,7,8-tetâ€
   branch from h side right {
     h
     <-> . +o2 +3_methyl_5_hydroxy_6_3_carboxy_3_oxopropenyl_1h
-    5_6_dihydroxy_3_methyl_2_oxo_1_2_dihydroquinolin
+    5_6_dihydroxy_3_methyl_2_oxo_1_2_dihydroquinolin_mnxm1369197
   }
 
   branch from adp side left {

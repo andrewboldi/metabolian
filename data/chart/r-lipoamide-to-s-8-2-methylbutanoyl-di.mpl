@@ -37,7 +37,7 @@ pathway r-lipoamide-to-s-8-2-methylbutanoyl-di "(R)-lipoamide to S(8)-(2-methylb
   branch from co2 side right {
     co2
     <-> . +4_amino_2_methanethioyl_5_oxo_3_sulfanylpyrrolid
-    5e_3_amino_4_sulfanyl_5_sulfanylmethylidene_pyr
+    5e_3_amino_4_sulfanyl_5_sulfanylmethylidene_pyr_mnxm1368559
   }
 
   branch from h side left {

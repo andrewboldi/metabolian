@@ -60,13 +60,13 @@ pathway 3s-3-hydroxytetracosano-to-fmn "(3S)-3-hydroxytetracosano… to FMN" {
 
   branch from n_hexacosanoylsphinganine side left {
     n_hexacosanoylsphinganine
-    <-> . +h +o2 +nadph +n_hexacosanoyl_4r_hydroxysphinganine +h2o
-    nadp
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +n_hexacosanoyl_4r_hydroxysphinganine +h2o_water
+    nadp_mnxm5
   }
 
   branch from n_hexacosanoylsphinganine side right {
     n_hexacosanoylsphinganine
-    <-> . +h +o2 +nadph +nadp +h2o
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     cer_d18_0_h26_0
   }
 

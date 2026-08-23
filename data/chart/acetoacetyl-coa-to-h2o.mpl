@@ -135,12 +135,12 @@ pathway acetoacetyl-coa-to-h2o "acetoacetyl-CoA to H2O" {
   branch from h2o2 side right {
     h2o2
     <-> . +hydroxyl +fe +h2o +h
-    fe
+    fe_mnxm1370983
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +fe +h2o +fe +h
+    <-> . +fe +h2o +fe_mnxm1370983 +h
     hydrogen_oxide
   }
 

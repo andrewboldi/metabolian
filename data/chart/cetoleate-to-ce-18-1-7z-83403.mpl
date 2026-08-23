@@ -33,24 +33,24 @@ pathway cetoleate-to-ce-18-1-7z-83403 "cetoleate to CE 18:1(7Z)" {
   branch from 11z_docosenoyl_coa side left {
     11z_docosenoyl_coa
     <-> . +r_carnitine +docosenoylcarnitine_11
-    coa
+    coa_mnxm727276
   }
 
   branch from 11z_docosenoyl_coa side right {
     11z_docosenoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    fad
+    <-> . +nadh_mnxm10 +acetyl_coa_mnxm1104266 +fadh2_mnxm1105762 +h +coa_mnxm727276 +nad_mnxm8 +h2o_water
+    fad_mnxm1364149
   }
 
   branch from 2e_11z_docosadi_2_11_enoyl_coa side left {
     2e_11z_docosadi_2_11_enoyl_coa
     <-> . +3_s_hydroxy_11cis_docosenoyl_coenzyme_a
-    h2o
+    h2o_water
   }
 
   branch from 3_oxo_11z_docos_11_enoyl_coa side right {
     3_oxo_11z_docos_11_enoyl_coa
-    <-> . +malonyl_coa +h +9z_icos_9_enoyl_coa +coa
+    <-> . +malonyl_coa +h +9z_icos_9_enoyl_coa +coa_mnxm727276
     co2
   }
 
@@ -62,56 +62,56 @@ pathway cetoleate-to-ce-18-1-7z-83403 "cetoleate to CE 18:1(7Z)" {
 
   branch from 9z_icos_9_enoyl_coa side right {
     9z_icos_9_enoyl_coa
-    <-> . +r_carnitine +coa
+    <-> . +r_carnitine +coa_mnxm727276
     11z_eicoseneoylcarnitine
   }
 
   branch from 9z_icos_9_enoyl_coa side left {
     9z_icos_9_enoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    nad
+    <-> . +nadh_mnxm10 +acetyl_coa_mnxm1104266 +fadh2_mnxm1105762 +h +fad_mnxm1364149 +coa_mnxm727276 +h2o_water
+    nad_mnxm8
   }
 
   branch from 2e_9z_icosadi_2_9_enoyl_coa side right {
     2e_9z_icosadi_2_9_enoyl_coa
-    <-> . +h2o
+    <-> . +h2o_water
     3_s_hydroxy_9_cis_eicosenoyl_coenzyme_a
   }
 
   branch from 3_oxo_9z_icos_9_enoyl_coa side left {
     3_oxo_9z_icos_9_enoyl_coa
-    <-> . +h +7z_octadecenoyl_coa +co2 +coa
+    <-> . +h +7z_octadecenoyl_coa +co2 +coa_mnxm727276
     malonyl_coa
   }
 
   branch from 7z_octadecenoyl_coa side right {
     7z_octadecenoyl_coa
-    <-> . +octadecanoyl_coa +h +o2 +nadph +h2o
+    <-> . +octadecanoyl_coa +h +o2 +nadph +h2o_water
     nadp
   }
 
   branch from 7z_octadecenoyl_coa side left {
     7z_octadecenoyl_coa
-    <-> . +r_carnitine +coa
+    <-> . +r_carnitine +coa_mnxm727276
     11z_octadecenoylcarnitine
   }
 
   branch from 11z_docosenoyl_coa side right {
     11z_docosenoyl_coa
-    <-> . +s_carnitine +coa
+    <-> . +s_carnitine +coa_mnxm727276
     11z_docos_11_enoylcarnitine
   }
 
   branch from 9z_icos_9_enoyl_coa side left {
     9z_icos_9_enoyl_coa
-    <-> . +s_carnitine +coa
+    <-> . +s_carnitine +coa_mnxm727276
     eicosenoylcarnitine_11
   }
 
   branch from 7z_octadecenoyl_coa side right {
     7z_octadecenoyl_coa
-    <-> . +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
-    nadh
+    <-> . +acetyl_coa_mnxm1104266 +fadh2_mnxm1105762 +h +fad_mnxm1364149 +coa_mnxm727276 +nad_mnxm8 +h2o_water
+    nadh_mnxm10
   }
 
   branch from cholesterol side left {
@@ -122,7 +122,7 @@ pathway cetoleate-to-ce-18-1-7z-83403 "cetoleate to CE 18:1(7Z)" {
 
   branch from cholesterol side right {
     cholesterol
-    <-> ec_1_14_19_21 [1.14.19.21] +nadph +o2 +hplus +nadp +h2o
+    <-> ec_1_14_19_21 [1.14.19.21] +nadph_chebi_57783 +o2_chebi_15379 +hplus +nadp_chebi_58349 +h2o
     dehydrocholesterol_7
   }
 }

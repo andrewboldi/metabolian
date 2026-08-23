@@ -10,11 +10,11 @@ pathway amyrin-to-fmn-null "β-amyrin to FMN" {
     amyrin
     <-> ec_1_14_13_134 [1.14.13.134] +h +o2 +nadph -nadp -h2o
     11_oxo_amyrin
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     30_hydroxy_11_oxo_amyrin
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     glycyrrhetaldehyde
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     glycyrrhetinate
   }
 }

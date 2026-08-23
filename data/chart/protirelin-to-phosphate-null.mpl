@@ -37,7 +37,7 @@ pathway protirelin-to-phosphate-null "protirelin to phosphate" {
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143181
   }
 
   branch from phosphate side left {
@@ -49,7 +49,7 @@ pathway protirelin-to-phosphate-null "protirelin to phosphate" {
   branch from phosphate side right {
     phosphate
     <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade +h2o
-    coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade
+    coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade_mnxm818836
   }
 
   branch from h2o side left {

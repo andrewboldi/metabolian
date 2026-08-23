@@ -12,8 +12,8 @@ pathway salicylaldehyde-to-salicin-null "salicylaldehyde to salicin" {
     salicyl_alcohol
     <-> ec_3_2_1_86 [3.2.1.86] +d_glucose_6_phosphate -h2o
     salicin_6_phosphate
-    <-> . +h2o -d_glucose_6_phosphate
-    salicyl_alcohol
+    <-> . +h2o_chebi_15377 -d_glucose_6_phosphate_chebi_58247
+    salicyl_alcohol_chebi_16464
     <-> ec_2_4_1_172 [2.4.1.172] +udp_d_glucose -udp -hplus
     salicin
   }

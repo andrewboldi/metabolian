@@ -55,7 +55,7 @@ pathway d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl "D-cellobiono-1,5-lacton
   branch from glucose side left {
     glucose
     <-> . +sucrose +6_kestotriose
-    6_6_kestotetraose
+    6_6_kestotetraose_mnxm1363484
   }
 
   branch from h2o side right {

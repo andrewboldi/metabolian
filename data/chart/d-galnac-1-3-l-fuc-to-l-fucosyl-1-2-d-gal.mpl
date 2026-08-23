@@ -28,7 +28,7 @@ pathway d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal "α-D-GalNAc-(1→3)-[α-L-Fuc
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
+    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o_water
     glucose
   }
 
@@ -52,7 +52,7 @@ pathway d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal "α-D-GalNAc-(1→3)-[α-L-Fuc
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_1_1_3_9 [1.1.3.9] +o2 +h2o +h +h2o2
+    <-> ec_1_1_3_9 [1.1.3.9] +o2 +h2o_water +h +h2o2
     d_galactonate
   }
 

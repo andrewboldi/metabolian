@@ -30,13 +30,13 @@ pathway p-nitrophenyl-to-2-hexadecanoyl-1-tetradec "p-Nitrophenyl… to 2-hexade
 
   branch from tetradecanoate side left {
     tetradecanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +malonyl_coa +h +dodecanoate +nadph +nadp +coa +h2o
+    <-> ec_2_3_1_85 [2.3.1.85] +malonyl_coa +h +dodecanoate +nadph +nadp +coa_mnxm727276 +h2o
     co2
   }
 
   branch from tetradecanoate side right {
     tetradecanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +hexadecanoate +co2 +nadp +coa +h2o +h +nadph
+    <-> ec_2_3_1_85 [2.3.1.85] +hexadecanoate +co2 +nadp +coa_mnxm727276 +h2o +h +nadph
     malonyl_coa
   }
 

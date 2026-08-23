@@ -16,9 +16,9 @@ pathway panose-to-1-o-acetylmaltose-null "panose to 1-O-acetylmaltose" {
     glucose
     <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp +d_glucosyl_1_4_d_mannose -glucose
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +h2o -d_glucose
+    <-> . +h2o_chebi_15377 -d_glucose
     d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +h2o -d_glucose
+    <-> . +h2o_chebi_15377 -d_glucose
     maltose
     <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa -coa
     1_o_acetylmaltose

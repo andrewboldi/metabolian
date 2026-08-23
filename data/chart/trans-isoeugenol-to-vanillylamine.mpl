@@ -20,31 +20,31 @@ pathway trans-isoeugenol-to-vanillylamine "trans-isoeugenol to vanillylamine" {
 
   branch from vanillylamine side left {
     vanillylamine
-    <-> ec_2_3_2_35 [2.3.2.35] +8_methylnonanoyl_coa +h +coa
+    <-> ec_2_3_2_35 [2.3.2.35] +8_methylnonanoyl_coa +h +coa_mnxm727276
     dihydrocapsaicin
   }
 
   branch from vanillylamine side right {
     vanillylamine
     <-> ec_2_3_2_35 [2.3.2.35] +6e_9_methyldec_6_enoyl_coa +h +homocapsaicin
-    coa
+    coa_mnxm727276
   }
 
   branch from 8_methyl_6_nonenoic_acid side left {
     8_methyl_6_nonenoic_acid
-    <-> ec_6_2_1_3 [6.2.1.3] +6e_8_methylnon_6_enoyl_coa +h +adp +phosphate +coa
+    <-> ec_6_2_1_3 [6.2.1.3] +6e_8_methylnon_6_enoyl_coa +h +adp +phosphate +coa_mnxm727276
     atp
   }
 
   branch from vanillylamine side right {
     vanillylamine
-    <-> ec_2_3_2_35 [2.3.2.35] +9_methyldecanoyl_coa +h +coa
+    <-> ec_2_3_2_35 [2.3.2.35] +9_methyldecanoyl_coa +h +coa_mnxm727276
     homodihydrocapsaicin
   }
 
   branch from vanillylamine side left {
     vanillylamine
-    <-> ec_2_3_2_35 [2.3.2.35] +7_methyloct_6_enoyl_coa +h +coa
+    <-> ec_2_3_2_35 [2.3.2.35] +7_methyloct_6_enoyl_coa +h +coa_mnxm727276
     norcapsaicin
   }
 

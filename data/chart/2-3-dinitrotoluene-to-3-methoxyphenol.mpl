@@ -10,8 +10,8 @@ pathway 2-3-dinitrotoluene-to-3-methoxyphenol "2,3-dinitrotoluene to 3-methoxyph
     2_3_dinitrotoluene
     <-> ec_1_14_12_23 [1.14.12.23] +nadh +o2 -nitrite -nad -hplus
     4_methyl_3_nitrocatechol
-    <-> ec_1_14_12_24 [1.14.12.24] +nitrite +h +nad -2_4_dinitrotoluene -o2
-    nadh
+    <-> ec_1_14_12_24 [1.14.12.24] +nitrite_mnxm107 +h +nad_mnxm8 -2_4_dinitrotoluene -o2_mnxm735438
+    nadh_mnxm10
     <-> ec_1_14_12_24 [1.14.12.24] +2_4_dinitrotoluene +nadh +o2 -nitrite -nad
     4_methyl_5_nitrocatechol
     <-> ec_1_14_13_210 [1.14.13.210] +nadph +o2 -nitrite -nadp -h2o -hplus

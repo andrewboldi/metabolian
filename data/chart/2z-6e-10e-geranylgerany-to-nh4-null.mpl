@@ -13,6 +13,6 @@ pathway 2z-6e-10e-geranylgerany-to-nh4-null "(2Z,6E,10E)-geranylgerany… to NH4
     <-> ec_2_4_1_129 [2.4.1.129] +a_nascent_peptidoglycan_dimer_e_faeciums +di_trans_octa_cis_undecaprenyl_diphosphate +h
     und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
     <-> . +diphosphate +h +amp -atp -nh4
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig_mnxm1366306
   }
 }

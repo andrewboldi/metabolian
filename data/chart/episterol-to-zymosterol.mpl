@@ -10,9 +10,9 @@ pathway episterol-to-zymosterol "episterol to zymosterol" {
     episterol
     <-> ec_1_14_19_20 [1.14.19.20] +fe2 +o2 +hplus -iron -h2o
     ergosta_5_7_24_28_trien_3_ol
-    <-> . +nadh +h +o2 -nad -h2o
+    <-> . +nadh +h +o2_mnxm735438 -nad -h2o_water
     ergosta_5_7_22_24_28_tetraen_3beta_ol
-    <-> ec_5_3_3_5 [5.3.3.5] +s_adenosyl_l_homocysteine +h +h2o -o2 -zymosterol
+    <-> ec_5_3_3_5 [5.3.3.5] +s_adenosyl_l_homocysteine +h +h2o_water -o2_mnxm735438 -zymosterol
     s_adenosyl_l_methionine
   }
 }

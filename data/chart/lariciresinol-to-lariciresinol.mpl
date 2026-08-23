@@ -10,9 +10,9 @@ pathway lariciresinol-to-lariciresinol "(+)-lariciresinol to (+)-lariciresinol" 
     lariciresinol
     <-> ec_1_23_1_1 [1.23.1.1] +nadp -nadph -hplus
     pinoresinol
-    <-> ec_1_23_1_1 [1.23.1.1] +h +nadph -lariciresinol
-    nadp
-    <-> ec_1_23_1_2 [1.23.1.2] +h +lariciresinol +nadph -nadp
+    <-> ec_1_23_1_1 [1.23.1.1] +h +nadph_mnxm738702 -lariciresinol_chebi_67244
+    nadp_mnxm5
+    <-> ec_1_23_1_2 [1.23.1.2] +h +lariciresinol_chebi_67244 +nadph_mnxm738702 -nadp_mnxm5
     secoisolariciresinol
     <-> ec_1_23_1_2 [1.23.1.2] +nadp -nadph -hplus
     lariciresinol

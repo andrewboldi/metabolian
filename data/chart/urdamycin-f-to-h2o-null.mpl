@@ -73,7 +73,7 @@ pathway urdamycin-f-to-h2o-null "Urdamycin F to H2O" {
   branch from dtdp side right {
     dtdp
     <-> . +dtdp_l_oleandrose +avermectin_a2b_aglycone +h
-    avermectin_a2b_monosaccharide
+    avermectin_a2b_monosaccharide_mnxm1370813
   }
 
   branch from h side left {

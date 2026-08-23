@@ -9,11 +9,11 @@ pathway 1-hexadecanoyl-2-4z-7z-1-to-1-octadecanoyl-2-4z "1-hexadecanoyl-2-(4Z,7Z
   spine at 0,0 {
     1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
     <-> . +sam -sah -hplus
-    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex_chebi_189861
     <-> . +sam -sah -hplus
-    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex_chebi_189862
     <-> . +sam -sah -hplus
-    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex_chebi_74963
     <-> . +n_acetylsphingosine -1_o_palmitoyl_n_acetylsphingosine
     2_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce
     <-> . +stearoyl_coa -coa

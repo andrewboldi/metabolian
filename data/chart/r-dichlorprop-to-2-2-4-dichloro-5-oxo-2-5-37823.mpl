@@ -52,13 +52,13 @@ pathway r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5-37823 "(R)-dichlorprop to 2-(2
 
   branch from h side right {
     h
-    <-> ec_3_5_4_20 [3.5.4.20] +1_4_amino_2_methylpyrimidin_5_ylmethyl_3_2_hydro +h2o +1_4_hydroxy_2_methylpyrimidin_5_ylmethyl_3_2_hyd
+    <-> ec_3_5_4_20 [3.5.4.20] +1_4_amino_2_methylpyrimidin_5_ylmethyl_3_2_hydro +h2o_water +1_4_hydroxy_2_methylpyrimidin_5_ylmethyl_3_2_hyd
     nh4
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_62 [1.1.1.62] +16alpha_hydroxyestrone +nadph +nadp
+    <-> ec_1_1_1_62 [1.1.1.62] +16alpha_hydroxyestrone +nadph_mnxm738702 +nadp_mnxm5
     16alpha_17beta_estriol
   }
 }

@@ -12,7 +12,7 @@ pathway nadh-to-dihydroartemisinate-null "NADH to dihydroartemisinate" {
     2_cis_6_cis_farnesol
     <-> ec_1_1_1_71 [1.1.1.71] +nadp -nadph -11r_dihydroartemisinic_aldehyde
     h
-    <-> . +11r_dihydroartemisinic_aldehyde +nad +h2o -nadh -hplus
+    <-> . +11r_dihydroartemisinic_aldehyde +nad_chebi_57540 +h2o -nadh_chebi_57945 -hplus
     dihydroartemisinate
   }
 }

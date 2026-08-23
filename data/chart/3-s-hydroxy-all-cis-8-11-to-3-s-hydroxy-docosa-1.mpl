@@ -10,11 +10,11 @@ pathway 3-s-hydroxy-all-cis-8-11-to-3-s-hydroxy-docosa-1 "3(S)-hydroxy-all-cis-8
     3_s_hydroxy_all_cis_8_11_14_17_eicosatetraenoyl
     <-> . +nadp -h -nadph
     8z_11z_14z_17z_3_oxoicosatetraenoyl_coa
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     3r_8z_11z_14z_17z_3_hydroxyicosatetraenoyl_coa
     <-> . -h2o
     2e_8z_11z_14z_17z_icosapentaenoyl_coa
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     8z_11z_14z_17z_icosatetraenoyl_coa
     <-> . +malonyl-coa +hplus -co2 -coa
     10z_13z_16z_19z_3_oxodocosatetraenoyl_coa

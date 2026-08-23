@@ -92,13 +92,13 @@ pathway all-trans-undecaprenyl-to-nad-44812 "all-trans-undecaprenyl… to NAD" {
 
   branch from 1_4_dihydroxy_2_naphthoate side left {
     1_4_dihydroxy_2_naphthoate
-    <-> . +nadh +diphosphate +co2 +h +2_demethylmenaquinone_8 +nad
+    <-> . +nadh +diphosphate +co2_mnxm13 +h +2_demethylmenaquinone_8 +nad
     octaprenyl_diphosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_197 [4.2.3.197] +fpp +h2o
+    <-> ec_4_2_3_197 [4.2.3.197] +fpp +h2o_chebi_15377
     7_epi_ent_eudesmane_5_11_diol
   }
 

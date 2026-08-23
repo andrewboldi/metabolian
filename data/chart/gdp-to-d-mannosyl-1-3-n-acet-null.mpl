@@ -16,7 +16,7 @@ pathway gdp-to-d-mannosyl-1-3-n-acet-null "GDP to α-D-mannosyl-(1→3)-N-acet�
     udp_n_acetyl_alpha_d_glucosamine
     <-> . +udp +alpha_d_gal_1_3_alpha_d_galnac_pp_und +h -n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
     udp_alpha_d_galactose
-    <-> . +n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po +gdp_d_mannose -gdp -hplus
+    <-> . +n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po +gdp_d_mannose -gdp_chebi_58189 -hplus
     d_mannosyl_1_3_n_acetyl_d_galctosaminyl_1_dipho
   }
 

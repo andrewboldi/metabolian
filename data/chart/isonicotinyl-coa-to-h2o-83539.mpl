@@ -12,38 +12,38 @@ pathway isonicotinyl-coa-to-h2o-83539 "isonicotinyl-CoA to H2O" {
     n6_isonicotinyl_l_lysine
     <-> . +h2o -l_lysinium
     isonicotinate
-    <-> ec_3_1_1_1 [3.1.1.1] +h +acetohydrazide -h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +h +acetohydrazide -h2o_water
     n_acetylisoniazid
-    <-> . +h +adp +phosphate -n_acetylisoniazid -h2o
+    <-> . +h +adp +phosphate -n_acetylisoniazid -h2o_water
     atp
   }
 
   branch from isonicotinate side left {
     isonicotinate
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o_water
     4_pyridinecarboxaldehyde
   }
 
   branch from isonicotinate side right {
     isonicotinate
-    <-> . +h +glycine +h2o
+    <-> . +h +glycine +h2o_water
     isonicotinylglycine
   }
 
   branch from n_acetylisoniazid side left {
     n_acetylisoniazid
     <-> . +acetyl_coa +isoniazide
-    coa
+    coa_mnxm727276
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +3_4_dihydroxybenzoate +2_4_6_trihydroxybenzoic_acid
     2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_52 [3.2.1.52] +n_acetyl_d_hexosamine +n_n_diacetylchitobiose
     n_n_n_triacetylchitotriose
   }
@@ -68,30 +68,30 @@ pathway isonicotinyl-coa-to-h2o-83539 "isonicotinyl-CoA to H2O" {
 
   branch from h side left {
     h
-    <-> . +formaldehyde +4_hydroxycoumarin +h2o
+    <-> . +formaldehyde +4_hydroxycoumarin +h2o_water
     dicoumarol
   }
 
   branch from acetohydrazide side right {
     acetohydrazide
-    <-> ec_2_3_1_5 [2.3.1.5] +hydrazine +coa
+    <-> ec_2_3_1_5 [2.3.1.5] +hydrazine +coa_mnxm727276
     acetyl_coa
   }
 
   branch from acetohydrazide side left {
     acetohydrazide
-    <-> . +h +hydrazine +h2o
+    <-> . +h +hydrazine +h2o_water
     acetate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +3_oxocholest_4_24_dien_26_oyl_coa
     24_hydroxy_3_oxocholest_4_en_26_oyl_coa
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +3_oxo_24_isopropanoyl_cholest_4_24_dien_26_oyl_c +3_24_dioxo_cholest_4_en_26_oate
     propanoyl_coa
   }
@@ -110,19 +110,19 @@ pathway isonicotinyl-coa-to-h2o-83539 "isonicotinyl-CoA to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +ethanol +h +h2o
+    <-> ec_3_1_3_1 [3.1.3.1] +ethanol +h +h2o_water
     ethyl_dihydrogen_phosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_104 [3.1.3.104] +d_gluconate +h2o
+    <-> ec_3_1_3_104 [3.1.3.104] +d_gluconate +h2o_water
     6_phospho_d_gluconate
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +4_methoxycinnamoyl_coa +amp +h +coa
+    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +4_methoxycinnamoyl_coa +amp +h +coa_mnxm727276
     4_methoxycinnamic_acid
   }
 

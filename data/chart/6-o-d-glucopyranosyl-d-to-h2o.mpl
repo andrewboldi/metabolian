@@ -18,7 +18,7 @@ pathway 6-o-d-glucopyranosyl-d-to-h2o "6-O-α-D-glucopyranosyl-D-… to H2O" {
     d_fructofuranosyl_d_mannopyranoside_6f_phosphat
     <-> ec_3_1_3_79 [3.1.3.79] +h2o -pi
     d_fructofuranosyl_d_mannopyranoside
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -d_fructofuranosyl_d_mannopyranoside -h2o
-    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp_mnxm40333 +phosphate -d_fructofuranosyl_d_mannopyranoside -h2o_water
+    atp_mnxm3
   }
 }

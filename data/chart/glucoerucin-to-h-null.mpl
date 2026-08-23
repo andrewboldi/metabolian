@@ -10,7 +10,7 @@ pathway glucoerucin-to-h-null "glucoerucin to H" {
     glucoerucin
     <-> ec_1_14_13_237 [1.14.13.237] +h +o2 +nadph -nadp -h2o
     glucoraphanin
-    <-> . +h2o -glucose -hplus
+    <-> . +h2o_chebi_15377 -glucose -hplus
     z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi
     <-> . -sulfur_atom -sulfate
     5_methylsulfinylpentyl_nitrile
@@ -50,7 +50,7 @@ pathway glucoerucin-to-h-null "glucoerucin to H" {
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g_chebi_143182 +h2o
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 

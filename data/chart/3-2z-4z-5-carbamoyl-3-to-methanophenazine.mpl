@@ -27,7 +27,7 @@ pathway 3-2z-4z-5-carbamoyl-3-to-methanophenazine "3-[(2Z,4Z)-5-carbamoyl-3-… 
   branch from o2 side right {
     o2
     <-> . +3_methyl_4_nitrocatechol +h
-    2_hydroxy_5_nitro_6_oxohepta_2_4_dienoate
+    2_hydroxy_5_nitro_6_oxohepta_2_4_dienoate_mnxm1372618
   }
 
   branch from nadph side left {

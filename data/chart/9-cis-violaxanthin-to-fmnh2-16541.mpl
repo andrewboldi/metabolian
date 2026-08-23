@@ -28,8 +28,8 @@ pathway 9-cis-violaxanthin-to-fmnh2-16541 "9-cis-violaxanthin to FMNH2" {
 
   branch from 2_cis_4_trans_xanthoxin side right {
     2_cis_4_trans_xanthoxin
-    <-> ec_1_13_11_51 [1.13.11.51] +3s_5r_6s_5_6_epoxy_3_hydroxy_5_6_dihydro_12_apo +o2
-    9_cis_violaxanthin
+    <-> ec_1_13_11_51 [1.13.11.51] +3s_5r_6s_5_6_epoxy_3_hydroxy_5_6_dihydro_12_apo_mnxm1371704 +o2_mnxm735438
+    9_cis_violaxanthin_mnxm2798
   }
 
   branch from abscisate side left {
@@ -40,7 +40,7 @@ pathway 9-cis-violaxanthin-to-fmnh2-16541 "9-cis-violaxanthin to FMNH2" {
 
   branch from abscisate side right {
     abscisate
-    <-> ec_3_2_1_175 [3.2.1.175] +abscisic_acid_d_glucopyranosyl_ester +h2o +hplus
+    <-> ec_3_2_1_175 [3.2.1.175] +abscisic_acid_d_glucopyranosyl_ester_chebi_62436 +h2o +hplus
     d_glucose
   }
 

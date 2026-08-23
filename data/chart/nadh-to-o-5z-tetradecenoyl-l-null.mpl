@@ -14,38 +14,169 @@ pathway nadh-to-o-5z-tetradecenoyl-l-null "NADH to O-[(5Z)-tetradecenoyl]-L-…"
     7z_hexadecenoyl_coa
     <-> . +fad +hplus -fadh2
     2e_7z_hexadecadienoyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     3s_7z_3_hydroxyhexadecenoyl_coa
-    <-> . +nad -nadh -hplus
+    <-> . +nad_chebi_57540 -nadh_chebi_57945 -hplus
     7z_3_oxohexadecenoyl_coa
-    <-> . +coa -acetyl_coa
+    <-> . +coa_chebi_57287 -acetyl_coa_chebi_57288
     5z_tetradecenoyl_coa
-    <-> . +carnitine -coa
+    <-> . +carnitine -coa_chebi_57287
     o_5z_tetradecenoyl_l_carnitine
   }
 
+  branch from coa side left {
+    coa
+    <-> . +albireodelphin +delphinidin_3_3_5_tri_o_beta_d_glucoside +h
+    trans_caffeoyl_coa
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +albireodelphin +trans_caffeoyl_coa
+    gentiodelphin
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +6_2_amino_2_carboxylatoethyl_1_2_3_4_tetrahydroq
+    6_2_amino_2_carboxylatoethyl_7_hydroxy_8_oxo_1_2
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +6_2_amino_2_carboxylatoethyl_1_2_3_4_tetrahydroq
+    3a_2_amino_2_carboxyethyl_4_5_dioxo_4_5_6_7_8_9
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +7alpha_24_dihydroxycholest_4_en_3_one +h
+    24s_7_24_dihydroxycholesterol
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_181 [1.1.1.181] +nadh +h +24s_7_24_dihydroxycholesterol
+    7alpha_24_dihydroxy_4_cholesten_3_one
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +1_4_5_7_10_tetrahydroxy_3_3_oxobutanoyl_anthrace +o2
+    premithramycinone_g
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +emodin +h
+    hypericin
+  }
 
+  branch from 7z_hexadecenoyl_coa side left {
+    7z_hexadecenoyl_coa
+    <-> . +sn_glycerol_3_phosphate +coa
+    1_acylglycerol_3p_7_hexade
+  }
 
+  branch from 7z_hexadecenoyl_coa side right {
+    7z_hexadecenoyl_coa
+    <-> . +s_carnitine +coa
+    2e_hexadecenoylcarnitine
+  }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_14_13_3 [1.14.13.3] +3_hydroxyphenylacetate +h +o2 +nad +h2o
+    3_4_dihydroxyphenylacetate
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> ec_1_4_1_21 [1.4.1.21] +iminoaspartate +h +nad
+    l_aspartate
+  }
 
+  branch from 3z_dodecenoyl_coa side left {
+    3z_dodecenoyl_coa
+    <-> . +acetyl_coa +coa
+    3_oxomyrist_5_enoyl_coenzyme_a
+  }
 
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> ec_2_3_1_160 [2.3.1.160] +16_epivellosimine +coa
+    vinorine
+  }
 
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> ec_2_3_3_14 [2.3.3.14] +2_oxoglutarate +h +h2o +coa
+    homocitric_acid
+  }
 
+  branch from h side right {
+    h
+    <-> . +4_hydroxy_2_oxopentanoic_acid
+    s_4_hydroxy_2_oxopentanoate
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_5_3_25 [3.5.3.25] +l_hydroxyarginine +h2o +l_ornithine
+    hydroxyurea
+  }
 
+  branch from h2o2 side right {
+    h2o2
+    <-> . +formaldehyde +n_n_dimethylglycine +o2 +h2o
+    glycine_betaine
+  }
 
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_4_3_16 [1.4.3.16] +l_aspartate +o2 +h
+    iminoaspartate
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +albireodelphin_mnxm1368868 +trans_caffeoyl_coa
+    gentiodelphin_mnxm1371969
+  }
 
+  branch from coa side left {
+    coa
+    <-> ec_2_3_3_2 [2.3.3.2] +dodecanoyl_coa +oxaloacetate +h2o +h
+    2s_3s_2_hydroxytridecane_1_2_3_tricarboxylate
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate
+    3_isopropylcatechol
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_3_3_4 [1.3.3.4] +protoporphyrin_ix +h2o
+    protoporphyrinogen_ix
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_4_1_21 [1.4.1.21] +nadh +h +l_aspartate
+    iminoaspartate_mnxm1370457
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_3_1_1 [1.3.1.1] +nadh +uracil +h
+    5_6_dihydrouracil
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +emodin
+    hypericin_mnxm1368709
+  }
 }

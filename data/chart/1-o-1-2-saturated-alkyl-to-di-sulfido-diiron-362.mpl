@@ -12,7 +12,7 @@ pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron-362 "1-O-(1,2-saturated-alk
     1_1_hydroxyalkyl_sn_glycerol
     <-> . -glycerol
     aldehyde
-    <-> ec_1_2_7_5 [1.2.7.5] +di_sulfido_diiron +h2o -di_sulfido_diiron -hplus
+    <-> ec_1_2_7_5 [1.2.7.5] +di_sulfido_diiron +h2o -di_sulfido_diiron_chebi_33738 -hplus
     carboxylic_acid_anion
   }
 
@@ -34,14 +34,14 @@ pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron-362 "1-O-(1,2-saturated-alk
     dodecanoate
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> ec_1_14_19_61 [1.14.19.61] +dihydrorhizobitoxine +o2 +hplus +di_sulfido_diiron +h2o
     rhizobitoxine
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> . +julichrome_q6 +o2 +hplus +di_sulfido_diiron +h2o
     julichrome_q6_6
   }
@@ -72,24 +72,24 @@ pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron-362 "1-O-(1,2-saturated-alk
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +stearoyl_coa +di_sulfido_diiron +o2 +hplus +h2o
+    <-> . +stearoyl_coa +di_sulfido_diiron_chebi_33738 +o2 +hplus +h2o
     oleoyl_coa
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
+    <-> . +all_trans_retinol +di_sulfido_diiron_chebi_33738 +o2 +hplus +h2o
     all_trans_3_hydroxyretinol
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> . +o_s_decanoylpantetheine_4_phosphoryl_serine_1 +o2 +hplus +di_sulfido_diiron +h2o
     o_s_dec_9_enoylpantetheine_4_phosphoryl_serine_1
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> . +o_s_dec_9_enoylpantetheine_4_phosphoryl_serine_1 +o2 +hplus +di_sulfido_diiron +h2o
     o_s_dec_9_ynoylpantetheine_4_phosphoryl_serine_1
   }

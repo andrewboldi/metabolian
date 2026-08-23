@@ -16,21 +16,117 @@ pathway 8-amino-8-demethylribofla-to-adp "8-amino-8-demethylribofla… to ADP" {
     roseoflavin_5_phosphate
   }
 
+  branch from sah side left {
+    sah
+    <-> . +rhamnetin_3_olate +sam +hplus
+    7_4_o_dimethylquercetin_3_olate
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +3_4_5_o_trimethylmyricetin_3_7_diolate +sam
+    7_3_4_5_o_tetramethylmyricetin_3_olate
+  }
 
+  branch from roseoflavin side left {
+    roseoflavin
+    <-> . +atp +adp
+    8_demethyl_8_dimethylamino_riboflavin_5_phosphat
+  }
 
+  branch from roseoflavin side right {
+    roseoflavin
+    <-> ec_2_1_1_343 [2.1.1.343] +s_adenosyl_l_homocysteine +h +8_amino_8_demethylriboflavin_chebi_137336
+    s_adenosyl_l_methionine
+  }
 
+  branch from roseoflavin_5_phosphate side left {
+    roseoflavin_5_phosphate
+    <-> ec_2_7_7_2 [2.7.7.2] +roseoflavin_adenine_dinucleotide +h +atp
+    diphosphate
+  }
 
+  branch from h side right {
+    h
+    <-> . +nadh +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer +nad
+    cdp_ascarylose
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_1_1_181 [1.1.1.181] +nadh +7alpha_hydroxy_3_oxo_4_cholestenoic_acid +nad
+    3beta_7alpha_dihydroxy_5_cholestenoate
+  }
 
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_151 [2.7.1.151] +1d_myo_inositol_1_4_5_trisphosphate +h +atp
+    1d_myo_inositol_4_5_bisphosphate
+  }
 
+  branch from adp side left {
+    adp
+    <-> . +1d_myo_inositol_3_4_6_trisphosphate +h +atp
+    d_myo_inositol_3_6_bisphosphate
+  }
 
+  branch from sam side right {
+    sam
+    <-> . +kaempferol_oxoanion +sah +hplus
+    3_o_methylkaempferol_7_olate
+  }
 
+  branch from sam side left {
+    sam
+    <-> . +isorhamnetin +sah +hplus
+    3_3_o_dimethylquercetin
+  }
 
+  branch from sah side right {
+    sah
+    <-> . +rhamnetin_3_olate +sam +hplus
+    3_4_5_trihydroxy_3_7_dimethoxyflavone
+  }
 
+  branch from sah side left {
+    sah
+    <-> . +3_4_5_o_trimethylmyricetin_3_7_diolate +sam
+    3_3_4_5_o_tetramethylmyricetin_7_olate
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +jasmonoyl_l_valine +h +amp +jasmonate
+    l_valine
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +l_leucine +jasmonate +diphosphate +h +amp
+    jasmonoyl_l_leucine
+  }
 
+  branch from h side right {
+    h
+    <-> ec_5_1_99_4 [5.1.99.4] +25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    25s_3alpha_7alpha_dihydroxy_5beta_cholestanoyl
+  }
 
+  branch from h side left {
+    h
+    <-> . +s_adenosyl_l_homocysteine +gingerol +s_adenosyl_l_methionine
+    1_3_4_dihydroxyphenyl_5_hydroxy_3_decanone
+  }
 
+  branch from adp side right {
+    adp
+    <-> . +h +desferrioxamine_g +phosphate +h2o +atp
+    n_3_carboxypropanoyl_n_hydroxycadaverine
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_6_3_1_12 [6.3.1.12] +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +d_aspartate +atp +h +phosphate
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig_mnxm12375
+  }
 }

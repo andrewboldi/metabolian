@@ -108,7 +108,7 @@ pathway dimp-to-damp "dIMP to dAMP" {
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_249 [2.4.1.249] +ternatin_c5 +h +udp_alpha_d_glucose
+    <-> ec_2_4_1_249 [2.4.1.249] +ternatin_c5_mnxm1371483 +h +udp_alpha_d_glucose
     delphinidin_3_o_6_o_malonyl_beta_glucoside_3_o_b
   }
 

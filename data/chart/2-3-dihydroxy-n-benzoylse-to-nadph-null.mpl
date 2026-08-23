@@ -93,7 +93,7 @@ pathway 2-3-dihydroxy-n-benzoylse-to-nadph-null "2,3-dihydroxy-N-benzoylse… to
   branch from h2o side left {
     h2o
     <-> . +three_disacharide_linked_murein_units_tetrapepti
-    three_disacharide_linked_murein_units_tetrapepti
+    three_disacharide_linked_murein_units_tetrapepti_mnxm87122
   }
 
   branch from h2o side right {
@@ -141,7 +141,7 @@ pathway 2-3-dihydroxy-n-benzoylse-to-nadph-null "2,3-dihydroxy-N-benzoylse… to
   branch from h2o side left {
     h2o
     <-> . +d_alanine +n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
-    n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
+    n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl_mnxm739017
   }
 
   branch from h side right {

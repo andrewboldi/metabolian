@@ -75,7 +75,7 @@ pathway delta24-25-sitosterol-to-cholesterol "Delta24-25-sitosterol to cholester
   branch from fad side right {
     fad
     <-> . +fadh2 +h +5_methylhex_4_enoyl_coa
-    2e_5_methylhexa_2_4_dienoyl_coa
+    2e_5_methylhexa_2_4_dienoyl_coa_mnxm1371911
   }
 
   branch from cholesterol side left {
@@ -117,7 +117,7 @@ pathway delta24-25-sitosterol-to-cholesterol "Delta24-25-sitosterol to cholester
   branch from nadp side left {
     nadp
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    neodihydrocarveol
+    neodihydrocarveol_chebi_158
   }
 
   branch from nadp side right {
@@ -164,7 +164,7 @@ pathway delta24-25-sitosterol-to-cholesterol "Delta24-25-sitosterol to cholester
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +7_hydroxy_3_isocyanochromen_2_one +h +o2 +h2o
+    <-> . +fadh2 +7_hydroxy_3_isocyanochromen_2_one_mnxm1112434 +h +o2 +h2o
     6_7_dihydroxy_3_isocyanochromen_2_one
   }
 

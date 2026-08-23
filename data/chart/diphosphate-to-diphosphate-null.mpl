@@ -12,7 +12,7 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
     copal_8_ol_diphosphate
     <-> ec_4_2_3_141 [4.2.3.141] +h2o -ppi
     sclareol
-    <-> ec_3_1_7_4 [3.1.7.4] +diphosphate -h2o
+    <-> ec_3_1_7_4 [3.1.7.4] +diphosphate -h2o_water
     2e_6e_10e_geranylgeranyl_diphosphate
     <-> ec_2_5_1_29 [2.5.1.29] +diphosphate -ipp
     dimethylallyl_diphosphate
@@ -29,7 +29,7 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
   branch from copal_8_ol_diphosphate side right {
     copal_8_ol_diphosphate
     <-> ec_4_2_3_190 [4.2.3.190] +diphosphate
-    manoyl_oxide
+    manoyl_oxide_mnxm814673
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
@@ -44,14 +44,14 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
     bacteriochlorophyllide_b
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +l_histidine +l_aspartate +l_cysteine
     aspartyl_histidyl_cysteine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +l_histidine +l_proline +l_aspartate
     aspartyl_histidyl_proline
   }
@@ -82,48 +82,48 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_4_2_3_204 [4.2.3.204] +valerianol +h2o
+    <-> ec_4_2_3_204 [4.2.3.204] +valerianol +h2o_water
     2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +h2o
+    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +h2o_water
     aldehydo_d_ribose_5_phosphate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +copal_8_ol_diphosphate +h2o
+    <-> . +copal_8_ol_diphosphate +h2o_water
     13e_labdene_8alpha_15_diol
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_4_1_99_18 [4.1.99.18] +gtp +h +h2o
+    <-> ec_4_1_99_18 [4.1.99.18] +gtp +h +h2o_water
     precursor_z_hydrate
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
     2e_6e_10e_geranylgeranyl_diphosphate
-    <-> . +diphosphate +h2o
+    <-> . +diphosphate +h2o_water
     alpha_cembratriene_ol
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
     2e_6e_10e_geranylgeranyl_diphosphate
-    <-> . +diphosphate +h2o
+    <-> . +diphosphate +h2o_water
     beta_cembratriene_ol
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +l_histidine +l_lysine +l_aspartate
     aspartyl_lysyl_histidine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +l_aspartate +l_methionine
     aspartyl_methionyl_aspartate
   }
@@ -136,7 +136,7 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
 
   branch from dimethylallyl_diphosphate side right {
     dimethylallyl_diphosphate
-    <-> ec_1_17_1_2 [1.17.1.2] +nadh +1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate +h2o
+    <-> ec_1_17_1_2 [1.17.1.2] +nadh +1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate +h2o_water
     nad
   }
 

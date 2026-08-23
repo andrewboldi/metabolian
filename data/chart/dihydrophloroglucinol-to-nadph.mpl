@@ -20,11 +20,11 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
     n_1_hydroxy_2_oxopropyl_l_arginine
     <-> ec_3_5_1_124 [3.5.1.124] +h2o -l_argininium -hplus
     lactate
-    <-> ec_1_2_1_22 [1.2.1.22] +nadh +h -nad -h2o
+    <-> ec_1_2_1_22 [1.2.1.22] +nadh_mnxm10 +h -nad_mnxm8 -h2o_water
     s_lactaldehyde
-    <-> ec_1_1_1_77 [1.1.1.77] +nadh +h -nad
+    <-> ec_1_1_1_77 [1.1.1.77] +nadh_mnxm10 +h -nad_mnxm8
     propane_1_2_diol
-    <-> ec_1_14_13_229 [1.14.13.229] +nadp +h2o -propan_2_ol -o2 -nadph
+    <-> ec_1_14_13_229 [1.14.13.229] +nadp +h2o_water -propan_2_ol -o2_mnxm735438 -nadph
     h
   }
 
@@ -36,7 +36,7 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
 
   branch from lactate side right {
     lactate
-    <-> . +r_s_lactoylglutathione +h2o +h
+    <-> . +r_s_lactoylglutathione +h2o_water +h
     glutathione
   }
 
@@ -54,8 +54,8 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
 
   branch from s_lactaldehyde side left {
     s_lactaldehyde
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +nad
-    methylglyoxal
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh_mnxm10 +h +nad_mnxm8
+    methylglyoxal_mnxm310
   }
 
   branch from s_lactaldehyde side right {
@@ -64,33 +64,33 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
     dihydroxyacetone_phosphate
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_90 [1.1.1.90] +nadh +3_hydroxy_5_methylbenzaldehyde +h
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_1_1_90 [1.1.1.90] +nadh_mnxm10 +3_hydroxy_5_methylbenzaldehyde +h
     3_hydroxymethyl_5_methylphenol
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_14_12_18 [1.14.12.18] +nadh +4_bromodiphenyl_ether +h +o2
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_14_12_18 [1.14.12.18] +nadh_mnxm10 +4_bromodiphenyl_ether +h +o2_mnxm735438
     4_bromo_2_3_dihydrodiol_diphenyl_ether
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_2_1_149 [3.2.1.149] +linalool +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
     linalyl_beta_primeveroside
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_1_149 [3.2.1.149] +2_phenylethanol +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
     2_phenylethyl_primeveroside
   }
 
   branch from h side left {
     h
-    <-> . +udp_2_3_dideoxy_2_acetamido_3_acetamidino_alpha +h2o +nh4
+    <-> . +udp_2_3_dideoxy_2_acetamido_3_acetamidino_alpha +h2o_water +nh4
     udp_2_3_diacetamido_2_3_dideoxy_alpha_d_mannuron
   }
 
@@ -100,45 +100,45 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
     dtdp
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +r_naringenin +2s_3s_3_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_di +succinate
     co2
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +2_amino_4_hydroxypteridine +h2o2
     7_8_dihydropterin
   }
 
   branch from nadph side left {
     nadph
-    <-> . +luteolin +h +o2 +nadp +h2o
+    <-> . +luteolin +h +o2_mnxm735438 +nadp +h2o_water
     hypolaetin
   }
 
   branch from nadph side right {
     nadph
-    <-> . +4_sulfoacetophenone +h +o2 +nadp +h2o
+    <-> . +4_sulfoacetophenone +h +o2_mnxm735438 +nadp +h2o_water
     4_sulfophenyl_acetate
   }
 
   branch from lactate side left {
     lactate
-    <-> ec_1_1_1_27 [1.1.1.27] +nadh +h +nad
+    <-> ec_1_1_1_27 [1.1.1.27] +nadh_mnxm10 +h +nad_mnxm8
     pyruvate
   }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_3_1_56 [1.3.1.56] +h +4_bromo_2_3_dihydrodiol_diphenyl_ether +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_3_1_56 [1.3.1.56] +h +4_bromo_2_3_dihydrodiol_diphenyl_ether +nad_mnxm8
     4_bromo_2_3_dihydroxydiphenyl_ether
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_1_1_396 [1.1.1.396] +h +3_acetyl_3_devinylchlorophyllide_a +nad
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> ec_1_1_1_396 [1.1.1.396] +h +3_acetyl_3_devinylchlorophyllide_a +nad_mnxm8
     3_devinyl_3_1_hydroxyethyl_chlorophyllide_a
   }
 
@@ -150,36 +150,36 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
 
   branch from h side left {
     h
-    <-> . +5_hydroxymethyl_2_methyl_4_1h_pyrimidinone +5_2_hydroxyethyl_4_methylthiazole +h2o
+    <-> . +5_hydroxymethyl_2_methyl_4_1h_pyrimidinone +5_2_hydroxyethyl_4_methylthiazole +h2o_water
     oxythiamine
   }
 
   branch from s_lactaldehyde side right {
     s_lactaldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh_mnxm10 +h +nad_mnxm8 +h2o_water
     r_lactate
   }
 
   branch from s_lactaldehyde side left {
     s_lactaldehyde
-    <-> . +h +nadph +nadp +h2o
+    <-> . +h +nadph +nadp +h2o_water
     s_lactate
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +butan_2_one +h +o2 +h2o
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +butan_2_one +h +o2_mnxm735438 +h2o_water
     ethyl_acetate
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +2_methylprop_1_ene +h +o2 +h2o
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh_mnxm10 +2_methylprop_1_ene +h +o2_mnxm735438 +h2o_water
     2_2_dimethyloxirane
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_1_149 [3.2.1.149] +linalyl_beta_vicianoside +vicianose
     linalool
   }

@@ -11,7 +11,7 @@ pathway cellobiose-to-l-histidine-49292 "cellobiose to L-histidine" {
     <-> ec_2_7_1_205 [2.7.1.205] +n_phosphonato_l_histidine -l_histidine
     6_phosphonato_d_glucosyl_1_4_d_glucose
     <-> ec_2_7_13_2 [2.7.13.2] +l_histidine +atp -adp -hplus
-    n_phosphonato_l_histidine
+    n_phosphonato_l_histidine_chebi_83586
     <-> ec_3_9_1_3 [3.9.1.3] +h2o -pi
     l_histidine
   }

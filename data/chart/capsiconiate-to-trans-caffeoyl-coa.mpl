@@ -32,13 +32,13 @@ pathway capsiconiate-to-trans-caffeoyl-coa "capsiconiate to trans-caffeoyl-CoA" 
 
   branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
-    <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
+    <-> ec_4_1_2_61 [4.1.2.61] +h2o_chebi_15377 +acetyl_coa
     3_4_dihydroxybenzaldehyde
   }
 
   branch from trans_caffeoyl_coa side right {
     trans_caffeoyl_coa
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     3_hydroxy_3_3_4_dihydroxyphenyl_propanoyl_coa
   }
 

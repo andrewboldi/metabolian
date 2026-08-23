@@ -29,6 +29,6 @@ pathway toluene-4-sulfonate-to-1-3-4-dihydroxybenzoyl-51 "toluene-4-sulfonate to
   branch from udp_d_glucose side right {
     udp_d_glucose
     <-> ec_2_4_1_296 [2.4.1.296] +anthocyanidin_3_o_2_o_4_coumaroyl_l_rhamnosyl_1 +udp +hplus
-    anthocyanidin_3_o_2_o_4_coumaroyl_l_rhamnosyl_1
+    anthocyanidin_3_o_2_o_4_coumaroyl_l_rhamnosyl_1_chebi_77901
   }
 }

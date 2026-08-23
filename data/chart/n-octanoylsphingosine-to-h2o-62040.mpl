@@ -12,48 +12,48 @@ pathway n-octanoylsphingosine-to-h2o-62040 "N-octanoylsphingosine… to H2O" {
     n_octanoylsphingosine
     <-> . +h2o -sphingosine
     octanoate
-    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone -h2o
+    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone -h2o_water
     n_octanoyl_l_homoserine_lactone
   }
 
   branch from n_octanoyl_l_homoserine_lactone side left {
     n_octanoyl_l_homoserine_lactone
-    <-> ec_3_1_1_81 [3.1.1.81] +h2o
+    <-> ec_3_1_1_81 [3.1.1.81] +h2o_water
     n_octanoyl_l_homoserine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_2_1_21 [3.2.1.21] +linamarin +2_hydroxy_2_methylpropanenitrile
     beta_d_glucose
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_4_17_21 [3.4.17.21] +n_acetyl_l_aspartyl_l_glutamate +l_glutamate
     ac_asp_glu_glu
   }
 
   branch from l_homoserine_lactone side right {
     l_homoserine_lactone
-    <-> ec_3_5_1_97 [3.5.1.97] +bhb +h2o
+    <-> ec_3_5_1_97 [3.5.1.97] +bhb +h2o_water
     hai_1
   }
 
   branch from l_homoserine_lactone side left {
     l_homoserine_lactone
-    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxododecanoyl_l_homoserine_lactone +h2o
+    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxododecanoyl_l_homoserine_lactone +h2o_water
     3_oxododecanoate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_5_2_1 [3.5.2.1] +5_methylbarbituric_acid
     3_oxo_3_ureidoisobutyrate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +mycinamicin_iv +o2 +nadph +mycinamicin_v
     nadp
   }

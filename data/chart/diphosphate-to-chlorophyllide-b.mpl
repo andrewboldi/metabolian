@@ -12,7 +12,7 @@ pathway diphosphate-to-chlorophyllide-b "diphosphate to chlorophyllide b" {
     2e_6e_10e_geranylgeranyl_diphosphate
     <-> . +chlorophyllide_b -geranylgeranyl_chlorophyll_b
     diphosphate
-    <-> ec_2_5_1_62 [2.5.1.62] +geranylgeranyl_chlorophyll_b -2e_6e_10e_geranylgeranyl_diphosphate -chlorophyllide_b
+    <-> ec_2_5_1_62 [2.5.1.62] +geranylgeranyl_chlorophyll_b -2e_6e_10e_geranylgeranyl_diphosphate -chlorophyllide_b_mnxm741349
     h
   }
 
@@ -58,8 +58,8 @@ pathway diphosphate-to-chlorophyllide-b "diphosphate to chlorophyllide b" {
     atp
   }
 
-  branch from chlorophyllide_b side right {
-    chlorophyllide_b
+  branch from chlorophyllide_b_mnxm741349 side right {
+    chlorophyllide_b_mnxm741349
     <-> . +h2o
     71_dihydroxychlorophyllide_a
   }

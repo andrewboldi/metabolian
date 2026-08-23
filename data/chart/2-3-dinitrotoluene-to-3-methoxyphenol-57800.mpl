@@ -10,8 +10,8 @@ pathway 2-3-dinitrotoluene-to-3-methoxyphenol-57800 "2,3-dinitrotoluene to 3-met
     2_3_dinitrotoluene
     <-> ec_1_14_12_23 [1.14.12.23] +nadh +o2 -nitrite -nad -hplus
     4_methyl_3_nitrocatechol
-    <-> ec_1_14_12_24 [1.14.12.24] +nitrite +h +nad -2_4_dinitrotoluene -o2
-    nadh
+    <-> ec_1_14_12_24 [1.14.12.24] +nitrite_mnxm107 +h +nad_mnxm8 -2_4_dinitrotoluene -o2_mnxm735438
+    nadh_mnxm10
     <-> ec_1_14_12_24 [1.14.12.24] +2_4_dinitrotoluene +nadh +o2 -nitrite -nad
     4_methyl_5_nitrocatechol
     <-> ec_1_14_13_210 [1.14.13.210] +nadph +o2 -nitrite -nadp -h2o -hplus
@@ -24,15 +24,15 @@ pathway 2-3-dinitrotoluene-to-3-methoxyphenol-57800 "2,3-dinitrotoluene to 3-met
     3_methoxyphenol
   }
 
-  branch from nadh side left {
-    nadh
-    <-> . +h +pyrene_4_5_dione +nad
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> . +h +pyrene_4_5_dione +nad_mnxm8
     4_5_dihydroxypyrene
   }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_3_1_32 [1.3.1.32] +5_methylmaleylacetate +chloride +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_3_1_32 [1.3.1.32] +5_methylmaleylacetate +chloride +nad_mnxm8
     2_chloro_5_methylmaleylacetate
   }
 
@@ -44,26 +44,26 @@ pathway 2-3-dinitrotoluene-to-3-methoxyphenol-57800 "2,3-dinitrotoluene to 3-met
 
   branch from 2_4_dinitrotoluene side right {
     2_4_dinitrotoluene
-    <-> . +nadh +h +nad +h2o
+    <-> . +nadh_mnxm10 +h +nad_mnxm8 +h2o_water
     5_nitro_o_toluidine
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +4_5_dihydroxypyrene
     phenanthrene_4_5_dicarboxylate
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +9_10_dihydroxybenzo_a_pyrene
     cis_4_8_hydroxypyren_7_yl_2_oxobut_3_enoate
   }
 
   branch from 4_methyl_5_nitrocatechol side left {
     4_methyl_5_nitrocatechol
-    <-> . +nitrite +2_hydroxy_5_methylquinone +h +nadp +h2o +o2
-    nadph
+    <-> . +nitrite_mnxm107 +2_hydroxy_5_methylquinone +h +nadp_mnxm5 +h2o_water +o2_mnxm735438
+    nadph_mnxm738702
   }
 
   branch from ppi side right {
@@ -78,22 +78,22 @@ pathway 2-3-dinitrotoluene-to-3-methoxyphenol-57800 "2,3-dinitrotoluene to 3-met
     germacrene_a
   }
 
-  branch from nitrite side right {
-    nitrite
-    <-> . +h +pyruvate +o2
+  branch from nitrite_mnxm107 side right {
+    nitrite_mnxm107
+    <-> . +h +pyruvate +o2_mnxm735438
     pyruvic_oxime
   }
 
-  branch from nitrite side left {
-    nitrite
-    <-> ec_1_7_3_1 [1.7.3.1] +butanal +h +h2o2 +o2 +h2o
+  branch from nitrite_mnxm107 side left {
+    nitrite_mnxm107
+    <-> ec_1_7_3_1 [1.7.3.1] +butanal +h +h2o2 +o2_mnxm735438 +h2o_water
     1_nitrobutane
   }
 
   branch from h side right {
     h
-    <-> . +nadph +tetrachlorocatechol +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
-    nadp
+    <-> . +nadph_mnxm738702 +tetrachlorocatechol +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    nadp_mnxm5
   }
 
   branch from h side left {
@@ -102,50 +102,50 @@ pathway 2-3-dinitrotoluene-to-3-methoxyphenol-57800 "2,3-dinitrotoluene to 3-met
     10_oxabenzo_def_chrysen_9_one
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_3_1_32 [1.3.1.32] +5_methylmaleylacetate +nadh +h
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_3_1_32 [1.3.1.32] +5_methylmaleylacetate +nadh_mnxm10 +h
     2_methyl_3_oxoadipate
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +phthalate +h +o2
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +phthalate +h +o2_mnxm735438
     phthalate_3_4_cis_dihydrodiol
   }
 
-  branch from nadh side right {
-    nadh
-    <-> . +h +phthalate_3_4_cis_dihydrodiol +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> . +h +phthalate_3_4_cis_dihydrodiol +nad_mnxm8
     3_4_dihydroxyphthalate
   }
 
-  branch from nadh side left {
-    nadh
-    <-> . +h +5_nitro_o_toluidine +nad +h2o
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> . +h +5_nitro_o_toluidine +nad_mnxm8 +h2o_water
     2_4_diaminotoluene
   }
 
   branch from 2_4_dinitrotoluene side right {
     2_4_dinitrotoluene
-    <-> . +nadh +h +nad +h2o
+    <-> . +nadh_mnxm10 +h +nad_mnxm8 +h2o_water
     4_amino_2_nitrotoluene
   }
 
   branch from 2_4_dinitrotoluene side left {
     2_4_dinitrotoluene
-    <-> . +h +nadph +5_nitro_o_toluidine +nadp
-    h2o
+    <-> . +h +nadph_mnxm738702 +5_nitro_o_toluidine +nadp_mnxm5
+    h2o_water
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +4_5_dihydroxybenzo_a_pyrene
     4_5_chrysenedicarboxylate
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
     2_4_5_trihydroxytoluene
   }

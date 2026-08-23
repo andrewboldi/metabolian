@@ -53,7 +53,7 @@ pathway isorhamnetin-to-octadecanal "isorhamnetin… to octadecanal" {
   branch from h side right {
     h
     <-> . +h2o +naphthalene_1_3_6_8_tetrol +o2
-    flaviolin
+    flaviolin_mnxm1372541
   }
 
   branch from coa side left {

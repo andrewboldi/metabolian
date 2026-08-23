@@ -25,6 +25,6 @@ pathway d-galactosyl-1-4-d-to-d-gal-1-4-l-fuc-1 "β-D-galactosyl-(1→4)-β-D-�
   branch from gdp_l_fucose side right {
     gdp_l_fucose
     <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace_chebi_145343
   }
 }

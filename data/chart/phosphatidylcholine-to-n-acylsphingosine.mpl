@@ -36,7 +36,7 @@ pathway phosphatidylcholine-to-n-acylsphingosine "phosphatidylcholine to N-acyls
 
   branch from n_acylsphingosine side right {
     n_acylsphingosine
-    <-> . +n_acyl_d_galactosylsphingosine +cholesterol
+    <-> . +n_acyl_d_galactosylsphingosine_chebi_18390 +cholesterol
     cholesteryl_d_galactoside
   }
 

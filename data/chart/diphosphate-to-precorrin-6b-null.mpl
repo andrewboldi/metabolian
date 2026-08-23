@@ -69,7 +69,7 @@ pathway diphosphate-to-precorrin-6b-null "diphosphate to precorrin-6B" {
   branch from precorrin_8x side left {
     precorrin_8x
     <-> ec_5_4_99_61 [5.4.99.61] +h
-    hydrogenobyrinate
+    hydrogenobyrinate_mnxm1371092
   }
 
   branch from s_adenosyl_l_methionine side right {

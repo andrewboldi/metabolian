@@ -13,12 +13,12 @@ pathway 1d-myo-inositol-to-1-stearoyl-2-arachidonoyl "1D-myo-inositol… to 1-st
     <-> ec_3_1_1_118 [3.1.1.118] +h +octadecanoate -h2o
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
     <-> . +atp -adp -hplus
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1_chebi_83243
   }
 
   branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1 side left {
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
     <-> . +atp +adp +hplus
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1_chebi_77136
   }
 }

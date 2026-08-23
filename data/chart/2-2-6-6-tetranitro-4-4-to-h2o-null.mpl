@@ -10,9 +10,9 @@ pathway 2-2-6-6-tetranitro-4-4-to-h2o-null "2,2',6,6'-Tetranitro-4,4'… to H2O"
     2_2_6_6_tetranitro_4_4_azoxytoluene
     <-> . +h2o -o2
     4_hydroxylamino_2_6_dinitrotoluene
-    <-> . +nadph +hplus -nadp -h2o
+    <-> . +nadph +hplus -nadp -h2o_chebi_15377
     2_4_dihydroxylamino_6_nitrotoluene
-    <-> . +h +nadph -nadp -h2o
+    <-> . +h +nadph_mnxm738702 -nadp_mnxm5 -h2o
     4_amino_2_hydroxylamino_6_nitrotoluene
   }
 

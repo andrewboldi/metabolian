@@ -14,9 +14,9 @@ pathway nicotinate-beta-d-ribonuc-to-fe "nicotinate beta-D-ribonuc… to Fe" {
     coprogen
     <-> . +fadh2 +h -fad -fe
     desferricoprogen
-    <-> . +fe +riboflavin -coprogen -4a_5_dihydroriboflavin
+    <-> . +fe +riboflavin -coprogen_mnxm726881 -4a_5_dihydroriboflavin
     h
-    <-> . +fadh2 +coprogen -fad -fe
+    <-> . +fadh2 +coprogen_mnxm726881 -fad -fe
     desferricoprogen
   }
 }

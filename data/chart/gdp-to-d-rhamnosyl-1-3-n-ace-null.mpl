@@ -12,7 +12,7 @@ pathway gdp-to-d-rhamnosyl-1-3-n-ace-null "GDP to α-D-rhamnosyl-(1→3)-N-ace�
     gdp_alpha_d_mannose
     <-> . +gdp +alpha_l_fuc_1_3_alpha_d_galnac_pp_und +h -n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
     gdp_beta_l_fucose
-    <-> . +gdp_6_deoxy_d_mannose +n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po -gdp -hplus
+    <-> . +gdp_6_deoxy_d_mannose +n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po -gdp_chebi_58189 -hplus
     d_rhamnosyl_1_3_n_acetyl_d_galactosaminyl_1_dip
   }
 
@@ -24,7 +24,7 @@ pathway gdp-to-d-rhamnosyl-1-3-n-ace-null "GDP to α-D-rhamnosyl-(1→3)-N-ace�
 
   branch from gdp_6_deoxy_d_mannose side right {
     gdp_6_deoxy_d_mannose
-    <-> . +n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly +gdp +hplus
+    <-> . +n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly +gdp_chebi_58189 +hplus
     d_rhamnosyl_1_3_n_acetyl_d_glucosaminyl_1_dipho
   }
 }

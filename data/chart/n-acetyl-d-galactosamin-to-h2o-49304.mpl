@@ -12,31 +12,31 @@ pathway n-acetyl-d-galactosamin-to-h2o-49304 "N-acetyl-α-D-galactosamin… to H
     l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco
     <-> . +h2o -l_fucopyranose
     d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d
-    <-> ec_3_2_1_51 [3.2.1.51] +l_fucopyranose +4_methylumbelliferone -h2o
+    <-> ec_3_2_1_51 [3.2.1.51] +l_fucopyranose +4_methylumbelliferone -h2o_water
     4_methylumbelliferyl_alpha_l_fucopyranoside
   }
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o_water
     atp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +2_2_dichloroacetaldehyde
     2_2_dichloro_1_1_ethanediol
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +trichloroacetaldehyde
     chloral_hydrate
   }
 
   branch from 4_methylumbelliferone side right {
     4_methylumbelliferone
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +h2o_water
     glucose
   }
 
@@ -46,14 +46,14 @@ pathway n-acetyl-d-galactosamin-to-h2o-49304 "N-acetyl-α-D-galactosamin… to H
     udp_alpha_d_glucuronate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +glutathione_episulfonium_ion +s_2_hydroxyethyl_glutathione
     h
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2_s_glutathionyl_acetyl_glutathione +h +2_s_glutathionyl_acetate
     glutathione
   }

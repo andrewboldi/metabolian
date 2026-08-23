@@ -90,13 +90,13 @@ pathway ergothioneine-thione-to-h2o-null "ergothioneine (thione… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a
+    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a_mnxm728297
     16alpha_17_epoxy_gibberellin_a12
   }
 
   branch from h2o side right {
     h2o
-    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a
+    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a_mnxm728301
     16alpha_17_epoxy_gibberellin_a9
   }
 

@@ -10,9 +10,9 @@ pathway s-eriodictyol-to-fmn "(S)-eriodictyol to FMN" {
     s_eriodictyol
     <-> ec_3_2_1_62 [3.2.1.62] +glucose -h2o
     eriodictyol_7_o_d_glucopyranoside
-    <-> . +h2o -d_glucose
+    <-> . +h2o_chebi_15377 -d_glucose
     eriodictyol
-    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2 -fmn -h2o_chebi_15377 -hplus
     2s_2_hydroxyeriodictyol
   }
 }

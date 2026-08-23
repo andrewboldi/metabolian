@@ -15,22 +15,22 @@ pathway 2-hydroxypropyl-com-to-formaldehyde "2-hydroxypropyl-CoM to formaldehyde
     <-> . +glutathione_disulfide -s_methylthio_glutathione
     glutathione
     <-> . +s_methylthio_glutathione +hydrogen_donor -gsh -hydrogen_acceptor
-    methanethiol
+    methanethiol_chebi_16007
     <-> ec_2_1_1_334 [2.1.1.334] +sam -sah -hplus
-    dimethyl_sulfide
+    dimethyl_sulfide_chebi_17437
     <-> ec_1_14_13_131 [1.14.13.131] +nadh +o2 +hplus -formaldehyde -nad -h2o
-    methanethiol
+    methanethiol_chebi_16007
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_mannose +phosphate +l_mannose +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_mannose +phosphate +l_mannose +h2o_water
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o_water
     2h_pyran_2_one
   }
 
@@ -42,25 +42,25 @@ pathway 2-hydroxypropyl-com-to-formaldehyde "2-hydroxypropyl-CoM to formaldehyde
 
   branch from glutathione side right {
     glutathione
-    <-> . +h +glyoxylate +chloride +h2o
+    <-> . +h +glyoxylate +chloride +h2o_water
     s_alpha_chlorocarboxymethyl_glutathione
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o_water
     l_streptose
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o_water
     d_lyxopyranose
   }
 
   branch from dimethyl_sulfide side left {
     dimethyl_sulfide
-    <-> ec_1_8_5_3 [1.8.5.3] +menaquinone_2 +h2o +dimethyl_sulfoxide
+    <-> ec_1_8_5_3 [1.8.5.3] +menaquinone_2 +h2o_water +dimethyl_sulfoxide
     menaquinol
   }
 
@@ -72,25 +72,25 @@ pathway 2-hydroxypropyl-com-to-formaldehyde "2-hydroxypropyl-CoM to formaldehyde
 
   branch from glutathione_disulfide side left {
     glutathione_disulfide
-    <-> ec_1_11_1_12 [1.11.1.12] +8_s_hete +h2o +h +glutathione
+    <-> ec_1_11_1_12 [1.11.1.12] +8_s_hete +h2o_water +h +glutathione
     8s_hydroperoxy_5z_9e_11z_14z_eicosatetraenoate
   }
 
   branch from glutathione_disulfide side right {
     glutathione_disulfide
-    <-> ec_1_11_1_12 [1.11.1.12] +7s_hydroxy_4z_8e_10z_13z_16z_19z_docosahexaenoat +h2o +glutathione
+    <-> ec_1_11_1_12 [1.11.1.12] +7s_hydroxy_4z_8e_10z_13z_16z_19z_docosahexaenoat +h2o_water +glutathione
     7_hydroperoxy_4z_8e_10z_13z_16z_19z_docosahexaen
   }
 
   branch from glutathione side left {
     glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o_water
     1_methylsulfanyl_5_aci_nitropentane
   }
 
   branch from glutathione side right {
     glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o_water
     5_methylthiopentanonitrile_oxide
   }
 }

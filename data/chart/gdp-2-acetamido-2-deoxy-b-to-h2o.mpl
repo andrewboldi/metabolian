@@ -133,7 +133,7 @@ pathway gdp-2-acetamido-2-deoxy-b-to-h2o "GDP-2-acetamido-2-deoxy-b… to H2O" {
   branch from phosphate side right {
     phosphate
     <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_chebi_72860
   }
 
   branch from atp side left {

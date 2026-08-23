@@ -10,7 +10,7 @@ pathway nadh-to-3-hydroxyheptadecanoyl-null "NADH to 3-Hydroxyheptadecanoyl…" 
     nadh
     <-> . +acetyl_coa +fadh2 +pentadecanoyl_coa +h -fad -coa -nad -h2o
     heptadecanoyl_coa
-    <-> . +fad +hplus -fadh2
+    <-> . +fad_chebi_57692 +hplus -fadh2_chebi_58307
     trans_2_heptadecenoyl_coa
     <-> . +h2o
     3_hydroxyheptadecanoyl_coenzyme_a

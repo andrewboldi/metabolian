@@ -73,7 +73,7 @@ pathway acetyl-coa-to-succinate "acetyl-CoA to succinate" {
   branch from acetyl_coa side right {
     acetyl_coa
     <-> ec_2_3_1_185 [2.3.1.185] +h +acetylpseudotropine +coa
-    tropine
+    tropine_mnxm733338
   }
 
   branch from coa side left {
@@ -114,8 +114,8 @@ pathway acetyl-coa-to-succinate "acetyl-CoA to succinate" {
 
   branch from co2 side left {
     co2
-    <-> . +2_polyprenyl_6_methoxyphenol
-    3_polyprenyl_4_hydroxy_5_methoxybenzoate
+    <-> . +2_polyprenyl_6_methoxyphenol_mnxm736938
+    3_polyprenyl_4_hydroxy_5_methoxybenzoate_mnxm737011
   }
 
   branch from co2 side right {

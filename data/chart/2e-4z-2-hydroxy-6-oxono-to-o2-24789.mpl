@@ -12,7 +12,7 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2-24789 "(2E,4Z)-2-hydroxy-6-oxono… to O2"
     2e_2_hydroxypenta_2_4_dienoate
     <-> .
     2_oxopent_4_enoate
-    <-> . +h +salicylate -h2o
+    <-> . +h +salicylate -h2o_water
     2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno
     <-> . +h -o2
     biphenyl_2_2_3_triol
@@ -26,36 +26,36 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2-24789 "(2E,4Z)-2-hydroxy-6-oxono… to O2"
 
   branch from succinate side right {
     succinate
-    <-> . +2_methylphenoxy_acetate +akg +o2 +glyoxylate +co2
+    <-> . +2_methylphenoxy_acetate +akg +o2_chebi_15379 +glyoxylate +co2
     o_cresol
   }
 
   branch from succinate side left {
     succinate
-    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2
+    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2_chebi_15379 +co2
     5_hydroxymethylcytidine_5_monophosphate_1
   }
 
   branch from 2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno side right {
     2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno
-    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o
-    2e_2_hydroxypenta_2_4_dienoate
+    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o_water
+    2e_2_hydroxypenta_2_4_dienoate_mnxm1107795
   }
 
   branch from 2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno side left {
     2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno
-    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o
+    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o_water
     2_keto_4_pentenoate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +all_trans_retinol
     anhydrovitamin_a
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +kinetensin +kinetensin_1_7 +l_phenylalanine
     l_leucine
   }
@@ -68,25 +68,25 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2-24789 "(2E,4Z)-2-hydroxy-6-oxono… to O2"
 
   branch from o2 side left {
     o2
-    <-> . +20_hydroxy_leukotriene_b5 +nadp +h2o +nadph
+    <-> . +20_hydroxy_leukotriene_b5 +nadp +h2o_water +nadph
     leukotriene_b5
   }
 
   branch from o2 side right {
     o2
-    <-> . +12_hydroxyeicosatetraenoate +h +nadph +12_20_dihete +h2o
+    <-> . +12_hydroxyeicosatetraenoate +h +nadph +12_20_dihete +h2o_water
     nadp
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_deoxyadenosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
+    <-> . +2_deoxyadenosine_5_monophosphate +chloride +akg +o2_chebi_15379 +hplus +co2 +h2o
     2_chloro_deoxyadenosine_5_monophosphate
   }
 
   branch from succinate side right {
     succinate
-    <-> . +2_deoxyguanosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
+    <-> . +2_deoxyguanosine_5_monophosphate +chloride +akg +o2_chebi_15379 +hplus +co2 +h2o
     2_chloro_deoxyguanosine_5_monophosphate
   }
 
@@ -104,7 +104,7 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2-24789 "(2E,4Z)-2-hydroxy-6-oxono… to O2"
 
   branch from salicylate side left {
     salicylate
-    <-> . +ethanol +h +h2o
+    <-> . +ethanol +h +h2o_water
     ethyl_salicylate
   }
 
@@ -114,14 +114,14 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2-24789 "(2E,4Z)-2-hydroxy-6-oxono… to O2"
     chorismate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2r_3r_2_2r_2_2r_2_amino_1_hydroxy_3_1h_indol_3 +h +neuromedin_b_1_3
     neuromedin_b
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +neuromedin_n +l_leucine
     neuromedin_n_1_4
   }

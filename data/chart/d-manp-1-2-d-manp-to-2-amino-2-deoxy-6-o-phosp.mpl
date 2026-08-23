@@ -25,7 +25,7 @@ pathway d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp "β-D-Manp-(1→2)-β-D-M
   branch from d_manp_1_2_d_manp side left {
     d_manp_1_2_d_manp
     <-> ec_3_2_1_197 [3.2.1.197] +alpha_d_mannopyranose
-    h2o
+    h2o_water
   }
 
   branch from d_mannose_1_phosphate side right {
@@ -54,7 +54,7 @@ pathway d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp "β-D-Manp-(1→2)-β-D-M
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +h2o_water
     epimelibiose
   }
 

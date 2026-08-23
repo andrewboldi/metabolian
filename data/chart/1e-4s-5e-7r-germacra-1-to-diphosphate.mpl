@@ -10,7 +10,7 @@ pathway 1e-4s-5e-7r-germacra-1-to-diphosphate "(1E,4S,5E,7R)-germacra-1(… to d
     1e_4s_5e_7r_germacra_1_10_5_dien_11_ol
     <-> ec_4_1_99_16 [4.1.99.16] +h2o -acetone
     geosmin
-    <-> ec_4_1_99_16 [4.1.99.16] +diphosphate +acetone -h2o
+    <-> ec_4_1_99_16 [4.1.99.16] +diphosphate +acetone_mnxm398 -h2o_water
     2e_6e_farnesyl_diphosphate
     <-> . +31r_8_12_diethylbacteriochlorophyllide_e +h -diphosphate
     31r_8_12_diethylbacteriochlorophyll_e

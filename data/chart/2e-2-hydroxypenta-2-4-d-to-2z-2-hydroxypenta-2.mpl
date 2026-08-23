@@ -14,7 +14,7 @@ pathway 2e-2-hydroxypenta-2-4-d-to-2z-2-hydroxypenta-2 "(2E)-2-hydroxypenta-2,4-
     2_keto_4_pentenoate
     <-> ec_4_2_1_80 [4.2.1.80] +h2o
     s_4_hydroxy_2_oxopentanoate
-    <-> ec_4_2_1_80 [4.2.1.80] -h2o
+    <-> ec_4_2_1_80 [4.2.1.80] -h2o_chebi_15377
     2z_2_hydroxypenta_2_4_dienoate
   }
 

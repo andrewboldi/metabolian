@@ -12,7 +12,7 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
     2e_2_hydroxypenta_2_4_dienoate
     <-> .
     2_oxopent_4_enoate
-    <-> . +h +salicylate -h2o
+    <-> . +h +salicylate -h2o_water
     2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno
     <-> . +h -o2
     biphenyl_2_2_3_triol
@@ -20,24 +20,24 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
 
   branch from 2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno side left {
     2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno
-    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o
-    2e_2_hydroxypenta_2_4_dienoate
+    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o_water
+    2e_2_hydroxypenta_2_4_dienoate_mnxm1107795
   }
 
   branch from 2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno side right {
     2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno
-    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o
+    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o_water
     2_keto_4_pentenoate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2r_3r_2_2r_2_2r_2_amino_1_hydroxy_3_1h_indol_3 +h +neuromedin_b_1_3
     neuromedin_b
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +neuromedin_n +neuromedin_n_1_4
     l_leucine
   }
@@ -50,7 +50,7 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
 
   branch from o2 side right {
     o2
-    <-> . +12_hydroxyeicosatetraenoate +h +nadph +12_20_dihete +h2o
+    <-> . +12_hydroxyeicosatetraenoate +h +nadph +12_20_dihete +h2o_water
     nadp
   }
 
@@ -74,7 +74,7 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
 
   branch from salicylate side right {
     salicylate
-    <-> . +ethanol +h +h2o
+    <-> . +ethanol +h +h2o_water
     ethyl_salicylate
   }
 
@@ -84,14 +84,14 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
     chorismate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +superoxide +h +melatonin
     n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +5_ht_moduline +d_ala_leu
     l_leucyl_l_serine
   }
@@ -104,7 +104,7 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
 
   branch from o2 side left {
     o2
-    <-> . +benzo_a_pyrene_2_3_oxide +nadp +h2o +h +nadph
+    <-> . +benzo_a_pyrene_2_3_oxide +nadp +h2o_water +h +nadph
     benzo_a_pyrene
   }
 }

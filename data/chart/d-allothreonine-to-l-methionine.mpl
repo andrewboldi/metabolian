@@ -14,7 +14,7 @@ pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
     acetate
     <-> ec_1_1_1_319 [1.1.1.319] +trans_anol +nadp -nadph
     trans_coumaryl_acetate
-    <-> ec_1_1_1_318 [1.1.1.318] +nadph -acetate -nadp
+    <-> ec_1_1_1_318 [1.1.1.318] +nadph_mnxm738702 -acetate_mnxm26 -nadp_mnxm5
     chavicol
     <-> ec_2_1_1_146 [2.1.1.146] +sam -sah -hplus
     estragole
@@ -39,36 +39,36 @@ pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
   branch from trans_coumaryl_acetate side left {
     trans_coumaryl_acetate
     <-> ec_2_3_1_224 [2.3.1.224] +acetyl_coa +trans_p_coumaryl_alcohol
-    coa
+    coa_mnxm727276
   }
 
   branch from chavicol side right {
     chavicol
-    <-> ec_3_2_1_161 [3.2.1.161] +d_apiofuranosyl_1_6_d_glucopyranose +h2o
+    <-> ec_3_2_1_161 [3.2.1.161] +d_apiofuranosyl_1_6_d_glucopyranose +h2o_water
     furcatin
   }
 
-  branch from acetate side left {
-    acetate
-    <-> ec_3_5_1_17 [3.5.1.17] +l_lysine +h2o
+  branch from acetate_mnxm26 side left {
+    acetate_mnxm26
+    <-> ec_3_5_1_17 [3.5.1.17] +l_lysine +h2o_water
     n_6_acetyl_l_lysine
   }
 
-  branch from acetate side right {
-    acetate
-    <-> ec_1_2_5_2 [1.2.5.2] +h +pyrroloquinoline_quinol +acetaldehyde +h2o
+  branch from acetate_mnxm26 side right {
+    acetate_mnxm26
+    <-> ec_1_2_5_2 [1.2.5.2] +h +pyrroloquinoline_quinol +acetaldehyde_mnxm75 +h2o_water
     pyrroloquinoline_quinone
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +h +3beta_hydroxy_cholest_5_en_26_oate +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +h +3beta_hydroxy_cholest_5_en_26_oate +nadph_mnxm738702 +h2o_water
     3beta_hydroxy_5_cholestenal
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +15_oxo_lipoxin_a4 +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +h +15_oxo_lipoxin_a4 +nadph_mnxm738702
     13_14_dihydro_15_oxo_lipoxin_a4
   }
 
@@ -128,43 +128,43 @@ pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
 
   branch from trans_anol side right {
     trans_anol
-    <-> . +trans_p_coumaryl_alcohol +h +nadph +nadp
-    h2o
+    <-> . +trans_p_coumaryl_alcohol +h +nadph_mnxm738702 +nadp_mnxm5
+    h2o_water
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +adrenochrome +h +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +adrenochrome +h +nadp_mnxm5
     adrenochrome_o_semiquinone
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +h +nadp +noradrenochrome_o_semiquinone
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> . +h +nadp_mnxm5 +noradrenochrome_o_semiquinone
     noradrenochrome
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +nadh +h +benzoate +nad +h2o
+  branch from acetate_mnxm26 side left {
+    acetate_mnxm26
+    <-> . +nadh +h +benzoate +nad +h2o_water
     e_cinnamate
   }
 
-  branch from acetate side right {
-    acetate
+  branch from acetate_mnxm26 side right {
+    acetate_mnxm26
     <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +h +3_hydroxy_5_oxohexanoate
     3_hydroxy_5_oxohexanoyl_coa
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadph_mnxm738702 +h2o_water
     3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +cholestane_3_7_12_24_25_pentol +h +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +cholestane_3_7_12_24_25_pentol +h +nadph_mnxm738702
     3alpha_7alpha_12alpha_25_tetrahydroxy_5beta_chol
   }
 

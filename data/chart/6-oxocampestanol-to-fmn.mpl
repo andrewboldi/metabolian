@@ -18,7 +18,7 @@ pathway 6-oxocampestanol-to-fmn "6-oxocampestanol to FMN" {
 
   branch from cathasterone side left {
     cathasterone
-    <-> . +h +3s_5s_8s_9s_10r_13r_17r_17_2r_5r_5_6_dimethylhe +o2 +nadph +h2o
+    <-> . +h +3s_5s_8s_9s_10r_13r_17r_17_2r_5r_5_6_dimethylhe +o2_mnxm735438 +nadph +h2o_water
     nadp
   }
 }

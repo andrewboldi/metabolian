@@ -14,7 +14,7 @@ pathway d-4-hydroxyphenylglycine-to-di-sulfido-diiron-nu "D-4-hydroxyphenylglyci
     isonocardicin_c_dizwitterion
     <-> ec_5_1_1_14 [5.1.1.14]
     nocardicin_c_dizwitterion
-    <-> ec_1_14_15_43 [1.14.15.43] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_43 [1.14.15.43] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o_chebi_15377
     nocardicin_a
   }
 

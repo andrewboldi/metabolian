@@ -12,9 +12,9 @@ pathway 17-21-dihydroxy-5-pregna-to-nadp "17,21-dihydroxy-5β-pregna… to NADP"
     cortisone
     <-> . +nad -nadh -hplus
     21_dehydrocortisone
-    <-> ec_1_1_1_151 [1.1.1.151] +h +nadph -cortisone
-    nadp
-    <-> ec_1_3_1_22 [1.3.1.22] +h +cortisone +nadph -nadp
+    <-> ec_1_1_1_151 [1.1.1.151] +h +nadph_mnxm738702 -cortisone_mnxm731048
+    nadp_mnxm5
+    <-> ec_1_3_1_22 [1.3.1.22] +h +cortisone_mnxm731048 +nadph_mnxm738702 -nadp_mnxm5
     4_5alpha_dihydrocortisone
   }
 
@@ -30,15 +30,15 @@ pathway 17-21-dihydroxy-5-pregna-to-nadp "17,21-dihydroxy-5β-pregna… to NADP"
     6_hydroxycortisone
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +o2 +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
     prostaglandin_h2
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +estrone +o2 +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +h +estrone +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
     4_hydroxyestrone
   }
 
@@ -56,31 +56,31 @@ pathway 17-21-dihydroxy-5-pregna-to-nadp "17,21-dihydroxy-5β-pregna… to NADP"
 
   branch from h side left {
     h
-    <-> . +hexadecanoate +sn_glycero_3_phospho_1_rac_glycerol +h2o
+    <-> . +hexadecanoate +sn_glycero_3_phospho_1_rac_glycerol +h2o_water
     2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +estrone +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_14_14_1 [1.14.14.1] +h +estrone +o2_mnxm735438 +nadp_mnxm5 +h2o_water
     2_hydroxyestrone
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +5_hydroxyindol_3_yl_acetaldehyde +h +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> . +5_hydroxyindol_3_yl_acetaldehyde +h +nadp_mnxm5
     5_hydroxytryptophol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +cholestane_3_7_12_24_25_pentol +h2o +h +o2 +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +cholestane_3_7_12_24_25_pentol +h2o_water +h +o2_mnxm735438 +nadph_mnxm738702
     5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +5beta_cholestane_3alpha_7alpha_12alpha_23_25_pen +h2o +h +5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol +nadph
-    o2
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> . +5beta_cholestane_3alpha_7alpha_12alpha_23_25_pen +h2o_water +h +5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol +nadph_mnxm738702
+    o2_mnxm735438
   }
 }

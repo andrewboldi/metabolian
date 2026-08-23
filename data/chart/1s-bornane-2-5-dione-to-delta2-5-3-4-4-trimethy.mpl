@@ -22,8 +22,8 @@ pathway 1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy "(1S)-bornane-2,5-dione 
 
   branch from 5_oxo_1_2_campholide side left {
     5_oxo_1_2_campholide
-    <-> ec_1_14_14_155 [1.14.14.155] +fmnh2 +1s_bornane_2_5_dione +h +o2 +h2o
-    fmn
+    <-> ec_1_14_14_155 [1.14.14.155] +fmnh2_mnxm1107623 +1s_bornane_2_5_dione +h +o2_mnxm735438 +h2o_water
+    fmn_mnxm1364147
   }
 
   branch from fmn side right {
@@ -52,13 +52,13 @@ pathway 1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy "(1S)-bornane-2,5-dione 
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +o2 +nadph +nadp +h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +o2_mnxm735438 +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     aflatoxin_m1_8_9_epoxide
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_b1_endo_8_9_oxide +nadp +h2o +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_b1_endo_8_9_oxide +nadp_mnxm5 +h2o_water +o2_mnxm735438 +nadph_mnxm738702
     lsm_36909
   }
 
@@ -70,7 +70,7 @@ pathway 1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy "(1S)-bornane-2,5-dione 
 
   branch from 1s_bornane_2_5_dione side left {
     1s_bornane_2_5_dione
-    <-> . +nadh +h +o2 +nad +h2o
+    <-> . +nadh +h +o2_mnxm735438 +nad +h2o_water
     1r_4r_5_oxo_1_2_campholide
   }
 
@@ -112,13 +112,13 @@ pathway 1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy "(1S)-bornane-2,5-dione 
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but +nadp +h2o +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but +nadp_mnxm5 +h2o_water +o2_mnxm735438 +nadph_mnxm738702
     4_n_nitrosomethylamino_1_3_pyridyl_butan_1_one
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri +nadp +h2o +o2 +nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri +nadp_mnxm5 +h2o_water +o2_mnxm735438 +nadph_mnxm738702
     4_methylnitrosamino_1_3_pyridyl_1_butanol
   }
 }

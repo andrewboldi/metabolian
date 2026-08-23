@@ -73,6 +73,6 @@ pathway n-1-dioleoyl-sn-glycero-3-to-triolein-56460 "N,1-dioleoyl-sn-glycero-3â€
   branch from 1_2_dioleoyl_sn_glycerol side left {
     1_2_dioleoyl_sn_glycerol
     <-> ec_2_3_1_22 [2.3.1.22] +9z_octadecenoyl_coa +1_oleoyl_sn_glycerol
-    coa
+    coa_mnxm727276
   }
 }

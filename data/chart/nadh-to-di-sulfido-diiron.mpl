@@ -10,9 +10,9 @@ pathway nadh-to-di-sulfido-diiron "NADH to di-μ-sulfido-diiron" {
     nadh
     <-> . +h +7alpha_hydroxycholest_4_en_3_one -nad
     25r_cholest_5_ene_3_26_diol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_3_hydroxycholest_5_en_26_al
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     25r_3_hydroxycholest_5_en_26_oate
   }
 }

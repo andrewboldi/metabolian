@@ -14,7 +14,7 @@ pathway linolenoyl-coa-to-nad "γ-linolenoyl-CoA to NAD" {
     3s_6z_9z_12z_3_hydroxyoctadecatrienoyl_coa
     <-> . +nad -nadh -hplus
     3_oxo_6z_9z_12z_octadecatrienoyl_coa
-    <-> . +nadh +h -nad
+    <-> . +nadh_mnxm10 +h -nad_mnxm8
     3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coenzyme
   }
 }

@@ -32,7 +32,7 @@ pathway 1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion-62 "1-palmitoyl-2-azelaoyl
 
   branch from n_hexadecanoylsphinganine side right {
     n_hexadecanoylsphinganine
-    <-> ec_3_2_1_45 [3.2.1.45] +d_galactopyranose +h2o
+    <-> ec_3_2_1_45 [3.2.1.45] +d_galactopyranose +h2o_water
     d_glucosyl_1_1_n_hexadecanoylsphinganine
   }
 
@@ -62,7 +62,7 @@ pathway 1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion-62 "1-palmitoyl-2-azelaoyl
 
   branch from n_hexadecanoylsphinganine side left {
     n_hexadecanoylsphinganine
-    <-> ec_3_2_1_46 [3.2.1.46] +d_galactopyranose +h2o
+    <-> ec_3_2_1_46 [3.2.1.46] +d_galactopyranose +h2o_water
     d_galactosyl_1_1_n_hexadecanoylsphinganine
   }
 

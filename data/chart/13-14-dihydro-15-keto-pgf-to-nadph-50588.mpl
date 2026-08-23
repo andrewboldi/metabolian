@@ -12,7 +12,7 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph-50588 "13,14-dihydro-15-keto-PGF… t
     15_oxoprostaglandin_f2
     <-> .
     prostaglandin_i2
-    <-> ec_1_1_1_231 [1.1.1.231] +nadp -nadph
+    <-> ec_1_1_1_231 [1.1.1.231] +nadp_mnxm5 -nadph_mnxm738702
     5z_13e_6_9alpha_epoxy_11alpha_hydroxy_15_oxopro
   }
 
@@ -25,7 +25,7 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph-50588 "13,14-dihydro-15-keto-PGF… t
   branch from 15_oxoprostaglandin_f2 side right {
     15_oxoprostaglandin_f2
     <-> .
-    prostaglandin_i2
+    prostaglandin_i2_mnxm1560735
   }
 
   branch from prostaglandin_i2 side left {
@@ -34,15 +34,15 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph-50588 "13,14-dihydro-15-keto-PGF… t
     h
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +carbamazepine +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_14_14_1 [1.14.14.1] +h +carbamazepine +o2 +nadp_mnxm5 +h2o
     carbamazepine_10_11_epoxide
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadp_mnxm5 +h2o
     4_hydroxyvalproic_acid
   }
 
@@ -52,27 +52,27 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph-50588 "13,14-dihydro-15-keto-PGF… t
     11beta_prostaglandin_f2
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph_mnxm738702 +h2o
     5_hydroxyvalproic_acid
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph +h2o
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph_mnxm738702 +h2o
     3_hydroxyvalproic_acid
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_8_1_12 [1.8.1.12] +bis_glutathionyl_spermine_disulfide +h +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_8_1_12 [1.8.1.12] +bis_glutathionyl_spermine_disulfide +h +nadp_mnxm5
     bis_glutathionyl_spermine
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_8_1_12 [1.8.1.12] +homotrypanothione_disulfide +h +nadp
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_8_1_12 [1.8.1.12] +homotrypanothione_disulfide +h +nadp_mnxm5
     homotrypanothione
   }
 }

@@ -24,7 +24,7 @@ pathway 2-glutathion-s-yl-1-4-h-to-fmn "2-(glutathion-S-yl)-1,4-h… to FMN" {
 
   branch from geranylhydroquinone side right {
     geranylhydroquinone
-    <-> ec_1_14_13_116 [1.14.13.116] +h +o2 +nadph +3_hydroxy_geranylhydroquinone +h2o
+    <-> ec_1_14_13_116 [1.14.13.116] +h +o2_mnxm735438 +nadph +3_hydroxy_geranylhydroquinone +h2o_water
     nadp
   }
 
@@ -48,7 +48,7 @@ pathway 2-glutathion-s-yl-1-4-h-to-fmn "2-(glutathion-S-yl)-1,4-h… to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
+    <-> . +terpinene_chebi_10334 +fmnh2 +o2 +h2o +hplus
     carvacrol
   }
 

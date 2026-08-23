@@ -163,7 +163,7 @@ pathway d-xylulose-1-phosphate-to-phosphate-null "D-Xylulose 1-phosphate to phos
   branch from adp side left {
     adp
     <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
-    premithramycin_a3
+    premithramycin_a3_mnxm1371087
   }
 
   branch from adp side right {

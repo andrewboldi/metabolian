@@ -10,11 +10,11 @@ pathway 1-hydroxylimonen-2-one-to-3s-3-isopropenyl-6-oxo "1-hydroxylimonen-2-one
     1_hydroxylimonen_2_one
     <-> ec_1_14_13_105 [1.14.13.105] +nadph +o2 -nadp -h2o
     3_isopropenyl_6_oxoheptanoate
-    <-> ec_1_14_13_105 [1.14.13.105] +nadp +h2o -o2 -nadph
+    <-> ec_1_14_13_105 [1.14.13.105] +nadp_mnxm5 +h2o_water -o2_mnxm735438 -nadph_mnxm738702
     1s_4r_1_hydroxylimonen_2_one
     <-> ec_1_1_1_297 [1.1.1.297] +nadh +h -nad
     1r_2r_4s_limonene_1_2_diol
-    <-> ec_1_1_1_297 [1.1.1.297] +nad -nadh -hplus
+    <-> ec_1_1_1_297 [1.1.1.297] +nad_chebi_57540 -nadh_chebi_57945 -hplus
     1r_4s_1_hydroxylimonen_2_one
     <-> ec_1_14_13_105 [1.14.13.105] +nadph +o2 -nadp -h2o
     3s_3_isopropenyl_6_oxoheptanoate

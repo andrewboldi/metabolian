@@ -14,13 +14,13 @@ pathway 3s-4s-5s-10s-13r-4-10-1-to-zymosterone "(3S,4S,5S,10S,13R)-4,10,1… to 
     4_formylzymosterol
     <-> ec_1_14_13_72 [1.14.13.72] +nadh +o2 -nad -h2o
     4_carboxyzymosterol
-    <-> . +nad -co2 -nadh
+    <-> . +nad_chebi_57540 -co2 -nadh_chebi_57945
     zymosterone
   }
 
   branch from 4_carboxyzymosterol side left {
     4_carboxyzymosterol
-    <-> . +fe2 +o2 +hplus +iron +h2o
+    <-> . +fe2 +o2_chebi_15379 +hplus +iron +h2o_chebi_15377
     methylzymosterol
   }
 }

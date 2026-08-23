@@ -13,7 +13,7 @@ pathway trehalose-6-mycolate-to-6-o-acetyl-d-glucose-23 "α,α'-trehalose 6-myco
     <-> ec_2_4_1_231 [2.4.1.231] +trehalose +pi -g1p
     d_glucose
     <-> ec_5_1_3_3 [5.1.3.3]
-    d_glucose
+    d_glucose_chebi_15903
     <-> . +acetyl_coa -coa
     6_o_acetyl_d_glucose
   }
@@ -36,26 +36,26 @@ pathway trehalose-6-mycolate-to-6-o-acetyl-d-glucose-23 "α,α'-trehalose 6-myco
     adp_d_glucoside
   }
 
-  branch from d_glucose side right {
-    d_glucose
+  branch from d_glucose_chebi_15903 side right {
+    d_glucose_chebi_15903
     <-> ec_3_2_1_216 [3.2.1.216] +h2o +glucose
     d_glcp_1_2_d_glcp
   }
 
-  branch from d_glucose side left {
-    d_glucose
+  branch from d_glucose_chebi_15903 side left {
+    d_glucose_chebi_15903
     <-> . +phlorizin +h2o
     phloretin
   }
 
-  branch from d_glucose side right {
-    d_glucose
+  branch from d_glucose_chebi_15903 side right {
+    d_glucose_chebi_15903
     <-> . +quercetin_3_o_d_glucopyranoside +h2o
     quercetin_7_olate
   }
 
-  branch from d_glucose side left {
-    d_glucose
+  branch from d_glucose_chebi_15903 side left {
+    d_glucose_chebi_15903
     <-> . +d_glucosyl_n_hexadecanoylsphingosine +h2o
     n_hexadecanoylsphingosine
   }

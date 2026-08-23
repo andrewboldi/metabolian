@@ -14,7 +14,7 @@ pathway dtdp-3-amino-4-oxo-2-3-6-to-dtdp-3-4-didehydro-2 "dTDP-3-amino-4-oxo-2,3
     dtdp_2_6_dideoxy_d_glycero_hex_2_enos_4_ulose
     <-> . +h +nadph -nadp
     dtdp_4_dehydro_2_6_dideoxy_d_glucose
-    <-> ec_1_1_1_384 [1.1.1.384] +nadp -nadph -hplus
+    <-> ec_1_1_1_384 [1.1.1.384] +nadp_chebi_58349 -nadph_chebi_57783 -hplus
     dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
   }
 

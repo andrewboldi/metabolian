@@ -12,7 +12,7 @@ pathway diphosphate-to-pyocyanine-null "diphosphate to pyocyanine" {
     l_glutamine
     <-> ec_2_1_1_327 [2.1.1.327] +phenazine_1_carboxylate +sam -sah
     5_methylphenazine_1_carboxylate
-    <-> ec_1_14_13_218 [1.14.13.218] +nadh +o2 +hplus -co2 -nad -h2o
+    <-> ec_1_14_13_218 [1.14.13.218] +nadh +o2 +hplus -co2 -nad -h2o_chebi_15377
     pyocyanine
   }
 

@@ -20,13 +20,13 @@ pathway 4z-7z-10z-hexadecatrien-to-coa-84911 "(4Z,7Z,10Z)-hexadecatrien… to Co
 
   branch from cholesteryl_linolenate side left {
     cholesteryl_linolenate
-    <-> . +cholesterol +coa
+    <-> . +cholesterol_chebi_16113 +coa_chebi_57287
     linolenoyl_coa
   }
 
   branch from cholesteryl_linolenate side right {
     cholesteryl_linolenate
-    <-> . +1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly +cholesterol
+    <-> . +1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly +cholesterol_chebi_16113
     1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 }

@@ -10,7 +10,7 @@ pathway h-to-o2-null "H to O2" {
     h
     <-> . +3_epi_6_deoxocathasterone +o2 +nadph -6_deoxotyphasterol -h2o
     nadp
-    <-> ec_1_14_14_179 [1.14.14.179] +6_deoxotyphasterol +fmnh2 +o2 -fmn -h2o -hplus
+    <-> ec_1_14_14_179 [1.14.14.179] +6_deoxotyphasterol +fmnh2 +o2_chebi_15379 -fmn -h2o_chebi_15377 -hplus
     typhasterol
     <-> . +h2o -o2
     6_deoxotyphasterol
@@ -97,7 +97,7 @@ pathway h-to-o2-null "H to O2" {
   branch from nadp side right {
     nadp
     <-> . +25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 +h +nadph +h2o
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26_mnxm1174
   }
 
   branch from h2o side left {

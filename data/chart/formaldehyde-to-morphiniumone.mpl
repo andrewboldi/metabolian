@@ -10,7 +10,7 @@ pathway formaldehyde-to-morphiniumone "formaldehyde to morphiniumone" {
     formaldehyde
     <-> ec_1_14_11_31 [1.14.11.31] +co2 +succinate +morphinone -o2 -oripavine
     2_oxoglutarate
-    <-> . +oripavine +akg +o2 -formaldehyde -succinate -co2
+    <-> . +oripavine +akg +o2_chebi_15379 -formaldehyde_chebi_16842 -succinate_chebi_30031 -co2_chebi_16526
     neomorphinone
     <-> ec_5_3_3_24 [5.3.3.24]
     morphiniumone
@@ -42,7 +42,7 @@ pathway formaldehyde-to-morphiniumone "formaldehyde to morphiniumone" {
 
   branch from neomorphinone side left {
     neomorphinone
-    <-> . +nadp +nadph +hplus
+    <-> . +nadp_chebi_58349 +nadph_chebi_57783 +hplus
     neomorphine
   }
 

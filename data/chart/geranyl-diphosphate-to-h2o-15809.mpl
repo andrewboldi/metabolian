@@ -10,9 +10,9 @@ pathway geranyl-diphosphate-to-h2o-15809 "geranyl diphosphate to H2O" {
     gpp
     <-> ec_4_2_3_26 [4.2.3.26] +h2o -ppi
     r_linalool
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +h +o2 -nad -h2o
+    <-> ec_1_14_13_151 [1.14.13.151] +nadh +h +o2 -nad -h2o_water
     6e_8_hydroxylinalool
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +h +o2 -nad -h2o
+    <-> ec_1_14_13_151 [1.14.13.151] +nadh +h +o2 -nad -h2o_water
     6e_8_oxolinalool
   }
 }

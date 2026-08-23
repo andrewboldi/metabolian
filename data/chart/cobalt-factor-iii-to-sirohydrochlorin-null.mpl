@@ -69,7 +69,7 @@ pathway cobalt-factor-iii-to-sirohydrochlorin-null "Cobalt-factor III to sirohyd
   branch from nad side left {
     nad
     <-> ec_1_3_1_41 [1.3.1.41] +nadh +h +xanthommatin
-    5_12_dihydroxanthommatin
+    5_12_dihydroxanthommatin_mnxm1371648
   }
 
   branch from nadph side right {
@@ -98,7 +98,7 @@ pathway cobalt-factor-iii-to-sirohydrochlorin-null "Cobalt-factor III to sirohyd
 
   branch from h side right {
     h
-    <-> . +2_6_dihydroxynicotinate +o2 +h2o +co2 +maleamate
+    <-> . +2_6_dihydroxynicotinate_mnxm1369056 +o2 +h2o +co2 +maleamate
     formate
   }
 
@@ -165,6 +165,6 @@ pathway cobalt-factor-iii-to-sirohydrochlorin-null "Cobalt-factor III to sirohyd
   branch from nadph side left {
     nadph
     <-> . +h +nadp +deoxymupirocin_f
-    deoxymupirocin_c
+    deoxymupirocin_c_mnxm1372378
   }
 }

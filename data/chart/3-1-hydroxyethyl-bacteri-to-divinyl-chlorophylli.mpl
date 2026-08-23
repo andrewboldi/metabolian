@@ -10,7 +10,7 @@ pathway 3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli "3-(1-hydroxyethyl)bact
     3_1_hydroxyethyl_bacteriochlorophyllide_a
     <-> ec_4_2_1_165 [4.2.1.165] -h2o
     3_vinylbacteriochlorophyllide_a
-    <-> ec_1_3_7_15 [1.3.7.15] +di_sulfido_diiron +adp +pi -di_sulfido_diiron -atp -h2o -hplus
+    <-> ec_1_3_7_15 [1.3.7.15] +di_sulfido_diiron +adp +pi -di_sulfido_diiron_chebi_33738 -atp -h2o -hplus
     chlorophyllide_a
     <-> ec_1_3_1_75 [1.3.1.75] +nadp -nadph -hplus
     divinyl_chlorophyllide_a

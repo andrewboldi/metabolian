@@ -30,13 +30,13 @@ pathway 1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer "1-tetradecanoyl-2-[(5Z
 
   branch from arachidonate side left {
     arachidonate
-    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
+    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos_chebi_84470 +h2o +hplus
     1_heptadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from arachidonate side right {
     arachidonate
-    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
+    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos_chebi_84489 +h2o +hplus
     1_heptadecanoyl_sn_glycero_3_phosphoethanolamine
   }
 

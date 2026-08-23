@@ -12,7 +12,7 @@ pathway e-phenylacetaldehyde-to-2-phenylacetate "(E)-phenylacetaldehyde… to 2-
     z_phenylacetaldehyde_oxime
     <-> ec_4_8_1_4 [4.8.1.4] -h2o
     phenylacetonitrile
-    <-> ec_3_5_5_1 [3.5.5.1] +h2o -2_phenylacetate
+    <-> ec_3_5_5_1 [3.5.5.1] +h2o_water -2_phenylacetate
     nh4
   }
 }

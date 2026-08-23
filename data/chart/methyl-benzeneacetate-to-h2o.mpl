@@ -96,7 +96,7 @@ pathway methyl-benzeneacetate-to-h2o "Methyl benzeneacetate to H2O" {
 
   branch from methanol side right {
     methanol
-    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a +h2o +co2
+    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a_mnxm1364549 +h2o +co2
     pyropheophorbide_a
   }
 
@@ -109,7 +109,7 @@ pathway methyl-benzeneacetate-to-h2o "Methyl benzeneacetate to H2O" {
   branch from nadh side right {
     nadh
     <-> . +h +2_4_5_trihydroxytoluene +nad
-    2_hydroxy_5_methylquinone
+    2_hydroxy_5_methylquinone_mnxm1370745
   }
 
   branch from o2 side left {

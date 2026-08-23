@@ -31,7 +31,7 @@ pathway 1-octadecanoyl-2-octanoyl-to-diphosphate "1-octadecanoyl-2-octanoyl… t
   branch from stearoyl_coa side right {
     stearoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero +coa
-    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
+    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp_chebi_72839
   }
 
   branch from ppi side left {

@@ -8,7 +8,7 @@ pathway progesterone-to-fmn "progesterone to FMN" {
 
   spine at 0,0 {
     progesterone
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     11_hydroxyprogesterone
     <-> . +nad -nadh -hplus
     11_ketoprogesterone

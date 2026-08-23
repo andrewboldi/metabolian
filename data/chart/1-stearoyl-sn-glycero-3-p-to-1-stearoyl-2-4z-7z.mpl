@@ -11,7 +11,7 @@ pathway 1-stearoyl-sn-glycero-3-p-to-1-stearoyl-2-4z-7z "1-stearoyl-sn-glycero-3
     <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa -coa
     1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno
     <-> . +h2o -pi
-    1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno
+    1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno_chebi_77129
     <-> . +atp -adp -hplus
     1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno
   }

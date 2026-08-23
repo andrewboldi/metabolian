@@ -10,22 +10,22 @@ pathway demethylspheroidene-to-hydroxyspheroidenone "demethylspheroidene to Hydr
     demethylspheroidene
     <-> ec_2_1_1_210 [2.1.1.210] +sam -sah -hplus
     spheroidene
-    <-> ec_1_14_15_9 [1.14.15.9] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_9 [1.14.15.9] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     spheroiden_2_one
-    <-> ec_4_2_1_131 [4.2.1.131] +h2o
+    <-> ec_4_2_1_131 [4.2.1.131] +h2o_water
     hydroxyspheroidenone
   }
 
   branch from spheroidene side left {
     spheroidene
-    <-> ec_4_2_1_131 [4.2.1.131] +h2o
+    <-> ec_4_2_1_131 [4.2.1.131] +h2o_water
     hydroxyspheroidene
   }
 
   branch from spheroidene side right {
     spheroidene
-    <-> . +spheroiden_2_one +h2o
-    o2
+    <-> . +spheroiden_2_one +h2o_water
+    o2_mnxm735438
   }
 
   branch from sah side left {
@@ -40,14 +40,14 @@ pathway demethylspheroidene-to-hydroxyspheroidenone "demethylspheroidene to Hydr
     5_methylcytidine_5_monophosphate_1
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_4_2_1_164 [4.2.1.164] +dtdp_4_dehydro_2_6_dideoxy_d_glucose +di_sulfido_diiron +hplus +h2o
     dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +24r_24_25_dihydroxycalciol +di_sulfido_diiron +o2 +hplus +h2o
     25_hydroxy_24_oxocalciol
   }
@@ -72,7 +72,7 @@ pathway demethylspheroidene-to-hydroxyspheroidenone "demethylspheroidene to Hydr
 
   branch from spheroidene side right {
     spheroidene
-    <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +demethylspheroidene
+    <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +demethylspheroidene_mnxm1371489
     s_adenosyl_l_methionine
   }
 
@@ -90,36 +90,36 @@ pathway demethylspheroidene-to-hydroxyspheroidenone "demethylspheroidene to Hydr
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +20s_hydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +20s_hydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     20s_24r_dihydroxyvitamin_d3
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +20s_hydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +20s_hydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     20s_24s_dihydroxyvitamin_d3
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
     20_s_25_dihydroxyvitamin_d3
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +25_hydroxy_24_oxocalciol +di_sulfido_diiron +o2 +hplus +h2o
     23_s_25_dihydroxy_24_oxovitamin_d3
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +h +18_coa_18_oxo_dinorleukotriene_b4 +coa
     omega_carboxy_trinor_leukotriene_b4
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +18e_20_oxo_20_coa_ltb4
     20_coa_20_oxo_18r_hydroxyleucotriene_b4
   }

@@ -12,7 +12,7 @@ pathway s-4-5-dihydroxypentane-to-h2o-35155 "(S)-4,5-dihydroxypentane-… to H2O
     2r_4s_2_methyl_2_4_dihydroxydihydrofuran_3_one
     <-> . +h2o
     2r_4s_2_methyltetrahydrofuran_2_3_3_4_tetrol
-    <-> ec_7_6_2_13 [7.6.2.13] +h +adp +phosphate -2r_4s_2_methyltetrahydrofuran_2_3_3_4_tetrol -h2o
+    <-> ec_7_6_2_13 [7.6.2.13] +h +adp +phosphate -2r_4s_2_methyltetrahydrofuran_2_3_3_4_tetrol -h2o_water
     atp
   }
 }

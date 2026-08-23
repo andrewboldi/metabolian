@@ -14,7 +14,7 @@ pathway coniferyl-alcohol-radical-to-sesamolin "coniferyl alcohol radical to Ses
     4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr
     <-> ec_1_14_19_74 [1.14.19.74] +fmnh2 +o2 -fmn -h2o -hplus
     sesamin
-    <-> . +o2
+    <-> . +o2_mnxm735438
     sesamolin
   }
 }

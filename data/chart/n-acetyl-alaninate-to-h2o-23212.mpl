@@ -16,11 +16,11 @@ pathway n-acetyl-alaninate-to-h2o-23212 "N-acetyl-β-alaninate to H2O" {
     anserine
     <-> ec_3_4_13_5 [3.4.13.5] +h2o -alanine
     n_methyl_l_histidine
-    <-> ec_6_3_2_11 [6.3.2.11] +beta_alanine +atp -anserine -adp -phosphate
+    <-> ec_6_3_2_11 [6.3.2.11] +beta_alanine +atp_mnxm3 -anserine_mnxm2639 -adp_mnxm40333 -phosphate
     h
-    <-> ec_6_3_2_11 [6.3.2.11] +diphosphate +anserine +amp -atp -n_methyl_l_histidine
+    <-> ec_6_3_2_11 [6.3.2.11] +diphosphate +anserine_mnxm2639 +amp -atp_mnxm3 -n_methyl_l_histidine
     beta_alanine
-    <-> . +nh4 -beta_aminopropionitrile -h2o
+    <-> . +nh4 -beta_aminopropionitrile -h2o_water
     h
   }
 
@@ -39,13 +39,13 @@ pathway n-acetyl-alaninate-to-h2o-23212 "N-acetyl-β-alaninate to H2O" {
   branch from n_methyl_l_histidine side left {
     n_methyl_l_histidine
     <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    l_histidine
+    l_histidine_mnxm1107769
   }
 
   branch from n_methyl_l_histidine side right {
     n_methyl_l_histidine
-    <-> . +l_histidine +anserine
-    carnosine
+    <-> . +l_histidine_mnxm1107769 +anserine_mnxm2639
+    carnosine_mnxm726951
   }
 
   branch from h side left {
@@ -60,33 +60,33 @@ pathway n-acetyl-alaninate-to-h2o-23212 "N-acetyl-β-alaninate to H2O" {
     3_5_diiodothyroacetate
   }
 
-  branch from anserine side left {
-    anserine
-    <-> ec_2_1_1_22 [2.1.1.22] +s_adenosyl_l_homocysteine +h +carnosine
+  branch from anserine_mnxm2639 side left {
+    anserine_mnxm2639
+    <-> ec_2_1_1_22 [2.1.1.22] +s_adenosyl_l_homocysteine +h +carnosine_mnxm726951
     s_s_adenosyl_l_methionine
   }
 
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
+  branch from adp_mnxm40333 side right {
+    adp_mnxm40333
+    <-> . +h +phosphate +atp_mnxm3 +h2o_water
     thioglycolate
   }
 
-  branch from adp side left {
-    adp
-    <-> ec_7_6_2_15 [7.6.2.15] +h +phosphate +atp +h2o
+  branch from adp_mnxm40333 side left {
+    adp_mnxm40333
+    <-> ec_7_6_2_15 [7.6.2.15] +h +phosphate +atp_mnxm3 +h2o_water
     thiamine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +atp +h2o
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp_mnxm40333 +atp_mnxm3 +h2o_water
     l_threonine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp_mnxm40333 +atp_mnxm3 +h2o_water
     testosterone_17_o_d_glucuronide
   }
 
@@ -98,25 +98,25 @@ pathway n-acetyl-alaninate-to-h2o-23212 "N-acetyl-β-alaninate to H2O" {
 
   branch from beta_alanine side left {
     beta_alanine
-    <-> ec_6_3_2_11 [6.3.2.11] +beta_alanyl_l_lysine +diphosphate +h +amp +atp
+    <-> ec_6_3_2_11 [6.3.2.11] +beta_alanyl_l_lysine +diphosphate +h +amp +atp_mnxm3
     l_lysine
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
+    <-> ec_3_6_3_25 [3.6.3.25] +h +adp_mnxm40333 +phosphate +h2o_water
     thiosulfate
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_55 [3.6.3.55] +h +adp +phosphate +h2o
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
+    <-> ec_3_6_3_55 [3.6.3.55] +h +adp_mnxm40333 +phosphate +h2o_water
     tungstate
   }
 
   branch from beta_aminopropionitrile side right {
     beta_aminopropionitrile
-    <-> ec_2_3_2_2 [2.3.2.2] +gamma_glutamyl_beta_aminopropiononitrile +h2o +h
+    <-> ec_2_3_2_2 [2.3.2.2] +gamma_glutamyl_beta_aminopropiononitrile +h2o_water +h
     l_glutamate
   }
 
@@ -126,14 +126,14 @@ pathway n-acetyl-alaninate-to-h2o-23212 "N-acetyl-β-alaninate to H2O" {
     co2
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +prostaglandin_pge2_1_glyceryl_ester +h +glycerol
     prostaglandin_e2
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +prostaglandin_pge2_3_glyceryl_ester +h +prostaglandin_e2
     glycerol
   }
@@ -176,7 +176,7 @@ pathway n-acetyl-alaninate-to-h2o-23212 "N-acetyl-β-alaninate to H2O" {
 
   branch from beta_alanine side right {
     beta_alanine
-    <-> . +beta_alanyl_coa +h2o +h
+    <-> . +beta_alanyl_coa +h2o_water +h
     coa
   }
 }

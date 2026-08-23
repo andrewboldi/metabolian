@@ -14,9 +14,9 @@ pathway sulfo-aldehydes-to-h2o "Sulfo-Aldehydes to H2O" {
     trithionate
     <-> . +sulfur_atom
     tetrathionate
-    <-> . +h2o -trioxidosulfanidosulfate -sulfate -hplus
+    <-> . +h2o_chebi_15377 -trioxidosulfanidosulfate -sulfate -hplus
     sulfur_atom
-    <-> ec_4_8_1_5 [4.8.1.5] +3_phenylpropionitrile +h +sulfate
+    <-> ec_4_8_1_5 [4.8.1.5] +3_phenylpropionitrile +h +sulfate_mnxm58
     2_phenyl_n_sulfonatooxy_ethanimidothioic_acid
     <-> ec_3_2_1_147 [3.2.1.147] +glucose -h2o
     gluconasturtiin
@@ -34,14 +34,14 @@ pathway sulfo-aldehydes-to-h2o "Sulfo-Aldehydes to H2O" {
     menaquinol_8
   }
 
-  branch from sulfate side left {
-    sulfate
+  branch from sulfate_mnxm58 side left {
+    sulfate_mnxm58
     <-> . +benzylglucosinolate_aglycone
     benzyl_isothiocyanate
   }
 
-  branch from sulfate side right {
-    sulfate
+  branch from sulfate_mnxm58 side right {
+    sulfate_mnxm58
     <-> . +indol_3_ylacetothiohydroxamate_o_sulfonate
     indolylmethylisothiocyanate
   }

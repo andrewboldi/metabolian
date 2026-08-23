@@ -43,7 +43,7 @@ pathway 1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene-31611 "1,1'-dihydroxy-1,1',2,
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
     <-> . +3_3_diiodothyronamine +iodide +hplus +hydrogen_donor
-    3_3_5_triiodothyronamine
+    3_3_5_triiodothyronamine_chebi_233426
   }
 
   branch from hydrogen_acceptor side right {
@@ -55,12 +55,12 @@ pathway 1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene-31611 "1,1'-dihydroxy-1,1',2,
   branch from hydrogen_donor side left {
     hydrogen_donor
     <-> . +thyronamine +iodide +hydrogen_acceptor +hplus
-    3_iodothyronamine
+    3_iodothyronamine_chebi_231647
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +3_iodothyronamine +iodide +hydrogen_acceptor +hplus
+    <-> . +3_iodothyronamine_chebi_231647 +iodide +hydrogen_acceptor +hplus
     3_5_diiodothyronamine
   }
 }

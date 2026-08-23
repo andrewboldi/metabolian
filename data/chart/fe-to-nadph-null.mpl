@@ -10,9 +10,9 @@ pathway fe-to-nadph-null "Fe to NADPH" {
     fe
     <-> . +n_2_3_dihydroxybenzoyl_l_serine -fe_enterobactin -h2o
     h
-    <-> . +fadh2 +fe_enterobactin -fe -enterobactin
+    <-> . +fadh2 +fe_enterobactin -fe_mnxm1370983 -enterobactin
     fad
-    <-> . +fe +nadp +enterobactin -fe_enterobactin -nadph
+    <-> . +fe_mnxm1370983 +nadp +enterobactin -fe_enterobactin -nadph
     h
   }
 }

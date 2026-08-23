@@ -37,7 +37,7 @@ pathway s-adenosyl-l-homocysteine-to-nadph "S-adenosyl-L-homocysteine to NADPH" 
   branch from 4_hydroxy_2_2_bipyrrole_5_carbaldehyde side right {
     4_hydroxy_2_2_bipyrrole_5_carbaldehyde
     <-> . +2_methyl_3_n_amyl_pyrrole +atp +h +adp +phosphate
-    norprodigiosin
+    norprodigiosin_mnxm1368289
   }
 
   branch from nad side left {
@@ -103,7 +103,7 @@ pathway s-adenosyl-l-homocysteine-to-nadph "S-adenosyl-L-homocysteine to NADPH" 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
     <-> . +s_adenosyl_l_homocysteine +premithramycin_a3 +h
-    premithramycin_a3
+    premithramycin_a3_mnxm1372055
   }
 
   branch from s_adenosyl_l_methionine side right {

@@ -68,7 +68,7 @@ pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose
 
   branch from n3_fumaroyl_s_2_3_diaminopropanoate side left {
     n3_fumaroyl_s_2_3_diaminopropanoate
-    <-> . +diphosphate +n3_fumaramoyl_s_2_3_diaminopropanoic_acid +h +amp +l_glutamate +atp +h2o
+    <-> . +diphosphate +n3_fumaramoyl_s_2_3_diaminopropanoic_acid +h +amp_mnxm728294 +l_glutamate +atp_mnxm3 +h2o_water
     l_glutamine
   }
 
@@ -98,7 +98,7 @@ pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose
 
   branch from d_arabinopyranose side right {
     d_arabinopyranose
-    <-> ec_4_1_2_23 [4.1.2.23] +pyruvate
+    <-> ec_4_1_2_23 [4.1.2.23] +pyruvate_mnxm23
     3_deoxy_d_manno_octulosonate
   }
 

@@ -344,6 +344,19 @@ for (const chain of sheets) {
   // participants
   const metIds = new Map();
   const metabolites = [];
+  // A local metabolite id must identify exactly ONE resolved species. The readable
+  // base (a canonical id, else a slug of the display name) is derived from a name
+  // that `slug` truncates to 48 chars — so distinct species sharing a long name
+  // prefix (three growing Und-PP-…-peptides, say) slug to the SAME id, collapse to
+  // one node, and then appear on both sides of a reaction where they cancel and
+  // silently unbalance it. Guard against that: key the id to the resolved
+  // ChEBI/MetaNetX identity (unique per species) and, whenever a base is already
+  // owned by a DIFFERENT identity, qualify it with this species' own identity so
+  // two species can never share a local id. The formula/charge stored below is the
+  // one `chebi.get(p.chebi)` supplies — exactly what the corpus balance-checked
+  // against — so with ids no longer colliding, as-stored balance == verified.
+  const localById = new Map(); // local id -> the p.chebi identity that owns it
+  const identTag = (c) => (String(c).startsWith("mnx:") ? eid(c.slice(4)) : `chebi_${c}`);
   for (const r of [...rxns, ...branchRxns]) {
     for (const p of [...r.substrates, ...r.products]) {
       if (metIds.has(p.chebi)) continue;
@@ -357,7 +370,9 @@ for (const chain of sheets) {
         }
       }
       const label = known?.name || displayName(info?.name);
-      const mid = known?.id || eid(label || `chebi_${p.chebi}`) || `chebi_${p.chebi}`;
+      let mid = known?.id || eid(label) || identTag(p.chebi);
+      if (localById.has(mid) && localById.get(mid) !== p.chebi) mid = `${mid}_${identTag(p.chebi)}`;
+      localById.set(mid, p.chebi);
       metIds.set(p.chebi, mid);
       // Applies to canonical names too: reusing the repo's vocabulary does not
       // make a name short ("UMP (uridine 5'-monophosphate)" is 30 chars), and the

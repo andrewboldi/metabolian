@@ -44,7 +44,7 @@ pathway 1-n2-etheno-2-deoxyguano-to-2-phosphonatoglycola "1,N2-etheno-2'-deoxygu
 
   branch from glyoxal side left {
     glyoxal
-    <-> ec_1_2_1_49 [1.2.1.49] +nadp +h2o +glyoxylate +nadph
+    <-> ec_1_2_1_49 [1.2.1.49] +nadp +h2o_water +glyoxylate +nadph
     h
   }
 }

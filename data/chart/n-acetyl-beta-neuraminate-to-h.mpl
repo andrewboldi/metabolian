@@ -50,7 +50,7 @@ pathway n-acetyl-beta-neuraminate-to-h "N-acetyl-beta-neuraminate… to H" {
 
   branch from pyruvate side left {
     pyruvate
-    <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_d_mannosamine
+    <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_d_mannosamine_chebi_63153
     aceneuramate
   }
 
@@ -135,6 +135,6 @@ pathway n-acetyl-beta-neuraminate-to-h "N-acetyl-beta-neuraminate… to H" {
   branch from h side left {
     h
     <-> ec_1_4_1_21 [1.4.1.21] +l_aspartate +nadp +nadph
-    iminoaspartate
+    iminoaspartate_mnxm1370457
   }
 }

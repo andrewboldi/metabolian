@@ -11,7 +11,7 @@ pathway neu5ac-2-8-neu5ac-to-n-acylsphingoid "α-Neu5Ac-(2→8)-α-Neu5Ac-(… t
     <-> . +h2o -n_acetylneuraminate
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
     <-> . +h2o -n_acetylneuraminate
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace_chebi_82639
     <-> . +h2o -n_acylsphingoid
     d_galp_1_3_d_galpnac_1_4_neup5ac_2_3_d_galp_1_4
     <-> . +n_acylsphingoid +atp -adp -hplus

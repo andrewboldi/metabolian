@@ -8,11 +8,11 @@ pathway epi-isozizaene-to-h2o-25976 "(+)-epi-isozizaene to H2O" {
 
   spine at 0,0 {
     epi_isozizaene
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     5s_albaflavenol
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     albaflavenone
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -albaflavenone -h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -albaflavenone -h2o_water
     atp
   }
 }

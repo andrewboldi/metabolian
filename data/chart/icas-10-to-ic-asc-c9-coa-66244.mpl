@@ -13,7 +13,7 @@ pathway icas-10-to-ic-asc-c9-coa-66244 "icas#10 to IC-asc-ΔC9-CoA" {
     <-> . +coa -amp -hplus
     ic_asc_c9_coa
     <-> . +o2 -h2o2
-    ic_asc_c9_coa
+    ic_asc_c9_coa_chebi_166974
   }
 
   branch from ppi side left {

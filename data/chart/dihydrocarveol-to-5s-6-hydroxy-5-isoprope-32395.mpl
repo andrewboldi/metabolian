@@ -16,18 +16,99 @@ pathway dihydrocarveol-to-5s-6-hydroxy-5-isoprope-32395 "(+)-dihydrocarveol to (
     5s_6_hydroxy_5_isopropenyl_2_methylhexanoate
   }
 
+  branch from dihydrocarvone side left {
+    dihydrocarvone
+    <-> ec_1_1_1_296 [1.1.1.296] +nad +nadh +hplus
+    neodihydrocarveol
+  }
 
+  branch from 3s_6r_6_isopropenyl_3_methyloxepan_2_one side right {
+    3s_6r_6_isopropenyl_3_methyloxepan_2_one
+    <-> ec_1_14_13_105 [1.14.13.105] +nadph_chebi_57783 +o2_chebi_15379 +hplus +nadp_chebi_58349 +h2o_chebi_15377
+    isodihydrocarvone
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_8_1_10 [1.8.1.10] +glutathione +l_cysteine +nadph
+    l_cysteine_glutathione_disulfide
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +h +cholesterol +o2 +nadph +h2o
+    5_6_epoxy_5_cholestan_3_ol
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +2s_homocitric_acid
+    trans_homoaconitate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +thromboxane_b2
+    thromboxane_a2
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_13_11_52 [1.13.11.52] +formyl_5_hydroxykynurenamine +o2
+    serotonin
+  }
 
+  branch from h side right {
+    h
+    <-> . +succinyl_coa +r_carnitine +o_succinylcarnitine
+    coa
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +trans_4_coumarate
+    e_caffeate
+  }
 
+  branch from o2 side right {
+    o2
+    <-> ec_1_17_3_2 [1.17.3.2] +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +h2o +h +h2o2
+    hydantoin_5_propionate
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +h +cholesterol +o2 +nadp +h2o
+    5_6beta_epoxy_5beta_cholestan_3beta_ol
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_119 [1.1.1.119] +beta_d_glucose +nadp +h
+    d_glucono_1_5_lactone
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_131 [1.1.1.131] +d_mannonate +nadph
+    d_mannopyranuronic_acid
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_246 [1.1.1.246] +h +3r_vestitone +nadph +h2o
+    medicarpin
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +cholesterol
+    cholesteryl_palmitate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_hexadecenoate +h +cholesterol
+    cholesteryl_palmitoleate
+  }
 }

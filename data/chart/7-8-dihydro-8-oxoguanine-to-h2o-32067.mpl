@@ -12,7 +12,7 @@ pathway 7-8-dihydro-8-oxoguanine-to-h2o-32067 "7,8-dihydro-8-oxoguanine to H2O" 
     7_9_dihydro_1h_purine_2_6_8_3h_trione
     <-> . +h2o2 -alloxan
     urea
-    <-> . +h +adp +phosphate -urea -h2o
+    <-> . +h +adp +phosphate -urea -h2o_water
     atp
   }
 
@@ -30,36 +30,36 @@ pathway 7-8-dihydro-8-oxoguanine-to-h2o-32067 "7,8-dihydro-8-oxoguanine to H2O" 
 
   branch from urea side left {
     urea
-    <-> ec_3_5_3_7 [3.5.3.7] +5_guanidino_2_oxopentanoate +h2o
+    <-> ec_3_5_3_7 [3.5.3.7] +5_guanidino_2_oxopentanoate +h2o_water
     5_amino_2_oxopentanoate
   }
 
   branch from urea side right {
     urea
-    <-> ec_3_5_1_95 [3.5.1.95] +methylmalonate +h +h2o
+    <-> ec_3_5_1_95 [3.5.1.95] +methylmalonate +h +h2o_water
     3_oxo_3_ureidoisobutyrate
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     7alpha_hydroxycholest_4_en_3_one
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     7alpha_12alpha_dihydroxycholest_4_en_3_one
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +trans_3_4_dihydro_3_4_dihydroxy_7_12_dimethylben
     1a_11b_dihydro_4_9_dimethylbenz_a_anthra_3_4_b_o
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +dibenzo_a_l_pyrene_11_12_diol
     dibenzo_a_l_pyrene_11_12_epoxide
   }
@@ -78,7 +78,7 @@ pathway 7-8-dihydro-8-oxoguanine-to-h2o-32067 "7,8-dihydro-8-oxoguanine to H2O" 
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_2_3_1 [1.2.3.1] +methylmalonate +h +o2 +h2o
+    <-> ec_1_2_3_1 [1.2.3.1] +methylmalonate +h +o2 +h2o_water
     2_methyl_3_oxopropanoate
   }
 
@@ -90,13 +90,13 @@ pathway 7-8-dihydro-8-oxoguanine-to-h2o-32067 "7,8-dihydro-8-oxoguanine to H2O" 
 
   branch from urea side left {
     urea
-    <-> ec_6_3_4_6 [6.3.4.6] +urea_1_carboxylate +h +adp +phosphate +atp +h2o
+    <-> ec_6_3_4_6 [6.3.4.6] +urea_1_carboxylate +h +adp +phosphate +atp +h2o_water
     co2
   }
 
   branch from urea side right {
     urea
-    <-> ec_3_5_3_1 [3.5.3.1] +l_ornithinamide +h2o
+    <-> ec_3_5_3_1 [3.5.3.1] +l_ornithinamide +h2o_water
     l_arginine_amide
   }
 
@@ -114,48 +114,48 @@ pathway 7-8-dihydro-8-oxoguanine-to-h2o-32067 "7,8-dihydro-8-oxoguanine to H2O" 
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     glycochenodeoxycholate
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     taurochenodeoxycholate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp +atp +h2o_water
     sulfate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
+    <-> . +h +adp +atp +h2o_water
     5z_8z_11z_14z_eicosatetraenoate
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     hexadecanoate
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     9z_octadecenoate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2s_homocitric_acid +h
     cis_homoaconitate
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_1_6_2 [3.1.6.2] +h +sulfate +cholesterol
     cholesterol_sulfate
   }

@@ -9,15 +9,15 @@ pathway 1-2-dihexadecanoyl-sn-gly-to-1-2-dihexadecanoyl "1,2-dihexadecanoyl-sn-g
   spine at 0,0 {
     1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
     <-> . +h2o -pi
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i_chebi_83423
     <-> . +h2o -pi
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i_chebi_83436
     <-> . +atp -adp -hplus
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i_chebi_83423
   }
 
-  branch from 1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i side left {
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
+  branch from 1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i_chebi_83423 side left {
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i_chebi_83423
     <-> . +atp +adp +hplus
     1_2_dipalmitoyl_sn_glycero_3_phospho_1d_myo_inos
   }
@@ -25,6 +25,6 @@ pathway 1-2-dihexadecanoyl-sn-gly-to-1-2-dihexadecanoyl "1,2-dihexadecanoyl-sn-g
   branch from 1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i side right {
     1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
     <-> . +h2o +pi
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i_chebi_83422
   }
 }

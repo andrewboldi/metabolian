@@ -66,7 +66,7 @@ pathway dihydroneopterin-to-l-xylulose-1-phosphate-null "Dihydroneopterin… to 
 
   branch from h side left {
     h
-    <-> . +5_chlorocarbonyl_4_hydroxy_penta_2_4_dienate +chlorohydroquinone
+    <-> . +5_chlorocarbonyl_4_hydroxy_penta_2_4_dienate_mnxm1363476 +chlorohydroquinone
     o2
   }
 

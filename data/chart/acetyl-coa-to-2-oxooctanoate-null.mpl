@@ -13,11 +13,11 @@ pathway acetyl-coa-to-2-oxooctanoate-null "acetyl-CoA to 2-oxooctanoate" {
     <-> ec_1_1_99_31 [1.1.99.31] +fmnh2 +2_oxooctanoate +h -2_hydroxyoctanoate
     fmn
     <-> . +2_hydroxyoctanoate +o2 -h2o2
-    2_oxooctanoate
+    2_oxooctanoate_chebi_176689
   }
 
-  branch from 2_oxooctanoate side left {
-    2_oxooctanoate
+  branch from 2_oxooctanoate_chebi_176689 side left {
+    2_oxooctanoate_chebi_176689
     <-> . +fad +hplus +fadh2
     2r_hydroxyoctanoate
   }

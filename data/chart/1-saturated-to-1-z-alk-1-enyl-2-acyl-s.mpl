@@ -39,7 +39,7 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-a
   branch from ethanolaminium side right {
     ethanolaminium
     <-> . +1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho +serine
-    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
+    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho_chebi_78343
   }
 
   branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side left {

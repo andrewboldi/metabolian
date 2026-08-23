@@ -11,14 +11,14 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8 "(9R,13R)-1a,1b-dinor-10,1… to 
     <-> . +atp +coa -amp -ppi
     9s_13s_1a_1b_dinor_10_11_dihydro_12_oxo_15_phyt
     <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +h -3_oxo_opc8_coa
-    coa
+    coa_mnxm727276
     <-> ec_1_1_1_211 [1.1.1.211] +nadh +h +3_oxo_opc8_coa -nad
     3_hydroxy_opc8_coa
     <-> ec_4_2_1_17 [4.2.1.17] -h2o
     trans_2_enoyl_opc8_coa
     <-> ec_1_3_3_6 [1.3.3.6] +h2o2 -o2
     opc8_coa
-    <-> . +diphosphate +amp -atp -coa -1s_2s_opc_8
+    <-> . +diphosphate +amp_mnxm728294 -atp_mnxm3 -coa_mnxm727276 -1s_2s_opc_8
     h
   }
 
@@ -34,14 +34,14 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8 "(9R,13R)-1a,1b-dinor-10,1… to 
     c_gmp_ump
   }
 
-  branch from coa side left {
-    coa
+  branch from coa_mnxm727276 side left {
+    coa_mnxm727276
     <-> . +subaphyllin +h +e_feruloyl_coa
     putrescine
   }
 
-  branch from coa side right {
-    coa
+  branch from coa_mnxm727276 side right {
+    coa_mnxm727276
     <-> . +2_methylpropanoyl_coa +n_demethyl_desepoxymaytansinol
     n_demethyl_desepoxyansamitocin_p_3
   }
@@ -94,15 +94,15 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8 "(9R,13R)-1a,1b-dinor-10,1… to 
     nogalavinone
   }
 
-  branch from atp side left {
-    atp
-    <-> . +diphosphate +n_benzoyl_l_glutamate +h +amp +l_glutamate
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
+    <-> . +diphosphate +n_benzoyl_l_glutamate +h +amp_mnxm728294 +l_glutamate
     benzoate
   }
 
-  branch from atp side right {
-    atp
-    <-> . +diphosphate +n_4_hydroxybenzoyl_l_glutamate +h +amp +l_glutamate
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
+    <-> . +diphosphate +n_4_hydroxybenzoyl_l_glutamate +h +amp_mnxm728294 +l_glutamate
     4_hydroxybenzoate
   }
 
@@ -126,13 +126,13 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8 "(9R,13R)-1a,1b-dinor-10,1… to 
 
   branch from acetyl_coa side right {
     acetyl_coa
-    <-> . +thienamycin +coa
+    <-> . +thienamycin +coa_mnxm727276
     n_acetylthienamycin
   }
 
   branch from acetyl_coa side left {
     acetyl_coa
-    <-> . +tabtoxinine_lactam +coa
+    <-> . +tabtoxinine_lactam +coa_mnxm727276
     n1_acetyl_tabtoxinine_beta_lactam
   }
 
@@ -148,14 +148,14 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8 "(9R,13R)-1a,1b-dinor-10,1… to 
     lsm_36909
   }
 
-  branch from coa side right {
-    coa
+  branch from coa_mnxm727276 side right {
+    coa_mnxm727276
     <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +d_threo_isocitrate +h
     2_caffeoylisocitric_acid
   }
 
-  branch from coa side left {
-    coa
+  branch from coa_mnxm727276 side left {
+    coa_mnxm727276
     <-> ec_2_3_1_132 [2.3.1.132] +d_glucaro_1_5_lactone +h +e_sinapoyl_coa
     o_sinapoylglucarolactone
   }

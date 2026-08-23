@@ -10,9 +10,9 @@ pathway 7z-10z-13z-16z-docosate-to-h2o "(7Z,10Z,13Z,16Z)-docosate… to H2O" {
     7z_10z_13z_16z_docosatetraenoyl_coa
     <-> . +fe2 +o2 +hplus -iron -h2o
     4z_7z_10z_13z_16z_docosapentaenoyl_coa
-    <-> . +h2o -h -coa
+    <-> . +h2o_water -h -coa
     4z_7z_10z_13z_16z_docosapentaenoate
-    <-> . +h +adp +phosphate -4z_7z_10z_13z_16z_docosapentaenoate -h2o
+    <-> . +h +adp +phosphate -4z_7z_10z_13z_16z_docosapentaenoate -h2o_water
     atp
   }
 }

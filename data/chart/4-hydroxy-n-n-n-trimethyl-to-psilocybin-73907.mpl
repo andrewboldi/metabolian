@@ -99,6 +99,6 @@ pathway 4-hydroxy-n-n-n-trimethyl-to-psilocybin-73907 "4-hydroxy-N,N,N-trimethyl
   branch from phosphate side right {
     phosphate
     <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3 +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3_mnxm42523
   }
 }

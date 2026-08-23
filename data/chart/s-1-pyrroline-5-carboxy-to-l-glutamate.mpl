@@ -12,7 +12,7 @@ pathway s-1-pyrroline-5-carboxy-to-l-glutamate "(S)-1-pyrroline-5-carboxy… to 
     5_hydroxy_l_arginine
     <-> . -l_glutamic_5_semialdehyde
     guanidinium
-    <-> ec_1_2_1_88 [1.2.1.88] +l_glutamic_5_semialdehyde +nad +h2o -nadh -hplus
+    <-> ec_1_2_1_88 [1.2.1.88] +l_glutamic_5_semialdehyde +nad +h2o_chebi_15377 -nadh -hplus
     glutamate
   }
 }

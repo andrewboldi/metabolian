@@ -66,7 +66,7 @@ pathway l-alanine-to-2-propylpiperidine-null "L-alanine to 2-propylpiperidine" {
 
   branch from nadp side left {
     nadp
-    <-> . +cinchonine +h +nadph
+    <-> . +cinchonine_mnxm1371772 +h +nadph
     cinchoninone
   }
 

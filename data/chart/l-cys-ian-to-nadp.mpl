@@ -12,7 +12,7 @@ pathway l-cys-ian-to-nadp "L-Cys(IAN) to NADP" {
     r_dihydrocamalexate
     <-> . +fmnh2 +o2 -fmn -co2 -h2o
     camalexin
-    <-> . +co2 -h
+    <-> . +co2_mnxm13 -h
     indole_carboxyl_thiazole
     <-> . +h +nadph -nadp
     dihydrocamalexic_acid

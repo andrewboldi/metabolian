@@ -10,7 +10,7 @@ pathway shinorine-to-n-c-5-deoxy-d-glucos "shinorine to [N-(C-5-[deoxy-β-D-gluc
     shinorine
     <-> . +amp -l_seryl_amp
     mycosporine_glycine
-    <-> . +2_3_dihydroxybenzoyl_5_adenylate +l_seryl_amp -amp -hplus
+    <-> . +2_3_dihydroxybenzoyl_5_adenylate +l_seryl_amp -amp_chebi_456215 -hplus
     enterobactin
     <-> ec_2_4_1_369 [2.4.1.369] +udp_d_glucose -udp
     monoglucosyl_enterobactin

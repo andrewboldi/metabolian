@@ -18,17 +18,93 @@ pathway dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo "dTDP-β-L-evernosamine
     s_adenosyl_l_methionine
   }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +hemanthamine +h
+    11_hydroxyvittatine
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +haemanthamine +h
+    11_hydroxyvittatine_mnxm1371559
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_xylose +nadp
+    xylitol
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +2s_ethylmalonyl_coa +malonyl_coa +h +r_methylmalonyl_coa +nadp +coa +tylactone +h2o
+    co2
+  }
 
+  branch from dtdp_l_evernosamine side left {
+    dtdp_l_evernosamine
+    <-> ec_1_14_13_187 [1.14.13.187] +nadph_chebi_57783 +o2 +hplus +nadp_chebi_58349 +h2o_chebi_15377
+    dtdp_2_3_6_trideoxy_3_c_methyl_4_o_methyl_3_nitr
+  }
 
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +17_o_acetylajmaline +h +s_adenosyl_l_methionine
+    17_o_acetylnorajmaline
+  }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +17_o_acetylajmaline_mnxm1371714 +h +s_adenosyl_l_methionine
+    17_o_acetylnorajmaline_mnxm1371390
+  }
 
+  branch from h side right {
+    h
+    <-> . +5_dehydro_l_gluconate
+    d_tagaturonate
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_14_20_4 [1.14.20.4] +3_hydroxy_2_phenylchromenylium +h2o
+    4s_2_3_dehydroflavan_3_4_diol
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +equisetin +h
+    n_desmethylequisetin
+  }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_130 [2.1.1.130] +s_adenosyl_l_homocysteine +precorrin_3a +h
+    precorrin_2
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +8_8a_deoxyoleandolide +co2 +coa +h2o +h +nadph +r_methylmalonyl_coa
+    malonyl_coa
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +malonyl_coa +h +nadph +r_methylmalonyl_coa +co2 +coa +h2o
+    10_deoxymethynolide
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +malonyl_coa +2s_2_methylbutanoyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
+    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2a_aglycon
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +malonyl_coa +2s_2_methylbutanoyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
+    6_8a_seco_6_8a_deoxy_5_oxoavermectin_1a_aglycone
+  }
 }

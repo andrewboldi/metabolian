@@ -11,7 +11,7 @@ pathway propanoate-to-l-lysinium-null "propanoate to L-lysinium" {
     <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa -acetoacetate
     propanoyl_coa
     <-> . +acetoacetate +acetyl_coa -acetate
-    acetoacetyl_coa
+    acetoacetyl_coa_chebi_57286
     <-> . +lactate -acetoacetate
     s_lactoyl_coa
     <-> . +l_lysinium -coa -hplus
@@ -22,49 +22,49 @@ pathway propanoate-to-l-lysinium-null "propanoate to L-lysinium" {
 
   branch from propanoyl_coa side left {
     propanoyl_coa
-    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
+    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa_mnxm727276
     propionyl_cholesterol
   }
 
   branch from propanoyl_coa side right {
     propanoyl_coa
-    <-> ec_2_3_1_84 [2.3.1.84] +ethanol +coa
+    <-> ec_2_3_1_84 [2.3.1.84] +ethanol +coa_mnxm727276
     ethyl_propionate
   }
 
   branch from propanoate side left {
     propanoate
-    <-> . +2e_2_hydroxypenta_2_4_dienoate +h +h2o
+    <-> . +2e_2_hydroxypenta_2_4_dienoate +h +h2o_water
     2_hydroxy_6_oxo_octa_2_4_dienoate
   }
 
   branch from propanoate side right {
     propanoate
-    <-> . +2e_2_hydroxypenta_2_4_dienoate +h +h2o
-    2_hydroxy_6_oxo_octa_2_4_dienoate
+    <-> . +2e_2_hydroxypenta_2_4_dienoate +h +h2o_water
+    2_hydroxy_6_oxo_octa_2_4_dienoate_mnxm1364324
   }
 
   branch from acetoacetyl_coa side left {
     acetoacetyl_coa
-    <-> . +nadh +h +nad
+    <-> . +nadh +h +nad_mnxm8
     3r_3_hydroxybutanoyl_coa
   }
 
   branch from acetoacetyl_coa side right {
     acetoacetyl_coa
-    <-> ec_6_3_2_50 [6.3.2.50] +atp +l_isoleucine +tenuazonic_acid +h +coa +amp
+    <-> ec_6_3_2_50 [6.3.2.50] +atp +l_isoleucine +tenuazonic_acid +h +coa_mnxm727276 +amp
     diphosphate
   }
 
   branch from propanoyl_coa side left {
     propanoyl_coa
-    <-> ec_1_2_1_27 [1.2.1.27] +nadh +co2 +coa +nad
+    <-> ec_1_2_1_27 [1.2.1.27] +nadh +co2 +coa_mnxm727276 +nad_mnxm8
     2_methyl_3_oxopropanoate
   }
 
   branch from propanoyl_coa side right {
     propanoyl_coa
-    <-> ec_2_3_1_176 [2.3.1.176] +chenodeoxycholoyl_coa +coa
+    <-> ec_2_3_1_176 [2.3.1.176] +chenodeoxycholoyl_coa +coa_mnxm727276
     3alpha_7alpha_dihydroxy_24_oxo_5beta_cholestanoy
   }
 }

@@ -50,25 +50,25 @@ pathway 5-hydroxy-d-tryptophan-to-r-dyspropterin "5-hydroxy-D-tryptophan to (R)-
 
   branch from o2 side right {
     o2
-    <-> . +2_hexaprenyl_6_hydroxyphenol +nadp +h2o +h +nadph
+    <-> . +2_hexaprenyl_6_hydroxyphenol +nadp_mnxm5 +h2o +h +nadph_mnxm738702
     2_hexaprenylphenol
   }
 
   branch from o2 side left {
     o2
-    <-> . +2_octaprenyl_6_hydroxyphenol +nadp +h2o +h +nadph
+    <-> . +2_octaprenyl_6_hydroxyphenol +nadp_mnxm5 +h2o +h +nadph_mnxm738702
     2_octaprenylphenol
   }
 
   branch from l_tryptophan side right {
     l_tryptophan
-    <-> ec_1_14_14_156 [1.14.14.156] +indol_3_yl_acetaldehyde_oxime +co2 +nadp +h2o +o2 +nadph
+    <-> ec_1_14_14_156 [1.14.14.156] +indol_3_yl_acetaldehyde_oxime +co2 +nadp_mnxm5 +h2o +o2 +nadph_mnxm738702
     h
   }
 
   branch from l_tryptophan side left {
     l_tryptophan
-    <-> ec_1_14_13_125 [1.14.13.125] +e_indol_3_yl_acetaldehyde_oxime +co2 +nadp +h2o +h +o2
-    nadph
+    <-> ec_1_14_13_125 [1.14.13.125] +e_indol_3_yl_acetaldehyde_oxime +co2 +nadp_mnxm5 +h2o +h +o2
+    nadph_mnxm738702
   }
 }

@@ -50,7 +50,7 @@ pathway a-2-3-di-o-phytanyl-sn-gl-to-nad-74687 "a 2,3-di-O-phytanyl-sn-gl… to 
 
   branch from nadh side right {
     nadh
-    <-> . +4_chloro_crotonyl_coa +co2 +nad
+    <-> . +4_chloro_crotonyl_coa +co2_mnxm13 +nad
     chloroethylmalonyl_coa
   }
 

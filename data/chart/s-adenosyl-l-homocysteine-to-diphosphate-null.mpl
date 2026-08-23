@@ -12,7 +12,7 @@ pathway s-adenosyl-l-homocysteine-to-diphosphate-null "S-adenosyl-L-homocysteine
     s_adenosyl_l_methionine
     <-> ec_2_5_1_74 [2.5.1.74] +diphosphate +co2 +h +demethylmenaquinol -all_trans_polyprenyl_diphosphate
     1_4_dihydroxy_2_naphthoate
-    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_nonaprenyl_diphosphate +hplus -co2 -ppi
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_nonaprenyl_diphosphate +hplus -co2_chebi_16526 -ppi
     2_demethylmenaquinol_9
   }
 }

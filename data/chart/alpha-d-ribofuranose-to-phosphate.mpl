@@ -79,7 +79,7 @@ pathway alpha-d-ribofuranose-to-phosphate "alpha-D-ribofuranose… to phosphate"
   branch from h side right {
     h
     <-> ec_3_1_1_45 [3.1.1.45] +cis_4_carboxymethylenebut_2_en_4_olide +h2o
-    maleylacetate
+    maleylacetate_mnxm1363850
   }
 
   branch from atp side left {

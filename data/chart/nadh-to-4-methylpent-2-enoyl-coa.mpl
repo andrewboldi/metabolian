@@ -18,67 +18,67 @@ pathway nadh-to-4-methylpent-2-enoyl-coa "NADH to 4-methylpent-2-enoyl-CoA" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_fructopyranose +phosphate +d_fructopyranose +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_fructopyranose +phosphate +d_fructopyranose +h2o_water
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o_water
     beta_d_fructopyranose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_103 [1.14.13.103] +nadh +h +sophoraflavanone_b +o2 +h2o
+    <-> ec_1_14_13_103 [1.14.13.103] +nadh +h +sophoraflavanone_b +o2 +h2o_water
     leachianone_g
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_119 [1.14.13.119] +nadh +5_epi_aristolochene +h +o2 +h2o
+    <-> ec_1_14_13_119 [1.14.13.119] +nadh +5_epi_aristolochene +h +o2 +h2o_water
     capsidiol
   }
 
   branch from r_2_hydroxy_4_methylpentanoyl_coa side left {
     r_2_hydroxy_4_methylpentanoyl_coa
     <-> ec_4_2_1_157 [4.2.1.157] +isocaprenoyl_coa +h
-    h2o
+    h2o_water
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyacetophenone +o2 +nad +h2o
+    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyacetophenone +o2 +nad +h2o_water
     4_hydroxyphenylacetate
   }
 
   branch from nadh side left {
     nadh
-    <-> ec_1_14_13_91 [1.14.13.91] +h +10_deoxysarpagine +o2 +nad +h2o
+    <-> ec_1_14_13_91 [1.14.13.91] +h +10_deoxysarpagine +o2 +nad +h2o_water
     sarpagine
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o_water
     l_fructopyranose
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    l_fructopyranose
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o_water
+    l_fructopyranose_chebi_37729
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_92 [1.14.13.92] +nadh +h +phenylacetone +o2 +h2o
+    <-> ec_1_14_13_92 [1.14.13.92] +nadh +h +phenylacetone +o2 +h2o_water
     benzyl_acetate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_94 [1.14.13.94] +nadh +h +o2 +lithocholate +h2o
+    <-> ec_1_14_13_94 [1.14.13.94] +nadh +h +o2 +lithocholate +h2o_water
     6beta_hydroxylithocholate
   }
 }

@@ -17,11 +17,11 @@ pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… t
     <-> ec_6_3_5_13 [6.3.5.13] +glutamine +atp +h2o -glutamate -adp -pi -hplus
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
     <-> ec_2_3_2_16 [2.3.2.16] +3_glycyladenylyl_zwitterionic_group -amp_3_end_1 -hplus
-    undecaprenyldiphospho_n_acetyl_n_acetylglucosami
+    undecaprenyldiphospho_n_acetyl_n_acetylglucosami_chebi_62234
     <-> ec_2_3_2_17 [2.3.2.17] +3_glycyladenylyl_zwitterionic_group -amp_3_end_1 -hplus
-    undecaprenyldiphospho_n_acetyl_n_acetylglucosami
+    undecaprenyldiphospho_n_acetyl_n_acetylglucosami_chebi_62235
     <-> ec_2_3_2_18 [2.3.2.18] +3_glycyladenylyl_zwitterionic_group -amp_3_end_1 -hplus
-    undecaprenyldiphospho_n_acetyl_n_acetylglucosami
+    undecaprenyldiphospho_n_acetyl_n_acetylglucosami_chebi_62236
   }
 
   branch from ditrans_polycis_undecaprenyl_phosphate side left {
@@ -57,7 +57,7 @@ pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… t
   branch from udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly side right {
     udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly
     <-> . +h2o +d_alanine
-    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly_chebi_232760
   }
 
   branch from udpglcnac side left {

@@ -37,7 +37,7 @@ pathway triethanolamine-to-o-citryl-ethanolamine-null "triethanolamine to O-citr
   branch from ethanolamine side right {
     ethanolamine
     <-> ec_2_7_8_29 [2.7.8.29] +1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn +l_serine
-    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
+    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn_mnxm32639
   }
 
   branch from diphosphate side left {
@@ -55,7 +55,7 @@ pathway triethanolamine-to-o-citryl-ethanolamine-null "triethanolamine to O-citr
   branch from amp side left {
     amp
     <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +atp
-    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
+    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi_mnxm1101201
   }
 
   branch from amp side right {

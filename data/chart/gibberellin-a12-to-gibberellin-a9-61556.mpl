@@ -8,9 +8,9 @@ pathway gibberellin-a12-to-gibberellin-a9-61556 "gibberellin A12 to gibberellin 
 
   spine at 0,0 {
     gibberellin_a12
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     gibberellin_a15_2_diacid_form
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     gibberellin_a24
     <-> . +o2 +hplus -co2 -h2o
     gibberellin_a9

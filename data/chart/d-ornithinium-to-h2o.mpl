@@ -13,6 +13,6 @@ pathway d-ornithinium-to-h2o "D-ornithinium to H2O" {
     <-> ec_6_3_2_57 [6.3.2.57] +citrate +atp -amp -ppi -hplus
     staphyloferrin_a
     <-> . +h +adp +phosphate -staphyloferrin_a -h2o
-    atp
+    atp_mnxm3
   }
 }

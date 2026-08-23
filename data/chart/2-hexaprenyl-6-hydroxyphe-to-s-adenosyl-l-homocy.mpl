@@ -30,8 +30,8 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
 
   branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side left {
     all_trans_6_methoxy_2_hexaprenylhydroquinone
-    <-> ec_1_6_5_2 [1.6.5.2] +2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon +h +nadph
-    nadp
+    <-> ec_1_6_5_2 [1.6.5.2] +2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon +h +nadph_mnxm738702
+    nadp_mnxm5
   }
 
   branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side right {
@@ -42,7 +42,7 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
 
   branch from all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu side left {
     all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu
-    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
+    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph_mnxm738702 +nadp_mnxm5
     2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be
   }
 
@@ -54,7 +54,7 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
 
   branch from 2_hexaprenyl_6_hydroxyphenol side left {
     2_hexaprenyl_6_hydroxyphenol
-    <-> . +nadp +h2o +h +o2 +nadph
+    <-> . +nadp_mnxm5 +h2o_water +h +o2_mnxm735438 +nadph_mnxm738702
     2_hexaprenylphenol
   }
 

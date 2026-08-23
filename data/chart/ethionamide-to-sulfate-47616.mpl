@@ -10,9 +10,9 @@ pathway ethionamide-to-sulfate-47616 "ethionamide to sulfate" {
     ethionamide
     <-> . +nadph +o2 +hplus -nadp -h2o
     ethionamide_s_oxide
-    <-> . +h +o2 +nadph -2_ethylpyridin_4_yl_imino_methanesulfinate -h2o
-    nadp
-    <-> . +h +o2 +nadph +2_ethylpyridin_4_yl_imino_methanesulfinate -nadp -2_ethyl_4_amidopyridine -h2o
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 -2_ethylpyridin_4_yl_imino_methanesulfinate -h2o_water
+    nadp_mnxm5
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +2_ethylpyridin_4_yl_imino_methanesulfinate -nadp_mnxm5 -2_ethyl_4_amidopyridine -h2o_water
     sulfur_dioxide
     <-> ec_4_1_1_12 [4.1.1.12] +l_alanine -h
     3_sulfino_l_alanine
@@ -24,26 +24,26 @@ pathway ethionamide-to-sulfate-47616 "ethionamide to sulfate" {
     sulfate
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +nadph +xanthine +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2_mnxm735438 +nadph_mnxm738702 +xanthine +h2o_water
     formaldehyde
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_179 [1.14.13.179] +1_methyl_7h_xanthine +formaldehyde +h2o +h +o2 +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_14_13_179 [1.14.13.179] +1_methyl_7h_xanthine +formaldehyde +h2o_water +h +o2_mnxm735438 +nadph_mnxm738702
     theophylline
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_1_14_14_1 [1.14.14.1] +11h_14_15_eeta
     11_14_15_trihydroxy_5z_8z_12e_icosatrienoic_acid
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +bromobenzene_3_4_oxide
     bromobenzene_3_4_dihydrodiol
   }
@@ -51,7 +51,7 @@ pathway ethionamide-to-sulfate-47616 "ethionamide to sulfate" {
   branch from sulfur_dioxide side left {
     sulfur_dioxide
     <-> . +h +3_sulfinatopyruvate
-    pyruvate
+    pyruvate_mnxm23
   }
 
   branch from h side right {
@@ -62,7 +62,7 @@ pathway ethionamide-to-sulfate-47616 "ethionamide to sulfate" {
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +7_8_dihydro_7_hydroxy_8s_glutathionylbenzo_a_pyr +h2o +glutathione
+    <-> ec_2_5_1_18 [2.5.1.18] +7_8_dihydro_7_hydroxy_8s_glutathionylbenzo_a_pyr +h2o_water +glutathione
     benzo_a_pyrene_7_8_diol
   }
 
@@ -74,7 +74,7 @@ pathway ethionamide-to-sulfate-47616 "ethionamide to sulfate" {
 
   branch from glutamate side left {
     glutamate
-    <-> . +gamma_glutamyl_beta_aminopropiononitrile +co2 +h2o +h
+    <-> . +gamma_glutamyl_beta_aminopropiononitrile +co2 +h2o_water +h
     3_cyano_l_alanine
   }
 
@@ -86,54 +86,54 @@ pathway ethionamide-to-sulfate-47616 "ethionamide to sulfate" {
 
   branch from h side left {
     h
-    <-> ec_3_3_2_10 [3.3.2.10] +5_6_eet +h2o
+    <-> ec_3_3_2_10 [3.3.2.10] +5_6_eet +h2o_water
     5_6_dhet
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +3_hydroxy_2_naphthoate
     3_6_carboxymethylene_cyclohexa_2_4_dien_1_yliden
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> . +1_2_anthracenediol
     4_3_hydroxy_2_naphthyl_2_oxobut_3_enoic_acid
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_219 [1.1.1.219] +garbanzol +h +nadp
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_1_1_219 [1.1.1.219] +garbanzol +h +nadp_mnxm5
     5_deoxyleucopelargonidin
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_219 [1.1.1.219] +h +trans_fustin +nadp
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_1_1_219 [1.1.1.219] +h +trans_fustin +nadp_mnxm5
     fisetinidol_4beta_ol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_183 [1.1.1.183] +neral +h +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_1_1_183 [1.1.1.183] +neral +h +nadph_mnxm738702
     nerol
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_8 [1.14.13.8] +h +tamoxifen +o2 +nadph +h2o
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_13_8 [1.14.13.8] +h +tamoxifen +o2_mnxm735438 +nadph_mnxm738702 +h2o_water
     tamoxifen_n_oxide
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +bromobenzene_2_3_dihydrodiol
     bromobenzene_2_3_oxide
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> ec_3_3_2_9 [3.3.2.9] +benzo_a_pyrene_7_8_diol
     benzo_a_pyrene_7_8_oxide
   }
@@ -146,7 +146,7 @@ pathway ethionamide-to-sulfate-47616 "ethionamide to sulfate" {
 
   branch from l_alanine side left {
     l_alanine
-    <-> ec_2_6_1_40 [2.6.1.40] +s_2_methyl_3_oxopropanoate +pyruvate
+    <-> ec_2_6_1_40 [2.6.1.40] +s_2_methyl_3_oxopropanoate +pyruvate_mnxm23
     r_3_amino_2_methylpropanoate
   }
 
@@ -170,7 +170,7 @@ pathway ethionamide-to-sulfate-47616 "ethionamide to sulfate" {
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_3_2_2 [2.3.2.2] +leukotriene_c4 +h2o
+    <-> ec_2_3_2_2 [2.3.2.2] +leukotriene_c4 +h2o_water
     leukotriene_d4
   }
 }

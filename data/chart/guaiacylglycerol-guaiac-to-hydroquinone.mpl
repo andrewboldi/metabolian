@@ -19,11 +19,11 @@ pathway guaiacylglycerol-guaiac-to-hydroquinone "guaiacylglycerol-β-guaiac… t
     <-> ec_1_14_13_238 [1.14.13.238] +dimethylaminium +nadph +o2 +hplus -formaldehyde -nadp -h2o
     methylamine
     <-> ec_1_4_9_1 [1.4.9.1] +copper +h2o -formaldehyde -nh3 -hplus
-    copper
+    copper_chebi_49552
     <-> ec_1_16_3_4 [1.16.3.4] +o2 +hplus -h2o
     copper
     <-> ec_1_17_9_1 [1.17.9.1] +p_cresol +h2o -4_hydroxybenzaldehyde -hplus
-    copper
+    copper_chebi_49552
     <-> ec_1_2_1_96 [1.2.1.96] +4_hydroxybenzaldehyde +nadp +h2o -nadph -hplus
     4_hydroxybenzoate
     <-> ec_1_14_13_64 [1.14.13.64] +nadh +o2 +hplus -co2 -nad -h2o
@@ -38,14 +38,14 @@ pathway guaiacylglycerol-guaiac-to-hydroquinone "guaiacylglycerol-β-guaiac… t
 
   branch from 5_methyltetrahydrosarcinapterin side left {
     5_methyltetrahydrosarcinapterin
-    <-> . +acetyl_coa +5_6_7_8_tetrahydrosarcinapterin +coa
+    <-> . +acetyl_coa +5_6_7_8_tetrahydrosarcinapterin_mnxm1462 +coa
     co
   }
 
   branch from 5_methyltetrahydrosarcinapterin side right {
     5_methyltetrahydrosarcinapterin
-    <-> . +5_6_7_8_tetrahydrosarcinapterin +methanol
-    h2o
+    <-> . +5_6_7_8_tetrahydrosarcinapterin_mnxm1462 +methanol
+    h2o_water
   }
 
   branch from nh3 side left {
@@ -68,13 +68,13 @@ pathway guaiacylglycerol-guaiac-to-hydroquinone "guaiacylglycerol-β-guaiac… t
 
   branch from 5_methyltetrahydrosarcinapterin side right {
     5_methyltetrahydrosarcinapterin
-    <-> . +5_6_7_8_tetrahydrosarcinapterin +methyl_coenzyme_m +coenzyme_m
+    <-> . +5_6_7_8_tetrahydrosarcinapterin_mnxm1462 +methyl_coenzyme_m +coenzyme_m
     na
   }
 
   branch from 5_methyltetrahydrosarcinapterin side left {
     5_methyltetrahydrosarcinapterin
-    <-> . +acetyl_coa +5_6_7_8_tetrahydrosarcinapterin +h +coa
+    <-> . +acetyl_coa +5_6_7_8_tetrahydrosarcinapterin_mnxm1462 +h +coa
     carbon_monoxide
   }
 

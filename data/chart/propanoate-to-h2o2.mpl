@@ -143,7 +143,7 @@ pathway propanoate-to-h2o2 "propanoate to H2O2" {
   branch from h side left {
     h
     <-> . +h2o +pravastatin_acid
-    pravastatin_lactone
+    pravastatin_lactone_mnxm1101972
   }
 
   branch from h side right {

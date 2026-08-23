@@ -49,7 +49,7 @@ pathway 6-o-trans-methoxy-mycolyl-to-h2o "6-O-trans-methoxy-mycolyl… to H2O" {
   branch from udp side right {
     udp
     <-> . +apigeninidin_5_o_glucoside +h +udp_alpha_d_glucose
-    apigeninidin
+    apigeninidin_mnxm1368493
   }
 
   branch from udp side left {

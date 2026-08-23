@@ -13,6 +13,6 @@ pathway n4-d-glcnac-1-2-d-to-n4-neu5ac-2-3-d-ga-83959 "N4-{β-D-GlcNAc-(1→2)-�
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
     <-> . +udp_d_galactose -udp -hplus
-    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_chebi_234315
   }
 }

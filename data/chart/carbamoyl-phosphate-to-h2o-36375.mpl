@@ -12,7 +12,7 @@ pathway carbamoyl-phosphate-to-h2o-36375 "carbamoyl phosphate to H2O" {
     carbamoyl_adenylate
     <-> . +tobramycin -amp -hplus
     nebramycin_5
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -nebramycin_5 -h2o
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -nebramycin_5 -h2o_water
+    atp_mnxm3
   }
 }

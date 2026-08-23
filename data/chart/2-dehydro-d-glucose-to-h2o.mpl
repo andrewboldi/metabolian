@@ -102,7 +102,7 @@ pathway 2-dehydro-d-glucose-to-h2o "2-Dehydro-D-glucose to H2O" {
 
   branch from glucose side left {
     glucose
-    <-> . +ginsenoside_mx +h2o
+    <-> . +ginsenoside_mx_chebi_77490 +h2o
     ginsenoside_c_mx1
   }
 

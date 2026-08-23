@@ -12,7 +12,7 @@ pathway 17-hydroxy-5-androstan-to-h2o2-50820 "17β-hydroxy-5α-androstan-… to 
     testosterone
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     19_hydroxytestosterone
-    <-> . +o2 -h2o2
+    <-> . +o2_mnxm735438 -h2o2
     19_oxotestosterone
   }
 }

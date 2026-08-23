@@ -14,7 +14,7 @@ pathway 2-azaniumyl-4-5-dihydroxy-to-nad "2-azaniumyl-4,5-dihydroxy… to NAD" {
     s_2_3_dihydrodipicolinate
     <-> . +nad -nadh -hplus
     dipicolinate
-    <-> . +nadh +h +h2o -nad
+    <-> . +nadh_mnxm10 +h +h2o_water -nad_mnxm8
     2s_4s_4_hydroxy_2_3_4_5_tetrahydrodipicolinate
   }
 
@@ -26,7 +26,7 @@ pathway 2-azaniumyl-4-5-dihydroxy-to-nad "2-azaniumyl-4,5-dihydroxy… to NAD" {
 
   branch from dipicolinate side right {
     dipicolinate
-    <-> . +co2 +acetate +nh4 +h +h2o
+    <-> . +co2 +acetate +nh4 +h +h2o_water
     propanoate
   }
 
@@ -36,27 +36,27 @@ pathway 2-azaniumyl-4-5-dihydroxy-to-nad "2-azaniumyl-4,5-dihydroxy… to NAD" {
     s_2_3_4_5_tetrahydrodipicolinate
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_2_1_40 [1.2.1.40] +nadh +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +h2o
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_2_1_40 [1.2.1.40] +nadh_mnxm10 +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +h2o_water
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +21_hydroxyprogesterone
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh_mnxm10 +h +21_hydroxyprogesterone
     21_hydroxypregnenolone
   }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_1_1_62 [1.1.1.62] +h +16alpha_hydroxyestrone +nad
+  branch from nadh_mnxm10 side right {
+    nadh_mnxm10
+    <-> ec_1_1_1_62 [1.1.1.62] +h +16alpha_hydroxyestrone +nad_mnxm8
     16alpha_17beta_estriol
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_4_1_12 [1.4.1.12] +h +2_amino_5_oxohexanoate +nh4 +nad +h2o
+  branch from nadh_mnxm10 side left {
+    nadh_mnxm10
+    <-> ec_1_4_1_12 [1.4.1.12] +h +2_amino_5_oxohexanoate +nh4 +nad_mnxm8 +h2o_water
     2r_5s_2_5_diaminohexanoate
   }
 
@@ -72,27 +72,27 @@ pathway 2-azaniumyl-4-5-dihydroxy-to-nad "2-azaniumyl-4,5-dihydroxy… to NAD" {
     2_hydroxyestrone_4_s_glutathione
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
     2e_9z_12z_15z_18z_tetracosapentaenoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +2e_11z_14z_icosatrienoyl_coa
     3s_hydroxy_eicosa_cis_cis_11_14_dienoyl_coa
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_53 [1.1.1.53] +nadh +h +urocortisone
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> ec_1_1_1_53 [1.1.1.53] +nadh_mnxm10 +h +urocortisone
     cortolone
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_50 [1.1.1.50] +nadh +5beta_dihydroaldosterone +h
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh_mnxm10 +5beta_dihydroaldosterone +h
     3alpha_11beta_21_trihydroxy_20_oxo_5beta_pregnan
   }
 }

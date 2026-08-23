@@ -12,13 +12,13 @@ pathway met-enkephalin-arg-phe-to-l-phenylalanine-70675 "Met-enkephalin-Arg-Phe 
     arg_phe
     <-> . +met_enkephalin +h2o -tyr_gly_gly
     phe_met
-    <-> . +h2o -l_phenylalanine
+    <-> . +h2o_water -l_phenylalanine
     l_methionine
   }
 
   branch from met_enkephalin side left {
     met_enkephalin
-    <-> ec_3_4_17_12 [3.4.17.12] +l_arginine +h +h2o
+    <-> ec_3_4_17_12 [3.4.17.12] +l_arginine +h +h2o_water
     met_enkephalin_arg
   }
 
@@ -30,7 +30,7 @@ pathway met-enkephalin-arg-phe-to-l-phenylalanine-70675 "Met-enkephalin-Arg-Phe 
 
   branch from tyr_gly_gly side left {
     tyr_gly_gly
-    <-> . +l_tyrosine +h2o
+    <-> . +l_tyrosine +h2o_water
     glycylglycine
   }
 
@@ -42,7 +42,7 @@ pathway met-enkephalin-arg-phe-to-l-phenylalanine-70675 "Met-enkephalin-Arg-Phe 
 
   branch from l_methionine side left {
     l_methionine
-    <-> . +propanoate +dihydro_ferroheme_d1 +5_deoxyadenosine +h +s_adenosyl_l_methionine +h2o
+    <-> . +propanoate +dihydro_ferroheme_d1 +5_deoxyadenosine +h +s_adenosyl_l_methionine +h2o_water
     12_18_didecarboxysiroheme
   }
 
@@ -54,31 +54,31 @@ pathway met-enkephalin-arg-phe-to-l-phenylalanine-70675 "Met-enkephalin-Arg-Phe 
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o_water
     atp
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +5_hydroxyindol_3_yl_acetaldehyde +l_cysteine +h
     5_hydroxyindole_thiazolidine_carboxylate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +holyrine_b
     o_demethyl_n_demethyl_staurosporine
   }
 
   branch from l_methionine side right {
     l_methionine
-    <-> . +n_methyl_l_valyl_l_tryptophanol +l_homocysteine +nadp +h2o +h +nadph +l_tryptophan
+    <-> . +n_methyl_l_valyl_l_tryptophanol +l_homocysteine +nadp +h2o_water +h +nadph +l_tryptophan
     l_valine
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> . +h2o +l_phenylalanine
+    <-> . +h2o_water +l_phenylalanine
     met_phe
   }
 
@@ -90,7 +90,7 @@ pathway met-enkephalin-arg-phe-to-l-phenylalanine-70675 "Met-enkephalin-Arg-Phe 
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> . +h2o +l_valine
+    <-> . +h2o_water +l_valine
     val_phe
   }
 }

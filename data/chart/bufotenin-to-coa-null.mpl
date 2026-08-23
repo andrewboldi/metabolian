@@ -16,20 +16,111 @@ pathway bufotenin-to-coa-null "bufotenin to CoA" {
     caffeoylserotonin
   }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +diphosphate +cyclosporin_a +h +amp +l_alanine +l_leucine +2s_2_aminobutanoate +l_valine +sarcosine +e_2_butenyl_4_methyl_threonine +atp
+    d_alanine
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_122 [2.1.1.122] +s_adenosyl_l_homocysteine +s_cis_n_methyltetrahydrothalifendine +h
+    s_tetrahydrothalifendine
+  }
 
+  branch from serotonin side left {
+    serotonin
+    <-> . +4_coumaroyl_coa +h +coa
+    n6_cis_p_coumaroylserotonin
+  }
 
+  branch from serotonin side right {
+    serotonin
+    <-> . +h +n6_cis_p_coumaroylserotonin +coa
+    trans_4_coumaroyl_coa
+  }
 
+  branch from h side left {
+    h
+    <-> ec_2_3_1_46 [2.3.1.46] +succinyl_coa +d_homoserine +coa
+    o_succinyl_d_homoserine
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_3_1_46 [2.3.1.46] +succinyl_coa +3_aminopropan_1_ol +coa
+    4_3_aminopropoxy_4_oxobutanoic_acid
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a
+    alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a_mnxm1132658
+  }
 
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +beta_d_galf_1_3_alpha_d_gal_pp_und
+    2_o_acetyl_beta_d_galf_1_3_alpha_d_gal_pp_und
+  }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_122 [2.1.1.122] +s_cis_n_methylcorydalmine +s_adenosyl_l_methionine
+    s_corydalmine
+  }
 
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +6_2_4_dihydroxy_6_methylphenyl_4_methoxypyran_2 +s_adenosyl_l_methionine
+    6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_1_3_76 [3.1.3.76] +1_octadecyllysophosphatidic_cid +h2o +phosphate
+    batilol
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_1_3_76 [3.1.3.76] +2_2_bi_benzothiazole_6_ol +phosphate +h2o
+    attophos
+  }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +h +5_6_dehydrokawain
+    e_4_hydroxy_6_styryl_pyran_2_one
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +dihydro_5_6_dehydrokawain +h
+    4_hydroxy_6_penethyl_pyran_2_one
+  }
 
+  branch from trans_caffeoyl_coa side left {
+    trans_caffeoyl_coa
+    <-> . +2r_3s_piscidate +coa_chebi_57287
+    cimicifugate_d
+  }
 
+  branch from trans_caffeoyl_coa side right {
+    trans_caffeoyl_coa
+    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin +coa
+    pelargonidin_3_glucoside_5_caffeoylglucoside
+  }
 
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +alpha_d_galf_1_4_alpha_d_gal_1_3_beta_d_mannac_1
+    alpha_d_galf_1_4_alpha_d_gal_1_3_beta_d_mannac_1_mnxm1132518
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +alpha_d_gal_1_4_alpha_neu5ac_2_3_beta_d_galactos
+    alpha_d_gal_1_4_alpha_neu5_7_9ac3_2_3_beta_d_gal
+  }
 }

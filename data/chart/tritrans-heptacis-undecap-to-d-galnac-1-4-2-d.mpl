@@ -22,13 +22,13 @@ pathway tritrans-heptacis-undecap-to-d-galnac-1-4-2-d "tritrans,heptacis-undecap
 
   branch from n_n_diacetyl_d_bacillosaminyl_tritrans_heptacis side left {
     n_n_diacetyl_d_bacillosaminyl_tritrans_heptacis
-    <-> . +udp +h +alpha_d_galactosyl_1_3_n_n_diacetyl_alpha_d_baci
+    <-> . +udp_mnxm1102128 +h +alpha_d_galactosyl_1_3_n_n_diacetyl_alpha_d_baci
     udp_alpha_d_galactose
   }
 
   branch from n_n_diacetyl_d_bacillosaminyl_tritrans_heptacis side right {
     n_n_diacetyl_d_bacillosaminyl_tritrans_heptacis
-    <-> . +udp +h +alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill
+    <-> . +udp_mnxm1102128 +h +alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill
     udp_alpha_d_glucose
   }
 

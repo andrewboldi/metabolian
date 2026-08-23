@@ -18,13 +18,13 @@ pathway tetraphosphate-to-h2o-null "tetraphosphate to H2O" {
 
   branch from adenosylcobinamide side left {
     adenosylcobinamide
-    <-> ec_2_7_1_156 [2.7.1.156] +atp +adp +hplus
+    <-> ec_2_7_1_156 [2.7.1.156] +atp_chebi_30616 +adp_chebi_456216 +hplus
     adenosylcobinamide_phosphate
   }
 
   branch from adenosylcobinamide side right {
     adenosylcobinamide
-    <-> ec_3_5_1_90 [3.5.1.90] +h2o +adenosylcobyrate
+    <-> ec_3_5_1_90 [3.5.1.90] +h2o_chebi_15377 +adenosylcobyrate
     2r_2_hydroxypropylammonium
   }
 }

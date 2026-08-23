@@ -14,9 +14,9 @@ pathway 2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate "2'-deoxyguanosine… to 2
     2_deoxycytidine
     <-> ec_2_7_1_74 [2.7.1.74] +utp -udp -hplus
     2_deoxycytosine_5_monophosphate
-    <-> ec_3_5_4_12 [3.5.4.12] +h2o +hplus -nh3
+    <-> ec_3_5_4_12 [3.5.4.12] +h2o_chebi_15377 +hplus -nh3
     dump
-    <-> . +h2o -pi
+    <-> . +h2o_chebi_15377 -pi
     2_deoxyuridine
     <-> ec_2_4_2_2 [2.4.2.2] +pi -uracil
     2_deoxy_d_ribose_1_phosphate
@@ -24,7 +24,7 @@ pathway 2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate "2'-deoxyguanosine… to 2
     2_deoxy_d_ribose_1_5_bisphosphate
     <-> ec_1_1_1_95 [1.1.1.95] +pg3 +nad -nadh -hplus
     php
-    <-> . +h2o -pi
+    <-> . +h2o_chebi_15377 -pi
     3_hydroxypyruvate
     <-> ec_5_3_1_22 [5.3.1.22]
     2_hydroxy_3_oxopropanoate
@@ -62,7 +62,7 @@ pathway 2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate "2'-deoxyguanosine… to 2
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_2_3 [3.2.2.3] +uridine +uracil
+    <-> ec_3_2_2_3 [3.2.2.3] +uridine +uracil_mnxm1368457
     d_ribose
   }
 

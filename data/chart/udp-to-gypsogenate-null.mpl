@@ -12,7 +12,7 @@ pathway udp-to-gypsogenate-null "UDP to gypsogenate…" {
     udp_alpha_d_glucose
     <-> . +gypsogenin +fmnh2 +o2 -fmn -h2o -hplus
     gypsogenate
-    <-> . +udp_d_glucose -udp
+    <-> . +udp_d_glucose -udp_chebi_58223
     gypsogenate_28_d_glucoside
   }
 
@@ -30,13 +30,13 @@ pathway udp-to-gypsogenate-null "UDP to gypsogenate…" {
 
   branch from udp_d_glucose side left {
     udp_d_glucose
-    <-> . +16_hydroxygypsogenate +udp
+    <-> . +16_hydroxygypsogenate +udp_chebi_58223
     16_hydroxygypsogenate_28_d_glucoside
   }
 
   branch from udp_d_glucose side right {
     udp_d_glucose
-    <-> . +l_fucosyl_l_seryl +udp +hplus
+    <-> . +l_fucosyl_l_seryl +udp_chebi_58223 +hplus
     d_glucosyl_1_3_l_fucosyl_l_seryl
   }
 }

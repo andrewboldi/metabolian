@@ -13,7 +13,7 @@ pathway udp-4-amino-4-deoxy-l-a-to-n4-d-glcnac-1-2-d "UDP-4-amino-4-deoxy-β-L-a
     <-> . +nadh +hplus -nad
     udp_d_xylose
     <-> ec_2_4_2_38 [2.4.2.38] +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 -udp -hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6_chebi_137186
   }
 
   branch from udp_d_xylose side left {
@@ -43,7 +43,7 @@ pathway udp-4-amino-4-deoxy-l-a-to-n4-d-glcnac-1-2-d "UDP-4-amino-4-deoxy-β-L-a
   branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side left {
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
     <-> ec_2_4_1_214 [2.4.1.214] +gdp_l_fucose +gdp +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6_chebi_137182
   }
 
   branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side right {

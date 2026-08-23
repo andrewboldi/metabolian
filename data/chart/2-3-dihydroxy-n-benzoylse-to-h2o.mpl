@@ -18,7 +18,7 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
 
   branch from n_2_3_dihydroxybenzoyl_l_serine_trimer side left {
     n_2_3_dihydroxybenzoyl_l_serine_trimer
-    <-> ec_3_1_1_107 [3.1.1.107] +h2o
+    <-> ec_3_1_1_107 [3.1.1.107] +h2o_chebi_15377
     enterobactin
   }
 
@@ -36,8 +36,8 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
 
   branch from h side right {
     h
-    <-> . +2_4_6_trioxohexanoate +h2o +formate
-    acetylpyruvate
+    <-> . +2_4_6_trioxohexanoate_mnxm1368565 +h2o +formate
+    acetylpyruvate_mnxm1369322
   }
 
   branch from h side left {
@@ -54,7 +54,7 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
 
   branch from nadph side left {
     nadph
-    <-> . +cinchonine +nadp +h +cinchoninone
+    <-> . +cinchonine_mnxm1371772 +nadp +h +cinchoninone
     cinchonidine
   }
 
@@ -72,8 +72,8 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +6_3_hydroxy_2_3_5_7_trioxononanoyl_phenyl_3_5_di +h
-    12_deoxyaklanonic_acid
+    <-> . +6_3_hydroxy_2_3_5_7_trioxononanoyl_phenyl_3_5_di_mnxm1368582 +h
+    12_deoxyaklanonic_acid_mnxm1372265
   }
 
   branch from h2o side left {
@@ -84,13 +84,13 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
 
   branch from fe side right {
     fe
-    <-> . +fmnh2 +h +fe_enterobactin +enterobactin
+    <-> . +fmnh2 +h +fe_enterobactin +enterobactin_mnxm883
     fmn
   }
 
   branch from fe side left {
     fe
-    <-> . +riboflavin +enterobactin +h +fe_enterobactin
+    <-> . +riboflavin +enterobactin_mnxm883 +h +fe_enterobactin
     4a_5_dihydroriboflavin
   }
 
@@ -115,13 +115,13 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
   branch from h side left {
     h
     <-> . +2_3_dihydroxy_4_toluate +o2
-    2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate
+    2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate_mnxm1368571
   }
 
   branch from nadph side right {
     nadph
     <-> ec_1_3_1_105 [1.3.1.105] +nadp +h +2e_2_butylidene_4_hydroxy_5_methyl_3_2h_furanon
-    2_butyl_4_hydroxy_5_methyl_3_2h_furanone
+    2_butyl_4_hydroxy_5_methyl_3_2h_furanone_mnxm1368133
   }
 
   branch from nadph side left {
@@ -150,7 +150,7 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +7_8_dihydroneopterin_3_triphosphate +h2o +h
+    <-> ec_3_1_3_1 [3.1.3.1] +7_8_dihydroneopterin_3_triphosphate_mnxm1369356 +h2o +h
     dihydroneopterin
   }
 

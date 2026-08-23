@@ -38,7 +38,7 @@ pathway 1-palmitoyl-2-oleoyl-3-st-to-diphosphate-41111 "1-palmitoyl-2-oleoyl-3-s
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph_chebi_73007 +h2o +hplus
     2_oleoyl_sn_glycero_3_phosphoethanolamine
   }
 

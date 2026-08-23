@@ -75,7 +75,7 @@ pathway udp-2-acetamido-4-amino-2-to-h-null "UDP-2-acetamido-4-amino-2… to H" 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
     <-> ec_2_4_1_227 [2.4.1.227] +udp +glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l_lys_d +h
-    murac_oyl_l_ala_d_gamma_glu_l_lys_d_ala_d_ala_di
+    murac_oyl_l_ala_d_gamma_glu_l_lys_d_ala_d_ala_di_mnxm1371383
   }
 
   branch from dtdp side right {

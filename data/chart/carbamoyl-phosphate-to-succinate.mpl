@@ -72,8 +72,8 @@ pathway carbamoyl-phosphate-to-succinate "carbamoyl phosphate to succinate" {
 
   branch from succinate side right {
     succinate
-    <-> . +ambiguine_d +co2 +h2o +2_oxoglutarate +h +o2 +chloride
-    ambiguine_j
+    <-> . +ambiguine_d_mnxm1112438 +co2 +h2o +2_oxoglutarate +h +o2 +chloride
+    ambiguine_j_mnxm1112440
   }
 
   branch from carbamoyl_phosphate side left {

@@ -12,7 +12,7 @@ pathway 1-o-hexadecyl-2-8-carbox-to-di-sulfido-diiron-54 "1-O-hexadecyl-2-(8-car
     azelaate
     <-> . +lysophosphatidylcholine_o_16_0_0_0 +h2o -choline -hplus
     1_hexadecyl_sn_glycero_3_phosphate
-    <-> ec_1_14_15_7 [1.14.15.7] +choline +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_7 [1.14.15.7] +choline +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     betaine_aldehyde_hydrate
   }
 }

@@ -25,6 +25,6 @@ pathway acetyl-coa-to-20alphas-19-20-dihydro-null "acetyl-CoA to (20alphaS)-19,2
   branch from 16_epivellosimine side right {
     16_epivellosimine
     <-> .
-    vellosimine
+    vellosimine_mnxm1371242
   }
 }

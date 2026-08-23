@@ -11,8 +11,8 @@ pathway gal-1-3-galnac-1-4-to-d-galactosyl-1-3-n-ac-799 "β-Gal-(1→3)-β-GalNA
     <-> . +acetyl_coa -coa
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
     <-> .
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_231267
     <-> .
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_231269
   }
 }

@@ -111,7 +111,7 @@ pathway undecaprenyl-diphospho-to-coa "Undecaprenyl-diphospho… to CoA" {
   branch from acetate side left {
     acetate
     <-> ec_3_1_1_80 [3.1.1.80] +h2o +h +norajmaline
-    17_o_acetylnorajmaline
+    17_o_acetylnorajmaline_mnxm1371389
   }
 
   branch from acetate side right {
@@ -134,8 +134,8 @@ pathway undecaprenyl-diphospho-to-coa "Undecaprenyl-diphospho… to CoA" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_153 [2.3.1.153] +trans_caffeoyl_coa +pelargonin
-    pelargonidin_3_glucoside_5_caffeoylglucoside
+    <-> ec_2_3_1_153 [2.3.1.153] +trans_caffeoyl_coa +pelargonin_mnxm1371951
+    pelargonidin_3_glucoside_5_caffeoylglucoside_mnxm1371068
   }
 
   branch from coa side right {

@@ -10,7 +10,7 @@ pathway cholesterol-to-3-hydroxycholest-5-en-26-43836 "cholesterol to 3β-hydrox
     cholesterol
     <-> . +nadph +o2 +hplus -nadp -h2o
     hydroxycholesterol_27
-    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     3_hydroxycholest_5_en_26_al
     <-> . +nadph +o2 -nadp -h2o
     3_hydroxycholest_5_en_26_oate

@@ -10,9 +10,9 @@ pathway h-to-ammonium-null "H to ammonium" {
     h
     <-> ec_1_21_3_9 [1.21.3.9] +dichlorochromopyrrolate +nh4 +h2o -o2
     2_iminio_3_7_chloroindol_3_yl_propionate
-    <-> . +h2o2 -h2o
+    <-> . +h2o2 -h2o_chebi_15377
     3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio
     <-> . -nh3 -hplus
-    dichlorochromopyrrolate
+    dichlorochromopyrrolate_chebi_59198
   }
 }

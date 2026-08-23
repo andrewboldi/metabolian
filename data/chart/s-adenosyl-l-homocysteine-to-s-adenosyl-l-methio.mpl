@@ -48,8 +48,8 @@ pathway s-adenosyl-l-homocysteine-to-s-adenosyl-l-methio "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +h +ajmaline +s_adenosyl_l_methionine
-    norajmaline
+    <-> . +h +ajmaline_mnxm733616 +s_adenosyl_l_methionine
+    norajmaline_mnxm733800
   }
 
   branch from s_adenosyl_l_homocysteine side left {

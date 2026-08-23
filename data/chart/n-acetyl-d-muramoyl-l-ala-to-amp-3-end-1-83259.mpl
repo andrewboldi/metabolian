@@ -9,13 +9,13 @@ pathway n-acetyl-d-muramoyl-l-ala-to-amp-3-end-1-83259 "N-acetyl-D-muramoyl-L-al
   spine at 0,0 {
     n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso_2_6
     <-> ec_3_4_17_8 [3.4.17.8] +h2o -d_alanine
-    n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso_2_6
+    n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso_2_6_chebi_232790
     <-> ec_3_4_17_13 [3.4.17.13] +h2o -d_alanine
-    n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso_2_6
+    n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso_2_6_chebi_232791
     <-> ec_6_3_2_4 [6.3.2.4] +d_alanine +atp -adp -pi -hplus
     d_alanyl_d_alanine
     <-> ec_6_3_2_10 [6.3.2.10] +udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly +atp -adp -pi -hplus
-    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly_chebi_70758
     <-> ec_2_3_2_10 [2.3.2.10] +3_l_alanyl_adenylyl_zwitterionic_group -amp_3_end_1 -hplus
     udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_n6_l_al
   }

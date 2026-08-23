@@ -32,7 +32,7 @@ pathway alpha-d-galactose-to-d-galactopyranose-null "Alpha D galactose to D-gala
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
+    <-> . +h +phosphate +atp +h2o_water
     3_d_6_sulfoquinovosyl_sn_glycerol
   }
 
@@ -44,13 +44,13 @@ pathway alpha-d-galactose-to-d-galactopyranose-null "Alpha D galactose to D-gala
 
   branch from phosphate side left {
     phosphate
-    <-> . +2_deoxy_d_ribofuranose +h2o
+    <-> . +2_deoxy_d_ribofuranose +h2o_water
     2_deoxy_d_ribose_5_phosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_5_1_78 [2.5.1.78] +1_deoxy_l_glycero_tetrulose_4_phosphate +5_amino_6_d_ribitylamino_uracil +h +h2o
+    <-> ec_2_5_1_78 [2.5.1.78] +1_deoxy_l_glycero_tetrulose_4_phosphate +5_amino_6_d_ribitylamino_uracil +h +h2o_water
     6_7_dimethyl_8_1_d_ribityl_lumazine
   }
 
@@ -62,7 +62,7 @@ pathway alpha-d-galactose-to-d-galactopyranose-null "Alpha D galactose to D-gala
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_3_2_1_46 [3.2.1.46] +n_hexadecanoylsphing_4_enine +h2o
+    <-> ec_3_2_1_46 [3.2.1.46] +n_hexadecanoylsphing_4_enine +h2o_water
     n_hexadecanoyl_d_galactosylsphingosine
   }
 
@@ -104,19 +104,19 @@ pathway alpha-d-galactose-to-d-galactopyranose-null "Alpha D galactose to D-gala
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +aldehydo_d_glucose +h2o
+    <-> ec_3_1_3_1 [3.1.3.1] +aldehydo_d_glucose +h2o_water
     d_glucose_6_phosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_104 [3.1.3.104] +5_amino_6_5_phosphoribitylaminouracil +h2o
+    <-> ec_3_1_3_104 [3.1.3.104] +5_amino_6_5_phosphoribitylaminouracil +h2o_water
     4_1_d_ribitylamino_5_aminouracil
   }
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> . +beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1 +h2o
+    <-> . +beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1 +h2o_water
     d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_6_d
   }
 }

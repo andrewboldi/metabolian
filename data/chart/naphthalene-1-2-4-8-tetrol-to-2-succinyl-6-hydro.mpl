@@ -20,13 +20,13 @@ pathway naphthalene-1-2-4-8-tetrol-to-2-succinyl-6-hydro "naphthalene-1,2,4,8-te
 
   branch from naphthalene_1_2_4_8_tetrol side left {
     naphthalene_1_2_4_8_tetrol
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     juglone
   }
 
   branch from naphthalene_1_2_4_8_tetrol side right {
     naphthalene_1_2_4_8_tetrol
-    <-> . +o2 +h2o +hplus
+    <-> . +o2_chebi_15379 +h2o_chebi_15377 +hplus
     8_hydroxy_1_4_dioxo_1_4_dihydronaphthalen_2_olat
   }
 }

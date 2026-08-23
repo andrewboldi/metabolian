@@ -14,7 +14,7 @@ pathway pelargonidin-to-pelargonidin "pelargonidin to Pelargonidin…" {
     pelargonin
     <-> ec_2_3_1_215 [2.3.1.215] +trans_caffeoyl_coa -h -coa
     pelargonidin_3_o_6_o_e_caffeoyl_beta_d_glucoside
-    <-> . +udp +h -pelargonidin_3_o_6_caffeoyl_beta_d_glucoside
+    <-> . +udp_mnxm1102128 +h -pelargonidin_3_o_6_caffeoyl_beta_d_glucoside
     udp_alpha_d_glucose
   }
 }

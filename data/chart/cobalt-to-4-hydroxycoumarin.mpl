@@ -9,7 +9,7 @@ pathway cobalt-to-4-hydroxycoumarin "cobalt to 4-hydroxycoumarin" {
   spine at 0,0 {
     cobalt
     <-> ec_1_16_99_1 [1.16.99.1] +hydrogen_donor +atp +h2o -hydrogen_acceptor -adp -pi -hplus
-    cobalt
+    cobalt_chebi_85033
     <-> ec_2_1_1_382 [2.1.1.382] +o_methylsalicylate +hplus -salicylate
     methyl_co
     <-> ec_6_2_1_65 [6.2.1.65] +salicylate +atp +coa -amp -ppi

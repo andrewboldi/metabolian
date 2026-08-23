@@ -10,24 +10,85 @@ pathway 1d-myo-inositol-to-myo-inositol "1D-myo-inositol… to myo-inositol…" 
     1d_myo_inositol_3_4_bisphosphate
     <-> . +atp -h -adp
     1d_myo_inositol_3_4_6_trisphosphate
-    <-> . +atp -adp -hplus
+    <-> . +atp_chebi_30616 -adp_chebi_456216 -hplus
     myo_inositol_1_3_4_6_tetrakisphosphate
-    <-> ec_2_7_1_140 [2.7.1.140] +atp -adp -hplus
+    <-> ec_2_7_1_140 [2.7.1.140] +atp_chebi_30616 -adp_chebi_456216 -hplus
     myo_inositol_1_3_4_5_6_pentakisphosphate
     <-> . +1d_myo_inositol_1_3_4_trisphosphate -myo_inositol_1_3_4_6_tetrakisphosphate
     1d_myo_inositol_3_4_5_6_tetrakisphosphate
-    <-> ec_2_7_1_134 [2.7.1.134] +atp -adp -hplus
+    <-> ec_2_7_1_134 [2.7.1.134] +atp_chebi_30616 -adp_chebi_456216 -hplus
     myo_inositol_1_3_4_5_6_pentakisphosphate
   }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    1_3_beta_xylotetraose
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    alpha_1_5_l_arabinobiose
+  }
 
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
+    1_5_l_arabinotriose
+  }
 
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
+    xxxg_xyloglucan_oligosaccharide
+  }
 
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    melezitose
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    gxgg_xyloglucan_oligosaccharide
+  }
 
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    agarobiose
+  }
 
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    agarotriose
+  }
 
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
+    neoagarobiose
+  }
 
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
+    neoagarotetraose
+  }
 
+  branch from 1d_myo_inositol_1_3_4_trisphosphate side left {
+    1d_myo_inositol_1_3_4_trisphosphate
+    <-> . +h2o_chebi_15377 +pi
+    1d_myo_inositol_1_3_biphosphate
+  }
+
+  branch from 1d_myo_inositol_1_3_4_trisphosphate side right {
+    1d_myo_inositol_1_3_4_trisphosphate
+    <-> . +h2o_chebi_15377 +pi
+    1d_myo_inositol_3_4_biphosphate
+  }
 }

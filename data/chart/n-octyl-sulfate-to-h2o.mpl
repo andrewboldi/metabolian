@@ -12,7 +12,7 @@ pathway n-octyl-sulfate-to-h2o "n-octyl sulfate to H2O" {
     octanal
     <-> . +nadp +h2o -nadph -hplus
     octanoate
-    <-> ec_3_1_1_1 [3.1.1.1] +h +dioctanoylglycerol -h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +h +dioctanoylglycerol -h2o_water
     1_2_3_trioctanoylglycerol
   }
 
@@ -22,38 +22,38 @@ pathway n-octyl-sulfate-to-h2o "n-octyl sulfate to H2O" {
     octan_1_ol
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_3_5_2_2 [3.5.2.2] +hydantoin +h
     n_carbamoylglycine
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +e_p_coumaroylagmatine +h2o2
+  branch from h2o_water side left {
+    h2o_water
+    <-> . +e_p_coumaroylagmatine +h2o2_mnxm732620
     hordatine_a
   }
 
   branch from h side right {
     h
     <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +malonyl_coa +olivetol +coa
-    co2
+    co2_mnxm13
   }
 
   branch from h side left {
     h
-    <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +malonyl_coa +co2 +coa
+    <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +malonyl_coa +co2_mnxm13 +coa
     4_hydroxy_6_2_oxoheptyl_pyran_2_one
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +lesquerella_oil +h +dodecanoate
     triglyceride_estolide
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +nh4
     und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }

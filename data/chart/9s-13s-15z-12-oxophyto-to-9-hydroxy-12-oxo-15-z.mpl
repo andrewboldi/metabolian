@@ -49,12 +49,12 @@ pathway 9s-13s-15z-12-oxophyto-to-9-hydroxy-12-oxo-15-z "(9S,13S,15Z)-12-oxophyt
   branch from h2o side right {
     h2o
     <-> . +h +8_c_glucosyl_chrysin
-    1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
+    1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p_mnxm1364790
   }
 
   branch from nadph side left {
     nadph
-    <-> . +3_5_7_9_11_13_15_17_19_nonaoxohenicosanoate +h +o2 +co2 +nadp +h2o
+    <-> . +3_5_7_9_11_13_15_17_19_nonaoxohenicosanoate_mnxm1368576 +h +o2 +co2 +nadp +h2o
     homo_uwm6
   }
 
@@ -66,8 +66,8 @@ pathway 9s-13s-15z-12-oxophyto-to-9-hydroxy-12-oxo-15-z "(9S,13S,15Z)-12-oxophyt
 
   branch from nadp side left {
     nadp
-    <-> . +tirandamycin_f +h +o2 +nadph +h2o
-    tirandamycin_e
+    <-> . +tirandamycin_f_mnxm1368545 +h +o2 +nadph +h2o
+    tirandamycin_e_mnxm1368607
   }
 
   branch from nadp side right {

@@ -12,7 +12,7 @@ pathway stearoyl-coa-to-o-pantetheine-4-phospho "stearoyl-CoA to O-(pantetheine-
     octadecanoate
     <-> ec_6_2_1_57 [6.2.1.57] +holo-acp +atp -amp -ppi
     o_s_octadecanoylpantetheine_4_phosphoryl_serine
-    <-> ec_1_14_19_2 [1.14.19.2] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_19_2 [1.14.19.2] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     o_s_oleoylpantetheine_4_phosphoryl_serine_1
     <-> ec_3_1_2_14 [3.1.2.14] +h2o -holo-acp -hplus
     oleate

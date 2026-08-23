@@ -12,9 +12,9 @@ pathway ubiquinol-9-to-formaldehyde "ubiquinol-9 to formaldehyde" {
     ubiquinone_9
     <-> ec_1_14_13_179 [1.14.13.179] +nadh +h +caffeine +o2 -1_7_dimethylxanthine -nad -h2o
     formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +1_7_dimethylxanthine +nadph +o2 +hplus -formaldehyde -nadp -h2o
+    <-> ec_1_14_13_178 [1.14.13.178] +1_7_dimethylxanthine +nadph +o2_chebi_15379 +hplus -formaldehyde_chebi_16842 -nadp -h2o_chebi_15377
     7_methylxanthine
-    <-> ec_1_14_13_128 [1.14.13.128] +nadph +o2 +hplus -formaldehyde -nadp -h2o
+    <-> ec_1_14_13_128 [1.14.13.128] +nadph +o2_chebi_15379 +hplus -formaldehyde_chebi_16842 -nadp -h2o_chebi_15377
     xanthine
   }
 }

@@ -9,7 +9,7 @@ pathway 1-2-dipalmitoyl-sn-glycer-to-1-2-dihexadecanoyl "1,2-dipalmitoyl-sn-glyc
   spine at 0,0 {
     1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino
     <-> . +atp -adp -hplus
-    1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino
+    1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino_chebi_78994
     <-> . +h2o -pi
     1_2_dipalmitoyl_sn_glycero_3_phospho_1d_myo_inos
     <-> . +gtp -gdp -hplus

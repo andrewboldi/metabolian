@@ -22,19 +22,19 @@ pathway heptyl-sulfate-to-o-s-3r-hydroxynonanoyl-65732 "heptyl sulfate to O-[S-(
 
   branch from heptanal side left {
     heptanal
-    <-> ec_1_2_3_1 [1.2.3.1] +h +h2o2 +heptanoate +h2o
-    o2
+    <-> ec_1_2_3_1 [1.2.3.1] +h +h2o2 +heptanoate_mnxm7416 +h2o_water
+    o2_mnxm735438
   }
 
   branch from heptanal side right {
     heptanal
-    <-> ec_1_2_3_1 [1.2.3.1] +h +reduced_2_6_dichlorophenolindophenol +heptanoate +h2o
+    <-> ec_1_2_3_1 [1.2.3.1] +h +reduced_2_6_dichlorophenolindophenol +heptanoate_mnxm7416 +h2o_water
     2_6_dichloroindophenol
   }
 
   branch from heptanoyl_coa side left {
     heptanoyl_coa
-    <-> . +o2 +h2o2
+    <-> . +o2 +h2o2_chebi_16240
     2e_hept_2_enoyl_coa
   }
 
@@ -58,8 +58,8 @@ pathway heptyl-sulfate-to-o-s-3r-hydroxynonanoyl-65732 "heptyl sulfate to O-[S-(
 
   branch from heptanal side left {
     heptanal
-    <-> ec_1_2_1_3 [1.2.1.3] +h +nadph +heptanoate +h2o
-    nadp
+    <-> ec_1_2_1_3 [1.2.1.3] +h +nadph_mnxm738702 +heptanoate_mnxm7416 +h2o_water
+    nadp_mnxm5
   }
 
   branch from ppi side right {

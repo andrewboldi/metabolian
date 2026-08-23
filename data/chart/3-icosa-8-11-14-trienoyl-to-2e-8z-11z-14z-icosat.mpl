@@ -10,7 +10,7 @@ pathway 3-icosa-8-11-14-trienoyl-to-2e-8z-11z-14z-icosat "3-Icosa-8,11,14-trieno
     3_icosa_8_11_14_trienoyl_coa
     <-> . +nadp -h -nadph
     8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa
-    <-> . +nadph +hplus -nadp
+    <-> . +nadph_chebi_57783 +hplus -nadp_chebi_58349
     3r_8z_11z_14z_3_hydroxyicosatrienoyl_coa
     <-> . -h2o
     2e_8z_11z_14z_icosatetraenoyl_coa

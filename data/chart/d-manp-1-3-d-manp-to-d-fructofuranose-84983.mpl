@@ -24,7 +24,7 @@ pathway d-manp-1-3-d-manp-to-d-fructofuranose-84983 "α-D-Manp-(1→3)-[α-D-Man
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> . +h +adp +phosphate +h2o
+    <-> . +h +adp +phosphate +h2o_water
     atp
   }
 
@@ -36,19 +36,19 @@ pathway d-manp-1-3-d-manp-to-d-fructofuranose-84983 "α-D-Manp-(1→3)-[α-D-Man
 
   branch from d_fructofuranose side right {
     d_fructofuranose
-    <-> . +beta_d_galactose +h2o
+    <-> . +beta_d_galactose +h2o_water
     lactulose
   }
 
   branch from d_mannopyranose side left {
     d_mannopyranose
-    <-> ec_1_1_1_292 [1.1.1.292] +nadp +d_glucosone +nadph
+    <-> ec_1_1_1_292 [1.1.1.292] +nadp_mnxm5 +d_glucosone +nadph_mnxm738702
     h
   }
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> ec_3_2_1_137 [3.2.1.137] +s_cerevisiae_mannan_fragment +h2o
+    <-> ec_3_2_1_137 [3.2.1.137] +s_cerevisiae_mannan_fragment +h2o_water
     s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
   }
 
@@ -60,7 +60,7 @@ pathway d-manp-1-3-d-manp-to-d-fructofuranose-84983 "α-D-Manp-(1→3)-[α-D-Man
 
   branch from d_fructofuranose side right {
     d_fructofuranose
-    <-> ec_3_2_1_26 [3.2.1.26] +melibiose +h2o
+    <-> ec_3_2_1_26 [3.2.1.26] +melibiose +h2o_water
     raffinose
   }
 }

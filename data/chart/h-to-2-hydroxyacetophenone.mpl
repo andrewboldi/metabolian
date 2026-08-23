@@ -150,7 +150,7 @@ pathway h-to-2-hydroxyacetophenone "H to 2-hydroxyacetophenone" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_2 [1.3.1.2] +thymine +h +nadph
+    <-> ec_1_3_1_2 [1.3.1.2] +thymine_mnxm1369303 +h +nadph
     5_6_dihydrothymine
   }
 

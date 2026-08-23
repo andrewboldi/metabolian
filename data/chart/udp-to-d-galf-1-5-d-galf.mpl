@@ -8,19 +8,19 @@ pathway udp-to-d-galf-1-5-d-galf "UDP to [β-D-Galf-(1→5)-β-D-Galf-…" {
 
   spine at 0,0 {
     udp
-    <-> ec_2_4_1_197 [2.4.1.197] +o_mannopyranosyl_alpha_1_3_o_mannopyranosyl_alph +h -o_mannopyranosyl_alpha_1_3_o_mannopyranosyl_alph
+    <-> ec_2_4_1_197 [2.4.1.197] +o_mannopyranosyl_alpha_1_3_o_mannopyranosyl_alph +h -o_mannopyranosyl_alpha_1_3_o_mannopyranosyl_alph_mnxm20035
     udp_n_acetyl_alpha_d_glucosamine
     <-> ec_2_7_8_15 [2.7.8.15] +dolichyl_phosphate -n_acetyl_d_glucosaminyldiphosphodolichol
     ump
     <-> ec_2_7_8_13 [2.7.8.13] +dec_pp_murnac_l_ala_gamma_d_glu_meso_dap_d_ala_d -udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
     trans_polycis_decaprenyl_phosphate
-    <-> ec_2_7_8_35 [2.7.8.35] +udpglcnac -ump
+    <-> ec_2_7_8_35 [2.7.8.35] +udpglcnac -ump_chebi_57865
     n_acetyl_d_glucosaminyl_1_diphospho_trans_polyci
     <-> ec_2_4_1_289 [2.4.1.289] +dtdp_6_deoxy_l_mannose -dtdp -hplus
     l_rhap_1_3_d_glcpnac_1_diphospho_trans_octacis
-    <-> ec_2_4_1_287 [2.4.1.287] +udp_d_galactofuranose -udp -hplus
+    <-> ec_2_4_1_287 [2.4.1.287] +udp_d_galactofuranose -udp_chebi_58223 -hplus
     d_galf_1_5_d_galf_1_4_l_rhap_1_3_d_glcpnac_1_di
-    <-> ec_2_4_1_288 [2.4.1.288] +udp_d_galactofuranose -udp -hplus
+    <-> ec_2_4_1_288 [2.4.1.288] +udp_d_galactofuranose -udp_chebi_58223 -hplus
     d_galf_1_5_d_galf_1_6_14_d_galf_1_5_d_galf_1_4
   }
 
@@ -86,14 +86,14 @@ pathway udp-to-d-galf-1-5-d-galf "UDP to [β-D-Galf-(1→5)-β-D-Galf-…" {
 
   branch from udpglcnac side left {
     udpglcnac
-    <-> . +o3_n_acetyl_d_glucosaminyl_1_2_d_mannosyl_l_seri +udp +hplus
+    <-> . +o3_n_acetyl_d_glucosaminyl_1_2_d_mannosyl_l_seri +udp_chebi_58223 +hplus
     o3_n_acetyl_d_glucosaminyl_1_2_n_acetyl_d_glucos
   }
 
   branch from udpglcnac side right {
     udpglcnac
-    <-> . +o3_n_acetyl_d_glucosaminyl_1_2_d_mannosyl_l_thre +udp +hplus
-    o3_n_acetyl_d_glucosaminyl_1_2_n_acetyl_d_glucos
+    <-> . +o3_n_acetyl_d_glucosaminyl_1_2_d_mannosyl_l_thre +udp_chebi_58223 +hplus
+    o3_n_acetyl_d_glucosaminyl_1_2_n_acetyl_d_glucos_chebi_140087
   }
 
   branch from udp_d_galactofuranose side left {

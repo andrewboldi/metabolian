@@ -38,14 +38,14 @@ pathway alaninium-amide-to-d-pantetheine-4-phosphate-26 "β-alaninium amide to D
 
   branch from r_4_phosphonatopantothenate side left {
     r_4_phosphonatopantothenate
-    <-> . +cysteamine +co2 +n_r_4_phosphopantothenoyl_l_cysteine +h2o
+    <-> . +cysteamine +co2_mnxm13 +n_r_4_phosphopantothenoyl_l_cysteine +h2o_water
     h
   }
 
   branch from r_4_phosphonatopantothenate side right {
     r_4_phosphonatopantothenate
     <-> ec_6_3_2_5 [6.3.2.5] +cdp +h +n_r_4_phosphopantothenoyl_l_cysteine +phosphate +l_cysteine
-    ctp
+    ctp_mnxm1103718
   }
 
   branch from cytidine_5_monophosphate side left {
@@ -92,7 +92,7 @@ pathway alaninium-amide-to-d-pantetheine-4-phosphate-26 "β-alaninium amide to D
 
   branch from r_4_phosphonatopantothenate side right {
     r_4_phosphonatopantothenate
-    <-> . +ctp +h +r_4_phosphopantothenoyl_cytidylate
+    <-> . +ctp_mnxm1103718 +h +r_4_phosphopantothenoyl_cytidylate
     diphosphate
   }
 
@@ -104,7 +104,7 @@ pathway alaninium-amide-to-d-pantetheine-4-phosphate-26 "β-alaninium amide to D
 
   branch from cysteine side right {
     cysteine
-    <-> . +alanine
+    <-> . +alanine_chebi_57972
     3_disulfanyl_l_alanine
   }
 

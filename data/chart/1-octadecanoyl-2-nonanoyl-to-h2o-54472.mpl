@@ -14,9 +14,9 @@ pathway 1-octadecanoyl-2-nonanoyl-to-h2o-54472 "1-octadecanoyl-2-nonanoyl… to 
     nonanoyl_coa
     <-> . +o2 -h2o2
     trans_2_nonenoyl_coa
-    <-> ec_4_2_1_119 [4.2.1.119] +h2o
+    <-> ec_4_2_1_119 [4.2.1.119] +h2o_water
     3r_hydroxynonanoyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 -coa -o2 -nad -h2o
+    <-> . +nadh +acetyl_coa +h +h2o2_mnxm732620 -coa_mnxm727276 -o2_mnxm735438 -nad -h2o_water
     3r_hydroxy_undecanoyl_coa
   }
 

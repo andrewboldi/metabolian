@@ -14,31 +14,157 @@ pathway co2-to-arachidonate "CO2 to arachidonate" {
     1_stearoyl_sn_glycero_3_phosphate
     <-> . +arachidonoyl_coa -coa
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate
-    <-> . +h2o -arachidonate -hplus
+    <-> . +h2o_chebi_15377 -arachidonate -hplus
     1_stearoyl_sn_glycero_3_phosphate
   }
 
+  branch from h side left {
+    h
+    <-> . +8z_11z_14z_eicosatrienoyl_coa +fad +2e_8z_11z_14z_icosatetraenoyl_coa
+    fadh2
+  }
 
+  branch from h side right {
+    h
+    <-> . +4_8_dimethylnonanoyl_coa +fad +fadh2
+    4_r_8_dimethyl_trans_2_nonenoyl_coa
+  }
 
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> ec_2_7_2_18 [2.7.2.18] +atp +stearoyl_phosphate
+    adp
+  }
 
+  branch from octadecanoate side right {
+    octadecanoate
+    <-> ec_2_3_1_41 [2.3.1.41] +acetyl_coa +malonyl_coa +h +nadph +co2 +coa_mnxm727276 +h2o
+    nadp
+  }
 
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_3_3_8 [1.3.3.8] +s_cheilanthifoline +h +o2
+    dehydrocheilanthifoline
+  }
 
+  branch from h2o2 side right {
+    h2o2
+    <-> . +rifamycin_sv +h +o2
+    rifamycin_s
+  }
 
+  branch from 1_stearoyl_sn_glycero_3_phosphate side left {
+    1_stearoyl_sn_glycero_3_phosphate
+    <-> ec_2_3_1_51 [2.3.1.51] +octadecanoyl_coa +1_2_dioctadecanoyl_sn_glycerol_3_phosphate
+    coa_mnxm727276
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +h +cholesterol +5z_8z_11z_14z_17z_eicosapentaenoate
+    cholesteryl_5z_8z_11z_14z_17z_eicosapentaenoate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +h +cholesterol +7z_10z_13z_16z_19z_docosapentaenoate
+    cholesteryl_7z_10z_13z_16z_19z_docosapentaenoate
+  }
 
+  branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate side right {
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate
+    <-> . +atp_chebi_30616 +adp_chebi_456216 +hplus
+    1_stearoyl_2_arachidonoyl_sn_glycerol
+  }
 
+  branch from arachidonate side left {
+    arachidonate
+    <-> . +udp_d_glucuronate +udp
+    o_arachidonyl_d_glucuronate
+  }
 
+  branch from co2 side right {
+    co2
+    <-> ec_1_1_1_417 [1.1.1.417] +h +nadph +4alpha_methyl_3_oxosteroid +nadp
+    3beta_hydroxy_4alpha_methylsteroid_4beta_carboxy
+  }
 
+  branch from co2 side left {
+    co2
+    <-> ec_1_1_1_170 [1.1.1.170] +h +3_oxosteroid +nadph +nadp
+    3beta_hydroxysteroid_4alpha_carboxylate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_4z_7z_10z_13z_16z_19z_docosahexaenoa +h +cholesterol
+    4z_7z_10z_13z_16z_19z_docosahexaenoate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +8z_11z_14z_eicosatrienoate +h +cholesterol
+    cholesteryl_all_cis_icosa_8_11_14_trienoate
+  }
 
+  branch from h side right {
+    h
+    <-> . +7z_10z_13z_16z_docosatetraenoate +cholesterol +h2o
+    ce_22_4_7z_10z_13z_16z
+  }
 
+  branch from h side left {
+    h
+    <-> . +11z_14z_eicosadienoate +cholesterol +h2o
+    cholest_5_en_3beta_yl_11z_14z_eicosadienoate
+  }
 
+  branch from octadecanoate side right {
+    octadecanoate
+    <-> ec_6_2_1_3 [6.2.1.3] +octadecanoyl_coa +diphosphate +amp +coa_mnxm727276
+    atp
+  }
 
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> . +malonyl_coa +h +nadph +co2 +nadp +coa_mnxm727276 +h2o
+    eicosanoate
+  }
 
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_2_3_1 [1.2.3.1] +phenanthridone +phenanthridine +h2o
+    o2
+  }
 
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_17_3_2 [1.17.3.2] +penciclovir +o2 +h2o
+    6_deoxypenciclovir
+  }
 
+  branch from sn_glycerol_3_phosphate side right {
+    sn_glycerol_3_phosphate
+    <-> .
+    glycerol_2_phosphate
+  }
 
+  branch from sn_glycerol_3_phosphate side left {
+    sn_glycerol_3_phosphate
+    <-> ec_2_7_8_5 [2.7.8.5] +cmp +1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly +h
+    cdp_dipalmitoyl_sn_glycerol
+  }
 
+  branch from arachidonoyl_coa side right {
+    arachidonoyl_coa
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +coa
+    1_z_alk_1_enyl_2_arachidonoyl_sn_glycero_3_phosp
+  }
+
+  branch from arachidonoyl_coa side left {
+    arachidonoyl_coa
+    <-> . +1_o_octadecyl_sn_glycero_3_phosphocholine +coa
+    1_o_octadecyl_2_arachidonoyl_sn_glycero_3_phosph
+  }
 }

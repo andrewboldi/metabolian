@@ -56,7 +56,7 @@ pathway 5-formimidoyltetrahydrofo-to-methyl-com-24288 "5-formimidoyltetrahydrofo
 
   branch from carbon_monoxide side left {
     carbon_monoxide
-    <-> ec_1_14_15_20 [1.14.15.20] +ferroheme_b +di_sulfido_diiron +o2 +hplus +fe2 +di_sulfido_diiron +h2o
+    <-> ec_1_14_15_20 [1.14.15.20] +ferroheme_b +di_sulfido_diiron +o2 +hplus +fe2 +di_sulfido_diiron_chebi_33737 +h2o
     biliverdin
   }
 }

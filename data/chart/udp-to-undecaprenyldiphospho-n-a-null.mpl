@@ -12,7 +12,7 @@ pathway udp-to-undecaprenyldiphospho-n-a-null "UDP to undecaprenyldiphospho-N-aâ
     udp_alpha_d_glucose
     <-> ec_2_7_8_13 [2.7.8.13] +udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_meso_2 +ditrans_polycis_undecaprenyl_phosphate -ump
     undecaprenyldiphospho_n_acetylmuramoyl_l_alanyl
-    <-> ec_2_4_1_227 [2.4.1.227] +udpglcnac -udp -hplus
+    <-> ec_2_4_1_227 [2.4.1.227] +udpglcnac -udp_chebi_58223 -hplus
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
   }
 
@@ -43,7 +43,7 @@ pathway udp-to-undecaprenyldiphospho-n-a-null "UDP to undecaprenyldiphospho-N-aâ
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
     <-> . +udp +apigeninidin_5_o_glucoside +h
-    apigeninidin
+    apigeninidin_mnxm1368493
   }
 
   branch from udp_alpha_d_glucose side right {
@@ -54,13 +54,13 @@ pathway udp-to-undecaprenyldiphospho-n-a-null "UDP to undecaprenyldiphospho-N-aâ
 
   branch from udpglcnac side left {
     udpglcnac
-    <-> ec_2_4_1_102 [2.4.1.102] +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +udp +hplus
+    <-> ec_2_4_1_102 [2.4.1.102] +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +udp_chebi_58223 +hplus
     o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6
   }
 
   branch from udpglcnac side right {
     udpglcnac
-    <-> ec_2_4_1_146 [2.4.1.146] +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6 +udp +hplus
+    <-> ec_2_4_1_146 [2.4.1.146] +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6_chebi_139605 +udp_chebi_58223 +hplus
     o3_d_glcnac_1_3_d_gal_1_3_d_glcnac_1_6_d_galnac
   }
 }

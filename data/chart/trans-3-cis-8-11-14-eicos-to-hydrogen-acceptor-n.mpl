@@ -18,7 +18,7 @@ pathway trans-3-cis-8-11-14-eicos-to-hydrogen-acceptor-n "Trans-3-Cis-8,11,14-Ei
 
   branch from 2e_8z_11z_14z_icosatetraenoyl_coa side left {
     2e_8z_11z_14z_icosatetraenoyl_coa
-    <-> . +3_icosa_8_11_14_trienoyl_coa +h2o
+    <-> . +3_icosa_8_11_14_trienoyl_coa +h2o_water
     h
   }
 

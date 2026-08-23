@@ -12,7 +12,7 @@ pathway geranylgeranyl-diphosphate-to-h2o "geranylgeranyl diphosphate to H2O" {
     5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate
     <-> . +h2o -ppi
     13e_labda_7_13_dien_15_ol
-    <-> ec_3_1_7_10 [3.1.7.10] +diphosphate -h2o
+    <-> ec_3_1_7_10 [3.1.7.10] +diphosphate -h2o_water
     2e_6e_10e_geranylgeranyl_diphosphate
   }
 }

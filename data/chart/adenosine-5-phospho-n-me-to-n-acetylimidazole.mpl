@@ -18,20 +18,20 @@ pathway adenosine-5-phospho-n-me-to-n-acetylimidazole "Adenosine-5'-phospho-N-me
 
   branch from h side left {
     h
-    <-> ec_2_3_1_51 [2.3.1.51] +pa_14_0_16_1_9z +coa +1_tetradecanoyl_sn_glycerol_3_phosphate
+    <-> ec_2_3_1_51 [2.3.1.51] +pa_14_0_16_1_9z +coa_mnxm727276 +1_tetradecanoyl_sn_glycerol_3_phosphate
     9z_hexadecenoyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_230 [2.3.1.230] +octanoyl_coa +2_aminobenzoylacetate +co2 +coa +h2o
+    <-> ec_2_3_1_230 [2.3.1.230] +octanoyl_coa +2_aminobenzoylacetate +co2 +coa_mnxm727276 +h2o
     2_heptyl_4_quinolone
   }
 
   branch from amp side left {
     amp
-    <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +h +coa
-    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
+    <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +h +coa_mnxm727276
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19_mnxm1132437
   }
 
   branch from amp side right {

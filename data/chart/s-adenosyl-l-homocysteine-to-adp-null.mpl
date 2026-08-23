@@ -13,14 +13,14 @@ pathway s-adenosyl-l-homocysteine-to-adp-null "S-adenosyl-L-homocysteine to ADP"
     <-> ec_2_1_1_335 [2.1.1.335] +4_amino_4_de_dimethylamino_anhydrotetracycline +sam -sah -hplus
     desmethylanhydrotetracycline
     <-> ec_2_1_1_335 [2.1.1.335] +sam -sah -hplus
-    anhydrotetracycline
+    anhydrotetracycline_chebi_58032
     <-> ec_1_14_13_38 [1.14.13.38] +nadph +o2 +hplus -nadp -h2o
     12_dehydrotetracycline
     <-> ec_1_14_13_234 [1.14.13.234] +nadph +o2 +hplus -nadp -h2o
     5a_11a_dehydrooxytetracycline
     <-> ec_1_3_98_4 [1.3.98.4] +1_5_dihydrocoenzyme_f420 -oxytetracycline
     coenzyme_gamma_f420_2
-    <-> ec_1_8_98_3 [1.8.98.3] +hydrogen_sulfide +h2o -h -sulfite
+    <-> ec_1_8_98_3 [1.8.98.3] +hydrogen_sulfide +h2o_water -h -sulfite
     1_5_dihydrocoenzyme_f420
     <-> ec_1_1_98_2 [1.1.98.2] +6_phospho_d_glucono_1_5_lactone -coenzyme_gamma_f420_2
     d_glucose_6_phosphate
@@ -48,8 +48,8 @@ pathway s-adenosyl-l-homocysteine-to-adp-null "S-adenosyl-L-homocysteine to ADP"
 
   branch from coenzyme_gamma_f420_2 side right {
     coenzyme_gamma_f420_2
-    <-> ec_1_5_1_40 [1.5.1.40] +h +nadph +1_5_dihydrocoenzyme_f420
-    nadp
+    <-> ec_1_5_1_40 [1.5.1.40] +h +nadph_mnxm738702 +1_5_dihydrocoenzyme_f420
+    nadp_mnxm5
   }
 
   branch from oxytetracycline side left {
@@ -60,8 +60,8 @@ pathway s-adenosyl-l-homocysteine-to-adp-null "S-adenosyl-L-homocysteine to ADP"
 
   branch from 1_5_dihydrocoenzyme_f420 side right {
     1_5_dihydrocoenzyme_f420
-    <-> ec_1_5_3_22 [1.5.3.22] +coenzyme_gamma_f420_2 +h2o
-    o2
+    <-> ec_1_5_3_22 [1.5.3.22] +coenzyme_gamma_f420_2 +h2o_water
+    o2_mnxm735438
   }
 
   branch from 1_5_dihydrocoenzyme_f420 side left {
@@ -72,25 +72,25 @@ pathway s-adenosyl-l-homocysteine-to-adp-null "S-adenosyl-L-homocysteine to ADP"
 
   branch from h side right {
     h
-    <-> ec_3_6_3_6 [3.6.3.6] +adp +atp +h2o
+    <-> ec_3_6_3_6 [3.6.3.6] +adp +atp +h2o_water
     phosphate
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_1_5 [1.2.1.5] +6z_octadecenoate +nadph +nadp +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +6z_octadecenoate +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     cis_9_octadecenal
   }
 
   branch from sulfite side right {
     sulfite
-    <-> ec_1_14_14_34 [1.14.14.34] +fmnh2 +methanesulfonate +h +o2 +formaldehyde +h2o
+    <-> ec_1_14_14_34 [1.14.14.34] +fmnh2 +methanesulfonate +h +o2_mnxm735438 +formaldehyde +h2o_water
     fmn
   }
 
   branch from sulfite side left {
     sulfite
-    <-> . +fmnh2 +sulfoacetate +h +o2 +fmn +h2o
+    <-> . +fmnh2 +sulfoacetate +h +o2_mnxm735438 +fmn +h2o_water
     glyoxylate
   }
 
@@ -102,7 +102,7 @@ pathway s-adenosyl-l-homocysteine-to-adp-null "S-adenosyl-L-homocysteine to ADP"
 
   branch from d_glucose_6_phosphate side left {
     d_glucose_6_phosphate
-    <-> . +fructoselysine_phosphate +h2o +h
+    <-> . +fructoselysine_phosphate +h2o_water +h
     l_lysine
   }
 
@@ -132,13 +132,13 @@ pathway s-adenosyl-l-homocysteine-to-adp-null "S-adenosyl-L-homocysteine to ADP"
 
   branch from h side right {
     h
-    <-> ec_1_2_1_5 [1.2.1.5] +nadph +nadp +cis_9_octadecenal +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +nadph_mnxm738702 +nadp_mnxm5 +cis_9_octadecenal +h2o_water
     9z_octadecenoate
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_1_5 [1.2.1.5] +15z_tetracosenoate +nadph +nadp +h2o
+    <-> ec_1_2_1_5 [1.2.1.5] +15z_tetracosenoate +nadph_mnxm738702 +nadp_mnxm5 +h2o_water
     15_tetracosenal
   }
 
@@ -162,7 +162,7 @@ pathway s-adenosyl-l-homocysteine-to-adp-null "S-adenosyl-L-homocysteine to ADP"
 
   branch from coenzyme_gamma_f420_2 side left {
     coenzyme_gamma_f420_2
-    <-> ec_1_5_1_40 [1.5.1.40] +nadph +h +nadp
+    <-> ec_1_5_1_40 [1.5.1.40] +nadph_mnxm738702 +h +nadp_mnxm5
     reduced_coenzyme_f420
   }
 
@@ -174,12 +174,12 @@ pathway s-adenosyl-l-homocysteine-to-adp-null "S-adenosyl-L-homocysteine to ADP"
 
   branch from hydrogen_sulfide side left {
     hydrogen_sulfide
-    <-> . +l_alanine +nadp +nadph
+    <-> . +l_alanine +nadp_mnxm5 +nadph_mnxm738702
     l_cysteine
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> . +guanosine +guanine
     beta_d_ribopyranose
   }

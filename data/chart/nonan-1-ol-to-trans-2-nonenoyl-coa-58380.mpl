@@ -28,8 +28,8 @@ pathway nonan-1-ol-to-trans-2-nonenoyl-coa-58380 "nonan-1-ol to trans-2-nonenoyl
 
   branch from nonanal side right {
     nonanal
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +nad
-    nonan_1_ol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh_mnxm10 +h +nad_mnxm8
+    nonan_1_ol_mnxm19926
   }
 
   branch from ppi side left {

@@ -8,22 +8,22 @@ pathway narbomycin-to-narbonolide "narbomycin to narbonolide" {
 
   spine at 0,0 {
     narbomycin
-    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     neopikromycin
-    <-> . +nadp +h2o -o2 -nadph -narbomycin
+    <-> . +nadp +h2o_water -o2_mnxm735438 -nadph -narbomycin_mnxm739111
     h
-    <-> ec_2_4_1_277 [2.4.1.277] +dtdp +narbomycin -narbonolide
+    <-> ec_2_4_1_277 [2.4.1.277] +dtdp +narbomycin_mnxm739111 -narbonolide
     dtdp_alpha_d_desosamine
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_15_44 [1.14.15.44] +2_22_dideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
     2_deoxyecdysone
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> . +2_22_25_trideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
     2_22_dideoxyecdysone
   }
@@ -40,21 +40,21 @@ pathway narbomycin-to-narbonolide "narbomycin to narbonolide" {
     trans_3_chloroprop_2_en_1_ol
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_99_31 [1.14.99.31] +nadh +tetradecanoyl_coa +h +nad +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> ec_1_14_99_31 [1.14.99.31] +nadh +tetradecanoyl_coa +h +nad +h2o_water
     trans_tetradec_11_enoyl_coa
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_99_32 [1.14.99.32] +nadh +tetradecanoyl_coa +h +nad +h2o
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> ec_1_14_99_32 [1.14.99.32] +nadh +tetradecanoyl_coa +h +nad +h2o_water
     cis_tetradec_11_enoyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_72 [1.14.13.72] +4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol +h +o2 +nadp +h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol +h +o2_mnxm735438 +nadp +h2o_water
     3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene
   }
 
@@ -64,9 +64,9 @@ pathway narbomycin-to-narbonolide "narbomycin to narbonolide" {
     19_epi_ajmalicine
   }
 
-  branch from narbomycin side left {
-    narbomycin
-    <-> . +nadp +h2o +h +o2 +nadph
+  branch from narbomycin_mnxm739111 side left {
+    narbomycin_mnxm739111
+    <-> . +nadp +h2o_water +h +o2_mnxm735438 +nadph
     pikromycin
   }
 
@@ -84,60 +84,60 @@ pathway narbomycin-to-narbonolide "narbomycin to narbonolide" {
 
   branch from narbonolide side right {
     narbonolide
-    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa +h2o
+    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa +h2o_water
     co2
   }
 
   branch from narbonolide side left {
     narbonolide
-    <-> . +malonyl_coa +h +nadph +r_methylmalonyl_coa +co2 +nadp +h2o
+    <-> . +malonyl_coa +h +nadph +r_methylmalonyl_coa +co2 +nadp +h2o_water
     coa
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +2_22_dideoxyecdysone +o2 +hplus +di_sulfido_diiron +h2o
+    <-> . +2_22_dideoxyecdysone +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     22_deoxyecdysone
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_44 [1.14.15.44] +2_22_dideoxy_3_dehydroecdysone +o2 +hplus +di_sulfido_diiron +h2o
+    <-> ec_1_14_15_44 [1.14.15.44] +2_22_dideoxy_3_dehydroecdysone +o2 +hplus +di_sulfido_diiron_chebi_33737 +h2o
     3_dehydro_2_deoxyecdysone
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side right {
+    di_sulfido_diiron_chebi_33737
     <-> ec_1_14_15_44 [1.14.15.44] +14alpha_hydroxy_5beta_cholest_7_ene_3_6_dione +di_sulfido_diiron +o2 +hplus +h2o
     2_25_dideoxy_3_dehydroecdysone
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33737 side left {
+    di_sulfido_diiron_chebi_33737
     <-> . +testosterone +di_sulfido_diiron +o2 +hplus +h2o
     11_hydroxytestosterone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone +h +o2 +nadph +h2o
+    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone +h +o2_mnxm735438 +nadph +h2o_water
     4s_7r_4_isopropenyl_7_methyloxepan_2_one
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone +h +o2 +nadph +h2o
+    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone_chebi_166 +h +o2_mnxm735438 +nadph +h2o_water
     3s_6s_6_isopropenyl_3_methyloxepan_2_one
   }
 
-  branch from h2o side right {
-    h2o
+  branch from h2o_water side right {
+    h2o_water
     <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +p_cumate +nad
     4_isopropylbenzaldehyde
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +6_aminohexanoate
     epsilon_caprolactam
   }
@@ -154,21 +154,21 @@ pathway narbomycin-to-narbonolide "narbomycin to narbonolide" {
     3_methyl_cis_cis_muconic_acid
   }
 
-  branch from o2 side right {
-    o2
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
     <-> . +nadh +h +styrene +nad
     cis_3_ethenylcyclohexa_3_5_diene_1_2_diol
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +nadh +h +2_4_5_trichlorophenoxy_acetate +nad +2_4_5_trichlorophenol +h2o
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
+    <-> . +nadh +h +2_4_5_trichlorophenoxy_acetate +nad +2_4_5_trichlorophenol +h2o_water
     glyoxylate
   }
 
   branch from nadph side right {
     nadph
-    <-> . +20_oxo_5_o_beta_d_mycaminosyltylonolide +nadp +h2o +h +o2
+    <-> . +20_oxo_5_o_beta_d_mycaminosyltylonolide +nadp +h2o_water +h +o2_mnxm735438
     5_o_beta_d_mycaminosyltylactone
   }
 }

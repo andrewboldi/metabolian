@@ -10,9 +10,9 @@ pathway s-3-hydroxybutanoyl-coa-to-3-hydroxy-5-oxohexan "(S)-3-hydroxybutanoyl-C
     hydroxybutyryl_coa
     <-> . +h2o -coa -hplus
     s_3_hydroxybutyrate
-    <-> ec_6_2_1_16 [6.2.1.16] +atp +coa -diphosphate -amp
+    <-> ec_6_2_1_16 [6.2.1.16] +atp +coa_mnxm727276 -diphosphate -amp
     3s_3_hydroxybutanoyl_coa
     <-> . +acetyl_coa +h -3_hydroxy_5_oxohexanoyl_coa
-    coa
+    coa_mnxm727276
   }
 }

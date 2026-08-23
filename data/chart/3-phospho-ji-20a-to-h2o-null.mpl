@@ -65,7 +65,7 @@ pathway 3-phospho-ji-20a-to-h2o-null "3'-phospho-JI-20A to H2O" {
   branch from fad side right {
     fad
     <-> . +fadh2 +h +l_aspartate
-    iminoaspartate
+    iminoaspartate_mnxm1370457
   }
 
   branch from h2o side left {

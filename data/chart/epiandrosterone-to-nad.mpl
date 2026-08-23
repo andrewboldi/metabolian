@@ -18,22 +18,22 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
     5_androst_1_ene_3_17_dione
     <-> ec_1_3_99_5 [1.3.99.5] +hydrogen_acceptor -hydrogen_donor
     androsta_1_4_diene_3_17_dione
-    <-> ec_1_14_15_30 [1.14.15.30] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_30 [1.14.15.30] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron_chebi_33737 -h2o
     9_hydroxyandrosta_1_4_diene_3_17_dione
     <-> .
     4_2_5_hydroxy_2_methylphenyl_ethyl_7a_methylhexa
-    <-> ec_1_14_14_12 [1.14.14.12] +fmnh2 +h +o2 -3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene -h2o
+    <-> ec_1_14_14_12 [1.14.14.12] +fmnh2 +h +o2_mnxm735438 -3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene -h2o_water
     fmn
     <-> ec_1_1_99_31 [1.1.99.31] +2_hydroxy_4_methylvalerate -h -4_methyl_2_oxopentanoate
     fmnh2
-    <-> . +nadh +co2 +4_methyl_2_oxopentanoate -nad
+    <-> . +nadh_mnxm10 +co2 +4_methyl_2_oxopentanoate -nad_mnxm8
     2s_2_isopropylmalate
   }
 
   branch from 17_hydroxy_5_androstan_3_one side left {
     17_hydroxy_5_androstan_3_one
     <-> . +nadp +nadph +hplus
-    5_androstane_3_17_diol
+    5_androstane_3_17_diol_chebi_36713
   }
 
   branch from 17_hydroxy_5_androstan_3_one side right {
@@ -62,24 +62,24 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
 
   branch from 3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene side right {
     3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene
-    <-> ec_1_13_11_25 [1.13.11.25] +o2
+    <-> ec_1_13_11_25 [1.13.11.25] +o2_mnxm735438
     3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta
   }
 
   branch from 3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene side left {
     3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene
-    <-> ec_1_13_11_25 [1.13.11.25] +h +o2
-    3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta
+    <-> ec_1_13_11_25 [1.13.11.25] +h +o2_mnxm735438
+    3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta_mnxm1371572
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_12_11 [1.14.12.11] +nadh +trichloroethene +o2 +h +chloride +nad
+  branch from h2o_water side right {
+    h2o_water
+    <-> ec_1_14_12_11 [1.14.12.11] +nadh_mnxm10 +trichloroethene +o2_mnxm735438 +h +chloride +nad_mnxm8
     formate
   }
 
-  branch from h2o side left {
-    h2o
+  branch from h2o_water side left {
+    h2o_water
     <-> . +pyrene_4_5_oxide
     trans_4_5_dihydroxy_4_5_dihydropyrene
   }
@@ -92,7 +92,7 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
 
   branch from fmnh2 side left {
     fmnh2
-    <-> . +1_hexanesulfonic_acid +o2 +fmn +hexanal +h2o
+    <-> . +1_hexanesulfonic_acid +o2_mnxm735438 +fmn +hexanal +h2o_water
     sulfite
   }
 
@@ -104,13 +104,13 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_213 [1.1.1.213] +5_dihydrodeoxycorticosterone +nadph +5_alpha_thdoc
-    nadp
+    <-> ec_1_1_1_213 [1.1.1.213] +5_dihydrodeoxycorticosterone +nadph_mnxm738702 +5_alpha_thdoc
+    nadp_mnxm5
   }
 
   branch from 4_methyl_2_oxopentanoate side right {
     4_methyl_2_oxopentanoate
-    <-> ec_1_1_3_15 [1.1.3.15] +s_2_hydroxy_4_methylpentanoic_acid +o2 +h
+    <-> ec_1_1_3_15 [1.1.3.15] +s_2_hydroxy_4_methylpentanoic_acid +o2_mnxm735438 +h
     h2o2
   }
 
@@ -122,25 +122,25 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
 
   branch from 2s_2_isopropylmalate side right {
     2s_2_isopropylmalate
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +l_leucine +2_oxoglutarate +co2 +nad
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh_mnxm10 +l_leucine +2_oxoglutarate +co2 +nad_mnxm8
     l_glutamate
   }
 
   branch from 2s_2_isopropylmalate side left {
     2s_2_isopropylmalate
-    <-> ec_4_2_1_33 [4.2.1.33] +h2o
+    <-> ec_4_2_1_33 [4.2.1.33] +h2o_water
     2_isopropylmaleate
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +o2 +1_2_3_4_tetrachlorobenzene
+  branch from nad_mnxm8 side right {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +o2_mnxm735438 +1_2_3_4_tetrachlorobenzene
     1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+  branch from nad_mnxm8 side left {
+    nad_mnxm8
+    <-> . +nadh_mnxm10 +h +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
     tetrachlorocatechol
   }
 
@@ -168,14 +168,14 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
     s_adenosyl_l_methionine
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +h +1_2_3_4_tetrachlorobenzene +nadp +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
-    nadph
+  branch from o2_mnxm735438 side right {
+    o2_mnxm735438
+    <-> . +h +1_2_3_4_tetrachlorobenzene +nadp_mnxm5 +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    nadph_mnxm738702
   }
 
-  branch from o2 side left {
-    o2
+  branch from o2_mnxm735438 side left {
+    o2_mnxm735438
     <-> ec_1_13_11_1 [1.13.11.1] +tetrachlorocatechol
     tetrachloro_cis_cis_muconic_acid
   }

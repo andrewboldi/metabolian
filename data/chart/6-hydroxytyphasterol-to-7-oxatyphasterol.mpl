@@ -10,7 +10,7 @@ pathway 6-hydroxytyphasterol-to-7-oxatyphasterol "6α-hydroxytyphasterol to 7-ox
     6_hydroxytyphasterol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     teasterone
-    <-> . +h +o2 +nadph -7_oxateasterone -h2o
+    <-> . +h +o2_mnxm735438 +nadph -7_oxateasterone -h2o_water
     nadp
     <-> . +7_oxateasterone
     7_oxatyphasterol

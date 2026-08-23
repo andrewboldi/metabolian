@@ -34,7 +34,7 @@ pathway dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2 "dihydroprecondylocarpi
 
   branch from 16_methoxytabersoninium side left {
     16_methoxytabersoninium
-    <-> . +h2o
+    <-> . +h2o_water
     3r_3_hydroxy_16_methoxy_2_3_dihydrotabersonine
   }
 

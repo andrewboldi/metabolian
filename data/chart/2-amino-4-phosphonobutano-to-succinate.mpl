@@ -24,7 +24,7 @@ pathway 2-amino-4-phosphonobutano-to-succinate "2-amino-4-phosphonobutano… to 
 
   branch from cmp_5_3_aminopropyl_phosphonate side left {
     cmp_5_3_aminopropyl_phosphonate
-    <-> . +ctp +h +2_amino_4_phosphonobutanoate +co2
+    <-> . +ctp_mnxm1103718 +h +2_amino_4_phosphonobutanoate +co2_mnxm13
     diphosphate
   }
 }

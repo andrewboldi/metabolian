@@ -10,9 +10,9 @@ pathway cholesterol-to-h2o "cholesterol to H2O" {
     cholesterol
     <-> ec_1_1_3_6 [1.1.3.6] +o2 -h2o2
     cholest_5_en_3_one
-    <-> ec_1_1_1_146 [1.1.1.146] +h +nadph -cholesterol
+    <-> ec_1_1_1_146 [1.1.1.146] +h +nadph -cholesterol_mnxm726123
     nadp
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_12z_octadecadienoate +h +cholesterol -h2o
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_12z_octadecadienoate +h +cholesterol_mnxm726123 -h2o
     cholesteryl_linoleate
   }
 

@@ -169,6 +169,6 @@ pathway 4-o-oxalyl-l-threonate-to-h2o2 "4-O-oxalyl-L-threonate to H2O2" {
   branch from superoxide side right {
     superoxide
     <-> . +fe +o2
-    fe
+    fe_mnxm1370983
   }
 }

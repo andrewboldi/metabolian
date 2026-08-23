@@ -18,13 +18,13 @@ pathway 11e-octadecenoyl-coa-to-h2o-null "(11E)-octadecenoyl-CoA to H2O" {
 
   branch from 11e_octadecenoyl_coa side left {
     11e_octadecenoyl_coa
-    <-> . +fe2 +o2 +hplus +iron +h2o
+    <-> . +fe2 +o2 +hplus +iron +h2o_chebi_15377
     11e_13z_octadecadienoyl_coa
   }
 
   branch from 11e_octadecenoyl_coa side right {
     11e_octadecenoyl_coa
-    <-> . +fe2 +o2 +hplus +iron +h2o
+    <-> . +fe2 +o2 +hplus +iron +h2o_chebi_15377
     5z_11e_octadecadienoyl_coa
   }
 }

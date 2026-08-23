@@ -10,9 +10,9 @@ pathway zeaxanthin-to-h2o "zeaxanthin to H2O" {
     zeaxanthin
     <-> ec_2_4_1_276 [2.4.1.276] +udp_d_glucose -udp -hplus
     zeaxanthin_bis_d_glucoside
-    <-> ec_2_4_1_276 [2.4.1.276] +udp +h -udp_alpha_d_glucose
+    <-> ec_2_4_1_276 [2.4.1.276] +udp_mnxm1102128 +h -udp_alpha_d_glucose
     zeaxanthin_beta_d_glucoside
-    <-> ec_2_4_1_276 [2.4.1.276] +udp +h -all_trans_zeaxanthin
+    <-> ec_2_4_1_276 [2.4.1.276] +udp_mnxm1102128 +h -all_trans_zeaxanthin
     udp_alpha_d_glucose
     <-> . +nadh +all_trans_zeaxanthin +h +o2 -nad -h2o
     caloxanthin

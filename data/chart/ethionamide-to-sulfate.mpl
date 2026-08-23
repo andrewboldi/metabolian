@@ -10,9 +10,9 @@ pathway ethionamide-to-sulfate "ethionamide to sulfate" {
     ethionamide
     <-> . +nadph +o2 +hplus -nadp -h2o
     ethionamide_s_oxide
-    <-> . +h +o2 +nadph -2_ethylpyridin_4_yl_imino_methanesulfinate -h2o
-    nadp
-    <-> . +h +o2 +nadph +2_ethylpyridin_4_yl_imino_methanesulfinate -nadp -2_ethyl_4_amidopyridine -h2o
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 -2_ethylpyridin_4_yl_imino_methanesulfinate -h2o_water
+    nadp_mnxm5
+    <-> . +h +o2_mnxm735438 +nadph_mnxm738702 +2_ethylpyridin_4_yl_imino_methanesulfinate -nadp_mnxm5 -2_ethyl_4_amidopyridine -h2o_water
     sulfur_dioxide
     <-> ec_4_1_1_12 [4.1.1.12] +l_alanine -h
     3_sulfino_l_alanine

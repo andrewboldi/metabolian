@@ -36,8 +36,8 @@ pathway sphing-4-enine-to-safingol-l-threo-sphing "sphing-4-enine to Safingol ( 
 
   branch from nadph side right {
     nadph
-    <-> . +4_demethylpremithracinone +nadp +h2o +h +o2
-    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy
+    <-> . +4_demethylpremithracinone_mnxm1372567 +nadp +h2o +h +o2
+    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy_mnxm1372600
   }
 
   branch from fad side left {
@@ -73,7 +73,7 @@ pathway sphing-4-enine-to-safingol-l-threo-sphing "sphing-4-enine to Safingol ( 
   branch from nadp side right {
     nadp
     <-> . +h +nadph +afzelechin
-    pelargonidin
+    pelargonidin_mnxm1369124
   }
 
   branch from nadp side left {

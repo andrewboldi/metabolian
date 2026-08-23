@@ -10,7 +10,7 @@ pathway 1r-2r-3r-prephytoene-to-2e-6e-10e-geranylgerany "(1R,2R,3R)-prephytoeneâ
     1r_2r_3r_prephytoene_diphosphate
     <-> . +nadph +hplus -ppi -nadp
     lycopaoctaene
-    <-> . +diphosphate +nadp -prephytoene_diphosphate -nadph
+    <-> . +diphosphate +nadp_mnxm5 -prephytoene_diphosphate -nadph_mnxm738702
     h
     <-> ec_2_5_1_32 [2.5.1.32] +diphosphate +prephytoene_diphosphate
     2e_6e_10e_geranylgeranyl_diphosphate

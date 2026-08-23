@@ -9,7 +9,7 @@ pathway l-fucose-to-diphosphate "α-L-fucose to diphosphate" {
   spine at 0,0 {
     l_fucose
     <-> ec_5_1_3_29 [5.1.3.29]
-    l_fucose
+    l_fucose_chebi_42589
     <-> ec_2_7_1_52 [2.7.1.52] +atp -adp -hplus
     l_fucose_1_phosphate
     <-> ec_2_7_7_30 [2.7.7.30] +gtp +hplus -ppi

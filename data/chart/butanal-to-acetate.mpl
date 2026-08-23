@@ -10,9 +10,9 @@ pathway butanal-to-acetate "butanal to acetate" {
     butanal
     <-> ec_1_4_3_21 [1.4.3.21] +nh4 +h2o2 -butan_1_aminium -h2o
     o2
-    <-> . +butan_1_aminium +nad +h2o -nh3 -nadh -hplus
-    butanal
-    <-> . +nadp +h2o -nadph -hplus
+    <-> . +butan_1_aminium +nad +h2o_chebi_15377 -nh3 -nadh -hplus
+    butanal_chebi_15743
+    <-> . +nadp +h2o_chebi_15377 -nadph -hplus
     butyrate
     <-> . +acetyl_coa -acetate
     butyryl_coa
@@ -80,8 +80,8 @@ pathway butanal-to-acetate "butanal to acetate" {
 
   branch from o2 side left {
     o2
-    <-> . +n_demethyl_desepoxyansamitocin_p_3 +h +nadph +n_demethylansamitocin_p_3 +h2o
-    nadp
+    <-> . +n_demethyl_desepoxyansamitocin_p_3 +h +nadph_mnxm738702 +n_demethylansamitocin_p_3 +h2o
+    nadp_mnxm5
   }
 
   branch from h2o side right {

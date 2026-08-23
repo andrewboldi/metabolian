@@ -121,7 +121,7 @@ pathway 4-pyridoxolactone-to-h2o "4-pyridoxolactone to H2O" {
   branch from nad side left {
     nad
     <-> . +nadh +h +2_hydroxycyclohexane_1_carbonyl_coa
-    2_oxocyclohexane_1_carbonyl_coa
+    2_oxocyclohexane_1_carbonyl_coa_mnxm1371925
   }
 
   branch from h2o side right {

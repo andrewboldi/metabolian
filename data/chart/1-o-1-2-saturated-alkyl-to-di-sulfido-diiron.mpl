@@ -12,7 +12,7 @@ pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron "1-O-(1,2-saturated-alkyl)â
     1_1_hydroxyalkyl_sn_glycerol
     <-> . -glycerol
     aldehyde
-    <-> ec_1_2_7_5 [1.2.7.5] +di_sulfido_diiron +h2o -di_sulfido_diiron -hplus
+    <-> ec_1_2_7_5 [1.2.7.5] +di_sulfido_diiron +h2o -di_sulfido_diiron_chebi_33738 -hplus
     carboxylic_acid_anion
   }
 
@@ -34,14 +34,14 @@ pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron "1-O-(1,2-saturated-alkyl)â
     dodecanoate
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> . +o_s_decanoylpantetheine_4_phosphoryl_serine_1 +o2 +hplus +di_sulfido_diiron +h2o
     o_s_dec_9_enoylpantetheine_4_phosphoryl_serine_1
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> . +o_s_dec_9_enoylpantetheine_4_phosphoryl_serine_1 +o2 +hplus +di_sulfido_diiron +h2o
     o_s_dec_9_ynoylpantetheine_4_phosphoryl_serine_1
   }
@@ -72,24 +72,24 @@ pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron "1-O-(1,2-saturated-alkyl)â
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +1_acyl_2_linoleoyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron +o2 +hplus +h2o
+    <-> . +1_acyl_2_linoleoyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron_chebi_33738 +o2 +hplus +h2o
     1_acyl_2_linolenoyl_3_d_galactosyl_1_6_d_galacto
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron +o2 +hplus +h2o
+    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron_chebi_33738 +o2 +hplus +h2o
     1_linolenoyl_2_acyl_3_d_galactosyl_1_6_d_galacto
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side right {
+    di_sulfido_diiron_chebi_33738
     <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_sn_glycerol +o2 +hplus +di_sulfido_diiron +h2o
     1_linolenoyl_2_acyl_3_d_galactosyl_sn_glycerol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
+  branch from di_sulfido_diiron_chebi_33738 side left {
+    di_sulfido_diiron_chebi_33738
     <-> . +cortisol +o2 +hplus +di_sulfido_diiron +h2o
     18_hydroxycortisol
   }

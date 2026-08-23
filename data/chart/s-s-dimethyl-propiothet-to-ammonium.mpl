@@ -22,14 +22,14 @@ pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to am
 
   branch from menaquinone_8 side left {
     menaquinone_8
-    <-> . +menaquinol_8 +o2 +h2o
+    <-> . +menaquinol_8 +o2 +h2o_water
     pmf
   }
 
   branch from menaquinone_8 side right {
     menaquinone_8
-    <-> . +menaquinol_8 +dimethyl_sulfoxide +h2o
-    dimethyl_sulfide
+    <-> . +menaquinol_8 +dimethyl_sulfoxide_mnxm745 +h2o_water
+    dimethyl_sulfide_mnxm444
   }
 
   branch from menaquinol_8 side left {
@@ -64,7 +64,7 @@ pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to am
 
   branch from nh3 side right {
     nh3
-    <-> . +4_hydroxyestrone +o2 +h2o +hplus
+    <-> . +4_hydroxyestrone +o2_chebi_15379 +h2o +hplus
     pyridinestrone_3_carboxylate
   }
 
@@ -88,7 +88,7 @@ pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to am
 
   branch from menaquinone_8 side right {
     menaquinone_8
-    <-> . +nitrite +menaquinol_8 +h +h2o
+    <-> . +nitrite_mnxm107 +menaquinol_8 +h +h2o_water
     nitric_oxide
   }
 
@@ -100,7 +100,7 @@ pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to am
 
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> ec_4_1_1_32 [4.1.1.32] +itp +phosphonatoenolpyruvate +co2
+    <-> ec_4_1_1_32 [4.1.1.32] +itp +phosphonatoenolpyruvate +co2_chebi_16526
     idp
   }
 
@@ -112,13 +112,13 @@ pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to am
 
   branch from nitrite side right {
     nitrite
-    <-> ec_1_14_12_23 [1.14.12.23] +2_chloro_6_nitrotoluene +nadh +o2 +nad
+    <-> ec_1_14_12_23 [1.14.12.23] +2_chloro_6_nitrotoluene +nadh +o2_chebi_15379 +nad
     4_chloro_3_methylcatechol
   }
 
   branch from nitrite side left {
     nitrite
-    <-> ec_1_14_12_23 [1.14.12.23] +2_chloro_4_nitrotoluene +nadh +o2 +nad
+    <-> ec_1_14_12_23 [1.14.12.23] +2_chloro_4_nitrotoluene +nadh +o2_chebi_15379 +nad
     3_chloro_4_methylcatechol
   }
 

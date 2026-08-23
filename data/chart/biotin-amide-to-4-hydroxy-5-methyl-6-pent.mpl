@@ -71,7 +71,7 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent "biotin amide to 4-hydroxy-5-m
   branch from biotinate side left {
     biotinate
     <-> ec_3_5_1_12 [3.5.1.12] +biocytin +h2o
-    l_lysinium
+    l_lysinium_chebi_32551
   }
 
   branch from nh3 side right {

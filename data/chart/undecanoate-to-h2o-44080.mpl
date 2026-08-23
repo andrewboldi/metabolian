@@ -18,7 +18,7 @@ pathway undecanoate-to-h2o-44080 "undecanoate to H2O" {
     2e_4z_undeca_2_4_dienoyl_coa
     <-> ec_1_3_3_6 [1.3.3.6] +h2o2 -o2
     4_cis_undecenoyl_coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa -coa
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa -coa_mnxm727276
     6_cis_3_oxo_tridecenoyl_coa
     <-> . +nadh +h -nad
     3r_hydroxy_6_cis_tridecenoyl_coa
@@ -26,17 +26,17 @@ pathway undecanoate-to-h2o-44080 "undecanoate to H2O" {
     2_trans_6_cis_tridecadienoyl_coa
     <-> ec_1_3_3_6 [1.3.3.6] +h2o2 -o2
     6_cis_tridecenoyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 -coa -o2 -nad -h2o
+    <-> . +nadh +acetyl_coa +h +h2o2 -coa_mnxm727276 -o2 -nad -h2o
     10z_heptadecenoyl_coa
-    <-> . +diphosphate +h +amp -coa -10z_heptadecenoic_acid
-    atp
-    <-> . +h +adp +10z_heptadecenoic_acid +phosphate -atp -h2o
+    <-> . +diphosphate +h +amp_mnxm728294 -coa_mnxm727276 -10z_heptadecenoic_acid
+    atp_mnxm3
+    <-> . +h +adp +10z_heptadecenoic_acid +phosphate -atp_mnxm3 -h2o
     10z_heptadecenoic_acid
   }
 
   branch from undecanoyl_coa side left {
     undecanoyl_coa
-    <-> . +acetyl_coa +coa
+    <-> . +acetyl_coa +coa_mnxm727276
     3_oxotridecanoyl_coenzyme_a
   }
 
@@ -100,14 +100,14 @@ pathway undecanoate-to-h2o-44080 "undecanoate to H2O" {
     1r_2s_7_methyl_1_2_dihydronaphthalene_1_2_diol
   }
 
-  branch from coa side right {
-    coa
+  branch from coa_mnxm727276 side right {
+    coa_mnxm727276
     <-> . +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +r_carnitine
     tetracosapentaenoyl_carnitine
   }
 
-  branch from coa side left {
-    coa
+  branch from coa_mnxm727276 side left {
+    coa_mnxm727276
     <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +r_carnitine
     tetracosatetraenoyl_carnitine
   }
@@ -144,18 +144,18 @@ pathway undecanoate-to-h2o-44080 "undecanoate to H2O" {
 
   branch from 10z_heptadecenoyl_coa side left {
     10z_heptadecenoyl_coa
-    <-> . +r_carnitine +coa
+    <-> . +r_carnitine +coa_mnxm727276
     heptadecenoylcarnitine_7
   }
 
-  branch from atp side right {
-    atp
+  branch from atp_mnxm3 side right {
+    atp_mnxm3
     <-> ec_2_7_1_102 [2.7.1.102] +h +adp +d_hamamelose_2_phosphate
     d_hamamelose
   }
 
-  branch from atp side left {
-    atp
+  branch from atp_mnxm3 side left {
+    atp_mnxm3
     <-> ec_2_7_1_119 [2.7.1.119] +h +adp +7_o_phosphohygromycin_b
     hygromycin_b
   }

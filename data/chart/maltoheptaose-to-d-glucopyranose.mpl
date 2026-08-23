@@ -18,9 +18,9 @@ pathway maltoheptaose-to-d-glucopyranose "maltoheptaose to D-glucopyranose" {
     d_glcp_1_6_d_glcp_1_3_d_glcp_1_6_d_glcp_1_4_d_g
     <-> ec_2_4_1_387 [2.4.1.387] -d_glcp_1_4_d_glcp_1_4_d_glcp
     cyclobis_1_6_nigerosyl
-    <-> ec_3_2_1_204 [3.2.1.204] +h2o
+    <-> ec_3_2_1_204 [3.2.1.204] +h2o_chebi_15377
     isomaltose
-    <-> ec_3_2_1_205 [3.2.1.205] +h2o -glucose
+    <-> ec_3_2_1_205 [3.2.1.205] +h2o_chebi_15377 -glucose
     d_glucose
   }
 

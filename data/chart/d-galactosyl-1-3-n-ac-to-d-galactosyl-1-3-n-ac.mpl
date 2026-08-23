@@ -9,10 +9,10 @@ pathway d-galactosyl-1-3-n-ac-to-d-galactosyl-1-3-n-ac "β-D-galactosyl-(1→3)-
   spine at 0,0 {
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
     <-> . +acetyl_coa -coa
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_230548
     <-> .
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_231266
     <-> .
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4_chebi_231268
   }
 }

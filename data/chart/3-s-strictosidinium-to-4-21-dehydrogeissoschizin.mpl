@@ -42,7 +42,7 @@ pathway 3-s-strictosidinium-to-4-21-dehydrogeissoschizin "3α(S)-strictosidinium
 
   branch from 4_21_dehydrogeissoschizine side left {
     4_21_dehydrogeissoschizine
-    <-> ec_1_3_1_36 [1.3.1.36] +nadp +nadph
+    <-> ec_1_3_1_36 [1.3.1.36] +nadp_chebi_58349 +nadph_chebi_57783
     19e_geissoschizine
   }
 
@@ -61,6 +61,6 @@ pathway 3-s-strictosidinium-to-4-21-dehydrogeissoschizin "3α(S)-strictosidinium
   branch from cathenamine side right {
     cathenamine
     <-> . +h
-    4_21_dehydrogeissoschizine
+    4_21_dehydrogeissoschizine_mnxm1368749
   }
 }

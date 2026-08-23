@@ -12,20 +12,81 @@ pathway udp-to-quercetin-3-o-6-o-caffe-null "UDP to quercetin 3-O-[(6-O-caffe…
     udp_beta_l_rhamnose
     <-> . +udp +quercetin_3_gentiobioside -quercetin_3_o_d_glucopyranoside
     udp_alpha_d_glucose
-    <-> . +quercetin_3_o_d_glucopyranoside +udp_d_glucose -udp -hplus
+    <-> . +quercetin_3_o_d_glucopyranoside +udp_d_glucose -udp_chebi_58223 -hplus
     quercetin_3_o_d_glucosyl_1_2_d_glucoside
     <-> . +trans_caffeoyl_coa -coa -hplus
     quercetin_3_o_6_o_caffeoyl_d_glucosyl_1_2_d_gluc
   }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +h +sarcinaxanthin_diglucoside
+    sarcinaxanthin_monoglucoside
+  }
 
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +4_o_beta_d_glucosyl_indol_3_yl_formamide +udp +h
+    n_4_hydroxy_1h_indol_3_yl_formamide
+  }
 
+  branch from udp side left {
+    udp
+    <-> . +acetaminophen_o_beta_d_glucosiduronic_acid +4_acetamidophenol
+    udp_alpha_d_glucuronate
+  }
 
+  branch from udp side right {
+    udp
+    <-> . +am1c_glucuronide_cyclosporine +udp_alpha_d_glucuronate
+    cyclosporin_a_metabolite_m18
+  }
 
+  branch from h side left {
+    h
+    <-> . +red_chlorophyll_catabolite +h2o
+    epoxypheophorbide_a
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_7_7_30 [2.7.7.30] +gtp +beta_l_fucose_1_phosphate +diphosphate
+    gdp_l_fucose
+  }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +h +medicagenate_28_o_beta_d_glucoside
+    medicagenic_acid
+  }
 
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +h +soyasapogenol_b_22_o_beta_d_glucoside
+    soyasapogenol_b
+  }
 
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +solasodine +udp_chebi_58223 +hplus
+    solasodine_3_d_glucoside
+  }
 
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +campesterol +udp_chebi_58223 +hplus
+    campesterol_3_d_glucoside
+  }
 
+  branch from trans_caffeoyl_coa side left {
+    trans_caffeoyl_coa
+    <-> ec_2_3_1_126 [2.3.1.126] +d_threo_isocitrate +coa
+    2_e_caffeoyl_d_threo_isocitrate
+  }
+
+  branch from trans_caffeoyl_coa side right {
+    trans_caffeoyl_coa
+    <-> ec_2_3_1_140 [2.3.1.140] +2r_3_3_4_dihydroxyphenyl_lactate +coa
+    r_rosmarinate
+  }
 }

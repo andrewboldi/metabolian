@@ -15,6 +15,6 @@ pathway 5-methoxybenzimidazole-to-pyridine-3-carbaldehyd "5-Methoxybenzimidazole
     <-> ec_1_1_1_184 [1.1.1.184] +nadh +h -nad
     3_pyridinemethanol
     <-> . +nadp -nadph -hplus
-    pyridine_3_carbaldehyde
+    pyridine_3_carbaldehyde_chebi_28345
   }
 }

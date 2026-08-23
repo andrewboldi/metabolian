@@ -14,9 +14,9 @@ pathway udp-n-acetyl-alpha-d-mann-to-n-acetyl-d-glucosam "UDP-N-acetyl-alpha-D-m
     aldehydo_n_acetyl_d_glucosamine
     <-> . +n_acetyl_alpha_d_glucosamine_1_phosphate -phosphate
     n_n_diacetylchitobiose
-    <-> . +h2o
+    <-> . +h2o_chebi_15377
     n_acetyl_d_glucosamine
-    <-> ec_3_5_1_33 [3.5.1.33] +h2o -acetate
+    <-> ec_3_5_1_33 [3.5.1.33] +h2o_chebi_15377 -acetate
     2_ammonio_2_deoxy_d_glucopyranose
     <-> ec_2_3_1_3 [2.3.1.3] +acetyl_coa -coa -hplus
     n_acetyl_d_glucosamine

@@ -23,7 +23,7 @@ pathway 2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos "2-hydroxyethylphosphon
   branch from d_ribose_1_methylphosphonate_5_phosphate side left {
     d_ribose_1_methylphosphonate_5_phosphate
     <-> ec_4_7_1_1 [4.7.1.1] +5_phosphonato_d_ribose_cyclic_1_2_phosphate
-    methane
+    methane_mnxm739586
   }
 
   branch from ppi side right {

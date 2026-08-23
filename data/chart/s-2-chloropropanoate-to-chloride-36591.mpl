@@ -66,7 +66,7 @@ pathway s-2-chloropropanoate-to-chloride-36591 "(S)-2-chloropropanoate to chlori
 
   branch from h side left {
     h
-    <-> ec_1_10_1_1 [1.10.1.1] +trans_acenaphthene_1_2_diol +nadp +nadph
+    <-> ec_1_10_1_1 [1.10.1.1] +trans_acenaphthene_1_2_diol +nadp_mnxm5 +nadph_mnxm738702
     acenaphthene_1_2_dione
   }
 

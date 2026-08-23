@@ -12,7 +12,7 @@ pathway xylotetraose-to-d-xylotrionate "xylotetraose to D-xylotrionate" {
     d_xylp_1_4_d_xylp_1_4_d_xylp
     <-> . +o2 -h2o2
     d_xylotriono_1_5_lactone
-    <-> . +h2o -hplus
+    <-> . +h2o_chebi_15377 -hplus
     d_xylotrionate
   }
 

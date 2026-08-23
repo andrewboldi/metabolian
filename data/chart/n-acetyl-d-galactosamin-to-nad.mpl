@@ -41,7 +41,7 @@ pathway n-acetyl-d-galactosamin-to-nad "N-acetyl-β-D-galactosamin… to NAD" {
   branch from galactitol_1_phosphate side right {
     galactitol_1_phosphate
     <-> ec_3_1_3_50 [3.1.3.50] +galactitol +phosphate
-    h2o
+    h2o_water
   }
 
   branch from galactitol_1_phosphate side left {
@@ -76,19 +76,19 @@ pathway n-acetyl-d-galactosamin-to-nad "N-acetyl-β-D-galactosamin… to NAD" {
 
   branch from nadh side right {
     nadh
-    <-> . +3_oxo_24_ethyl_26_al_cholest_4_ene +nad +h2o +h
+    <-> . +3_oxo_24_ethyl_26_al_cholest_4_ene +nad +h2o_water +h
     3_oxo_24_ethyl_cholest_4_en_26_oate
   }
 
   branch from h side left {
     h
-    <-> . +3_chloro_5_fluorocatechol +o2
+    <-> . +3_chloro_5_fluorocatechol +o2_mnxm735438
     2_chloro_4_fluoromuconate
   }
 
   branch from h side right {
     h
-    <-> . +4_chloro_2_fluoromuconate +o2
+    <-> . +4_chloro_2_fluoromuconate +o2_mnxm735438
     3_chloro_6_fluorocatechol
   }
 

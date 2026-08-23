@@ -11,10 +11,10 @@ pathway 3alpha-7alpha-12alpha-tri-to-nadph "3alpha,7alpha,12alpha-tri… to NADP
     <-> ec_6_2_1_7 [6.2.1.7] +diphosphate +amp -coa -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
     atp
     <-> ec_1_14_13_15 [1.14.13.15] +nadp +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +h2o -o2 -nadph
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282
     <-> ec_1_1_1_1 [1.1.1.1] +nadh +h -nad
     25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t
-    <-> . +nadp -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol -nadph
+    <-> . +nadp -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282 -nadph
     h
   }
 
@@ -42,8 +42,8 @@ pathway 3alpha-7alpha-12alpha-tri-to-nadph "3alpha,7alpha,12alpha-tri… to NADP
     o_eicosanoyl_r_carnitine
   }
 
-  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol side left {
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282 side left {
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol_mnxm730282
     <-> . +h2o
     5beta_cholestane_3alpha_7alpha_12alpha_27_27_pen
   }

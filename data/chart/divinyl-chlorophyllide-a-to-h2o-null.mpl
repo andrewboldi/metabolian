@@ -83,7 +83,7 @@ pathway divinyl-chlorophyllide-a-to-h2o-null "divinyl chlorophyllide a to H2O" {
   branch from nadp side left {
     nadp
     <-> ec_1_14_14_1 [1.14.14.1] +h2o +h +4_bromophenol +o2 +nadph
-    4_bromophenol_2_3_epoxide
+    4_bromophenol_2_3_epoxide_mnxm1370792
   }
 
   branch from nadp side right {
@@ -94,8 +94,8 @@ pathway divinyl-chlorophyllide-a-to-h2o-null "divinyl chlorophyllide a to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +4_demethylpremithracinone +h2o +h +o2 +nadph
-    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy
+    <-> . +4_demethylpremithracinone_mnxm1372567 +h2o +h +o2 +nadph
+    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy_mnxm1372600
   }
 
   branch from nadp side right {
@@ -125,7 +125,7 @@ pathway divinyl-chlorophyllide-a-to-h2o-null "divinyl chlorophyllide a to H2O" {
   branch from nadph side right {
     nadph
     <-> . +h +afzelechin +nadp
-    pelargonidin
+    pelargonidin_mnxm1369124
   }
 
   branch from nadh side left {
@@ -137,7 +137,7 @@ pathway divinyl-chlorophyllide-a-to-h2o-null "divinyl chlorophyllide a to H2O" {
   branch from nadh side right {
     nadh
     <-> . +h +l_arginine +nad
-    4_5_dehydro_l_arginine
+    4_5_dehydro_l_arginine_mnxm1368580
   }
 
   branch from nad side left {
@@ -167,7 +167,7 @@ pathway divinyl-chlorophyllide-a-to-h2o-null "divinyl chlorophyllide a to H2O" {
   branch from o2 side left {
     o2
     <-> . +h +h2o +naphthalene_1_2_4_8_tetrol
-    3_5_dihydroxy_1_4_naphthoquinone
+    3_5_dihydroxy_1_4_naphthoquinone_mnxm1369290
   }
 
   branch from o2 side right {

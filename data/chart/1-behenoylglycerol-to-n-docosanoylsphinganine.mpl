@@ -18,8 +18,8 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-d
 
   branch from behenate side left {
     behenate
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +h +adp +phosphate +h2o_water
+    atp_mnxm3
   }
 
   branch from docosanoyl_coa side right {
@@ -48,13 +48,13 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-d
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 +coa +o2 +nad +h2o
+    <-> . +nadh +acetyl_coa_mnxm1104266 +h +h2o2_mnxm732620 +coa_mnxm727276 +o2_mnxm735438 +nad +h2o_water
     tetracosanoyl_coa
   }
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> . +r_carnitine +coa
+    <-> . +r_carnitine +coa_mnxm727276
     o_behenoylcarnitine
   }
 

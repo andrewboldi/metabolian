@@ -16,8 +16,8 @@ pathway isoepoxydon-to-e-ascladiol "(+)-isoepoxydon to (E)-ascladiol" {
     e_ascladiol
     <-> . +hydrogen_acceptor -hydrogen_donor
     patulin
-    <-> . +h +nadph -e_ascladiol
-    nadp
+    <-> . +h +nadph_mnxm738702 -e_ascladiol
+    nadp_mnxm5
   }
 
   branch from phyllostine side left {
@@ -26,15 +26,15 @@ pathway isoepoxydon-to-e-ascladiol "(+)-isoepoxydon to (E)-ascladiol" {
     gentisyl_alcohol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_113 [1.1.1.113] +h +l_xylono_1_4_lactone +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> ec_1_1_1_113 [1.1.1.113] +h +l_xylono_1_4_lactone +nadph_mnxm738702
     l_xylopyranose
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +s_propane_1_2_diol +h +nadph
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_1_1_21 [1.1.1.21] +s_propane_1_2_diol +h +nadph_mnxm738702
     s_lactaldehyde
   }
 
@@ -56,27 +56,27 @@ pathway isoepoxydon-to-e-ascladiol "(+)-isoepoxydon to (E)-ascladiol" {
     13_sophorosyloxydocosanoate_6_6_diacetate
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_115 [1.1.1.115] +h +d_ribonate +nadp +h2o
+  branch from nadph_mnxm738702 side left {
+    nadph_mnxm738702
+    <-> ec_1_1_1_115 [1.1.1.115] +h +d_ribonate +nadp_mnxm5 +h2o
     aldehydo_d_ribose
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +2_chlorophenol +nadp +h2o
+  branch from nadph_mnxm738702 side right {
+    nadph_mnxm738702
+    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +2_chlorophenol +nadp_mnxm5 +h2o
     3_chlorocatechol
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +h +3_chlorophenol +o2 +nadph +3_chlorocatechol
+  branch from nadp_mnxm5 side left {
+    nadp_mnxm5
+    <-> ec_1_14_13_7 [1.14.13.7] +h +3_chlorophenol +o2 +nadph_mnxm738702 +3_chlorocatechol
     h2o
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +trans_11_hydroxyjasmonate +h2o +h +o2 +nadph
+  branch from nadp_mnxm5 side right {
+    nadp_mnxm5
+    <-> . +trans_11_hydroxyjasmonate +h2o +h +o2 +nadph_mnxm738702
     jasmonate
   }
 }

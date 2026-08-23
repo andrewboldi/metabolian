@@ -12,7 +12,7 @@ pathway n-phenylhydroxylamine-to-di-sulfido-diiron "N-phenylhydroxylamine to di-
     nitrobenzene
     <-> ec_1_14_12_23 [1.14.12.23] +nadh +o2 -nitrite -nad
     catechol
-    <-> ec_1_7_7_2 [1.7.7.2] +nitrite +di_sulfido_diiron +h2o -di_sulfido_diiron -hplus
+    <-> ec_1_7_7_2 [1.7.7.2] +nitrite +di_sulfido_diiron +h2o -di_sulfido_diiron_chebi_33738 -hplus
     nitrate
   }
 
