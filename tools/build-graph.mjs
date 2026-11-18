@@ -193,14 +193,25 @@ writeFileSync(join(OUT_DIR, "index.json"), JSON.stringify({ generated: master.ge
 writeFileSync(join(OUT_DIR, "glossary.json"), JSON.stringify(glossary));
 writeFileSync(join(OUT_DIR, "search.json"), JSON.stringify(search));
 
-// per-pathway subgraphs
+// per-pathway subgraphs. Nodes are written WITHOUT their corpus-wide `pathways` membership:
+// a hub metabolite (H+ sits in ~3,700 pathways) would copy a ~100 KB list into every file,
+// which was 2.8 GB of a 3 GB output. pathway.ts never reads it; master/search/glossary keep it.
+const SUBGRAPH_BUDGET_BYTES = 500e6;
+let subgraphBytes = 0;
 for (const mod of modules) {
   const keep = new Set(nodeList.filter((n) => n.pathways.includes(mod.id)).map((n) => n.id));
-  const subNodes = nodeList.filter((n) => keep.has(n.id));
+  const subNodes = nodeList.filter((n) => keep.has(n.id)).map(({ pathways: _p, ...n }) => n);
   const subEdges = edgeList.filter((e) => e.pathway === mod.id);
-  writeFileSync(join(OUT_DIR, "pathways", `${mod.id}.json`), JSON.stringify({ id: mod.id, name: mod.name, nodes: subNodes, edges: subEdges }));
+  const json = JSON.stringify({ id: mod.id, name: mod.name, nodes: subNodes, edges: subEdges });
+  subgraphBytes += Buffer.byteLength(json);
+  writeFileSync(join(OUT_DIR, "pathways", `${mod.id}.json`), json);
+}
+// Budget gate: a subgraph must scale with its own module, not with the whole corpus.
+if (subgraphBytes > SUBGRAPH_BUDGET_BYTES) {
+  throw new Error(`per-pathway subgraphs total ${(subgraphBytes / 1e6).toFixed(0)} MB, over the ${SUBGRAPH_BUDGET_BYTES / 1e6} MB budget. Is a corpus-wide field (like node.pathways) being copied into every file?`);
 }
 
 console.log(`Built master graph: ${stats.pathways} pathways, ${stats.nodes} nodes, ${stats.edges} edges.`);
 console.log(`  metabolites=${stats.metabolites} enzymes=${stats.enzymes} reactions=${stats.reactions}`);
+console.log(`  per-pathway subgraphs: ${(subgraphBytes / 1e6).toFixed(0)} MB (budget ${SUBGRAPH_BUDGET_BYTES / 1e6} MB)`);
 console.log(`  edge types: ${Object.entries(edgeTypeCounts).map(([k, v]) => `${k}:${v}`).join(", ")}`);
