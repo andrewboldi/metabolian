@@ -20,7 +20,7 @@ const MACROMOLECULE_ATOMS = 120;
 const OUT = join(ROOT, "web", "public", "mol");
 
 const require = createRequire(join(ROOT, "package.json"));
-const initRDKit = require("@rdkit/rdkit/dist/RDKit_minimal.js");
+const initRDKit = require("@rdkit/rdkit");
 
 /** Filesystem-safe id for a metabolite cache key like "chebi:15361". */
 export function safeKey(key) {
